@@ -1,0 +1,22 @@
+{
+	"name": "@x3p0/ideas",
+	"scripts": {
+		"start": "wp-scripts start --webpack-src-dir=resources --output-path=public",
+		"build": "wp-scripts build --webpack-src-dir=resources --output-path=public",
+		"dev": "gulp dev",
+		"watch": "gulp watch",
+		"prod": "gulp prod"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^26.5.0",
+		"copy-webpack-plugin": "^11.0.0",
+		"glob": "^10.2.6",
+		"mini-css-extract-plugin": "^2.7.6",
+		"path": "^0.12.7",
+		"webpack-fix-style-only-entries": "^0.6.1",
+		"webpack-remove-empty-scripts": "^1.0.3"
+	},
+	"dependencies": {
+		"@wordpress/icons": "^9.25.0"
+	}
+}

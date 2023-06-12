@@ -1,0 +1,17 @@
+
+// -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+// Faux `blockGap` support
+.wp-block-term-description > * {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+
+.wp-block-term-description > * + * {
+	margin-block-start: var(
+		--wp--custom--block-gap--term-description,
+		var( --wp--style--block-gap )
+	);
+}

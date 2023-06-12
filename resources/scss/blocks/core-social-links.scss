@@ -1,0 +1,81 @@
+
+// -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+// Padding adjustments.
+.wp-block-social-links .wp-social-link .wp-block-social-link-anchor {
+	padding: var( --wp--preset--spacing--20 );
+}
+
+.wp-block-social-links.is-style-pill-shape .wp-social-link .wp-block-social-link-anchor {
+	padding: var( --wp--preset--spacing--20 ) var( --wp--preset--spacing--40 );
+}
+
+// Font-size adjustments to match the theme.
+.wp-block-social-links.has-small-icon-size {
+        font-size: var( --wp--preset--font-size--lg );
+}
+
+.wp-block-social-links.has-normal-icon-size {
+        font-size: var( --wp--preset--font-size--xl );
+}
+
+.wp-block-social-links.has-large-icon-size {
+        font-size: var( --wp--preset--font-size--2-xl );
+}
+
+.wp-block-social-links.has-huge-icon-size {
+        font-size: var( --wp--preset--font-size--3-xl );
+}
+
+.wp-block-social-links.has-small-icon-size .wp-block-social-link-label:not( .screen-reader-text ) {
+	font-size: var( --wp--preset--font-size--sm );
+}
+
+.wp-block-social-links.has-normal-icon-size .wp-block-social-link-label:not( .screen-reader-text ) {
+	font-size: var( --wp--preset--font-size--md );
+}
+
+.wp-block-social-links:is( .has-large-icon-size, .has-huge-icon-size ) .wp-block-social-link-label:not( .screen-reader-text ) {
+	font-size: var( --wp--preset--font-size--xs );
+	font-weight: 500;
+	letter-spacing: 0.0625em;
+	text-transform: uppercase;
+}
+
+.wp-block-social-links.has-visible-labels.is-style-logos-only .wp-block-social-link {
+	transform: none;
+}
+
+.wp-block-social-links.has-visible-labels.is-style-logos-only .wp-block-social-link:hover .wp-block-social-link-label {
+	text-decoration-line: underline;
+}
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+.wp-block-social-links.is-style-hand-drawn .wp-block-social-link {
+	border: 2px solid currentColor;
+	overflow: hidden;
+	box-shadow: var( --wp--custom--shadow--sm );
+	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
+	font-family: var( --wp--preset--font-family--handwriting );
+}
+
+.wp-block-social-links.is-style-hand-drawn:where( :not( .has-icon-color ) ) .wp-block-social-link {
+	border: 2px solid var( --color-contrast, var( --wp--preset--color--contrast ) );
+}
+
+.wp-block-social-links.is-style-hand-drawn-border .wp-block-social-link :where( a, button ) {
+	font-family: inherit;
+}
+
+// Outline style.
+.wp-block-social-links.is-style-outline .wp-block-social-link {
+	color: var( --color-contrast, var( --wp--preset--color--contrast ) );
+	background: transparent;
+	border: 2px solid currentColor;
+	border-radius: 0;
+}

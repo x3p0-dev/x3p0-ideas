@@ -1,0 +1,61 @@
+
+// -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+// Override WP's drop-cap implementation with modern solution.
+
+// Revert core's implementation.
+.has-drop-cap:not(:focus)::first-letter {
+	float: none;
+	margin: 0;
+	padding: 0;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	text-transform: none;
+}
+
+// Re-add support for browsers that support `initial-letter`.
+//
+// Browser support is pretty robust for `initial-letter`, but there are
+// limitations. And Firefox doesn't support it at all.
+// @link https://caniuse.com/css-initial-letter
+//
+// @todo Revert to regular text in unsupported browsers.
+@supports ( initial-letter: 3 ) or ( -webkit-initial-letter: 3 ) {
+	.has-drop-cap:not(:focus)::first-letter {
+		-webkit-initial-letter: 3;
+		initial-letter: 3;
+		float: none;
+		margin: 0;
+		padding-right: var( --wp--preset--spacing--20 );
+		font-family: inherit;
+		font-size: inherit;
+		font-weight: 700;
+		line-height: inherit;
+	}
+}
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+p.is-style-indent {
+	text-indent: var( --wp--preset--spacing--120 );
+}
+
+p.is-style-lead-in::first-line {
+	font-weight: 700;
+
+	// Only use small-caps if and other font features if the current font
+	// supports them.
+	font-synthesis: none;
+	font-variant: small-caps;
+}
+
+p.is-style-lede {
+	font-weight: 600;
+	font-size: var( --wp--preset--font-size--xl );
+	line-height: var( --wp--custom--line-height--xl );
+}

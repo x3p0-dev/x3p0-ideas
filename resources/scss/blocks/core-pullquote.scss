@@ -1,0 +1,160 @@
+
+// -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+// Zero out default browser spacing.
+:where( .wp-block-pullquote blockquote ) {
+	margin: 0;
+	padding: 0;
+}
+
+// The block doesn't have spacing support, so this is a necessary hack to add in
+// some padding when it has a background.
+.wp-block-pullquote.has-background {
+	padding: var( --wp--style--block-gap );
+}
+
+// Cite doesn't have a standalone block-level wrapper, so it should be a block
+// element itself.
+.wp-block-pullquote blockquote > cite {
+	display: block;
+	margin-top: var( --wp--preset--spacing--20 );
+}
+
+// Faux `blockGap` support.
+.wp-block-pullquote blockquote > * {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+
+.wp-block-pullquote blockquote > * + * {
+	margin-block-start: var(
+		--wp--custom--block-gap--pullquote,
+		var( --wp--style--block-gap )
+	);
+}
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+// Background clip text style.
+.wp-block-pullquote.is-style-clip-text,
+.editor-styles-wrapper .wp-block-pullquote.is-style-clip-text {
+	background-clip: text !important;
+	-webkit-background-clip: text !important;
+	color: transparent !important;
+	border: none;
+	position: relative;
+	padding: var( --wp--preset--spacing--120 ) 0;
+
+	&:not( .has-background ) {
+		background-image: var( --wp--preset--gradient--cool-to-warm-spectrum );
+	}
+
+	&::before,
+	&::after {
+		content: "";
+		width: 35%;
+		margin: 0;
+		height: 2px;
+		background-color: inherit;
+		background-image: inherit;
+		display: block;
+		position: absolute;
+		left: 32.5%;
+		z-index: 1;
+	}
+
+	&::before { top: 0; }
+	&::after { bottom: 0 !important; } // !important to work in the editor.
+
+	blockquote,
+	cite {
+		background-clip: text !important;
+		-webkit-background-clip: text !important;
+		color: transparent !important;
+		background-image: inherit;
+	}
+}
+
+// Mark top style.
+.wp-block-pullquote.is-style-mark-top,
+.editor-styles-wrapper .wp-block-pullquote.is-style-mark-top {
+	padding: 0;
+	border: none;
+}
+
+.wp-block-pullquote.is-style-mark-top blockquote {
+	position: relative;
+	padding: 1.75em 0 0;
+}
+
+.wp-block-pullquote.is-style-mark-top blockquote::before {
+	content: '\201C';
+	color: currentColor;
+	font-size: 4em;
+	line-height: 85%;
+	font-weight: 700;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX( -50% );
+}
+
+// Double mark.
+
+figure.wp-block-pullquote.is-style-mark-double {
+	position: relative;
+	padding: 0;
+	border: none;
+}
+
+.wp-block-pullquote.is-style-mark-double p {
+	position: relative;
+	padding: 0 2.25em;
+}
+
+.wp-block-pullquote.is-style-mark-double p:first-of-type::before,
+.wp-block-pullquote.is-style-mark-double p:first-of-type::after {
+	color: currentColor;
+	font-size: 4em;
+	line-height: 1;
+	font-weight: 700;
+	position: absolute;
+}
+
+.wp-block-pullquote.is-style-mark-double p:first-of-type::before {
+	content: '\201C';
+	top: -0.05em;
+	left: 0;
+}
+
+.wp-block-pullquote.is-style-mark-double p:last-of-type::after {
+	content: '\201E';
+	bottom: 0.05em;
+	right: 0;
+}
+
+// Figure element needed to overwrite styles in editor.
+
+figure.wp-block-pullquote.is-style-brackets {
+	padding: var( --wp--style--block-gap );
+	border: 1rem solid var( --color-contrast, var( --wp--preset--color--contrast ) );
+	border-bottom-color: transparent;
+	border-top-color: transparent;
+	border-radius: 20%;
+}
+
+figure.wp-block-pullquote.is-style-hand-drawn {
+	padding: var( --wp--style--block-gap ) 0;
+	font-family: var( --wp--preset--font-family--handwriting );
+	border-color: var( --color-contrast, var( --wp--preset--color--contrast ) );
+	border-width: var( --wp--preset--spacing--20 ) 0;
+	border-radius: 255px 15px 255px 15px/15px 10px 15px 10px !important;
+
+	cite {
+		font-family: inherit;
+	}
+}

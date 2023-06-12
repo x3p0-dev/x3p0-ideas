@@ -1,0 +1,13 @@
+
+// -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+// Adds some baseline layout to pagination numbers.
+.wp-block-comments-pagination-numbers {
+	display: flex;
+	gap: var(
+		--wp--custom--block-gap--comments-pagination-numbers,
+		var( --wp--preset--spacing--20 )
+	);
+}

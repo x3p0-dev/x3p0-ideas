@@ -1,0 +1,65 @@
+
+// -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+// Fix for WP adding left/right padding to Image blocks within Gallery blocks
+// that are nested within constrained layouts. This happens when
+// `useRootPaddingAwareAlignments` is enabled in `theme.json`. Needs more testing.
+.wp-block-gallery.alignfull .wp-block-image,
+.editor-styles-wrapper .has-global-padding > .wp-block-gallery.alignfull > .wp-block-image {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+// WordPress hardcodes a 13px font-size for captions. At that size, captions
+// are so unreadable that they may as well not exist. 🙈
+//
+// This CSS makes it possible to set the font-size and line-height via the `
+// core/gallery` or `core/image` typography styles in `theme.json`.
+.wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
+	font-size: inherit;
+	line-height: inherit;
+}
+
+// WordPress doesn't zero out inherited margins from `styles.element.cite` in
+// `theme.json`, which breaks the positioning of the caption for gallery images.
+.wp-block-gallery figure.wp-block-image figcaption {
+	margin: 0;
+}
+
+// -----------------------------------------------------------------------------
+// Block style customizations.
+// -----------------------------------------------------------------------------
+
+.wp-block-gallery.alignfull {
+	padding-left: var( --wp--style--unstable-gallery-gap, 0 );
+	padding-right: var( --wp--style--unstable-gallery-gap, 0 );
+}
+
+.wp-block-gallery.has-background {
+	padding: var( --wp--style--unstable-gallery-gap, 0 );
+}
+
+.wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
+	padding: var( --wp--preset--spacing--20 );
+}
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+.wp-block-gallery.is-style-classic.has-nested-images {
+	align-items: flex-start;
+}
+
+.wp-block-gallery.is-style-classic figure.wp-block-image:where(
+	:not( [class*=is-style-] ),
+	.is-style-default
+) figcaption {
+	position: initial;
+	margin: 0;
+	padding: var( --wp--preset--spacing--20 );
+	color: inherit;
+	background: unset;
+}

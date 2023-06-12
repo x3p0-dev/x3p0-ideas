@@ -1,0 +1,36 @@
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+// Faux `blockGap` support.
+.wp-block-post-comments-form > *,
+.wp-block-post-comments-form form > * {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+
+.wp-block-post-comments-form > * + *,
+.wp-block-post-comments-form form > * + *,
+.wp-block-post-comments-form .comment-reply-title + * {
+	margin-block-start: var(
+		--wp--custom--block-gap--comments-form,
+		var( --wp--preset--spacing--40 )
+	);
+}
+
+// Fixes misaligned checkbox and label when the label wraps two or more lines.
+// This is because core uses centered alignment.
+.wp-block-post-comments-form .comment-form-cookies-consent {
+	align-items: baseline;
+}
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+// Overwrites WP's default form field padding with a theme spacing size.
+.wp-block-post-comments-form input:not([type=submit]):not([type=checkbox]),
+.wp-block-post-comments-form textarea {
+	padding: var( --wp--preset--spacing--20 );
+}

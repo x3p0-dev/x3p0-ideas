@@ -1,0 +1,79 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"title": "Playful",
+	"settings": {
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "Jost, ui-sans-serif, sans-serif",
+					"slug": "primary",
+					"name": "Primary (Jost)",
+					"fontFace": [
+						{
+							"fontFamily": "Jost",
+							"fontWeight": "100 900",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./public/fonts/jost/jost.woff2" ]
+						},
+						{
+							"fontFamily": "Jost",
+							"fontWeight": "100 900",
+							"fontStyle": "italic",
+							"fontStretch": "normal",
+							"src": [ "file:./public/fonts/jost/jost-italic.woff2" ]
+						}
+					]
+				},
+				{
+					"fontFamily": "Figtree, ui-sans-serif, sans-serif",
+					"slug": "secondary",
+					"name": "Secondary (Figtree)",
+					"fontFace": [
+						{
+							"fontFamily": "Figtree",
+							"fontWeight": "300 900",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./public/fonts/figtree/figtree.woff2" ]
+						},
+						{
+							"fontFamily": "Figtree",
+							"fontWeight": "300 900",
+							"fontStyle": "italic",
+							"fontStretch": "normal",
+							"src": [ "file:./public/fonts/figtree/figtree-italic.woff2" ]
+						}
+					]
+				},
+				{
+					"fontFamily": "\"Fuzzy Bubbles\", cursive",
+					"slug": "tertiary",
+					"name": "Tertiary (Fuzzy Bubbles)",
+					"fontFace": [
+						{
+							"fontFamily": "Fuzzy Bubbles",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./public/fonts/fuzzy-bubbles/fuzzy-bubbles-400.woff2" ]
+						},
+						{
+							"fontFamily": "Fuzzy Bubbles",
+							"fontWeight": "700",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./public/fonts/fuzzy-bubbles/fuzzy-bubbles-700.woff2" ]
+						}
+					]
+				},
+				{
+					"fontFamily": "\"Source Code Pro\", Monaco, Consolas, \"Andale Mono WT\", \"Andale Mono\", \"Lucida Console\", \"Lucida Sans Typewriter\", \"DejaVu Sans Mono\", \"Bitstream Vera Sans Mono\", \"Liberation Mono\", \"Nimbus Mono L\", \"Courier New\", Courier, monospace",
+					"slug": "mono",
+					"name": "Monospace"
+				}
+			]
+		}
+	}
+}

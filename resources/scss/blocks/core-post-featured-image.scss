@@ -1,0 +1,24 @@
+
+// -----------------------------------------------------------------------------
+// Block style customizations.
+// -----------------------------------------------------------------------------
+
+@media ( max-width: 64rem ) {
+	.wp-block-post-template-is-layout-grid :where(
+		.wp-block-post-featured-image[style*="16/9"],
+		.wp-block-post-featured-image[style*="16 / 9"]
+	 ) {
+		aspect-ratio: 4/3 !important;
+	}
+}
+
+@media ( max-width: 40rem ) {
+	.wp-block-post-template-is-layout-grid :where(
+		.wp-block-post-featured-image[style*="16/9"],
+		.wp-block-post-featured-image[style*="16 / 9"],
+		.wp-block-post-featured-image[style*="4/3"],
+		.wp-block-post-featured-image[style*="4 / 3"]
+	 ) {
+		aspect-ratio: 1/1 !important;
+	}
+}

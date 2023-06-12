@@ -1,0 +1,16 @@
+
+// -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+// Remove extra whitespace from inline block element so this aligns correctly.
+.wp-block-avatar__image {
+	display: block;
+}
+
+// Setting `border.radius` via `theme.json` applies it to the wrapper.
+.wp-block-avatar > *,
+.wp-block-avatar__image,
+.wp-block-avatar__link {
+	border-radius: inherit;
+}

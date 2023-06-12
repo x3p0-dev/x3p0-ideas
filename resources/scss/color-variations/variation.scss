@@ -1,0 +1,82 @@
+
+// Must overwrite global padding in the editor, so keep the `.has-global-padding`
+// version of this.
+[class*=has-color-var-],
+[class*=has-color-var-].has-global-padding {
+	padding: var( --wp--style--block-gap );
+}
+
+[class*=has-color-var-]:where( :not( .has-color-var-neutral ) ),
+[class*=has-color-var-] .has-color-var-neutral {
+
+	color: var( --color-contrast );
+	background: var( --color-base );
+	border: 1px solid var( --color-subtle );
+
+	hr {
+		color: var( --color-muted );
+	}
+
+	// Do we really want to set blocks, or is that too much of a battle?
+	:is( pre, .wp-block-file ) {
+		color: var( --color-emphasis );
+		background-color: var( --color-subtle );
+		border-color: var( --color-muted );
+	}
+
+	blockquote,
+	.wp-block-pullquote {
+		color: var( --color-contrast );
+		background-color: var( --color-base );
+		border-color: var( --color-muted );
+	}
+
+	li::marker {
+		color: var( --color-muted );
+	}
+
+	a {
+		color: var( --color-emphasis );
+	}
+
+	:where( :not( pre ) > code ) {
+		color: var( --color-emphasis );
+		background: var( --color-subtle );
+	}
+
+	cite {
+		color: var( --color-muted );
+	}
+
+	kbd {
+		color: var( --color--contrast );
+		border-color: var( --color-muted );
+	}
+
+	ins {
+		color: var( --color-emphasis );
+		background: var( --color-subtle );
+		border-color: var( --color-contrast );
+	}
+
+	mark:where( :not( .has-inline-color ):not( [style] ) ) {
+		color: var( --color-emphasis );
+		background: var( --color-subtle );
+	}
+
+	del,
+	s {
+		color: var( --color-muted );
+		text-decoration-color: var( --color-contrast );
+	}
+
+	.wp-element-caption {
+		color: var( --color-muted );
+	}
+
+	.wp-element-button {
+		color: var( --color-base );
+		background: var( --color-contrast );
+		border-color: var( --color-contrast );
+	}
+}

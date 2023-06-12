@@ -1,0 +1,18 @@
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+.wp-block-button.is-style-hand-drawn > .wp-block-button__link.wp-element-button {
+	border: 2px solid currentColor;
+	box-shadow: var( --wp--preset--shadow--sm );
+	color: inherit;
+	background-color: transparent;
+	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
+	font-family: var( --wp--preset--font-family--handwriting );
+}
+
+.wp-block-button.is-style-hand-drawn > .wp-block-button__link:hover,
+.wp-block-button.is-style-hand-drawn > .wp-block-button__link:focus {
+	background-color: transparent;
+}

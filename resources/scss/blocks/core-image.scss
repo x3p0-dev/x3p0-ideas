@@ -1,0 +1,151 @@
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+.wp-block-image.is-style-borderless,
+.wp-block-image.is-style-borderless img {
+	padding: 0 !important;
+	border: none !important;
+	box-shadow: none !important;
+	outline: none !important;
+}
+
+[class*=gradient-] img {
+	background: var( --gradient, transparent );
+}
+
+.wp-block-image[class*=is-style-hand-drawn] img {
+	color: inherit;
+	border: 2px solid currentColor;
+	overflow: hidden;
+	box-shadow: var( --wp--preset--shadow--md );
+	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
+}
+
+.wp-block-image.is-style-hand-drawn[class*=gradient-] img {
+	padding: 2px;
+}
+
+.wp-block-image[class*=is-style-hand-drawn] figcaption {
+	display: flex;
+	gap: 0.5rem;
+	justify-content: center;
+	align-items: baseline;
+	transform: rotate( 0.5deg );
+
+	&.wp-element-caption {
+		font-family: var( --wp--preset--font-family--handwriting );
+		font-size: var( --wp--preset--font-size--xl );
+		line-height: var( --wp--preset--line-height--xl );
+	}
+}
+
+.wp-block-image[class*=is-style-hand-drawn] figcaption::before {
+	content: "\2938 ";
+	transform: rotate( 135deg );
+	padding-top: 0.5rem;
+}
+
+.wp-block-image[class*=is-style-polaroid] {
+	padding:          var( --wp--preset--spacing--40 );
+	background-color: var( --color-contrast, var( --wp--preset--color--base ) );
+	transition: all 0.5s ease-in-out;
+	overflow: visible;
+}
+
+.wp-block-image.is-style-polaroid:where( :not( [class*=gradient-] ) ) {
+	box-shadow: var( --wp--preset--shadow--md ), 0 0 8rem rgba( 255, 255, 235, 0.5 ) inset;
+}
+
+// todo - shadow colors that inherit.
+// inset and outer shadow should match.
+:where( [class*=has-color-var-] ) .wp-block-image.is-style-polaroid:where( :not( [class*=gradient-] ) ) {
+	box-shadow: var( --wp--preset--shadow--md );
+}
+
+.wp-block-image[class*=is-style-polaroid] figcaption.wp-element-caption {
+	margin-top: var( --wp--preset--spacing--40 );
+	color: var( --color-base, var( --wp--preset--color--contrast ) );
+	font-family: var( --wp--preset--font-family--handwriting );
+	font-size: var( --wp--preset--font-size--xl );
+	line-height: var( --wp--preset--line-height--xl );
+}
+
+.wp-block-image[class*=is-style-polaroid][class*=gradient-] {
+	background: var( --gradient );
+	img {
+		padding: 0;
+		background: transparent;
+	}
+	.wp-element-caption {
+		color: var( --wp--preset--color--white );
+		text-shadow: 1px 1px 1px #000, 0 0 8px rgba( 0, 0, 0, 0.7 );
+	}
+}
+
+.wp-block-image[class*=is-style-tape] {
+	overflow: visible;
+}
+
+.wp-block-image[class*=is-style-tape] {
+	position: relative;
+
+	.wp-element-caption {
+		font-family: var( --wp--preset--font-family--handwriting );
+		font-size: var( --wp--preset--font-size--xl );
+		line-height: var( --wp--preset--line-height--xl );
+	}
+}
+
+.wp-block-image[class*=is-style-tape]::before,
+.wp-block-image[class*=is-style-tape]::after {
+	content: "";
+	display: block;
+	position: absolute;
+	background: rgba( 255, 255, 235, 0.5 );
+	box-shadow: var( --wp--preset--shadow--md );
+	height: var( --wp--preset--spacing--80 );
+	margin: auto;
+	width: 7rem;
+	z-index: 1;
+}
+
+.wp-block-image.is-style-tape::before {
+	left: 50%;
+	margin-left: -3.5rem;
+	top: calc( -1 * var( --wp--preset--spacing--40 ) );
+	transform: rotate( 8deg );
+}
+
+.wp-block-image.is-style-tape::after {
+	display: none;
+}
+
+.wp-block-image.is-style-tape[class*=gradient-]::before {
+	top: calc(
+		-0.75 *
+		clamp( 0.5rem, -0.33333333333333326rem + 2.083333333333333cqi, 1rem )
+	);
+}
+
+.wp-block-image.is-style-tape-corners::before {
+	left: calc( -1 * var( --wp--preset--spacing--80 ) );
+	top: var( --wp--preset--spacing--20 );
+	transform: rotate( -35deg );
+}
+
+.wp-block-image.is-style-tape-corners::after {
+	right: calc( -1 * var( --wp--preset--spacing--80 ) ) !important;
+	top: var( --wp--preset--spacing--20 ) !important;
+	bottom: unset !important;
+	left: unset !important;
+	transform: rotate( 45deg);
+}
+
+// Editor fix. The tape styles use the `::after` pseudo-element as part
+// of their design. But WP also uses this in the editor to show the selected
+// block outline. So, we're attaching an outline to the image itself in this case.
+.wp-block-image[class*=is-style-tape].block-editor-block-list__block:focus img {
+	outline: 2px solid var(--wp-admin-theme-color, transparent );
+}

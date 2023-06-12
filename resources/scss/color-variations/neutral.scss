@@ -1,0 +1,19 @@
+
+.has-color-var-neutral {
+	color: var( --wp--preset--color--neutral-contrast );
+	background: var( --wp--preset--color--neutral-base );
+	border: 1px solid var( --wp--preset--color--neutral-subtle );
+
+	:where( :not( pre ) > code ) {
+		background: var( --wp--preset--color--neutral-subtle );
+	}
+}
+
+
+[class*=has-color-var-] .has-color-var-neutral {
+	--color-base: var( --wp--preset--color--neutral-base );
+	--color-subtle: var( --wp--preset--color--neutral-subtle );
+	--color-muted: var( --wp--preset--color--neutral-muted );
+	--color-contrast: var( --wp--preset--color--neutral-contrast );
+	--color-emphasis: var( --wp--preset--color--neutral-emphasis );
+}

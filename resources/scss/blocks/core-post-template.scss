@@ -1,0 +1,128 @@
+
+// -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+// Zero out potential spacing on list items. WordPress puts the post in an
+// unordered list, so other styles on `<li>` items easily affect this.
+:where( .wp-block-post-template > .wp-block-post ) {
+	margin: 0;
+	padding: 0;
+}
+
+// Faux `blockGap` support.
+// @link https://github.com/WordPress/gutenberg/pull/49050
+.wp-block-post-template.is-layout-flow > * {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+
+.wp-block-post-template.is-layout-flow > * + * {
+	margin-block-start: var(
+		--wp--custom--block-gap--post-template,
+		var( --wp--style--block-gap )
+	);
+}
+
+// Zero out padding when background is applied.
+.wp-block-post-template.has-background {
+	padding: 0;
+}
+
+// -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+// Ensures that `cqi` values are based on their container, not the viewport.,
+.wp-block-post-template-is-layout-grid > .wp-block-post
+{
+	container-type: inline-size;
+}
+
+
+.wp-block-query .wp-block-post-template.is-layout-grid {
+	grid-template-columns: repeat( var( --col-count, 1 ), 1fr ) !important;
+}
+
+@media ( min-width: 40rem ) {
+	.wp-block-post-template.is-layout-grid:where(
+		.columns-2,
+		.columns-3,
+		.columns-4,
+		.columns-5,
+		.columns-6
+	) { --col-count: 2; }
+}
+
+@media ( min-width: 48rem ) {
+	.wp-block-post-template.is-layout-grid:where(
+		.columns-3,
+		.columns-4,
+		.columns-5,
+		.columns-6
+	) { --col-count: 3; }
+}
+
+@media ( min-width: 64rem ) {
+	.wp-block-post-template.is-layout-grid:where(
+		.columns-4,
+		.columns-5,
+		.columns-6
+	) { --col-count: 4; }
+}
+
+@media ( min-width: 80rem ) {
+	.wp-block-post-template.is-layout-grid.columns-5 { --col-count: 5; }
+	.wp-block-post-template.is-layout-grid.columns-6 { --col-count: 6; }
+}
+
+
+/* Set a query container for flex query loops. */
+.wp-block-post-template.is-flex-container > .wp-block-post {
+	container-type: inline-size;
+}
+
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+.wp-block-post-template.is-style-flex {
+	display: flex !important;
+	flex-wrap: wrap;
+}
+
+.is-style-flex > .wp-block-post {
+	flex: 1 100%;
+}
+
+
+@media ( min-width: 40rem ) {
+	.is-style-flex.columns-2 > .wp-block-post {
+		min-width: 24rem;
+		flex-basis: calc( 50% - 2rem );
+	}
+	.is-style-flex.columns-3 > .wp-block-post {
+		min-width: 20rem;
+		flex-basis: calc( 33.33% - 2rem );
+	}
+	.is-style-flex.columns-4 > .wp-block-post {
+		min-width: 20rem;
+		flex-basis: calc( 25% - 2rem );
+	}
+	.is-style-flex.columns-5 > .wp-block-post {
+		min-width: 16rem;
+		flex-basis: calc( 20% - 2rem );
+	}
+	.is-style-flex.columns-6 > .wp-block-post {
+		min-width: 13rem;
+		flex-basis: calc( 16.77% - 2rem );
+	}
+}
+
+@media ( min-width: 64rem ) {
+
+	//.is-style-flex.columns-4 > .wp-block-post { min-width: 16rem; }
+	//.is-style-flex.columns-5 > .wp-block-post { min-width: 12rem; }
+	//.is-style-flex.columns-6 > .wp-block-post { min-width: 13rem; }
+}

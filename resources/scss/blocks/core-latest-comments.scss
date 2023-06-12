@@ -1,0 +1,17 @@
+
+// -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+// WP hardcodes a font-size for comment dates.
+.wp-block-latest-comments__comment-date {
+	font-size: inherit;
+}
+
+// WP hardcodes a font-size for comment excerpt paragraphs.
+.wp-block-latest-comments__comment-excerpt p {
+	font-size: inherit;
+
+	// Custom style adjustment.
+	margin: var( --wp--preset--spacing--10 ) 0 0;
+}

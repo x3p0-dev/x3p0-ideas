@@ -1,0 +1,49 @@
+
+.has-color-var-tip {
+	--color-base: var( --wp--preset--color--tip-base );
+	--color-subtle: var( --wp--preset--color--tip-subtle );
+	--color-muted: var( --wp--preset--color--tip-muted );
+	--color-contrast: var( --wp--preset--color--tip-contrast );
+	--color-emphasis: var( --wp--preset--color--tip-emphasis );
+
+	/*
+	padding: var( --wp--style--block-gap );
+	color: var( --wp--preset--color--tip-contrast );
+	background: var( --wp--preset--color--tip-base );
+	border: 1px solid var( --wp--preset--color--tip-subtle );
+
+	li::marker {
+		color: var( --wp--preset--color--tip-muted );
+	}
+
+	a {
+		color: var( --wp--preset--color--tip-emphasis );
+	}
+
+	:where( :not( pre ) > code ) {
+		color: var( --wp--preset--color--tip-emphasis );
+		background: var( --wp--preset--color--tip-subtle );
+	}
+
+	kbd {
+		color: var( --wp--preset--color--contrast );
+		border-color: var( --wp--preset--color--tip-muted );
+	}
+
+	ins {
+		color: var( --wp--preset--color--tip-emphasis );
+		background: var( --wp--preset--color--tip-subtle );
+		border-color: var( --wp--preset--color--tip-contrast );
+	}
+
+	mark:where( :not( .has-inline-color ):not( [style] ) ) {
+		color: var( --wp--preset--color--tip-emphasis );
+		background: var( --wp--preset--color--tip-subtle );
+	}
+
+	del,
+	s {
+		color: var( --wp--preset--color--tip-muted );
+		text-decoration-color: var( --wp--preset--color--tip-contrast );
+	}*/
+}

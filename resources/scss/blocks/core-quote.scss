@@ -1,0 +1,35 @@
+
+// -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+// Zero out default browser spacing.
+:where( .wp-block-quote ) {
+	margin: 0;
+	padding: 0;
+}
+
+// Cite doesn't have a standalone block-level wrapper, so it should be a block
+// element itself.
+.wp-block-quote cite {
+	display: block;
+}
+
+// Faux `blockGap` support.
+.wp-block-quote > * {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+
+.wp-block-quote > * + * {
+	margin-block-start: var(
+		--wp--custom--block-gap--quote,
+		var( --wp--style--block-gap )
+	);
+}
+
+
+
+.wp-block-quote cite {
+	margin-top: var( --wp--preset--spacing--20 );
+}

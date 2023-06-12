@@ -1,0 +1,93 @@
+
+// -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+// Zeroes out WP's inherited gap between items in the mobile menu.
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__container {
+	gap: 0;
+}
+
+// Zeroes out WP's default padding for submenus in the mobile menu.
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__submenu-container {
+	padding-top: 0;
+}
+
+.wp-block-navigation__responsive-container.has-modal-open .wp-block-navigation__responsive-close {
+	max-width: 100%;
+}
+
+// Zeroes out margins from general list spacing.
+.wp-block-navigation .wp-block-navigation-item {
+	margin: 0;
+}
+
+// -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item,
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container,
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-page-list {
+	--navigation-layout-justification-setting: flex-start;
+}
+
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container {
+	width: 100%;
+}
+
+// Adding the cover here prevents a weird flash from core's defined default
+// color and the theme's link transition style.
+.wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container {
+	color: var( --wp--custom--blocks--navigation-submenu--color );
+}
+
+.wp-block-navigation .wp-block-navigation__responsive-container:not( .has-modal-open ) .has-child:not( .open-on-click ):hover > .wp-block-navigation__submenu-container {
+	min-width: 16rem;
+	border: none;
+	border-radius: var( --wp--custom--blocks--navigation-submenu--border-radius, 0 );
+	color: var( --wp--custom--blocks--navigation-submenu--color );
+	background: var( --wp--custom--blocks--navigation-submenu--background );
+	border: var( --wp--custom--blocks--navigation-submenu--border, none );
+
+	.wp-block-navigation-item {
+		transition: all 0.5s ease-in-out;
+	}
+	.wp-block-navigation-item__content {
+		transition: none;
+	}
+
+	.wp-block-navigation-item:hover,
+	.wp-block-navigation-item:focus {
+		color: var( --wp--custom--blocks--navigation-submenu--link-hover-color, inherit );
+		background: var( --wp--custom--blocks--navigation-submenu--link-hover-background, inherit );
+	}
+}
+
+.wp-block-navigation__submenu-icon {
+	//transition: all 0.5s ease-in-out;
+}
+.wp-block-navigation__submenu-container .has-child .wp-block-navigation__submenu-icon {
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+
+.wp-block-navigation-submenu .wp-block-navigation__submenu-container {
+	padding: 0.25rem 0;
+	padding: 16px;
+}
+
+.wp-block-navigation-submenu li {
+	border-radius: inherit;
+}
+
+:where( .wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-item a:not( .wp-element-button ) ),
+:where( .wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-submenu a:not( .wp-element-button ) ),
+:where( .wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-submenu button.wp-block-navigation-item__content ),
+:where( .wp-block-navigation .wp-block-navigation__submenu-container .wp-block-pages-list__item button.wp-block-navigation-item__content ) {
+	padding: 0.25rem 1rem;
+	padding: 0.5rem 1rem;
+}
+
+:where( .wp-block-navigation__submenu-container .wp-block-navigation-item a:not( .wp-element-button ) ) {
+	border-radius: inherit;
+}

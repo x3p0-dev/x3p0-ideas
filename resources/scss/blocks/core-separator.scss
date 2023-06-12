@@ -1,0 +1,81 @@
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+// Note that we're specifically targeting `<hr>` so that this wins the
+// specificity battle in the editor. ⚔️
+//
+// Most of these need their background reset because WP sets both the `core`
+// and `background` values for the block's color. All we need is the color,
+// which WP automatically applies to the border via `currentColor`.
+
+hr.wp-block-separator.is-style-dashed {
+	border-width: var( --wp--preset--spacing--10 ) 0 0;
+	border-style: dashed;
+	background: none !important;
+}
+
+hr.wp-block-separator.is-style-dotted {
+	border-width: var( --wp--preset--spacing--10 ) 0 0;
+	border-style: dotted;
+	background: none !important;
+}
+
+hr.wp-block-separator.is-style-double {
+	border-width: var( --wp--preset--spacing--20 ) 0 0;
+	border-style: double;
+	background: none !important;
+}
+
+hr.wp-block-separator.is-style-hand-drawn {
+	margin-bottom: -20px !important;
+	padding: var( --wp--preset--spacing--40 );
+	border-width: var( --wp--preset--spacing--20 ) 0 0;
+	border-radius: 255px 15px 0 0/15px 4px 0 0 !important;
+	background: none !important;
+}
+
+hr.wp-block-separator.is-style-hatched {
+	height: 1rem;
+	border: none;
+	background-color: transparent !important;
+	background-image: linear-gradient(
+		-45deg,
+		currentColor 25%,
+		transparent 25%,
+		transparent 50%,
+		currentColor 50%,
+		currentColor 75%,
+		transparent 75%,
+		transparent
+	);
+	background-position: 0;
+	background-size: 0.5rem 0.5rem;
+}
+
+hr.wp-block-separator[class*=is-style-scallop] {
+	height: var( --wp--preset--spacing--40 );
+	width: 100%;
+	border: none;
+	background-color: transparent !important;
+	background-image: radial-gradient(
+		var( --wp--preset--spacing--80 ) at 50% var( --radial-v-pos, 0 ),
+		currentColor,
+		currentColor 49%,
+		transparent 51%,
+		transparent
+	);
+	background-size: var( --wp--preset--spacing--80 ) 100%;
+}
+
+.wp-block-separator.is-style-scallop-up {
+	--radial-v-pos: 100%;
+}
+
+// Mixin' and matchin'. Adding some separators directly after the others will
+// create a unique separator of its own. Just for fun! 🔴🔵🟠🟢🟡🟣
+.wp-block-separator.is-style-double + .wp-block-separator.is-style-double,
+.wp-block-separator.is-style-scallop-up + .wp-block-separator.is-style-scallop-down {
+	margin-top: 0;
+}

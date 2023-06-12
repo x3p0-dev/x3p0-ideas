@@ -1,0 +1,20 @@
+
+// -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+// Adding a prefix/suffix means manually adding a space in the text itself. In
+// many scenarios, this works fine. However, if you want to target the nested
+// `*__prefix` or `*__suffix` selectors with things like an underline, background
+// color, and more, the style applies to the text and the space.
+//
+// This addresses that by making the block a flex layout and adding a gap. This
+// works regardless of whether the space was added or not.
+.wp-block-post-terms {
+	display: flex;
+	align-items: baseline;
+	gap: var(
+		--wp--custom--block-gap--post-terms,
+		var( --wp--preset--spacing--10 )
+	);
+}

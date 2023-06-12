@@ -1,0 +1,17 @@
+// Fix for WP adding left/right padding to Column blocks within Columns blocks
+// that are nested within constrained layouts. This happens when
+// `useRootPaddingAwareAlignments` is enabled in `theme.json`. Needs more testing.
+.wp-block-columns.alignfull .wp-block-column,
+.editor-styles-wrapper .has-global-padding > .wp-block-columns.alignfull > .wp-block-column {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+// -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+// Ensures that `cqi` values are based on their container, not the viewport.
+.wp-block-column {
+	container-type: inline-size;
+}

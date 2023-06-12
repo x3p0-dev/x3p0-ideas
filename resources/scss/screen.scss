@@ -1,0 +1,195 @@
+/*
+------ Don't delete until we've tested this font-size system out in theme.json.
+--font-size-minus-2: clamp(0.84rem, -0.23vw + 0.91rem, 0.76rem);
+--font-size-minus-1: clamp(0.94rem, 0.02vw + 0.94rem, 0.95rem);
+--font-size-base: clamp(1.06rem, 0.37vw + 0.95rem, 1.19rem);
+--font-size-plus-1: clamp(1.2rem, 0.85vw + 0.94rem, 1.48rem);
+--font-size-plus-2: clamp(1.34rem, 1.5vw + 0.89rem, 1.86rem);
+--font-size-plus-3: clamp(1.51rem, 2.37vw + 0.8rem, 2.32rem);
+--font-size-plus-4: clamp(1.7rem, 3.52vw + 0.65rem, 2.9rem);
+--font-size-plus-5: clamp(1.91rem, 5.03vw + 0.41rem, 3.62rem);
+--font-size-plus-6: clamp(2.15rem, 6.99vw + 0.06rem, 4.53rem);
+--font-size-plus-7: clamp(2.42rem, 9.53vw + -0.43rem, 5.66rem);
+--font-size-plus-8: clamp(2.73rem, 12.8vw + -1.11rem, 7.08rem);
+*/
+
+// Move to an editor-only file.
+.edit-post-visual-editor__post-title-wrapper {
+	margin-top: 0 !important;
+}
+
+
+/* Defaults. */
+* {
+	/* Enables features from the registered fonts. */
+	font-feature-settings: "tnum", "ss01" 1;
+	font-variant-numeric: slashed-zero;
+
+}
+
+
+a:where( :not( :focus ) ),
+input:focus,
+textarea:focus,
+.wp-element-button {
+	transition: all 0.5s ease-in-out;
+}
+
+:where( a:not( .wp-element-button ):focus ) {
+	outline: 1px solid currentColor;
+	outline-offset: 0.0625em;
+}
+
+a,
+.wp-element-button {
+	text-underline-offset: 0.0625em;
+}
+
+:where( :not( pre ) > code ) {
+	padding: 0.125em 0.25em;
+	font-family: var( --wp--preset--font-family--mono );
+	font-size: clamp( var( --wp--preset--font-size--sm ), 0.75em, 0.75em );
+	font-weight: 600;
+	color: var( --wp--preset--color--neutral-emphasis, inherit );
+	background: var( --wp--preset--color--neutral-base, inherit );
+}
+
+kbd {
+	padding: 0.125em 0.25em;
+	font-family: var( --wp--preset--font-family--mono );
+	font-size: clamp( var( --wp--preset--font-size--sm ), 0.75em, 0.75em );
+	color: var( --wp--preset--color--contrast );
+	border: 1px solid var( --wp--preset--color--neutral-muted );
+	border-radius: 0.25rem;
+}
+
+ins {
+	padding: 0.125em 0.25em;
+	color: var( --wp--preset--color--tip-contrast );
+	background: var( --wp--preset--color--tip-base );
+	border-bottom: 1px solid var( --wp--preset--color--tip-contrast );
+	text-decoration: none;
+}
+
+mark {
+	padding: 0.125em 0.25em;
+}
+
+// Style <mark> elements but avoid WP's "highlight" rich text element.
+mark:where( :not( .has-inline-color ):not( [style] ) ) {
+	color: var( --wp--preset--color--neutral-emphasis, inherit );
+	background: var( --wp--preset--color--neutral-subtle, inherit );
+}
+
+:where( h1, h2, h3, h4, h5 h6 ) > mark {
+	line-height: 1.625em;
+	padding: 0;
+}
+
+del,
+s {
+//	opacity: 0.5
+	color: var( --wp--preset--color--danger-muted );
+	text-decoration-color: var( --wp--preset--color--danger-contrast );
+	text-decoration-thickness: 2px;
+}
+
+sup,
+sub {
+	font-size: 0.8125em;
+}
+
+p {
+	box-sizing: border-box;
+}
+
+audio,
+video {
+	display: block;
+}
+
+.has-overline {
+	text-decoration: overline;
+}
+
+/**
+ * Combine each line-height set via `settings.custom.lineHeight` in `theme.json`
+ * with the corresponding font-size set via `setting.typography.fontSizes`.
+ */
+.has-6-xl-font-size { line-height: var( --wp--custom--line-height--6-xl ); }
+.has-5-xl-font-size { line-height: var( --wp--custom--line-height--5-xl ); }
+.has-4-xl-font-size { line-height: var( --wp--custom--line-height--4-xl ); }
+.has-3-xl-font-size { line-height: var( --wp--custom--line-height--3-xl ); }
+.has-2-xl-font-size { line-height: var( --wp--custom--line-height--2-xl ); }
+.has-xl-font-size   { line-height: var( --wp--custom--line-height--xl ); }
+.has-lg-font-size   { line-height: var( --wp--custom--line-height--lg ); }
+.has-md-font-size   { line-height: var( --wp--custom--line-height--md ); }
+.has-sm-font-size   { line-height: var( --wp--custom--line-height--sm ); }
+.has-xs-font-size   { line-height: var( --wp--custom--line-height--xs ); }
+
+/* Loosens the spacing above headings tightens the spacing below. */
+.wp-block-post-content > :is( h1, h2, h3, h4, h5, h6 ) {
+	margin-block-end: 0;
+}
+
+.wp-block-post-content > * + :is( h1, h2, h3, h4, h5, h6 )  {
+	margin-block-start: var( --wp--preset--spacing--120 );
+}
+
+.wp-block-post-content > :is( h1, h2, h3, h4, h5, h6 ) + * {
+	margin-block-start: var( --wp--preset--spacing--40 );
+}
+
+.wp-block-post-content > :where( hr, .wp-block-spacer ) + :is( h1, h2, h3, h4, h5, h6 ),
+.wp-block-post-content > :is( h1, h2, h3, h4, h5, h6 ) + :where( hr, .wp-block-spacer ) {
+	margin-block-start: var( --wp--style--block-gap );
+}
+
+/* Center captions (WP doesn't support text-align in `theme.json`). */
+.wp-element-caption {
+	text-align: center;
+}
+
+/* Prefix `cite` elements (WP doesn't support element CSS in `theme.json`). */
+cite::before {
+	content: "\2013\000A0";
+}
+
+/* Adds form element styles, which aren't yet supported in `theme.json`. */
+input,
+select,
+textarea,
+:where( .wp-block-search__button-inside .wp-block-search__inside-wrapper ),
+.wp-block-search__input,
+.wp-block-post-comments-form :is( input:not( .wp-element-button ), textarea ) {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: normal;
+	font-weight: 400;
+	line-height: inherit;
+	color: var( --color-emphasis, var( --wp--custom--elements--form-input--color, inherit ) );
+	background: var( --color-subtle, var( --wp--custom--elements--form-input--background, transparent ) );
+	border: var( --wp--custom--elements--form-input--border-width, 1px )
+		var( --wp--custom--elements--form-input--border-width, solid )
+		var( --color-muted, var( --wp--custom--elements--form-input--border-color, none ) );
+}
+
+::placeholder {
+	color: var( --color-muted, var( --wp--custom--elements--form-input--placeholder-color, none ) );
+}
+
+input[type="checkbox"],
+input[type="radio"],
+.wp-block-search__button-inside .wp-block-search__input {
+	border: none;
+}
+
+// import extra
+@import 'color-variations/primary.scss';
+@import 'color-variations/neutral.scss';
+@import 'color-variations/info.scss';
+@import 'color-variations/tip.scss';
+@import 'color-variations/warning.scss';
+@import 'color-variations/danger.scss';
+@import 'color-variations/variation.scss';
+@import 'shared/style-variations.scss';

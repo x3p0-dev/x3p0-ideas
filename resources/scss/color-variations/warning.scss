@@ -1,0 +1,8 @@
+
+.has-color-var-warning {
+	--color-base: var( --wp--preset--color--warning-base );
+	--color-subtle: var( --wp--preset--color--warning-subtle );
+	--color-muted: var( --wp--preset--color--warning-muted );
+	--color-contrast: var( --wp--preset--color--warning-contrast );
+	--color-emphasis: var( --wp--preset--color--warning-emphasis );
+}

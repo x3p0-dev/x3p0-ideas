@@ -1,0 +1,40 @@
+
+// -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+// The editor has an extra wrapper that doesn't exist in the front-end, so we
+// also need to target `*__content-wrapper`.
+.wp-block-file,
+.wp-block-file__content-wrapper {
+	box-sizing: border-box;
+
+	// This is just a nicer display and not a bug fix.
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: var( --wp--style--block-gap );
+}
+
+// Zero out WP's bottom spacing on embedded media (test with PDF).
+.wp-block-file__embed {
+	margin-bottom: 0;
+}
+
+// Overwrite WP's hard-coded font-size so that it inherits from its parent.
+.wp-block-file:not( .wp-element-button ) {
+	font-size: inherit;
+}
+
+// Core sets the opacity on these states for the file button for some crazy
+// reason or another. 🤪 It sets some other things too, but those can be easily
+// set via `theme.json`.
+.wp-block-file__button {
+	&:active,
+	&:focus,
+	&:hover,
+	&:visited {
+		opacity: 1;
+	}
+}

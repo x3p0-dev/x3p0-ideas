@@ -1,0 +1,48 @@
+
+.has-color-var-primary {
+	--color-base: var( --wp--preset--color--primary-base );
+	--color-subtle: var( --wp--preset--color--primary-subtle );
+	--color-muted: var( --wp--preset--color--primary-muted );
+	--color-contrast: var( --wp--preset--color--primary-contrast );
+	--color-emphasis: var( --wp--preset--color--primary-emphasis );
+	/*
+	padding: var( --wp--style--block-gap );
+	color: var( --wp--preset--color--primary-contrast );
+	background: var( --wp--preset--color--primary-base );
+	border: 1px solid var( --wp--preset--color--primary-subtle );
+
+	li::marker {
+		color: var( --wp--preset--color--primary-muted );
+	}
+
+	a {
+		color: var( --wp--preset--color--primary-emphasis );
+	}
+
+	:where( :not( pre ) > code ) {
+		color: var( --wp--preset--color--primary-emphasis );
+		background: var( --wp--preset--color--primary-subtle );
+	}
+
+	kbd {
+		color: var( --wp--preset--color--contrast );
+		border-color: var( --wp--preset--color--primary-muted );
+	}
+
+	ins {
+		color: var( --wp--preset--color--primary-emphasis );
+		background: var( --wp--preset--color--primary-subtle );
+		border-color: var( --wp--preset--color--primary-contrast );
+	}
+
+	mark:where( :not( .has-inline-color ):not( [style] ) ) {
+		color: var( --wp--preset--color--primary-emphasis );
+		background: var( --wp--preset--color--primary-subtle );
+	}
+
+	del,
+	s {
+		color: var( --wp--preset--color--primary-muted );
+		text-decoration-color: var( --wp--preset--color--primary-contrast );
+	}*/
+}

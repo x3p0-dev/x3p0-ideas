@@ -1,0 +1,363 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"title": "Statement",
+	"settings": {
+		"custom": {
+			"colorVar": {
+				"light": {
+					"text": "var( --wp--preset--color--contrast )",
+					"background": "var( --wp--preset--color--shades-100 )"
+				},
+				"dark": {
+					"text": "var( --wp--preset--color--white )",
+					"background": "var( --wp--preset--color--contrast )"
+				},
+				"accent": {
+					"text": "var( --wp--preset--color--accent-700 )",
+					"background": "var( --wp--preset--color--accent-50 )",
+					"link": "var( --wp--preset--color--accent-700 )"
+				}
+			},
+			"elements": {
+				"code": {
+					"background": "var( --wp--preset--color--shades-100 )"
+				},
+				"kbd": {
+					"background": "var( --wp--preset--color--shades-100 )",
+					"border": "1px solid var( --wp--preset--color--shades-400 )"
+				},
+				"formInput": {
+					"background": "var( --wp--preset--color--shades-100 )",
+					"border": "1px solid var( --wp--preset--color--contrast )"
+				}
+			},
+			"blocks": {
+				"navigation-submenu": {
+					"color": "var( --wp--preset--color--contrast )",
+					"background": "var( --wp--preset--color--base )",
+					"border": "4px solid var( --wp--preset--color--contrast )",
+					"link-color": "inherit",
+					"link-background": "inherit",
+					"link-hover-color": "inherit",
+					"link-hover-background": "var( --wp--preset--color--shades-100 )"
+				}
+			}
+		},
+		"color": {
+			"palette": [
+				{
+					"slug": "base",
+					"color": "#f8f087",
+					"name": "Base"
+				},
+				{
+					"slug": "contrast",
+					"color": "#000000",
+					"name": "Contrast"
+				},
+				{
+					"slug": "primary-emphasis",
+					"color": "#6b21a8",
+					"name": "Primary: Emphasis"
+				},
+				{
+					"slug": "primary-contrast",
+					"color": "#7c3aed",
+					"name": "Primary: Contrast"
+				},
+				{
+					"slug": "primary-muted",
+					"color": "#a78bfa",
+					"name": "Primary: Muted"
+				},
+				{
+					"slug": "primary-subtle",
+					"color": "#ddd6fe",
+					"name": "Primary: Contrast"
+				},
+				{
+					"slug": "primary-base",
+					"color": "#ede9fe",
+					"name": "Primary: Contrast"
+				},
+
+
+				{
+					"slug": "neutral-emphasis",
+					"color": "#6c4317",
+					"name": "Neutral: Emphasis"
+				},
+				{
+					"slug": "neutral-contrast",
+					"color": "#7f5214",
+					"name": "Neutral: Contrast"
+				},
+				{
+					"slug": "neutral-muted",
+					"color": "#c1900d",
+					"name": "Neutral: Muted"
+				},
+				{
+					"slug": "neutral-subtle",
+					"color": "#f6e56a",
+					"name": "Neutral: Subtle"
+				},
+				{
+					"slug": "neutral-base",
+					"color": "#f9f39f",
+					"name": "Neutral: Base"
+				},
+
+
+
+				{
+					"slug": "shades-950",
+					"color": "#3f2309",
+					"name": "Neutral: 950"
+				},
+				{
+					"slug": "shades-900",
+					"color": "#6c4317",
+					"name": "Neutral: 900"
+				},
+				{
+					"slug": "shades-800",
+					"color": "#7f5214",
+					"name": "Neutral: 800"
+				},
+				{
+					"slug": "shades-700",
+					"color": "#9a680e",
+					"name": "Neutral: 700"
+				},
+				{
+					"slug": "shades-600",
+					"color": "#c1900d",
+					"name": "Neutral: 600"
+				},
+				{
+					"slug": "shades-500",
+					"color": "#dfb713",
+					"name": "Neutral: 500"
+				},
+				{
+					"slug": "shades-200",
+					"color": "#f8f087",
+					"name": "Neutral: 200"
+				},
+				{
+					"slug": "shades-100",
+					"color": "#fbfac6",
+					"name": "Neutral: 100"
+				},
+				{
+					"slug": "shades-50",
+					"color": "#fdfce9",
+					"name": "Neutral: 50"
+				},
+				{
+					"slug": "accent-950",
+					"color": "#1f2d32",
+					"name": "Primary: 950"
+				},
+				{
+					"slug": "accent-900",
+					"color": "#2f464b",
+					"name": "Primary: 900"
+				},
+				{
+					"slug": "accent-800",
+					"color": "#345158",
+					"name": "Primary: 800"
+				},
+				{
+					"slug": "accent-700",
+					"color": "#3b6169",
+					"name": "Primary: 700"
+				},
+				{
+					"slug": "accent-600",
+					"color": "#487881",
+					"name": "Primary: 600"
+				},
+				{
+					"slug": "accent-500",
+					"color": "#5c929b",
+					"name": "Primary: 500"
+				},
+				{
+					"slug": "accent-400",
+					"color": "#7cadb4",
+					"name": "Primary: 400"
+				},
+				{
+					"slug": "accent-300",
+					"color": "#aeccd1",
+					"name": "Primary: 300"
+				},
+				{
+					"slug": "accent-200",
+					"color": "#d2e2e5",
+					"name": "Primary: 200"
+				},
+				{
+					"slug": "accent-100",
+					"color": "#ebf1f3",
+					"name": "Primary: 100"
+				},
+				{
+					"slug": "accent-50",
+					"color": "#f5f9fa",
+					"name": "Primary: 50"
+				}
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "Oswald, ui-sans-serif, sans-serif",
+					"slug": "primary",
+					"name": "Primary (Oswald)",
+					"fontFace": [
+						{
+							"fontFamily": "Oswald",
+							"fontWeight": "200 700",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./public/fonts/oswald/oswald.woff2" ]
+						}
+					]
+				},
+				{
+					"fontFamily": "Cabin, ui-sans-serif, sans-serif",
+					"slug": "secondary",
+					"name": "Secondary (Cabin)",
+					"fontFace": [
+						{
+							"fontFamily": "Cabin",
+							"fontWeight": "400 700",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./public/fonts/cabin/cabin.woff2" ]
+						},
+						{
+							"fontFamily": "Cabin",
+							"fontWeight": "400 700",
+							"fontStyle": "italic",
+							"fontStretch": "normal",
+							"src": [ "file:./public/fonts/cabin/cabin-italic.woff2" ]
+						}
+					]
+				},
+				{
+					"fontFamily": "Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif",
+					"slug": "tertiary",
+					"name": "Tertiary (Didone)"
+				},
+				{
+					"fontFamily": "\"Source Code Pro\", Monaco, Consolas, \"Andale Mono WT\", \"Andale Mono\", \"Lucida Console\", \"Lucida Sans Typewriter\", \"DejaVu Sans Mono\", \"Bitstream Vera Sans Mono\", \"Liberation Mono\", \"Nimbus Mono L\", \"Courier New\", Courier, monospace",
+					"slug": "mono",
+					"name": "Monospace"
+				},
+				{
+					"fontFamily": "\"Segoe Print\", \"Bradley Hand\", Chilanka, TSCu_Comic, casual, cursive",
+					"slug": "handwriting",
+					"name": "Handwriting"
+				}
+			]
+		}
+	},
+	"styles": {
+		"elements": {
+			"button": {
+				"color": {
+					"background": "var( --wp--preset--color--contrast )",
+					"text": "var( --wp--preset--color--shades-50 )"
+				}
+			},
+			"caption": {
+				"typography": {
+					"fontFamily": "var( --wp--preset--font-family--secondary )"
+				}
+			},
+			"cite": {
+				"color": {
+					"text": "inherit"
+				},
+				"typography": {
+					"fontFamily": "var( --wp--preset--font-family--secondary )",
+					"fontWeight": "600",
+					"fontStyle": "normal"
+				}
+			},
+			"link": {
+				"color": {
+					"text": "inherit"
+				}
+			}
+		},
+		"blocks": {
+			"core/code": {
+				"color": {
+					"background": "var:preset|color|shades-100",
+					"text": "var:preset|color|contrast"
+				},
+				"border": {
+					"width": "0",
+					"left": {
+						"width": "var:preset|spacing|10",
+						"style": "solid",
+						"color": "var:preset|color|contrast"
+					}
+				}
+			},
+			"core/comment-template": {
+				"css": "& > li { padding: var( --wp--preset--spacing--80 ); background-color: var( --wp--preset--color--shades-100 ); }"
+			},
+			"core/file": {
+				"color": {
+					"background": "var( --wp--preset--color--shades-100 )"
+				}
+			},
+			"core/list-item": {
+				"css": "&::marker { color: var( --wp--preset--color--shades-600 ); }"
+			},
+			"core/paragraph": {
+				"css": "&.has-drop-cap:not(:focus)::first-letter { font-family: var( --wp--preset--font-family--tertiary ); }"
+			},
+			"core/pullquote": {
+				"border": {
+					"top": {
+						"color": "var( --wp--preset--color--contrast )"
+					},
+					"bottom": {
+						"color": "var( --wp--preset--color--contrast )"
+					}
+				},
+				"typography": {
+					"fontFamily": "var( --wp--preset--font-family--tertiary )",
+					"fontStyle": "italic",
+					"fontWeight": "600"
+				}
+			},
+			"core/quote": {
+				"border": {
+					"left": {
+						"color": "var( --wp--preset--color--contrast )"
+					}
+				},
+				"typography": {
+					"fontFamily": "var( --wp--preset--font-family--tertiary )",
+					"fontStyle": "italic",
+					"fontWeight": "600"
+				}
+			},
+			"core/separator": {
+				"color": {
+					"text": "var:preset|color|contrast"
+				}
+			}
+		}
+	}
+}

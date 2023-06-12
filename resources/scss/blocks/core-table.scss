@@ -1,0 +1,60 @@
+
+// -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+// Fixes inconsistent default `thead` and `tfoot` alignment.
+.wp-block-table thead tr {
+	text-align: left;
+}
+
+.wp-block-table :is( tr, th, td, tbody ) {
+	border-width: 0;
+}
+
+// `theme.json` border support for tables is horribly broken, so we're just
+// inheriting everything here.
+.wp-block-table.has-border-color :is( thead, tfoot, tr th, tr td ) {
+	border-color: inherit;
+}
+
+// -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+// Make WP's default borders smaller.
+.wp-block-table :is( thead ) {
+	border-bottom: 1px solid var( --color-muted, var( --wp--preset--color--neutral-muted ) );
+}
+
+.wp-block-table :is( tfoot ) {
+	border-top: 1px solid var( --color-muted, var( --wp--preset--color--neutral-muted ) );
+}
+
+.wp-block-table tbody tr:where( :not( :first-child ) ) {
+	border-top: 1px solid var( --color-subtle, var( --wp--preset--color--neutral-subtle ) );
+}
+
+// Less prominent bold for headers.
+.wp-block-table :where( th, tfoot ) {
+	font-weight: 600;
+}
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+// Core `stripes` style adjustments. Styling via `theme.json` appends CSS to the
+// table instead of the wrapper.
+.wp-block-table.is-style-stripes {
+	border: none;
+
+	tbody tr {
+		border: none;
+	}
+}
+
+.wp-block-table.is-style-stripes tbody tr:nth-child( odd ) {
+	// differentiate between neutral and other color variations.
+	background-color: var( --color-subtle, var( --wp--preset--color--neutral-base ) );
+}

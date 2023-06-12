@@ -1,0 +1,44 @@
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+// Spoiler style.
+.wp-block-details.is-style-spoiler {
+	padding: 0 var( --wp--preset--spacing--80 );
+	color: var( --wp--preset--color--neutral-contrast );
+	background: var( --wp--preset--color--neutral-base );
+}
+
+.wp-block-details.is-style-spoiler[open] {
+	padding-bottom: var( --wp--preset--spacing--80 );
+}
+
+.wp-block-details.is-style-spoiler summary {
+	box-sizing: border-box;
+	display: flex;
+	align-items: baseline;
+	gap: 1rem;
+	justify-content: space-between;
+	width: calc( 100% + var( --wp--preset--spacing--80 ) * 2 );
+	margin: 0 calc( -1 * var( --wp--preset--spacing--80 ) );
+	padding: var( --wp--preset--spacing--40 ) var( --wp--preset--spacing--80 );
+	font-weight: 600;
+}
+
+.wp-block-details.is-style-spoiler[open] summary,
+.wp-block-details.is-style-spoiler summary:hover,
+.wp-block-details.is-style-spoiler summary:focus {
+	background: var( --wp--preset--color--neutral-subtle );
+}
+
+.wp-block-details.is-style-spoiler summary::marker {
+	content: none;
+}
+
+.wp-block-details.is-style-spoiler summary::after {
+	content: " +";
+}
+.wp-block-details.is-style-spoiler[open] summary::after {
+	content: " -"
+}
