@@ -5,13 +5,13 @@
 
 // Spoiler style.
 .wp-block-details.is-style-spoiler {
-	padding: 0 var( --wp--preset--spacing--80 );
+	padding: 0 var( --wp--preset--spacing--plus-3 );
 	color: var( --wp--preset--color--neutral-contrast );
 	background: var( --wp--preset--color--neutral-base );
 }
 
 .wp-block-details.is-style-spoiler[open] {
-	padding-bottom: var( --wp--preset--spacing--80 );
+	padding-bottom: var( --wp--preset--spacing--plus-3 );
 }
 
 .wp-block-details.is-style-spoiler summary {
@@ -20,9 +20,9 @@
 	align-items: baseline;
 	gap: 1rem;
 	justify-content: space-between;
-	width: calc( 100% + var( --wp--preset--spacing--80 ) * 2 );
-	margin: 0 calc( -1 * var( --wp--preset--spacing--80 ) );
-	padding: var( --wp--preset--spacing--40 ) var( --wp--preset--spacing--80 );
+	width: calc( 100% + var( --wp--preset--spacing--plus-3 ) * 2 );
+	margin: 0 calc( -1 * var( --wp--preset--spacing--plus-3 ) );
+	padding: var( --wp--preset--spacing--base ) var( --wp--preset--spacing--plus-3 );
 	font-weight: 600;
 }
 

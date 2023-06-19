@@ -11,9 +11,12 @@
 namespace X3P0\Ideas;
 
 use X3P0\Ideas\Contracts\Bootable;
+use X3P0\Ideas\Tools\HookAnnotation;
 
 class ImageSizes implements Bootable
 {
+	use HookAnnotation;
+
 	/**
 	 * Width size to scale large images down to.
 	 *
@@ -21,60 +24,53 @@ class ImageSizes implements Bootable
 	 */
 	protected int $threshold_width = 3480;
 
-        /**
+	/**
 	 * Bootstraps the class' actions/filters.
 	 *
 	 * @since 1.0.0
 	 */
-        public function boot(): void
+	public function boot(): void
 	{
-		// Register custom image sizes.
-                add_action( 'init', [ $this, 'register' ] );
+		$this->hookMethods();
+	}
 
-		// Add custom image size labels.
-                add_filter( 'image_size_names_choose', [ $this, 'imageSizeNamesChoose' ] );
-
-		// Limit large image size uploads.
-		add_filter( 'big_image_size_threshold', [ $this, 'bigImageSizeThreshold' ], 5 );
-
-		// Swap post thumbnail size with custom one.
-		add_filter( 'post_thumbnail_size', [ $this, 'postThumbnailSize' ], 5 );
-        }
-
-        /**
+	/**
 	 * Registers custom image sizes.
 	 *
+	 * @hook  init
 	 * @since 1.0.0
 	 */
-        public function register(): void
+	public function register(): void
 	{
 		add_image_size( 'x3p0-16x9-lg', 2048, 1152, true );
 		add_image_size( 'x3p0-21x9-lg', 2048,  864, true );
-                add_image_size( 'x3p0-9x16-md', 1024, 1820, true );
-                add_image_size( 'x3p0-3x4-md',  1024, 1365, true );
-                add_image_size( 'x3p0-1x1-md',  1024, 1024, true );
-        }
+		add_image_size( 'x3p0-9x16-md', 1024, 1820, true );
+		add_image_size( 'x3p0-3x4-md',  1024, 1365, true );
+		add_image_size( 'x3p0-1x1-md',  1024, 1024, true );
+	}
 
-        /**
+	/**
 	 * Filters the image size dropdown in the editor so our custom sizes
-         * appear for selection.
+	 * appear for selection.
 	 *
+	 * @hook  image_size_names_choose
 	 * @since 1.0.0
 	 */
-        public function imageSizeNamesChoose( array $sizes ): array
+	public function imageSizeNamesChoose( array $sizes ): array
 	{
-                $sizes[ 'x3p0-16x9-lg'] = __( '16:9 (Landscape)', 'x3p0-ideas' );
-                $sizes[ 'x3p0-21x9-lg'] = __( '21:9 (Landscape)', 'x3p0-ideas' );
-                $sizes[ 'x3p0-9x16-md'] = __( '9:16 (Portrait)',  'x3p0-ideas' );
+		$sizes[ 'x3p0-16x9-lg'] = __( '16:9 (Landscape)', 'x3p0-ideas' );
+		$sizes[ 'x3p0-21x9-lg'] = __( '21:9 (Landscape)', 'x3p0-ideas' );
+		$sizes[ 'x3p0-9x16-md'] = __( '9:16 (Portrait)',  'x3p0-ideas' );
 		$sizes[ 'x3p0-3x4-md']  = __( '3:4 (Portrait)',   'x3p0-ideas' );
 		$sizes[ 'x3p0-1x1-md']  = __( '1:1 (Square)',     'x3p0-ideas' );
 
-                return $sizes;
-        }
+		return $sizes;
+	}
 
 	/**
 	 * Limit the big image threshold to our largest image.
 	 *
+	 * @hook  big_image_size_threshold 5
 	 * @since 1.0.0
 	 */
 	public function bigImageSizeThreshold( int $threshold ): int
@@ -87,6 +83,7 @@ class ImageSizes implements Bootable
 	/**
 	 * Sets the default `post-thumbnail` size to a theme-specific size.
 	 *
+	 * @hook  post_thumbnail_size 5
 	 * @since 1.0.0
 	 */
 	public function postThumbnailSize( string $size ): string

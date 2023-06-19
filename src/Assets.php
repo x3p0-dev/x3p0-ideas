@@ -12,49 +12,46 @@
 namespace X3P0\Ideas;
 
 use X3P0\Ideas\Contracts\Bootable;
+use X3P0\Ideas\Tools\HookAnnotation;
 
 class Assets implements Bootable
 {
+	use HookAnnotation;
+
 	/**
-         * Boots the component, running its actions/filters.
-         *
-         * @since 1.0.0
-         */
+	 * Boots the component, running its actions/filters.
+	 *
+	 * @since 1.0.0
+	 */
 	public function boot(): void
 	{
-		// Load editor scripts and styles.
-		add_action( 'after_setup_theme',           [ $this, 'addEditorStyles'     ] );
-		add_action( 'enqueue_block_editor_assets', [ $this, 'enqueueEditorAssets' ] );
-
-                // Load front-end scripts and styles.
-                add_action( 'wp_enqueue_scripts', [ $this, 'enqueueAssets'] );
-
-		// Load block styles.
-                add_action( 'init', [ $this, 'enqueueBlockStyles' ] );
+		$this->hookMethods();
 
 		// Disable the emoji script.
 		remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 	}
 
-        /**
+	/**
 	 * Add editor stylesheets.
 	 *
+	 * @hook  after_setup_theme
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/functions/add_editor_style/
 	 */
-        public function addEditorStyles(): void
+	public function addEditorStyles(): void
 	{
 		add_editor_style( [
 			get_parent_theme_file_uri( 'public/css/screen.css' )
 		] );
 	}
 
-        /**
+	/**
 	 * Loads editor assets.
 	 *
+	 * @hook   enqueue_block_editor_assets
 	 * @since 1.0.0
 	 */
-        public function enqueueEditorAssets(): void
+	public function enqueueEditorAssets(): void
 	{
 		$script_asset = include get_parent_theme_file_path( 'public/js/editor.asset.php'  );
 		$style_asset  = include get_parent_theme_file_path( 'public/css/editor.asset.php' );
@@ -75,12 +72,13 @@ class Assets implements Bootable
 		);
 	}
 
-        /**
+	/**
 	 * Enqueue scripts/styles for the front end.
 	 *
+	 * @hook  wp_enqueue_scripts
 	 * @since 1.0.0
 	 */
-        public function enqueueAssets(): void
+	public function enqueueAssets(): void
 	{
 		$asset = include get_parent_theme_file_path( 'public/css/screen.asset.php' );
 
@@ -94,15 +92,16 @@ class Assets implements Bootable
 	}
 
 	/**
-         * Enqueues block-specific styles so that they only load when the block
-         * is in use. Block styles are stored under `/assets/css/blocks` are
+	 * Enqueues block-specific styles so that they only load when the block
+	 * is in use. Block styles are stored under `/assets/css/blocks` are
 	 * automatically enqueued. Each file should be named
 	 * `{$block_namespace}-{$block_slug}.css`.
-         *
-         * @since 1.0.0
+	 *
+	 * @hook  init
+	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/functions/wp_enqueue_block_style/
-         */
-        public function enqueueBlockStyles(): void
+	 */
+	public function enqueueBlockStyles(): void
 	{
 		// Gets all the block stylesheets.
 		$files = glob( get_parent_theme_file_path( 'public/css/blocks/*.css' ) );

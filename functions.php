@@ -19,4 +19,4 @@ Autoload::register();
 require_once get_parent_theme_file_path( 'src/functions-helpers.php' );
 
 # Bootstrap the theme.
-theme();
+add_action( 'after_setup_theme', __NAMESPACE__ . '\\theme', PHP_INT_MIN );

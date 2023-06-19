@@ -3,6 +3,10 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
+.wp-block-cover {
+	padding: var( --wp--preset--spacing--plus-3 );
+}
+
 :where( .wp-block-cover .wp-block-heading ) {
 	text-shadow: var( --wp--custom--text-shadow--sm );
 }
@@ -11,11 +15,11 @@
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-.wp-block-cover.is-style-align-items-stretch {
+.wp-block-cover.is-style-stretch {
 	align-items: stretch;
 }
 
-.wp-block-cover.is-style-align-items-stretch .wp-block-cover__inner-container {
+.wp-block-cover.is-style-stretch .wp-block-cover__inner-container {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;

@@ -2,10 +2,7 @@
 	"name": "@x3p0/ideas",
 	"scripts": {
 		"start": "wp-scripts start --webpack-src-dir=resources --output-path=public",
-		"build": "wp-scripts build --webpack-src-dir=resources --output-path=public",
-		"dev": "gulp dev",
-		"watch": "gulp watch",
-		"prod": "gulp prod"
+		"build": "wp-scripts build --webpack-src-dir=resources --output-path=public"
 	},
 	"devDependencies": {
 		"@wordpress/scripts": "^26.5.0",

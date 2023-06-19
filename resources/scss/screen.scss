@@ -1,32 +1,45 @@
-/*
------- Don't delete until we've tested this font-size system out in theme.json.
---font-size-minus-2: clamp(0.84rem, -0.23vw + 0.91rem, 0.76rem);
---font-size-minus-1: clamp(0.94rem, 0.02vw + 0.94rem, 0.95rem);
---font-size-base: clamp(1.06rem, 0.37vw + 0.95rem, 1.19rem);
---font-size-plus-1: clamp(1.2rem, 0.85vw + 0.94rem, 1.48rem);
---font-size-plus-2: clamp(1.34rem, 1.5vw + 0.89rem, 1.86rem);
---font-size-plus-3: clamp(1.51rem, 2.37vw + 0.8rem, 2.32rem);
---font-size-plus-4: clamp(1.7rem, 3.52vw + 0.65rem, 2.9rem);
---font-size-plus-5: clamp(1.91rem, 5.03vw + 0.41rem, 3.62rem);
---font-size-plus-6: clamp(2.15rem, 6.99vw + 0.06rem, 4.53rem);
---font-size-plus-7: clamp(2.42rem, 9.53vw + -0.43rem, 5.66rem);
---font-size-plus-8: clamp(2.73rem, 12.8vw + -1.11rem, 7.08rem);
-*/
+
+// Sets up theme spacing properties that are mapped to spacing presets in the
+// `theme.json`. At first glance, it might seem silly to do this (it probably
+// is, depending on your perspective). But this essentially "shields" the values
+// from WordPress.
+//
+// At least, as of WordPress 6.3, the editor hardcodes the value instead of the
+// custom property (spacing preset) as an inline style on the block wrapper.
+// This means that it is impossible to ever update a spacing size that's been in
+// use, at least from the theme's end (well, nothing is impossible, but let's
+// not dive into all the complexities of updating old instances).
+//
+// To cut this long diatribe short, by using custom properties within custom
+// properties, WordPress ends up correctly using the custom property generated
+// by the theme's spacing preset. So, let's just call this "future proofing" in
+// the hopes that this is handled better down the line.
+body {
+	--theme-spacing--minus-3: clamp( 0.31rem,  0.11cqi +  0.28rem, 0.35rem );
+	--theme-spacing--minus-2: clamp( 0.47rem,  0.16cqi +  0.42rem, 0.53rem );
+	--theme-spacing--minus-1: clamp( 0.71rem,  0.25cqi +  0.63rem, 0.79rem );
+	--theme-spacing--base:    clamp( 1.06rem,  0.37cqi +  0.95rem, 1.19rem );
+	--theme-spacing--plus-1:  clamp( 1.20rem,  0.85cqi +  0.94rem, 1.48rem );
+	--theme-spacing--plus-2:  clamp( 1.34rem,   1.5cqi +  0.89rem, 1.86rem );
+	--theme-spacing--plus-3:  clamp( 1.86rem,   3.7cqi + -0.05rem, 2.32rem );
+	--theme-spacing--plus-4:  clamp( 1.86rem,  7.53cqi +  -1.2rem, 3.62rem );
+	--theme-spacing--plus-5:  clamp( 1.86rem,  10.2cqi +    -2rem, 4.53rem );
+	--theme-spacing--plus-6:  clamp( 1.86rem, 13.53cqi +    -3rem, 5.66rem );
+	--theme-spacing--plus-7:  clamp( 1.86rem, 17.69cqi + -4.25rem, 7.08rem );
+}
 
 // Move to an editor-only file.
-.edit-post-visual-editor__post-title-wrapper {
-	margin-top: 0 !important;
+.edit-post-visual-editor__post-title-wrapper,
+.is-root-container.wp-block-post-content {
+	margin-top: var( --wp--style--block-gap ) !important;
 }
 
-
-/* Defaults. */
+// Defaults.
 * {
-	/* Enables features from the registered fonts. */
+	// Enables features from the registered fonts.
 	font-feature-settings: "tnum", "ss01" 1;
 	font-variant-numeric: slashed-zero;
-
 }
-
 
 a:where( :not( :focus ) ),
 input:focus,
@@ -35,20 +48,23 @@ textarea:focus,
 	transition: all 0.5s ease-in-out;
 }
 
-:where( a:not( .wp-element-button ):focus ) {
-	outline: 1px solid currentColor;
-	outline-offset: 0.0625em;
-}
-
 a,
 .wp-element-button {
-	text-underline-offset: 0.0625em;
+	text-underline-offset: 0.078125em !important;
+	text-decoration-thickness: min( 0.078125em, 3px ) !important;
+}
+
+abbr[title] {
+	cursor: help;
+	text-decoration: underline dotted currentColor;
+	text-underline-offset: 0.078125em !important;
+	text-decoration-thickness: min( 0.078125em, 3px ) !important;
 }
 
 :where( :not( pre ) > code ) {
 	padding: 0.125em 0.25em;
 	font-family: var( --wp--preset--font-family--mono );
-	font-size: clamp( var( --wp--preset--font-size--sm ), 0.75em, 0.75em );
+	font-size: clamp( var( --wp--preset--font-size--sm ), 0.875em, 0.875em );
 	font-weight: 600;
 	color: var( --wp--preset--color--neutral-emphasis, inherit );
 	background: var( --wp--preset--color--neutral-base, inherit );
@@ -57,22 +73,22 @@ a,
 kbd {
 	padding: 0.125em 0.25em;
 	font-family: var( --wp--preset--font-family--mono );
-	font-size: clamp( var( --wp--preset--font-size--sm ), 0.75em, 0.75em );
+	font-size: clamp( var( --wp--preset--font-size--sm ), 0.875em, 0.875em );
 	color: var( --wp--preset--color--contrast );
 	border: 1px solid var( --wp--preset--color--neutral-muted );
 	border-radius: 0.25rem;
 }
 
 ins {
-	padding: 0.125em 0.25em;
-	color: var( --wp--preset--color--tip-contrast );
-	background: var( --wp--preset--color--tip-base );
-	border-bottom: 1px solid var( --wp--preset--color--tip-contrast );
+	padding: 0.125em 0;
+	color: var( --wp--preset--color--positive-contrast );
+	background: var( --wp--preset--color--positive-base );
+	border-bottom: 1px solid var( --wp--preset--color--positive-contrast );
 	text-decoration: none;
 }
 
 mark {
-	padding: 0.125em 0.25em;
+	padding: 0.125em 0;
 }
 
 // Style <mark> elements but avoid WP's "highlight" rich text element.
@@ -88,9 +104,8 @@ mark:where( :not( .has-inline-color ):not( [style] ) ) {
 
 del,
 s {
-//	opacity: 0.5
-	color: var( --wp--preset--color--danger-muted );
-	text-decoration-color: var( --wp--preset--color--danger-contrast );
+	color: var( --wp--preset--color--negative-muted );
+	text-decoration-color: var( --wp--preset--color--negative-contrast );
 	text-decoration-thickness: 2px;
 }
 
@@ -112,10 +127,9 @@ video {
 	text-decoration: overline;
 }
 
-/**
- * Combine each line-height set via `settings.custom.lineHeight` in `theme.json`
- * with the corresponding font-size set via `setting.typography.fontSizes`.
- */
+// Combine each line-height set via `settings.custom.lineHeight` in `theme.json`
+// with the corresponding font-size set via `setting.typography.fontSizes`.
+.has-7-xl-font-size { line-height: var( --wp--custom--line-height--7-xl ); }
 .has-6-xl-font-size { line-height: var( --wp--custom--line-height--6-xl ); }
 .has-5-xl-font-size { line-height: var( --wp--custom--line-height--5-xl ); }
 .has-4-xl-font-size { line-height: var( --wp--custom--line-height--4-xl ); }
@@ -127,17 +141,17 @@ video {
 .has-sm-font-size   { line-height: var( --wp--custom--line-height--sm ); }
 .has-xs-font-size   { line-height: var( --wp--custom--line-height--xs ); }
 
-/* Loosens the spacing above headings tightens the spacing below. */
+// Loosens the spacing above headings tightens the spacing below.
 .wp-block-post-content > :is( h1, h2, h3, h4, h5, h6 ) {
-	margin-block-end: 0;
+	margin-block-end: 0.5em;
 }
 
 .wp-block-post-content > * + :is( h1, h2, h3, h4, h5, h6 )  {
-	margin-block-start: var( --wp--preset--spacing--120 );
+	margin-block-start: max( 1.5em, 3rem );
 }
 
 .wp-block-post-content > :is( h1, h2, h3, h4, h5, h6 ) + * {
-	margin-block-start: var( --wp--preset--spacing--40 );
+	margin-block-start: 0;
 }
 
 .wp-block-post-content > :where( hr, .wp-block-spacer ) + :is( h1, h2, h3, h4, h5, h6 ),
@@ -145,23 +159,24 @@ video {
 	margin-block-start: var( --wp--style--block-gap );
 }
 
-/* Center captions (WP doesn't support text-align in `theme.json`). */
+// Center captions (WP doesn't support text-align in `theme.json`).
 .wp-element-caption {
 	text-align: center;
 }
 
-/* Prefix `cite` elements (WP doesn't support element CSS in `theme.json`). */
+// Prefix `cite` elements (WP doesn't support element CSS in `theme.json`).
 cite::before {
 	content: "\2013\000A0";
 }
 
-/* Adds form element styles, which aren't yet supported in `theme.json`. */
+// Adds form element styles, which aren't yet supported in `theme.json`.
 input,
 select,
 textarea,
 :where( .wp-block-search__button-inside .wp-block-search__inside-wrapper ),
 .wp-block-search__input,
 .wp-block-post-comments-form :is( input:not( .wp-element-button ), textarea ) {
+	padding: var( --wp--preset--spacing--minus-3 ) var( --wp--preset--spacing--minus-1 );
 	font-family: inherit;
 	font-size: inherit;
 	font-style: normal;
@@ -175,21 +190,24 @@ textarea,
 }
 
 ::placeholder {
-	color: var( --color-muted, var( --wp--custom--elements--form-input--placeholder-color, none ) );
+	color: inherit;
+	opacity: 0.5;
+}
+
+:where( .wp-block-search__button-inside .wp-block-search__inside-wrapper ) {
+	padding: var( --wp--preset--spacing--minus-3 );
 }
 
 input[type="checkbox"],
 input[type="radio"],
 .wp-block-search__button-inside .wp-block-search__input {
+	padding: 0;
 	border: none;
 }
+
 
 // import extra
 @import 'color-variations/primary.scss';
 @import 'color-variations/neutral.scss';
-@import 'color-variations/info.scss';
-@import 'color-variations/tip.scss';
-@import 'color-variations/warning.scss';
-@import 'color-variations/danger.scss';
 @import 'color-variations/variation.scss';
 @import 'shared/style-variations.scss';

@@ -1,0 +1,34 @@
+/**
+ * Filters the `BlockEdit` to add a list marker control.
+ *
+ * @author    Justin Tadlock <justintadlock@gmail.com>
+ * @copyright Copyright (c) 2023, Justin Tadlock
+ * @license   GPL-2.0-or-later
+ */
+
+// Internal dependencies.
+import { SUPPORTED_BLOCKS } from './constants';
+import { MarkerDropdownControl } from './control-marker-dropdown';
+
+// WordPress dependencies.
+import { BlockControls } from '@wordpress/block-editor';
+
+/**
+ * @description Filters the and returns the `BlockEdit` component.
+ */
+export const withListMarker = ( BlockEdit ) => ( props ) => {
+
+	return SUPPORTED_BLOCKS.includes( props.name ) ? (
+		<>
+			<BlockEdit { ...props } />
+			<BlockControls group="other">
+				<MarkerDropdownControl
+					attributes={ props.attributes }
+					setAttributes={ props.setAttributes }
+				/>
+			</BlockControls>
+		</>
+	) : (
+		<BlockEdit { ...props } />
+	);
+};

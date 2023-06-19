@@ -31,6 +31,11 @@
 	--navigation-layout-justification-setting: flex-start;
 }
 
+.has-modal-open .wp-block-navigation {
+	font-size: 1.125rem;
+	line-height: 1.75;
+}
+
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container {
 	width: 100%;
 }
@@ -39,6 +44,11 @@
 // color and the theme's link transition style.
 .wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container {
 	color: var( --wp--custom--blocks--navigation-submenu--color );
+}
+
+.has-modal-open .wp-block-navigation-submenu .wp-block-navigation__submenu-container {
+	padding-top: 0;
+	padding-bottom: 0;
 }
 
 .wp-block-navigation .wp-block-navigation__responsive-container:not( .has-modal-open ) .has-child:not( .open-on-click ):hover > .wp-block-navigation__submenu-container {

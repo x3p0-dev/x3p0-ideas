@@ -5,36 +5,36 @@
 
 // Padding adjustments.
 .wp-block-social-links .wp-social-link .wp-block-social-link-anchor {
-	padding: var( --wp--preset--spacing--20 );
+	padding: var( --wp--preset--spacing--minus-2 );
 }
 
 .wp-block-social-links.is-style-pill-shape .wp-social-link .wp-block-social-link-anchor {
-	padding: var( --wp--preset--spacing--20 ) var( --wp--preset--spacing--40 );
+	padding: var( --wp--preset--spacing--minus-2 ) var( --wp--preset--spacing--40 );
 }
 
 // Font-size adjustments to match the theme.
 .wp-block-social-links.has-small-icon-size {
-        font-size: var( --wp--preset--font-size--lg );
+        font-size: var( --wp--preset--font-size--sm );
 }
 
 .wp-block-social-links.has-normal-icon-size {
-        font-size: var( --wp--preset--font-size--xl );
+        font-size: var( --wp--preset--font-size--md );
 }
 
 .wp-block-social-links.has-large-icon-size {
-        font-size: var( --wp--preset--font-size--2-xl );
+        font-size: var( --wp--preset--font-size--lg );
 }
 
 .wp-block-social-links.has-huge-icon-size {
-        font-size: var( --wp--preset--font-size--3-xl );
+        font-size: var( --wp--preset--font-size--xl );
 }
 
 .wp-block-social-links.has-small-icon-size .wp-block-social-link-label:not( .screen-reader-text ) {
-	font-size: var( --wp--preset--font-size--sm );
+	font-size: var( --wp--preset--font-size--xs );
 }
 
 .wp-block-social-links.has-normal-icon-size .wp-block-social-link-label:not( .screen-reader-text ) {
-	font-size: var( --wp--preset--font-size--md );
+	font-size: var( --wp--preset--font-size--sm );
 }
 
 .wp-block-social-links:is( .has-large-icon-size, .has-huge-icon-size ) .wp-block-social-link-label:not( .screen-reader-text ) {

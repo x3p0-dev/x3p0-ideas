@@ -42,7 +42,7 @@
 }
 
 .wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
-	padding: var( --wp--preset--spacing--20 );
+	padding: var( --wp--preset--spacing--minus-2 );
 }
 
 // -----------------------------------------------------------------------------
@@ -59,7 +59,7 @@
 ) figcaption {
 	position: initial;
 	margin: 0;
-	padding: var( --wp--preset--spacing--20 );
+	padding: var( --wp--preset--spacing--minus-2 );
 	color: inherit;
 	background: unset;
 }

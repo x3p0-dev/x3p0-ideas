@@ -8,6 +8,6 @@
 	display: flex;
 	gap: var(
 		--wp--custom--block-gap--comments-pagination-numbers,
-		var( --wp--preset--spacing--20 )
+		var( --wp--preset--spacing--minus-2 )
 	);
 }

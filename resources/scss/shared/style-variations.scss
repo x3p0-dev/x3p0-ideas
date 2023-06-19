@@ -11,7 +11,8 @@
 }
 
 .wp-block-avatar[class*=gradient-] img {
-	padding: 8.33%;
+	padding: min( 6px, 8.33% );
+	background-image: var( --gradient );
 }
 
 // We must manually add supported gradients until we can register inline styles
@@ -30,6 +31,7 @@ $gradients:
 	pale-ocean,
 	electric-grass,
 	midnight,
+	emerald,
 	eternal-constance,
 	fabled-sunset,
 	magic-lake,

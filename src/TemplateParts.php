@@ -12,24 +12,28 @@
 namespace X3P0\Ideas;
 
 use X3P0\Ideas\Contracts\Bootable;
+use X3P0\Ideas\Tools\HookAnnotation;
 
 class TemplateParts implements Bootable
 {
+	use HookAnnotation;
+
 	/**
-         * Boots the component, running its actions/filters.
-         *
-         * @since 1.0.0
-         */
+	 * Boots the component, running its actions/filters.
+	 *
+	 * @since 1.0.0
+	 */
 	public function boot(): void
 	{
-		add_action( 'default_wp_template_part_areas', [ $this, 'filterAreas'] );
+		$this->hookMethods();
 	}
 
 	/**
-         * Filter the core template part areas to add custom areas needed for
+	 * Filter the core template part areas to add custom areas needed for
 	 * the theme.
-         *
-         * @since 1.0.0
+	 *
+	 * @hook  default_wp_template_part_areas
+	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/default_wp_template_part_areas/
 	 */
 	public function filterAreas( array $default_area_definitions ): array

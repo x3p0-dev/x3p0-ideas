@@ -1,7 +1,8 @@
-
+// https://github.com/WordPress/gutenberg/tree/trunk/packages/base-styles
+@import '~@wordpress/base-styles/variables';
 
 [class*=x3p0-color-variations-button-]:not( :first-child ) {
-	margin-top: 8px;
+	margin-top: $grid-unit-10;
 }
 
 [class*=x3p0-color-variations-button-] .components-menu-item__item {
@@ -9,16 +10,12 @@
 	min-width: 208px;
 }
 
-[class*=x3p0-color-variations-button-] .component-color-indicator {
-	//outline: 1px solid rgba( 255, 255, 255, 0.25 );
-}
-
 .x3p0-list-marker-list {
-	padding-left: 1em;
+	padding-left: $grid-unit-20;
 
 	li {
 		list-style-type: initial;
-		padding-left: 8px;
+		padding-left: $grid-unit-20;
 		color: inherit;
 
 		&::marker {
@@ -38,4 +35,26 @@
 
 .x3p0-text-shadow-control {
 	grid-column: 1 / -1;
+}
+
+// Separator Icons.
+
+.x3p0-separator-icons-control__description {
+	margin: 0 0 $grid-unit-20;
+}
+
+.x3p0-separator-icons-control__button {
+	font-size: 20px;
+}
+
+.x3p0-separator-icons-control__popover .components-popover__content {
+	padding: $grid-unit-20;
+}
+
+
+// Abbreviation rich text format.
+.x3p0-rich-text-format-abbr__popover .components-popover__content {
+	padding: $grid-unit-20;
+	width: auto;
+	max-width: 360px;
 }

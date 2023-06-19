@@ -29,7 +29,7 @@
 		initial-letter: 3;
 		float: none;
 		margin: 0;
-		padding-right: var( --wp--preset--spacing--20 );
+		padding-right: var( --wp--preset--spacing--minus-2 );
 		font-family: inherit;
 		font-size: inherit;
 		font-weight: 700;
@@ -42,7 +42,24 @@
 // -----------------------------------------------------------------------------
 
 p.is-style-indent {
-	text-indent: var( --wp--preset--spacing--120 );
+	text-indent: var( --wp--preset--spacing--plus-4 );
+
+	&.has-drop-cap {
+		text-indent: var( --wp--preset--spacing--plus-2 );
+	}
+}
+
+p.is-style-intro {
+	margin-top: var( --wp--preset--spacing--plus-4 );
+	margin-bottom: var( --wp--preset--spacing--plus-4 );
+	font-family: var( --wp--preset--font-family--primary );
+	font-size: var( --wp--preset--font-size--xl );
+	line-height: var( --wp--custom--line-height--xl );
+}
+
+.is-layout-constrained > p.is-style-intro:where( :not( [class*=align] ) ),
+.editor-styles-wrapper .is-layout-constrained > p.is-style-intro:where( :not( [class*=align] ) ) {
+	max-width: var( --wp--style--global--wide-size );
 }
 
 p.is-style-lead-in::first-line {
@@ -55,7 +72,7 @@ p.is-style-lead-in::first-line {
 }
 
 p.is-style-lede {
-	font-weight: 600;
-	font-size: var( --wp--preset--font-size--xl );
-	line-height: var( --wp--custom--line-height--xl );
+	font-weight: 500;
+	font-size: var( --wp--preset--font-size--lg );
+	line-height: var( --wp--custom--line-height--lg );
 }

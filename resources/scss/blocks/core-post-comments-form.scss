@@ -32,5 +32,5 @@
 // Overwrites WP's default form field padding with a theme spacing size.
 .wp-block-post-comments-form input:not([type=submit]):not([type=checkbox]),
 .wp-block-post-comments-form textarea {
-	padding: var( --wp--preset--spacing--20 );
+	padding: var( --wp--preset--spacing--minus-2 );
 }

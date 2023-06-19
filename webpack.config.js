@@ -12,21 +12,19 @@ const { globSync } = require( 'glob' );
 
 // Gets all of the block stylesheets, which are enqueued separately and inlined
 // into the `<head>` area by WordPress. These should not be bundled together.
-const blockStylesheets = () => {
-	return globSync( './resources/scss/blocks/*.scss' ).reduce(
-		( files, filepath ) => {
-			const name = path.parse( filepath ).name;
+const blockStylesheets = () => globSync( './resources/scss/blocks/*.scss' ).reduce(
+	( files, filepath ) => {
+		const name = path.parse( filepath ).name;
 
-			files[ `css/blocks/${ name }` ] = path.resolve(
-				process.cwd(),
-				'resources/scss/blocks',
-				`${ name }.scss`
-			);
+		files[ `css/blocks/${ name }` ] = path.resolve(
+			process.cwd(),
+			'resources/scss/blocks',
+			`${ name }.scss`
+		);
 
-			return files;
-		}, {}
-	);
-};
+		return files;
+	}, {}
+);
 
 // Add any a new entry point by extending the webpack config.
 module.exports = {

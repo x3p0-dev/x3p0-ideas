@@ -36,8 +36,8 @@
 
 	&.wp-element-caption {
 		font-family: var( --wp--preset--font-family--handwriting );
-		font-size: var( --wp--preset--font-size--xl );
-		line-height: var( --wp--preset--line-height--xl );
+		font-size: var( --wp--preset--font-size--md );
+		line-height: var( --wp--custom--line-height--md );
 	}
 }
 
@@ -68,8 +68,8 @@
 	margin-top: var( --wp--preset--spacing--40 );
 	color: var( --color-base, var( --wp--preset--color--contrast ) );
 	font-family: var( --wp--preset--font-family--handwriting );
-	font-size: var( --wp--preset--font-size--xl );
-	line-height: var( --wp--preset--line-height--xl );
+	font-size: var( --wp--preset--font-size--md );
+	line-height: var( --wp--custom--line-height--md );
 }
 
 .wp-block-image[class*=is-style-polaroid][class*=gradient-] {
@@ -93,8 +93,8 @@
 
 	.wp-element-caption {
 		font-family: var( --wp--preset--font-family--handwriting );
-		font-size: var( --wp--preset--font-size--xl );
-		line-height: var( --wp--preset--line-height--xl );
+		font-size: var( --wp--preset--font-size--md );
+		line-height: var( --wp--custom--line-height--md );
 	}
 }
 
@@ -105,7 +105,7 @@
 	position: absolute;
 	background: rgba( 255, 255, 235, 0.5 );
 	box-shadow: var( --wp--preset--shadow--md );
-	height: var( --wp--preset--spacing--80 );
+	height: var( --wp--preset--spacing--plus-3 );
 	margin: auto;
 	width: 7rem;
 	z-index: 1;
@@ -114,7 +114,7 @@
 .wp-block-image.is-style-tape::before {
 	left: 50%;
 	margin-left: -3.5rem;
-	top: calc( -1 * var( --wp--preset--spacing--40 ) );
+	top: calc( -1 * var( --wp--preset--spacing--minus-2 ) );
 	transform: rotate( 8deg );
 }
 
@@ -130,14 +130,14 @@
 }
 
 .wp-block-image.is-style-tape-corners::before {
-	left: calc( -1 * var( --wp--preset--spacing--80 ) );
-	top: var( --wp--preset--spacing--20 );
+	left: calc( -1 * var( --wp--preset--spacing--plus-3 ) );
+	top: var( --wp--preset--spacing--minus-2 );
 	transform: rotate( -35deg );
 }
 
 .wp-block-image.is-style-tape-corners::after {
-	right: calc( -1 * var( --wp--preset--spacing--80 ) ) !important;
-	top: var( --wp--preset--spacing--20 ) !important;
+	right: calc( -1 * var( --wp--preset--spacing--plus-3 ) ) !important;
+	top: var( --wp--preset--spacing--minus-2 ) !important;
 	bottom: unset !important;
 	left: unset !important;
 	transform: rotate( 45deg);

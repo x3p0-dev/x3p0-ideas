@@ -1,0 +1,216 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"title": "Bookish",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "base",
+					"color": "#fff6e0",
+					"name": "Base"
+				},
+				{
+					"slug": "contrast",
+					"color": "#000000",
+					"name": "Contrast"
+				},
+				{
+					"slug": "primary-emphasis",
+					"color": "#075985",
+					"name": "Primary: Emphasis"
+				},
+				{
+					"slug": "primary-contrast",
+					"color": "#0284c7",
+					"name": "Primary: Contrast"
+				},
+				{
+					"slug": "primary-muted",
+					"color": "#0ea5e9",
+					"name": "Primary: Muted"
+				},
+				{
+					"slug": "primary-subtle",
+					"color": "#e0f2fe",
+					"name": "Primary: Subtle"
+				},
+				{
+					"slug": "primary-base",
+					"color": "#f0f9ff",
+					"name": "Primary: Base"
+				},
+				{
+					"slug": "neutral-base",
+					"color": "#f1f5f9",
+					"name": "Neutral: Base"
+				},
+				{
+					"slug": "neutral-subtle",
+					"color": "#e2e8f0",
+					"name": "Neutral: Subtle"
+				},
+				{
+					"slug": "neutral-muted",
+					"color": "#64748b",
+					"name": "Neutral: Muted"
+				},
+				{
+					"slug": "neutral-contrast",
+					"color": "#1e293b",
+					"name": "Neutral: Contrast"
+				},
+				{
+					"slug": "neutral-emphasis",
+					"color": "#020617",
+					"name": "Neutral: Emphasis"
+				},
+				{
+					"slug": "info-base",
+					"color": "#eef2ff",
+					"name": "Info: Base"
+				},
+				{
+					"slug": "info-subtle",
+					"color": "#e0e7ff",
+					"name": "Info: Subtle"
+				},
+				{
+					"slug": "info-muted",
+					"color": "#818cf8",
+					"name": "Info: Muted"
+				},
+				{
+					"slug": "info-contrast",
+					"color": "#4338ca",
+					"name": "Info: Contrast"
+				},
+				{
+					"slug": "info-emphasis",
+					"color": "#3730a3",
+					"name": "Info: Emphasis"
+				},
+				{
+					"slug": "tip-base",
+					"color": "#ecfdf8",
+					"name": "Tip: Base"
+				},
+				{
+					"slug": "tip-subtle",
+					"color": "#d1faee",
+					"name": "Tip: Subtle"
+				},
+				{
+					"slug": "tip-muted",
+					"color": "#10b989",
+					"name": "Tip: Muted"
+				},
+				{
+					"slug": "tip-contrast",
+					"color": "#047857",
+					"name": "Tip: Contrast"
+				},
+				{
+					"slug": "tip-emphasis",
+					"color": "#064e3a",
+					"name": "Tip: Emphasis"
+				},
+				{
+					"slug": "warning-base",
+					"color": "#fefce8",
+					"name": "Warning: Base"
+				},
+				{
+					"slug": "warning-subtle",
+					"color": "#fef9c3",
+					"name": "Warning: Subtle"
+				},
+				{
+					"slug": "warning-muted",
+					"color": "#eab308",
+					"name": "Warning: Muted"
+				},
+				{
+					"slug": "warning-contrast",
+					"color": "#a16207",
+					"name": "Warning: Contrast"
+				},
+				{
+					"slug": "warning-emphasis",
+					"color": "#854d0e",
+					"name": "Warning: Emphasis"
+				},
+				{
+					"slug": "danger-base",
+					"color": "#fef2f2",
+					"name": "Danger: Base"
+				},
+				{
+					"slug": "danger-subtle",
+					"color": "#fee2e2",
+					"name": "Danger: Subtle"
+				},
+				{
+					"slug": "danger-muted",
+					"color": "#dc2626",
+					"name": "Danger: Muted"
+				},
+				{
+					"slug": "danger-contrast",
+					"color": "#b91c1c",
+					"name": "Danger: Contrast"
+				},
+				{
+					"slug": "danger-emphasis",
+					"color": "#991b1b",
+					"name": "Danger: Emphasis"
+				}
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "Playfair, ui-sans-serif, sans-serif",
+					"slug": "primary",
+					"name": "Primary (Playfair)",
+					"fontFace": [
+						{
+							"fontFamily": "Playfair",
+							"fontWeight": "200 700",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./public/fonts/playfair/playfair.woff2" ]
+						},
+						{
+							"fontFamily": "Playfair",
+							"fontWeight": "200 700",
+							"fontStyle": "italic",
+							"fontStretch": "normal",
+							"src": [ "file:./public/fonts/playfair/playfair-italic.woff2" ]
+						}
+					]
+				},
+				{
+					"fontFamily": "Charter, Georgia, serif",
+					"slug": "secondary",
+					"name": "Secondary (Charter)"
+				},
+				{
+					"fontFamily": "Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif",
+					"slug": "tertiary",
+					"name": "Tertiary (Didone)"
+				},
+				{
+					"fontFamily": "\"Source Code Pro\", Monaco, Consolas, \"Andale Mono WT\", \"Andale Mono\", \"Lucida Console\", \"Lucida Sans Typewriter\", \"DejaVu Sans Mono\", \"Bitstream Vera Sans Mono\", \"Liberation Mono\", \"Nimbus Mono L\", \"Courier New\", Courier, monospace",
+					"slug": "mono",
+					"name": "Monospace"
+				},
+				{
+					"fontFamily": "\"Segoe Print\", \"Bradley Hand\", Chilanka, TSCu_Comic, casual, cursive",
+					"slug": "handwriting",
+					"name": "Handwriting"
+				}
+			]
+		}
+	}
+}

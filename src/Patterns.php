@@ -13,26 +13,26 @@
 namespace X3P0\Ideas;
 
 use X3P0\Ideas\Contracts\Bootable;
+use X3P0\Ideas\Tools\HookAnnotation;
 
 class Patterns implements Bootable
 {
+	use HookAnnotation;
+
 	/**
-         * Boots the component, running its actions/filters.
-         *
-         * @since 1.0.0
-         */
+	 * Boots the component, running its actions/filters.
+	 *
+	 * @since 1.0.0
+	 */
 	public function boot(): void
 	{
-		// Patterns theme support.
-		add_action( 'after_setup_theme', [ $this, 'themeSupport' ] );
-
-		// Register patterns/categories.
-		add_action( 'init', [ $this, 'register' ] );
+		$this->hookMethods();
 	}
 
 	/**
 	 *  Removes theme support for core patterns.
 	 *
+	 * @hook  after_setup_theme
 	 * @since 1.0.0
 	 */
 	public function themeSupport(): void
@@ -41,13 +41,14 @@ class Patterns implements Bootable
 	}
 
 	/**
-         * Register block pattern categories. Note that this theme registers
+	 * Register block pattern categories. Note that this theme registers
 	 * patterns by adding them as individual pattern files in the `/patterns`
 	 * folder.
-         *
-         * @since 1.0.0
+	 *
+	 * @hook  init
+	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/functions/register_block_pattern_category/
-         */
+	 */
 	public function register(): void
 	{
 		// Registers a base `theme` category.

@@ -18,100 +18,162 @@
 				{
 					"name": "Grayscale",
 					"slug": "grayscale",
-					"colors": [ "#000000", "#ffffff" ]
+					"colors": [
+						"#000000",
+						"#ffffff"
+					]
 				},
 				{
 					"name": "Dark Grayscale",
 					"slug": "dark-grayscale",
-					"colors": [ "#000000", "#7f7f7f" ]
+					"colors": [
+						"#000000",
+						"#7f7f7f"
+					]
 				},
 				{
 					"name": "Red",
 					"slug": "red",
-					"colors": [ "#450a0a", "#fef2f2" ]
+					"colors": [
+						"#450a0a",
+						"#fef2f2"
+					]
 				},
 				{
 					"name": "Orange",
 					"slug": "orange",
-					"colors": [ "#431407", "#fff7ed" ]
+					"colors": [
+						"#431407",
+						"#fff7ed"
+					]
 				},
 				{
 					"name": "Amber",
 					"slug": "amber",
-					"colors": [ "#451a03", "#fffbeb" ]
+					"colors": [
+						"#451a03",
+						"#fffbeb"
+					]
 				},
 				{
 					"name": "Yellow",
 					"slug": "yellow",
-					"colors": [ "#422006", "#fefce8" ]
+					"colors": [
+						"#422006",
+						"#fefce8"
+					]
 				},
 				{
 					"name": "Lime",
 					"slug": "lime",
-					"colors": [ "#1a2e05", "#f7fee7" ]
+					"colors": [
+						"#1a2e05",
+						"#f7fee7"
+					]
 				},
 				{
 					"name": "Green",
 					"slug": "green",
-					"colors": [ "#052e16", "#f0fdf4" ]
+					"colors": [
+						"#052e16",
+						"#f0fdf4"
+					]
 				},
 				{
 					"name": "Emerald",
 					"slug": "emerald",
-					"colors": [ "#022c22", "#ecfdf5" ]
+					"colors": [
+						"#022c22",
+						"#ecfdf5"
+					]
 				},
 				{
 					"name": "Teal",
 					"slug": "teal",
-					"colors": [ "#042f2e", "#f0fdfa" ]
+					"colors": [
+						"#042f2e",
+						"#f0fdfa"
+					]
 				},
 				{
 					"name": "Cyan",
 					"slug": "cyan",
-					"colors": [ "#083344", "#ecfeff" ]
+					"colors": [
+						"#083344",
+						"#ecfeff"
+					]
 				},
 				{
 					"name": "Sky",
 					"slug": "sky",
-					"colors": [ "#082f49", "#f0f9ff" ]
+					"colors": [
+						"#082f49",
+						"#f0f9ff"
+					]
 				},
 				{
 					"name": "Blue",
 					"slug": "blue",
-					"colors": [ "#172554", "#eff6ff" ]
+					"colors": [
+						"#172554",
+						"#eff6ff"
+					]
 				},
 				{
 					"name": "Indigo",
 					"slug": "indigo",
-					"colors": [ "#1e1b4b", "#eef2ff" ]
+					"colors": [
+						"#1e1b4b",
+						"#eef2ff"
+					]
 				},
 				{
 					"name": "Violet",
 					"slug": "violet",
-					"colors": [ "#2e1065", "#f5f3ff" ]
+					"colors": [
+						"#2e1065",
+						"#f5f3ff"
+					]
 				},
 				{
 					"name": "Purple",
 					"slug": "purple",
-					"colors": [ "#2e1065", "#faf5ff" ]
+					"colors": [
+						"#2e1065",
+						"#faf5ff"
+					]
 				},
 				{
 					"name": "Fuchsia",
 					"slug": "fuchsia",
-					"colors": [ "#4a044e", "#fdf4ff" ]
+					"colors": [
+						"#4a044e",
+						"#fdf4ff"
+					]
 				},
 				{
 					"name": "Pink",
 					"slug": "pink",
-					"colors": [ "#500724", "#fdf2f8" ]
+					"colors": [
+						"#500724",
+						"#fdf2f8"
+					]
 				},
 				{
 					"name": "Rose",
 					"slug": "rose",
-					"colors": [ "#4c0519", "#fff1f2" ]
+					"colors": [
+						"#4c0519",
+						"#fff1f2"
+					]
 				}
 			],
 			"gradients": [
+				{
+					"gradient": "linear-gradient(to right, rgb(16, 185, 129), rgb(101, 163, 13))",
+					"name": "Emerald",
+					"slug": "emerald"
+				},
 				{
 					"gradient": "linear-gradient(0deg,#09203f 0,#537895)",
 					"name": "Eternal Constance",
@@ -211,7 +273,7 @@
 				},
 				{
 					"slug": "contrast",
-					"color": "#030712",
+					"color": "#000000",
 					"name": "Contrast"
 				},
 				{
@@ -265,104 +327,54 @@
 					"name": "Neutral: Emphasis"
 				},
 				{
-					"slug": "info-base",
-					"color": "#eef2ff",
-					"name": "Info: Base"
-				},
-				{
-					"slug": "info-subtle",
-					"color": "#e0e7ff",
-					"name": "Info: Subtle"
-				},
-				{
-					"slug": "info-muted",
-					"color": "#818cf8",
-					"name": "Info: Muted"
-				},
-				{
-					"slug": "info-contrast",
-					"color": "#4338ca",
-					"name": "Info: Contrast"
-				},
-				{
-					"slug": "info-emphasis",
-					"color": "#3730a3",
-					"name": "Info: Emphasis"
-				},
-				{
-					"slug": "tip-base",
+					"slug": "positive-base",
 					"color": "#ecfdf8",
-					"name": "Tip: Base"
+					"name": "Positive: Base"
 				},
 				{
-					"slug": "tip-subtle",
+					"slug": "positive-subtle",
 					"color": "#d1faee",
-					"name": "Tip: Subtle"
+					"name": "Positive: Subtle"
 				},
 				{
-					"slug": "tip-muted",
+					"slug": "positive-muted",
 					"color": "#10b989",
-					"name": "Tip: Muted"
+					"name": "Positive: Muted"
 				},
 				{
-					"slug": "tip-contrast",
+					"slug": "positive-contrast",
 					"color": "#047857",
-					"name": "Tip: Contrast"
+					"name": "Positive: Contrast"
 				},
 				{
-					"slug": "tip-emphasis",
+					"slug": "positive-emphasis",
 					"color": "#064e3a",
-					"name": "Tip: Emphasis"
+					"name": "Positive: Emphasis"
 				},
 				{
-					"slug": "warning-base",
-					"color": "#fefce8",
-					"name": "Warning: Base"
-				},
-				{
-					"slug": "warning-subtle",
-					"color": "#fef9c3",
-					"name": "Warning: Subtle"
-				},
-				{
-					"slug": "warning-muted",
-					"color": "#eab308",
-					"name": "Warning: Muted"
-				},
-				{
-					"slug": "warning-contrast",
-					"color": "#a16207",
-					"name": "Warning: Contrast"
-				},
-				{
-					"slug": "warning-emphasis",
-					"color": "#854d0e",
-					"name": "Warning: Emphasis"
-				},
-				{
-					"slug": "danger-base",
+					"slug": "negative-base",
 					"color": "#fef2f2",
-					"name": "Danger: Base"
+					"name": "Negative: Base"
 				},
 				{
-					"slug": "danger-subtle",
+					"slug": "negative-subtle",
 					"color": "#fee2e2",
-					"name": "Danger: Subtle"
+					"name": "Negative: Subtle"
 				},
 				{
-					"slug": "danger-muted",
+					"slug": "negative-muted",
 					"color": "#dc2626",
-					"name": "Danger: Muted"
+					"name": "Negative: Muted"
 				},
 				{
-					"slug": "danger-contrast",
+					"slug": "negative-contrast",
 					"color": "#b91c1c",
-					"name": "Danger: Contrast"
+					"name": "Negative: Contrast"
 				},
 				{
-					"slug": "danger-emphasis",
+					"slug": "negative-emphasis",
 					"color": "#991b1b",
-					"name": "Danger: Emphasis"
+					"name": "Negative: Emphasis"
 				}
 			]
 		},
@@ -388,16 +400,17 @@
 				}
 			},
 			"lineHeight": {
-				"xs": "1.5",
-				"sm": "1.625",
-				"md": "1.5",
+				"xs": "1.625",
+				"sm": "1.5",
+				"md": "calc( 3ex + 4px )",
 				"lg": "calc( 3ex + 4px )",
-				"xl": "calc( 3ex + 4px )",
-				"2-xl": "calc( 2.75ex + 4px )",
-				"3-xl": "calc( 2.5ex + 4px )",
-				"4-xl": "calc( 2.25ex + 4px )",
-				"5-xl": "calc( 2ex + 4px )",
-				"6-xl": "1.0625"
+				"xl": "calc( 2.5625ex + 4px )",
+				"2-xl": "calc( 2.5ex + 4px )",
+				"3-xl": "calc( 2.25ex + 4px )",
+				"4-xl": "calc( 2ex + 4px )",
+				"5-xl": "1.0625",
+				"6-xl": "1.03125",
+				"7-xl": "1.015625"
 			},
 			"textShadow": {
 				"none": "none",
@@ -405,6 +418,9 @@
 				"md": "2px 2px 2px rgba( 0, 0, 0, 0.3 )",
 				"lg": "3px 3px 6px rgba( 0, 0, 0, 0.3 )"
 			}
+		},
+		"dimensions": {
+			"minHeight": true
 		},
 		"layout": {
 			"contentSize": "40rem",
@@ -451,82 +467,77 @@
 			"padding": true,
 			"spacingSizes": [
 				{
-					"name": "Pixel - Fixed (1px)",
+					"name": "Fixed: 1px",
 					"size": "1px",
 					"slug": "px"
 				},
+
 				{
-					"name": "Step 1 - Fixed (0.25rem)",
-					"size": "0.25rem",
-					"slug": "10"
+					"name": " Fluid Scale -3",
+					"size": "var(--theme-spacing--minus-3)",
+					"slug": "minus-3"
 				},
 				{
-					"name": "Step 2 - Fixed (0.5rem)",
-					"size": "0.5rem",
-					"slug": "20"
+					"name": " Fluid Scale -2",
+					"size": "var(--theme-spacing--minus-2)",
+					"slug": "minus-2"
 				},
 				{
-					"name": "Step 3 - Fixed (0.75rem)",
-					"size": "0.75rem",
-					"slug": "30"
+					"name": " Fluid Scale -1",
+					"size": "var(--theme-spacing--minus-1)",
+					"slug": "minus-1"
 				},
 				{
-					"name": "Step 4 - Fixed (1rem)",
-					"size": "1rem",
-					"slug": "40"
+					"name": " Fluid Scale +/- 0 (Base)",
+					"size": "var(--theme-spacing--base)",
+					"slug": "base"
 				},
 				{
-					"name": "Step 5 - Fixed (1.25rem)",
-					"size": "1.25rem",
-					"slug": "50"
+					"name": "Fluid Scale +1",
+					"size": "var(--theme-spacing--plus-1)",
+					"slug": "plus-1"
 				},
 				{
-					"name": "Step 6 - Fixed (1.5rem)",
-					"size": "1.5rem",
-					"slug": "60"
+					"name": "Fluid Scale +2",
+					"size": "var(--theme-spacing--plus-2)",
+					"slug": "plus-2"
 				},
 				{
-					"name": "Step 7 - Fixed (1.75rem)",
-					"size": "1.75rem",
-					"slug": "70"
+					"name": "Fluid Scale +3 (Block Gap)",
+					"size": "var(--theme-spacing--plus-3)",
+					"slug": "plus-3"
 				},
 				{
-					"name": "Step 8 - Fixed (2rem)",
-					"size": "2rem",
-					"slug": "80"
+					"name": "Fluid Scale +4",
+					"size": "var(--theme-spacing--plus-4)",
+					"slug": "plus-4"
 				},
 				{
-					"name": "Step 9 - Fluid (2.25rem)",
-					"size": "clamp(2rem, calc(2rem + ((1vw - 0.4rem) * 1.0417)), 2.25rem)",
-					"slug": "90"
+					"name": "Fluid Scale +5",
+					"size": "var(--theme-spacing--plus-5)",
+					"slug": "plus-5"
 				},
 				{
-					"name": "Step 10 - Fluid (2.5rem)",
-					"size": "clamp(2rem, calc(2rem + ((1vw - 0.4rem) * 2.0833)), 2.5rem)",
-					"slug": "100"
+					"name": "Fluid Scale +6",
+					"size": "var(--theme-spacing--plus-6)",
+					"slug": "plus-6"
 				},
 				{
-					"name": "Step 12 - Fluid (3rem)",
-					"size": "clamp(2rem, calc(2rem + ((1vw - 0.4rem) * 4.1667)), 3rem)",
-					"slug": "120"
-				},
-				{
-					"name": "Step 16 - Fluid (4rem)",
-					"size": "clamp(2rem, calc(2rem + ((1vw - 0.4rem) * 8.3333)), 4rem)",
-					"slug": "160"
-				},
-				{
-					"name": "Step 24 - Fluid (6rem)",
-					"size": "clamp(4rem, calc(4rem + ((1vw - 0.4rem) * 8.3333)), 6rem)",
-					"slug": "240"
-				},
-				{
-					"name": "Step 32 - Fluid (8rem)",
-					"size": "clamp(4rem, calc(4rem + ((1vw - 0.4rem) * 16.6667)), 8rem)",
-					"slug": "320"
+					"name": "Fluid Scale +7",
+					"size": "var(--theme-spacing--plus-7)",
+					"slug": "plus-7"
 				}
 			],
-			"units": [ "rem", "em", "%", "vh", "vw", "px" ]
+			"units": [
+				"rem",
+				"em",
+				"%",
+				"ch",
+				"cqi",
+				"vh",
+				"vw",
+				"px"
+			]
 		},
 		"typography": {
 			"customFontSize": false,
@@ -535,42 +546,41 @@
 				{
 					"fontFamily": "Jost, ui-sans-serif, sans-serif",
 					"slug": "primary",
-					"name": "Primary (Jost)",
+					"name": "Primary Jost",
 					"fontFace": [
 						{
 							"fontFamily": "Jost",
 							"fontWeight": "100 900",
 							"fontStyle": "normal",
 							"fontStretch": "normal",
-							"src": [ "file:./public/fonts/jost/jost.woff2" ]
+							"src": [
+								"file:./public/fonts/jost/jost.woff2"
+							]
 						},
 						{
 							"fontFamily": "Jost",
 							"fontWeight": "100 900",
 							"fontStyle": "italic",
 							"fontStretch": "normal",
-							"src": [ "file:./public/fonts/jost/jost-italic.woff2" ]
+							"src": [
+								"file:./public/fonts/jost/jost-italic.woff2"
+							]
 						}
 					]
 				},
 				{
-					"fontFamily": "Figtree, ui-sans-serif, sans-serif",
+					"fontFamily": "'Roboto Flex', ui-sans-serif, sans-serif",
 					"slug": "secondary",
-					"name": "Secondary (Figtree)",
+					"name": "Secondary (Cabin)",
 					"fontFace": [
 						{
-							"fontFamily": "Figtree",
-							"fontWeight": "300 900",
+							"fontFamily": "Roboto Flex",
+							"fontWeight": "100 1000",
 							"fontStyle": "normal",
-							"fontStretch": "normal",
-							"src": [ "file:./public/fonts/figtree/figtree.woff2" ]
-						},
-						{
-							"fontFamily": "Figtree",
-							"fontWeight": "300 900",
-							"fontStyle": "italic",
-							"fontStretch": "normal",
-							"src": [ "file:./public/fonts/figtree/figtree-italic.woff2" ]
+							"fontStretch": "25% 151%",
+							"src": [
+								"file:./public/fonts/roboto-flex/roboto-flex.woff2"
+							]
 						}
 					]
 				},
@@ -585,67 +595,84 @@
 					"name": "Monospace"
 				},
 				{
-					"fontFamily": "\"Segoe Print\", \"Bradley Hand\", Chilanka, TSCu_Comic, casual, cursive",
+					"fontFamily": "Mali, \"Segoe Print\", \"Bradley Hand\", Chilanka, TSCu_Comic, casual, cursive",
 					"slug": "handwriting",
-					"name": "Handwriting"
+					"name": "Handwriting (Mali)",
+					"fontFace": [
+						{
+							"fontFamily": "Mali",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [
+								"file:./public/fonts/mali/mali-regular.woff2"
+							]
+						}
+					]
 				}
 			],
 			"fontSizes": [
 				{
 					"name": "Extra Small - Fixed",
-					"size": "0.875rem",
+					"size": "clamp(0.875rem, 0.44vw + 0.66rem, 0.94rem)",
 					"slug": "xs"
 				},
 				{
 					"name": "Small - Fixed",
-					"size": "0.9375rem",
+					"size": "clamp(0.9375rem, 0.49vw + 0.74rem, 1.06rem)",
 					"slug": "sm"
 				},
 				{
-					"name": "Medium - Fixed",
-					"size": "1rem",
+					"name": "Medium - Fluid",
+					"size": "clamp(1.06rem, 0.37cqi + 0.95rem, 1.19rem)",
 					"slug": "md"
 				},
 				{
-					"name": "Large - Fluid (real base)",
-					"size": "clamp(1.06rem, 0.37cqi + 0.95rem, 1.19rem)",
+					"name": "Large - Fluid",
+					"size": "clamp(1.2rem, 0.85cqi + 0.94rem, 1.48rem)",
 					"slug": "lg"
 				},
 				{
 					"name": "Extra Large - Fluid",
-					"size": "clamp(1.2rem, 0.85cqi + 0.94rem, 1.48rem)",
+					"size": "clamp(1.34rem, 1.5cqi + 0.89rem, 1.86rem)",
 					"slug": "xl"
 				},
 				{
 					"name": "2XL - Fluid",
-					"size": "clamp(1.34rem, 1.5cqi + 0.89rem, 1.86rem)",
+					"size": "clamp(1.51rem, 2.37cqi + 0.8rem, 2.32rem)",
 					"slug": "2-xl"
 				},
 				{
 					"name": "3XL - Fluid",
-					"size": "clamp(1.51rem, 2.37cqi + 0.8rem, 2.32rem)",
+					"size": "clamp(1.7rem, 3.52cqi + 0.65rem, 2.9rem)",
 					"slug": "3-xl"
 				},
 				{
 					"name": "4XL - Fluid",
-					"size": "clamp(1.7rem, 3.52cqi + 0.65rem, 2.9rem)",
+					"size": "clamp(1.91rem, 5.03cqi + 0.41rem, 3.62rem)",
 					"slug": "4-xl"
 				},
 				{
 					"name": "5XL - Fluid",
-					"size": "clamp(1.91rem, 5.03cqi + 0.41rem, 3.62rem)",
+					"size": "clamp(2.15rem, 6.99cqi + 0.06rem, 4.53rem)",
 					"slug": "5-xl"
 				},
 				{
 					"name": "6XL - Fluid",
-					"size": "clamp(2.15rem, 6.99cqi + 0.06rem, 4.53rem)",
+					"size": "clamp(2.42rem, 9.53cqi + -0.43rem, 5.66rem)",
 					"slug": "6-xl"
+				},
+				{
+					"name": "7XL - Fluid",
+					"size": "clamp(2.73rem, 12.8cqi + -1.11rem, 7.08rem)",
+					"slug": "7-xl"
 				}
 			],
 			"fontStyle": true,
 			"fontWeight": true,
 			"letterSpacing": true,
 			"lineHeight": false,
+			"textColumns": true,
 			"textDecoration": true,
 			"textTransform": true
 		},
@@ -657,7 +684,7 @@
 			"background": "var:preset|color|base"
 		},
 		"spacing": {
-			"blockGap": "2rem",
+			"blockGap": "var( --theme-spacing--plus-3 )",
 			"padding": {
 				"top": "0",
 				"bottom": "0",
@@ -667,8 +694,8 @@
 		},
 		"typography": {
 			"fontFamily": "var:preset|font-family|secondary",
-			"fontSize": "var:preset|font-size|lg",
-			"lineHeight": "var:custom|line-height|lg"
+			"fontSize": "var:preset|font-size|md",
+			"lineHeight": "var:custom|line-height|md"
 		},
 		"elements": {
 			"button": {
@@ -681,16 +708,16 @@
 				},
 				"spacing": {
 					"padding": {
-						"top": "var:preset|spacing|20",
-						"bottom": "var:preset|spacing|20",
-						"left": "var:preset|spacing|60",
-						"right": "var:preset|spacing|60"
+						"top": "var:preset|spacing|minus-2",
+						"bottom": "var:preset|spacing|minus-2",
+						"left": "var:preset|spacing|plus-1",
+						"right": "var:preset|spacing|plus-1"
 					}
 				},
 				"typography": {
-					"fontSize": "var:preset|font-size|lg",
+					"fontSize": "var:preset|font-size|md",
 					"fontWeight": "500",
-					"lineHeight": "var:custom|line-height|lg"
+					"lineHeight": "var:custom|line-height|md"
 				},
 				":focus": {
 					"color": {
@@ -715,16 +742,16 @@
 				},
 				"spacing": {
 					"margin": {
-						"top": "var:preset|spacing|20",
+						"top": "var:preset|spacing|minus-2",
 						"bottom": "0",
-						"left": "var:preset|spacing|40",
-						"right": "var:preset|spacing|40"
+						"left": "var:preset|spacing|base",
+						"right": "var:preset|spacing|base"
 					}
 				},
 				"typography": {
 					"fontFamily": "var:preset|font-family|tertiary",
-					"fontSize": "var:preset|font-size|lg",
-					"lineHeight": "var:custom|line-height|lg"
+					"fontSize": "var:preset|font-size|md",
+					"lineHeight": "var:custom|line-height|md"
 				}
 			},
 			"cite": {
@@ -733,7 +760,7 @@
 				},
 				"typography": {
 					"fontFamily": "var:preset|font-family|tertiary",
-					"fontSize": "0.875em",
+					"fontSize": "0.9375em",
 					"fontStyle": "normal",
 					"fontWeight": "300",
 					"letterSpacing": "0"
@@ -747,38 +774,38 @@
 			},
 			"h1": {
 				"typography": {
-					"fontSize": "var:preset|font-size|5-xl",
-					"lineHeight": "var:custom|line-height|5-xl"
-				}
-			},
-			"h2": {
-				"typography": {
 					"fontSize": "var:preset|font-size|4-xl",
 					"lineHeight": "var:custom|line-height|4-xl"
 				}
 			},
-			"h3": {
+			"h2": {
 				"typography": {
 					"fontSize": "var:preset|font-size|3-xl",
 					"lineHeight": "var:custom|line-height|3-xl"
 				}
 			},
-			"h4": {
+			"h3": {
 				"typography": {
 					"fontSize": "var:preset|font-size|2-xl",
 					"lineHeight": "var:custom|line-height|2-xl"
 				}
 			},
-			"h5": {
+			"h4": {
 				"typography": {
 					"fontSize": "var:preset|font-size|xl",
 					"lineHeight": "var:custom|line-height|xl"
 				}
 			},
-			"h6": {
+			"h5": {
 				"typography": {
 					"fontSize": "var:preset|font-size|lg",
 					"lineHeight": "var:custom|line-height|lg"
+				}
+			},
+			"h6": {
+				"typography": {
+					"fontSize": "var:preset|font-size|md",
+					"lineHeight": "var:custom|line-height|md"
 				}
 			},
 			"link": {
@@ -789,6 +816,12 @@
 					"textDecoration": "underline"
 				},
 				":focus": {
+					"outline": {
+						"color": "var:preset|color|primary-contrast",
+						"offset": "0.125em",
+						"style": "solid",
+						"width": "1px"
+					},
 					"typography": {
 						"textDecoration": "underline"
 					}
@@ -815,10 +848,10 @@
 					"outline": {
 						"spacing": {
 							"padding": {
-								"top": "calc( var( --wp--preset--spacing--20 ) - 2px )",
-								"bottom": "calc( var( --wp--preset--spacing--20 ) - 2px )",
-								"left": "calc( var( --wp--preset--spacing--60 ) - 2px )",
-								"right": "calc( var( --wp--preset--spacing--60 ) - 2px )"
+								"top": "calc( var( --wp--preset--spacing--minus-2 ) - 2px )",
+								"bottom": "calc( var( --wp--preset--spacing--minus-2 ) - 2px )",
+								"left": "calc( var( --wp--preset--spacing--plus-1 ) - 2px )",
+								"right": "calc( var( --wp--preset--spacing--plus-1 ) - 2px )"
 							}
 						}
 					}
@@ -826,8 +859,8 @@
 			},
 			"core/calendar": {
 				"typography": {
-					"fontSize": "var:preset|font-size|lg",
-					"lineHeight": "var:custom|line-height|lg"
+					"fontSize": "var:preset|font-size|md",
+					"lineHeight": "var:custom|line-height|md"
 				},
 				"elements": {
 					"link": {
@@ -843,32 +876,35 @@
 				},
 				"spacing": {
 					"padding": {
-						"top": "var:preset|spacing|80",
-						"bottom": "var:preset|spacing|80",
-						"left": "var:preset|spacing|80",
-						"right": "var:preset|spacing|80"
+						"top": "var:preset|spacing|plus-3",
+						"bottom": "var:preset|spacing|plus-3",
+						"left": "var:preset|spacing|plus-3",
+						"right": "var:preset|spacing|plus-3"
 					}
 				},
 				"typography": {
 					"fontFamily": "var:preset|font-family|mono",
-					"fontSize": "var:preset|font-size|md",
-					"lineHeight": "var:preset|line-height|md"
+					"fontSize": "var:preset|font-size|sm",
+					"lineHeight": "2"
 				}
 			},
 			"core/comments": {
-				"css": "--wp--custom--block-gap--comments: var( --wp--preset--spacing--160 );"
+				"css": "--wp--custom--block-gap--comments: var( --wp--preset--spacing--plus-4 );"
 			},
 			"core/comment-template": {
 				"spacing": {
 					"margin": {
-						"top": "var:preset|spacing|40"
+						"top": "var:preset|spacing|base"
 					}
 				},
-				"css": "& > li { padding: var( --wp--preset--spacing--80 ); background: var( --wp--preset--color--neutral-base ); }"
+				"css": "& > li { padding: var( --wp--preset--spacing--plus-3 ); background: var( --wp--preset--color--neutral-base ); }"
 			},
 			"core/cover": {
 				"color": {
 					"text": "var:preset|color|white"
+				},
+				"dimensions": {
+					"minHeight": "30rem"
 				},
 				"elements": {
 					"link": {
@@ -886,18 +922,18 @@
 				},
 				"spacing": {
 					"padding": {
-						"top": "var:preset|spacing|80",
-						"bottom": "var:preset|spacing|80",
-						"left": "var:preset|spacing|80",
-						"right": "var:preset|spacing|80"
+						"top": "var:preset|spacing|plus-3",
+						"bottom": "var:preset|spacing|plus-3",
+						"left": "var:preset|spacing|plus-3",
+						"right": "var:preset|spacing|plus-3"
 					}
 				}
 			},
 			"core/gallery": {
 				"typography": {
-					"fontSize": "var:preset|font-size|lg"
+					"fontSize": "var:preset|font-size|md"
 				},
-				"css": "--wp--style--gallery-gap-default: var( --wp--preset--spacing--40 );"
+				"css": "--wp--style--gallery-gap-default: var( --wp--preset--spacing--base );"
 			},
 			"core/image": {
 				"css": "& img {\n\tbox-shadow: var( --wp--preset--shadow--md );\n}"
@@ -912,12 +948,12 @@
 			},
 			"core/navigation": {
 				"spacing": {
-					"blockGap": "var( --wp--preset--spacing--40 ) var( --wp--preset--spacing--120 )"
+					"blockGap": "var( --wp--preset--spacing--base ) var( --wp--preset--spacing--plus-3 )"
 				},
 				"typography": {
-					"fontSize": "17px",
+					"fontSize": "var:preset|font-size|sm",
 					"fontWeight": "500",
-					"lineHeight": "var:custom|line-height|md"
+					"lineHeight": "var:custom|line-height|sm"
 				},
 				"elements": {
 					"link": {
@@ -943,30 +979,30 @@
 			"core/pullquote": {
 				"border": {
 					"top": {
-						"color": "var:preset|color|neutral-muted",
+						"color": "var:preset|color|contrast",
 						"style": "solid",
-						"width": "var:preset|spacing|10"
+						"width": "var:preset|spacing|minus-3"
 					},
 					"bottom": {
-						"color": "var:preset|color|neutral-muted",
+						"color": "var:preset|color|contrast",
 						"style": "solid",
-						"width": "var:preset|spacing|10"
+						"width": "var:preset|spacing|minus-3"
 					}
 				},
 				"spacing": {
 					"padding": {
-						"top": "var:preset|spacing|80",
-						"bottom": "var:preset|spacing|80"
+						"top": "var:preset|spacing|plus-3",
+						"bottom": "var:preset|spacing|plus-3"
 					}
 				},
 				"typography": {
-					"fontSize": "var:preset|font-size|3-xl",
-					"lineHeight": "var:custom|line-height|3-xl"
+					"fontSize": "var:preset|font-size|2-xl",
+					"lineHeight": "var:custom|line-height|2-xl"
 				},
 				"elements": {
 					"cite": {
 						"typography": {
-							"fontSize": "max( 50%, var( --wp--preset--font-size--xl ) )"
+							"fontSize": "max( 50%, var( --wp--preset--font-size--lg ) )"
 						}
 					}
 				}
@@ -974,8 +1010,8 @@
 			"core/preformatted": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|mono",
-					"fontSize": "var:preset|font-size|md",
-					"lineHeight": "var( --wp--custom--line-height--md )"
+					"fontSize": "var:preset|font-size|sm",
+					"lineHeight": "var:custom|line-height|sm"
 				}
 			},
 			"core/query-pagination": {
@@ -988,14 +1024,14 @@
 			"core/quote": {
 				"border": {
 					"left": {
-						"color": "var:preset|color|neutral-muted",
+						"color": "var:preset|color|contrast",
 						"style": "solid",
-						"width": "var:preset|spacing|10"
+						"width": "var:preset|spacing|minus-3"
 					}
 				},
 				"spacing": {
 					"padding": {
-						"left": "var:preset|spacing|70"
+						"left": "var:preset|spacing|plus-2"
 					}
 				},
 				"variations": {
@@ -1005,8 +1041,8 @@
 						},
 						"spacing": {
 							"padding": {
-								"left": "var:preset|spacing|80",
-								"right": "var:preset|spacing|80"
+								"left": "var:preset|spacing|plus-3",
+								"right": "var:preset|spacing|plus-3"
 							}
 						}
 					}
@@ -1036,20 +1072,20 @@
 			"core/separator": {
 				"border": {
 					"top": {
-						"width": "1px"
+						"width": "2px"
 					},
 					"bottom": {
 						"width": "0"
 					}
 				},
 				"color": {
-					"text": "var:preset|color|neutral-muted"
+					"text": "var:preset|color|contrast"
 				},
 				"variations": {
 					"wide": {
 						"border": {
 							"top": {
-								"width": "var:preset|spacing|10"
+								"width": "var:preset|spacing|minus-2"
 							}
 						}
 					}
@@ -1057,7 +1093,7 @@
 			},
 			"core/site-title": {
 				"typography": {
-					"fontSize": "var( --wp--preset--font-size--lg )",
+					"fontSize": "var( --wp--preset--font-size--md )",
 					"fontStyle": "normal",
 					"fontWeight": "500",
 					"textTransform": "uppercase"
@@ -1072,7 +1108,7 @@
 			},
 			"core/social-links": {
 				"spacing": {
-					"blockGap": "var:preset|spacing|60"
+					"blockGap": "var:preset|spacing|plus-1"
 				},
 				"css": "&:not( .is-style-logos-only ) .wp-block-social-link {\n\tbox-shadow: var( --wp--preset--shadow--sm );\n}"
 			},
@@ -1081,8 +1117,8 @@
 					"color": "var:preset|color|neutral-muted"
 				},
 				"typography": {
-					"fontSize": "var:preset|font-size|lg",
-					"lineHeight": "var:custom|line-height|lg"
+					"fontSize": "var:preset|font-size|md",
+					"lineHeight": "var:custom|line-height|md"
 				}
 			}
 		}
@@ -1091,12 +1127,17 @@
 		{
 			"name": "template-canvas",
 			"title": "Custom: Canvas",
-			"postTypes": [ "page", "post" ]
+			"postTypes": [
+				"page",
+				"post"
+			]
 		},
 		{
 			"name": "template-single-post-featured-cover",
 			"title": "Single Post: Featured Cover",
-			"postTypes": [ "post" ]
+			"postTypes": [
+				"post"
+			]
 		}
 	],
 	"templateParts": [

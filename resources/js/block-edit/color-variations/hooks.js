@@ -1,0 +1,44 @@
+/**
+ * The hooks file houses custom React hooks for use with the component.
+ *
+ * @author    Justin Tadlock <justintadlock@gmail.com>
+ * @copyright Copyright (c) 2023, Justin Tadlock
+ * @license   GPL-2.0-or-later
+ */
+
+// Internal dependencies.
+import { VARIATIONS, COLOR_SHADES } from "./constants";
+
+// WordPress dependencies.
+import { useSetting } from '@wordpress/block-editor';
+
+/**
+ * @description React hook that returns an array of colors.
+ * @returns {array}
+ */
+export const useVariationColors = () => {
+	// Gets the variations as registered in `theme.json`.
+	const palette = useSetting( 'color.palette' );
+
+	let colors = {};
+
+	Object.keys( VARIATIONS ).forEach( ( type ) => {
+		colors[ type ] = {};
+
+		COLOR_SHADES.forEach( ( shade ) => {
+			const name = 'default' === type
+				? shade
+				: `${ type }-${ shade }`;
+
+			const result = palette.find(
+				( { slug } ) => slug == name
+			);
+
+			if ( result ) {
+				colors[ type ][ shade ] = result.color;
+			}
+		} );
+	} );
+
+	return colors;
+};

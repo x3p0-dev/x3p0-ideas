@@ -10,20 +10,6 @@
 	padding: 0;
 }
 
-// Faux `blockGap` support.
-// @link https://github.com/WordPress/gutenberg/pull/49050
-.wp-block-post-template.is-layout-flow > * {
-	margin-block-start: 0;
-	margin-block-end: 0;
-}
-
-.wp-block-post-template.is-layout-flow > * + * {
-	margin-block-start: var(
-		--wp--custom--block-gap--post-template,
-		var( --wp--style--block-gap )
-	);
-}
-
 // Zero out padding when background is applied.
 .wp-block-post-template.has-background {
 	padding: 0;
@@ -54,7 +40,7 @@
 	) { --col-count: 2; }
 }
 
-@media ( min-width: 48rem ) {
+@media ( min-width: 56rem ) {
 	.wp-block-post-template.is-layout-grid:where(
 		.columns-3,
 		.columns-4,

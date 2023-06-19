@@ -25,7 +25,7 @@ use X3P0\Ideas\Contracts\Bootable;
  */
 function theme( string $component = '' )
 {
-        static $bindings = [];
+	static $bindings = [];
 
 	// If there are no bound components, register and boot them.
 	if ( [] === $bindings ) {
@@ -34,6 +34,7 @@ function theme( string $component = '' )
 		// be booted when the theme launches.
 		$bindings = apply_filters( 'x3p0/ideas/components', [
 			'assets'         => new Assets(),
+			'blocks'         => new Blocks(),
 			'patterns'       => new Patterns(),
 			'template-parts' => new TemplateParts(),
 			'image-sizes'    => new ImageSizes()

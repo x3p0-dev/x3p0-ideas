@@ -3,13 +3,18 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// Faux `blockGap` support
-.wp-block-term-description > * {
+// Faux `blockGap` support.
+//
+// The addition of targeting the `<p>` tag is because of an attempted fix that
+// broke this further because it didn't account for multi-paragraph descriptions.
+// @link https://github.com/WordPress/gutenberg/pull/51137
+
+.wp-block-term-description > :is( *, p ) {
 	margin-block-start: 0;
 	margin-block-end: 0;
 }
 
-.wp-block-term-description > * + * {
+.wp-block-term-description > * + :is( *, p ) {
 	margin-block-start: var(
 		--wp--custom--block-gap--term-description,
 		var( --wp--style--block-gap )

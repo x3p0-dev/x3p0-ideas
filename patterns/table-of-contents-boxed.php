@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Post Grid: Table of Contents: Boxed
+ * Title: Table of Contents: Boxed
  * Slug: x3p0-ideas/table-of-contents-boxed
  * Description: Displays a post's table of contents within a Group block with a Heading.
  * Categories: theme
@@ -9,8 +9,8 @@
  * Viewport Width: 640
  */
 ?>
-<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|40","padding":{"top":"var:preset|spacing|80","right":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|80"}}},"className":"has-color-var-light","layout":{"type":"constrained"}} -->
-<div class="wp-block-group has-color-var-light" style="padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--80)">
+<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|base","padding":{"top":"var:preset|spacing|plus-3","right":"var:preset|spacing|plus-3","bottom":"var:preset|spacing|plus-3","left":"var:preset|spacing|plus-3"}}},"className":"has-color-var-light","layout":{"type":"constrained"}} -->
+<div class="wp-block-group has-color-var-neutral" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
 
 	<!-- wp:paragraph {"fontFamily":"primary"} -->
 	<p class="has-primary-font-family"><strong>Table of Contents</strong></p>

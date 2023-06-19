@@ -1,19 +1,14 @@
-// WordPress dependencies.
-import { addFilter } from '@wordpress/hooks';
+/**
+ * Primary editor script. Imports all of the various features so that they can
+ * be bundled into a final file during the build process.
+ *
+ * @author    Justin Tadlock <justintadlock@gmail.com>
+ * @copyright Copyright (c) 2023, Justin Tadlock
+ * @license   GPL-2.0-or-later
+ */
 
-// RichText formats.
-import './rich-text';
-
-// Block style variations.
+// Import all the cool editor features from the theme.
+import './block-edit';
 import './block-styles';
-
-// Block filters.
-import { withColorVariation }     from './color-variations';
-import { withGradientBackground } from './gradient-background';
-import { withListMarker }         from './list-markers';
-import { withTextShadow }         from './text-shadow';
-
-addFilter( 'editor.BlockEdit', 'x3p0/text-shadow',      withTextShadow         );
-addFilter( 'editor.BlockEdit', 'x3p0/gradient-control', withGradientBackground );
-addFilter( 'editor.BlockEdit', 'x3p0/color-variation',  withColorVariation     );
-addFilter( 'editor.BlockEdit', 'x3p0/list-marker',      withListMarker         );
+import './block-variations';
+import './format-library';
