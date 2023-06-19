@@ -1060,15 +1060,6 @@
 					}
 				}
 			},
-			"core/group": {
-				"variations": {
-					"row": {
-						"color": {
-							"background": "pink"
-						}
-					}
-				}
-			},
 			"core/separator": {
 				"border": {
 					"top": {
