@@ -7,8 +7,8 @@
  */
 
 // Internal dependencies.
-import { SUPPORTED_BLOCKS } from './constants';
-import { MarkerDropdownControl } from './control-marker-dropdown';
+import MarkerDropdownControl from './control-marker-dropdown';
+import { SUPPORTED_BLOCKS }  from './constants';
 
 // WordPress dependencies.
 import { BlockControls } from '@wordpress/block-editor';
@@ -16,8 +16,7 @@ import { BlockControls } from '@wordpress/block-editor';
 /**
  * @description Filters the and returns the `BlockEdit` component.
  */
-export const withListMarker = ( BlockEdit ) => ( props ) => {
-
+export default ( BlockEdit ) => ( props ) => {
 	return SUPPORTED_BLOCKS.includes( props.name ) ? (
 		<>
 			<BlockEdit { ...props } />

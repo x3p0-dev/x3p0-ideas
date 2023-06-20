@@ -31,13 +31,19 @@ const name = 'x3p0/abbr';
  * @description RichText format type definition.
  * @type {object}
  */
-export const abbreviationFormat = {
+const abbreviationFormat = {
 	name,
 	title:     __( 'Abbreviation', 'x3p0-ideas' ),
 	tagName:   'abbr',
 	className: null,
 	edit:      Edit
 };
+
+/**
+ * @description RichText format type definition.
+ * @type {object}
+ */
+export default abbreviationFormat;
 
 /**
  * @description Creates the format type edit component.

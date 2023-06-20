@@ -7,7 +7,7 @@
  */
 
 // Internal imports.
-import { ColorVariationControl } from './control-color-variation';
+import ColorVariationControl from './control-color-variation';
 import { SUPPORTED_BLOCKS } from './constants';
 
 // WordPress imports.
@@ -16,8 +16,7 @@ import { BlockControls } from '@wordpress/block-editor';
 /**
  * @description Filters the and returns the `BlockEdit` component.
  */
-export const withColorVariation = ( BlockEdit ) => ( props ) => {
-
+export default ( BlockEdit ) => ( props ) => {
 	return SUPPORTED_BLOCKS.includes( props.name ) ? (
 		<>
 			<BlockEdit { ...props } />

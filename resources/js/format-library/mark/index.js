@@ -24,7 +24,7 @@ const name = 'x3p0/mark';
  * @description RichText format type definition.
  * @type {object}
  */
-export const markFormat = {
+export default {
 	name,
 	title: __( 'Mark', 'x3p0-ideas' ),
 	tagName: 'mark',

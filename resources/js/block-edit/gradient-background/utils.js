@@ -37,11 +37,9 @@ export const getGradientFromClassName = ( className ) => {
  * @param {string} oldGradient
  * @returns {string}
  */
-export const updateGradientClass = ( className, newGradient, oldGradient ) => {
-	return updateClass(
-		className,
-		SUPPORTED_GRADIENTS.includes( newGradient ) ? newGradient : '',
-		oldGradient,
-		GRADIENT_PREFIX
-	);
-};
+export const updateGradientClass = ( className, newGradient, oldGradient ) => updateClass(
+	className,
+	SUPPORTED_GRADIENTS.includes( newGradient ) ? newGradient : '',
+	oldGradient,
+	GRADIENT_PREFIX
+);

@@ -28,16 +28,13 @@ import {
 /**
  * @description Creates a separator icon control.
  * @example
- * <SeparatorIconsControl
+ * <SeparatorIconControl
  * 	attributes={props.attributes}
  * 	setAttributes={props.setAttributes}
  * 	clientId={props.clientId}
  * />
  */
-export const SeparatorIconsControl = ( {
-	attributes: { className },
-	setAttributes
-} ) => {
+export default ( { attributes: { className }, setAttributes } ) => {
 	// Get the icons.
 	const icons = getIcons();
 
@@ -45,33 +42,30 @@ export const SeparatorIconsControl = ( {
 	const currentIcon = getIconFromClassName( className );
 
 	// Update the icon class and gradient.
-	const onIconButtonClick = ( icon ) => {
-		setAttributes( {
-			className: updateIconClass(
-				className,
-				currentIcon === icon.value ? '' : icon.value,
-				currentIcon
-			),
-			gradient: currentIcon === icon.value || ! icon?.gradient
-				? undefined
-				: icon?.gradient
-		} );
-	};
+	const onIconButtonClick = ( icon ) => setAttributes( {
+		className: updateIconClass(
+			className,
+			currentIcon === icon.value ? '' : icon.value,
+			currentIcon
+		),
+		gradient: currentIcon === icon.value || ! icon?.gradient
+			? undefined
+			: icon?.gradient
+	} );
 
 	// Builds a menu item for a icon.
-	const iconButton = ( icon, index ) => {
-		return (
-			<Button
-				key={ index }
-				isPressed={ currentIcon === icon.value }
-				className="x3p0-separator-icons-control__button"
-				onClick={ () => onIconButtonClick( icon ) }
-			>
-				{ icon.label ?? icon.value }
-			</Button>
-		);
-	};
+	const iconButton = ( icon, index ) => (
+		<Button
+			key={ index }
+			isPressed={ currentIcon === icon.value }
+			className="x3p0-separator-icons-control__button"
+			onClick={ () => onIconButtonClick( icon ) }
+		>
+			{ icon.label ?? icon.value }
+		</Button>
+	);
 
+	// Builds an icon picker in a 6-column grid.
 	const iconPicker = (
 		<BaseControl label={ __( 'Icons', 'x3p0-ideas' ) }>
 			<div className="x3p0-separator-icons-control__description">
@@ -86,6 +80,7 @@ export const SeparatorIconsControl = ( {
 		</BaseControl>
 	);
 
+	// Returns the dropdown menu item.
 	return (
 		<Dropdown
 			className="x3p0-separator-icons-control"

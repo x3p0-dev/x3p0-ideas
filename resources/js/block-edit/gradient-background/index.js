@@ -7,14 +7,13 @@
  */
 
 // Internal dependencies.
+import GradientControl      from './control-gradient';
 import { SUPPORTED_BLOCKS } from './constants';
-import { GradientControl } from './control-gradient';
 
 // WordPress dependencies.
 import { InspectorControls } from '@wordpress/block-editor';
 
-export const withGradientBackground = ( BlockEdit ) => ( props ) =>
-{
+export default ( BlockEdit ) => ( props ) => {
 	return SUPPORTED_BLOCKS.includes( props.name ) ? (
 		<>
 			<BlockEdit { ...props } />

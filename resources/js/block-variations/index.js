@@ -15,10 +15,10 @@ import { registerBlockVariation } from '@wordpress/blocks';
 // currently no way to set the default spacer size via `theme.json` nor is there
 // a way to disable custom spacing sizes.
 registerBlockVariation( 'core/spacer', {
-	name: 'x3p0/theme-spacer',
-	title: __( 'Spacer (Theme)', 'x3p0-ideas' ),
-	isDefault: true,
-	keywords: [ 'space', 'spacer', 'spacing' ],
+	name:       'x3p0/theme-spacer',
+	title:      __( 'Spacer (Theme)', 'x3p0-ideas' ),
+	isDefault:  true,
+	keywords:   [ 'space', 'spacer', 'spacing' ],
 	attributes: {
 		height: 'var:preset|spacing|plus-3'
 	},

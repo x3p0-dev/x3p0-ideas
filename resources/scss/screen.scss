@@ -1,3 +1,15 @@
+////
+/// Primary theme stylesheet, which is used for both the front end and the
+/// editor. Note that it is named `screen.scss` instead of `style.scss` because
+/// `wp-scripts` renames that file to `style-index.scss`. But, it's also an
+/// easy way to differentiate it from `print.scss`, which I'll totally add one
+/// day. I promise.
+///
+/// @author    Justin Tadlock <justintadlock@gmail.com>
+/// @copyright 2023 Justin Tadlock
+/// @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
+/// @link      https://github.com/x3p0-dev/x3p0-ideas
+////
 
 // Sets up theme spacing properties that are mapped to spacing presets in the
 // `theme.json`. At first glance, it might seem silly to do this (it probably

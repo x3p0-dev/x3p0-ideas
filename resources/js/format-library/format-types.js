@@ -6,12 +6,16 @@
  * @license   GPL-2.0-or-later
  */
 
-import { abbreviationFormat } from "./abbreviation";
-import { deleteFormat }       from "./delete";
-import { insertFormat }       from "./insert";
-import { markFormat }         from "./mark";
-import { overlineFormat }     from "./overline";
+import abbreviationFormat from "./abbreviation";
+import deleteFormat       from "./delete";
+import insertFormat       from "./insert";
+import markFormat         from "./mark";
+import overlineFormat     from "./overline";
 
+/**
+ * @description Array of RichText format type objects.
+ * @type {array}
+ */
 export default [
 	abbreviationFormat,
 	deleteFormat,

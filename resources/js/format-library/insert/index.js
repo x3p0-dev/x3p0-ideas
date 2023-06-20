@@ -24,7 +24,7 @@ const name = 'x3p0/ins';
  * @description RichText format type definition.
  * @type {object}
  */
-export const insertFormat = {
+export default {
 	name,
 	title: __( 'Insert', 'x3p0-ideas' ),
 	tagName: 'ins',

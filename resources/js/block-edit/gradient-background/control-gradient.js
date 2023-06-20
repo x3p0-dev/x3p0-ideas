@@ -32,15 +32,11 @@ import {
  * 	clientId={props.clientId}
  * />
  */
-export const GradientControl = ( {
-	attributes: { className },
-	setAttributes,
-	clientId
-} ) => {
+export default ( { attributes: { className }, setAttributes, clientId } ) => {
 	// We're only getting theme and core gradients until it's possible to
 	// inline CSS in the editor. Otherwise, there's no way to dynamically
 	// add the CSS rules needed for unknowns.
-	// @link https://github.com/WordPress/gutenberg/issues/18571
+	// @see https://github.com/WordPress/gutenberg/issues/18571
 	const {
 		gradients,
 		theme: themeGradients,

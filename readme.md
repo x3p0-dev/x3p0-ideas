@@ -1,4 +1,7 @@
-# X3P0 - Ideas, Experiments, and Things
+# Ideas, Experiments, and Things
+
+![WordPress 6.3+](https://img.shields.io/badge/WordPress%206.3+-0073AA?style=flat-square)
+![Gutenberg 16.0+](https://img.shields.io/badge/Gutenberg%2016.0+-000000?style=flat-square)
 
 Beautiful...Bold..._[Insert adjective to sell you on using this theme]_. Oh, never mind all that. I could try to sway you with two-dollar words and fancy dreams, but I'll just shoot straight from the hip. So, here goes.
 

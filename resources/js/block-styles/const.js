@@ -7,7 +7,7 @@
  */
 
 // WordPress dependencies.
-import { __ }   from '@wordpress/i18n';
+import { __ } from '@wordpress/i18n';
 
 /**
  * @description Houses all of our block style variations as objects and assigned

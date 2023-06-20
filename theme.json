@@ -473,22 +473,22 @@
 				},
 
 				{
-					"name": " Fluid Scale -3",
+					"name": "Fluid Scale -3",
 					"size": "var(--theme-spacing--minus-3)",
 					"slug": "minus-3"
 				},
 				{
-					"name": " Fluid Scale -2",
+					"name": "Fluid Scale -2",
 					"size": "var(--theme-spacing--minus-2)",
 					"slug": "minus-2"
 				},
 				{
-					"name": " Fluid Scale -1",
+					"name": "Fluid Scale -1",
 					"size": "var(--theme-spacing--minus-1)",
 					"slug": "minus-1"
 				},
 				{
-					"name": " Fluid Scale +/- 0 (Base)",
+					"name": "Fluid Scale +/- 0 (Base)",
 					"size": "var(--theme-spacing--base)",
 					"slug": "base"
 				},
@@ -503,7 +503,7 @@
 					"slug": "plus-2"
 				},
 				{
-					"name": "Fluid Scale +3 (Block Gap)",
+					"name": "Fluid Scale +3 (Global)",
 					"size": "var(--theme-spacing--plus-3)",
 					"slug": "plus-3"
 				},
@@ -684,12 +684,12 @@
 			"background": "var:preset|color|base"
 		},
 		"spacing": {
-			"blockGap": "var( --theme-spacing--plus-3 )",
+			"blockGap": "var:preset|spacing|plus-3",
 			"padding": {
 				"top": "0",
 				"bottom": "0",
-				"left": "2rem",
-				"right": "2rem"
+				"left": "var:preset|spacing|plus-3",
+				"right": "var:preset|spacing|plus-3"
 			}
 		},
 		"typography": {

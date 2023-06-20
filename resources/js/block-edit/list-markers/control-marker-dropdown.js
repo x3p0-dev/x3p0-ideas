@@ -43,13 +43,7 @@ const DEFAULT_OPTION = {
  * 	setAttributes={props.setAttributes}
  * />
  */
-export const MarkerDropdownControl = ( {
-	attributes: {
-		className,
-		ordered
-	},
-	setAttributes
-} ) => {
+export default ( { attributes: { className, ordered }, setAttributes } ) => {
 	// Get the marker and only update it when `className` changes.
 	const marker = useMemo(
 		() => getMarkerFromClassName( className ),

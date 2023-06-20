@@ -7,7 +7,7 @@
  */
 
 // Internal imports.
-import { SeparatorIconsControl } from './control-icons';
+import SeparatorIconControl from './control-icons';
 import { SUPPORTED_BLOCKS } from './constants';
 
 // WordPress imports.
@@ -16,13 +16,12 @@ import { BlockControls } from '@wordpress/block-editor';
 /**
  * @description Filters the and returns the `BlockEdit` component.
  */
-export const withSeparatorIcons = ( BlockEdit ) => ( props ) => {
-
+export default ( BlockEdit ) => ( props ) => {
 	return SUPPORTED_BLOCKS.includes( props.name ) ? (
 		<>
 			<BlockEdit { ...props } />
 			<BlockControls group="other">
-				<SeparatorIconsControl
+				<SeparatorIconControl
 					attributes={ props.attributes }
 					setAttributes={ props.setAttributes }
 				/>

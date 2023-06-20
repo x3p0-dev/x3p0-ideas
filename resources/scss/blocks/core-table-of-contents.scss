@@ -1,3 +1,11 @@
+////
+/// Table of Contents block CSS.
+///
+/// @author    Justin Tadlock <justintadlock@gmail.com>
+/// @copyright 2023 Justin Tadlock
+/// @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
+/// @link      https://github.com/x3p0-dev/x3p0-ideas
+////
 
 // -----------------------------------------------------------------------------
 // Block fixes.
@@ -39,6 +47,7 @@
 		list-style: none;
 		counter-reset: chapter;
 	}
+
 	> ol {
 		padding: 0;
 	}

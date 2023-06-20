@@ -1,3 +1,11 @@
+////
+/// Post Template block CSS.
+///
+/// @author    Justin Tadlock <justintadlock@gmail.com>
+/// @copyright 2023 Justin Tadlock
+/// @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
+/// @link      https://github.com/x3p0-dev/x3p0-ideas
+////
 
 // -----------------------------------------------------------------------------
 // Block fixes.
@@ -20,8 +28,7 @@
 // -----------------------------------------------------------------------------
 
 // Ensures that `cqi` values are based on their container, not the viewport.,
-.wp-block-post-template-is-layout-grid > .wp-block-post
-{
+.wp-block-post-template-is-layout-grid > .wp-block-post {
 	container-type: inline-size;
 }
 

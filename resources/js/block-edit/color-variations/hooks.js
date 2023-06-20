@@ -14,7 +14,7 @@ import { useSetting } from '@wordpress/block-editor';
 
 /**
  * @description React hook that returns an array of colors.
- * @returns {array}
+ * @returns {Object}
  */
 export const useVariationColors = () => {
 	// Gets the variations as registered in `theme.json`.

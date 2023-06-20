@@ -24,7 +24,7 @@ const name = 'x3p0/overline';
  * @description RichText format type definition.
  * @type {object}
  */
-export const overlineFormat = {
+export default {
 	name,
 	title: __( 'Overline', 'x3p0-ideas' ),
 	tagName: 'span',

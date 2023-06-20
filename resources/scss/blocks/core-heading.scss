@@ -1,6 +1,25 @@
+////
+/// Heading block CSS.
+///
+/// @author    Justin Tadlock <justintadlock@gmail.com>
+/// @copyright 2023 Justin Tadlock
+/// @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
+/// @link      https://github.com/x3p0-dev/x3p0-ideas
+////
+
+// -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+/// Remove core's default padding.
+/// @link https://github.com/WordPress/gutenberg/issues/30725
 .wp-block-heading.has-background {
 	padding: 0;
 }
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
 
 .wp-block-heading.is-style-clip-text,
 .editor-styles-wrapper .wp-block-heading.is-style-clip-text {

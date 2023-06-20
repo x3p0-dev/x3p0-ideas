@@ -33,15 +33,13 @@ export const getVariationFromClassName = ( className ) => {
  * @description Removes the previous variation class and adds the new one.
  *
  * @param {string} className
- * @param {string} newVariation
- * @param {string} oldVariation
+ * @param {string} newVar
+ * @param {string} oldVar
  * @returns {string}
  */
-export const updateVariationClass = ( className, newVariation, oldVariation ) => {
-	return updateClass(
-		className,
-		'default' === newVariation ? '' : newVariation,
-		oldVariation,
-		VARIATION_PREFIX
-	);
-};
+export const updateVariationClass = ( className, newVar, oldVar ) => updateClass(
+	className,
+	'default' === newVar ? '' : newVar,
+	oldVar,
+	VARIATION_PREFIX
+);

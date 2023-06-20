@@ -1,10 +1,24 @@
+////
+/// Search block CSS.
+///
+/// @author    Justin Tadlock <justintadlock@gmail.com>
+/// @copyright 2023 Justin Tadlock
+/// @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
+/// @link      https://github.com/x3p0-dev/x3p0-ideas
+////
+
+// -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
 
 // Sometimes, layout margin is applied to this element.
 .wp-block-search__inside-wrapper {
 	margin-top: 0;
 }
 
-/// //// -----
+// -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
 
 .has-text-color .wp-block-search {
 	&.wp-block-search__button-inside .wp-block-search__inside-wrapper,
@@ -14,6 +28,10 @@
 		border-color: currentColor;
 	}
 }
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
 
 .wp-block-search.is-style-sm {
 	font-size: var( --wp--preset--font-size--sm );

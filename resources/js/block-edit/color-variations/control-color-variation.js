@@ -44,21 +44,16 @@ import {
  * 	setAttributes={props.setAttributes}
  * />
  */
-export const ColorVariationControl = ( {
-	attributes: { className },
-	setAttributes
-} ) => {
+export default ( { attributes: { className }, setAttributes } ) => {
 	// Get the variation colors.
 	const variationColors = useVariationColors();
 
 	// Get the current variation.
 	const currentVariation = getVariationFromClassName( className );
 
-	// Builds the color indicators for an individual variation.
+	// Filter out shades that are not set for the variation. Then, map the
+	// resulting array of colors to the color indicator components.
 	const variationColorIndicators = ( variation ) => {
-
-		// Filter out shades that are not set for the variation before
-		// creating the indicator.
 		return COLOR_SHADES.filter( ( shade ) =>
 			variationColors[ variation ][ shade ]
 			? true
@@ -110,9 +105,10 @@ export const ColorVariationControl = ( {
 	};
 
 	// Create array of variation controls.
-	const variationControls = Object.keys( VARIATIONS ).map( ( variation, index ) => {
-		return variationMenuItem( variation, `primary-${ index }` );
-	} );
+	const variationControls = Object.keys( VARIATIONS ).map(
+		( variation, index ) =>
+		variationMenuItem( variation, `primary-${ index }` )
+	);
 
 	return (
 		<Dropdown

@@ -22,15 +22,14 @@ domReady( () => {
 	// Remove core block styles.
 	unregisterBlockStyle( 'core/separator', 'dots' );
 
-	// Loop through each of the blocks to get its style variations.
-	Object.keys( BLOCK_STYLES ).forEach( ( block ) => {
-
-		// Loop through the block's style variations and register them.
-		Object.keys( BLOCK_STYLES[ block ] ).forEach( ( name ) => {
+	// Loop through each of the blocks to get its style variations. Then,
+	// loop through the variations and register them.
+	Object.keys( BLOCK_STYLES ).forEach( ( block ) =>
+		Object.keys( BLOCK_STYLES[ block ] ).forEach( ( name ) =>
 			registerBlockStyle( block, {
 				name,
 				label: BLOCK_STYLES[ block ][ name ]
-			} );
-		} );
-	} );
+			} )
+		)
+	);
 } );

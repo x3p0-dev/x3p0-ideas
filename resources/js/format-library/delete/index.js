@@ -24,7 +24,7 @@ const name = 'x3p0/del';
  * @description RichText format type definition.
  * @type {object}
  */
-export const deleteFormat = {
+export default {
 	name,
 	title: __( 'Delete', 'x3p0-ideas' ),
 	tagName: 'del',

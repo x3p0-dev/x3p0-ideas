@@ -25,7 +25,7 @@ export const getIcons = () => applyFilters( 'x3p0SeparatorIcons', ICONS );
  * @description Gets an icon slug/value if it is included in a class.
  *
  * @param {string} className
- * @returns {string|undefined}
+ * @returns {string}
  */
 export const getIconFromClassName = ( className ) => {
 	const list = new TokenList( className );

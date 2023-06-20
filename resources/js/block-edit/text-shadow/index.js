@@ -7,8 +7,8 @@
  */
 
 // Internal dependencies.
+import TextShadowControl    from './control-text-shadow';
 import { SUPPORTED_BLOCKS } from './constants';
-import { TextShadowControl } from './control-text-shadow';
 
 // WordPress dependencies.
 import { InspectorControls } from '@wordpress/block-editor';
@@ -16,8 +16,7 @@ import { InspectorControls } from '@wordpress/block-editor';
 /**
  * @description Filters the and returns the `BlockEdit` component.
  */
-export const withTextShadow = ( BlockEdit ) => ( props ) => {
-
+export default ( BlockEdit ) => ( props ) => {
 	return SUPPORTED_BLOCKS.includes( props.name ) ? (
 		<>
 			<BlockEdit { ...props } />

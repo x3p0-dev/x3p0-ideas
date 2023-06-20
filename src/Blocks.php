@@ -4,8 +4,8 @@
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023, Justin Tadlock
- * @link      https://justintadlock.com
- * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
+ * @link      https://github.com/x3p0-dev/x3p0-ideas
  */
 
 namespace X3P0\Ideas;

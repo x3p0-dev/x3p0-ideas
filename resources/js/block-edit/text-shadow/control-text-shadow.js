@@ -38,10 +38,7 @@ const DEFAULT_OPTION = {
  * 	clientId={props.clientId}
  * />
  */
-export const TextShadowControl = ( {
-	attributes: { className },
-	setAttributes
-} ) => {
+export default ( { attributes: { className }, setAttributes } ) => {
 	// Get the shadow and only update it when `className` changes.
 	const shadow = useMemo(
 		() => getShadowFromClassName( className ),
@@ -50,13 +47,11 @@ export const TextShadowControl = ( {
 
 	const options = [
 		DEFAULT_OPTION,
-		...SHADOWS.map( ( shadow ) => {
-			return {
-				key:   shadow.value,
-				name:  shadow.label,
-				value: shadow.value
-			};
-		} )
+		...SHADOWS.map( ( shadow ) => ( {
+			key:   shadow.value,
+			name:  shadow.label,
+			value: shadow.value
+		} ) )
 	];
 
 	return  (
