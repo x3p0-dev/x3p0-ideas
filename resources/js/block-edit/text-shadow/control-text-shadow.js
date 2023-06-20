@@ -7,9 +7,8 @@
  */
 
 // Internal dependencies.
-import { SHADOWS } from './constants';
-
 import {
+	getShadows,
 	getShadowFromClassName,
 	updateShadowClass
 } from './utils';
@@ -47,7 +46,7 @@ export default ( { attributes: { className }, setAttributes } ) => {
 
 	const options = [
 		DEFAULT_OPTION,
-		...SHADOWS.map( ( shadow ) => ( {
+		...getShadows().map( ( shadow ) => ( {
 			key:   shadow.value,
 			name:  shadow.label,
 			value: shadow.value

@@ -7,12 +7,23 @@
  */
 
 // Internal dependencies.
-import { updateClass } from '../../common/utils-classname';
+import { updateClass }            from '../../common/utils-classname';
 import { SHADOWS, SHADOW_PREFIX } from "./constants";
 
 // WordPress dependencies.
-import { __ }    from '@wordpress/i18n';
-import TokenList from '@wordpress/token-list';
+import TokenList        from '@wordpress/token-list';
+import { applyFilters } from '@wordpress/hooks';
+import { __ }           from '@wordpress/i18n';
+
+/**
+ * @description Wraps the shadows in a filter hook and returns them.
+ *
+ * @returns {array}
+ */
+export const getShadows = () => applyFilters(
+	'x3p0.ideas.blockEdit.textShadows',
+	SHADOWS
+);
 
 /**
  * @description Gets a text shadow value if it is included in a class.
@@ -23,7 +34,7 @@ import TokenList from '@wordpress/token-list';
 export const getShadowFromClassName = ( className ) => {
 	const list = new TokenList( className );
 
-	const shadow = SHADOWS.find( ( option ) =>
+	const shadow = getShadows().find( ( option ) =>
 		list.contains( SHADOW_PREFIX + option.value )
 	);
 

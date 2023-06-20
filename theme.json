@@ -590,7 +590,7 @@
 					"name": "Tertiary (Geometric Humanist)"
 				},
 				{
-					"fontFamily": "ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace",
+					"fontFamily": "ui-monospace, 'Fira Code', 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace",
 					"slug": "mono",
 					"name": "Monospace"
 				},

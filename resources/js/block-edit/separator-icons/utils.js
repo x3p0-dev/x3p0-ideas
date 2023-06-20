@@ -7,11 +7,11 @@
  */
 
 // Internal dependencies.
-import { updateClass } from '../../common/utils-classname';
+import { updateClass }         from '../../common/utils-classname';
 import { ICONS, STYLE_PREFIX } from './constants';
 
 // WordPress dependencies.
-import TokenList from '@wordpress/token-list';
+import TokenList        from '@wordpress/token-list';
 import { applyFilters } from '@wordpress/hooks';
 
 /**
@@ -19,7 +19,10 @@ import { applyFilters } from '@wordpress/hooks';
  *
  * @returns {array}
  */
-export const getIcons = () => applyFilters( 'x3p0SeparatorIcons', ICONS );
+export const getIcons = () => applyFilters(
+	'x3p0.ideas.blockEdit.separatorIcons',
+	ICONS
+);
 
 /**
  * @description Gets an icon slug/value if it is included in a class.

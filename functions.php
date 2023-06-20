@@ -1,7 +1,7 @@
 <?php
 /**
- * Theme functions file, which is auto-loaded by WordPress. Use this file to
- * load additional PHP files and bootstrap the theme.
+ * Theme functions file, which is auto-loaded by WordPress. This file is used to
+ * load any other necessary PHP files and bootstrap the theme.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023, Justin Tadlock
