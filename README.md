@@ -1,4 +1,4 @@
-![Screenshot of the theme that needs better alt text](public/media/ideas-experiments-things.webp)
+![Text: Ideas, Experiments, and Things](public/media/ideas-experiments-things.jpg)
 
 # Ideas, Experiments, and Things
 
