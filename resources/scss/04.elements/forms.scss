@@ -1,0 +1,42 @@
+////
+/// Forms.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+// Adds form element styles, which aren't yet supported in `theme.json`.
+input,
+select,
+textarea,
+:where( .wp-block-search__button-inside .wp-block-search__inside-wrapper ),
+.wp-block-search__input,
+.wp-block-post-comments-form :is( input:not( .wp-element-button ), textarea ) {
+	padding: var( --wp--preset--spacing--minus-3 ) var( --wp--preset--spacing--minus-1 );
+	font-family: inherit;
+	font-size: inherit;
+	font-style: normal;
+	font-weight: 400;
+	line-height: inherit;
+	color: var( --color-emphasis, var( --wp--custom--elements--form-input--color, inherit ) );
+	background: var( --color-subtle, var( --wp--custom--elements--form-input--background, transparent ) );
+	border: var( --wp--custom--elements--form-input--border-width, 1px )
+		var( --wp--custom--elements--form-input--border-width, solid )
+		var( --color-muted, var( --wp--custom--elements--form-input--border-color, none ) );
+}
+
+::placeholder {
+	color: inherit;
+	opacity: 0.5;
+}
+
+:where( .wp-block-search__button-inside .wp-block-search__inside-wrapper ) {
+	padding: var( --wp--preset--spacing--minus-3 );
+}
+
+input[type="checkbox"],
+input[type="radio"],
+.wp-block-search__button-inside .wp-block-search__input {
+	padding: 0;
+	border: none;
+}

@@ -77,9 +77,9 @@ export default ( { attributes: { className }, setAttributes } ) => {
 			<MenuItem
 				key={ index }
 				role="menuitemradio"
+				className="x3p0-color-var-picker__button"
 				isSelected={ currentVariation === value }
 				isPressed={ currentVariation === value }
-				className={ `x3p0-color-variations-button-${ variation }` }
 				onClick={ () => setAttributes( {
 					className: updateVariationClass(
 						className,
@@ -90,13 +90,13 @@ export default ( { attributes: { className }, setAttributes } ) => {
 			>
 				<HStack>
 					<ZStack
-						key={ `x3p0-color-indicators-${ index }` }
+						key={ `x3p0-color-var-indicator-${ index }` }
 						offset={ -8 }
 						isLayered={ false }
 					>
 						{ colorIndicators }
 					</ZStack>
-					<FlexItem key={ `x3p0-color-name-${ index }` }>
+					<FlexItem key={ `x3p0-color-var-name-${ index }` }>
 						{ VARIATIONS[ variation ] }
 					</FlexItem>
 				</HStack>
@@ -104,19 +104,27 @@ export default ( { attributes: { className }, setAttributes } ) => {
 		);
 	};
 
-	// Create array of variation controls.
-	const variationControls = Object.keys( VARIATIONS ).map(
-		( variation, index ) =>
-		variationMenuItem( variation, `primary-${ index }` )
+	// Color variations menu group.
+	const variationPicker =  (
+		<MenuGroup
+			className="x3p0-color-var-picker"
+			label={ __( 'Select a color variation', 'x3p0-ideas' ) }
+		>
+			{ Object.keys( VARIATIONS ).map(
+				( variation, index ) =>
+				variationMenuItem( variation, `primary-${ index }` )
+			) }
+		</MenuGroup>
 	);
 
 	return (
 		<Dropdown
-			className="x3p0-color-variations-dropdown"
-			contentClassName="x3p0-color-variations-dropdown-content"
+			className="x3p0-color-var-dropdown"
+			contentClassName="x3p0-color-var-popover"
 			popoverProps={ { placement: 'bottom-start' } }
 			renderToggle={ ( { isOpen, onToggle } ) => (
 				<ToolbarButton
+					className="x3p0-color-var-dropdown__button"
 					icon={ icon }
 					label={ __( 'Color Variation', 'x3p0-ideas' ) }
 					onClick={ onToggle }
@@ -124,14 +132,7 @@ export default ( { attributes: { className }, setAttributes } ) => {
 					isPressed={ !! currentVariation }
 				/>
 			) }
-			renderContent={ () => (
-				<MenuGroup
-					className="x3p0-color-variations-menu-group"
-					label={ __( 'Select a color variation', 'x3p0-ideas' ) }
-				>
-					{ variationControls }
-				</MenuGroup>
-			) }
+			renderContent={ () => variationPicker }
 		/>
 	);
 };

@@ -48,22 +48,28 @@ li::marker {
 	color: inherit;
 }
 
+// -----------------------------------------------------------------------------
+// List markers.
+// -----------------------------------------------------------------------------
 
-// -----------------------------------------------------------------------------
-// Block markers.
-// -----------------------------------------------------------------------------
+:where( ul, ol )[class*=has-marker-] {
+	list-style: var( --list-type, revert );
+}
 
 // Marker styles.
-:where( ul, ol ).has-marker-disc {    list-style-type: disc;    }
-:where( ul, ol ).has-marker-circle {  list-style-type: circle;  }
-:where( ul, ol ).has-marker-square {  list-style-type: square;  }
-:where( ul, ol ).has-marker-decimal { list-style-type: decimal; }
 :where( ul, ol ).has-marker-arrow li::marker { content: "\2192\20"; }
 :where( ul, ol ).has-marker-dash li::marker { content: "\2013\20"; }
 
-:where( ul, ol ).has-marker-decimal-leading-zero {
-	list-style-type: decimal-leading-zero;
-}
+.has-marker-disc   { --list-type: disc;    }
+.has-marker-circle { --list-type: circle;  }
+.has-marker-square { --list-type: square;  }
+
+.has-marker-decimal      { --list-type: decimal; }
+.has-marker-leading-zero { --list-type: decimal-leading-zero; }
+.has-marker-lower-alpha  { --list-type: lower-alpha; }
+.has-marker-upper-alpha  { --list-type: upper-alpha; }
+.has-marker-lower-roman  { --list-type: lower-roman; }
+.has-marker-upper-roman  { --list-type: upper-roman; }
 
 :where( :where( ul, ol )[class*=has-marker-] :where( ul, ol ) ) {
 	list-style-type: inherit;

@@ -1,0 +1,99 @@
+////
+/// Inline elements.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+
+a:where( :not( :focus ) ),
+input:focus,
+textarea:focus,
+.wp-element-button {
+	transition: all 0.5s ease-in-out;
+}
+
+a,
+.wp-element-button {
+	text-underline-offset: 0.078125em !important;
+	text-decoration-thickness: min( 0.078125em, 3px ) !important;
+}
+
+abbr[title] {
+	cursor: help;
+	text-decoration: underline dotted currentColor;
+	text-underline-offset: 0.078125em !important;
+	text-decoration-thickness: min( 0.078125em, 3px ) !important;
+}
+
+:where( :not( pre ) > code ) {
+	padding: 0.125em 0.25em;
+	font-family: var( --wp--preset--font-family--mono );
+	font-size: clamp( var( --wp--preset--font-size--sm ), 0.875em, 0.875em );
+	font-weight: 600;
+	color: var( --wp--preset--color--neutral-emphasis, inherit );
+	background: var( --wp--preset--color--neutral-base, inherit );
+}
+
+kbd {
+	padding: 0.125em 0.25em;
+	font-family: var( --wp--preset--font-family--mono );
+	font-size: clamp( var( --wp--preset--font-size--sm ), 0.875em, 0.875em );
+	color: var( --wp--preset--color--contrast );
+	border: 1px solid var( --wp--preset--color--neutral-muted );
+	border-radius: 0.25rem;
+}
+
+ins {
+	padding: 0.125em 0;
+	color: var( --wp--preset--color--positive-contrast );
+	background: var( --wp--preset--color--positive-base );
+	border-bottom: 1px solid var( --wp--preset--color--positive-contrast );
+	text-decoration: none;
+}
+
+mark {
+	padding: 0.125em 0;
+}
+
+// Style <mark> elements but avoid WP's "highlight" rich text element.
+mark:where( :not( .has-inline-color ):not( [style] ) ) {
+	color: var( --wp--preset--color--neutral-emphasis, inherit );
+	background: var( --wp--preset--color--neutral-subtle, inherit );
+}
+
+:where( h1, h2, h3, h4, h5 h6 ) > mark {
+	line-height: 1.625em;
+	padding: 0;
+}
+
+del,
+s {
+	color: var( --wp--preset--color--negative-muted );
+	text-decoration-color: var( --wp--preset--color--negative-contrast );
+	text-decoration-thickness: 2px;
+}
+
+sup,
+sub {
+	font-size: 0.8125em;
+}
+
+p {
+	box-sizing: border-box;
+}
+
+audio,
+video {
+	display: block;
+}
+
+// Prefix `cite` elements (WP doesn't support element CSS in `theme.json`).
+cite::before {
+	content: "\2013\000A0";
+}
+
+// Center captions (WP doesn't support text-align in `theme.json`).
+.wp-element-caption {
+	text-align: center;
+}

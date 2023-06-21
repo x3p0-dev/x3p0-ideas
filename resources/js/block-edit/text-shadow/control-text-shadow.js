@@ -54,7 +54,7 @@ export default ( { attributes: { className }, setAttributes } ) => {
 	];
 
 	return  (
-		<div className="x3p0-text-shadow-control">
+		<div className="x3p0-text-shadow">
 			<CustomSelectControl
 				label={ __( 'Text Shadow', 'x3p0-ideas' ) }
 				options={ options }

@@ -1,19 +1,17 @@
 ////
 /// Separator block CSS.
 ///
-/// @author    Justin Tadlock <justintadlock@gmail.com>
-/// @copyright 2023 Justin Tadlock
-/// @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
-/// @link      https://github.com/x3p0-dev/x3p0-ideas
+/// Note that we're specifically targeting `<hr>` so that custom styles the
+/// specificity battle in the editor. ⚔️
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
 // -----------------------------------------------------------------------------
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-// Note that we're specifically targeting `<hr>` so that custom styles the
-// specificity battle in the editor. ⚔️
-//
 // Most of these need their background reset because WP sets both the `core`
 // and `background` values for the block's color. All we need is the color,
 // which WP automatically applies to the border via `currentColor`.
@@ -43,7 +41,7 @@ hr.wp-block-separator.is-style-hand-drawn {
 	border-width: var( --wp--preset--spacing--minus-2 ) 0 0;
 	border-radius: 255px 15px 0 0/15px 4px 0 0 !important;
 
-	// Don't kill the background for the icon style.
+	// Don't kill the background when the block also has an icon style.
 	&:where( :not( [class*=has-icon] ) ) {
 		background: none !important;
 	}
@@ -53,6 +51,8 @@ hr.wp-block-separator.is-style-hand-drawn {
 // Icon styles.
 // -----------------------------------------------------------------------------
 
+// Creates an icon style separator. This is coupled with a custom control in
+// the editor UI for picking an icon and adding a `has-icon-{icon}` class.
 hr.wp-block-separator[class*=has-icon] {
 	display: flex;
 	justify-content: center;
@@ -69,10 +69,31 @@ hr.wp-block-separator[class*=has-icon] {
 	background-position: 0% 50% !important;
 	background-size: 100% 2px !important;
 
-	// Don't use `!important` for the background image, which allows
-	// background gradients to work.
+	// Don't use `!important` for the background image, which allows user-
+	// selected background gradients to work.
 	background-image: linear-gradient( 90deg, currentColor, currentColor );
 
+	&::before {
+		content: var( --hr-icon, "\2766" ); // floral heart default.
+		padding: 0 0.5em;
+		font-size: var( --wp--preset--font-size--xl );
+		line-height: 1;
+		background-color: var( --color-base, var( --wp--preset--color--base ) );
+	}
+
+	// If parent has background color, inherit. This is important because
+	// the icon uses the "base" background as a default to hide (or cut out)
+	// the parent `<hr>` background gradient. Note that this doesn't work
+	// with the Cover block, which uses a `<span>` element that is positioned
+	// as an overlay (not a true background). The only fix for this is to
+	// wrap the Separator in a Group block and add a background color to it.
+	:where( .has-background[class*=-background-color] ) &,
+	:where( .has-background[class*=-background-color] ) &::before {
+		background-color: inherit !important;
+	}
+
+	// Integrates the icon style with known block styles. Some of these are
+	// not going to be perfect since their designs can clash.
 	&.is-style-wide {
 		background-size: 100% var( --wp--preset--spacing--minus-2 ) !important;
 	}
@@ -96,15 +117,6 @@ hr.wp-block-separator[class*=has-icon] {
 		background-position-y: top !important;
 		background-size: 100% 6px !important;
 	}
-
-	&::before {
-		font-variant-emoji: emoji;
-		content: var( --hr-icon, "\2766" ); // floral heart default.
-		padding: 0 0.5em;
-		font-size: var( --wp--preset--font-size--xl );
-		line-height: 1;
-		background-color: var( --color-base, var( --wp--preset--color--base ) );
-	}
 }
 
 .has-icon-❦ { --hr-icon: "❦"; } // floral heart
@@ -118,9 +130,9 @@ hr.wp-block-separator[class*=has-icon] {
 .has-icon-🪷 { --hr-icon: "🪷"; }
 .has-icon-🫠 { --hr-icon: "🫠"; }
 .has-icon-🎸 { --hr-icon: "🎸"; }
-.has-icon-✏️  { --hr-icon: "✏️"; }
+.has-icon-✏️ { --hr-icon: "✏️"; }
 .has-icon-🚀 { --hr-icon: "🚀"; }
-.has-icon-☘️  { --hr-icon: "☘️"; }
+.has-icon-☘️ { --hr-icon: "☘️"; }
 .has-icon-⭐ { --hr-icon: "⭐"; }
 .has-icon-🌻 { --hr-icon: "🌻"; }
 .has-icon-⛱️ { --hr-icon: "⛱️"; }

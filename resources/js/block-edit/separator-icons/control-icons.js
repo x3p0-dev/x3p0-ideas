@@ -53,12 +53,12 @@ export default ( { attributes: { className }, setAttributes } ) => {
 			: icon?.gradient
 	} );
 
-	// Builds a menu item for a icon.
+	// Builds a menu item for an icon.
 	const iconButton = ( icon, index ) => (
 		<Button
 			key={ index }
 			isPressed={ currentIcon === icon.value }
-			className="x3p0-separator-icons-control__button"
+			className="x3p0-sep-icons-picker__button"
 			onClick={ () => onIconButtonClick( icon ) }
 		>
 			{ icon.label ?? icon.value }
@@ -67,12 +67,15 @@ export default ( { attributes: { className }, setAttributes } ) => {
 
 	// Builds an icon picker in a 6-column grid.
 	const iconPicker = (
-		<BaseControl label={ __( 'Icons', 'x3p0-ideas' ) }>
-			<div className="x3p0-separator-icons-control__description">
+		<BaseControl
+			className="x3p0-sep-icons-picker"
+			label={ __( 'Icons', 'x3p0-ideas' ) }
+		>
+			<div className="x3p0-sep-icons-picker__description">
 				{ __( 'Pick an icon to super-charge your separator. Need more icons?', 'x3p0-ideas' ) + ' ' }
 				<a href="#" target="_blank">{ __( 'Learn how to add your own →', 'x3p0-ideas' ) }</a>
 			</div>
-			<Grid columns="6">
+			<Grid className="x3p0-sep-icons-picker__grid" columns="6">
 				{ icons.map( ( icon, index ) =>
 					iconButton( icon, index )
 				) }
@@ -83,15 +86,15 @@ export default ( { attributes: { className }, setAttributes } ) => {
 	// Returns the dropdown menu item.
 	return (
 		<Dropdown
-			className="x3p0-separator-icons-control"
-			contentClassName="x3p0-separator-icons-control__popover"
+			className="x3p0-sep-icons-dropdown"
+			contentClassName="x3p0-sep-icons-popover"
 			popoverProps={ {
 				headerTitle: __( 'Separator Icons', 'x3p0-ideas' ),
 				variant: 'toolbar'
 			} }
-			paddingSize="large"
 			renderToggle={ ( { isOpen, onToggle } ) => (
 				<ToolbarButton
+					className="x3p0-sep-icons-dropdown__button"
 					icon={ starFilled }
 					label={ __( 'Separator Icon', 'x3p0-ideas' ) }
 					onClick={ onToggle }

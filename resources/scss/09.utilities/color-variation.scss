@@ -1,3 +1,9 @@
+////
+/// Color variation utility classes.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
 
 // Must overwrite global padding in the editor, so keep the `.has-global-padding`
 // version of this.
@@ -79,4 +85,33 @@
 		background: var( --color-contrast );
 		border-color: var( --color-contrast );
 	}
+}
+
+
+.has-color-var-neutral {
+	color: var( --wp--preset--color--neutral-contrast );
+	background: var( --wp--preset--color--neutral-base );
+	border: 1px solid var( --wp--preset--color--neutral-subtle );
+
+	:where( :not( pre ) > code ) {
+		background: var( --wp--preset--color--neutral-subtle );
+	}
+}
+
+
+[class*=has-color-var-] .has-color-var-neutral {
+	--color-base: var( --wp--preset--color--neutral-base );
+	--color-subtle: var( --wp--preset--color--neutral-subtle );
+	--color-muted: var( --wp--preset--color--neutral-muted );
+	--color-contrast: var( --wp--preset--color--neutral-contrast );
+	--color-emphasis: var( --wp--preset--color--neutral-emphasis );
+}
+
+
+.has-color-var-primary {
+	--color-base: var( --wp--preset--color--primary-base );
+	--color-subtle: var( --wp--preset--color--primary-subtle );
+	--color-muted: var( --wp--preset--color--primary-muted );
+	--color-contrast: var( --wp--preset--color--primary-contrast );
+	--color-emphasis: var( --wp--preset--color--primary-emphasis );
 }

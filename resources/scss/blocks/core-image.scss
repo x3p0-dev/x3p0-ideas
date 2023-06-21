@@ -157,3 +157,8 @@
 .wp-block-image[class*=is-style-tape].block-editor-block-list__block:focus img {
 	outline: 2px solid var(--wp-admin-theme-color, transparent );
 }
+
+.wp-block-image[class*=is-style-polaroid] .components-resizable-box__handle,
+.wp-block-image[class*=is-style-scotch-tape] .components-resizable-box__handle {
+	display: none;
+}

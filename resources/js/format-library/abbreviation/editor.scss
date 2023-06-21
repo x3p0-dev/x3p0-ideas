@@ -1,0 +1,12 @@
+////
+/// Editor stylesheet for the abbreviation format.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+.x3p0-format-abbr-popover .components-popover__content {
+	padding: $grid-unit-20;
+	width: auto;
+	max-width: 360px;
+}

@@ -1,0 +1,18 @@
+////
+/// Editor stylesheet for the color variation component.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+.x3p0-color-var-picker__button {
+
+	&:not( :first-child ) {
+		margin-top: $grid-unit-10;
+	}
+
+	.components-menu-item__item {
+		padding-right: 0 !important;
+		min-width: 208px;
+	}
+}

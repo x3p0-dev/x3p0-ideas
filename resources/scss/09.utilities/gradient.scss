@@ -1,10 +1,9 @@
-
-.has-text-shadow-none { text-shadow: none; }
-.has-text-shadow-sm   { text-shadow: var( --wp--custom--text-shadow--sm, none ); }
-.has-text-shadow-md   { text-shadow: var( --wp--custom--text-shadow--md, none ); }
-.has-text-shadow-lg   { text-shadow: var( --wp--custom--text-shadow--lg, none ); }
-
-
+////
+/// Gradient utility classes.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
 
 [class*=gradient-] img {
 	padding: clamp( 0.5rem, -0.33333333333333326rem + 2.083333333333333cqi, 1rem );
@@ -54,9 +53,4 @@ $gradients:
 	.gradient-#{ $gradient } {
 		--gradient: var( --wp--preset--gradient--#{ $gradient } );
 	}
-}
-
-.wp-block-image[class*=is-style-polaroid] .components-resizable-box__handle,
-.wp-block-image[class*=is-style-scotch-tape] .components-resizable-box__handle {
-	display: none;
 }

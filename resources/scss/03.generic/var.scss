@@ -1,0 +1,35 @@
+////
+/// CSS custom properties (variables).
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+// Sets up theme spacing properties that are mapped to spacing presets in the
+// `theme.json`. At first glance, it might seem silly to do this (it probably
+// is, depending on your perspective). But this essentially "shields" the values
+// from WordPress.
+//
+// At least, as of WordPress 6.3, the editor hardcodes the value instead of the
+// custom property (spacing preset) as an inline style on the block wrapper.
+// This means that it is impossible to ever update a spacing size that's been in
+// use, at least from the theme's end (well, nothing is impossible, but let's
+// not dive into all the complexities of updating old instances).
+//
+// To cut this long diatribe short, by using custom properties within custom
+// properties, WordPress ends up correctly using the custom property generated
+// by the theme's spacing preset. So, let's just call this "future proofing" in
+// the hopes that this is handled better down the line.
+body {
+	--theme-spacing--minus-3: clamp( 0.31rem,  0.11cqi +  0.28rem, 0.35rem );
+	--theme-spacing--minus-2: clamp( 0.47rem,  0.16cqi +  0.42rem, 0.53rem );
+	--theme-spacing--minus-1: clamp( 0.71rem,  0.25cqi +  0.63rem, 0.79rem );
+	--theme-spacing--base:    clamp( 1.06rem,  0.37cqi +  0.95rem, 1.19rem );
+	--theme-spacing--plus-1:  clamp( 1.20rem,  0.85cqi +  0.94rem, 1.48rem );
+	--theme-spacing--plus-2:  clamp( 1.34rem,   1.5cqi +  0.89rem, 1.86rem );
+	--theme-spacing--plus-3:  clamp( 1.86rem,   3.7cqi + -0.05rem, 2.32rem );
+	--theme-spacing--plus-4:  clamp( 1.86rem,  7.53cqi +  -1.2rem, 3.62rem );
+	--theme-spacing--plus-5:  clamp( 1.86rem,  10.2cqi +    -2rem, 4.53rem );
+	--theme-spacing--plus-6:  clamp( 1.86rem, 13.53cqi +    -3rem, 5.66rem );
+	--theme-spacing--plus-7:  clamp( 1.86rem, 17.69cqi + -4.25rem, 7.08rem );
+}

@@ -26,9 +26,6 @@ export const BLOCK_STYLES = {
 		'polygon-slant-up-md':   __( 'Slant Up: Medium',   'x3p0-ideas' ),
 		'stretch':               __( 'Stretch',            'x3p0-ideas' )
 	},
-	'core/details': {
-		'spoiler': __( 'Spoiler', 'x3p0-ideas' )
-	},
 	'core/gallery': {
 		'classic': __( 'Classic', 'x3p0-ideas' )
 	},
@@ -79,7 +76,8 @@ export const BLOCK_STYLES = {
 	},
 	'core/table-of-contents': {
 		'chapters':          __( 'Chapters', 'x3p0-ideas' ),
-		'chapters-and-subs': __( 'Chapters with Sub-headings', 'x3p0-ideas' ),
-		'marker-unordered':  __( 'Unordered', 'x3p0-ideas' )
+		'chapters-and-subs': __( 'Chapters With Sub-headings', 'x3p0-ideas' ),
+		'marker-unordered':  __( 'Unordered', 'x3p0-ideas' ),
+		'pull':              __( 'Pull',      'x3p0-ideas' )
 	}
 };

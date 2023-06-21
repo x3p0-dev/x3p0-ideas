@@ -103,7 +103,7 @@ function AbbrTitlePopover( { value, contentRef, onChange, onClose } )
 
 	const popoverForm = (
 		<form
-			className="x3p0-rich-text-format-abbr__popover-form"
+			className="x3p0-format-abbr-popover__form"
 			onSubmit={ ( event ) => {
 				event.preventDefault();
 				onChange( applyFormat( value, {
@@ -119,7 +119,7 @@ function AbbrTitlePopover( { value, contentRef, onChange, onClose } )
 
 	return (
 		<Popover
-			className="x3p0-rich-text-format-abbr__popover"
+			className="x3p0-format-abbr-popover"
 			anchor={ popoverAnchor }
 			placement="top"
 			onClose={ onClose }

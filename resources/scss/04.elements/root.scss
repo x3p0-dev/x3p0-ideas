@@ -1,0 +1,13 @@
+////
+/// Root-level CSS.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+// Defaults.
+* {
+	// Enables features from the registered fonts.
+	font-feature-settings: "tnum", "ss01" 1;
+	font-variant-numeric: slashed-zero;
+}

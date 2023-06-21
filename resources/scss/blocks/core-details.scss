@@ -8,45 +8,45 @@
 ////
 
 // -----------------------------------------------------------------------------
-// Block style variations.
+// Block customizations.
 // -----------------------------------------------------------------------------
 
-// Spoiler style.
-.wp-block-details.is-style-spoiler {
+.wp-block-details {
+	transition: all 0.5s ease-in-out;
 	padding: 0 var( --wp--preset--spacing--plus-3 );
-	color: var( --wp--preset--color--neutral-contrast );
-	background: var( --wp--preset--color--neutral-base );
 }
 
-.wp-block-details.is-style-spoiler[open] {
+.wp-block-details[open] {
 	padding-bottom: var( --wp--preset--spacing--plus-3 );
 }
 
-.wp-block-details.is-style-spoiler summary {
+.wp-block-details summary {
+	transition: all 0.5s ease-in-out;
 	box-sizing: border-box;
-	display: flex;
-	align-items: baseline;
-	gap: 1rem;
-	justify-content: space-between;
 	width: calc( 100% + var( --wp--preset--spacing--plus-3 ) * 2 );
 	margin: 0 calc( -1 * var( --wp--preset--spacing--plus-3 ) );
 	padding: var( --wp--preset--spacing--base ) var( --wp--preset--spacing--plus-3 );
 	font-weight: 600;
 }
 
-.wp-block-details.is-style-spoiler[open] summary,
-.wp-block-details.is-style-spoiler summary:hover,
-.wp-block-details.is-style-spoiler summary:focus {
-	background: var( --wp--preset--color--neutral-subtle );
+.wp-block-details[open] summary,
+.wp-block-details summary:hover,
+.wp-block-details summary:focus {
+	background: var(
+		--wp--custom--blocks--details--summary-hover,
+		var( --wp--preset--color--neutral-subtle )
+	);
 }
 
-.wp-block-details.is-style-spoiler summary::marker {
+.wp-block-details summary::marker {
 	content: none;
 }
 
-.wp-block-details.is-style-spoiler summary::after {
+.wp-block-details summary::after {
 	content: " +";
+	float: right;
+	text-align: right;
 }
-.wp-block-details.is-style-spoiler[open] summary::after {
+.wp-block-details[open] summary::after {
 	content: " -"
 }

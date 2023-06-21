@@ -30,6 +30,10 @@
 // Block style variations.
 // -----------------------------------------------------------------------------
 
+.wp-block-table-of-contents.is-style-pull > ol {
+	padding-left: 1em;
+}
+
 .wp-block-table-of-contents.is-style-marker-unordered ol {
 	list-style: disc;
 
@@ -92,5 +96,5 @@
 }
 
 .wp-block-table-of-contents.is-style-chapters-and-subs li + li {
-	margin-top: var( --wp--preset--spacing--40 );
+	margin-top: var( --wp--preset--spacing--base );
 }

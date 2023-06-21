@@ -1,0 +1,23 @@
+////
+/// Editor stylesheet for the text separator icons component.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+// In the future, we can switch to using `<DropdownContentWrapper>` if we want,
+// but it is currently experimental.
+// @link https://github.com/WordPress/gutenberg/blob/trunk/packages/components/src/dropdown/dropdown-content-wrapper.tsx
+.x3p0-sep-icons-popover .components-popover__content {
+	padding: $grid-unit-20;
+}
+
+.x3p0-sep-icons-picker {
+	&__description {
+		margin: 0 0 $grid-unit-20;
+	}
+
+	&__button {
+		font-size: 20px;
+	}
+}

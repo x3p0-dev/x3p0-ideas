@@ -5,221 +5,27 @@
 /// easy way to differentiate it from `print.scss`, which I'll totally add one
 /// day. I promise.
 ///
-/// @author    Justin Tadlock <justintadlock@gmail.com>
-/// @copyright 2023 Justin Tadlock
-/// @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
-/// @link      https://github.com/x3p0-dev/x3p0-ideas
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
-// Sets up theme spacing properties that are mapped to spacing presets in the
-// `theme.json`. At first glance, it might seem silly to do this (it probably
-// is, depending on your perspective). But this essentially "shields" the values
-// from WordPress.
-//
-// At least, as of WordPress 6.3, the editor hardcodes the value instead of the
-// custom property (spacing preset) as an inline style on the block wrapper.
-// This means that it is impossible to ever update a spacing size that's been in
-// use, at least from the theme's end (well, nothing is impossible, but let's
-// not dive into all the complexities of updating old instances).
-//
-// To cut this long diatribe short, by using custom properties within custom
-// properties, WordPress ends up correctly using the custom property generated
-// by the theme's spacing preset. So, let's just call this "future proofing" in
-// the hopes that this is handled better down the line.
-body {
-	--theme-spacing--minus-3: clamp( 0.31rem,  0.11cqi +  0.28rem, 0.35rem );
-	--theme-spacing--minus-2: clamp( 0.47rem,  0.16cqi +  0.42rem, 0.53rem );
-	--theme-spacing--minus-1: clamp( 0.71rem,  0.25cqi +  0.63rem, 0.79rem );
-	--theme-spacing--base:    clamp( 1.06rem,  0.37cqi +  0.95rem, 1.19rem );
-	--theme-spacing--plus-1:  clamp( 1.20rem,  0.85cqi +  0.94rem, 1.48rem );
-	--theme-spacing--plus-2:  clamp( 1.34rem,   1.5cqi +  0.89rem, 1.86rem );
-	--theme-spacing--plus-3:  clamp( 1.86rem,   3.7cqi + -0.05rem, 2.32rem );
-	--theme-spacing--plus-4:  clamp( 1.86rem,  7.53cqi +  -1.2rem, 3.62rem );
-	--theme-spacing--plus-5:  clamp( 1.86rem,  10.2cqi +    -2rem, 4.53rem );
-	--theme-spacing--plus-6:  clamp( 1.86rem, 13.53cqi +    -3rem, 5.66rem );
-	--theme-spacing--plus-7:  clamp( 1.86rem, 17.69cqi + -4.25rem, 7.08rem );
-}
+// Settings.
+// @import '01.settings/';
 
-// Move to an editor-only file.
-.edit-post-visual-editor__post-title-wrapper,
-.is-root-container.wp-block-post-content {
-	margin-top: var( --wp--style--block-gap ) !important;
-}
+// Tools.
+// @import '02.settings/';
 
-// Defaults.
-* {
-	// Enables features from the registered fonts.
-	font-feature-settings: "tnum", "ss01" 1;
-	font-variant-numeric: slashed-zero;
-}
+// Generic.
+@import '03.generic/var.scss';
 
-a:where( :not( :focus ) ),
-input:focus,
-textarea:focus,
-.wp-element-button {
-	transition: all 0.5s ease-in-out;
-}
+// Elements.
+@import '04.elements/root.scss';
+@import '04.elements/inline.scss';
+@import '04.elements/forms.scss';
 
-a,
-.wp-element-button {
-	text-underline-offset: 0.078125em !important;
-	text-decoration-thickness: min( 0.078125em, 3px ) !important;
-}
-
-abbr[title] {
-	cursor: help;
-	text-decoration: underline dotted currentColor;
-	text-underline-offset: 0.078125em !important;
-	text-decoration-thickness: min( 0.078125em, 3px ) !important;
-}
-
-:where( :not( pre ) > code ) {
-	padding: 0.125em 0.25em;
-	font-family: var( --wp--preset--font-family--mono );
-	font-size: clamp( var( --wp--preset--font-size--sm ), 0.875em, 0.875em );
-	font-weight: 600;
-	color: var( --wp--preset--color--neutral-emphasis, inherit );
-	background: var( --wp--preset--color--neutral-base, inherit );
-}
-
-kbd {
-	padding: 0.125em 0.25em;
-	font-family: var( --wp--preset--font-family--mono );
-	font-size: clamp( var( --wp--preset--font-size--sm ), 0.875em, 0.875em );
-	color: var( --wp--preset--color--contrast );
-	border: 1px solid var( --wp--preset--color--neutral-muted );
-	border-radius: 0.25rem;
-}
-
-ins {
-	padding: 0.125em 0;
-	color: var( --wp--preset--color--positive-contrast );
-	background: var( --wp--preset--color--positive-base );
-	border-bottom: 1px solid var( --wp--preset--color--positive-contrast );
-	text-decoration: none;
-}
-
-mark {
-	padding: 0.125em 0;
-}
-
-// Style <mark> elements but avoid WP's "highlight" rich text element.
-mark:where( :not( .has-inline-color ):not( [style] ) ) {
-	color: var( --wp--preset--color--neutral-emphasis, inherit );
-	background: var( --wp--preset--color--neutral-subtle, inherit );
-}
-
-:where( h1, h2, h3, h4, h5 h6 ) > mark {
-	line-height: 1.625em;
-	padding: 0;
-}
-
-del,
-s {
-	color: var( --wp--preset--color--negative-muted );
-	text-decoration-color: var( --wp--preset--color--negative-contrast );
-	text-decoration-thickness: 2px;
-}
-
-sup,
-sub {
-	font-size: 0.8125em;
-}
-
-p {
-	box-sizing: border-box;
-}
-
-audio,
-video {
-	display: block;
-}
-
-.has-overline {
-	text-decoration: overline;
-}
-
-// Combine each line-height set via `settings.custom.lineHeight` in `theme.json`
-// with the corresponding font-size set via `setting.typography.fontSizes`.
-.has-7-xl-font-size { line-height: var( --wp--custom--line-height--7-xl ); }
-.has-6-xl-font-size { line-height: var( --wp--custom--line-height--6-xl ); }
-.has-5-xl-font-size { line-height: var( --wp--custom--line-height--5-xl ); }
-.has-4-xl-font-size { line-height: var( --wp--custom--line-height--4-xl ); }
-.has-3-xl-font-size { line-height: var( --wp--custom--line-height--3-xl ); }
-.has-2-xl-font-size { line-height: var( --wp--custom--line-height--2-xl ); }
-.has-xl-font-size   { line-height: var( --wp--custom--line-height--xl ); }
-.has-lg-font-size   { line-height: var( --wp--custom--line-height--lg ); }
-.has-md-font-size   { line-height: var( --wp--custom--line-height--md ); }
-.has-sm-font-size   { line-height: var( --wp--custom--line-height--sm ); }
-.has-xs-font-size   { line-height: var( --wp--custom--line-height--xs ); }
-
-// Loosens the spacing above headings tightens the spacing below.
-.wp-block-post-content > :is( h1, h2, h3, h4, h5, h6 ) {
-	margin-block-end: 0.5em;
-}
-
-.wp-block-post-content > * + :is( h1, h2, h3, h4, h5, h6 )  {
-	margin-block-start: max( 1.5em, 3rem );
-}
-
-.wp-block-post-content > :is( h1, h2, h3, h4, h5, h6 ) + * {
-	margin-block-start: 0;
-}
-
-.wp-block-post-content > :where( hr, .wp-block-spacer ) + :is( h1, h2, h3, h4, h5, h6 ),
-.wp-block-post-content > :is( h1, h2, h3, h4, h5, h6 ) + :where( hr, .wp-block-spacer ) {
-	margin-block-start: var( --wp--style--block-gap );
-}
-
-// Center captions (WP doesn't support text-align in `theme.json`).
-.wp-element-caption {
-	text-align: center;
-}
-
-// Prefix `cite` elements (WP doesn't support element CSS in `theme.json`).
-cite::before {
-	content: "\2013\000A0";
-}
-
-// Adds form element styles, which aren't yet supported in `theme.json`.
-input,
-select,
-textarea,
-:where( .wp-block-search__button-inside .wp-block-search__inside-wrapper ),
-.wp-block-search__input,
-.wp-block-post-comments-form :is( input:not( .wp-element-button ), textarea ) {
-	padding: var( --wp--preset--spacing--minus-3 ) var( --wp--preset--spacing--minus-1 );
-	font-family: inherit;
-	font-size: inherit;
-	font-style: normal;
-	font-weight: 400;
-	line-height: inherit;
-	color: var( --color-emphasis, var( --wp--custom--elements--form-input--color, inherit ) );
-	background: var( --color-subtle, var( --wp--custom--elements--form-input--background, transparent ) );
-	border: var( --wp--custom--elements--form-input--border-width, 1px )
-		var( --wp--custom--elements--form-input--border-width, solid )
-		var( --color-muted, var( --wp--custom--elements--form-input--border-color, none ) );
-}
-
-::placeholder {
-	color: inherit;
-	opacity: 0.5;
-}
-
-:where( .wp-block-search__button-inside .wp-block-search__inside-wrapper ) {
-	padding: var( --wp--preset--spacing--minus-3 );
-}
-
-input[type="checkbox"],
-input[type="radio"],
-.wp-block-search__button-inside .wp-block-search__input {
-	padding: 0;
-	border: none;
-}
-
-
-// import extra
-@import 'color-variations/primary.scss';
-@import 'color-variations/neutral.scss';
-@import 'color-variations/variation.scss';
-@import 'shared/style-variations.scss';
+// Utilities.
+@import '09.utilities/color-variation.scss';
+@import '09.utilities/gradient.scss';
+@import '09.utilities/rich-text.scss';
+@import '09.utilities/text-shadow.scss';
+@import '09.utilities/typography.scss';

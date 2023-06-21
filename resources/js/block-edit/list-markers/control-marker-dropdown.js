@@ -71,49 +71,60 @@ export default ( { attributes: { className, ordered }, setAttributes } ) => {
 		}
 	}, [ ordered ] );
 
-	const markerControls = options.map( ( option, index ) => {
-		const value = option.value ?? 'default';
-
-		const item = (
-			<FlexItem
-				key={ `x3p0-marker-name-${ index }` }
-				className="x3p0-marker-name"
-			>
-				<ul className='x3p0-list-marker-list'>
-					<li className={ `x3p0-marker-${ value }` }>
-						{ option.label }
-					</li>
-				</ul>
-			</FlexItem>
-		);
+	const markerButtonContent = ( option, index ) => {
+		const slug = option.value ? option.value : 'default';
 
 		return (
-			<MenuItem
-				key={ index }
-				role="menuitemradio"
-				isSelected={ marker === value }
-				isPressed={ marker === value }
-				className={ `x3p0-color-markers-button-${ value }` }
-				onClick={ () => setAttributes( {
-					className: updateMarkerClass(
-						className,
-						option.value,
-						marker
-					)
-				} ) }
+			<FlexItem
+				key={ `x3p0-marker-name-${ index }` }
+				className="x3p0-list-marker-selector__content"
 			>
-				{ item }
-			</MenuItem>
-		)
-	} );
+				<ul className={
+					`x3p0-list-marker-selector__list has-marker-${ slug }`
+				}>
+					<li>{ option.label }</li>
+				</ul>
+			</FlexItem>
+	) };
+
+	const markerButton = ( option, index ) => (
+		<MenuItem
+			key={ index }
+			role="menuitemradio"
+			className="x3p0-list-marker-selector__button"
+			isSelected={ marker === option.value }
+			isPressed={ marker === option.value }
+			onClick={ () => setAttributes( {
+				className: updateMarkerClass(
+					className,
+					option.value,
+					marker
+				)
+			} ) }
+		>
+			{ markerButtonContent( option, index ) }
+		</MenuItem>
+	);
+
+	const markerControls = (
+		<MenuGroup
+			className="x3p0-list-marker-selector"
+			label={ __( 'Select a list marker', 'x3p0-ideas' ) }
+		>
+			{ options.map(
+				( option, index ) => markerButton( option, index )
+			) }
+		</MenuGroup>
+	);
 
 	return (
 		<Dropdown
-			className="x3p0-list-markers-dropdown"
-			contentClassName="x3p0-list-markers-dropdown-content"
+			className="x3p0-list-marker-dropdown"
+			contentClassName="x3p0-list-marker-popover"
 			popoverProps={ { placement: 'bottom-start' } }
 			renderToggle={ ( { isOpen, onToggle } ) => (
 				<ToolbarButton
+					className="x3p0-list-marker__button"
 					icon={ markerIcon }
 					label={ __( 'List Marker', 'x3p0-ideas' ) }
 					onClick={ onToggle }
@@ -121,14 +132,7 @@ export default ( { attributes: { className, ordered }, setAttributes } ) => {
 					isPressed={ !! marker }
 				/>
 			) }
-			renderContent={ () => (
-				<MenuGroup
-					className="x3p0-list-markers-menu-group"
-					label={ __( 'Select a list marker', 'x3p0-ideas' ) }
-				>
-					{ markerControls }
-				</MenuGroup>
-			) }
+			renderContent={ () => markerControls }
 		/>
 	);
 };
