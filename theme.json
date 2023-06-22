@@ -571,7 +571,7 @@
 				{
 					"fontFamily": "'Roboto Flex', ui-sans-serif, sans-serif",
 					"slug": "secondary",
-					"name": "Secondary (Cabin)",
+					"name": "Secondary (Roboto Flex)",
 					"fontFace": [
 						{
 							"fontFamily": "Roboto Flex",
@@ -579,7 +579,7 @@
 							"fontStyle": "normal",
 							"fontStretch": "25% 151%",
 							"src": [
-								"file:./public/fonts/roboto-flex/roboto-flex.woff2"
+								"file:./public/fonts/roboto/roboto-flex.woff2"
 							]
 						}
 					]
