@@ -6,12 +6,12 @@
  * @license   GPL-2.0-or-later
  */
 
-// Internal dependencies.
-import { SUPPORTED_GRADIENTS } from './constants';
-
 // WordPress dependencies.
-import { useMemo }    from '@wordpress/element';
-import { useSetting } from '@wordpress/block-editor';
+import { useMemo } from '@wordpress/element';
+
+import {
+	__experimentalUseMultipleOriginColorsAndGradients as useMultipleOriginColorsAndGradients
+} from '@wordpress/block-editor';
 
 /**
  * @description React hook that returns an object containing separated arrays
@@ -19,38 +19,18 @@ import { useSetting } from '@wordpress/block-editor';
  * @returns {object}
  */
 export const useGradients = () => {
-	// Get gradient presets.
-	let themeGradients   = useSetting( 'color.gradients.theme'   );
-	let defaultGradients = useSetting( 'color.gradients.default' );
 
-	// Flattened array with all gradient palettes.
-	const gradients = useMemo( () => {
+	const colorGradientSettings = useMultipleOriginColorsAndGradients();
 
-		if ( themeGradients ) {
-			themeGradients.forEach( ( gradient, index ) => {
-				if ( ! SUPPORTED_GRADIENTS.includes( gradient.slug ) ) {
-					themeGradients.splice( index, 1 );
-				}
-			} );
-		}
-
-		if ( defaultGradients ) {
-			defaultGradients.forEach( ( gradient, index ) => {
-				if ( ! SUPPORTED_GRADIENTS.includes( gradient.slug ) ) {
-					defaultGradients.splice( index, 1 );
-				}
-			} );
-		}
-
-		return [
-			...( defaultGradients || [] ),
-			...( themeGradients   || [] )
-		];
-	} );
+	const gradients = useMemo( () =>
+		colorGradientSettings.gradients.map(
+			( palette ) =>
+			[ ...( palette.gradients || [] ) ]
+		).flat()
+	);
 
 	return {
-		gradients: gradients,
-		theme:     themeGradients,
-		default:   defaultGradients
+		gradientOptions: colorGradientSettings.gradients,
+		gradients:       gradients
 	};
 };

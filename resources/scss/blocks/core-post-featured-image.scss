@@ -30,9 +30,15 @@
 }
 
 // -----------------------------------------------------------------------------
-// Block style variations.
+// Gradient background.
 // -----------------------------------------------------------------------------
 
-.wp-block-post-featured-image[class*=gradient-] img {
-	background: var( --gradient, transparent );
+figure.wp-block-post-featured-image[class*=-gradient-background] {
+	background-size: 0 0 !important;
+
+	img {
+		background-color: inherit;
+		background-image: inherit;
+		padding: clamp( 0.5rem, -0.33333333333333326rem + 2.083333333333333cqi, 1rem );
+	}
 }

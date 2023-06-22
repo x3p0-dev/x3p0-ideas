@@ -8,6 +8,33 @@
 ////
 
 // -----------------------------------------------------------------------------
+// Gradient background.
+// -----------------------------------------------------------------------------
+
+figure.wp-block-image[class*=-gradient-background] {
+	// Setting the size to zero because, in most cases, we're inheriting the
+	// background gradient on the image and hiding this. In cases where we
+	// want to use the gradient on the wrapping `<figure>` tag, just reset
+	// this to `auto`.
+	background-size: 0 0 !important;
+
+	// Note that the editor has an extra wrapper `<div>` around the image,
+	// so we must inherit here so that we can inherit on the `<img>` tag.
+	> div {
+		background: inherit;
+	}
+
+	// Inherits the background image from the parent `<figure>` tag and
+	// applies it to the image itself. This allows the `<figcaption>` to sit
+	// outside of the "frame" for most block styles.
+	img {
+		background-color: inherit;
+		background-image: inherit;
+		padding: clamp( 0.5rem, -0.33333333333333326rem + 2.083333333333333cqi, 1rem );
+	}
+}
+
+// -----------------------------------------------------------------------------
 // Block style variations.
 // -----------------------------------------------------------------------------
 
@@ -17,10 +44,6 @@
 	border: none !important;
 	box-shadow: none !important;
 	outline: none !important;
-}
-
-[class*=gradient-] img {
-	background: var( --gradient, transparent );
 }
 
 .wp-block-image[class*=is-style-hand-drawn] img {
@@ -55,11 +78,13 @@
 	padding-top: 0.5rem;
 }
 
-.wp-block-image[class*=is-style-polaroid] {
-	padding:          var( --wp--preset--spacing--40 );
+figure.wp-block-image[class*=is-style-polaroid] {
+	padding:          var( --wp--preset--spacing--base );
 	background-color: var( --color-contrast, var( --wp--preset--color--base ) );
 	transition: all 0.5s ease-in-out;
 	overflow: visible;
+
+	background-size: auto !important;
 }
 
 .wp-block-image.is-style-polaroid:where( :not( [class*=gradient-] ) ) {
@@ -76,15 +101,15 @@
 	margin-top: var( --wp--preset--spacing--40 );
 	color: var( --color-base, var( --wp--preset--color--contrast ) );
 	font-family: var( --wp--preset--font-family--handwriting );
-	font-size: var( --wp--preset--font-size--md );
-	line-height: var( --wp--custom--line-height--md );
+	//font-size: var( --wp--preset--font-size--md );
+	//line-height: var( --wp--custom--line-height--md );
 }
 
-.wp-block-image[class*=is-style-polaroid][class*=gradient-] {
-	background: var( --gradient );
+.wp-block-image[class*=is-style-polaroid][class*=-gradient-background] {
+	//background: var( --gradient );
 	img {
 		padding: 0;
-		background: transparent;
+	//	background: transparent;
 	}
 	.wp-element-caption {
 		color: var( --wp--preset--color--white );
@@ -101,8 +126,8 @@
 
 	.wp-element-caption {
 		font-family: var( --wp--preset--font-family--handwriting );
-		font-size: var( --wp--preset--font-size--md );
-		line-height: var( --wp--custom--line-height--md );
+	//	font-size: var( --wp--preset--font-size--md );
+	//	line-height: var( --wp--custom--line-height--md );
 	}
 }
 

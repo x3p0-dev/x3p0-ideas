@@ -53,23 +53,16 @@ export default ( { attributes: { className }, setAttributes } ) => {
 
 	// Filter out shades that are not set for the variation. Then, map the
 	// resulting array of colors to the color indicator components.
-	const variationColorIndicators = ( variation ) => {
-		return COLOR_SHADES.filter( ( shade ) =>
-			variationColors[ variation ][ shade ]
-			? true
-			: false
-		).map( ( shade, index ) => (
-			<Flex key={ index }>
-				<ColorIndicator colorValue={
-					variationColors[ variation ][ shade ]
-				}/>
-			</Flex>
-		) );
-	};
+	const indicators = ( variation ) => Object.values( variationColors[ variation ] ).map(
+		( shade, index ) =>
+		( <Flex key={ index }>
+			<ColorIndicator colorValue={ shade }/>
+		</Flex> )
+	);
 
 	// Builds a menu item for a variation.
 	const variationMenuItem = ( variation, index ) => {
-		const colorIndicators = variationColorIndicators( variation );
+		const colorIndicators = indicators( variation );
 
 		const value = 'default' === variation ? '' : variation;
 
@@ -110,7 +103,7 @@ export default ( { attributes: { className }, setAttributes } ) => {
 			className="x3p0-color-var-picker"
 			label={ __( 'Select a color variation', 'x3p0-ideas' ) }
 		>
-			{ Object.keys( VARIATIONS ).map(
+			{ Object.keys( variationColors ).map(
 				( variation, index ) =>
 				variationMenuItem( variation, `primary-${ index }` )
 			) }

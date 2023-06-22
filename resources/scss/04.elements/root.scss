@@ -11,3 +11,8 @@
 	font-feature-settings: "tnum", "ss01" 1;
 	font-variant-numeric: slashed-zero;
 }
+
+::selection {
+	color: var( --color-base, var( --wp--preset--color--primary-base ) );
+	background: var( --color-contrast, var( --wp--preset--color--primary-contrast ) );
+}

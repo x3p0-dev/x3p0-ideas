@@ -115,3 +115,27 @@
 	--color-contrast: var( --wp--preset--color--primary-contrast );
 	--color-emphasis: var( --wp--preset--color--primary-emphasis );
 }
+
+.has-color-var-secondary {
+	--color-base: var( --wp--preset--color--secondary-base );
+	--color-subtle: var( --wp--preset--color--secondary-subtle );
+	--color-muted: var( --wp--preset--color--secondary-muted );
+	--color-contrast: var( --wp--preset--color--secondary-contrast );
+	--color-emphasis: var( --wp--preset--color--secondary-emphasis );
+}
+
+.has-color-var-positive {
+	--color-base: var( --wp--preset--color--positive-base );
+	--color-subtle: var( --wp--preset--color--positive-subtle );
+	--color-muted: var( --wp--preset--color--positive-muted );
+	--color-contrast: var( --wp--preset--color--positive-contrast );
+	--color-emphasis: var( --wp--preset--color--positive-emphasis );
+}
+
+.has-color-var-negative {
+	--color-base: var( --wp--preset--color--negative-base );
+	--color-subtle: var( --wp--preset--color--negative-subtle );
+	--color-muted: var( --wp--preset--color--negative-muted );
+	--color-contrast: var( --wp--preset--color--negative-contrast );
+	--color-emphasis: var( --wp--preset--color--negative-emphasis );
+}

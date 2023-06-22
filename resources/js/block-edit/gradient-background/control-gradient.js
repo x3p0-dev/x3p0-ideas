@@ -33,18 +33,12 @@ import {
  * />
  */
 export default ( { attributes: { className }, setAttributes, clientId } ) => {
-	// We're only getting theme and core gradients until it's possible to
-	// inline CSS in the editor. Otherwise, there's no way to dynamically
-	// add the CSS rules needed for unknowns.
-	// @see https://github.com/WordPress/gutenberg/issues/18571
-	const {
-		gradients,
-		theme: themeGradients,
-		default: defaultGradients
-	} = useGradients();
+
+	// Get flattened gradients array and gradient options.
+	const { gradients, gradientOptions } = useGradients();
 
 	// Get the current gradient.
-	const currentGradient = getGradientFromClassName( className );
+	const currentGradient = getGradientFromClassName( className, gradients );
 
 	// Returns the current gradient value by slug or null.
 	const getGradientValue = () =>
@@ -72,16 +66,7 @@ export default ( { attributes: { className }, setAttributes, clientId } ) => {
 		disableCustomColors: true,
 		disableCustomGradients: true,
 		hasColorsOrGradients: false,
-		gradients: [
-			{
-				name: __( 'Theme', 'x3p0-ideas' ),
-				gradients: themeGradients || []
-			},
-			{
-				name: __( 'Default', 'x3p0-ideas' ),
-				gradients: defaultGradients || []
-			}
-		]
+		gradients: gradientOptions
 	};
 
 	return (

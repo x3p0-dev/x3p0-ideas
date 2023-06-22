@@ -23,7 +23,7 @@ export const useVariationColors = () => {
 	let colors = {};
 
 	Object.keys( VARIATIONS ).forEach( ( type ) => {
-		colors[ type ] = {};
+		let shades = {};
 
 		COLOR_SHADES.forEach( ( shade ) => {
 			const name = 'default' === type
@@ -35,9 +35,13 @@ export const useVariationColors = () => {
 			);
 
 			if ( result ) {
-				colors[ type ][ shade ] = result.color;
+				shades[ shade ] = result.color;
 			}
 		} );
+
+		if ( 0 < Object.keys( shades ).length ) {
+			colors[ type ] = shades;
+		}
 	} );
 
 	return colors;

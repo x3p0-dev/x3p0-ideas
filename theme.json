@@ -185,6 +185,11 @@
 					"slug": "fabled-sunset"
 				},
 				{
+					"gradient": "linear-gradient(-60deg,#ff5858,#f09819)",
+					"name": "Happy Memories",
+					"slug": "happy-memories"
+				},
+				{
 					"gradient": "linear-gradient(0deg,#d5dee7 0,#ffafbd 0,#c9ffbf)",
 					"name": "Magic Lake",
 					"slug": "magic-lake"
@@ -208,11 +213,6 @@
 					"gradient": "linear-gradient(to right, rgb(56, 189, 248), rgb(251, 113, 133), rgb(163, 230, 53))",
 					"name": "Powerpuff",
 					"slug": "powerpuff"
-				},
-				{
-					"gradient": "radial-gradient(at center top, rgb(180, 83, 9), rgb(253, 186, 116), rgb(159, 18, 57))",
-					"name": "Rocket Power",
-					"slug": "rocket-power"
 				},
 				{
 					"gradient": "linear-gradient(0deg,#209cff 0,#68e0cf)",
@@ -327,19 +327,9 @@
 					"name": "Neutral: Emphasis"
 				},
 				{
-					"slug": "positive-base",
-					"color": "#ecfdf8",
-					"name": "Positive: Base"
-				},
-				{
-					"slug": "positive-subtle",
-					"color": "#d1faee",
-					"name": "Positive: Subtle"
-				},
-				{
-					"slug": "positive-muted",
-					"color": "#10b989",
-					"name": "Positive: Muted"
+					"slug": "positive-emphasis",
+					"color": "#064e3a",
+					"name": "Positive: Emphasis"
 				},
 				{
 					"slug": "positive-contrast",
@@ -347,24 +337,24 @@
 					"name": "Positive: Contrast"
 				},
 				{
-					"slug": "positive-emphasis",
-					"color": "#064e3a",
-					"name": "Positive: Emphasis"
+					"slug": "positive-muted",
+					"color": "#10b989",
+					"name": "Positive: Muted"
 				},
 				{
-					"slug": "negative-base",
-					"color": "#fef2f2",
-					"name": "Negative: Base"
+					"slug": "positive-subtle",
+					"color": "#d1faee",
+					"name": "Positive: Subtle"
 				},
 				{
-					"slug": "negative-subtle",
-					"color": "#fee2e2",
-					"name": "Negative: Subtle"
+					"slug": "positive-base",
+					"color": "#ecfdf8",
+					"name": "Positive: Base"
 				},
 				{
-					"slug": "negative-muted",
-					"color": "#dc2626",
-					"name": "Negative: Muted"
+					"slug": "negative-emphasis",
+					"color": "#991b1b",
+					"name": "Negative: Emphasis"
 				},
 				{
 					"slug": "negative-contrast",
@@ -372,9 +362,19 @@
 					"name": "Negative: Contrast"
 				},
 				{
-					"slug": "negative-emphasis",
-					"color": "#991b1b",
-					"name": "Negative: Emphasis"
+					"slug": "negative-muted",
+					"color": "#dc2626",
+					"name": "Negative: Muted"
+				},
+				{
+					"slug": "negative-subtle",
+					"color": "#fee2e2",
+					"name": "Negative: Subtle"
+				},
+				{
+					"slug": "negative-base",
+					"color": "#fef2f2",
+					"name": "Negative: Base"
 				}
 			]
 		},
@@ -585,9 +585,9 @@
 					]
 				},
 				{
-					"fontFamily": "Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif",
+					"fontFamily": "inherit",
 					"slug": "tertiary",
-					"name": "Tertiary (Geometric Humanist)"
+					"name": "Tertiary (Inherited)"
 				},
 				{
 					"fontFamily": "ui-monospace, 'Fira Code', 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace",
@@ -750,8 +750,8 @@
 				},
 				"typography": {
 					"fontFamily": "var:preset|font-family|tertiary",
-					"fontSize": "var:preset|font-size|md",
-					"lineHeight": "var:custom|line-height|md"
+					"fontSize": "var:preset|font-size|sm",
+					"lineHeight": "var:custom|line-height|sm"
 				}
 			},
 			"cite": {
@@ -884,8 +884,8 @@
 				},
 				"typography": {
 					"fontFamily": "var:preset|font-family|mono",
-					"fontSize": "var:preset|font-size|sm",
-					"lineHeight": "2"
+					"fontSize": "16px",
+					"lineHeight": "1.75"
 				}
 			},
 			"core/comments": {

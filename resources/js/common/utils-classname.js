@@ -16,22 +16,23 @@ import TokenList from '@wordpress/token-list';
  * @param {string} newClass
  * @param {string} oldClass
  * @param {string} prefix
+ * @param {string} suffix
  * @returns string
  *
  * @example
- * const className = 'has-style-bar';
- * const newClass = updateClass( className, 'foo', 'bar', 'has-style-' );
- * // returns: 'has-style-foo'
+ * const className = 'prefix-bar-suffix';
+ * const newClass = updateClass( className, 'foo', 'bar', 'prefix-', '-suffix' );
+ * // returns: 'prefix-foo-suffix
  */
-export const updateClass = ( className, newClass = '', oldClass = '', prefix = '' ) => {
+export const updateClass = ( className, newClass = '', oldClass = '', prefix = '', suffix = '' ) => {
 	const list = new TokenList( className );
 
 	if ( oldClass ) {
-		list.remove( prefix ? prefix + oldClass : oldClass );
+		list.remove( prefix + oldClass + suffix );
 	}
 
 	if ( newClass ) {
-		list.add( prefix ? prefix + newClass : newClass );
+		list.add( prefix + newClass + suffix );
 	}
 
 	return list.value;

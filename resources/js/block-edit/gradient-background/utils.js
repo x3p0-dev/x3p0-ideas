@@ -8,7 +8,7 @@
 
 // Internal dependencies.
 import { updateClass } from '../../common/utils-classname';
-import { SUPPORTED_GRADIENTS, GRADIENT_PREFIX } from './constants';
+import { GRADIENT_PREFIX, GRADIENT_SUFFIX } from './constants';
 
 // WordPress dependencies.
 import TokenList from '@wordpress/token-list';
@@ -19,14 +19,14 @@ import TokenList from '@wordpress/token-list';
  * @param {string} className
  * @returns {string}
  */
-export const getGradientFromClassName = ( className ) => {
+export const getGradientFromClassName = ( className, gradients ) => {
 	const list = new TokenList( className );
 
-	const gradient = SUPPORTED_GRADIENTS.find( ( option ) =>
-		list.contains( GRADIENT_PREFIX + option )
+	const gradient = gradients.find( ( option ) =>
+		list.contains( GRADIENT_PREFIX + option.slug + GRADIENT_SUFFIX )
 	);
 
-	return undefined !== gradient ? gradient : '';
+	return undefined !== gradient ? gradient.slug : '';
 };
 
 /**
@@ -39,7 +39,8 @@ export const getGradientFromClassName = ( className ) => {
  */
 export const updateGradientClass = ( className, newGradient, oldGradient ) => updateClass(
 	className,
-	SUPPORTED_GRADIENTS.includes( newGradient ) ? newGradient : '',
+	newGradient,
 	oldGradient,
-	GRADIENT_PREFIX
+	GRADIENT_PREFIX,
+	GRADIENT_SUFFIX
 );

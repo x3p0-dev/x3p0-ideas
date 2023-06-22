@@ -22,3 +22,23 @@
 .wp-block-avatar__link {
 	border-radius: inherit;
 }
+
+// -----------------------------------------------------------------------------
+// Gradient background.
+// -----------------------------------------------------------------------------
+
+.wp-block-avatar[class*=-gradient-background],
+.editor-styles-wrapper .wp-block-avatar[class*=-gradient-background] {
+	background-size: 0 0 !important;
+
+	// Note that the editor has an extra wrapper `<div>` around the image.
+	> div {
+		background: inherit;
+	}
+
+	img {
+		background-color: inherit;
+		background-image: inherit;
+		padding: min( 6px, 8.33% );
+	}
+}

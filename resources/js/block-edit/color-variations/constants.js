@@ -29,9 +29,13 @@ export const VARIATION_PREFIX = 'has-color-var-';
  * @type {object}
  */
 export const VARIATIONS = {
-	'default': __( 'Default', 'x3p0-ideas' ),
-	'neutral': __( 'Neutral', 'x3p0-ideas' ),
-	'primary': __( 'Primary', 'x3p0-ideas' ),
+	'default':   __( 'Default',  'x3p0-ideas'  ),
+	'neutral':   __( 'Neutral',  'x3p0-ideas'  ),
+	'primary':   __( 'Primary',  'x3p0-ideas'  ),
+	'secondary': __( 'Secondary', 'x3p0-ideas' ),
+	'tertiary':  __( 'Tertiary',  'x3p0-ideas' ),
+	'positive':  __( 'Positive', 'x3p0-ideas'  ),
+	'negative':  __( 'Negative', 'x3p0-ideas'  )
 };
 
 /**
