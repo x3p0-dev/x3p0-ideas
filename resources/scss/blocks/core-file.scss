@@ -1,10 +1,8 @@
 ////
 /// File block CSS.
 ///
-/// @author    Justin Tadlock <justintadlock@gmail.com>
-/// @copyright 2023 Justin Tadlock
-/// @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
-/// @link      https://github.com/x3p0-dev/x3p0-ideas
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
 // -----------------------------------------------------------------------------
@@ -30,7 +28,8 @@
 	margin-bottom: 0;
 }
 
-// Overwrite WP's hard-coded font-size so that it inherits from its parent.
+// Overwrite WP's hard-coded font-size so that it inherits from its parent. Note:
+// it's impossible to set this via `theme.json`.
 .wp-block-file:not( .wp-element-button ) {
 	font-size: inherit;
 }

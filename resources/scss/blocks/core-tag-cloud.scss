@@ -1,0 +1,54 @@
+////
+/// Tag Cloud block CSS.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+// -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+.wp-block-tag-cloud {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: var( --wp--preset--spacing--minus-2 ) var( --wp--preset--spacing--base );
+
+	// Keep: Use this to trickle down to block styles when needed.
+	font-size: inherit;
+
+	.tag-link-count {
+		color: var( --color-muted, var( --wp--preset--color--neutral-muted ) );
+		font-weight: 400;
+	}
+}
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+// Inherit so that developers/users can customize.
+.wp-block-tag-cloud.is-style-flat a {
+	font-size: inherit !important;
+}
+
+// This is a core block style.
+.wp-block-tag-cloud.is-style-outline a {
+	color: currentColor;
+	border: 2px solid currentColor;
+	border-radius: var( --wp--custom--defaults--border-radius );
+	padding: var( --wp--preset--spacing--minus-2 ) var( --wp--preset--spacing--plus-1 );
+	font-size: var( --wp--preset--font-size--sm ) !important;
+	font-weight: 500;
+	line-height: var( --wp--custom--line-height--sm );
+
+	&:hover {
+		text-decoration: underline !important;
+	}
+}
+
+[class*=-font-size] .wp-block-tag-cloud.is-style-outline a {
+	font-size: inherit !important;
+	line-height: inherit;
+}

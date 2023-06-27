@@ -1,10 +1,8 @@
 ////
 /// Post Terms block CSS.
 ///
-/// @author    Justin Tadlock <justintadlock@gmail.com>
-/// @copyright 2023 Justin Tadlock
-/// @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
-/// @link      https://github.com/x3p0-dev/x3p0-ideas
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
 // -----------------------------------------------------------------------------
@@ -19,10 +17,40 @@
 // This addresses that by making the block a flex layout and adding a gap. This
 // works regardless of whether the space was added or not.
 .wp-block-post-terms {
+	--wp--custom--block-gap--post-terms: var( --wp--preset--spacing--minus-3 );
 	display: flex;
 	align-items: baseline;
-	gap: var(
-		--wp--custom--block-gap--post-terms,
-		var( --wp--preset--spacing--minus-3 )
-	);
+	flex-wrap: wrap;
+	gap: var( --wp--custom--block-gap--post-terms );
+
+	&__separator {
+		margin-left: calc( -1 * var( --wp--custom--block-gap--post-terms ) );
+	}
+}
+
+// -----------------------------------------------------------------------------
+// Block styles.
+// -----------------------------------------------------------------------------
+
+.wp-block-post-terms.is-style-button {
+	--wp--custom--block-gap--post-terms: var( --wp--preset--spacing--minus-2 );
+
+	font-size: var( --wp--preset--font-size--xs );
+	line-height: var( --wp--custom--line-height--xs );
+
+	.wp-block-post-terms__separator { display: none; }
+
+	a {
+		display: inline-block;
+		text-decoration: none;
+		padding: 0.125rem 0.25rem;
+		color: var( --wp--preset--color--primary-base );
+		background-color: var( --wp--preset--color--primary-contrast );
+		border-radius: var( --wp--custom--defaults--border-radius );
+
+		&:hover,
+		&:focus {
+			background-color: var( --wp--preset--color--primary-emphasis );
+		}
+	}
 }

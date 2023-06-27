@@ -37,7 +37,8 @@ function theme( string $component = '' )
 			'blocks'         => new Blocks(),
 			'patterns'       => new Patterns(),
 			'template-parts' => new TemplateParts(),
-			'image-sizes'    => new ImageSizes()
+			'image-sizes'    => new ImageSizes(),
+			'theme-config'   => new ThemeConfig()
 		] );
 
 		// Boot each of the components.

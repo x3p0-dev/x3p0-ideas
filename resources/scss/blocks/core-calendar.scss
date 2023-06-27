@@ -1,10 +1,8 @@
 ////
 /// Calendar block CSS.
 ///
-/// @author    Justin Tadlock <justintadlock@gmail.com>
-/// @copyright 2023 Justin Tadlock
-/// @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
-/// @link      https://github.com/x3p0-dev/x3p0-ideas
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
 // -----------------------------------------------------------------------------
@@ -46,7 +44,7 @@
 
 .wp-block-calendar {
 	padding: 0 var( --wp--preset--spacing--plus-3 ) var( --wp--preset--spacing--base );
-	border: 1px solid var( --wp--preset--color--neutral-subtle );
+//	border: 1px solid var( --wp--preset--color--neutral-subtle );
 	border-top: 4px solid var( --color--contrast, var( --wp--preset--color--primary-contrast ) );
 	box-sizing: border-box;
 	background: var( --wp--preset--color--neutral-base );

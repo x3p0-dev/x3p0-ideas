@@ -3,7 +3,7 @@
  * Title: Post List: Picturesque
  * Slug: x3p0-ideas/post-list-picturesque
  * Description: Displays the queried posts in a list with the title, date, and excerpt.
- * Categories: query
+ * Categories: posts
  * Keywords: query, posts
  * Block Types: core/query
  */

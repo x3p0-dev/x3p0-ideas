@@ -23,6 +23,13 @@ textarea,
 	border: var( --wp--custom--elements--form-input--border-width, 1px )
 		var( --wp--custom--elements--form-input--border-width, solid )
 		var( --color-muted, var( --wp--custom--elements--form-input--border-color, none ) );
+	border-radius: var( --wp--custom--defaults--border-radius );
+	box-shadow: var( --wp--custom--defaults--shadow );
+
+	&:focus {
+		outline: 2px solid var( --wp--preset--color--primary-contrast );
+	//	outline-offset: 2px;
+	}
 }
 
 ::placeholder {
@@ -32,6 +39,11 @@ textarea,
 
 :where( .wp-block-search__button-inside .wp-block-search__inside-wrapper ) {
 	padding: var( --wp--preset--spacing--minus-3 );
+	padding-left: var( --wp--preset--spacing--minus-1 );
+
+	&:has( .wp-block-search__input:focus ) {
+		outline: 2px solid var( --wp--preset--color--primary-contrast );
+	}
 }
 
 input[type="checkbox"],
@@ -39,4 +51,9 @@ input[type="radio"],
 .wp-block-search__button-inside .wp-block-search__input {
 	padding: 0;
 	border: none;
+	box-shadow: none;
+
+	&:focus {
+		outline: none;
+	}
 }

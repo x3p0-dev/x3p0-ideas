@@ -16,8 +16,17 @@ import { __ } from '@wordpress/i18n';
  * @type {object}
  */
 export const BLOCK_STYLES = {
+	'core/archives': {
+		'horizontal': __( 'Horizontal', 'x3p0-ideas' )
+	},
 	'core/button': {
 		'hand-drawn': __( 'Hand Drawn', 'x3p0-ideas' )
+	},
+	'core/categories': {
+		'horizontal': __( 'Horizontal', 'x3p0-ideas' )
+	},
+	'core/columns': {
+		'reverse-stack': __( 'Reverse Mobile Stack', 'x3p0-ideas' )
 	},
 	'core/cover': {
 		'polygon-slant-down-sm': __( 'Slant Down: Small',  'x3p0-ideas' ),
@@ -25,6 +34,9 @@ export const BLOCK_STYLES = {
 		'polygon-slant-up-sm':   __( 'Slant Up: Small',    'x3p0-ideas' ),
 		'polygon-slant-up-md':   __( 'Slant Up: Medium',   'x3p0-ideas' ),
 		'stretch':               __( 'Stretch',            'x3p0-ideas' )
+	},
+	'core/footnotes': {
+		'pull': __( 'Pull', 'x3p0-ideas' )
 	},
 	'core/gallery': {
 		'classic': __( 'Classic', 'x3p0-ideas' )
@@ -55,11 +67,13 @@ export const BLOCK_STYLES = {
 	'core/post-template': {
 		'flex': __( 'Flexible', 'x3p0-ideas' )
 	},
+	'core/post-terms': {
+		'button': __( 'Button', 'x3p0-ideas' )
+	},
 	'core/pullquote': {
-		'brackets':    __( 'Brackets',  'x3p0-ideas' ),
-		'clip-text':   __( 'Clip Text', 'x3p0-ideas' ),
+		'brackets':    __( 'Brackets',   'x3p0-ideas' ),
 		'hand-drawn':  __( 'Hand Drawn', 'x3p0-ideas' ),
-		'mark-top':    __( 'Mark: Top', 'x3p0-ideas' )
+		'mark-top':    __( 'Mark: Top',  'x3p0-ideas' )
 	},
 	'core/search': {
 		'sm': __( 'Small', 'x3p0-ideas' )
@@ -79,5 +93,8 @@ export const BLOCK_STYLES = {
 		'chapters-and-subs': __( 'Chapters With Sub-headings', 'x3p0-ideas' ),
 		'marker-unordered':  __( 'Unordered', 'x3p0-ideas' ),
 		'pull':              __( 'Pull',      'x3p0-ideas' )
+	},
+	'core/tag-cloud': {
+		'flat': __( 'Flat', 'x3p0-ideas' )
 	}
 };

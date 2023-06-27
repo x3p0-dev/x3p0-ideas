@@ -1,10 +1,8 @@
 ////
 /// Button block CSS.
 ///
-/// @author    Justin Tadlock <justintadlock@gmail.com>
-/// @copyright 2023 Justin Tadlock
-/// @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
-/// @link      https://github.com/x3p0-dev/x3p0-ideas
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
 // -----------------------------------------------------------------------------
@@ -13,7 +11,7 @@
 
 .wp-block-button.is-style-hand-drawn > .wp-block-button__link.wp-element-button {
 	border: 2px solid currentColor;
-	box-shadow: var( --wp--preset--shadow--sm );
+	box-shadow: var( --wp--custom--defaults--shadow );
 	color: inherit;
 	background-color: transparent;
 	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;

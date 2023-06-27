@@ -1,0 +1,30 @@
+////
+/// Footnotes block CSS.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+// -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+// Matches the footnote link to the `<sup>` element.
+.fn {
+	font-size: 0.8125em;
+}
+
+// Do not remove quotes around `#` mark, which will break in the Sass processor.
+.wp-block-footnotes a[href^="#"] {
+	text-decoration: none;
+}
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+// Note that we are currently targeting the `<ol>` in case this block is updated
+// to later have a wrapper `<div>` like similar blocks before WP 6.3.
+ol.wp-block-footnotes.is-style-pull {
+	padding-left: 1em;
+}

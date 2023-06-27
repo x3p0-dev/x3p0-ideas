@@ -1,10 +1,8 @@
 ////
 /// Details block CSS.
 ///
-/// @author    Justin Tadlock <justintadlock@gmail.com>
-/// @copyright 2023 Justin Tadlock
-/// @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
-/// @link      https://github.com/x3p0-dev/x3p0-ideas
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
 // -----------------------------------------------------------------------------
@@ -13,20 +11,25 @@
 
 .wp-block-details {
 	transition: all 0.5s ease-in-out;
-	padding: 0 var( --wp--preset--spacing--plus-3 );
+	//padding: 0 var( --wp--preset--spacing--plus-3 );
+
+	> :not( summary ) {
+		margin-left: var( --wp--style--block-gap );
+		margin-right: var( --wp--style--block-gap );
+	}
 }
 
 .wp-block-details[open] {
-	padding-bottom: var( --wp--preset--spacing--plus-3 );
+	padding-bottom: var( --wp--style--block-gap );
 }
 
 .wp-block-details summary {
 	transition: all 0.5s ease-in-out;
 	box-sizing: border-box;
-	width: calc( 100% + var( --wp--preset--spacing--plus-3 ) * 2 );
-	margin: 0 calc( -1 * var( --wp--preset--spacing--plus-3 ) );
-	padding: var( --wp--preset--spacing--base ) var( --wp--preset--spacing--plus-3 );
-	font-weight: 600;
+	//width: calc( 100% + var( --wp--preset--spacing--plus-3 ) * 2 );
+	//margin: 0 calc( -1 * var( --wp--preset--spacing--plus-3 ) );
+	padding: var( --wp--preset--spacing--base ) var( --wp--style--block-gap );
+	font-weight: 500;
 }
 
 .wp-block-details[open] summary,

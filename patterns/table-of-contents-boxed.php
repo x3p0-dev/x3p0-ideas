@@ -3,7 +3,7 @@
  * Title: Table of Contents: Boxed
  * Slug: x3p0-ideas/table-of-contents-boxed
  * Description: Displays a post's table of contents within a Group block with a Heading.
- * Categories: theme
+ * Categories: text
  * Keywords: table, contents, list
  * Block Types: core/table-of-contents
  * Viewport Width: 640

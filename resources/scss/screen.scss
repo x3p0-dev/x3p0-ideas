@@ -10,21 +10,25 @@
 ////
 
 // Settings.
-// @import '01.settings/';
+// @use '01.settings/';
 
 // Tools.
-// @import '02.settings/';
+// @use '02.settings/';
 
 // Generic.
-@import '03.generic/var.scss';
+@use '03.generic/var.scss';
 
 // Elements.
-@import '04.elements/root.scss';
-@import '04.elements/inline.scss';
-@import '04.elements/forms.scss';
+@use '04.elements/root.scss';
+@use '04.elements/inline.scss';
+@use '04.elements/forms.scss';
+
+// Components.
+@use '05.components/element-button.scss';
 
 // Utilities.
-@import '09.utilities/color-variation.scss';
-@import '09.utilities/rich-text.scss';
-@import '09.utilities/text-shadow.scss';
-@import '09.utilities/typography.scss';
+@use '09.utilities/color-variation.scss';
+@use '09.utilities/helpers.scss';
+@use '09.utilities/rich-text.scss';
+@use '09.utilities/text-shadow.scss';
+@use '09.utilities/typography.scss';

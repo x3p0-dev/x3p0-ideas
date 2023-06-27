@@ -13,6 +13,7 @@
 @import '~@wordpress/base-styles/variables';
 
 // Import internal editor stylesheets.
+@import '../js/block-editor/editor.scss';
 @import '../js/block-edit/color-variations/editor.scss';
 @import '../js/block-edit/list-markers/editor.scss';
 @import '../js/block-edit/separator-icons/editor.scss';

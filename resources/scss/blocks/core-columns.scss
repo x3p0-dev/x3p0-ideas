@@ -1,0 +1,22 @@
+////
+/// Columns block CSS.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+// Use the WordPress breakpoints module.
+// @link https://github.com/WordPress/gutenberg/tree/trunk/packages/base-styles
+@use '~@wordpress/base-styles/breakpoints' as wp;
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+// WP breaks at 782px.
+// @todo We need to load WP's sass dimensions for things like this.
+@media ( max-width: wp.$break-medium ) {
+	.wp-block-columns.is-style-reverse-stack {
+		flex-wrap: wrap-reverse !important;
+	}
+}

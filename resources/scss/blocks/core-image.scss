@@ -1,11 +1,20 @@
 ////
 /// Image block CSS.
 ///
-/// @author    Justin Tadlock <justintadlock@gmail.com>
-/// @copyright 2023 Justin Tadlock
-/// @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
-/// @link      https://github.com/x3p0-dev/x3p0-ideas
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
+
+// -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+// Need to add the default border-radius to the link itself, which may have an
+// outline style. However, it can't inherit the image's radius, so it needs to
+// use the set default.
+.wp-block-image a:has( img ) {
+	border-radius: var( --wp--custom--defaults--border-radius );
+}
 
 // -----------------------------------------------------------------------------
 // Gradient background.
@@ -50,7 +59,7 @@ figure.wp-block-image[class*=-gradient-background] {
 	color: inherit;
 	border: 2px solid currentColor;
 	overflow: hidden;
-	box-shadow: var( --wp--preset--shadow--md );
+	box-shadow: var( --wp--custom--defaults--shadow );
 	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
 }
 
@@ -88,13 +97,13 @@ figure.wp-block-image[class*=is-style-polaroid] {
 }
 
 .wp-block-image.is-style-polaroid:where( :not( [class*=gradient-] ) ) {
-	box-shadow: var( --wp--preset--shadow--md ), 0 0 8rem rgba( 255, 255, 235, 0.5 ) inset;
+	box-shadow: var( --wp--custom--defaults--shadow ), 0 0 8rem rgba( 255, 255, 235, 0.5 ) inset;
 }
 
 // todo - shadow colors that inherit.
 // inset and outer shadow should match.
 :where( [class*=has-color-var-] ) .wp-block-image.is-style-polaroid:where( :not( [class*=gradient-] ) ) {
-	box-shadow: var( --wp--preset--shadow--md );
+	box-shadow: var( --wp--custom--defaults--shadow );
 }
 
 .wp-block-image[class*=is-style-polaroid] figcaption.wp-element-caption {
@@ -137,7 +146,7 @@ figure.wp-block-image[class*=is-style-polaroid] {
 	display: block;
 	position: absolute;
 	background: rgba( 255, 255, 235, 0.5 );
-	box-shadow: var( --wp--preset--shadow--md );
+	box-shadow: 0 2px 5px 0 rgba( 0, 0, 0, 0.3 ), 0 0 4rem rgba( 255, 255, 235, 0.5 ) inset;
 	height: var( --wp--preset--spacing--plus-3 );
 	margin: auto;
 	width: 7rem;

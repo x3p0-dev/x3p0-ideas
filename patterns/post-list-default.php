@@ -3,7 +3,7 @@
  * Title: Post List: Default
  * Slug: x3p0-ideas/post-list-default
  * Description: Displays the queried posts in a list with the title, date, and excerpt.
- * Categories: theme, query
+ * Categories: posts
  * Keywords: query, posts
  * Block Types: core/query
  */

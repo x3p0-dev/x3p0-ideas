@@ -1,10 +1,8 @@
 ////
 /// Social Links block CSS.
 ///
-/// @author    Justin Tadlock <justintadlock@gmail.com>
-/// @copyright 2023 Justin Tadlock
-/// @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
-/// @link      https://github.com/x3p0-dev/x3p0-ideas
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
 // -----------------------------------------------------------------------------
@@ -67,7 +65,7 @@
 .wp-block-social-links.is-style-hand-drawn .wp-block-social-link {
 	border: 2px solid currentColor;
 	overflow: hidden;
-	box-shadow: var( --wp--custom--shadow--sm );
+	box-shadow: var( --wp--custom--defaults--shadow );
 	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
 	font-family: var( --wp--preset--font-family--handwriting );
 }
@@ -85,5 +83,11 @@
 	color: var( --color-contrast, var( --wp--preset--color--contrast ) );
 	background: transparent;
 	border: 2px solid currentColor;
-	border-radius: 0;
+	//border-radius: 0;
+}
+
+// Pill shape (core style). `theme.json` border-radius styles overrule this, so
+// it must be reset with higher specificity.
+.wp-block-social-links.is-style-pill-shape .wp-block-social-link {
+	border-radius: 9999px;
 }

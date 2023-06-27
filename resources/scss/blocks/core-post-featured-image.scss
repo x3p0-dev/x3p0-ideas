@@ -1,15 +1,21 @@
 ////
 /// Post Featured Image block CSS.
 ///
-/// @author    Justin Tadlock <justintadlock@gmail.com>
-/// @copyright 2023 Justin Tadlock
-/// @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
-/// @link      https://github.com/x3p0-dev/x3p0-ideas
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
 // -----------------------------------------------------------------------------
-// Block style customizations.
+// Block customizations.
 // -----------------------------------------------------------------------------
+
+// Need to add the default border-radius to the link itself, which may have an
+// outline style. However, it can't inherit the image's radius, so it needs to
+// use the set default.
+.wp-block-post-featured-image a:has( img ) {
+	border-radius: var( --wp--custom--defaults--border-radius );
+}
+
 
 @media ( max-width: 40rem ) {
 	.wp-block-post-template :where(

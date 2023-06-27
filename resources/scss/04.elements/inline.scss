@@ -8,13 +8,12 @@
 
 a:where( :not( :focus ) ),
 input:focus,
-textarea:focus,
-.wp-element-button {
-	transition: all 0.5s ease-in-out;
+textarea:focus {
+	transition: 0.5s ease-in-out;
+	transition-property: color, background-color, border-color, outline-color;
 }
 
-a,
-.wp-element-button {
+a {
 	text-underline-offset: 0.078125em !important;
 	text-decoration-thickness: min( 0.078125em, 3px ) !important;
 }

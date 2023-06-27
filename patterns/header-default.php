@@ -1,10 +1,10 @@
 <?php
 /**
- * Title: Header: Main
+ * Title: Header: Default
  * Slug: x3p0-ideas/header-default
  * Description:
- * Categories: theme
- * Keywords: footer
+ * Categories: header
+ * Keywords: header
  * Block Types: core/template-part/header
  * Viewport Width: 1376
  */

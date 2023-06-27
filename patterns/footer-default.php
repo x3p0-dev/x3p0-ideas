@@ -3,10 +3,9 @@
  * Title: Footer: Default
  * Slug: x3p0-ideas/footer-default
  * Description:
- * Categories: theme
+ * Categories: footer
  * Keywords: footer
  * Block Types: core/template-part/footer
- * Viewport Width: 1376
  */
 ?>
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|plus-6","right":"var:preset|spacing|plus-3","bottom":"var:preset|spacing|plus-6","left":"var:preset|spacing|plus-3"}}}} -->
@@ -24,7 +23,7 @@
 
 	<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"0"}}} -->
 	<div class="wp-block-group alignwide">
-		<!-- wp:site-title {"level":0,"textAlign":"center","isLink":false,"style":{"typography":{"fontStyle":"normal","fontWeight":"500"}}} /-->
+		<!-- wp:site-title {"level":0,"textAlign":"center","isLink":false,"style":{"typography":{"fontStyle":"normal","fontWeight":"400"}},"fontSize":"md"} /-->
 
 		<?php if ( ! WP_Block_Type_Registry::get_instance()->is_registered( 'x3p0/powered-by' ) ) : ?>
 			<!-- wp:x3p0/powered-by {"poweredByType":"emoji","textAlign":"center"} /-->

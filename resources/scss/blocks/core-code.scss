@@ -1,19 +1,22 @@
 ////
 /// Code block CSS.
 ///
-/// @author    Justin Tadlock <justintadlock@gmail.com>
-/// @copyright 2023 Justin Tadlock
-/// @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
-/// @link      https://github.com/x3p0-dev/x3p0-ideas
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
 // -----------------------------------------------------------------------------
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// 🤮
-.wp-block-code code {
+// WordPress dumps styles on the `<code>` element instead of the `<pre>`. 🤮
+.wp-block-code {
 	overflow: auto;
 	word-wrap: normal;
-	white-space: revert;
+
+	code {
+		overflow: revert;
+		word-wrap: revert;
+		white-space: revert;
+	}
 }

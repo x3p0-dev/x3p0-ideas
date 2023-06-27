@@ -1,10 +1,8 @@
 ////
 /// Pullquote block CSS.
 ///
-/// @author    Justin Tadlock <justintadlock@gmail.com>
-/// @copyright 2023 Justin Tadlock
-/// @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
-/// @link      https://github.com/x3p0-dev/x3p0-ideas
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
 // -----------------------------------------------------------------------------
@@ -66,46 +64,6 @@
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-// Background clip text style.
-.wp-block-pullquote.is-style-clip-text,
-.editor-styles-wrapper .wp-block-pullquote.is-style-clip-text {
-	background-clip: text !important;
-	-webkit-background-clip: text !important;
-	color: transparent !important;
-	border: none;
-	position: relative;
-	padding: var( --wp--preset--spacing--plus-4 ) 0;
-
-	&:not( .has-background ) {
-		background-image: var( --wp--preset--gradient--cool-to-warm-spectrum );
-	}
-
-	&::before,
-	&::after {
-		content: "";
-		width: 35%;
-		margin: 0;
-		height: 2px;
-		background-color: inherit;
-		background-image: inherit;
-		display: block;
-		position: absolute;
-		left: 32.5%;
-		z-index: 1;
-	}
-
-	&::before { top: 0; }
-	&::after { bottom: 0 !important; } // !important to work in the editor.
-
-	blockquote,
-	cite {
-		background-clip: text !important;
-		-webkit-background-clip: text !important;
-		color: transparent !important;
-		background-image: inherit;
-	}
-}
-
 // Mark top style.
 .wp-block-pullquote.is-style-mark-top,
 .editor-styles-wrapper .wp-block-pullquote.is-style-mark-top {
@@ -114,22 +72,17 @@
 }
 
 .wp-block-pullquote.is-style-mark-top blockquote {
-	//position: relative;
-	//padding: 1.75em 0 0;
 	padding: 0.75em 0 0;
+	display: flex;
+	flex-direction: column;
 }
 
 .wp-block-pullquote.is-style-mark-top blockquote::before {
 	content: open-quote;
 	color: currentColor;
 	font-size: 4em;
-	//line-height: 85%;
+	line-height: 0.25;
 	font-weight: 700;
-	vertical-align: bottom;
-	//position: absolute;
-	//top: 0;
-	//left: 50%;
-	transform: translateX( -50% );
 }
 
 // Figure element needed to overwrite styles in editor.
