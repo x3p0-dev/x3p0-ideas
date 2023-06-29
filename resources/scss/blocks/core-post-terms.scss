@@ -5,6 +5,8 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
+@use '../02.tools/inline-icon';
+
 // -----------------------------------------------------------------------------
 // Block fixes.
 // -----------------------------------------------------------------------------
@@ -19,7 +21,7 @@
 .wp-block-post-terms {
 	--wp--custom--block-gap--post-terms: var( --wp--preset--spacing--minus-3 );
 	display: flex;
-	align-items: baseline;
+	align-items: center;
 	flex-wrap: wrap;
 	gap: var( --wp--custom--block-gap--post-terms );
 
@@ -52,5 +54,22 @@
 		&:focus {
 			background-color: var( --wp--preset--color--primary-emphasis );
 		}
+	}
+}
+
+.wp-block-post-terms.is-style-icon {
+
+	// https://fonts.google.com/icons?icon.query=folder&selected=Material+Symbols+Sharp:folder_open:FILL@1;wght@400;GRAD@0;opsz@24&icon.style=Sharp&icon.platform=web
+	&::before {
+		@include inline-icon.icon(
+			url( 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M80-160v-640h320l80 80h400v80H160v400l96-320h684L820-160H80Z"/></svg>' )
+		);
+	}
+
+	// https://fonts.google.com/icons?icon.query=tag&selected=Material+Symbols+Sharp:label:FILL@1;wght@400;GRAD@0;opsz@24&icon.style=Sharp&icon.platform=web
+	&.taxonomy-post_tag::before {
+		@include inline-icon.modify(
+			url( 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-200v-560h522l198 280-198 280H120Z"/></svg>' )
+		);
 	}
 }

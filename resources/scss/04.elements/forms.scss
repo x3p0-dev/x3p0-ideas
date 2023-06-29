@@ -5,6 +5,22 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
+label,
+// `<label>` element not used in the editor.
+.wp-block-search__label {
+	color: var( --wp--preset--color--neutral-muted );
+	font-size: var( --wp--preset--font-size--xs );
+	text-transform: uppercase;
+}
+
+:where( input[type="checkbox"], input[type="radio"] ) + label,
+label:has( :where( input[type="checkbox"], input[type="radio"] ) ) {
+	//color: inherit;
+	//font-size: inherit;
+	font-size: var( --wp--preset--font-size--sm );
+	text-transform: none;
+}
+
 // Adds form element styles, which aren't yet supported in `theme.json`.
 input,
 select,
@@ -28,7 +44,7 @@ textarea,
 
 	&:focus {
 		outline: 2px solid var( --wp--preset--color--primary-contrast );
-	//	outline-offset: 2px;
+		outline-offset: 2px;
 	}
 }
 
@@ -43,6 +59,7 @@ textarea,
 
 	&:has( .wp-block-search__input:focus ) {
 		outline: 2px solid var( --wp--preset--color--primary-contrast );
+		outline-offset: 2px;
 	}
 }
 
@@ -56,4 +73,8 @@ input[type="radio"],
 	&:focus {
 		outline: none;
 	}
+}
+
+input[type="submit"] {
+	cursor: pointer;
 }

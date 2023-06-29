@@ -1,0 +1,15 @@
+////
+/// Comments Title block CSS.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+// -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+.wp-block-comments .wp-block-comments-title {
+	margin-block-start: max( 1.5em, 3rem );
+	margin-block-end: 0.5em;
+}

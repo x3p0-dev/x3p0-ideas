@@ -1,0 +1,40 @@
+////
+/// Post Author block CSS.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+// -----------------------------------------------------------------------------
+// Block style customizations.
+// -----------------------------------------------------------------------------
+
+.wp-block-post-author {
+	gap: var( --wp--preset--spacing--base );
+
+	&__avatar img {
+		border-radius: 9999px;
+	}
+
+	&__avatar,
+	&__bio {
+		margin: 0;
+	}
+
+	&__content {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var( --wp--preset--spacing--base ) 0.5ch;
+	}
+
+	&__byline,
+	&__name {
+		width: auto;
+	}
+
+	&__byline,
+	&__name,
+	&__bio {
+		font-size: inherit;
+	}
+}

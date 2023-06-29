@@ -1,0 +1,99 @@
+////
+/// Login/out block CSS.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+@use '../02.tools/inline-icon';
+
+// -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+// The login form is pretty much a hot mess at this point.
+// @link https://github.com/WordPress/gutenberg/issues/50466
+.wp-block-loginout form {
+	input:not([type=submit]):not([type=checkbox]):not([type=hidden]) {
+		box-sizing: border-box;
+		display: block;
+		width: 100%;
+	}
+
+	.login-submit input[type=submit] {
+		box-shadow: var( --wp--custom--defaults--shadow );
+		border: 2px solid transparent;
+		border-radius: var( --wp--custom--defaults--border-radius );
+		color: var( --wp--preset--color--white );
+		background: var( --wp--preset--color--primary-contrast );
+		outline: 0 solid var( --wp--preset--color--primary-emphasis );
+		outline-offset: 2px;
+		spacing: var( --wp--preset--spacing--minus-2 ) var( --wp--preset--spacing--plus-1 );
+		font-size: var( --wp--preset--font-size--sm );
+		font-weight: 500;
+		line-height: var( --wp--custom--line-height--sm );
+
+		&:active,
+		&:focus {
+			background: var( --wp--preset--color--primary-emphasis );
+			outline-width: 2px;
+		}
+		&:hover {
+			background: var( --wp--preset--color--primary-emphasis );
+			text-decoration: underline;
+		}
+	}
+}
+
+// -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+.wp-block-loginout form {
+	display: grid;
+	grid-template-columns: repeat( 1, 1fr );
+	gap: var(
+		--wp--custom--block-gap--comments-form,
+		var( --wp--preset--spacing--base )
+	);
+
+	> * {
+		margin: 0;
+	}
+}
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+.wp-block-loginout.is-style-icon {
+
+	&:not( .has-login-form ) {
+		// https://fonts.google.com/icons?icon.query=password&selected=Material+Symbols+Sharp:lock:FILL@1;wght@400;GRAD@0;opsz@24&icon.style=Sharp&icon.platform=web
+		@include inline-icon.prefix(
+			url( 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M160-80v-560h120v-80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720v80h120v560H160Zm320-200q33 0 56.5-23.5T560-360q0-33-23.5-56.5T480-440q-33 0-56.5 23.5T400-360q0 33 23.5 56.5T480-280ZM360-640h240v-80q0-50-35-85t-85-35q-50 0-85 35t-35 85v80Z"/></svg>' )
+		);
+
+		// https://fonts.google.com/icons?icon.query=password&selected=Material+Symbols+Sharp:lock_open:FILL@1;wght@400;GRAD@0;opsz@24&icon.style=Sharp&icon.platform=web
+		&.logged-in::before {
+			@include inline-icon.modify(
+				url( 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M160-80v-560h440v-80q0-50-35-85t-85-35q-50 0-85 35t-35 85h-80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720v80h120v560H160Zm320-200q33 0 56.5-23.5T560-360q0-33-23.5-56.5T480-440q-33 0-56.5 23.5T400-360q0 33 23.5 56.5T480-280Z"/></svg>' )
+			)
+		}
+	}
+
+	// https://fonts.google.com/icons?icon.query=user&selected=Material+Symbols+Sharp:person:FILL@1;wght@400;GRAD@0;opsz@24&icon.style=Sharp&icon.platform=web
+	.login-username label,
+	.login-password label {
+		@include inline-icon.prefix(
+			url( 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z"/></svg>' )
+		);
+	}
+
+	// https://fonts.google.com/icons?icon.query=password&selected=Material+Symbols+Sharp:key:FILL@1;wght@400;GRAD@0;opsz@24&icon.style=Sharp&icon.platform=web
+	.login-password label::before {
+		@include inline-icon.modify(
+			url( 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M280-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 120q-100 0-170-70T40-480q0-100 70-170t170-70q81 0 141.5 46T506-560h335l79 79-140 160-100-79-80 80-80-80h-14q-25 72-87 116t-139 44Z"/></svg>' )
+		);
+	}
+}

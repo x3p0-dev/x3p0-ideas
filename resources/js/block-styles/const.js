@@ -28,6 +28,18 @@ export const BLOCK_STYLES = {
 	'core/columns': {
 		'reverse-stack': __( 'Reverse Mobile Stack', 'x3p0-ideas' )
 	},
+	'core/comment-author-name': {
+		'icon': __( 'Icon', 'x3p0-ideas' )
+	},
+	'core/comment-date': {
+		'icon': __( 'Icon', 'x3p0-ideas' )
+	},
+	'core/comment-edit-link': {
+		'icon': __( 'Icon', 'x3p0-ideas' )
+	},
+	'core/comment-reply-link': {
+		'icon': __( 'Icon', 'x3p0-ideas' )
+	},
 	'core/cover': {
 		'polygon-slant-down-sm': __( 'Slant Down: Small',  'x3p0-ideas' ),
 		'polygon-slant-down-md': __( 'Slant Down: Medium', 'x3p0-ideas' ),
@@ -58,17 +70,39 @@ export const BLOCK_STYLES = {
 		'gap-relaxed': __( 'Gap: Relaxed', 'x3p0-ideas' ),
 		'gap-loose':   __( 'Gap: Loose',   'x3p0-ideas' ),
 	},
+	'core/loginout': {
+		'icon': __( 'Icon', 'x3p0-ideas' )
+	},
 	'core/paragraph': {
 		'indent':  __( 'Indent',  'x3p0-ideas' ),
 		'intro':   __( 'Intro',   'x3p0-ideas' ),
 		'lead-in': __( 'Lead-in', 'x3p0-ideas' ),
 		'lede':    __( 'Lede',    'x3p0-ideas' )
 	},
+	'core/post-author-name': {
+		'icon': __( 'Icon', 'x3p0-ideas' )
+	},
+	'core/post-comments-count': {
+		'icon': __( 'Icon', 'x3p0-ideas' )
+	},
+	'core/post-comments-form': {
+		'icons': __( 'Icons', 'x3p0-ideas' )
+	},
+	'core/post-comments-link': {
+		'icon': __( 'Icon', 'x3p0-ideas' )
+	},
+	'core/post-date': {
+		'icon': __( 'Icon', 'x3p0-ideas' )
+	},
 	'core/post-template': {
 		'flex': __( 'Flexible', 'x3p0-ideas' )
 	},
 	'core/post-terms': {
-		'button': __( 'Button', 'x3p0-ideas' )
+		'button': __( 'Button', 'x3p0-ideas' ),
+		'icon': __( 'Icon', 'x3p0-ideas' )
+	},
+	'core/post-time-to-read': {
+		'icon': __( 'Icon', 'x3p0-ideas' )
 	},
 	'core/pullquote': {
 		'brackets':    __( 'Brackets',   'x3p0-ideas' ),

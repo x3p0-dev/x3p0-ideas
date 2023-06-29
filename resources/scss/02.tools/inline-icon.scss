@@ -1,0 +1,42 @@
+////
+/// Inline Icon mixin.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+@mixin wrapper {
+	display: flex;
+	gap: var( --wp--preset--spacing--minus-3 );
+	align-items: center;
+}
+
+@mixin icon( $icon ) {
+	content: '';
+	mask: no-repeat 50% 50% #{ $icon };
+	mask-size: cover;
+	background: currentColor;
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+}
+
+@mixin modify( $icon ) {
+	mask-image: #{ $icon };
+}
+
+@mixin prefix( $icon ) {
+	@include wrapper();
+
+	&::before {
+		@include icon( $icon );
+	}
+}
+
+@mixin suffix( $icon ) {
+	@include wrapper();
+
+	&::after {
+		@include icon( $icon );
+	}
+}

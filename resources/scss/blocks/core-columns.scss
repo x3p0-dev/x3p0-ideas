@@ -9,6 +9,16 @@
 // @link https://github.com/WordPress/gutenberg/tree/trunk/packages/base-styles
 @use '~@wordpress/base-styles/breakpoints' as wp;
 
+
+// -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+// Zero out core's hardcoded padding when the block has a background.
+:where( .wp-block-columns.has-background ) {
+	padding: 0;
+}
+
 // -----------------------------------------------------------------------------
 // Block style variations.
 // -----------------------------------------------------------------------------

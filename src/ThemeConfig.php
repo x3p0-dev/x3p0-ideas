@@ -1,8 +1,10 @@
 <?php
 /**
- * The Block Patterns class is responsible for registering block pattern
- * categories and block patterns. However, it's recommended to register patterns
- * by placing individual files in the `/patterns` folder.
+ * Theme Configuration class hooks into `theme.json` and allows for the passing
+ * data via the `settings.custom.config` property. The class copies that data on
+ * the server-side and removes it from the JSON. This allows themes to use the
+ * `theme.json` as a PHP configuration file without the JSON data being printed
+ * to the `<head>` as CSS custom properties.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023, Justin Tadlock
@@ -20,8 +22,18 @@ class ThemeConfig implements Bootable
 {
 	use HookAnnotation;
 
+	/**
+	 * Stores data from `settings.custom.config` from `theme.json`.
+	 *
+	 * @since 1.0.0
+	 */
 	protected array $storage = [];
 
+	/**
+	 * Fallbacks for properties expected to be set via `theme.json`.
+	 *
+	 * @since 1.0.0
+	 */
 	protected const DEFAULTS = [
 		'front-page-image' => 'file:./public/media/purple-sunset.webp'
 	];
@@ -40,21 +52,20 @@ class ThemeConfig implements Bootable
 	 * Boots the component, running its actions/filters.
 	 *
 	 * @since 1.0.0
+	 * @return mixed
+	 * @todo   Add `mixed` return type declaration with PHP 8-only support.
+	 * @todo   Allow for dot notation to retrieve nested items.
 	 */
 	public function get( string $key )
 	{
 		$key = _wp_to_kebab_case( $key );
 
-		if ( isset( $this->storage[ $key ] ) ) {
-			$value = $this->storage[ $key ];
-		} elseif ( isset( self::DEFAULTS[ $key ] ) ) {
-			$value = self::DEFAULTS[ $key ];
-		}
+		$value = $this->storage[ $key ] ?? self::DEFAULTS[ $key ] ?? null;
 
 		// Handles URLs that being with `file:./`, which points to the
 		// theme root. Uses `get_theme_file_uri()` to allow child themes
 		// to override the parent.
-		if ( $value && str_starts_with( $value, 'file:./' ) ) {
+		if ( is_string( $value ) && str_starts_with( $value, 'file:./' ) ) {
 			$value = get_theme_file_uri( str_replace( 'file:./', '', $value ) );
 		}
 
@@ -62,12 +73,23 @@ class ThemeConfig implements Bootable
 	}
 
 	/**
-	 * Removes theme support for core patterns.
+	 * Filters the `theme.json` data, plucking configuration registered via
+	 * `settings.custom.config`.
+	 *
+	 * Note that we can't use proper type hinting here because the Gutenberg
+	 * plugin doesn't extend `WP_Theme_JSON_Data` and WP doesn't implement
+	 * proper interfaces. So, what we actually get is up in the air, but
+	 * that's WordPress for you. Generally, what will be passed will either
+	 * be `WP_Theme_JSON_Data` or `WP_Theme_JSON_Data_Gutenberg`. We could
+	 * use a union type here, but---quite frankly---I don't trust that this
+	 * won't change. Regardless, the code will expect the public properties
+	 * and methods of `WP_Theme_JSON_Data`.
 	 *
 	 * @hook  wp_theme_json_data_theme
 	 * @since 1.0.0
+	 * @link https://developer.wordpress.org/reference/classes/wp_theme_json_data/
 	 */
-	public function themeSupport( $theme_json_data )
+	public function themeJsonData( $theme_json_data )
 	{
 		$data = $theme_json_data->get_data();
 
@@ -86,11 +108,16 @@ class ThemeConfig implements Bootable
 		return $theme_json_data;
 	}
 
-	protected function resolveConfig( array $config ): array
+	/**
+	 * Resolves the custom configuration properties.
+	 *
+	 * @since  1.0.0
+	 */
+	protected function resolveConfig( array $properties ): array
 	{
 		$resolved = [];
 
-		foreach ( $config as $key => $value ) {
+		foreach ( $properties as $key => $value ) {
 			$key = _wp_to_kebab_case( $key );
 
 			if ( is_array( $value ) ) {

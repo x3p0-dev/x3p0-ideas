@@ -1,0 +1,19 @@
+////
+/// Post Time to Read block CSS.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+@use '../02.tools/inline-icon';
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+// https://fonts.google.com/icons?icon.query=time&selected=Material+Symbols+Sharp:schedule:FILL@1;wght@400;GRAD@0;opsz@24&icon.style=Sharp&icon.platform=web
+.wp-block-post-time-to-read.is-style-icon {
+	@include inline-icon.prefix(
+		url( 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m612-292 56-56-148-148v-184h-80v216l172 172ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>' )
+	);
+}

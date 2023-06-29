@@ -23,6 +23,11 @@
 	gap: var( --wp--style--block-gap );
 }
 
+// Zero out the hard-coded resizable container margin in the editor.
+.wp-block-file .components-resizable-box__container {
+	margin: 0;
+}
+
 // Zero out WP's bottom spacing on embedded media (test with PDF).
 .wp-block-file__embed {
 	margin-bottom: 0;

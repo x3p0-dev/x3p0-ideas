@@ -260,7 +260,7 @@
 					"slug": "winter-neva"
 				},
 				{
-					"gradient": "linear-gradient( 180deg, transparent -40%, var( --wp--preset--color--base ) 100% )",
+					"gradient": "var:custom|defaults|faded-gradient",
 					"name": "Linear: Transparent → Base (180 degrees)",
 					"slug": "180-deg-transparent-base"
 				}
@@ -381,7 +381,8 @@
 		"custom": {
 			"defaults": {
 				"borderRadius": "6px",
-				"shadow": "var( --wp--preset--shadow--sm )"
+				"shadow": "var( --wp--preset--shadow--sm )",
+				"fadedGradient": "linear-gradient( 180deg, transparent -40%, var( --wp--preset--color--base ) 100% )"
 			},
 			"elements": {
 				"formInput": {
@@ -395,7 +396,7 @@
 				"navigation-submenu": {
 					"color": "var( --wp--preset--color--contrast )",
 					"background": "var( --wp--preset--color--base )",
-					"border": "1px solid var( --wp--preset--color--neutral-contrast )",
+					"border": "2px solid var( --wp--preset--color--neutral-contrast )",
 					"border-radius": "var( --wp--custom--defaults--border-radius )",
 					"link-color": "inherit",
 					"link-background": "inherit",
@@ -421,9 +422,6 @@
 				"sm": "1px 1px 0 rgba( 0, 0, 0, 0.5 )",
 				"md": "2px 2px 2px rgba( 0, 0, 0, 0.3 )",
 				"lg": "3px 3px 6px rgba( 0, 0, 0, 0.3 )"
-			},
-			"themeConfig": {
-				"frontPageImage": "../jaguar.jpg"
 			}
 		},
 		"dimensions": {
@@ -706,7 +704,10 @@
 		"elements": {
 			"button": {
 				"border": {
-					"radius": "var:custom|defaults|border-radius"
+					"color": "transparent",
+					"radius": "var:custom|defaults|border-radius",
+					"style": "solid",
+					"width": "2px"
 				},
 				"color": {
 					"text": "var:preset|color|white",
@@ -742,9 +743,6 @@
 					},
 					"outline": {
 						"width": "2px"
-					},
-					"typography": {
-						"textDecoration": "underline"
 					}
 				},
 				":hover": {
@@ -829,6 +827,9 @@
 				}
 			},
 			"link": {
+				"border": {
+					"radius": "var:custom|defaults|border-radius"
+				},
 				"color": {
 					"text": "var:preset|color|primary-contrast"
 				},
@@ -838,9 +839,9 @@
 				":focus": {
 					"outline": {
 						"color": "var:preset|color|primary-contrast",
-						"offset": "0.125em",
+						"offset": "2px",
 						"style": "solid",
-						"width": "1px"
+						"width": "2px"
 					},
 					"typography": {
 						"textDecoration": "underline"
@@ -872,18 +873,26 @@
 				"shadow": "var:custom|defaults|shadow",
 				"variations": {
 					"outline": {
+						"border": {
+							"width": { "ref": "styles.elements.button.border.width" }
+						},
 						"outline": {
 							"color": "currentColor"
 						},
 						"spacing": {
 							"padding": {
-								"top": "calc( var( --wp--preset--spacing--minus-2 ) - 2px )",
-								"bottom": "calc( var( --wp--preset--spacing--minus-2 ) - 2px )",
-								"left": "calc( var( --wp--preset--spacing--plus-1 ) - 2px )",
-								"right": "calc( var( --wp--preset--spacing--plus-1 ) - 2px )"
+								"top": { "ref": "styles.elements.button.spacing.padding.top" },
+								"bottom": { "ref": "styles.elements.button.spacing.padding.bottom" },
+								"left": { "ref": "styles.elements.button.spacing.padding.left" },
+								"right": { "ref": "styles.elements.button.spacing.padding.right" }
 							}
 						}
 					}
+				}
+			},
+			"core/buttons": {
+				"spacing": {
+					"blockGap": "var:preset|spacing|base"
 				}
 			},
 			"core/calendar": {
@@ -1197,8 +1206,22 @@
 			]
 		},
 		{
-			"name": "template-single-post-featured-cover",
-			"title": "Single Post: Featured Cover",
+			"name": "template-post-faded-cover",
+			"title": "Post: Faded Cover",
+			"postTypes": [
+				"post"
+			]
+		},
+		{
+			"name": "template-post-featured",
+			"title": "Post: Featured",
+			"postTypes": [
+				"post"
+			]
+		},
+		{
+			"name": "template-post-featured-cover",
+			"title": "Post: Featured Cover",
 			"postTypes": [
 				"post"
 			]

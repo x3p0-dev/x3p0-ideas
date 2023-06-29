@@ -1,0 +1,19 @@
+////
+/// Social Link block CSS.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+// -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+.wp-block-social-link:has( a:focus ) {
+	outline: 2px solid var( --wp--preset--color--primary-contrast );
+	outline-offset: 2px;
+}
+
+.wp-block-social-link .wp-block-social-link-anchor {
+	outline: none;
+}

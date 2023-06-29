@@ -1,0 +1,19 @@
+////
+/// Comment Date block CSS.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+@use '../02.tools/inline-icon';
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+// https://fonts.google.com/icons?icon.query=date&selected=Material+Symbols+Sharp:calendar_month:FILL@1;wght@400;GRAD@0;opsz@24&icon.style=Sharp&icon.platform=web
+.wp-block-comment-date.is-style-icon {
+	@include inline-icon.prefix(
+		url( 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M440-400v-80h80v80h-80Zm-160 0v-80h80v80h-80Zm320 0v-80h80v80h-80ZM440-240v-80h80v80h-80Zm-160 0v-80h80v80h-80Zm320 0v-80h80v80h-80ZM120-80v-720h120v-80h80v80h320v-80h80v80h120v720H120Zm80-80h560v-400H200v400Z"/></svg>' )
+	);
+}

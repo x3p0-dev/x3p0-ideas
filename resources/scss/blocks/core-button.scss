@@ -6,6 +6,40 @@
 ////
 
 // -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+.wp-block-button__link {
+	//display: flex;
+}
+
+.wp-block-button .wp-block-button__link {
+	code,
+	kbd {
+		border-color: currentColor;
+		background: transparent;
+		color: inherit;
+		opacity: 0.7;
+		text-decoration: none;
+		font-weight: 400;
+		font-size: smaller;
+	}
+
+	del, s {
+		opacity: 0.7;
+		color: currentColor;
+		text-decoration-color: currentColor;
+	}
+
+	ins {
+		border: none;
+		background: inherit;
+		color: inherit;
+		text-decoration: underline;
+	}
+}
+
+// -----------------------------------------------------------------------------
 // Block style variations.
 // -----------------------------------------------------------------------------
 

@@ -5,25 +5,15 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
+@use '../02.tools/inline-icon';
+
 // -----------------------------------------------------------------------------
-// Block style variations.
+// Block fixes.
 // -----------------------------------------------------------------------------
 
-// Faux `blockGap` support.
-.wp-block-post-comments-form > *,
-.wp-block-post-comments-form form > * {
-	margin-block-start: 0;
-	margin-block-end: 0;
-}
-
-.wp-block-post-comments-form > * + *,
-.wp-block-post-comments-form form > * + *,
-.wp-block-post-comments-form .comment-reply-title + * {
-	margin-block-start: var(
-		--wp--custom--block-gap--comments-form,
-		var( --wp--preset--spacing--40 )
-	);
-}
+// Note: The comment form input wrappers do not have any classes in the editor:
+// e.g., `<p class="comment-form-comment">` is simply `<p>`. But they are
+// correct on the front end.
 
 // Fixes misaligned checkbox and label when the label wraps two or more lines.
 // This is because core uses centered alignment.
@@ -31,12 +21,100 @@
 	align-items: baseline;
 }
 
+// WP hardcodes a zeroed out box-shadow, overruling the `shadow` property set
+// in `theme.json` on the `button` element.
+.wp-block-post-comments-form input[type=submit] {
+	box-shadow: var( --wp--custom--defaults--shadow );
+}
+
+// -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+// Faux `blockGap` support.
+.wp-block-post-comments-form > * {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+
+.wp-block-post-comments-form > * + *,
+.wp-block-post-comments-form .comment-reply-title + * {
+	margin-block-start: var(
+		--wp--custom--block-gap--comments-form,
+		var( --wp--preset--spacing--base )
+	);
+}
+
+// Creates a grid display for the comment form.
+.wp-block-post-comments-form .comment-form {
+	display: grid;
+	grid-template-columns: repeat( 2, 1fr );
+	gap: var(
+		--wp--custom--block-gap--comments-form,
+		var( --wp--preset--spacing--base )
+	);
+
+	// By default, all items span the full width of the grid.
+	> * {
+		margin: 0;
+		grid-column: 1/-1;
+	}
+
+	// Aligns the author and email fields into a single row.
+	@media ( min-width: 40rem ) {
+		.comment-form-author { grid-column: 1/1; }
+		.comment-form-email  { grid-column: 2/2; }
+	}
+}
+
+// Use negative color (generally red) for required marker.
+.wp-block-post-comments-form .required {
+	color: var( --wp--preset--color--negative-contrast );
+}
+
+// Overwrites WP's default form field padding with a theme spacing size.
+.wp-block-post-comments-form input:not( [type=submit] ):not( [type=checkbox] ),
+.wp-block-post-comments-form textarea {
+	padding: var( --wp--preset--spacing--minus-2 );
+}
+
 // -----------------------------------------------------------------------------
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-// Overwrites WP's default form field padding with a theme spacing size.
-.wp-block-post-comments-form input:not([type=submit]):not([type=checkbox]),
-.wp-block-post-comments-form textarea {
-	padding: var( --wp--preset--spacing--minus-2 );
+// The comment form is currently a single block. Therefore, we cannot add
+// individual block styles for each of the form inputs.
+.wp-block-post-comments-form.is-style-icons {
+
+	.comment-form-comment,
+	.comment-form-author,
+	.comment-form-email,
+	.comment-form-url {
+		label {
+			@include inline-icon.prefix(
+				url( 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M240-400h480v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM80-240v-640h800v800L720-240H80Z"/></svg>' )
+			);
+		}
+	}
+
+	// https://fonts.google.com/icons?icon.query=user&selected=Material+Symbols+Sharp:person:FILL@1;wght@400;GRAD@0;opsz@24&icon.style=Sharp&icon.platform=web
+	.comment-form-author label::before {
+		@include inline-icon.modify(
+			url( 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z"/></svg>' )
+		);
+	}
+
+	// https://fonts.google.com/icons?icon.query=email&selected=Material+Symbols+Sharp:mail:FILL@1;wght@400;GRAD@0;opsz@24&icon.style=Sharp&icon.platform=web
+	.comment-form-email label::before {
+		@include inline-icon.modify(
+			url( 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M80-160v-640h800v640H80Zm400-280 320-200v-80L480-520 160-720v80l320 200Z"/></svg>' )
+		);
+	}
+
+	// https://fonts.google.com/icons?icon.query=url&selected=Material+Symbols+Sharp:link:FILL@1;wght@400;GRAD@0;opsz@24&icon.style=Sharp&icon.platform=web
+	.comment-form-url label::before {
+		@include inline-icon.modify(
+			url( 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M440-280H280q-83 0-141.5-58.5T80-480q0-83 58.5-141.5T280-680h160v80H280q-50 0-85 35t-35 85q0 50 35 85t85 35h160v80ZM320-440v-80h320v80H320Zm200 160v-80h160q50 0 85-35t35-85q0-50-35-85t-85-35H520v-80h160q83 0 141.5 58.5T880-480q0 83-58.5 141.5T680-280H520Z"/></svg>' )
+		);
+	}
 }
