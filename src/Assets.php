@@ -95,7 +95,7 @@ class Assets implements Bootable
 	 * Enqueues block-specific styles so that they only load when the block
 	 * is in use. Block styles are stored under `/assets/css/blocks` are
 	 * automatically enqueued. Each file should be named
-	 * `{$block_namespace}-{$block_slug}.css`.
+	 * `{$block_namespace}/{$block_slug}.css`.
 	 *
 	 * @hook  init
 	 * @since 1.0.0
@@ -103,42 +103,31 @@ class Assets implements Bootable
 	 */
 	public function enqueueBlockStyles(): void
 	{
+		$namespace = 'core';
+
 		// Gets all the block stylesheets.
-		$files = glob( get_parent_theme_file_path( 'public/css/blocks/*.css' ) );
+		$files = glob( get_parent_theme_file_path( "public/css/blocks/{$namespace}/*.css" ) );
 
 		foreach ( $files as $file ) {
 
 			// Gets the filename without the path or extension.
-			$name = str_replace( [
-				get_parent_theme_file_path( 'public/css/blocks/' ),
+			$slug = str_replace( [
+				get_parent_theme_file_path( "public/css/blocks/{$namespace}/" ),
 				'.css'
 			], '', $file );
 
 			// Sanitize the name to make sure it contains only
 			// characters allowed in a block type name.
-			$name = preg_replace( '/[^a-z0-9-]/', '', strtolower( $name ) );
-
-			// Get the position of the first hyphen.
-			$pos = strpos( $name, '-' );
-
-			// Bail if there is no hyphen.
-			if ( false === $pos ) {
-				continue;
-			}
-
-			// Converts the filename to its associated block name by
-			// replacing the first `-` with a `/`. Filenames must
-			// use `{namespace}-{slug}` for this to work.
-			$block = substr_replace( $name, '/', $pos, 1 );
+			$slug = preg_replace( '/[^a-z0-9-]/', '', strtolower( $slug ) );
 
 			// Get the asset file.
-			$asset = include get_parent_theme_file_path( "public/css/blocks/{$name}.asset.php" );
+			$asset = include get_parent_theme_file_path( "public/css/blocks/{$namespace}/{$slug}.asset.php" );
 
 			// Register the block style.
-			wp_enqueue_block_style( $block, [
-				'handle' => "x3p0-ideas-block-{$name}",
-				'src'    => get_parent_theme_file_uri( "public/css/blocks/{$name}.css"  ),
-				'path'   => get_parent_theme_file_path( "public/css/blocks/{$name}.css" ),
+			wp_enqueue_block_style( "{$namespace}/{$slug}", [
+				'handle' => "x3p0-ideas-block-{$namespace}-{$slug}",
+				'src'    => get_parent_theme_file_uri( "public/css/blocks/{$namespace}/{$slug}.css"  ),
+				'path'   => get_parent_theme_file_path( "public/css/blocks/{$namespace}/{$slug}.css" ),
 				'deps'   => $asset['dependencies'],
 				'ver'    => $asset['version']
 			] );

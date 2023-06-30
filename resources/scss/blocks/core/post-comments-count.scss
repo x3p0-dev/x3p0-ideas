@@ -1,18 +1,18 @@
 ////
-/// Post Comments Link block CSS.
+/// Post Comments Count block CSS.
 ///
 /// @author Justin Tadlock <justintadlock@gmail.com>
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
-@use '../02.tools/inline-icon';
+@use '../../02.tools/inline-icon';
 
 // -----------------------------------------------------------------------------
 // Block style variations.
 // -----------------------------------------------------------------------------
 
 // https://fonts.google.com/icons?icon.query=comment&selected=Material+Symbols+Sharp:comment:FILL@1;wght@400;GRAD@0;opsz@24&icon.style=Sharp&icon.platform=web
-.wp-block-post-comments-link.is-style-icon {
+.wp-block-post-comments-count.is-style-icon {
 	@include inline-icon.prefix(
 		url( 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M240-400h480v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM80-240v-640h800v800L720-240H80Z"/></svg>' )
 	);
