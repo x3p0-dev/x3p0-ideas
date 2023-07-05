@@ -170,6 +170,31 @@
 			],
 			"gradients": [
 				{
+					"gradient": "linear-gradient( 180deg, transparent -40%, var( --wp--preset--color--base ) 100% )",
+					"name": "Linear: Transparent ↓ Base",
+					"slug": "180-deg-transparent-base"
+				},
+				{
+					"gradient": "linear-gradient( 90deg, var( --wp--preset--color--neutral-base ) -80%, transparent max( 70vw, 40rem ) )",
+					"name": "Linear: Neutral Base → Transparent",
+					"slug": "90-deg-neutral-base-transparent"
+				},
+				{
+					"gradient": "linear-gradient( 270deg, var( --wp--preset--color--neutral-base ) -80%, transparent max( 70vw, 40rem ) )",
+					"name": "Linear: Transparent → Neutral Base",
+					"slug": "270-deg-neutral-base-transparent"
+				},
+				{
+					"gradient": "linear-gradient( 90deg, var( --wp--preset--color--primary-base ) -80%, transparent max( 70vw, 40rem ) )",
+					"name": "Linear: Primary Base → Transparent",
+					"slug": "90-deg-primary-base-transparent"
+				},
+				{
+					"gradient": "linear-gradient( 270deg, var( --wp--preset--color--primary-base ) -80%, transparent max( 70vw, 40rem ) )",
+					"name": "Linear: Transparent → Primary Base",
+					"slug": "270-deg-primary-base-transparent"
+				},
+				{
 					"gradient": "linear-gradient(to right, rgb(16, 185, 129), rgb(101, 163, 13))",
 					"name": "Emerald",
 					"slug": "emerald"
@@ -258,11 +283,6 @@
 					"gradient": "linear-gradient( 120deg, #a1c4fd, #c2e9fb )",
 					"name": "Winter Neva",
 					"slug": "winter-neva"
-				},
-				{
-					"gradient": "var:custom|defaults|faded-gradient",
-					"name": "Linear: Transparent → Base (180 degrees)",
-					"slug": "180-deg-transparent-base"
 				}
 			],
 			"palette": [
@@ -530,6 +550,21 @@
 					"name": "Fluid Scale +7",
 					"size": "var(--theme-spacing--plus-7)",
 					"slug": "plus-7"
+				},
+				{
+					"name": "Fluid Scale +8",
+					"size": "var(--theme-spacing--plus-8)",
+					"slug": "plus-8"
+				},
+				{
+					"name": "Fluid Scale +9",
+					"size": "var(--theme-spacing--plus-9)",
+					"slug": "plus-9"
+				},
+				{
+					"name": "Fluid Scale +10",
+					"size": "var(--theme-spacing--plus-10)",
+					"slug": "plus-10"
 				}
 			],
 			"units": [
@@ -1193,6 +1228,13 @@
 					"fontSize": "var:preset|font-size|sm",
 					"lineHeight": "var:custom|line-height|sm"
 				}
+			},
+			"x3p0/breadcrumbs": {
+				"typography": {
+					"fontSize": "var:preset|font-size|sm",
+					"lineHeight": "var:custom|line-height|sm"
+				},
+				"css": "& a { font-weight: 500; }"
 			}
 		}
 	},

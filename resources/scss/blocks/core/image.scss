@@ -55,6 +55,7 @@ figure.wp-block-image[class*=-gradient-background] {
 // Block style variations.
 // -----------------------------------------------------------------------------
 
+// Borderless style.
 .wp-block-image.is-style-borderless,
 .wp-block-image.is-style-borderless img {
 	padding: 0 !important;
@@ -63,6 +64,7 @@ figure.wp-block-image[class*=-gradient-background] {
 	outline: none !important;
 }
 
+// Hand-drawn style.
 .wp-block-image[class*=is-style-hand-drawn] img {
 	color: inherit;
 	border: 2px solid currentColor;
@@ -75,37 +77,36 @@ figure.wp-block-image[class*=-gradient-background] {
 	padding: 2px;
 }
 
-.wp-block-image[class*=is-style-hand-drawn] figcaption {
+// We need to target `.wp-element-caption` specifically to overwrite caption
+// styles defined in `theme.json`.
+.wp-block-image.is-style-hand-drawn .wp-element-caption {
 	display: flex;
 	gap: 0.5rem;
 	justify-content: center;
 	align-items: baseline;
 	transform: rotate( 0.5deg );
-
-	&.wp-element-caption {
-		font-family: var( --wp--preset--font-family--handwriting );
-		font-size: var( --wp--preset--font-size--md );
-		line-height: var( --wp--custom--line-height--md );
-	}
+	font-family: var( --wp--preset--font-family--handwriting );
+	font-size: var( --wp--preset--font-size--md );
+	line-height: var( --wp--custom--line-height--md );
 }
 
-.wp-block-image[class*=is-style-hand-drawn] figcaption::before {
+.wp-block-image.is-style-hand-drawn figcaption::before {
 	content: "\2938 ";
 	transform: rotate( 135deg );
 	padding-top: 0.5rem;
 }
 
-figure.wp-block-image[class*=is-style-polaroid] {
+// Polaroid style.
+figure.wp-block-image.is-style-polaroid {
 	padding:          var( --wp--preset--spacing--base );
 	background-color: var( --color-contrast, var( --wp--preset--color--base ) );
 	transition: all 0.5s ease-in-out;
 	overflow: visible;
-
 	background-size: auto !important;
 }
 
 .wp-block-image.is-style-polaroid:where( :not( [class*=gradient-] ) ) {
-	box-shadow: var( --wp--custom--defaults--shadow ), 0 0 8rem rgba( 255, 255, 235, 0.5 ) inset;
+	box-shadow: var( --wp--custom--defaults--shadow ), 0 0 8rem rgb( 255, 255, 235 ) inset;
 }
 
 // todo - shadow colors that inherit.
@@ -114,13 +115,13 @@ figure.wp-block-image[class*=is-style-polaroid] {
 	box-shadow: var( --wp--custom--defaults--shadow );
 }
 
-.wp-block-image[class*=is-style-polaroid] figcaption.wp-element-caption {
+.wp-block-image.is-style-polaroid .wp-element-caption {
 	margin-top: var( --wp--preset--spacing--40 );
 	color: var( --color-base, var( --wp--preset--color--contrast ) );
 	font-family: var( --wp--preset--font-family--handwriting );
 }
 
-.wp-block-image[class*=is-style-polaroid][class*=-gradient-background] {
+.wp-block-image.is-style-polaroid[class*=-gradient-background] {
 	img {
 		padding: 0;
 	}
@@ -132,9 +133,6 @@ figure.wp-block-image[class*=is-style-polaroid] {
 
 .wp-block-image[class*=is-style-tape] {
 	overflow: visible;
-}
-
-.wp-block-image[class*=is-style-tape] {
 	position: relative;
 
 	.wp-element-caption {

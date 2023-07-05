@@ -3,19 +3,25 @@
 
 	<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
 
-	<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"0","bottom":"var:preset|spacing|plus-3"}}},"layout":{"type":"default"}} -->
-	<main class="wp-block-group" style="padding-top:0;padding-bottom:var(--wp--preset--spacing--plus-3)">
 
-<!-- wp:group {"tagName":"article","style":{"spacing":{"blockGap":"var:preset|spacing|plus-4"}},"layout":{"type":"default"}} -->
-<article class="wp-block-group"><!-- wp:cover {"useFeaturedImage":true,"dimRatio":50,"overlayColor":"contrast","align":"full","layout":{"type":"constrained"}} -->
+	<!-- wp:cover {"useFeaturedImage":true,"dimRatio":50,"overlayColor":"contrast","align":"full","layout":{"type":"constrained"}} -->
 	<div class="wp-block-cover alignfull"><span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"tagName":"header","align":"full","style":{"spacing":{"blockGap":"var:preset|spacing|base"}},"layout":{"type":"default"}} -->
-	<header class="wp-block-group alignfull"><!-- wp:post-title {"textAlign":"center","level":1} /-->
+		<header class="wp-block-group alignfull"><!-- wp:post-title {"textAlign":"center","level":1} /-->
 
-	<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center"}} -->
-	<div class="wp-block-group"><!-- wp:post-date {"textAlign":"left"} /--></div>
-	<!-- /wp:group --></header>
-	<!-- /wp:group --></div></div>
-	<!-- /wp:cover -->
+		<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center"}} -->
+		<div class="wp-block-group"><!-- wp:post-date {"textAlign":"left"} /--></div>
+		<!-- /wp:group --></header>
+		<!-- /wp:group --></div></div>
+		<!-- /wp:cover -->
+
+		<!-- wp:pattern {"slug":"x3p0-ideas/breadcrumbs"} /-->
+
+
+	<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"var:preset|spacing|plus-3","bottom":"var:preset|spacing|plus-3"}}},"layout":{"type":"default"}} -->
+	<main class="wp-block-group" style="padding-top:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3)">
+
+<!-- wp:group {"tagName":"article","layout":{"type":"default"}} -->
+<article class="wp-block-group">
 
 	<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
 

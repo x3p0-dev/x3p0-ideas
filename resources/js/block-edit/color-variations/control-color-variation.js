@@ -7,12 +7,8 @@
  */
 
 // Internal dependencies.
+import { VARIATIONS }         from './constants';
 import { useVariationColors } from './hooks';
-
-import {
-	COLOR_SHADES,
-	VARIATIONS
-} from './constants';
 
 import {
 	getVariationFromClassName,
@@ -31,7 +27,6 @@ import {
 	MenuGroup,
 	MenuItem,
 	ToolbarButton,
-	__experimentalDivider as Divider,
 	__experimentalHStack as HStack,
 	__experimentalZStack as ZStack
 } from '@wordpress/components';

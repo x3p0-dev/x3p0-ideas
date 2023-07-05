@@ -35,6 +35,7 @@ import {
  * />
  */
 export default ( { attributes: { className }, setAttributes } ) => {
+
 	// Get the icons.
 	const icons = getIcons();
 

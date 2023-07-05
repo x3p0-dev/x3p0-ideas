@@ -35,6 +35,7 @@ abbr[title] {
 }
 
 kbd {
+	white-space: nowrap;
 	padding: 0.125em 0.25em;
 	font-family: var( --wp--preset--font-family--mono );
 	font-size: clamp( var( --wp--preset--font-size--sm ), 0.875em, 0.875em );

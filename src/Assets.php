@@ -32,6 +32,17 @@ class Assets implements Bootable
 	}
 
 	/**
+	 * Custom inline CSS size limit.
+	 *
+	 * @hook styles_inline_size_limit
+	 * @since 1.0.0
+	 */
+	public function stylesInlineSizeLimit( int $total_inline_limit ): int
+	{
+		return 50000;
+	}
+
+	/**
 	 * Add editor stylesheets.
 	 *
 	 * @hook  after_setup_theme

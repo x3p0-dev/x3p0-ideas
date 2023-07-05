@@ -19,10 +19,10 @@ import { applyFilters } from '@wordpress/hooks';
  *
  * @returns {array}
  */
-export const getIcons = () => applyFilters(
+export const getIcons = () => Array.from( applyFilters(
 	'x3p0.ideas.blockEdit.separatorIcons',
-	ICONS
-);
+	new Set( ICONS )
+) );
 
 /**
  * @description Gets an icon slug/value if it is included in a class.

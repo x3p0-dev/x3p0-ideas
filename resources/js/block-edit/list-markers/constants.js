@@ -40,12 +40,12 @@ export const UL_MARKERS = [
  * @type {array}
  */
 export const OL_MARKERS = [
-	{ value: 'decimal',              label: __( 'Decimal',                 'x3p0-ideas' ) },
+	{ value: 'decimal',      label: __( 'Decimal',                 'x3p0-ideas' ) },
 	{ value: 'leading-zero', label: __( 'Leading Zero',            'x3p0-ideas' ) },
-	{ value: 'upper-alpha',          label: __( 'Alphabetical: Uppercase', 'x3p0-ideas' ) },
-	{ value: 'lower-alpha',          label: __( 'Alphabetical: Lowercase', 'x3p0-ideas' ) },
-	{ value: 'upper-roman',          label: __( 'Roman: Uppercase',        'x3p0-ideas' ) },
-	{ value: 'lower-roman',          label: __( 'Roman: Lowercase',        'x3p0-ideas' ) }
+	{ value: 'upper-alpha',  label: __( 'Alphabetical: Uppercase', 'x3p0-ideas' ) },
+	{ value: 'lower-alpha',  label: __( 'Alphabetical: Lowercase', 'x3p0-ideas' ) },
+	{ value: 'upper-roman',  label: __( 'Roman: Uppercase',        'x3p0-ideas' ) },
+	{ value: 'lower-roman',  label: __( 'Roman: Lowercase',        'x3p0-ideas' ) }
 ];
 
 /**

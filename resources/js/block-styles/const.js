@@ -95,7 +95,9 @@ export const BLOCK_STYLES = {
 		'icon': __( 'Icon', 'x3p0-ideas' )
 	},
 	'core/post-template': {
-		'flex': __( 'Flexible', 'x3p0-ideas' )
+		'flex': __( 'Flexible', 'x3p0-ideas' ),
+		'featured-col-span-all': __( 'Featured: Full Width', 'x3p0-ideas' ),
+		'featured-col-span-2': __( 'Featured: 2 Columns', 'x3p0-ideas' )
 	},
 	'core/post-terms': {
 		'button': __( 'Button', 'x3p0-ideas' ),
@@ -105,12 +107,12 @@ export const BLOCK_STYLES = {
 		'icon': __( 'Icon', 'x3p0-ideas' )
 	},
 	'core/pullquote': {
-		'brackets':    __( 'Brackets',   'x3p0-ideas' ),
-		'hand-drawn':  __( 'Hand Drawn', 'x3p0-ideas' ),
-		'mark-top':    __( 'Mark: Top',  'x3p0-ideas' )
+		'hand-drawn': __( 'Hand Drawn', 'x3p0-ideas' ),
+		'mark-top':   __( 'Mark: Top',  'x3p0-ideas' )
 	},
 	'core/search': {
-		'sm': __( 'Small', 'x3p0-ideas' )
+		'icon': __( 'Icon', 'x3p0-ideas' ),
+		'sm':   __( 'Small', 'x3p0-ideas' )
 	},
 	'core/separator': {
 		'dashed':     __( 'Dashed',     'x3p0-ideas' ),

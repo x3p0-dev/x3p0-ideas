@@ -16,9 +16,7 @@
 	float: none;
 	margin: 0;
 	padding: 0;
-	font-family: inherit;
-	font-size: inherit;
-	line-height: inherit;
+	font: inherit;
 	text-transform: none;
 }
 
@@ -36,10 +34,8 @@
 		float: none;
 		margin: 0;
 		padding-right: var( --wp--preset--spacing--minus-2 );
-		font-family: inherit;
-		font-size: inherit;
+		font: inherit;
 		font-weight: 700;
-		line-height: inherit;
 	}
 }
 

@@ -9,7 +9,8 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-.wp-block-button {
+// Both classes are needed to overwrite styles in the editor.
+.wp-block-button .wp-block-button__link {
 	code,
 	kbd {
 		border-color: currentColor;

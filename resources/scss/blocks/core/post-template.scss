@@ -73,10 +73,19 @@
 	container-type: inline-size;
 }
 
-
 // -----------------------------------------------------------------------------
 // Block style variations.
 // -----------------------------------------------------------------------------
+@media ( min-width: 40rem ) {
+	.wp-block-post-template.is-style-featured-col-span-2:where( :not( .columns-1 ) ) {
+		.wp-block-post:first-of-type {
+			grid-column: 1 / span 2;
+		}
+	}
+}
+.wp-block-post-template.is-style-featured-col-span-all .wp-block-post:first-child {
+	grid-column: 1 / -1;
+}
 
 .wp-block-post-template.is-style-flex {
 	display: flex !important;

@@ -21,16 +21,36 @@ label:has( :where( input[type="checkbox"], input[type="radio"] ) ) {
 	text-transform: none;
 }
 
+
+label:has(
+	+ input:focus,
+	+ textarea:focus,
+	+ select:focus,
+	input:focus,
+	textarea:focus,
+	select:focus
+),
+.wp-block-search__label:has( + .wp-block-search__inside-wrapper > .wp-block-search__input:focus ) {
+	color: var( --color-contrast, var( --wp--preset--color--primary-contrast ) );
+}
+
+
 // Adds form element styles, which aren't yet supported in `theme.json`.
-input,
+input:where( :not( [type=checkbox] ):not( [type=radio ] ) ),
 select,
 textarea,
 :where( .wp-block-search__button-inside .wp-block-search__inside-wrapper ),
 .wp-block-search__input,
-.wp-block-post-comments-form :is( input:not( .wp-element-button ), textarea ) {
+.wp-block-post-comments-form :is(
+	input:not( [type=checkbox] ):not( [type=radio ] ):not( .wp-element-button ),
+	textarea
+) {
+	appearance: none;
 	padding: var( --wp--preset--spacing--minus-3 ) var( --wp--preset--spacing--minus-1 );
 	font-family: inherit;
 	font-size: inherit;
+	//font-size: var( --wp--preset--font-size--sm );
+	//line-height: 1;
 	font-style: normal;
 	font-weight: 400;
 	line-height: inherit;
@@ -46,6 +66,26 @@ textarea,
 		outline: 2px solid var( --wp--preset--color--primary-contrast );
 		outline-offset: 2px;
 	}
+}
+
+textarea,
+.wp-block-post-comments-form .comment-form-comment textarea {
+	//font-size: var( --wp--preset--font-size--sm );
+	//line-height: var( --wp--custom--line-height--sm );
+}
+
+select {
+	cursor: pointer;
+	// Recreate the arrow with a linear-gradient.
+	// https://codepen.io/vkjgr/pen/VYMeXp
+	background-image:
+		linear-gradient( 45deg, transparent 50%, currentColor 50% ),
+		linear-gradient( 135deg, currentColor 50%, transparent 50% );
+	background-position:
+		calc( 100% - 1.25em ) center,
+		calc( 100% - 0.9375em ) center;
+	background-size: 0.3125em 0.3125em, 0.3125em 0.3125em;
+	background-repeat: no-repeat;
 }
 
 ::placeholder {

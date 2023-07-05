@@ -32,9 +32,11 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item,
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container,
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-page-list {
+.wp-block-navigation__responsive-container.is-menu-open :is(
+	.wp-block-navigation-item,
+	.wp-block-navigation__container,
+	.wp-block-page-list
+) {
 	--navigation-layout-justification-setting: flex-start;
 }
 
@@ -69,6 +71,7 @@
 	.wp-block-navigation-item {
 		transition: all 0.5s ease-in-out;
 	}
+
 	.wp-block-navigation-item__content {
 		transition: none;
 	}
@@ -80,31 +83,25 @@
 	}
 }
 
-.wp-block-navigation__submenu-icon {
-	//transition: all 0.5s ease-in-out;
-}
 .wp-block-navigation__submenu-container .has-child .wp-block-navigation__submenu-icon {
 	margin-left: 1rem;
 	margin-right: 1rem;
 }
 
 .wp-block-navigation-submenu .wp-block-navigation__submenu-container {
-	padding: 0.25rem 0;
-	padding: 16px;
+	padding: 1rem;
 }
 
-.wp-block-navigation-submenu li {
-	border-radius: inherit;
-}
-
-:where( .wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-item a:not( .wp-element-button ) ),
-:where( .wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-submenu a:not( .wp-element-button ) ),
-:where( .wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-submenu button.wp-block-navigation-item__content ),
-:where( .wp-block-navigation .wp-block-navigation__submenu-container .wp-block-pages-list__item button.wp-block-navigation-item__content ) {
-	padding: 0.25rem 1rem;
+:where( .wp-block-navigation .wp-block-navigation__submenu-container :where(
+	.wp-block-navigation-item a:not( .wp-element-button ),
+	.wp-block-navigation-submenu a:not( .wp-element-button ),
+	.wp-block-navigation-submenu button.wp-block-navigation-item__content,
+	.wp-block-pages-list__item button.wp-block-navigation-item__content
+) ) {
 	padding: 0.5rem 1rem;
 }
 
+.wp-block-navigation-submenu li,
 :where( .wp-block-navigation__submenu-container .wp-block-navigation-item a:not( .wp-element-button ) ) {
 	border-radius: inherit;
 }

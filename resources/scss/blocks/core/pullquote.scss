@@ -87,14 +87,6 @@
 
 // Figure element needed to overwrite styles in editor.
 
-figure.wp-block-pullquote.is-style-brackets {
-	padding: var( --wp--style--block-gap );
-	border: 1rem solid var( --color-contrast, var( --wp--preset--color--contrast ) );
-	border-bottom-color: transparent;
-	border-top-color: transparent;
-	border-radius: 20%;
-}
-
 figure.wp-block-pullquote.is-style-hand-drawn {
 	padding: var( --wp--style--block-gap ) 0;
 	font-family: var( --wp--preset--font-family--handwriting );

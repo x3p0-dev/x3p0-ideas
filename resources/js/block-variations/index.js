@@ -16,7 +16,7 @@ import { registerBlockVariation } from '@wordpress/blocks';
 // a way to disable custom spacing sizes.
 registerBlockVariation( 'core/spacer', {
 	name:       'x3p0/theme-spacer',
-	title:      __( 'Spacer (Theme)', 'x3p0-ideas' ),
+	title:      __( 'Spacer', 'x3p0-ideas' ),
 	isDefault:  true,
 	keywords:   [ 'space', 'spacer', 'spacing' ],
 	attributes: {
