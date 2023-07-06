@@ -30,7 +30,9 @@ class Autoload
 	public static function autoload( string $class ): void
 	{
 		// Bail if the class is not in our namespace.
-		if ( 0 !== strpos( $class, __NAMESPACE__ ) ) {
+		// Note: `str_starts_with()` is a PHP 8 function, but WordPress
+		// has a compat function for it.
+		if ( ! str_starts_with( $class, __NAMESPACE__ ) ) {
 			return;
 		}
 
