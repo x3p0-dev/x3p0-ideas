@@ -130,6 +130,7 @@ class Patterns implements Bootable
 			'postTypes'     => 'Post Types',
 			'inserter'      => 'Inserter',
 			'templateTypes' => 'Template Types',
+			'source'        => 'Source'
 		];
 
 		$data = get_file_data( $file, $default_headers );
@@ -169,6 +170,9 @@ class Patterns implements Bootable
 			'Pattern description',
 			$text_domain
 		);
+
+		// Add the pattern source (WordPress 6.3).
+		$data['source'] = $data['source'] ? $data['source'] : 'theme';
 
 		// Handles properties that should be arrays (delineated by a
 		// comma in the file header).
