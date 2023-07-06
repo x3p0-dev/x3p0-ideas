@@ -95,9 +95,8 @@ export const BLOCK_STYLES = {
 		'icon': __( 'Icon', 'x3p0-ideas' )
 	},
 	'core/post-template': {
-		'flex': __( 'Flexible', 'x3p0-ideas' ),
-		'featured-col-span-all': __( 'Featured: Full Width', 'x3p0-ideas' ),
-		'featured-col-span-2': __( 'Featured: 2 Columns', 'x3p0-ideas' )
+		'flex':                  __( 'Flexible', 'x3p0-ideas' ),
+		'featured-col-span-all': __( 'Featured: Full Width', 'x3p0-ideas' )
 	},
 	'core/post-terms': {
 		'button': __( 'Button', 'x3p0-ideas' ),

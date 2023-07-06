@@ -76,17 +76,13 @@
 // -----------------------------------------------------------------------------
 // Block style variations.
 // -----------------------------------------------------------------------------
-@media ( min-width: 40rem ) {
-	.wp-block-post-template.is-style-featured-col-span-2:where( :not( .columns-1 ) ) {
-		.wp-block-post:first-of-type {
-			grid-column: 1 / span 2;
-		}
-	}
-}
-.wp-block-post-template.is-style-featured-col-span-all .wp-block-post:first-child {
+
+// Full-width featured post.
+.wp-block-post-template-is-layout-grid.is-style-featured-col-span-all .wp-block-post:first-child {
 	grid-column: 1 / -1;
 }
 
+// Flexbox style.
 .wp-block-post-template.is-style-flex {
 	display: flex !important;
 	flex-wrap: wrap;
@@ -95,7 +91,6 @@
 .is-style-flex > .wp-block-post {
 	flex: 1 100%;
 }
-
 
 @media ( min-width: 40rem ) {
 	.is-style-flex.columns-2 > .wp-block-post {
@@ -118,11 +113,4 @@
 		min-width: 13rem;
 		flex-basis: calc( 16.77% - 2rem );
 	}
-}
-
-@media ( min-width: 64rem ) {
-
-	//.is-style-flex.columns-4 > .wp-block-post { min-width: 16rem; }
-	//.is-style-flex.columns-5 > .wp-block-post { min-width: 12rem; }
-	//.is-style-flex.columns-6 > .wp-block-post { min-width: 13rem; }
 }
