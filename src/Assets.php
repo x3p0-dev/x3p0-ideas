@@ -20,6 +20,22 @@ class Assets implements Bootable
 	use HookAnnotation;
 
 	/**
+	 * Stores the supported block namespaces.
+	 *
+	 * @since 1.0.0
+	 */
+	protected $block_namespaces = [
+		'core'
+	];
+
+	/**
+	 * Inline CSS limit.
+	 *
+	 * @since 1.0.0
+	 */
+	protected int $inline_css_limit = 50000;
+
+	/**
 	 * Boots the component, running its actions/filters.
 	 *
 	 * @since 1.0.0
@@ -40,7 +56,9 @@ class Assets implements Bootable
 	 */
 	public function stylesInlineSizeLimit( int $total_inline_limit ): int
 	{
-		return 50000 < $total_inline_limit ? $total_inline_limit : 5000;
+		return $this->inline_css_limit > $total_inline_limit
+		       ? $this->inline_css_limit
+		       : $total_inline_limit;
 	}
 
 	/**
@@ -116,9 +134,10 @@ class Assets implements Bootable
 	public function enqueueBlockStyles(): void
 	{
 		// Get the block namespace paths.
-		$paths = [
-			get_parent_theme_file_path( 'public/css/blocks/core' )
-		];
+		$paths = array_map(
+			fn( $namespace ) => get_parent_theme_file_path( "public/css/blocks/{$namespace}" ),
+			$this->block_namespaces
+		);
 
 		// Loop through each of the block namespace paths, get their
 		// stylesheets, and enqueue them.
@@ -126,7 +145,7 @@ class Assets implements Bootable
 			$files = new FilesystemIterator( $path );
 
 			foreach ( $files as $file ) {
-				if ( 'css' === $file->getExtension() ) {
+				if ( ! $file->isDir() && 'css' === $file->getExtension() ) {
 					$this->enqueueBlockStyle(
 						basename( $path ),
 						$file->getBasename( '.css' )
