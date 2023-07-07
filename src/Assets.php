@@ -11,6 +11,7 @@
 
 namespace X3P0\Ideas;
 
+use FilesystemIterator;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\HookAnnotation;
 
@@ -114,34 +115,53 @@ class Assets implements Bootable
 	 */
 	public function enqueueBlockStyles(): void
 	{
-		$namespace = 'core';
+		// Get the block namespace paths.
+		$paths = [
+			get_parent_theme_file_path( 'public/css/blocks/core' )
+		];
 
-		// Gets all the block stylesheets.
-		$files = glob( get_parent_theme_file_path( "public/css/blocks/{$namespace}/*.css" ) );
+		// Loop through each of the block namespace paths, get their
+		// stylesheets, and enqueue them.
+		foreach ( $paths as $path ) {
+			$files = new FilesystemIterator( $path );
 
-		foreach ( $files as $file ) {
-
-			// Gets the filename without the path or extension.
-			$slug = str_replace( [
-				get_parent_theme_file_path( "public/css/blocks/{$namespace}/" ),
-				'.css'
-			], '', $file );
-
-			// Sanitize the name to make sure it contains only
-			// characters allowed in a block type name.
-			$slug = preg_replace( '/[^a-z0-9-]/', '', strtolower( $slug ) );
-
-			// Get the asset file.
-			$asset = include get_parent_theme_file_path( "public/css/blocks/{$namespace}/{$slug}.asset.php" );
-
-			// Register the block style.
-			wp_enqueue_block_style( "{$namespace}/{$slug}", [
-				'handle' => "x3p0-ideas-block-{$namespace}-{$slug}",
-				'src'    => get_parent_theme_file_uri( "public/css/blocks/{$namespace}/{$slug}.css"  ),
-				'path'   => get_parent_theme_file_path( "public/css/blocks/{$namespace}/{$slug}.css" ),
-				'deps'   => $asset['dependencies'],
-				'ver'    => $asset['version']
-			] );
+			foreach ( $files as $file ) {
+				if ( 'css' === $file->getExtension() ) {
+					$this->enqueueBlockStyle(
+						basename( $path ),
+						$file->getBasename( '.css' )
+					);
+				}
+			}
 		}
+	}
+
+	/**
+	 * Enqueues an individual block stylesheet based on a given block
+	 * namespace and slug.
+	 *
+	 * @since 1.0.0
+	 */
+	private function enqueueBlockStyle( string $namespace, string $slug ): void
+	{
+		// Build a relative path and URL string.
+		$relative = "public/css/blocks/{$namespace}/{$slug}";
+
+		// Bail if the asset file doesn't exist.
+		if ( ! file_exists( get_parent_theme_file_path( "{$relative}.asset.php" ) ) ) {
+			return;
+		}
+
+		// Get the asset file.
+		$asset = include get_parent_theme_file_path( "{$relative}.asset.php" );
+
+		// Register the block style.
+		wp_enqueue_block_style( "{$namespace}/{$slug}", [
+			'handle' => "x3p0-ideas-block-{$namespace}-{$slug}",
+			'src'    => get_parent_theme_file_uri( "{$relative}.css"  ),
+			'path'   => get_parent_theme_file_path( "{$relative}.css" ),
+			'deps'   => $asset['dependencies'],
+			'ver'    => $asset['version']
+		] );
 	}
 }
