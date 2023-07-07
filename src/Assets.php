@@ -24,7 +24,7 @@ class Assets implements Bootable
 	 *
 	 * @since 1.0.0
 	 */
-	protected $block_namespaces = [
+	protected array $block_namespaces = [
 		'core'
 	];
 
