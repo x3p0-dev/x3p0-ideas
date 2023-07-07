@@ -1241,7 +1241,7 @@
 	"customTemplates": [
 		{
 			"name": "template-canvas",
-			"title": "Custom: Canvas",
+			"title": "Template: Canvas",
 			"postTypes": [
 				"page",
 				"post"
@@ -1249,21 +1249,21 @@
 		},
 		{
 			"name": "template-post-faded-cover",
-			"title": "Post: Faded Cover",
+			"title": "Single Post: Faded Cover",
 			"postTypes": [
 				"post"
 			]
 		},
 		{
 			"name": "template-post-featured",
-			"title": "Post: Featured",
+			"title": "Single Post: Featured",
 			"postTypes": [
 				"post"
 			]
 		},
 		{
 			"name": "template-post-featured-cover",
-			"title": "Post: Featured Cover",
+			"title": "Single Post: Featured Cover",
 			"postTypes": [
 				"post"
 			]
