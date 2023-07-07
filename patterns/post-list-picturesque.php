@@ -6,6 +6,7 @@
  * Categories: posts
  * Keywords: query, posts
  * Block Types: core/query
+ * Viewport Width: 1152
  */
 ?>
 <!-- wp:query {"queryId":0,"query":{"perPage":"3","pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"align":"full","layout":{"type":"constrained"}} -->
