@@ -37,6 +37,7 @@ function theme( string $component = '' )
 			'blocks'         => new Blocks(),
 			'patterns'       => new Patterns(),
 			'template-parts' => new TemplateParts(),
+			'templates'      => new Templates(),
 			'image-sizes'    => new ImageSizes(),
 			'theme-config'   => new ThemeConfig()
 		] );
