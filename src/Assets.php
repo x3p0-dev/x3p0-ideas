@@ -39,7 +39,7 @@ class Assets implements Bootable
 	 */
 	public function stylesInlineSizeLimit( int $total_inline_limit ): int
 	{
-		return 50000;
+		return 50000 < $total_inline_limit ? $total_inline_limit : 5000;
 	}
 
 	/**
