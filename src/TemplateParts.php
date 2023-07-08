@@ -32,11 +32,16 @@ class TemplateParts implements Bootable
 	 * Filter the core template part areas to add custom areas needed for
 	 * the theme.
 	 *
+	 * Core only supports four icons at the moment, so the `icon` field
+	 * value doesn't actually work. But the value must be defined to avoid
+	 * an error.
+	 * @link https://github.com/WordPress/gutenberg/issues/36814
+	 *
 	 * @hook  default_wp_template_part_areas
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/default_wp_template_part_areas/
 	 */
-	public function filterAreas( array $default_area_definitions ): array
+	public function areaDefinitions( array $default_area_definitions ): array
 	{
 		$default_area_definitions[] = [
 			'area'        => 'loop',
@@ -51,10 +56,6 @@ class TemplateParts implements Bootable
 			'area_tag'    => 'section',
 			'label'       => __( 'Comments', 'x3p0-ideas' ),
 			'description' => __( 'The Comments template defines a page area that typically contains the post comments list and form.', 'x3p0-ideas' ),
-			// Core only supports four icons at the moment, so this
-			// one doesn't actually appear. But the value must be
-			// defined to avoid an error.
-			// @link https://github.com/WordPress/gutenberg/issues/36814
 			'icon'        => 'comments'
 		];
 
