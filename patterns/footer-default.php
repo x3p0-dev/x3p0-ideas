@@ -21,15 +21,15 @@
 	</ul>
 	<!-- /wp:social-links -->
 
-	<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"0"}}} -->
+	<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 	<div class="wp-block-group alignwide">
-		<!-- wp:site-title {"level":0,"textAlign":"center","isLink":false,"style":{"typography":{"fontStyle":"normal","fontWeight":"400"}},"fontSize":"md"} /-->
+		<!-- wp:site-title {"level":2,"isLink":false,"className":"is-style-normalize"} /-->
 
 		<?php if ( ! WP_Block_Type_Registry::get_instance()->is_registered( 'x3p0/powered-by' ) ) : ?>
-			<!-- wp:x3p0/powered-by {"poweredByType":"emoji","textAlign":"center"} /-->
+			<!-- wp:x3p0/powered-by {"poweredByType":"emoji"} /-->
 		<?php else : ?>
-			<!-- wp:paragraph {"align":"center"} -->
-			<p class="has-text-align-center"><?php esc_html_e( 'Powered by WordPress, crazy ideas, and passion.', 'x3p0-ideas' ) ?></p>
+			<!-- wp:paragraph -->
+			<p><?php esc_html_e( 'Powered by WordPress, crazy ideas, and passion.', 'x3p0-ideas' ) ?></p>
 			<!-- /wp:paragraph -->
 		<?php endif ?>
 	</div>

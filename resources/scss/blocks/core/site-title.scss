@@ -1,0 +1,19 @@
+////
+/// Site Title block CSS.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+// -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+.wp-block-site-title.is-style-normalize,
+.wp-block-site-title.is-style-normalize > a {
+	font: inherit;
+	background: revert;
+	border: revert;
+	text-transform: inherit;
+	letter-spacing: revert;
+}

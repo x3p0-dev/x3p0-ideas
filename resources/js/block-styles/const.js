@@ -123,6 +123,9 @@ export const BLOCK_STYLES = {
 		'hand-drawn': __( 'Hand Drawn', 'x3p0-ideas' ),
 		'outline':    __( 'Outline',    'x3p0-ideas' )
 	},
+	'core/site-title': {
+		'normalize': __( 'Normalize', 'x3p0-ideas' )
+	},
 	'core/table-of-contents': {
 		'chapters':          __( 'Chapters', 'x3p0-ideas' ),
 		'chapters-and-subs': __( 'Chapters With Sub-headings', 'x3p0-ideas' ),
