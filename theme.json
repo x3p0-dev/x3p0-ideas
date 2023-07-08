@@ -713,7 +713,8 @@
 			"lineHeight": false,
 			"textColumns": true,
 			"textDecoration": true,
-			"textTransform": true
+			"textTransform": true,
+			"writingMode": true
 		},
 		"useRootPaddingAwareAlignments": true
 	},
