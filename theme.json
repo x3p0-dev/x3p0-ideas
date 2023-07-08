@@ -1281,6 +1281,11 @@
 			"title": "Footer"
 		},
 		{
+			"area": "loop",
+			"name": "loop",
+			"title": "Loop"
+		},
+		{
 			"area": "comments",
 			"name": "comments",
 			"title": "Comments"

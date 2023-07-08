@@ -39,6 +39,14 @@ class TemplateParts implements Bootable
 	public function filterAreas( array $default_area_definitions ): array
 	{
 		$default_area_definitions[] = [
+			'area'        => 'loop',
+			'area_tag'    => 'div',
+			'label'       => __( 'Loop', 'x3p0-ideas' ),
+			'description' => __( 'The Loop template defines an area that typically contains the post list on archive-type pages.', 'x3p0-ideas' ),
+			'icon'        => 'layout'
+		];
+
+		$default_area_definitions[] = [
 			'area'        => 'comments',
 			'area_tag'    => 'section',
 			'label'       => __( 'Comments', 'x3p0-ideas' ),
