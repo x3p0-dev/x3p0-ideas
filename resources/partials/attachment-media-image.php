@@ -14,14 +14,16 @@ $alt     = trim( strip_tags( get_post_meta( get_the_ID(), '_wp_attachment_image_
 ?>
 <!-- wp:group {"align":"full","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull">
+
 	<!-- wp:image {"align":"wide","id":<?= absint( get_the_ID() ) ?>,"sizeSlug":"x3p0-16x9-lg","linkDestination":"none"} -->
 	<figure class="wp-block-image alignwide size-x3p0-16x9-lg">
 		<img src="<?= esc_url( $image[0] ) ?>" alt="<?= esc_attr( $alt ) ?>" />
-		<?= $caption ? sprintf(
-			'<figcaption class="wp-element-caption">%s</figcaption>',
-			esc_html( $caption )
-		) : '' ?>
+
+		<?php if ( $caption ) : ?>
+			<figcaption class="wp-element-caption"><?= $caption ?></figcaption>
+		<?php endif ?>
 	</figure>
 	<!-- /wp:image -->
+
 </div>
 <!-- /wp:group -->
