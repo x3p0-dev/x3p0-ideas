@@ -7,6 +7,7 @@
 
 
 a:where( :not( :focus ) ),
+input[type=submit],
 input:focus,
 textarea:focus {
 	transition: 0.5s ease-in-out;
@@ -16,6 +17,13 @@ textarea:focus {
 a {
 	text-underline-offset: 0.078125em !important;
 	text-decoration-thickness: min( 0.078125em, 3px ) !important;
+
+	img { transition: box-shadow 0.5s ease-in-out; }
+
+	&:hover img {
+		box-shadow:
+		0 0 16px -3px var(--wp--preset--color--neutral-muted);
+	}
 }
 
 abbr[title] {
@@ -77,6 +85,12 @@ s {
 sup,
 sub {
 	font-size: 0.8125em;
+
+	// Text decoration doesn't really work well for most cases here, such as
+	// single-character footnotes. It can overpower the link itself.
+	a {
+		text-decoration: none;
+	}
 }
 
 p {

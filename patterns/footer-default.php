@@ -23,7 +23,7 @@
 
 	<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 	<div class="wp-block-group alignwide">
-		<!-- wp:site-title {"level":2,"isLink":false,"className":"is-style-normalize"} /-->
+		<!-- wp:site-title {"level":0,"isLink":false,"className":"is-style-normalize"} /-->
 
 		<?php if ( ! WP_Block_Type_Registry::get_instance()->is_registered( 'x3p0/powered-by' ) ) : ?>
 			<!-- wp:x3p0/powered-by {"poweredByType":"emoji"} /-->
@@ -34,5 +34,6 @@
 		<?php endif ?>
 	</div>
 	<!-- /wp:group -->
+
 </div>
 <!-- /wp:group -->

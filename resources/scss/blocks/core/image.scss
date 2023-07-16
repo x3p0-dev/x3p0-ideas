@@ -37,7 +37,8 @@ figure.wp-block-image[class*=-gradient-background] {
 
 	// Note that the editor has an extra wrapper `<div>` around the image,
 	// so we must inherit here so that we can inherit on the `<img>` tag.
-	> div {
+	> div,
+	> a {
 		background: inherit;
 	}
 
@@ -183,6 +184,14 @@ figure.wp-block-image.is-style-polaroid {
 	bottom: unset !important;
 	left: unset !important;
 	transform: rotate( 45deg);
+}
+
+// Adjustments for image lightbox.
+.wp-lightbox-overlay.active .wp-block-image[class*=is-style-tape] {
+	&::before,
+	&::after {
+		display: none;
+	}
 }
 
 // Editor fix. The tape styles use the `::after` pseudo-element as part

@@ -1058,6 +1058,7 @@
 				}
 			},
 			"core/navigation": {
+				"css": "& .wp-block-navigation__responsive-container-close svg { width: 30px; height: 30px; } & .wp-block-navigation__responsive-container-open svg { width: 30px; height: 30px; }",
 				"spacing": {
 					"blockGap": "var( --wp--preset--spacing--base ) var( --wp--preset--spacing--plus-3 )"
 				},
@@ -1088,7 +1089,6 @@
 				"border": {
 					"radius": "var:custom|defaults|border-radius"
 				},
-				"shadow": "var:custom|defaults|shadow",
 				"css": "& img {\n\tbox-shadow: var( --wp--custom--defaults--shadow );\n}"
 			},
 			"core/pullquote": {
@@ -1235,7 +1235,7 @@
 					"fontSize": "var:preset|font-size|sm",
 					"lineHeight": "var:custom|line-height|sm"
 				},
-				"css": "& a { font-weight: 500; }"
+				"css": "& a { font-weight: 500; text-decoration: none; } & a:hover { text-decoration: underline; }"
 			}
 		}
 	},

@@ -1,1 +1,11 @@
-.wp-block-comments .wp-block-comments-title{-webkit-margin-before:max(1.5em,3rem);-webkit-margin-after:.5em;margin-block-end:.5em;margin-block-start:max(1.5em,3rem)}
+/*!***********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./resources/scss/blocks/core/comments-title.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************/
+.wp-block-comments .wp-block-comments-title {
+  -webkit-margin-before: max(1.5em, 3rem);
+          margin-block-start: max(1.5em, 3rem);
+  -webkit-margin-after: 0.5em;
+          margin-block-end: 0.5em;
+}
+
+/*# sourceMappingURL=comments-title.css.map*/

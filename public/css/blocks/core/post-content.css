@@ -1,1 +1,40 @@
-:where(.wp-block-post-content :where(ul,ol)){-webkit-padding-start:var(--wp--preset--spacing--plus-4);padding-inline-start:var(--wp--preset--spacing--plus-4)}:where(.wp-block-post-content :where(li+li,li>ul,li>ol)){-webkit-margin-before:var(--wp--preset--spacing--minus-1);margin-block-start:var(--wp--preset--spacing--minus-1)}:where(.wp-block-post-content :is(ul,ol).wp-block-list li),:where(.wp-block-post-content :where(ul,ol):not([class*=wp-block-]) li){padding-left:.25em}.wp-block-post-content>:is(h1,h2,h3,h4,h5,h6){-webkit-margin-after:.5em;margin-block-end:.5em}.wp-block-post-content>*+:is(h1,h2,h3,h4,h5,h6){-webkit-margin-before:max(1.5em,3rem);margin-block-start:max(1.5em,3rem)}.wp-block-post-content>:is(h1,h2,h3,h4,h5,h6)+*{-webkit-margin-before:0;margin-block-start:0}.wp-block-post-content>:is(h1,h2,h3,h4,h5,h6)+:where(hr,.wp-block-spacer),.wp-block-post-content>:where(hr,.wp-block-spacer)+:is(h1,h2,h3,h4,h5,h6){-webkit-margin-before:var(--wp--style--block-gap);margin-block-start:var(--wp--style--block-gap)}
+/*!*********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./resources/scss/blocks/core/post-content.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************/
+:where(.wp-block-post-content :where(ul, ol)) {
+  -webkit-padding-start: var(--wp--preset--spacing--plus-4);
+          padding-inline-start: var(--wp--preset--spacing--plus-4);
+}
+
+:where(.wp-block-post-content :where(li + li, li > ul, li > ol)) {
+  -webkit-margin-before: var(--wp--preset--spacing--minus-1);
+          margin-block-start: var(--wp--preset--spacing--minus-1);
+}
+
+:where(.wp-block-post-content :where(ul, ol):not([class*=wp-block-]) li),
+:where(.wp-block-post-content :is(ul, ol).wp-block-list li) {
+  padding-left: 0.25em;
+}
+
+.wp-block-post-content > :is(h1, h2, h3, h4, h5, h6) {
+  -webkit-margin-after: 0.5em;
+          margin-block-end: 0.5em;
+}
+
+.wp-block-post-content > * + :is(h1, h2, h3, h4, h5, h6) {
+  -webkit-margin-before: max(1.5em, 3rem);
+          margin-block-start: max(1.5em, 3rem);
+}
+
+.wp-block-post-content > :is(h1, h2, h3, h4, h5, h6) + * {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+}
+
+.wp-block-post-content > :where(hr, .wp-block-spacer) + :is(h1, h2, h3, h4, h5, h6),
+.wp-block-post-content > :is(h1, h2, h3, h4, h5, h6) + :where(hr, .wp-block-spacer) {
+  -webkit-margin-before: var(--wp--style--block-gap);
+          margin-block-start: var(--wp--style--block-gap);
+}
+
+/*# sourceMappingURL=post-content.css.map*/

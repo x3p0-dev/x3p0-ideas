@@ -1,19 +1,14 @@
 <!-- wp:group {"style":{"spacing":{"blockGap":"0","margin":{"top":"0"}}},"layout":{"type":"default"}} -->
 <div class="wp-block-group" style="margin-top:0">
 
-<!-- wp:cover {"useFeaturedImage":true,"hasParallax":true,"minHeightUnit":"vh","gradient":"180-deg-transparent-base","isDark":false,"style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"blockGap":"0"}},"textColor":"contrast","className":"is-style-align-items-stretch","layout":{"type":"default"}} -->
-<div class="wp-block-cover is-light has-parallax is-style-align-items-stretch has-contrast-color has-text-color" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim has-background-gradient has-180-deg-transparent-base-gradient-background"></span><div class="wp-block-cover__inner-container">
+<!-- wp:cover {"useFeaturedImage":true,"hasParallax":true,"minHeightUnit":"vh","gradient":"180-deg-transparent-base","isDark":false,"style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"blockGap":"0"}},"textColor":"contrast","className":"is-style-stretch","layout":{"type":"default"}} -->
+<div class="wp-block-cover is-light has-parallax is-style-stretch has-contrast-color has-text-color" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim has-background-gradient has-180-deg-transparent-base-gradient-background"></span><div class="wp-block-cover__inner-container">
+	<!-- wp:template-part {"slug":"header","tagName":"header","className":"site-header"} /-->
 
-	<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+	<!-- wp:x3p0/breadcrumbs {"align":"full","style":{"spacing":{"padding":{"top":"var(\u002d\u002dtheme-spacing\u002d\u002dbase)","bottom":"var(\u002d\u002dtheme-spacing\u002d\u002dbase)","left":"var:preset|spacing|plus-3","right":"var:preset|spacing|plus-3"}}},"gradient":"90-deg-neutral-base-transparent"} /-->
 
-	<!-- wp:pattern {"slug":"x3p0-ideas/breadcrumbs"} /-->
-
-	<!-- wp:spacer {"height":"var:preset|spacing|plus-10"} -->
-	<div style="height:var(--wp--preset--spacing--plus-10)" aria-hidden="true" class="wp-block-spacer"></div>
-	<!-- /wp:spacer -->
-
-	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|base","padding":{"top":"var:preset|spacing|plus-3","right":"var:preset|spacing|plus-3","bottom":"var:preset|spacing|plus-3","left":"var:preset|spacing|plus-3"}}},"layout":{"type":"default"}} -->
-	<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)"><!-- wp:post-title {"textAlign":"center","level":1} /-->
+	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|base","padding":{"top":"var:preset|spacing|plus-3","right":"var:preset|spacing|plus-3","bottom":"var:preset|spacing|plus-3","left":"var:preset|spacing|plus-3"}},"dimensions":{"minHeight":"65vh"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center","verticalAlignment":"bottom"}} -->
+	<div class="wp-block-group" style="min-height:65vh;padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)"><!-- wp:post-title {"level":1} /-->
 
 	<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"},"fontFamily":"tertiary"} -->
 	<div class="wp-block-group has-tertiary-font-family"><!-- wp:post-date /--></div>
@@ -27,7 +22,7 @@
 		<!-- wp:group {"tagName":"article","layout":{"type":"default"}} -->
 		<article class="wp-block-group">
 
-			<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+			<!-- wp:post-content {"layout":{"type":"constrained"},"className":"is-style-prose"} /-->
 
 			<!-- wp:group {"tagName":"footer","layout":{"type":"constrained"},"fontFamily":"tertiary"} -->
 			<footer class="wp-block-group has-tertiary-font-family">
@@ -43,16 +38,12 @@
 		</article>
 		<!-- /wp:group -->
 
-		<!-- wp:group {"layout":{"type":"constrained"}} -->
-		<div class="wp-block-group">
-			<!-- wp:template-part {"slug":"comments","tagName":"section"} /-->
-		</div>
-		<!-- /wp:group -->
+		<!-- wp:template-part {"slug":"comments","tagName":"section","align":"full"} /-->
 
 	</main>
 	<!-- /wp:group -->
 
-	<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
+	<!-- wp:template-part {"slug":"footer","tagName":"footer","className":"site-footer"} /-->
 
 </div>
 <!-- /wp:group -->

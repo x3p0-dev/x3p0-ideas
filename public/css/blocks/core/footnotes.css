@@ -1,1 +1,22 @@
-.fn{font-size:.8125em}.wp-block-footnotes a[href^="#"]{text-decoration:none}ol.wp-block-footnotes.is-style-pull{padding-left:1em}
+/*!******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./resources/scss/blocks/core/footnotes.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************/
+sup.fn,
+sup[data-fn] {
+  font-size: 0.8125em;
+  font-weight: 700;
+}
+sup.fn a,
+sup[data-fn] a {
+  text-decoration: none;
+}
+
+.wp-block-footnotes a[href^="#"] {
+  text-decoration: none;
+}
+
+ol.wp-block-footnotes.is-style-pull {
+  padding-left: 1em;
+}
+
+/*# sourceMappingURL=footnotes.css.map*/

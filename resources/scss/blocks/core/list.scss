@@ -6,6 +6,22 @@
 ////
 
 // -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+ol li::marker {
+	font-size: 0.875em;
+}
+
+li::marker {
+	color: var( --color-muted, var( --wp--preset--color--neutral-muted ) );
+}
+
+[class*=has-text-color-] li::marker {
+	color: inherit;
+}
+
+// -----------------------------------------------------------------------------
 // Block style variations.
 // -----------------------------------------------------------------------------
 
@@ -34,16 +50,22 @@
 	li { padding-left: 0.75em; }
 }
 
-ol li::marker {
-	font-size: 0.875em;
-}
+// Horizontal list style.
+:where( ul, ol ).is-style-horizontal {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: var( --wp--preset--spacing--minus-2 ) var( --wp--preset--spacing--base );
+	list-style: none;
+	padding: 0;
 
-li::marker {
-	color: var( --color-muted, var( --wp--preset--color--neutral-muted ) );
-}
+	li {
+		padding: 0;
+		margin: 0;
 
-[class*=has-text-color-] li::marker {
-	color: inherit;
+		// Kill nested lists with horizontal display.
+		ul { display: none; }
+	}
 }
 
 // -----------------------------------------------------------------------------

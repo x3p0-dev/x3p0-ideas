@@ -1,1 +1,19 @@
-.editor-styles-wrapper .is-layout-constrained>*+.wp-block-query-pagination.block-editor-block-list__layout{-webkit-margin-before:var(--wp--style--block-gap);margin-block-start:var(--wp--style--block-gap)}.wp-block-query-pagination>[class*=wp-block-query-pagination-]{margin:0}.has-global-padding>.alignfull>.wp-block-query-pagination{box-sizing:content-box;padding-left:var(--wp--style--root--padding-left);padding-right:var(--wp--style--root--padding-right)}
+/*!*************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./resources/scss/blocks/core/query-pagination.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************/
+.editor-styles-wrapper .is-layout-constrained > * + .wp-block-query-pagination.block-editor-block-list__layout {
+  -webkit-margin-before: var(--wp--style--block-gap);
+          margin-block-start: var(--wp--style--block-gap);
+}
+
+.wp-block-query-pagination > [class*=wp-block-query-pagination-] {
+  margin: 0;
+}
+
+.has-global-padding > .alignfull > .wp-block-query-pagination {
+  box-sizing: content-box;
+  padding-right: var(--wp--style--root--padding-right);
+  padding-left: var(--wp--style--root--padding-left);
+}
+
+/*# sourceMappingURL=query-pagination.css.map*/

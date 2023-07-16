@@ -33,8 +33,8 @@ $image = get_theme_file_uri( 'public/media/purple-sunset.webp' );
 		<img class="wp-block-cover__image-background wp-image-2268" alt="" src="<?= esc_url( $image ) ?>" style="object-position:50% 100%" data-object-fit="cover" data-object-position="50% 100%"/>
 
 		<div class="wp-block-cover__inner-container">
-			<!-- wp:paragraph {"align":"center","fontSize":"large"} -->
-			<p class="has-text-align-center has-large-font-size"></p>
+			<!-- wp:paragraph {"align":"center"} -->
+			<p class="has-text-align-center"></p>
 			<!-- /wp:paragraph -->
 		</div>
 

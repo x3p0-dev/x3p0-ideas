@@ -1,1 +1,27 @@
-.wp-block-heading.has-background{padding:0}.editor-styles-wrapper .wp-block-heading.is-style-clip-text,.wp-block-heading.is-style-clip-text{background-clip:text!important;-webkit-background-clip:text!important;color:transparent!important}.wp-block-heading.is-style-clip-text:not(.has-background){background:var(--wp--preset--gradient--cool-to-warm-spectrum)}.wp-block-heading.is-style-clip-text>*{color:inherit!important}.wp-block-heading.is-style-text-wrap-balance{text-wrap:balance}
+/*!****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./resources/scss/blocks/core/heading.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************/
+.wp-block-heading.has-background {
+  padding: 0;
+}
+
+.wp-block-heading.is-style-clip-text,
+.editor-styles-wrapper .wp-block-heading.is-style-clip-text {
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  color: transparent !important;
+}
+
+.wp-block-heading.is-style-clip-text:not(.has-background) {
+  background: var(--wp--preset--gradient--cool-to-warm-spectrum);
+}
+
+.wp-block-heading.is-style-clip-text > * {
+  color: inherit !important;
+}
+
+.wp-block-heading.is-style-text-wrap-balance {
+  text-wrap: balance;
+}
+
+/*# sourceMappingURL=heading.css.map*/

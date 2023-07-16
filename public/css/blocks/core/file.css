@@ -1,1 +1,30 @@
-.wp-block-file,.wp-block-file__content-wrapper{align-items:center;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:var(--wp--style--block-gap);justify-content:space-between}.wp-block-file .components-resizable-box__container{margin:0}.wp-block-file__embed{margin-bottom:0}.wp-block-file:not(.wp-element-button){font-size:inherit}.wp-block-file__button:active,.wp-block-file__button:focus,.wp-block-file__button:hover,.wp-block-file__button:visited{opacity:1}
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./resources/scss/blocks/core/file.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
+.wp-block-file,
+.wp-block-file__content-wrapper {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--wp--style--block-gap);
+}
+
+.wp-block-file .components-resizable-box__container {
+  margin: 0;
+}
+
+.wp-block-file__embed {
+  margin-bottom: 0;
+}
+
+.wp-block-file:not(.wp-element-button) {
+  font-size: inherit;
+}
+
+.wp-block-file__button:active, .wp-block-file__button:focus, .wp-block-file__button:hover, .wp-block-file__button:visited {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=file.css.map*/

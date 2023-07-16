@@ -58,6 +58,10 @@ module.exports = {
 					{
 						from: './resources/media',
 						to:   './media'
+					},
+					{
+						from: './resources/partials',
+						to:   './partials'
 					}
 				]
 			} )

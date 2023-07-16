@@ -1,1 +1,22 @@
-.wp-block-comment-author-name.is-style-icon{align-items:center;display:flex;gap:var(--wp--preset--spacing--minus-3)}.wp-block-comment-author-name.is-style-icon:before{background:currentColor;content:"";display:inline-block;height:1em;-webkit-mask:no-repeat 50% 50% url("data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" viewBox=\"0 -960 960 960\" width=\"24\"><path d=\"M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z\"/></svg>");mask:no-repeat 50% 50% url("data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" viewBox=\"0 -960 960 960\" width=\"24\"><path d=\"M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z\"/></svg>");-webkit-mask-size:cover;mask-size:cover;width:1em}
+/*!****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./resources/scss/blocks/core/comment-author-name.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************/
+.wp-block-comment-author-name.is-style-icon {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--wp--preset--spacing--minus-3);
+  align-items: center;
+}
+.wp-block-comment-author-name.is-style-icon::before {
+  content: "";
+  -webkit-mask: no-repeat 50% 50% url("data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" viewBox=\"0 -960 960 960\" width=\"24\"><path d=\"M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z\"/></svg>");
+          mask: no-repeat 50% 50% url("data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" viewBox=\"0 -960 960 960\" width=\"24\"><path d=\"M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z\"/></svg>");
+  -webkit-mask-size: cover;
+          mask-size: cover;
+  background: currentColor;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+
+/*# sourceMappingURL=comment-author-name.css.map*/

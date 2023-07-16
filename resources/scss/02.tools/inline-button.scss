@@ -1,0 +1,30 @@
+////
+/// Inline Icon mixin.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+@mixin small() {
+	@include base();
+	padding: 0.125rem 0.5rem;
+	//padding: var( --wp--preset--spacing--minus-5 ) var( --wp--preset--spacing--minus-2 );
+}
+
+@mixin medium() {
+	@include base();
+	padding: var( --wp--preset--spacing--minus-3 ) var( --wp--preset--spacing--base );
+}
+
+@mixin base() {
+	display: inline-block;
+	text-decoration: none;
+	color: var( --wp--preset--color--primary-base );
+	background-color: var( --wp--preset--color--primary-contrast );
+	border-radius: var( --wp--custom--defaults--border-radius );
+
+	&:hover,
+	&:focus {
+		background-color: var( --wp--preset--color--primary-emphasis );
+	}
+}

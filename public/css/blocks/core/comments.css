@@ -1,1 +1,17 @@
-.wp-block-comments>*{-webkit-margin-before:0;-webkit-margin-after:0;margin-block-end:0;margin-block-start:0}.editor-styles-wrapper .wp-block-comments>*+.wp-block.wp-block-comments-pagination,.wp-block-comments>*+*{-webkit-margin-before:var(--wp--custom--block-gap--comments,var(--wp--style--block-gap));margin-block-start:var(--wp--custom--block-gap--comments,var(--wp--style--block-gap))}
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./resources/scss/blocks/core/comments.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+.wp-block-comments > * {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+.wp-block-comments > * + *,
+.editor-styles-wrapper .wp-block-comments > * + .wp-block.wp-block-comments-pagination {
+  -webkit-margin-before: var(--wp--custom--block-gap--comments, var(--wp--style--block-gap));
+          margin-block-start: var(--wp--custom--block-gap--comments, var(--wp--style--block-gap));
+}
+
+/*# sourceMappingURL=comments.css.map*/

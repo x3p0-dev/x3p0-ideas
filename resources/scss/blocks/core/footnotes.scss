@@ -10,8 +10,14 @@
 // -----------------------------------------------------------------------------
 
 // Matches the footnote link to the `<sup>` element.
-.fn {
+sup.fn,
+sup[data-fn] {
 	font-size: 0.8125em;
+	font-weight: 700;
+
+	a {
+		text-decoration: none;
+	}
 }
 
 // Do not remove quotes around `#` mark, which will break in the Sass processor.

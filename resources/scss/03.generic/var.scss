@@ -21,6 +21,7 @@
 // by the theme's spacing preset. So, let's just call this "future proofing" in
 // the hopes that this is handled better down the line.
 body {
+	// "Minus" scale: https://www.fluid-type-scale.com/calculate?minFontSize=17&minWidth=480&minRatio=1.5&maxFontSize=19&maxWidth=1024&maxRatio=1.5&steps=minus-4%2Cminus-3%2Cminus-2%2Cminus-1%2Cbase%2Cplus-1%2Cplus-2%2Cplus-3%2Cplus-4%2Cplus-4%2Cplus-5%2Cplus-6%2Cplus-7%2Cplus-8%2Cplus-9%2Cplus-10&baseStep=base&prefix=theme-spacing-&decimals=2&useRems=on&remValue=16&previewFont=Inter&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground&previewWidth=264
 	--theme-spacing--minus-3: clamp( 0.31rem,  0.11cqi +  0.28rem,  0.35rem );
 	--theme-spacing--minus-2: clamp( 0.47rem,  0.16cqi +  0.42rem,  0.53rem );
 	--theme-spacing--minus-1: clamp( 0.71rem,  0.25cqi +  0.63rem,  0.79rem );

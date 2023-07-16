@@ -1,7 +1,7 @@
 <!-- wp:group {"style":{"spacing":{"blockGap":"0","margin":{"top":"0"}}},"layout":{"type":"default"}} -->
 <div class="wp-block-group" style="margin-top:0">
 
-	<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+	<!-- wp:template-part {"slug":"header","tagName":"header","className":"site-header"} /-->
 
 	<!-- wp:pattern {"slug":"x3p0-ideas/breadcrumbs"} /-->
 
@@ -22,7 +22,7 @@
 			</header>
 			<!-- /wp:group -->
 
-			<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+			<!-- wp:post-content {"layout":{"type":"constrained"},"className":"is-style-prose"} /-->
 
 			<!-- wp:group {"tagName":"footer","layout":{"type":"constrained"},"fontFamily":"tertiary"} -->
 			<footer class="wp-block-group has-tertiary-font-family">
@@ -38,16 +38,12 @@
 		</article>
 		<!-- /wp:group -->
 
-		<!-- wp:group {"layout":{"type":"constrained"}} -->
-		<div class="wp-block-group">
-			<!-- wp:template-part {"slug":"comments","tagName":"section"} /-->
-		</div>
-		<!-- /wp:group -->
+		<!-- wp:template-part {"slug":"comments","tagName":"section","align":"full"} /-->
 
 	</main>
 	<!-- /wp:group -->
 
-	<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
+	<!-- wp:template-part {"slug":"footer","tagName":"footer","className":"site-footer"} /-->
 
 </div>
 <!-- /wp:group -->

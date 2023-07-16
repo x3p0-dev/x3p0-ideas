@@ -1,1 +1,25 @@
-.wp-block-post-author{gap:var(--wp--preset--spacing--base)}.wp-block-post-author__avatar img{border-radius:9999px}.wp-block-post-author__avatar,.wp-block-post-author__bio{margin:0}.wp-block-post-author__content{display:flex;flex-wrap:wrap;gap:var(--wp--preset--spacing--base) .5ch}.wp-block-post-author__byline,.wp-block-post-author__name{width:auto}.wp-block-post-author__bio,.wp-block-post-author__byline,.wp-block-post-author__name{font-size:inherit}
+/*!********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./resources/scss/blocks/core/post-author.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************/
+.wp-block-post-author {
+  gap: var(--wp--preset--spacing--base);
+}
+.wp-block-post-author__avatar img {
+  border-radius: 9999px;
+}
+.wp-block-post-author__avatar, .wp-block-post-author__bio {
+  margin: 0;
+}
+.wp-block-post-author__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--wp--preset--spacing--base) 0.5ch;
+}
+.wp-block-post-author__byline, .wp-block-post-author__name {
+  width: auto;
+}
+.wp-block-post-author__byline, .wp-block-post-author__name, .wp-block-post-author__bio {
+  font-size: inherit;
+}
+
+/*# sourceMappingURL=post-author.css.map*/

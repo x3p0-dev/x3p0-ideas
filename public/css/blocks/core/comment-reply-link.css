@@ -1,1 +1,22 @@
-.wp-block-comment-reply-link.is-style-icon{align-items:center;display:flex;gap:var(--wp--preset--spacing--minus-3)}.wp-block-comment-reply-link.is-style-icon:before{background:currentColor;content:"";display:inline-block;height:1em;-webkit-mask:no-repeat 50% 50% url("data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" viewBox=\"0 -960 960 960\" width=\"24\"><path d=\"M760-200v-160q0-50-35-85t-85-35H272l144 144-56 56-240-240 240-240 56 56-144 144h368q83 0 141.5 58.5T840-360v160h-80Z\"/></svg>");mask:no-repeat 50% 50% url("data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" viewBox=\"0 -960 960 960\" width=\"24\"><path d=\"M760-200v-160q0-50-35-85t-85-35H272l144 144-56 56-240-240 240-240 56 56-144 144h368q83 0 141.5 58.5T840-360v160h-80Z\"/></svg>");-webkit-mask-size:cover;mask-size:cover;width:1em}
+/*!***************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./resources/scss/blocks/core/comment-reply-link.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************/
+.wp-block-comment-reply-link.is-style-icon {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--wp--preset--spacing--minus-3);
+  align-items: center;
+}
+.wp-block-comment-reply-link.is-style-icon::before {
+  content: "";
+  -webkit-mask: no-repeat 50% 50% url("data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" viewBox=\"0 -960 960 960\" width=\"24\"><path d=\"M760-200v-160q0-50-35-85t-85-35H272l144 144-56 56-240-240 240-240 56 56-144 144h368q83 0 141.5 58.5T840-360v160h-80Z\"/></svg>");
+          mask: no-repeat 50% 50% url("data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" viewBox=\"0 -960 960 960\" width=\"24\"><path d=\"M760-200v-160q0-50-35-85t-85-35H272l144 144-56 56-240-240 240-240 56 56-144 144h368q83 0 141.5 58.5T840-360v160h-80Z\"/></svg>");
+  -webkit-mask-size: cover;
+          mask-size: cover;
+  background: currentColor;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+
+/*# sourceMappingURL=comment-reply-link.css.map*/

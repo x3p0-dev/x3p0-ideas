@@ -57,6 +57,10 @@ export const BLOCK_STYLES = {
 		'clip-text':         __( 'Clip Text', 'x3p0-ideas' ),
 		'text-wrap-balance': __( 'Wrap: Balance', 'x3p0-ideas' )
 	},
+	'core/home-link': {
+		'button': __( 'Button', 'x3p0-ideas' ),
+		'icon':   __( 'Icon',   'x3p0-ideas' )
+	},
 	'core/image': {
 		'borderless':   __( 'Borderless',    'x3p0-ideas' ),
 		'hand-drawn':   __( 'Hand-Drawn',    'x3p0-ideas' ),
@@ -69,9 +73,11 @@ export const BLOCK_STYLES = {
 		'gap-normal':  __( 'Gap: Normal',  'x3p0-ideas' ),
 		'gap-relaxed': __( 'Gap: Relaxed', 'x3p0-ideas' ),
 		'gap-loose':   __( 'Gap: Loose',   'x3p0-ideas' ),
+		'horizontal':  __( 'Horizontal',   'x3p0-ideas' )
 	},
 	'core/loginout': {
-		'icon': __( 'Icon', 'x3p0-ideas' )
+		'button': __( 'Button', 'x3p0-ideas' ),
+		'icon':   __( 'Icon',   'x3p0-ideas' )
 	},
 	'core/paragraph': {
 		'indent':  __( 'Indent',  'x3p0-ideas' ),
@@ -100,7 +106,7 @@ export const BLOCK_STYLES = {
 	},
 	'core/post-terms': {
 		'button': __( 'Button', 'x3p0-ideas' ),
-		'icon': __( 'Icon', 'x3p0-ideas' )
+		'icon':   __( 'Icon',   'x3p0-ideas' )
 	},
 	'core/post-time-to-read': {
 		'icon': __( 'Icon', 'x3p0-ideas' )

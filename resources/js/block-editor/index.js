@@ -13,6 +13,8 @@ addFilter(
 	withImageSize
 );
 
+/*
+// added in GB 16.2
 addFilter(
 	'blocks.registerBlockType',
 	'x3p0/ideas/block/footnotes',
@@ -25,6 +27,7 @@ addFilter(
 		return settings;
 	}
 );
+*/
 
 /*
 addFilter(

@@ -1,1 +1,17 @@
-:where(.wp-block-columns.has-background){padding:0}@media(max-width:782px){.wp-block-columns.is-style-reverse-stack{flex-wrap:wrap-reverse!important}}
+/*!****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./resources/scss/blocks/core/columns.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * Breakpoints & Media Queries
+ */
+:where(.wp-block-columns.has-background) {
+  padding: 0;
+}
+
+@media (max-width: 782px) {
+  .wp-block-columns.is-style-reverse-stack {
+    flex-wrap: wrap-reverse !important;
+  }
+}
+
+/*# sourceMappingURL=columns.css.map*/

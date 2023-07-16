@@ -9,8 +9,9 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-.wp-block-site-title.is-style-normalize,
-.wp-block-site-title.is-style-normalize > a {
+// Addition of `:is()` to work in the editor.
+:is( h1, h2, h3, h4, h5, h6, p ).wp-block-site-title.is-style-normalize,
+:is( h1, h2, h3, h4, h5, h6, p ).wp-block-site-title.is-style-normalize > a {
 	font: inherit;
 	background: revert;
 	border: revert;

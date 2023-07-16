@@ -5,6 +5,7 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
+@use '../../02.tools/inline-button';
 @use '../../02.tools/inline-icon';
 
 // -----------------------------------------------------------------------------
@@ -45,6 +46,13 @@
 	}
 }
 
+// Navigation settings are not applied to the login/out link.
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-loginout  {
+	align-items: var( --navigation-layout-justification-setting, initial );
+	display: flex;
+	flex-direction: column;
+}
+
 // -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
@@ -65,6 +73,10 @@
 // -----------------------------------------------------------------------------
 // Block style variations.
 // -----------------------------------------------------------------------------
+
+.wp-block-loginout.is-style-button:not( .has-login-form ) a {
+	@include inline-button.medium();
+}
 
 .wp-block-loginout.is-style-icon {
 

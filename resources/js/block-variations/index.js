@@ -23,6 +23,6 @@ registerBlockVariation( 'core/spacer', {
 		height: 'var:preset|spacing|plus-3'
 	},
 	isActive: ( blockAttributes ) =>
-		blockAttributes.height.includes( 'var:preset|spacing|' )
+		blockAttributes.height && blockAttributes.height.includes( 'var:preset|spacing|' )
 } );
 

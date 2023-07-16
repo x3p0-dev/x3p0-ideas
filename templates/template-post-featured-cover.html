@@ -1,9 +1,9 @@
 <!-- wp:group {"style":{"spacing":{"blockGap":"0","margin":{"top":"0"}}},"layout":{"type":"default"}} -->
 <div class="wp-block-group" style="margin-top:0">
 
-<!-- wp:cover {"useFeaturedImage":true,"hasParallax":true,"dimRatio":50,"overlayColor":"contrast","minHeightUnit":"vh","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}},"className":"is-style-align-items-stretch","layout":{"type":"default"}} -->
-<div class="wp-block-cover has-parallax is-style-align-items-stretch" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim"></span><div class="wp-block-cover__inner-container">
-	<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+<!-- wp:cover {"useFeaturedImage":true,"hasParallax":true,"dimRatio":50,"overlayColor":"contrast","minHeightUnit":"vh","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}},"className":"is-style-stretch","layout":{"type":"default"}} -->
+<div class="wp-block-cover has-parallax is-style-stretch" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim"></span><div class="wp-block-cover__inner-container">
+	<!-- wp:template-part {"slug":"header","tagName":"header","className":"site-header"} /-->
 
 	<!-- wp:spacer {"height":"var:preset|spacing|plus-7"} -->
 	<div style="height:var(--wp--preset--spacing--plus-7)" aria-hidden="true" class="wp-block-spacer"></div>
@@ -26,7 +26,7 @@
 		<!-- wp:group {"tagName":"article","layout":{"type":"default"}} -->
 		<article class="wp-block-group">
 
-			<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+			<!-- wp:post-content {"layout":{"type":"constrained"},"className":"is-style-prose"} /-->
 
 			<!-- wp:group {"tagName":"footer","layout":{"type":"constrained"},"fontFamily":"tertiary"} -->
 			<footer class="wp-block-group has-tertiary-font-family">
@@ -42,16 +42,12 @@
 		</article>
 		<!-- /wp:group -->
 
-		<!-- wp:group {"layout":{"type":"constrained"}} -->
-		<div class="wp-block-group">
-			<!-- wp:template-part {"slug":"comments","tagName":"section"} /-->
-		</div>
-		<!-- /wp:group -->
+		<!-- wp:template-part {"slug":"comments","tagName":"section","align":"full"} /-->
 
 	</main>
 	<!-- /wp:group -->
 
-	<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
+	<!-- wp:template-part {"slug":"footer","tagName":"footer","className":"site-footer"} /-->
 
 </div>
 <!-- /wp:group -->

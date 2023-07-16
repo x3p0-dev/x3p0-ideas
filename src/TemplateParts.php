@@ -43,22 +43,26 @@ class TemplateParts implements Bootable
 	 */
 	public function areaDefinitions( array $default_area_definitions ): array
 	{
-		$default_area_definitions[] = [
-			'area'        => 'loop',
-			'area_tag'    => 'div',
-			'label'       => __( 'Loop', 'x3p0-ideas' ),
-			'description' => __( 'The Loop template defines an area that typically contains the post list on archive-type pages.', 'x3p0-ideas' ),
-			'icon'        => 'layout'
+		$custom_areas = [
+			[
+				'area'        => 'loop',
+				'area_tag'    => 'div',
+				'label'       => __( 'Loop', 'x3p0-ideas' ),
+				'description' => __( 'The Loop template part defines an area that contains the post list on blog, search results, and other archive-type pages.', 'x3p0-ideas' ),
+				'icon'        => 'layout'
+			],
+			[
+				'area'        => 'comments',
+				'area_tag'    => 'section',
+				'label'       => __( 'Comments', 'x3p0-ideas' ),
+				'description' => __( 'The Comments template part defines a page area that contains the post comments list and form.', 'x3p0-ideas' ),
+				'icon'        => 'comments'
+			]
 		];
 
-		$default_area_definitions[] = [
-			'area'        => 'comments',
-			'area_tag'    => 'section',
-			'label'       => __( 'Comments', 'x3p0-ideas' ),
-			'description' => __( 'The Comments template defines a page area that typically contains the post comments list and form.', 'x3p0-ideas' ),
-			'icon'        => 'comments'
+		return [
+			...$default_area_definitions,
+			...$custom_areas
 		];
-
-		return $default_area_definitions;
 	}
 }

@@ -1,1 +1,14 @@
-.wp-block-rss.has-excerpts .wp-block-rss__item+.wp-block-rss__item{-webkit-margin-before:var(--wp--style--block-gap);margin-block-start:var(--wp--style--block-gap)}.wp-block-rss__item-author,.wp-block-rss__item-publish-date{font-size:inherit}
+/*!************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./resources/scss/blocks/core/rss.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************/
+.wp-block-rss.has-excerpts .wp-block-rss__item + .wp-block-rss__item {
+  -webkit-margin-before: var(--wp--style--block-gap);
+          margin-block-start: var(--wp--style--block-gap);
+}
+
+.wp-block-rss__item-author,
+.wp-block-rss__item-publish-date {
+  font-size: inherit;
+}
+
+/*# sourceMappingURL=rss.css.map*/

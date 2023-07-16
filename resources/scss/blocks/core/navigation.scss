@@ -10,8 +10,10 @@
 // -----------------------------------------------------------------------------
 
 // Zeroes out WP's inherited gap between items in the mobile menu.
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content,
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item,
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__container {
-	gap: 0;
+	gap: var( --wp--preset--spacing--minus-2 );
 }
 
 // Zeroes out WP's default padding for submenus in the mobile menu.
@@ -32,6 +34,18 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
+.wp-block-navigation__responsive-container-open,
+.wp-block-navigation__responsive-container-close {
+	// @todo remove important
+	// editor overwrites this.
+	color: var(--wp--preset--color--base) !important;
+	background: var(--wp--preset--color--contrast);
+	min-height: 38px; // Needed for the text-only button
+	padding: 0.25rem 0.5rem !important;
+	border-radius: var( --wp--custom--defaults--border-radius );
+}
+
+.wp-block-navigation__responsive-container.is-menu-open,
 .wp-block-navigation__responsive-container.is-menu-open :is(
 	.wp-block-navigation-item,
 	.wp-block-navigation__container,
