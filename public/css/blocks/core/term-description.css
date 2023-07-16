@@ -1,16 +1,1 @@
-/*!*************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./resources/scss/blocks/core/term-description.scss ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************/
-.wp-block-term-description > :is(*, p) {
-  -webkit-margin-before: 0;
-          margin-block-start: 0;
-  -webkit-margin-after: 0;
-          margin-block-end: 0;
-}
-
-.wp-block-term-description > * + :is(*, p) {
-  -webkit-margin-before: var(--wp--custom--block-gap--term-description, var(--wp--style--block-gap));
-          margin-block-start: var(--wp--custom--block-gap--term-description, var(--wp--style--block-gap));
-}
-
-/*# sourceMappingURL=term-description.css.map*/
+.wp-block-term-description>:is(*,p){-webkit-margin-before:0;-webkit-margin-after:0;margin-block-end:0;margin-block-start:0}.wp-block-term-description>*+:is(*,p){-webkit-margin-before:var(--wp--custom--block-gap--term-description,var(--wp--style--block-gap));margin-block-start:var(--wp--custom--block-gap--term-description,var(--wp--style--block-gap))}

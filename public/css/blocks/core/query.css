@@ -1,9 +1,1 @@
-/*!**************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./resources/scss/blocks/core/query.scss ***!
-  \**************************************************************************************************************************************************************************************************************************************************************/
-.wp-block-template-part.loop.alignfull .wp-block-query {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-/*# sourceMappingURL=query.css.map*/
+.wp-block-template-part.loop.alignfull .wp-block-query{padding-left:0;padding-right:0}

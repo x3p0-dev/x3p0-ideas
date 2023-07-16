@@ -1,13 +1,1 @@
-/*!************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./resources/scss/blocks/core/latest-comments.scss ***!
-  \************************************************************************************************************************************************************************************************************************************************************************/
-.wp-block-latest-comments__comment-date {
-  font-size: inherit;
-}
-
-.wp-block-latest-comments__comment-excerpt p {
-  font-size: inherit;
-  margin: var(--wp--preset--spacing--minus-3) 0 0;
-}
-
-/*# sourceMappingURL=latest-comments.css.map*/
+.wp-block-latest-comments__comment-date{font-size:inherit}.wp-block-latest-comments__comment-excerpt p{font-size:inherit;margin:var(--wp--preset--spacing--minus-3) 0 0}
