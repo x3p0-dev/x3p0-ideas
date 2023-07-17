@@ -8,7 +8,6 @@
 @mixin small() {
 	@include base();
 	padding: 0.125rem 0.5rem;
-	//padding: var( --wp--preset--spacing--minus-5 ) var( --wp--preset--spacing--minus-2 );
 }
 
 @mixin medium() {

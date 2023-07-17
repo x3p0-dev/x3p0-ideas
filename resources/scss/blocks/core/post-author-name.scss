@@ -5,15 +5,13 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
-@use '../../02.tools/inline-icon';
+@use '../../tools/icon';
+@use '../../tools/inline-icon';
 
 // -----------------------------------------------------------------------------
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-// https://fonts.google.com/icons?icon.query=pencil&selected=Material+Symbols+Sharp:edit:FILL@1;wght@400;GRAD@0;opsz@24&icon.style=Sharp&icon.platform=web
 .wp-block-post-author-name.is-style-icon {
-	@include inline-icon.prefix(
-		url( 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M772-603 602-771l113-113 169 169-112 112ZM120-120v-170l424-424 170 170-424 424H120Z"/></svg>' )
-	);
+	@include inline-icon.prefix( icon.get-url( 'pencil' ) );
 }

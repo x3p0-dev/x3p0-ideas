@@ -5,7 +5,8 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
-@use '../../02.tools/inline-icon';
+@use '../../tools/icon';
+@use '../../tools/inline-icon';
 
 // -----------------------------------------------------------------------------
 // Block fixes.
@@ -91,30 +92,19 @@
 	.comment-form-email,
 	.comment-form-url {
 		label {
-			@include inline-icon.prefix(
-				url( 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M240-400h480v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM80-240v-640h800v800L720-240H80Z"/></svg>' )
-			);
+			@include inline-icon.prefix( icon.get-url( 'comment' ) );
 		}
 	}
 
-	// https://fonts.google.com/icons?icon.query=user&selected=Material+Symbols+Sharp:person:FILL@1;wght@400;GRAD@0;opsz@24&icon.style=Sharp&icon.platform=web
 	.comment-form-author label::before {
-		@include inline-icon.modify(
-			url( 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z"/></svg>' )
-		);
+		@include inline-icon.modify( icon.get-url( 'user' ) );
 	}
 
-	// https://fonts.google.com/icons?icon.query=email&selected=Material+Symbols+Sharp:mail:FILL@1;wght@400;GRAD@0;opsz@24&icon.style=Sharp&icon.platform=web
 	.comment-form-email label::before {
-		@include inline-icon.modify(
-			url( 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M80-160v-640h800v640H80Zm400-280 320-200v-80L480-520 160-720v80l320 200Z"/></svg>' )
-		);
+		@include inline-icon.modify( icon.get-url( 'mail' ) );
 	}
 
-	// https://fonts.google.com/icons?icon.query=url&selected=Material+Symbols+Sharp:link:FILL@1;wght@400;GRAD@0;opsz@24&icon.style=Sharp&icon.platform=web
 	.comment-form-url label::before {
-		@include inline-icon.modify(
-			url( 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M440-280H280q-83 0-141.5-58.5T80-480q0-83 58.5-141.5T280-680h160v80H280q-50 0-85 35t-35 85q0 50 35 85t85 35h160v80ZM320-440v-80h320v80H320Zm200 160v-80h160q50 0 85-35t35-85q0-50-35-85t-85-35H520v-80h160q83 0 141.5 58.5T880-480q0 83-58.5 141.5T680-280H520Z"/></svg>' )
-		);
+		@include inline-icon.modify( icon.get-url( 'link' ) );
 	}
 }

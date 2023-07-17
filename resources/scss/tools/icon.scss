@@ -1,0 +1,14 @@
+////
+/// Icon functions.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+@use '../settings/icons';
+
+@function get-url( $name ) {
+	$icon: map-get( icons.$icons, $name );
+
+	@return url( icons.$data-svg-prefix + $icon );
+}

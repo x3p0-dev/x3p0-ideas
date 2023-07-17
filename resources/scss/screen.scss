@@ -9,26 +9,15 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
-// Settings.
-// @use '01.settings/';
-
-// Tools.
-// @use '02.settings/';
-
-// Generic.
-@use '03.generic/var.scss';
-
-// Elements.
-@use '04.elements/root.scss';
-@use '04.elements/inline.scss';
-@use '04.elements/forms.scss';
-
-// Components.
-@use '05.components/element-button.scss';
+// Base/Defaults.
+@use 'base/var.scss';
+@use 'base/root.scss';
+@use 'base/inline.scss';
+@use 'base/forms.scss';
 
 // Utilities.
-@use '09.utilities/color-variation.scss';
-@use '09.utilities/helpers.scss';
-@use '09.utilities/rich-text.scss';
-@use '09.utilities/text-shadow.scss';
-@use '09.utilities/typography.scss';
+@use 'utilities/color-variation.scss';
+@use 'utilities/helpers.scss';
+@use 'utilities/rich-text.scss';
+@use 'utilities/text-shadow.scss';
+@use 'utilities/typography.scss';
