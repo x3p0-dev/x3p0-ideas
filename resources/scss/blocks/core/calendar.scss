@@ -44,7 +44,7 @@
 
 .wp-block-calendar {
 	padding: 0 var( --wp--preset--spacing--plus-3 ) var( --wp--preset--spacing--base );
-//	border: 1px solid var( --wp--preset--color--neutral-subtle );
+	border: 1px solid var( --wp--preset--color--neutral-base );
 	border-top: 4px solid var( --color--contrast, var( --wp--preset--color--primary-contrast ) );
 	box-sizing: border-box;
 	background: var( --wp--preset--color--neutral-base );
@@ -61,7 +61,6 @@
 .wp-block-calendar table caption {
 	padding: var( --wp--preset--spacing--base ) var( --wp--preset--spacing--plus-3 );
 	margin: 0 calc( -1 * var( --wp--preset--spacing--plus-3 ) ) var( --wp--preset--spacing--base );
-	font-family: var( --wp--preset--font-family--primary );
 	background: var( --wp--preset--color--base );
 }
 

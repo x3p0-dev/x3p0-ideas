@@ -53,6 +53,10 @@ export const BLOCK_STYLES = {
 	'core/gallery': {
 		'classic': __( 'Classic', 'x3p0-ideas' )
 	},
+	'core/group': {
+		'card': __( 'Card', 'x3p0-ideas' ),
+		'hand-drawn': __( 'Hand Drawn', 'x3p0-ideas' )
+	},
 	'core/heading': {
 		'clip-text':         __( 'Clip Text', 'x3p0-ideas' ),
 		'text-wrap-balance': __( 'Wrap: Balance', 'x3p0-ideas' )

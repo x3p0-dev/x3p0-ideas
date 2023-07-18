@@ -1,0 +1,26 @@
+////
+/// Group block CSS.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+.wp-block-group.is-style-card {
+	overflow: hidden;
+	border: 1px solid var( --wp--preset--color--neutral-subtle );
+	border-radius: var( --wp--custom--defaults--border-radius, 0 );
+	box-shadow: var( --wp--custom--defaults--shadow );
+}
+
+.wp-block-group.is-style-hand-drawn {
+	overflow: hidden;
+	font-family: var( --wp--preset--font-family--handwriting );
+	padding: var( --wp--custom--spacing--global );
+	border: 2px solid currentColor;
+	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
+	box-shadow: var( --wp--custom--defaults--shadow );
+}
