@@ -9,11 +9,19 @@
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-.wp-block-group.is-style-card {
+.wp-block-group:where( .is-style-box, .is-style-card ) {
 	overflow: hidden;
-	border: 1px solid var( --wp--preset--color--neutral-subtle );
 	border-radius: var( --wp--custom--defaults--border-radius, 0 );
 	box-shadow: var( --wp--custom--defaults--shadow );
+}
+
+.wp-block-group.is-style-box {
+	padding: var( --wp--style--block-gap );
+	background: var( --wp--preset--color--neutral-base );
+}
+
+.wp-block-group.is-style-card {
+	border: 1px solid var( --wp--preset--color--neutral-subtle );
 }
 
 .wp-block-group.is-style-hand-drawn {

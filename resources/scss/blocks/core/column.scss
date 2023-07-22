@@ -26,3 +26,24 @@
 .wp-block-column {
 	container-type: inline-size;
 }
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+.wp-block-column:where( .is-style-box, .is-style-card ) {
+	overflow: hidden;
+	border-radius: var( --wp--custom--defaults--border-radius, 0 );
+	box-shadow: var( --wp--custom--defaults--shadow );
+}
+
+// `.wp-block-columns` is needed to overrule global padding styles.
+.wp-block-columns > .wp-block-column.is-style-box,
+.has-global-padding > .wp-block-columns.alignfull > .wp-block-column.is-style-box {
+	padding: var( --wp--style--block-gap );
+	background: var( --wp--preset--color--neutral-base );
+}
+
+.wp-block-column.is-style-card {
+	border: 1px solid var( --wp--preset--color--neutral-subtle );
+}

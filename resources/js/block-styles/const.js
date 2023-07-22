@@ -25,6 +25,10 @@ export const BLOCK_STYLES = {
 	'core/categories': {
 		'horizontal': __( 'Horizontal', 'x3p0-ideas' )
 	},
+	'core/column': {
+		'box':  __( 'Box',  'x3p0-ideas' ),
+		'card': __( 'Card', 'x3p0-ideas' )
+	},
 	'core/columns': {
 		'reverse-stack': __( 'Reverse Mobile Stack', 'x3p0-ideas' )
 	},
@@ -54,7 +58,8 @@ export const BLOCK_STYLES = {
 		'classic': __( 'Classic', 'x3p0-ideas' )
 	},
 	'core/group': {
-		'card': __( 'Card', 'x3p0-ideas' ),
+		'box':        __( 'Box',        'x3p0-ideas' ),
+		'card':       __( 'Card',       'x3p0-ideas' ),
 		'hand-drawn': __( 'Hand Drawn', 'x3p0-ideas' )
 	},
 	'core/heading': {
