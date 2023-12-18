@@ -8,6 +8,11 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
+.wp-block-separator.has-background[class*=-gradient] {
+	border: none;
+	height: 2px;
+}
+
 // -----------------------------------------------------------------------------
 // Block style variations.
 // -----------------------------------------------------------------------------
@@ -58,6 +63,7 @@ hr.wp-block-separator[class*=has-icon] {
 	justify-content: center;
 	border: none;
 	text-align: center;
+	height: auto;
 
 	// Some characters get cut off. This ensures they are visible.
 	overflow: visible;

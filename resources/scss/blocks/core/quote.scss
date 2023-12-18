@@ -22,6 +22,8 @@
 }
 
 // Faux `blockGap` support.
+// @todo Remove with WP 6.5 support.
+// @link https://github.com/WordPress/gutenberg/pull/56064
 .wp-block-quote > * {
 	margin-block-start: 0;
 	margin-block-end: 0;

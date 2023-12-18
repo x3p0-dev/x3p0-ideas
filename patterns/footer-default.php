@@ -25,7 +25,7 @@
 	<div class="wp-block-group alignwide">
 		<!-- wp:site-title {"level":0,"isLink":false,"className":"is-style-normalize"} /-->
 
-		<?php if ( ! WP_Block_Type_Registry::get_instance()->is_registered( 'x3p0/powered-by' ) ) : ?>
+		<?php if ( WP_Block_Type_Registry::get_instance()->is_registered( 'x3p0/powered-by' ) ) : ?>
 			<!-- wp:x3p0/powered-by {"poweredByType":"emoji"} /-->
 		<?php else : ?>
 			<!-- wp:paragraph -->

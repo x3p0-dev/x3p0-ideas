@@ -1,1 +1,1 @@
-.wp-block-rss.has-excerpts .wp-block-rss__item+.wp-block-rss__item{-webkit-margin-before:var(--wp--style--block-gap);margin-block-start:var(--wp--style--block-gap)}.wp-block-rss__item-author,.wp-block-rss__item-publish-date{font-size:inherit}
+.wp-block-rss.has-excerpts .wp-block-rss__item+.wp-block-rss__item{margin-block-start:var(--wp--style--block-gap)}.wp-block-rss__item-author,.wp-block-rss__item-publish-date{font-size:inherit}

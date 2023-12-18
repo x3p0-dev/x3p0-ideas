@@ -73,6 +73,7 @@ export const BLOCK_STYLES = {
 	'core/image': {
 		'borderless':   __( 'Borderless',    'x3p0-ideas' ),
 		'hand-drawn':   __( 'Hand-Drawn',    'x3p0-ideas' ),
+		'icon':         __( 'Caption Icon',  'x3p0-ideas' ),
 		'polaroid':     __( 'Polaroid',      'x3p0-ideas' ),
 		'tape':         __( 'Tape',          'x3p0-ideas' ),
 		'tape-corners': __( 'Tape: Corners', 'x3p0-ideas' )

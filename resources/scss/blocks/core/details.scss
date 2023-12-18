@@ -13,7 +13,7 @@
 	transition: all 0.5s ease-in-out;
 	//padding: 0 var( --wp--preset--spacing--plus-3 );
 
-	> :not( summary ) {
+	> :where( :not( summary ) ) {
 		margin-left: var( --wp--style--block-gap );
 		margin-right: var( --wp--style--block-gap );
 	}
@@ -26,8 +26,6 @@
 .wp-block-details summary {
 	transition: all 0.5s ease-in-out;
 	box-sizing: border-box;
-	//width: calc( 100% + var( --wp--preset--spacing--plus-3 ) * 2 );
-	//margin: 0 calc( -1 * var( --wp--preset--spacing--plus-3 ) );
 	padding: var( --wp--preset--spacing--base ) var( --wp--style--block-gap );
 	font-weight: 500;
 }
@@ -40,6 +38,13 @@
 		var( --wp--preset--color--neutral-subtle )
 	);
 }
+.wp-block-details summary::marker {
+	content: "+ ";
+}
+
+.wp-block-details[open] summary::marker {
+	content: "- "
+}
 
 .wp-block-details summary::marker {
 	content: none;
@@ -50,6 +55,7 @@
 	float: right;
 	text-align: right;
 }
+
 .wp-block-details[open] summary::after {
 	content: " -"
 }

@@ -2,6 +2,9 @@
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 2,
 	"settings": {
+		"position": {
+			"sticky": false
+		},
 		"border": {
 			"color": true,
 			"radius": true,
@@ -9,7 +12,7 @@
 			"width": true
 		},
 		"color": {
-			"custom": false,
+			"custom": true,
 			"defaultDuotone": false,
 			"defaultGradients": true,
 			"defaultPalette": true,
@@ -406,10 +409,10 @@
 			},
 			"elements": {
 				"formInput": {
-					"color": "var( --wp--preset--color-contrast )",
-					"background": "var( --wp--preset--color--neutral-base )",
-					"borderColor": "var( --wp--preset--color--neutral-subtle )",
-					"placeholderColor": "var( --wp--preset--color--neutral-muted )"
+					"color": "var:preset|color|contrast",
+					"background": "var:preset|color|neutral-base",
+					"borderColor": "var:preset|color|neutral-subtle",
+					"placeholderColor": "var:preset|color|neutral-muted"
 				}
 			},
 			"blocks": {
@@ -487,9 +490,12 @@
 		},
 		"spacing": {
 			"blockGap": true,
-			"customSpacingSize": true,
+			"customSpacingSize": false,
 			"margin": true,
 			"padding": true,
+			"spacingScale": {
+				"steps": 0
+			},
 			"spacingSizes": [
 				{
 					"name": "Fixed: 1px",
@@ -579,13 +585,13 @@
 			]
 		},
 		"typography": {
-			"customFontSize": false,
+			"customFontSize": true,
 			"dropCap": true,
 			"fontFamilies": [
 				{
 					"fontFamily": "Jost, ui-sans-serif, sans-serif",
 					"slug": "primary",
-					"name": "Primary Jost",
+					"name": "Primary (Jost)",
 					"fontFace": [
 						{
 							"fontFamily": "Jost",
@@ -710,7 +716,7 @@
 			"fontStyle": true,
 			"fontWeight": true,
 			"letterSpacing": true,
-			"lineHeight": false,
+			"lineHeight": true,
 			"textColumns": true,
 			"textDecoration": true,
 			"textTransform": true,
@@ -903,7 +909,7 @@
 				"border": {
 					"radius": "9999em"
 				},
-				"shadow": "var:custom|defaults|shadow"
+				"css": "& img { box-shadow: var( --wp--custom--defaults--shadow ); }"
 			},
 			"core/button": {
 				"shadow": "var:custom|defaults|shadow",

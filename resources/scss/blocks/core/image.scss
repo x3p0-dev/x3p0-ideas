@@ -5,6 +5,9 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
+@use '../../tools/icon.scss';
+@use '../../tools/inline-icon';
+
 // -----------------------------------------------------------------------------
 // Block fixes.
 // -----------------------------------------------------------------------------
@@ -96,6 +99,14 @@ figure.wp-block-image[class*=-gradient-background] {
 	transform: rotate( 135deg );
 	padding-top: 0.5rem;
 }
+
+// Icon style.
+.wp-block-image.is-style-icon .wp-element-caption {
+	@include inline-icon.prefix( icon.get-url( 'photo-camera' ) );
+	justify-content: center;
+	gap: 0.5rem;
+}
+
 
 // Polaroid style.
 figure.wp-block-image.is-style-polaroid {

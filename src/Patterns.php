@@ -38,7 +38,7 @@ class Patterns implements Bootable
 	}
 
 	/**
-	 *  Removes theme support for core patterns.
+	 * Removes theme support for core patterns.
 	 *
 	 * @hook  after_setup_theme
 	 * @since 1.0.0
