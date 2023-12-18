@@ -31,10 +31,10 @@ module.exports = {
 	...defaultConfig,
 	...{
 		entry: {
+			...blockStylesheets(),
 			'js/editor':  path.resolve( process.cwd(), 'resources/js',   'editor.js'   ),
 			'css/screen': path.resolve( process.cwd(), 'resources/scss', 'screen.scss' ),
-			'css/editor': path.resolve( process.cwd(), 'resources/scss', 'editor.scss' ),
-			...blockStylesheets()
+			'css/editor': path.resolve( process.cwd(), 'resources/scss', 'editor.scss' )
 		},
 		plugins: [
 			// Very important! Include WP's plugin config or the
