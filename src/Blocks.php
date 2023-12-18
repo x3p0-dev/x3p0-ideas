@@ -31,6 +31,19 @@ class Blocks implements Bootable
 	/**
 	 * Filters block content.
 	 *
+	 * @hook  init
+	 * @since 1.0.0
+	 */
+	public function registerBlockTypes(): void
+	{
+		register_block_type(
+			get_theme_file_path( 'public/blocks/copyright-date' )
+		);
+	}
+
+	/**
+	 * Filters block content.
+	 *
 	 * @hook  render_block
 	 * @since 1.0.0
 	 */

@@ -1,6 +1,6 @@
 // WordPress webpack config.
 const defaultConfig = require( '@wordpress/scripts/config/webpack.config' );
-//const { getWebpackEntryPoints } = require( '@wordpress/scripts/utils/config' );
+const { getWebpackEntryPoints } = require( '@wordpress/scripts/utils/config' );
 
 // Plugins.
 const RemoveEmptyScriptsPlugin = require( 'webpack-remove-empty-scripts' );
@@ -31,6 +31,7 @@ module.exports = {
 	...defaultConfig,
 	...{
 		entry: {
+			...getWebpackEntryPoints(),
 			...blockStylesheets(),
 			'js/editor':  path.resolve( process.cwd(), 'resources/js',   'editor.js'   ),
 			'css/screen': path.resolve( process.cwd(), 'resources/scss', 'screen.scss' ),
