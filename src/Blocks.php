@@ -34,7 +34,11 @@ class Blocks implements Bootable
 	 * @hook  render_block
 	 * @since 1.0.0
 	 */
-	public function renderBlock( string $block_content, array $block, WP_Block $instance ): string
+	public function renderBlock(
+		string $block_content,
+		array $block,
+		WP_Block $instance
+	): string
 	{
 		if ( 'core/calendar' === $block['blockName'] ) {
 			return $this->coreCalendar( $block_content );
