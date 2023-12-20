@@ -15,6 +15,7 @@
  * @param {Object} settings
  * @param {string} name
  */
+/*
 export default ( settings, name ) => {
 	return name === 'core/group' ? Object.assign( {}, settings, {
 		supports: Object.assign( settings.supports ?? {}, {
@@ -24,3 +25,4 @@ export default ( settings, name ) => {
 		} )
 	} ) : settings;
 };
+*/
