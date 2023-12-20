@@ -5,6 +5,17 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
+
+// -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+// Row blocks within Stack blocks lose their width and collapse. This breaks
+// the content justification set for the nested Row.
+.wp-block-group-is-layout-flex.is-vertical > :where( .wp-block-group-is-layout-flex:not( .is-vertical ) ) {
+	width: 100%;
+}
+
 // -----------------------------------------------------------------------------
 // Block style variations.
 // -----------------------------------------------------------------------------
