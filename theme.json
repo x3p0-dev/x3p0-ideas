@@ -2,8 +2,8 @@
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 2,
 	"settings": {
-		"position": {
-			"sticky": false
+		"background": {
+			"backgroundImage": true
 		},
 		"border": {
 			"color": true,
@@ -453,6 +453,9 @@
 		"layout": {
 			"contentSize": "40rem",
 			"wideSize": "64rem"
+		},
+		"position": {
+			"sticky": false
 		},
 		"shadow": {
 			"presets": [
