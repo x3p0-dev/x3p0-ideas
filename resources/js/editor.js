@@ -10,7 +10,6 @@
 // Import all the cool editor features from the theme.
 import './block-editor';
 import './block-edit';
-import './block-settings';
 import './block-styles';
 import './block-variations';
 import './format-library';
