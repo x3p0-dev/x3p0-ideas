@@ -18,3 +18,23 @@
 .has-md-font-size   { line-height: var( --wp--custom--line-height--md ); }
 .has-sm-font-size   { line-height: var( --wp--custom--line-height--sm ); }
 .has-xs-font-size   { line-height: var( --wp--custom--line-height--xs ); }
+
+body:not( .editor-styles-wrapper ) .has-screen-reader-text {
+	clip: rect( 1px, 1px, 1px, 1px );
+	word-wrap: normal!important;
+	border: 0;
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.editor-styles-wrapper .has-screen-reader-text {
+	padding: var( --wp--style--block-gap ) !important;
+	color: var( --wp--preset--color--neutral-contrast ) !important;
+	background: var( --wp--preset--color--neutral-subtle ) !important;
+	border: 1px dashed var( --wp--preset--color--neutral-muted ) !important;
+}

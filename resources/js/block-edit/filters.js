@@ -9,6 +9,7 @@
 import withColorVariation     from './color-variations';
 import withGradientBackground from './gradient-background';
 import withListMarker         from './list-markers';
+import withScreenReaderText   from './screen-reader-text';
 import withSeparatorIcons     from './separator-icons';
 import withTextShadow         from './text-shadow';
 
@@ -18,9 +19,11 @@ import withTextShadow         from './text-shadow';
  * @type {Object.<string, function>}
  */
 export default {
-	'color-variations':    withColorVariation,
-	'gradient-background': withGradientBackground,
-	'list-markers':        withListMarker,
-	'separator-icons':     withSeparatorIcons,
-	'text-shadow':         withTextShadow
+	'color-variations':     withColorVariation,
+	'gradient-background':  withGradientBackground,
+	'list-markers':         withListMarker,
+	'separator-icons':      withSeparatorIcons,
+	'text-shadow':          withTextShadow,
+	// Add after text-shadow, at least until we have positioning/priority.
+	'screen-reader-text':   withScreenReaderText
 };
