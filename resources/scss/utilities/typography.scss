@@ -5,6 +5,9 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
+@use '../tools/icon';
+@use '../tools/inline-icon';
+
 // Combine each line-height set via `settings.custom.lineHeight` in `theme.json`
 // with the corresponding font-size set via `setting.typography.fontSizes`.
 .has-7-xl-font-size { line-height: var( --wp--custom--line-height--7-xl ); }
@@ -35,6 +38,14 @@ body:not( .editor-styles-wrapper ) .has-screen-reader-text {
 .editor-styles-wrapper .has-screen-reader-text {
 	padding: var( --wp--style--block-gap ) !important;
 	color: var( --wp--preset--color--neutral-contrast ) !important;
-	background: var( --wp--preset--color--neutral-subtle ) !important;
-	border: 1px dashed var( --wp--preset--color--neutral-muted ) !important;
+	background: var( --wp--preset--color--neutral-base ) !important;
+	border: 1px dashed var( --wp--preset--color--neutral-subtle ) !important;
+
+}
+
+.editor-styles-wrapper .has-screen-reader-text::before {
+	@include inline-icon.icon( icon.get-url( 'visibility-off' ) );
+	position: absolute;
+	top: var( --wp--preset--spacing--minus-2 );
+	right: var( --wp--preset--spacing--minus-2 );
 }
