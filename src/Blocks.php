@@ -43,16 +43,22 @@ class Blocks implements Bootable
 		// Conditional blocks.
 		if (
 			isset( $block['attrs']['@if'] ) &&
-			is_callable( $block['attrs']['@if'], false, $callback ) &&
-			false === $callback()
+			is_callable( $block['attrs']['@if'], false, $callback )
 		) {
-			return '';
+			$callback = wp_strip_all_tags( $callback );
+
+			if ( false === $callback() ) {
+				return '';
+			}
 		} elseif (
 			isset( $block['attrs']['@unless'] ) &&
-			is_callable( $block['attrs']['@unless'], false, $callback ) &&
-			true === $callback()
+			is_callable( $block['attrs']['@unless'], false, $callback )
 		) {
-			return '';
+			$callback = wp_strip_all_tags( $callback );
+
+			if ( true === $callback() ) {
+				return '';
+			}
 		}
 
 		// Custom block handling.
