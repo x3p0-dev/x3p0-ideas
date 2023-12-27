@@ -1283,12 +1283,12 @@
 		{
 			"area": "header",
 			"name": "header",
-			"title": "Header"
+			"title": "Site Header"
 		},
 		{
 			"area": "footer",
 			"name": "footer",
-			"title": "Footer"
+			"title": "Site Footer"
 		},
 		{
 			"area": "loop",
