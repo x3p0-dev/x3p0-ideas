@@ -40,6 +40,22 @@ class Blocks implements Bootable
 		WP_Block $instance
 	): string
 	{
+		// Conditional blocks.
+		if (
+			isset( $block['attrs']['@if'] ) &&
+			is_callable( $block['attrs']['@if'], false, $callback ) &&
+			false === $callback()
+		) {
+			return '';
+		} elseif (
+			isset( $block['attrs']['@unless'] ) &&
+			is_callable( $block['attrs']['@unless'], false, $callback ) &&
+			true === $callback()
+		) {
+			return '';
+		}
+
+		// Custom block handling.
 		if ( 'core/calendar' === $block['blockName'] ) {
 			return $this->coreCalendar( $block_content );
 		} elseif ( 'core/post-content' === $block['blockName'] ) {
