@@ -1,14 +1,18 @@
 <?php
 /**
- * Title: 404: Default
- * Slug: x3p0-ideas/404-default
+ * Title: Content: 404
+ * Slug: x3p0-ideas/content-404
  * Description:
+ * Inserter: no
  * Categories: content
- * Keywords: 404
+ * Keywords: 404, content
  */
 ?>
-<!-- wp:group {"tagName":"article","layout":{"type":"default"}} -->
-<article class="wp-block-group">
+<!-- wp:group {"metadata":{"name":"<?= esc_attr__( 'Content', 'x3p0-ideas' ) ?>"},"tagName":"main","style":{"spacing":{"padding":{"top":"var:preset|spacing|plus-3","bottom":"var:preset|spacing|plus-3"}}},"layout":{"type":"default"}} -->
+<main class="wp-block-group" style="padding-top:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3)">
+
+	<!-- wp:group {"tagName":"article","layout":{"type":"default"}} -->
+	<article class="wp-block-group">
 
 	<!-- wp:group {"tagName":"header","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->
 	<header class="wp-block-group">
@@ -36,5 +40,8 @@
 	</div>
 	<!-- /wp:group -->
 
-</article>
+	</article>
+	<!-- /wp:group -->
+
+</main>
 <!-- /wp:group -->

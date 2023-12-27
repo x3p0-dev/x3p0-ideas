@@ -1283,17 +1283,17 @@
 		{
 			"area": "header",
 			"name": "header",
-			"title": "Site Header"
+			"title": "Header"
 		},
 		{
 			"area": "footer",
 			"name": "footer",
-			"title": "Site Footer"
+			"title": "Footer"
 		},
 		{
 			"area": "loop",
 			"name": "loop",
-			"title": "Loop"
+			"title": "Posts"
 		},
 		{
 			"area": "comments",
