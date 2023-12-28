@@ -12,6 +12,7 @@ namespace X3P0\Ideas;
 
 use WP_Block;
 use X3P0\Ideas\Contracts\Bootable;
+use X3P0\Ideas\Tools\BlockDirectives;
 use X3P0\Ideas\Tools\HookAnnotation;
 
 class Blocks implements Bootable
@@ -40,25 +41,9 @@ class Blocks implements Bootable
 		WP_Block $instance
 	): string
 	{
-		// Conditional blocks.
-		if (
-			isset( $block['attrs']['@if'] ) &&
-			is_callable( $block['attrs']['@if'], false, $callback )
-		) {
-			$callback = wp_strip_all_tags( $callback );
-
-			if ( false === $callback() ) {
-				return '';
-			}
-		} elseif (
-			isset( $block['attrs']['@unless'] ) &&
-			is_callable( $block['attrs']['@unless'], false, $callback )
-		) {
-			$callback = wp_strip_all_tags( $callback );
-
-			if ( true === $callback() ) {
-				return '';
-			}
+		// Check if the block can be shown.
+		if ( ! ( new BlockDirectives( $block ) )->allowed() ) {
+			return '';
 		}
 
 		// Custom block handling.
