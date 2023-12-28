@@ -20,6 +20,25 @@ class Blocks implements Bootable
 	use HookAnnotation;
 
 	/**
+	 * Instance of block directives, which is used to determine whether to
+	 * show a block.
+	 *
+	 * @since 1.0.0
+	 * @todo  Move to constructor with PHP 8-only support.
+	 */
+	protected BlockDirectives $directives;
+
+	/**
+	 * Sets up the object state.
+	 *
+	 * @since 1.0.0
+	 */
+	public function __construct( BlockDirectives $directives )
+	{
+		$this->directives = $directives;
+	}
+
+	/**
 	 * Boots the component, running its actions/filters.
 	 *
 	 * @since 1.0.0
@@ -42,7 +61,7 @@ class Blocks implements Bootable
 	): string
 	{
 		// Check if the block can be shown.
-		if ( ! ( new BlockDirectives( $block ) )->allowed() ) {
+		if ( ! $this->directives->isPublic( $block ) ) {
 			return '';
 		}
 

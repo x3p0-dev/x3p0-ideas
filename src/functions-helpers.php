@@ -11,6 +11,7 @@
 namespace X3P0\Ideas;
 
 use X3P0\Ideas\Contracts\Bootable;
+use X3P0\Ideas\Tools\BlockDirectives;
 
 /**
  * Mini container used to reference the various theme components. Bootstraps the
@@ -34,7 +35,7 @@ function theme( string $component = '' )
 		// be booted when the theme launches.
 		$bindings = apply_filters( 'x3p0/ideas/components', [
 			'assets'         => new Assets(),
-			'blocks'         => new Blocks(),
+			'blocks'         => new Blocks( new BlockDirectives() ),
 			'patterns'       => new Patterns(),
 			'template-parts' => new TemplateParts(),
 			'templates'      => new Templates(),

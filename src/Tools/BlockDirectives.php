@@ -25,38 +25,20 @@ class BlockDirectives
 	];
 
 	/**
-	 * A copy of the block array when rendering.
-	 *
-	 * @since 1.0.0
- 	 * @todo  Move this to the constructor with PHP 8-only support.
-	 */
-	protected array $block;
-
-	/**
-	 * Sets up object state.
-	 *
-	 * @since 1.0.0
-	 */
-	public function __construct( array $block )
-	{
-		$this->block = $block;
-	}
-
-	/**
 	 * Checks if the block content is allowed to be shown based on the what
 	 * is returned by the directive method.
 	 *
 	 * @since 1.0.0
 	 */
-	public function allowed(): bool
+	public function isPublic( array $block ): bool
 	{
 		foreach ( $this->directives as $directive => $method ) {
-			if ( isset( $this->block['attrs'][ $directive ] ) ) {
-				$value = $this->block['attrs'][ $directive ];
+			if ( isset( $block['attrs'][ $directive ] ) ) {
+				$value = $block['attrs'][ $directive ];
 
 				return is_array( $value )
 				       ? $this->$method( array_map( 'wp_strip_all_tags', $value ) )
-				       : $this->$method( $value );
+				       : $this->$method( wp_strip_all_tags( $value ) );
 			}
 		}
 
