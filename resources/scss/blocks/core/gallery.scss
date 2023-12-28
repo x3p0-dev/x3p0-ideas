@@ -66,7 +66,8 @@
 
 .wp-block-gallery.is-style-classic figure.wp-block-image:where(
 	:not( [class*=is-style-] ),
-	.is-style-default
+	.is-style-default,
+	.is-style-icon
 ) figcaption {
 	position: initial;
 	margin: 0;
