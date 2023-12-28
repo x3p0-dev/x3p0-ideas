@@ -43,3 +43,13 @@
 	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
 	box-shadow: var( --wp--custom--defaults--shadow );
 }
+
+.wp-block-group.is-style-padded,
+// Need to overwrite core's global padding rules (horizontally).
+.has-global-padding :where(.has-global-padding) > .alignfull:where(:not(.has-global-padding)) > .wp-block-group.is-style-padded {
+	padding: var( --wp--style--block-gap );
+}
+
+.wp-block-group.is-style-padded-y {
+	padding: var( --wp--style--block-gap ) 0;
+}
