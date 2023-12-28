@@ -16,13 +16,7 @@
 	<p class="has-primary-font-family"><strong>Table of Contents</strong></p>
 	<!-- /wp:paragraph -->
 
-	<!-- wp:table-of-contents {"headings":[{"content":"Example","level":2,"link":"#example"}]} -->
-	<nav class="wp-block-table-of-contents">
-		<ol>
-			<li><a class="wp-block-table-of-contents__entry" href="#example">Example</a></li>
-		</ol>
-	</nav>
-	<!-- /wp:table-of-contents -->
+	<!-- wp:table-of-contents /-->
 
 </div>
 <!-- /wp:group -->

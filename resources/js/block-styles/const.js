@@ -58,11 +58,12 @@ export const BLOCK_STYLES = {
 		'classic': __( 'Classic', 'x3p0-ideas' )
 	},
 	'core/group': {
-		'box':        __( 'Box',                'x3p0-ideas' ),
-		'card':       __( 'Card',               'x3p0-ideas' ),
-		'hand-drawn': __( 'Hand Drawn',         'x3p0-ideas' ),
-		'padded':     __( 'Padded',             'x3p0-ideas' ),
-		'padded-y':   __( 'Padded: Vertically', 'x3p0-ideas' )
+		'box':        __( 'Box',                  'x3p0-ideas' ),
+		'card':       __( 'Card',                 'x3p0-ideas' ),
+		'hand-drawn': __( 'Hand Drawn',           'x3p0-ideas' ),
+		'padded':     __( 'Padded',               'x3p0-ideas' ),
+		'padded-x':   __( 'Padded: Horizontally', 'x3p0-ideas' ),
+		'padded-y':   __( 'Padded: Vertically',   'x3p0-ideas' )
 	},
 	'core/heading': {
 		'clip-text':         __( 'Clip Text', 'x3p0-ideas' ),
