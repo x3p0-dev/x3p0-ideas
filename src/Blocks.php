@@ -117,22 +117,25 @@ class Blocks implements Bootable
 		}
 
 		// Set up some default variables.
-		$filename = 'file';
+		$partials = [];
 		$html     = '';
 
 		// Checks if the attachment is one of supported types and sets
 		// the filename based on that type.
 		foreach ( [ 'image', 'video', 'audio'] as $type ) {
 			if ( wp_attachment_is( $type, $post ) ) {
-				$filename = $type;
+				$partials[] = "public/partials/attachment-media-{$type}.php";
 				break;
 			}
 		}
 
+		// Add fallback partial template.
+		$partials[] = 'public/partials/attachment-media.php';
+
 		// Gets a partial (essentially a dynamic pattern) based on the
 		// attachment type. Must be valid block content.
 		ob_start();
-		include get_parent_theme_file_path( "public/partials/attachment-media-{$filename}.php" );
+		locate_template( $partials, true, false );
 		$media = ob_get_clean();
 
 		// Parse and render the blocks.
