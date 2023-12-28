@@ -14,7 +14,7 @@ namespace X3P0\Ideas;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\HookAnnotation;
 
-class TemplateParts implements Bootable
+class Parts implements Bootable
 {
 	use HookAnnotation;
 

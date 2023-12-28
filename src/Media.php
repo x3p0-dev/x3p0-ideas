@@ -13,7 +13,7 @@ namespace X3P0\Ideas;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\HookAnnotation;
 
-class ImageSizes implements Bootable
+class Media implements Bootable
 {
 	use HookAnnotation;
 
@@ -40,7 +40,7 @@ class ImageSizes implements Bootable
 	 * @hook  init
 	 * @since 1.0.0
 	 */
-	public function register(): void
+	public function registerImageSizes(): void
 	{
 		add_image_size( 'x3p0-16x9-lg', 2048, 1152, true );
 		add_image_size( 'x3p0-21x9-lg', 2048,  864, true );

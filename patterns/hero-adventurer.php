@@ -8,7 +8,7 @@
  * Block Types: core/cover
  * Viewport Width: 1376
  */
-$hero_image = \X3P0\Ideas\theme( 'theme-config' )->get( 'front-page-image' );
+$hero_image = \X3P0\Ideas\theme( 'config' )->get( 'front-page-image' );
 ?>
 <!-- wp:cover {"metadata":{"name":"<?php esc_attr_e( 'Pattern - Hero: Adventurer', 'x3p0-ideas' ) ?>","test":"example"},"url":"<?= esc_url( $hero_image ) ?>","id":2268,"hasParallax":true,"dimRatio":50,"minHeight":90,"minHeightUnit":"vh","gradient":"fabled-sunset","contentPosition":"bottom left","align":"full","style":{"spacing":{"padding":{"top":"var(\u002d\u002dtheme-spacing\u002d\u002dplus-5)","bottom":"var(\u002d\u002dtheme-spacing\u002d\u002dplus-5)","left":"var:preset|spacing|plus-3","right":"var:preset|spacing|plus-3"}}},"className":"pattern-hero-adventurer","layout":{"type":"default"}} -->
 <div class="wp-block-cover alignfull has-parallax has-custom-content-position is-position-bottom-left pattern-hero-adventurer" style="padding-top:var(--theme-spacing--plus-5);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--theme-spacing--plus-5);padding-left:var(--wp--preset--spacing--plus-3);min-height:90vh">

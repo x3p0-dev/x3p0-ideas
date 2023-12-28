@@ -34,13 +34,13 @@ function theme( string $component = '' )
 		// Bind instances of the theme's component classes that need to
 		// be booted when the theme launches.
 		$bindings = apply_filters( 'x3p0/ideas/components', [
-			'assets'         => new Assets(),
-			'blocks'         => new Blocks( new BlockDirectives() ),
-			'patterns'       => new Patterns(),
-			'template-parts' => new TemplateParts(),
-			'templates'      => new Templates(),
-			'image-sizes'    => new ImageSizes(),
-			'theme-config'   => new ThemeConfig()
+			'assets'    => new Assets(),
+			'blocks'    => new Blocks( new BlockDirectives() ),
+			'config'    => new Config(),
+			'media'     => new Media(),
+			'parts'     => new Parts(),
+			'patterns'  => new Patterns(),
+			'templates' => new Templates()
 		] );
 
 		// Boot each of the components.

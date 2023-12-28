@@ -18,7 +18,7 @@ use WP_Theme_JSON_Data;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\HookAnnotation;
 
-class ThemeConfig implements Bootable
+class Config implements Bootable
 {
 	use HookAnnotation;
 
