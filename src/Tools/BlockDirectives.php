@@ -11,8 +11,8 @@
 
 namespace X3P0\Ideas\Tools;
 
-class BlockDirectives {
-
+class BlockDirectives
+{
 	/**
 	 * List of allowed directives and their callback methods.
 	 *
