@@ -725,7 +725,15 @@
 			"textTransform": true,
 			"writingMode": true
 		},
-		"useRootPaddingAwareAlignments": true
+		"useRootPaddingAwareAlignments": true,
+		"blocks": {
+			"core/image": {
+				"lightbox": {
+					"allowEditing": true,
+					"enabled": true
+				}
+			}
+		}
 	},
 	"styles": {
 		"color": {

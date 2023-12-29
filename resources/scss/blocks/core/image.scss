@@ -16,6 +16,12 @@
 	box-sizing: border-box;
 }
 
+// WP's CSS for hiding captions isn't always specific enough to overrule custom
+// block styles, so we're giving it a higher specificity.
+.wp-lightbox-overlay .wp-block-image figcaption.wp-element-caption {
+	display: none;
+}
+
 // -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
@@ -217,4 +223,17 @@ figure.wp-block-image.is-style-polaroid {
 	[class*=is-style-scotch-tape]
 ) .components-resizable-box__handle {
 	display: none;
+}
+
+// Revert custom styles for lightbox images.
+.wp-lightbox-overlay .wp-block-image.enlarged-image {
+	padding: 0 !important;
+	border: none !important;
+}
+
+.wp-lightbox-overlay .wp-block-image img {
+	padding: 0 !important;
+	border: none !important;
+	border-radius: var( --wp--custom--defaults--border-radius ) !important;
+	box-shadow: var( --wp--custom--defaults--shadow ) !important;
 }
