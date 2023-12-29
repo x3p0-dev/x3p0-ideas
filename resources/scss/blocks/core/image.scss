@@ -134,7 +134,7 @@ figure.wp-block-image.is-style-polaroid {
 }
 
 .wp-block-image.is-style-polaroid .wp-element-caption {
-	margin-top: var( --wp--preset--spacing--40 );
+	margin-top: var( --wp--preset--spacing--base );
 	color: var( --color-base, var( --wp--preset--color--contrast ) );
 	font-family: var( --wp--preset--font-family--handwriting );
 }
