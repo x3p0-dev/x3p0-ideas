@@ -30,6 +30,15 @@
 	margin: 0;
 }
 
+// Fixes mobile padding.
+.has-modal-open .wp-block-navigation__responsive-dialog {
+	padding: var( --wp--style--block-gap );
+}
+.wp-block-navigation__responsive-container-close {
+	top: var( --wp--style--block-gap );
+	right: var( --wp--style--block-gap );
+}
+
 // -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
@@ -63,10 +72,11 @@
 	width: 100%;
 }
 
-// Adding the cover here prevents a weird flash from core's defined default
+// Adding the color here prevents a weird flash from core's defined default
 // color and the theme's link transition style.
 .wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container {
 	color: var( --wp--custom--blocks--navigation-submenu--color );
+	background: var( --wp--custom--blocks--navigation-submenu--background );
 }
 
 .has-modal-open .wp-block-navigation-submenu .wp-block-navigation__submenu-container {
@@ -84,10 +94,6 @@
 
 	.wp-block-navigation-item {
 		transition: all 0.5s ease-in-out;
-	}
-
-	.wp-block-navigation-item__content {
-		transition: none;
 	}
 
 	.wp-block-navigation-item:hover,
