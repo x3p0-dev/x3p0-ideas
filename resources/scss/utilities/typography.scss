@@ -36,7 +36,7 @@ body:not( .editor-styles-wrapper ) .has-screen-reader-text {
 }
 
 .editor-styles-wrapper .has-screen-reader-text {
-	padding: var( --wp--style--block-gap ) !important;
+	padding: var( --wp--preset--spacing--minus-3 ) var( --wp--preset--spacing--plus-3 ) !important;
 	color: var( --wp--preset--color--neutral-contrast ) !important;
 	background: var( --wp--preset--color--neutral-base ) !important;
 	border: 1px dashed var( --wp--preset--color--neutral-subtle ) !important;
@@ -48,4 +48,6 @@ body:not( .editor-styles-wrapper ) .has-screen-reader-text {
 	position: absolute;
 	top: var( --wp--preset--spacing--minus-2 );
 	right: var( --wp--preset--spacing--minus-2 );
+	width: min( 1em, 24px );
+	height: min( 1em, 24px );
 }
