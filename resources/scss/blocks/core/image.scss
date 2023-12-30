@@ -33,11 +33,19 @@
 	border-radius: var( --wp--custom--defaults--border-radius );
 }
 
+// Lightbox trigger button.
+.wp-lightbox-container .lightbox-trigger {
+	top: var( --wp--preset--spacing--minus-2 ) !important;
+	right: var( --wp--preset--spacing--minus-2 ) !important;
+}
+
 // -----------------------------------------------------------------------------
 // Gradient background.
 // -----------------------------------------------------------------------------
 
 figure.wp-block-image[class*=-gradient-background] {
+	--image-padding: clamp( 0.5rem, -0.33333333333333326rem + 2.083333333333333cqi, 1rem );
+
 	// Setting the size to zero because, in most cases, we're inheriting the
 	// background gradient on the image and hiding this. In cases where we
 	// want to use the gradient on the wrapping `<figure>` tag, just reset
@@ -57,7 +65,13 @@ figure.wp-block-image[class*=-gradient-background] {
 	img {
 		background-color: inherit;
 		background-image: inherit;
-		padding: clamp( 0.5rem, -0.33333333333333326rem + 2.083333333333333cqi, 1rem );
+		padding: var( --image-padding );
+	}
+
+	// Lightbox trigger button.
+	.lightbox-trigger {
+		top: calc( var( --image-padding ) + var( --wp--preset--spacing--minus-2 ) ) !important;
+		right: calc( var( --image-padding ) + var( --wp--preset--spacing--minus-2 ) ) !important;
 	}
 }
 
