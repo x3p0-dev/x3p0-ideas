@@ -3,8 +3,7 @@
  * Title: Content: Canvas
  * Slug: x3p0-ideas/content-canvas
  * Description:
- * Inserter: no
- * Categories: content
+ * Categories: x3p0-content
  * Keywords: content
  */
 ?>

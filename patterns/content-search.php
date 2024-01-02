@@ -1,11 +1,10 @@
 <?php
 /**
- * Title: Content: Archive
- * Slug: x3p0-ideas/content-archive
+ * Title: Content: Search Results
+ * Slug: x3p0-ideas/content-search
  * Description:
- * Inserter: no
- * Categories: content
- * Keywords: archive, content
+ * Categories: x3p0-content
+ * Keywords: content
  */
 ?>
 <!-- wp:group {
@@ -17,15 +16,14 @@
 <main class="wp-block-group">
 
 	<!-- wp:group {
-		"metadata":{"name":"<?= esc_attr__( 'Archive Header', 'x3p0-ideas' ) ?>"},
+		"metadata":{"name":"<?= esc_attr__( 'Search Header', 'x3p0-ideas' ) ?>"},
 		"align":"full",
 		"style":{"spacing":{"blockGap":"var:preset|spacing|base"}},
 		"layout":{"type":"constrained"},
 		"className":"is-style-padded"
 	} -->
 	<div class="is-style-padded wp-block-group alignfull">
-		<!-- wp:query-title {"type":"archive","showPrefix":false} /-->
-		<!-- wp:term-description /-->
+		<!-- wp:query-title {"type":"search"} /-->
 	</div>
 	<!-- /wp:group -->
 

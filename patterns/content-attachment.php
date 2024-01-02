@@ -3,8 +3,7 @@
  * Title: Content: Media
  * Slug: x3p0-ideas/content-attachment
  * Description:
- * Inserter: no
- * Categories: content
+ * Categories: x3p0-content
  * Keywords: attachment, media, content
  */
 ?>

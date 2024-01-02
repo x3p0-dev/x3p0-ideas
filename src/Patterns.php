@@ -59,9 +59,9 @@ class Patterns implements Bootable
 	 */
 	public function register(): void
 	{
-		register_block_pattern_category( 'content', [
+		register_block_pattern_category( 'x3p0-content', [
 			'label'       => __( 'Content', 'x3p0-ideas' ),
-			'description' => __( 'Content areas...', 'x3p0-ideas' )
+			'description' => __( 'Content patterns handle the design for the content area of templates—specifically, the section between the header and footer.', 'x3p0-ideas' )
 		] );
 
 		// Registers patterns from the `/patterns` folder.

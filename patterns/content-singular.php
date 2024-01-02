@@ -3,8 +3,7 @@
  * Title: Content: Singular
  * Slug: x3p0-ideas/content-singular
  * Description:
- * Inserter: no
- * Categories: content
+ * Categories: x3p0-content
  * Keywords: content
  */
 ?>

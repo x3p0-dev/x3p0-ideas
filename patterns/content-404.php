@@ -3,8 +3,7 @@
  * Title: Content: 404
  * Slug: x3p0-ideas/content-404
  * Description:
- * Inserter: no
- * Categories: content
+ * Categories: x3p0-content
  * Keywords: 404, content
  */
 ?>

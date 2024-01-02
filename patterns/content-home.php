@@ -3,8 +3,7 @@
  * Title: Content: Home
  * Slug: x3p0-ideas/content-home
  * Description:
- * Inserter: no
- * Categories: content
+ * Categories: x3p0-content
  * Keywords: home, content
  */
 ?>

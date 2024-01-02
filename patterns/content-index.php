@@ -3,8 +3,7 @@
  * Title: Content: Index
  * Slug: x3p0-ideas/content-index
  * Description:
- * Inserter: no
- * Categories: content
+ * Categories: x3p0-content
  * Keywords: content
  */
 ?>

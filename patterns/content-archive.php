@@ -1,11 +1,10 @@
 <?php
 /**
- * Title: Content: Author
- * Slug: x3p0-ideas/content-author
+ * Title: Content: Archive
+ * Slug: x3p0-ideas/content-archive
  * Description:
- * Inserter: no
- * Categories: content
- * Keywords: author, user, content
+ * Categories: x3p0-content
+ * Keywords: archive, content
  */
 ?>
 <!-- wp:group {
@@ -24,19 +23,8 @@
 		"className":"is-style-padded"
 	} -->
 	<div class="is-style-padded wp-block-group alignfull">
-
-		<!-- wp:group {
-			"style":{"spacing":{"blockGap":"var:preset|spacing|plus-2"}},
-			"layout":{"type":"flex","flexWrap":"nowrap"}
-		} -->
-		<div class="wp-block-group">
-			<!-- wp:avatar {"size":64} /-->
-			<!-- wp:query-title {"type":"archive","showPrefix":false} /-->
-		</div>
-		<!-- /wp:group -->
-
-		<!-- wp:post-author-biography /-->
-
+		<!-- wp:query-title {"type":"archive","showPrefix":false} /-->
+		<!-- wp:term-description /-->
 	</div>
 	<!-- /wp:group -->
 
