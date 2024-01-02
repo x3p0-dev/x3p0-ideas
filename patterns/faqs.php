@@ -11,6 +11,10 @@
 <!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group">
 
+	<!-- wp:heading -->
+	<h2 class="wp-block-heading"><?php esc_html_e( 'FAQs', 'x3p0-ideas' ) ?></h2>
+	<!-- /wp:heading -->
+
 	<?php foreach ( range( 1, 4 ) as $number ) : ?>
 		<!-- wp:details -->
 		<details class="wp-block-details">
