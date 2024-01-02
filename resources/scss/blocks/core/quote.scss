@@ -37,7 +37,21 @@
 }
 
 
+// -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
 
 .wp-block-quote cite {
 	margin-top: var( --wp--preset--spacing--minus-2 );
+}
+
+.wp-block-quote.is-style-plain:has( .wp-block-verse ),
+// Note that we must double-up on the `.is-style-plain` class to overrule how
+// WP outputs styles from `theme.json`.
+.editor-styles-wrapper .wp-block-quote.is-style-plain.is-style-plain:has( .wp-block-verse ) {
+	padding: 0;
+
+	cite {
+		margin-top: var( --wp--preset--spacing--base );
+	}
 }

@@ -1247,6 +1247,11 @@
 					"lineHeight": "var:custom|line-height|sm"
 				}
 			},
+			"core/verse": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|handwriting"
+				}
+			},
 			"x3p0/breadcrumbs": {
 				"typography": {
 					"fontSize": "var:preset|font-size|sm",
