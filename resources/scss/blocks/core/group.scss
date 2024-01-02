@@ -16,6 +16,12 @@
 	width: 100%;
 }
 
+// WP adds extra padding here as some sort of reset.
+.has-global-padding > .wp-block-group.alignfull:where( :not( .has-global-padding ) ) > * {
+	padding-left: 0;
+	padding-right: 0;
+}
+
 // -----------------------------------------------------------------------------
 // Block style variations.
 // -----------------------------------------------------------------------------
@@ -52,6 +58,7 @@
 	padding-left: var( --wp--style--block-gap );
 	padding-right: var( --wp--style--block-gap );
 }
+
 
 .wp-block-group.is-style-padded {
 	padding: var( --wp--style--block-gap );
