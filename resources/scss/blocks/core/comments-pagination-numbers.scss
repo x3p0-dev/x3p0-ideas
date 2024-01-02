@@ -9,6 +9,21 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
+// Core overrides and breaks layout for this block by setting `max-width: 100%`
+// in the editor.
+.is-layout-constrained > .wp-block-comments-pagination:where(
+	:not(.alignleft):not(.alignright):not(.alignfull)
+) {
+	max-width: var( --wp--style--global--content-size );
+}
+
+// Core zeroes out the margin for this block entirely in the editor. This is
+// more of a stopgap fix than anything. This "fix" uses what *should* be the
+// default but can also break user choice. 🤷‍♀️
+.editor-styles-wrapper .wp-block-comments-pagination.block-editor-block-list__layout {
+	margin-top: var( --wp--style--block-gap );
+}
+
 // Adds some baseline layout to pagination numbers.
 .wp-block-comments-pagination-numbers {
 	display: flex;

@@ -1295,11 +1295,6 @@
 			"area": "loop",
 			"name": "loop",
 			"title": "Posts"
-		},
-		{
-			"area": "comments",
-			"name": "comments",
-			"title": "Comments"
 		}
 	]
 }

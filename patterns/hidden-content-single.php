@@ -69,7 +69,7 @@
 	</article>
 	<!-- /wp:group -->
 
-	<!-- wp:template-part {"slug":"comments","align":"full"} /-->
+	<!-- wp:pattern {"slug":"x3p0-ideas/comments-default"} /-->
 
 </main>
 <!-- /wp:group -->

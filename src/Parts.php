@@ -50,13 +50,6 @@ class Parts implements Bootable
 				'label'       => __( 'Loop', 'x3p0-ideas' ),
 				'description' => __( 'The Loop template part defines an area that contains the post list on blog, search results, and other archive-type pages.', 'x3p0-ideas' ),
 				'icon'        => 'layout'
-			],
-			[
-				'area'        => 'comments',
-				'area_tag'    => 'section',
-				'label'       => __( 'Comments', 'x3p0-ideas' ),
-				'description' => __( 'The Comments template part defines a page area that contains the post comments list and form.', 'x3p0-ideas' ),
-				'icon'        => 'comments'
 			]
 		];
 
