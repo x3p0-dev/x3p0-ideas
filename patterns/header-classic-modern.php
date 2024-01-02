@@ -64,5 +64,7 @@ $image = get_theme_file_uri( 'public/media/purple-sunset.webp' );
 	</div>
 	<!-- /wp:group -->
 
+	<!-- wp:pattern {"slug":"x3p0-ideas/breadcrumbs"} /-->
+
 </div>
 <!-- /wp:group -->

@@ -1273,13 +1273,6 @@
 			]
 		},
 		{
-			"name": "template-post-featured",
-			"title": "Single Post: Featured",
-			"postTypes": [
-				"post"
-			]
-		},
-		{
 			"name": "template-post-featured-cover",
 			"title": "Single Post: Featured Cover",
 			"postTypes": [
