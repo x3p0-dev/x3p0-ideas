@@ -1,0 +1,25 @@
+////
+/// Lightbox handling.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+.wp-lightbox-overlay {
+	background: var( --wp--preset--color--contrast );
+
+	.scrim {
+		background: none !important;
+	}
+
+	.close-button {
+		right: calc( env( safe-area-inset-right ) + var( --wp--preset--spacing--plus-3 ) );
+		top: calc( env( safe-area-inset-top ) + var( --wp--preset--spacing--base ) );
+		fill: var( --wp--preset--color--base ) !important;
+
+		svg {
+			width: 24px;
+			height: 24px;
+		}
+	}
+}
