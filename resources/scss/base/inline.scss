@@ -86,11 +86,13 @@ s {
 sup,
 sub {
 	font-size: 0.8125em;
+	line-height: 0; // Don't mess up line-height of parent.
 
 	// Text decoration doesn't really work well for most cases here, such as
 	// single-character footnotes. It can overpower the link itself.
 	a {
 		text-decoration: none;
+		outline: none;
 	}
 }
 

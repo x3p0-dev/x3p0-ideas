@@ -10,14 +10,19 @@
 // -----------------------------------------------------------------------------
 
 // Matches the footnote link to the `<sup>` element.
+// Core changed to a link only at some point with no `<sup>` element.
 sup.fn,
-sup[data-fn] {
+sup[data-fn],
+a.fn {
 	font-size: 0.8125em;
-	font-weight: 700;
+	line-height: 0; // Don't mess up line-height of parent.
+}
 
-	a {
-		text-decoration: none;
-	}
+sup.fn a,
+sup[data-fn] a,
+a.fn {
+	text-decoration: none;
+	outline: none;
 }
 
 // Do not remove quotes around `#` mark, which will break in the Sass processor.

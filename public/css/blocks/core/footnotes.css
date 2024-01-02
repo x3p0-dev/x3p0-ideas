@@ -1,1 +1,1 @@
-sup.fn,sup[data-fn]{font-size:.8125em;font-weight:700}.wp-block-footnotes a[href^="#"],sup.fn a,sup[data-fn] a{text-decoration:none}ol.wp-block-footnotes.is-style-pull{padding-left:1em}
+a.fn,sup.fn,sup[data-fn]{font-size:.8125em;line-height:0}a.fn,sup.fn a,sup[data-fn] a{outline:none;text-decoration:none}.wp-block-footnotes a[href^="#"]{text-decoration:none}ol.wp-block-footnotes.is-style-pull{padding-left:1em}
