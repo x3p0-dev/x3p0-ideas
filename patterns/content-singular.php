@@ -9,7 +9,7 @@
 ?>
 <!-- wp:group {
 	"metadata":{"name":"<?= esc_attr__( 'Content', 'x3p0-ideas' ) ?>"},
-	"tagName":"main","style":{"spacing":{"padding":{"top":"var:preset|spacing|plus-3","bottom":"var:preset|spacing|plus-3"}}},
+	"tagName":"main",
 	"layout":{"type":"default"},
 	"className":"is-style-padded-y"
 } -->
