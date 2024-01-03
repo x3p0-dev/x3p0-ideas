@@ -26,7 +26,7 @@
 } -->
 <div class="wp-block-group alignfull is-style-padded-x has-base-color has-primary-contrast-background-color has-text-color has-background has-link-color" style="padding-top:var(--wp--preset--spacing--base);padding-bottom:var(--wp--preset--spacing--base)">
 	<!-- wp:paragraph -->
-	<p><?= __( "💡 <strong>Announcement:</strong> This is a banner strip pattern, which means you can stick it anywhere for announcements, such as at the top of the page. Use it to get the reader's attention.", 'x3p0-ideas' ) ?></p>
+	<p><?php esc_html_e( "💡 Announcement: This is a banner strip pattern, which means you can stick it anywhere for announcements, such as at the top of the page. Use it to get the reader's attention.", 'x3p0-ideas' ) ?></p>
 	<!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
