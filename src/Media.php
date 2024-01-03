@@ -21,8 +21,9 @@ class Media implements Bootable
 	 * Width size to scale large images down to.
 	 *
 	 * @since 1.0.0
+	 * @todo  Add `int` type with PHP 8.3-only support.
 	 */
-	protected int $threshold_width = 3480;
+	const THRESHOLD_WIDTH = 3480;
 
 	/**
 	 * Bootstraps the class' actions/filters.
@@ -76,8 +77,8 @@ class Media implements Bootable
 	 */
 	public function bigImageSizeThreshold( int $threshold ): int
 	{
-		return $this->threshold_width > $threshold
-		       ? $this->threshold_width
+		return self::THRESHOLD_WIDTH > $threshold
+		       ? self::THRESHOLD_WIDTH
 		       : $threshold;
 	}
 
