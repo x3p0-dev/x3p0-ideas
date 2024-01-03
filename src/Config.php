@@ -43,6 +43,7 @@ class Config implements Bootable
 	 *
 	 * @since 1.0.0
 	 */
+	#[\Override]
 	public function boot(): void
 	{
 		$this->hookMethods();
