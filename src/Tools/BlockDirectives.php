@@ -73,11 +73,19 @@ class BlockDirectives
 	 * Show the block if the user matches.
 	 *
 	 * @since 1.0.0
-	 * @param string|int $user
+	 * @param string|int|bool $user
 	 */
 	protected function includeIfUser( $user ): bool
 	{
-		if ( ! is_user_logged_in() ) {
+		$logged_in = is_user_logged_in();
+
+		// If a boolean value is provided, check against the user's
+		// logged-in status. `false` for not logged in. `true` for
+		// logged in. For all other scenarios, the user must be logged
+		// in, so return `false` if they are not.
+		if ( is_bool( $user ) ) {
+			return false === $user ? ! $logged_in : $logged_in;
+		} elseif ( ! $logged_in ) {
 			return false;
 		}
 
