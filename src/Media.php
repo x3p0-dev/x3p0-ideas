@@ -23,7 +23,7 @@ class Media implements Bootable
 	 * @since 1.0.0
 	 * @todo  Add `int` type with PHP 8.3-only support.
 	 */
-	const THRESHOLD_WIDTH = 3480;
+	protected const THRESHOLD_WIDTH = 3480;
 
 	/**
 	 * Bootstraps the class' actions/filters.
