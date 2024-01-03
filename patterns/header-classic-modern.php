@@ -10,8 +10,8 @@
  */
 $image = get_theme_file_uri( 'public/media/purple-sunset.webp' );
 ?>
-<!-- wp:group {"align":"full","style":{"spacing":{"blockGap":"0","margin":{"bottom":"var:preset|spacing|plus-3"}}},"layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull" style="margin-bottom:var(--wp--preset--spacing--plus-3)">
+<!-- wp:group {"align":"full","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"default"}} -->
+<div class="wp-block-group alignfull">
 
 	<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|plus-2","bottom":"var:preset|spacing|plus-2","right":"var:preset|spacing|plus-3","left":"var:preset|spacing|plus-3"}}},"layout":{"type":"default"}} -->
 	<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--plus-2);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-2);padding-left:var(--wp--preset--spacing--plus-3)">

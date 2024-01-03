@@ -1292,6 +1292,11 @@
 			"title": "Header"
 		},
 		{
+			"area": "header",
+			"name": "header-small",
+			"title": "Header: Small"
+		},
+		{
 			"area": "footer",
 			"name": "footer",
 			"title": "Footer"

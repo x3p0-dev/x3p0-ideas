@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Header: Default
- * Slug: x3p0-ideas/header-default
+ * Slug: x3p0-ideas/header-small
  * Description:
  * Categories: header
  * Keywords: header
