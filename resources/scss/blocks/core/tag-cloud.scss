@@ -6,6 +6,17 @@
 ////
 
 // -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+// WordPress nests the actual `<p>` tag (the block) inside of another `<div>`
+// with the same class in the editor. We need to zero out the default browser
+// margin here.
+.editor-styles-wrapper .wp-block-tag-cloud .wp-block-tag-cloud {
+	margin: 0;
+}
+
+// -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
 
@@ -34,13 +45,20 @@
 }
 
 // This is a core block style.
+// Set the default font-weight here instead of on the `<a>`. This way, users can
+// override via design tools.
+.wp-block-tag-cloud.is-style-outline {
+	font-weight: 500;
+	font-size: var( --wp--preset--font-size--sm );
+}
+
 .wp-block-tag-cloud.is-style-outline a {
 	color: currentColor;
 	border: 2px solid currentColor;
 	border-radius: var( --wp--custom--defaults--border-radius );
 	padding: var( --wp--preset--spacing--minus-2 ) var( --wp--preset--spacing--plus-1 );
-	font-size: var( --wp--preset--font-size--sm ) !important;
-	font-weight: 500;
+	font-size: inherit !important;
+	font-weight: inherit !important;
 	line-height: var( --wp--custom--line-height--sm );
 
 	&:hover {
