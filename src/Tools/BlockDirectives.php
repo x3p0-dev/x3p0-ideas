@@ -1,7 +1,12 @@
 <?php
 /**
- * A class for checking conditionals inside of block attributes. This allows us
- * to make some blocks dynamic when working with the static nature of blocks.
+ * Block directives are instructions for how to handle the front-end output of
+ * a block. This is done via a limited set of directives that conditionally
+ * decide whether the block should be public (should be shown) or not. This
+ * could potentially be expanded to include other instructions for how to handle
+ * blocks, but the primary goal is conditional inclusion. This class doesn't
+ * actually alter blocks in any way. It simply checks a block's attributes to
+ * perform checks.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023, Justin Tadlock
@@ -19,9 +24,9 @@ class BlockDirectives
 	 * @since 1.0.0
 	 */
 	private array $directives = [
-		'@if'     => 'includeIf',
-		'@unless' => 'includeUnless',
-		'@user'   => 'includeIfUser'
+		'@if'     => 'checkIf',
+		'@unless' => 'checkUnless',
+		'@user'   => 'checkUser'
 	];
 
 	/**
@@ -51,7 +56,7 @@ class BlockDirectives
 	 * @since 1.0.0
 	 * @param string|array $condition
 	 */
-	protected function includeIf( $condition ): bool
+	protected function checkIf( $condition ): bool
 	{
 		$callable = is_callable( $condition, false, $callback );
 		return $callable ? boolval( $callback() ) : true;
@@ -63,7 +68,7 @@ class BlockDirectives
 	 * @since 1.0.0
 	 * @param string|array $condition
 	 */
-	protected function includeUnless( $condition ): bool
+	protected function checkUnless( $condition ): bool
 	{
 		$callable = is_callable( $condition, false, $callback );
 		return $callable ? ! boolval( $callback() ) : true;
@@ -75,7 +80,7 @@ class BlockDirectives
 	 * @since 1.0.0
 	 * @param string|int|bool $user
 	 */
-	protected function includeIfUser( $user ): bool
+	protected function checkUser( $user ): bool
 	{
 		$logged_in = is_user_logged_in();
 
