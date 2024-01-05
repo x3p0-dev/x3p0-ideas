@@ -15,8 +15,6 @@ namespace X3P0\Ideas;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\HookAnnotation;
 
-use WP_Theme;
-
 class Patterns implements Bootable
 {
 	use HookAnnotation;
