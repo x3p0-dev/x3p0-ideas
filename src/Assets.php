@@ -23,8 +23,9 @@ class Assets implements Bootable
 	 * Stores the supported block namespaces.
 	 *
 	 * @since 1.0.0
+	 * @todo  Add `array` type with PHP 8.3-only support.
 	 */
-	protected array $block_namespaces = [
+	protected const BLOCK_NAMESPACES = [
 		'core'
 	];
 
@@ -137,7 +138,7 @@ class Assets implements Bootable
 		// Get the block namespace paths.
 		$paths = array_map(
 			fn( $namespace ) => get_parent_theme_file_path( "public/css/blocks/{$namespace}" ),
-			$this->block_namespaces
+			self::BLOCK_NAMESPACES
 		);
 
 		// Loop through each of the block namespace paths, get their
