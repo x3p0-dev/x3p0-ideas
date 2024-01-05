@@ -103,17 +103,12 @@ class Blocks implements Bootable
 		WP_Block $instance
 	): string
 	{
-		// Bail early if there's no post ID.
-		if ( empty( $instance->context['postId'] ) ) {
-			return $block_content;
-		}
-
-		// Get the post object.
-		$post = get_post( $instance->context['postId'] );
-
-		// Bail if we're not specifically viewing the attachment page
-		// for this specific post.
-		if ( 'attachment' !== $post->post_type || ! is_attachment( $post->ID ) ) {
+		// Bail early if there's no post ID or not specifically viewing
+		// the attachment page for this specific post.
+		if (
+			empty( $instance->context['postId'] )
+			|| ! is_attachment( $instance->context['postId'] )
+		) {
 			return $block_content;
 		}
 
@@ -124,7 +119,7 @@ class Blocks implements Bootable
 		// Checks if the attachment is one of supported types and sets
 		// the filename based on that type.
 		foreach ( [ 'image', 'video', 'audio'] as $type ) {
-			if ( wp_attachment_is( $type, $post ) ) {
+			if ( wp_attachment_is( $type, $instance->context['postId'] ) ) {
 				$partials[] = "public/partials/attachment-media-{$type}.php";
 				break;
 			}
