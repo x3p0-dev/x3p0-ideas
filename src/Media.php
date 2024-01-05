@@ -1,6 +1,6 @@
 <?php
 /**
- * Image size handling.
+ * Media filters and actions.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright 2023 Justin Tadlock
