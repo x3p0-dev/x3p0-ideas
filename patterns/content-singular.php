@@ -8,12 +8,19 @@
  */
 ?>
 <!-- wp:group {
-	"metadata":{"name":"<?= esc_attr__( 'Content', 'x3p0-ideas' ) ?>"},
 	"tagName":"main",
-	"layout":{"type":"default"},
-	"className":"is-style-padded-y"
+	"metadata":{"name":"<?= esc_attr__( 'Content', 'x3p0-ideas' ) ?>"},
+	"style":{
+		"spacing":{
+			"padding":{
+				"top":"var:preset|spacing|plus-3",
+				"bottom":"var:preset|spacing|plus-3"
+			}
+		}
+	},
+	"layout":{"type":"default"}
 } -->
-<main class="is-style-padded-y wp-block-group">
+<main class="wp-block-group" style="padding-top:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3)">
 
 	<!-- wp:group {
 		"metadata":{"name":"<?= esc_attr__( 'Post', 'x3p0-ideas' ) ?>"},
