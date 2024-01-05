@@ -51,6 +51,9 @@
 }
 
 // Need to overwrite core's global padding rules (horizontally).
+.has-global-padding
+	> .wp-block-group.alignfull:where( :not( .has-global-padding ) )
+	> .wp-block-group:is( .is-style-padded, .is-style-padded-x ),
 .has-global-padding :where( .has-global-padding )
 	> .alignfull:where( :not( .has-global-padding ) )
 	> .wp-block-group:is( .is-style-padded, .is-style-padded-x )
