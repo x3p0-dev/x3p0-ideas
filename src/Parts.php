@@ -42,21 +42,16 @@ class Parts implements Bootable
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/default_wp_template_part_areas/
 	 */
-	public function areaDefinitions( array $default_area_definitions ): array
+	public function areaDefinitions( array $areas ): array
 	{
-		$custom_areas = [
-			[
-				'area'        => 'loop',
-				'area_tag'    => 'div',
-				'label'       => __( 'Loop', 'x3p0-ideas' ),
-				'description' => __( 'The Loop template part defines an area that contains the post list on blog, search results, and other archive-type pages.', 'x3p0-ideas' ),
-				'icon'        => 'layout'
-			]
+		$areas[] = [
+			'area'        => 'loop',
+			'area_tag'    => 'div',
+			'label'       => __( 'Loop', 'x3p0-ideas' ),
+			'description' => __( 'The Loop template part defines an area that contains the post list on blog, search results, and other archive-type pages.', 'x3p0-ideas' ),
+			'icon'        => 'layout'
 		];
 
-		return [
-			...$default_area_definitions,
-			...$custom_areas
-		];
+		return $areas;
 	}
 }
