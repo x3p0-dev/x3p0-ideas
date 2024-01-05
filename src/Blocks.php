@@ -52,38 +52,33 @@ class Blocks implements Bootable
 	/**
 	 * Filters block content.
 	 *
-	 * @hook  render_block
+	 * @hook  render_block  last
 	 * @since 1.0.0
 	 */
-	public function renderBlock(
+	public function renderBlockByDirective(
 		string $block_content,
-		array $block,
-		WP_Block $instance
-	): string
-	{
-		// Check if the block can be shown.
-		if ( ! $this->directives->isPublic( $block ) ) {
-			return '';
-		}
-
-		// Custom block handling.
-		if ( 'core/calendar' === $block['blockName'] ) {
-			return $this->coreCalendar( $block_content );
-		} elseif ( 'core/post-content' === $block['blockName'] ) {
-			return $this->corePostContent( $block_content, $block, $instance );
-		}
-
-		return $block_content;
+		array $block
+	): string {
+		return $this->directives->isPublic( $block )
+		       ? $block_content
+		       : '';
 	}
 
 	/**
 	 * Really hacky method to replace the arrows in the calendar to match
 	 * the theme's arrows.
 	 *
+	 * @hook  render_block
 	 * @since 1.0.0
 	 */
-	private function coreCalendar( string $block_content ): string
-	{
+	public function renderCoreCalendar(
+		string $block_content,
+		array $block
+	): string {
+		if ( 'core/calendar' !== $block['blockName'] ) {
+			return $block_content;
+		}
+
 		return str_replace(
 			[ '&raquo;', '&laquo;' ],
 			[ '&rarr;',  '&larr;'  ],
@@ -95,18 +90,19 @@ class Blocks implements Bootable
 	 * Filters the post content block when viewing single attachment views
 	 * and returns block-based media content.
 	 *
+	 * @hook  render_block
 	 * @since 1.0.0
 	 */
-	private function corePostContent(
+	public function renderCorePostContent(
 		string $block_content,
 		array $block,
 		WP_Block $instance
-	): string
-	{
+	): string {
 		// Bail early if there's no post ID or not specifically viewing
 		// the attachment page for this specific post.
 		if (
-			empty( $instance->context['postId'] )
+			'core/post-content' !== $block['blockName']
+			|| empty( $instance->context['postId'] )
 			|| ! is_attachment( $instance->context['postId'] )
 		) {
 			return $block_content;
