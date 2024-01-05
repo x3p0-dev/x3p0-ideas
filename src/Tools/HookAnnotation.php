@@ -26,30 +26,35 @@ trait HookAnnotation
 	 */
 	protected function hookMethods(): void
 	{
+		// Get all of the `public` methods of the class (methods must be
+		// `public` to be used as an action/filter).
 		$methods = ( new ReflectionClass( self::class ) )->getMethods(
 			ReflectionMethod::IS_PUBLIC
 		);
 
+		// Loop through the methods to determine if each should be added
+		// to a hook.
 		foreach ( $methods as $method ) {
 
+			// Ignore constructor methods.
 			if ( $method->isConstructor() ) {
 				continue;
 			}
 
+			// Get hook metadata if it exists.
 			$meta = $this->getMetadata(
 				(string) $method->getDocComment()
 			);
 
-			if ( null === $meta ) {
-				continue;
+			// Add the action/filter if there is metadata
+			if ( null !== $meta ) {
+				add_filter(
+					$meta['hook'],
+					[ $this, $method->name ],
+					$meta['priority'],
+					$method->getNumberOfParameters()
+				);
 			}
-
-			add_filter(
-				$meta['hook'],
-				[ $this, $method->name ],
-				$meta['priority'],
-				$method->getNumberOfParameters()
-			);
 		}
 	}
 
