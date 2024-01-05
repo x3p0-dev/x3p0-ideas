@@ -39,8 +39,11 @@
 		</header>
 		<!-- /wp:group -->
 
-		<!-- wp:group {"layout":{"type":"constrained"}} -->
-		<div class="wp-block-group">
+		<!-- wp:group {
+			"layout":{"type":"constrained"},
+			"className":"is-style-prose"
+		} -->
+		<div class="wp-block-group is-style-prose">
 
 			<!-- wp:paragraph -->
 			<p><?= esc_html__( 'It looks like you stumbled upon a page that does not exist. Perhaps rolling the dice with a search might help:', 'x3p0-ideas' ) ?></p>

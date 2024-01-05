@@ -8,8 +8,8 @@
  */
 ?>
 <!-- wp:group {
-	"metadata":{"name":"<?= esc_attr__( 'Content', 'x3p0-ideas' ) ?>"},
 	"tagName":"main",
+	"metadata":{"name":"<?= esc_attr__( 'Content', 'x3p0-ideas' ) ?>"},
 	"style":{"spacing":{"blockGap":"0"}},
 	"layout":{"type":"constrained"}
 } -->

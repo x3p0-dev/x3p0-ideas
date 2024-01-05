@@ -10,7 +10,7 @@
  */
 ?>
 <!-- wp:group {
-	"metadata":{"name":"<?= esc_attr__( 'Header: Container', 'x3p0-ideas' ) ?>"},
+	"metadata":{"name":"<?= esc_attr__( 'Header Container', 'x3p0-ideas' ) ?>"},
 	"style":{
 		"spacing":{
 			"padding":{
@@ -25,14 +25,10 @@
 	"layout":{"type":"default"}
 } -->
 <div class="wp-block-group pattern-header-default" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
+
 	<!-- wp:group {
-		"metadata":{
-			"name":"<?= esc_attr__( 'Header: Inner Content', 'x3p0-ideas' ) ?>"
-		},
-		"layout":{
-			"type":"flex",
-			"justifyContent":"space-between"
-		}
+		"metadata":{"name":"<?= esc_attr__( 'Header Content', 'x3p0-ideas' ) ?>"},
+		"layout":{"type":"flex","justifyContent":"space-between"}
 	} -->
 	<div class="wp-block-group">
 		<!-- wp:site-title /-->
@@ -46,6 +42,7 @@
 		} /-->
 	</div>
 	<!-- /wp:group -->
+
 </div>
 <!-- /wp:group -->
 

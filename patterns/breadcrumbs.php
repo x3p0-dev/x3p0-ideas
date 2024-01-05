@@ -7,22 +7,19 @@
  * Keywords: breadcrumbs, trail
  * Block Types: x3p0/breadcrumbs
  */
-?>
 
-<?php if ( WP_Block_Type_Registry::get_instance()->is_registered( 'x3p0/breadcrumbs' ) ) : ?>
+if ( WP_Block_Type_Registry::get_instance()->is_registered( 'x3p0/breadcrumbs' ) ) : ?>
 	<!-- wp:x3p0/breadcrumbs {
-		"metadata":{
-			"name":"<?= esc_attr__( 'Breadcrumbs', 'x3p0-ideas' ) ?>"
-		},
+		"metadata":{"name":"<?= esc_attr__( 'Breadcrumbs', 'x3p0-ideas' ) ?>"},
 		"itemsJustification":"left",
 		"align":"full",
 		"style":{
 			"spacing":{
 				"padding":{
-					"top":"var(\u002d\u002dtheme-spacing\u002d\u002dbase)",
-					"bottom":"var(\u002d\u002dtheme-spacing\u002d\u002dbase)",
-					"left":"var:preset|spacing|plus-3",
-					"right":"var:preset|spacing|plus-3"
+					"top":"var:preset|spacing|base",
+					"right":"var:preset|spacing|plus-3",
+					"bottom":"var:preset|spacing|base",
+					"left":"var:preset|spacing|plus-3"
 				}
 			}
 		},

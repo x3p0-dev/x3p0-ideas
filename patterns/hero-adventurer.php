@@ -11,9 +11,7 @@
 $hero_image = \X3P0\Ideas\theme( 'config' )->get( 'front-page-image' );
 ?>
 <!-- wp:cover {
-	"metadata":{
-		"name":"<?php esc_attr_e( 'Pattern - Hero: Adventurer', 'x3p0-ideas' ) ?>"
-	},
+	"metadata":{"name":"<?php esc_attr_e( 'Pattern - Hero: Adventurer', 'x3p0-ideas' ) ?>"},
 	"url":"<?= esc_url( $hero_image ) ?>",
 	"id":2268,
 	"hasParallax":true,
@@ -56,7 +54,12 @@ $hero_image = \X3P0\Ideas\theme( 'config' )->get( 'front-page-image' );
 		} -->
 		<div class="wp-block-group">
 
-			<!-- wp:heading {"align":"wide","style":{"typography":{"fontStyle":"normal","fontWeight":"900"}},"className":"has-text-shadow-sm","fontSize":"5-xl"} -->
+			<!-- wp:heading {
+				"align":"wide",
+				"style":{"typography":{"fontStyle":"normal","fontWeight":"900"}},
+				"className":"has-text-shadow-sm",
+				"fontSize":"5-xl"
+			} -->
 			<h2 class="wp-block-heading alignwide has-text-shadow-sm has-5-xl-font-size" style="font-style:normal;font-weight:900"><?php esc_html_e( "Hello. I'm Jordan Doe.", 'x3p0-ideas' ) ?></h2>
 			<!-- /wp:heading -->
 

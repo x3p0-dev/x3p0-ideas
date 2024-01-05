@@ -30,8 +30,8 @@
 	<article class="wp-block-group">
 
 		<!-- wp:group {
-			"metadata":{"name":"<?= esc_attr__( 'Post Header', 'x3p0-ideas' ) ?>"},
 			"tagName":"header",
+			"metadata":{"name":"<?= esc_attr__( 'Post Header', 'x3p0-ideas' ) ?>"},
 			"style":{"spacing":{"blockGap":"0"}},
 			"layout":{"type":"constrained"}
 		} -->

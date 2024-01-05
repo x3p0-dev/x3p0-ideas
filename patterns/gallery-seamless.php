@@ -10,12 +10,21 @@
  */
 $image = get_theme_file_uri( 'public/media/block-core-image-9x16.webp' );
 ?>
-<!-- wp:gallery {"linkTo":"none","sizeSlug":"x3p0-19x9-md","align":"wide","style":{"spacing":{"blockGap":{"top":"0","left":"0"}}}} -->
+<!-- wp:gallery {
+	"linkTo":"none",
+	"sizeSlug":"x3p0-19x9-md",
+	"align":"wide",
+	"style":{"spacing":{"blockGap":{"top":"0","left":"0"}}}
+} -->
 <figure class="wp-block-gallery alignwide has-nested-images columns-default is-cropped">
 
 	<?php foreach ( range( 1, 3 ) as $number ) : ?>
 
-		<!-- wp:image {"sizeSlug":"x3p0-19x9-md","linkDestination":"none","style":{"border":{"radius":"0px"}}} -->
+		<!-- wp:image {
+			"sizeSlug":"x3p0-19x9-md",
+			"linkDestination":"none",
+			"style":{"border":{"radius":"0px"}}
+		} -->
 		<figure class="wp-block-image size-x3p0-19x9-md has-custom-border">
 			<img src="<?= esc_url( $image ) ?>" alt="" style="border-radius:0px"/>
 		</figure>

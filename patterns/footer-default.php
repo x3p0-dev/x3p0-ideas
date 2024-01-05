@@ -9,9 +9,7 @@
  */
 ?>
 <!-- wp:group {
-	"metadata":{
-		"name":"<?= esc_attr__( 'Footer: Container', 'x3p0-ideas' ) ?>"
-	},
+	"metadata":{"name":"<?= esc_attr__( 'Footer Container', 'x3p0-ideas' ) ?>"},
 	"style":{
 		"spacing":{
 			"padding":{
@@ -21,21 +19,17 @@
 				"left":"var:preset|spacing|plus-3"
 			}
 		}
-	}
+	},
+	"layout":{"type":"default"}
 } -->
 <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--plus-6);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-6);padding-left:var(--wp--preset--spacing--plus-3)">
 
 	<!-- wp:social-links {
-		"metadata":{
-			"name":"<?= esc_attr__( 'Menu: Social', 'x3p0-ideas' ) ?>"
-		},
+		"metadata":{"name":"<?= esc_attr__( 'Social Menu', 'x3p0-ideas' ) ?>"},
 		"showLabels":true,
 		"size":"has-normal-icon-size",
-		"className":"is-style-outline",
-		"layout":{
-			"type":"flex",
-			"justifyContent":"center"
-		}
+		"layout":{"type":"flex","justifyContent":"center"},
+		"className":"is-style-outline"
 	} -->
 	<ul class="wp-block-social-links has-normal-icon-size has-visible-labels is-style-outline">
 		<!-- wp:social-link {"url":"https://wordpress.org","service":"wordpress"} /-->
@@ -47,15 +41,9 @@
 	<!-- /wp:social-links -->
 
 	<!-- wp:group {
-		"metadata":{
-			"name":"<?= esc_attr__( 'Footer: Content', 'x3p0-ideas' ) ?>"
-		},
+		"metadata":{"name":"<?= esc_attr__( 'Footer Content', 'x3p0-ideas' ) ?>"},
 		"align":"wide",
-		"style":{
-			"spacing":{
-				"blockGap":"0"
-			}
-		},
+		"style":{"spacing":{"blockGap":"0"}},
 		"layout":{
 			"type":"flex",
 			"orientation":"vertical",
