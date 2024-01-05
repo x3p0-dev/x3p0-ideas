@@ -11,11 +11,7 @@ No concept is so outlandish that I won't try to wiggle it in one way or another.
 ## 📛 Obligatory Badges: _Gotta collect 'em all!_
 
 <p>
-<img alt="WordPress badge" height="24px" src="https://img.shields.io/badge/WordPress%206.3+-white?style=flat-square&logo=wordpress&logoColor=0073AA&labelColor=white&color=0073AA">
+<img alt="WordPress badge" height="24px" src="https://img.shields.io/badge/WordPress%206.4+-white?style=flat-square&logo=wordpress&logoColor=0073AA&labelColor=white&color=0073AA">
 <img alt="Gutenberg badge" height="24px" src="https://img.shields.io/badge/Gutenberg%2016.0+-white?style=flat-square&logo=gutenberg&logoColor=000000&color=000000&labelColor=white">
 <img alt="PHP badge" height="24px" src="https://img.shields.io/badge/PHP%207.4+-white?style=flat-square&logo=php&logoColor=777bb4&labelColor=white&color=777bb4">
 </p>
-
-## 🔌 Minimum Gutenberg Requirement
-
-This theme currently requires at least [Gutenberg 16.0.0](https://github.com/WordPress/gutenberg/releases/tag/v16.0.0) for some features to work correctly.
