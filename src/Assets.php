@@ -33,8 +33,9 @@ class Assets implements Bootable
 	 * Inline CSS limit.
 	 *
 	 * @since 1.0.0
+	 * @todo  Add `int` type with PHP 8.3-only support.
 	 */
-	protected int $inline_css_limit = 50000;
+	protected const INLINE_CSS_LIMIT = 50000;
 
 	/**
 	 * Boots the component, running its actions/filters.
@@ -58,8 +59,8 @@ class Assets implements Bootable
 	 */
 	public function stylesInlineSizeLimit( int $total_inline_limit ): int
 	{
-		return $this->inline_css_limit > $total_inline_limit
-		       ? $this->inline_css_limit
+		return self::INLINE_CSS_LIMIT > $total_inline_limit
+		       ? self::INLINE_CSS_LIMIT
 		       : $total_inline_limit;
 	}
 
@@ -125,7 +126,7 @@ class Assets implements Bootable
 
 	/**
 	 * Enqueues block-specific styles so that they only load when the block
-	 * is in use. Block styles are stored under `/assets/css/blocks` are
+	 * is in use. Block styles stored under `/assets/css/blocks` are
 	 * automatically enqueued. Each file should be named
 	 * `{$block_namespace}/{$block_slug}.css`.
 	 *
