@@ -78,7 +78,7 @@
 // -----------------------------------------------------------------------------
 
 // Full-width featured post.
-.wp-block-post-template-is-layout-grid.is-style-featured-col-span-all .wp-block-post:first-child {
+body:where( :not( .paged ) ) .wp-block-post-template-is-layout-grid.is-style-featured-col-span-all .wp-block-post:first-child {
 	grid-column: 1 / -1;
 }
 

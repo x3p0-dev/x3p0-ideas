@@ -12,6 +12,7 @@
 namespace X3P0\Ideas;
 
 use X3P0\Ideas\Contracts\Bootable;
+use X3P0\Ideas\Tools\Helpers;
 use X3P0\Ideas\Tools\HookAnnotation;
 
 class Templates implements Bootable
@@ -62,5 +63,17 @@ class Templates implements Bootable
 		}
 
 		return $default_template_types;
+	}
+
+	/**
+	 * @hook body_class
+	 */
+	public function bodyClass( array $classes ): array
+	{
+		if ( Helpers::isPagedQueryBlock() && ! in_array( 'paged', $classes ) ) {
+			$classes[] = 'paged';
+		}
+
+		return $classes;
 	}
 }
