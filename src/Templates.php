@@ -66,7 +66,11 @@ class Templates implements Bootable
 	}
 
 	/**
-	 * @hook body_class
+	 * Filter the body class.
+	 *
+	 * @hook  body_class
+	 * @since 1.0.0
+	 * @link  https://developer.wordpress.org/reference/hooks/body_class/
 	 */
 	public function bodyClass( array $classes ): array
 	{
