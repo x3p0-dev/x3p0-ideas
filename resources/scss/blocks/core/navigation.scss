@@ -30,6 +30,13 @@
 	margin: 0;
 }
 
+// Removes top margin that's added when the admin bar is shown. This makes sense
+// in general, but the menu is completely above the admin bar, so we just get a
+// ton of whitespace instead.
+.has-modal-open .admin-bar .is-menu-open .wp-block-navigation__responsive-dialog {
+	margin-top: 0;
+}
+
 // Fixes mobile padding.
 .has-modal-open .wp-block-navigation__responsive-dialog {
 	padding: var( --wp--style--block-gap );
