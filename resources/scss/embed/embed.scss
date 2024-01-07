@@ -1,0 +1,118 @@
+////
+/// Styling for the embedded post.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+// Import tools.
+@use '../tools/icon';
+@use '../tools/inline-icon';
+
+.wp-embed {
+	color: var( --color );
+	background: var( --background );
+}
+
+.wp-embed a,
+.wp-embed-heading a {
+	color: var( --link-color );
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+		color: var( --link-hover-color );
+
+		> svg { fill: currentColor; }
+	}
+}
+
+// Featured image.
+.wp-embed-featured-image img {
+	display: block;
+}
+
+// Heading.
+.wp-embed .wp-embed-heading {
+	margin: var( --wp--style--block-gap ) 0 0;
+	padding: 0 var( --wp--style--block-gap );
+	font-size: var( --wp--preset--font-size--xl );
+	line-height: var( --wp--custom--line-height--xl );
+	font-weight: 600;
+}
+
+// Excerpt.
+.wp-embed-excerpt {
+	padding: 0 var( --wp--style--block-gap );
+	margin: var( --wp--preset--spacing--minus-3 ) 0 0;
+}
+
+// Footer.
+.wp-embed-footer {
+	width: auto;
+	max-width: 100%;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: var( --wp--style--block-gap );
+	margin: var( --wp--style--block-gap ) var( --wp--style--block-gap ) 0;
+	padding: var( --wp--preset--spacing--base ) 0;
+	border-top-color: var( --border-color );
+	border-top-style: var( --border-style );
+	border-top-width: min( 2px, var( --border-width ) );
+}
+
+.wp-embed-site-title {
+	display: block;
+	font-size: 1em;
+	line-height: 1.2;
+	font-weight: 600;
+
+	a {
+		display: flex;
+		align-items: center;
+		gap: var( --wp--preset--spacing--minus-2 );
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.wp-embed-site-title a svg,
+.wp-embed-site-icon {
+	position: initial;
+	width: 32px;
+	height: 32px;
+	transform: none;
+}
+
+
+.wp-embed-meta {
+	display: flex;
+	align-items: center;
+	gap: var( --wp--preset--spacing--minus-2 );
+}
+
+.wp-embed-comments a,
+.wp-embed-share .wp-embed-share-dialog-open {
+	font-size: inherit;
+	margin: 0;
+
+	.dashicons { display: none !important; }
+}
+
+.wp-embed-comments a {
+	@include inline-icon.prefix( icon.get-url( 'comment' ) );
+
+}
+
+.wp-embed-share-dialog-open {
+	@include inline-icon.prefix( icon.get-url( 'share' ) );
+	color: var( --link-color );
+
+	&:hover,
+	&:focus {
+		color: var( --link-hover-color );
+	}
+}

@@ -14,6 +14,9 @@ $icons: (
 	// https://fonts.google.com/icons?icon.query=date&selected=Material+Symbols+Sharp:calendar_month:FILL@1;wght@400;GRAD@0;opsz@24&icon.style=Sharp&icon.platform=web
 	'calendar-month': '<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M440-400v-80h80v80h-80Zm-160 0v-80h80v80h-80Zm320 0v-80h80v80h-80ZM440-240v-80h80v80h-80Zm-160 0v-80h80v80h-80Zm320 0v-80h80v80h-80ZM120-80v-720h120v-80h80v80h320v-80h80v80h120v720H120Zm80-80h560v-400H200v400Z"/></svg>',
 
+	// https://fonts.google.com/icons?icon.query=close&selected=Material+Symbols+Sharp:close:FILL@1;wght@400;GRAD@0;opsz@24&icon.style=Sharp&icon.platform=web
+	'close': '<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>',
+
 	// https://fonts.google.com/icons?icon.query=comment&selected=Material+Symbols+Sharp:comment:FILL@1;wght@400;GRAD@0;opsz@24&icon.style=Sharp&icon.platform=web
 	'comment': '<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M240-400h480v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM80-240v-640h800v800L720-240H80Z"/></svg>',
 
@@ -55,6 +58,9 @@ $icons: (
 
 	// https://fonts.google.com/icons?icon.query=search&selected=Material+Icons+Outlined:search:&icon.set=Material+Icons
 	'search': '<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="%23000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>',
+
+	// https://fonts.google.com/icons?icon.query=share&selected=Material+Symbols+Sharp:share:FILL@1;wght@400;GRAD@0;opsz@24&icon.style=Sharp&icon.platform=web
+	'share': '<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M720-80q-50 0-85-35t-35-85q0-7 1-14.5t3-13.5L322-392q-17 15-38 23.5t-44 8.5q-50 0-85-35t-35-85q0-50 35-85t85-35q23 0 44 8.5t38 23.5l282-164q-2-6-3-13.5t-1-14.5q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35q-23 0-44-8.5T638-672L356-508q2 6 3 13.5t1 14.5q0 7-1 14.5t-3 13.5l282 164q17-15 38-23.5t44-8.5q50 0 85 35t35 85q0 50-35 85t-85 35Z"/></svg>',
 
 	// https://fonts.google.com/icons?icon.query=tag&selected=Material+Symbols+Sharp:label:FILL@1;wght@400;GRAD@0;opsz@24&icon.style=Sharp&icon.platform=web
 	'tag': '<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-200v-560h522l198 280-198 280H120Z"/></svg>',

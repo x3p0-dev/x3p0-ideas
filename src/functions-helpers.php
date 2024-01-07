@@ -37,6 +37,7 @@ function theme( string $component = '' )
 			'assets'    => new Assets(),
 			'blocks'    => new Blocks( new BlockDirectives() ),
 			'config'    => new Config(),
+			'embeds'    => new Embeds(),
 			'media'     => new Media(),
 			'parts'     => new Parts(),
 			'patterns'  => new Patterns(),

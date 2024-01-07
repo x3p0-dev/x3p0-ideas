@@ -34,7 +34,8 @@ module.exports = {
 			...blockStylesheets(),
 			'js/editor':  path.resolve( process.cwd(), 'resources/js',   'editor.js'   ),
 			'css/screen': path.resolve( process.cwd(), 'resources/scss', 'screen.scss' ),
-			'css/editor': path.resolve( process.cwd(), 'resources/scss', 'editor.scss' )
+			'css/editor': path.resolve( process.cwd(), 'resources/scss', 'editor.scss' ),
+			'css/embed':  path.resolve( process.cwd(), 'resources/scss', 'embed.scss'  )
 		},
 		plugins: [
 			// Very important! Include WP's plugin config or the

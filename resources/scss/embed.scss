@@ -1,0 +1,17 @@
+////
+/// Embed stylesheet. Used for when a post from the site is embedded on a third-
+/// party site. This controls the design of the embed inside of the `<iframe>`.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+// Import base styles.
+@use 'base/var';
+@use 'base/inline';
+
+// Import embed styles.
+@use 'embed/var' as embed-var;
+@use 'embed/root' as embed-root;
+@use 'embed/embed' as embed-embed;
+@use 'embed/dialog' as embed-dialog;
