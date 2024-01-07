@@ -12,6 +12,7 @@
 namespace X3P0\Ideas;
 
 use FilesystemIterator;
+use WP_Block_Type_Registry;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\HookAnnotation;
 
@@ -169,8 +170,12 @@ class Assets implements Bootable
 		// Build a relative path and URL string.
 		$relative = "public/css/blocks/{$namespace}/{$slug}";
 
-		// Bail if the asset file doesn't exist.
-		if ( ! file_exists( get_parent_theme_file_path( "{$relative}.asset.php" ) ) ) {
+		// Bail if the block is not registered or if the asset file
+		// doesn't exist.
+		if (
+			! WP_Block_Type_Registry::get_instance()->is_registered( "{$namespace}/{$slug}" )
+			|| ! file_exists( get_parent_theme_file_path( "{$relative}.asset.php" ) )
+		) {
 			return;
 		}
 
