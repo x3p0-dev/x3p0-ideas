@@ -26,6 +26,14 @@ class Embeds implements Bootable
 	protected const IMAGE_SIZE = 'x3p0-21x9-lg';
 
 	/**
+	 * Image shape to use for featured images (`rectangular` or `square`).
+	 *
+	 * @since 1.0.0
+	 * @todo  Add `string` type with PHP 8.3-only support.
+	 */
+	protected const IMAGE_SHAPE = 'rectangular';
+
+	/**
 	 * Maximum number of words in the excerpt.
 	 *
 	 * @since 1.0.0
@@ -51,7 +59,7 @@ class Embeds implements Bootable
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/enqueue_embed_scripts/
 	 */
-	public function enqueueEmbedAssets(): void
+	public function enqueueAssets(): void
 	{
 		$embed_styles = file_get_contents( get_parent_theme_file_path( 'public/css/embed.css' ) );
 
@@ -78,9 +86,22 @@ class Embeds implements Bootable
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/embed_thumbnail_image_size/
 	 */
-	public function embedImageSize(): string
+	public function imageSize(): string
 	{
 		return self::IMAGE_SIZE;
+	}
+
+	/**
+	 * Ensures that the featured image shape is set to match our size. This
+	 * also affects how the embed is laid out.
+	 *
+	 * @hook  embed_thumbnail_image_shape
+	 * @since 1.0.0
+	 * @link  https://developer.wordpress.org/reference/hooks/embed_thumbnail_image_shape/
+	 */
+	public function imageShape(): string
+	{
+		return self::IMAGE_SHAPE;
 	}
 
 	/**
