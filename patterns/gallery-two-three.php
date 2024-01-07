@@ -8,7 +8,7 @@
  * Block Types: core/gallery
  * Viewport Width: 1376
  */
-$image = get_theme_file_uri( 'public/media/block-core-image-16x9.webp' );
+$image = get_theme_file_uri( 'public/media/images/default-16x9.webp' );
 ?>
 <!-- wp:group {
 	"align":"wide",

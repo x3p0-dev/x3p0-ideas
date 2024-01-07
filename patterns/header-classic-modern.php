@@ -8,7 +8,7 @@
  * Block Types: core/template-part/header
  * Viewport Width: 1376
  */
-$image = get_theme_file_uri( 'public/media/purple-sunset.webp' );
+$image = get_theme_file_uri( 'public/media/images/purple-sunset.webp' );
 ?>
 <!-- wp:group {
 	"align":"full",

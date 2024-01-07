@@ -8,11 +8,11 @@
  * Block Types: core/gallery
  * Viewport Width: 1376
  */
-$image = get_theme_file_uri( 'public/media/block-core-image-9x16.webp' );
+$image = get_theme_file_uri( 'public/media/images/default-9x16.webp' );
 ?>
 <!-- wp:gallery {
 	"linkTo":"none",
-	"sizeSlug":"x3p0-19x9-md",
+	"sizeSlug":"x3p0-9x16-md",
 	"align":"wide",
 	"style":{"spacing":{"blockGap":{"top":"0","left":"0"}}}
 } -->
@@ -21,11 +21,11 @@ $image = get_theme_file_uri( 'public/media/block-core-image-9x16.webp' );
 	<?php foreach ( range( 1, 3 ) as $number ) : ?>
 
 		<!-- wp:image {
-			"sizeSlug":"x3p0-19x9-md",
+			"sizeSlug":"x3p0-9x16-md",
 			"linkDestination":"none",
 			"style":{"border":{"radius":"0px"}}
 		} -->
-		<figure class="wp-block-image size-x3p0-19x9-md has-custom-border">
+		<figure class="wp-block-image size-x3p0-9x16-md has-custom-border">
 			<img src="<?= esc_url( $image ) ?>" alt="" style="border-radius:0px"/>
 		</figure>
 		<!-- /wp:image -->

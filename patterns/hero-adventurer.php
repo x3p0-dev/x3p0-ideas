@@ -8,7 +8,7 @@
  * Block Types: core/cover
  * Viewport Width: 1376
  */
-$image = get_theme_file_uri( 'public/media/purple-sunset.webp' );
+$image = get_theme_file_uri( 'public/media/images/purple-sunset.webp' );
 ?>
 <!-- wp:cover {
 	"metadata":{"name":"<?php esc_attr_e( 'Pattern - Hero: Adventurer', 'x3p0-ideas' ) ?>"},
