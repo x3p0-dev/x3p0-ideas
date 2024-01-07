@@ -24,21 +24,21 @@
 ## Ignore folders and files when exporting as a ZIP.
 ## -----------------------------------------------------------------------------
 
-.github export-ignore
-.notes export-ignore
-docs export-ignore
+/.github export-ignore
+/.notes export-ignore
+/docs export-ignore
 
 # Don't export folders that are merely copied into `/public`. Note that we're
 # retaining the `resources/js` and `resources/scss` folders because they are
 # required for themes submitted to WordPress.org.
 # @link https://make.wordpress.org/themes/handbook/review/required/#9-files
-resources/fonts
-resources/media
-resources/scss
+/resources/fonts
+/resources/media
+/resources/scss
 
-.editorconfig export-ignore
-.gitattributes export-ignore
-.gitattributes export-ignore
-package-lock.json export-ignore
-package.json export-ignore
-webpack.config.js export-ignore
+/.editorconfig export-ignore
+/.gitattributes export-ignore
+/.gitattributes export-ignore
+/package-lock.json export-ignore
+/package.json export-ignore
+/webpack.config.js export-ignore
