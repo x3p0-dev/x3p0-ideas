@@ -10,7 +10,7 @@
  */
 ?>
 <!-- wp:query {
-	"metadata":{"name":"<?php esc_attr_e( 'Post List: Cover', 'x3p0-ideas' ) ?>"},
+	"metadata":{"name":"<?php esc_attr_e( 'Posts Query', 'x3p0-ideas' ) ?>"},
 	"queryId":0,
 	"query":{
 		"perPage":6,

@@ -8,11 +8,14 @@
  * Viewport Width: 640
  */
 ?>
-<!-- wp:group {"layout":{"type":"constrained"}} -->
+<!-- wp:group {
+	"metadata":{"name":"<?= esc_attr__( 'FAQs Container', 'x3p0-ideas' ) ?>"},
+	"layout":{"type":"constrained"}
+} -->
 <div class="wp-block-group">
 
 	<!-- wp:heading -->
-	<h2 class="wp-block-heading"><?php esc_html_e( 'FAQs', 'x3p0-ideas' ) ?></h2>
+	<h2 class="wp-block-heading"><?= esc_html__( 'FAQs', 'x3p0-ideas' ) ?></h2>
 	<!-- /wp:heading -->
 
 	<?php foreach ( range( 1, 4 ) as $number ) : ?>

@@ -10,6 +10,7 @@
  */
 ?>
 <!-- wp:group {
+	"metadata":{"name":"<?= esc_attr__( 'Footnotes Container', 'x3p0-ideas' ) ?>"},
 	"style":{"spacing":{"blockGap":"var:preset|spacing|base"}},
 	"className":"pattern-footnotes has-color-var-neutral",
 	"layout":{"type":"constrained"}

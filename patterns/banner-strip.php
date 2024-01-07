@@ -8,7 +8,7 @@
  */
 ?>
 <!-- wp:group {
-	"metadata":{"name":"<?= esc_attr__( 'Banner: Strip', 'x3p0-ideas' ) ?>"},
+	"metadata":{"name":"<?= esc_attr__( 'Banner', 'x3p0-ideas' ) ?>"},
 	"align":"full",
 	"style":{
 		"elements":{"link":{"color":{"text":"var:preset|color|base"}}},
