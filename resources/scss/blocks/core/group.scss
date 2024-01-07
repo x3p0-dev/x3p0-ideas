@@ -5,7 +5,6 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
-
 // -----------------------------------------------------------------------------
 // Block fixes.
 // -----------------------------------------------------------------------------
@@ -14,12 +13,6 @@
 // the content justification set for the nested Row.
 .wp-block-group-is-layout-flex.is-vertical > :where( .wp-block-group-is-layout-flex:not( .is-vertical ) ) {
 	width: 100%;
-}
-
-// WP adds extra padding here as some sort of reset.
-.has-global-padding > .wp-block-group.alignfull:where( :not( .has-global-padding ) ) > * {
-	padding-left: 0;
-	padding-right: 0;
 }
 
 // -----------------------------------------------------------------------------

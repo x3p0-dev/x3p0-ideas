@@ -10,7 +10,7 @@
 // -----------------------------------------------------------------------------
 
 // Zero out default browser spacing.
-:where( .wp-block-pullquote blockquote ) {
+.wp-block-pullquote blockquote {
 	margin: 0;
 	padding: 0;
 }
