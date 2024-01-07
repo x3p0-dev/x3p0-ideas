@@ -8,11 +8,11 @@
  * Block Types: core/cover
  * Viewport Width: 1376
  */
-$hero_image = \X3P0\Ideas\theme( 'config' )->get( 'front-page-image' );
+$image = get_theme_file_uri( 'public/media/purple-sunset.webp' );
 ?>
 <!-- wp:cover {
 	"metadata":{"name":"<?php esc_attr_e( 'Pattern - Hero: Adventurer', 'x3p0-ideas' ) ?>"},
-	"url":"<?= esc_url( $hero_image ) ?>",
+	"url":"<?= esc_url( $image ) ?>",
 	"id":2268,
 	"hasParallax":true,
 	"dimRatio":50,
@@ -37,7 +37,7 @@ $hero_image = \X3P0\Ideas\theme( 'config' )->get( 'front-page-image' );
 <div class="wp-block-cover alignfull has-parallax has-custom-content-position is-position-bottom-left pattern-hero-adventurer" style="padding-top:var(--wp--preset--spacing--plus-5);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-5);padding-left:var(--wp--preset--spacing--plus-3);min-height:90vh">
 
 	<span aria-hidden="true" class="wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient has-fabled-sunset-gradient-background"></span>
-	<div role="img" class="wp-block-cover__image-background wp-image-2268 has-parallax" style="background-position:50% 50%;background-image:url(<?= esc_url( $hero_image ) ?>)"></div>
+	<div role="img" class="wp-block-cover__image-background wp-image-2268 has-parallax" style="background-position:50% 50%;background-image:url(<?= esc_url( $image ) ?>)"></div>
 
 	<div class="wp-block-cover__inner-container">
 

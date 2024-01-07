@@ -36,7 +36,6 @@ function theme( string $component = '' )
 		$bindings = apply_filters( 'x3p0/ideas/components', [
 			'assets'    => new Assets(),
 			'blocks'    => new Blocks( new BlockDirectives() ),
-			'config'    => new Config(),
 			'embeds'    => new Embeds(),
 			'media'     => new Media(),
 			'parts'     => new Parts(),
