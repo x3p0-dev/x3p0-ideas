@@ -15,7 +15,7 @@
 	"layout":{"type":"constrained"}
 } -->
 <main class="wp-block-group site-content">
-	<!-- wp:pattern {"@unless":"is_paged","slug":"x3p0-ideas/hero-adventurer"} /-->
+	<!-- wp:pattern {"@unless":"is_paged","slug":"x3p0-ideas/hero-featured"} /-->
 	<!-- wp:template-part {"slug":"loop","align":"full","className":"loop"} /-->
 </main>
 <!-- /wp:group -->

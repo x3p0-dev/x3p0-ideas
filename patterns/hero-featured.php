@@ -1,7 +1,7 @@
 <?php
 /**
- * Title: Hero: Adventurer
- * Slug: x3p0-ideas/hero-adventurer
+ * Title: Hero: Featured
+ * Slug: x3p0-ideas/hero-featured
  * Description: Make a statement.
  * Categories: featured
  * Keywords: hero, cover, intro, about
@@ -11,7 +11,7 @@
 $image = get_theme_file_uri( 'public/media/images/purple-sunset.webp' );
 ?>
 <!-- wp:cover {
-	"metadata":{"name":"<?php esc_attr_e( 'Pattern - Hero: Adventurer', 'x3p0-ideas' ) ?>"},
+	"metadata":{"name":"<?php esc_attr_e( 'Hero: Featured', 'x3p0-ideas' ) ?>"},
 	"url":"<?= esc_url( $image ) ?>",
 	"id":2268,
 	"hasParallax":true,
@@ -31,10 +31,9 @@ $image = get_theme_file_uri( 'public/media/images/purple-sunset.webp' );
 			}
 		}
 	},
-	"className":"pattern-hero-adventurer",
 	"layout":{"type":"default"}
 } -->
-<div class="wp-block-cover alignfull has-parallax has-custom-content-position is-position-bottom-left pattern-hero-adventurer" style="padding-top:var(--wp--preset--spacing--plus-5);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-5);padding-left:var(--wp--preset--spacing--plus-3);min-height:90vh">
+<div class="wp-block-cover alignfull has-parallax has-custom-content-position is-position-bottom-left" style="padding-top:var(--wp--preset--spacing--plus-5);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-5);padding-left:var(--wp--preset--spacing--plus-3);min-height:90vh">
 
 	<span aria-hidden="true" class="wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient has-fabled-sunset-gradient-background"></span>
 	<div role="img" class="wp-block-cover__image-background wp-image-2268 has-parallax" style="background-position:50% 50%;background-image:url(<?= esc_url( $image ) ?>)"></div>
