@@ -1,4 +1,4 @@
-![Text: Ideas, Experiments, and Things](public/media/ideas-experiments-things.jpg)
+![Text: Ideas, Experiments, and Things](public/media/images/ideas-experiments-things.jpg)
 
 # Ideas, Experiments, and Things
 
