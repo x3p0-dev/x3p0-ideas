@@ -10,6 +10,7 @@
 
 namespace X3P0\Ideas;
 
+use WP_Block_Type_Registry;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\BlockDirectives;
 
@@ -39,7 +40,7 @@ function theme( string $component = '' )
 			'embeds'    => new Embeds(),
 			'media'     => new Media(),
 			'parts'     => new Parts(),
-			'patterns'  => new Patterns(),
+			'patterns'  => new Patterns( WP_Block_Type_Registry::get_instance() ),
 			'templates' => new Templates()
 		] );
 

@@ -12,12 +12,31 @@
 
 namespace X3P0\Ideas;
 
+use WP_Block_Type_Registry;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\HookAnnotation;
 
 class Patterns implements Bootable
 {
 	use HookAnnotation;
+
+	/**
+	 * Stores the instance of the block type registry.
+	 *
+	 * @since 1.0.0
+	 * @todo  Move to constructor with PHP 8-only support.
+	 */
+	protected WP_Block_Type_Registry $block_types;
+
+	/**
+	 * Sets up the object state.
+	 *
+	 * @since 1.0.0
+	 */
+	public function __construct( WP_Block_Type_Registry $block_types )
+	{
+		$this->block_types = $block_types;
+	}
 
 	/**
 	 * Boots the component, running its actions/filters.
@@ -56,5 +75,28 @@ class Patterns implements Bootable
 			'label'       => __( 'Content', 'x3p0-ideas' ),
 			'description' => __( 'Content patterns handle the design for the content area of templates—specifically, the section between the header and footer.', 'x3p0-ideas' )
 		] );
+	}
+
+	/**
+	 * Unregister block patterns, specifically those that use block types
+	 * that are not in use on the site.
+	 *
+	 * @hook  init  last
+	 * @since 1.0.0
+	 * @link  https://developer.wordpress.org/reference/functions/unregister_block_pattern/
+	 */
+	public function unregister(): void
+	{
+		$block_patterns = [
+			'x3p0/breadcrumbs' => [ 'x3p0-ideas/breadcrumbs' ]
+		];
+
+		foreach ( $block_patterns as $block => $patterns ) {
+			foreach ( $patterns as $pattern ) {
+				if ( ! $this->block_types->is_registered( $block ) ) {
+					unregister_block_pattern( $pattern );
+				}
+			}
+		}
 	}
 }
