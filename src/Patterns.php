@@ -88,7 +88,8 @@ class Patterns implements Bootable
 	public function unregister(): void
 	{
 		$block_patterns = [
-			'x3p0/breadcrumbs' => [ 'x3p0-ideas/breadcrumbs' ]
+			'core/table-of-contents' => [ 'x3p0-ideas/table-of-contents' ],
+			'x3p0/breadcrumbs'       => [ 'x3p0-ideas/breadcrumbs' ]
 		];
 
 		foreach ( $block_patterns as $block => $patterns ) {

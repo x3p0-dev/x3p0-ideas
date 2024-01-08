@@ -1,7 +1,7 @@
 <?php
 /**
- * Title: Table of Contents: Boxed
- * Slug: x3p0-ideas/table-of-contents-boxed
+ * Title: Table of Contents
+ * Slug: x3p0-ideas/table-of-contents
  * Description: Displays a post's table of contents within a Group block with a Heading.
  * Categories: text
  * Keywords: table, contents, list
