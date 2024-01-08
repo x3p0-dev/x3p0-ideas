@@ -2,10 +2,8 @@
 /**
  * Title: Attachment Template
  * Slug: x3p0-ideas/template-attachment
- * Description:
  * Inserter: no
  * Template Types: attachment
- * Categories: x3p0-content
  */
 ?>
 <!-- wp:template-part {"slug":"header","className":"site-header"} /-->

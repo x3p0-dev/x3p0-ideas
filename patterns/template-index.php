@@ -2,10 +2,8 @@
 /**
  * Title: Index Template
  * Slug: x3p0-ideas/template-index
- * Description:
  * Inserter: no
- * Template Types: home, archive
- * Categories: x3p0-content
+ * Template Types: archive, author, category, date, home, front-page, tag, taxonomy
  */
 ?>
 <!-- wp:template-part {"slug":"header","className":"site-header"} /-->

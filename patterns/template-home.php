@@ -2,11 +2,8 @@
 /**
  * Title: Home Template
  * Slug: x3p0-ideas/template-home
- * Description:
  * Inserter: no
- * Template Types: home
- * Categories: x3p0-content
- * Keywords: home, content
+ * Template Types: home, front-page
  */
 ?>
 <!-- wp:template-part {"slug":"header","className":"site-header"} /-->

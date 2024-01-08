@@ -2,10 +2,8 @@
 /**
  * Title: Single Template
  * Slug: x3p0-ideas/template-single
- * Description:
  * Inserter: no
- * Template Types: single
- * Categories: x3p0-content
+ * Template Types: attachment, page, single, singular
  */
 ?>
 <!-- wp:template-part {"slug":"header","className":"site-header"} /-->

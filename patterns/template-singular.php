@@ -2,10 +2,8 @@
 /**
  * Title: Singular Template
  * Slug: x3p0-ideas/template-singular
- * Description:
  * Inserter: no
  * Template Types: attachment, page, single, singular
- * Categories: x3p0-content
  */
 ?>
 <!-- wp:group {

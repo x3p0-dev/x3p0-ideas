@@ -2,11 +2,8 @@
 /**
  * Title: 404 Template
  * Slug: x3p0-ideas/template-404
- * Description:
  * Inserter: no
- * Template Types: home
- * Categories: x3p0-content
- * Keywords: home, content
+ * Template Types: 404
  */
 ?>
 <!-- wp:template-part {"slug":"header","className":"site-header"} /-->

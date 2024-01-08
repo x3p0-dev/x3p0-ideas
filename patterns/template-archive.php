@@ -2,11 +2,8 @@
 /**
  * Title: Archive Template
  * Slug: x3p0-ideas/template-archive
- * Description:
  * Inserter: no
- * Template Types: home
- * Categories: x3p0-content
- * Keywords: archive
+ * Template Types: archive, author, category, date, tag, taxonomy
  */
 ?>
 <!-- wp:template-part {"slug":"header","className":"site-header"} /-->

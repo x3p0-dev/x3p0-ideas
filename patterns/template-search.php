@@ -2,10 +2,8 @@
 /**
  * Title: Search Template
  * Slug: x3p0-ideas/template-search
- * Description:
  * Inserter: no
  * Template Types: search
- * Categories: x3p0-content
  */
 ?>
 <!-- wp:template-part {"slug":"header","className":"site-header"} /-->

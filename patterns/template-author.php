@@ -2,11 +2,8 @@
 /**
  * Title: Author Template
  * Slug: x3p0-ideas/template-author
- * Description:
  * Inserter: no
  * Template Types: author
- * Categories: x3p0-content
- * Keywords: home, content
  */
 ?>
 <!-- wp:template-part {"slug":"header","className":"site-header"} /-->
