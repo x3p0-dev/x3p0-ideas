@@ -11,7 +11,7 @@
 $image = get_theme_file_uri( 'public/media/images/purple-sunset.webp' );
 ?>
 <!-- wp:cover {
-	"metadata":{"name":"<?php esc_attr_e( 'Hero: Featured', 'x3p0-ideas' ) ?>"},
+	"metadata":{"name":"<?= esc_attr__( 'Hero: Featured', 'x3p0-ideas' ) ?>"},
 	"url":"<?= esc_url( $image ) ?>",
 	"id":2268,
 	"hasParallax":true,

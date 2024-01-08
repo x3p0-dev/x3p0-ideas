@@ -25,7 +25,7 @@
 				<?php printf( __( 'Question %d?', 'x3p0-ideas'), $number ) ?>
 			</summary>
 			<!-- wp:paragraph {
-				"placeholder":"<?php esc_attr_e( 'Add an answer to the question.', 'x3p0-ideas' ) ?>"
+				"placeholder":"<?= esc_attr__( 'Add an answer to the question.', 'x3p0-ideas' ) ?>"
 			} -->
 			<p></p>
 			<!-- /wp:paragraph -->

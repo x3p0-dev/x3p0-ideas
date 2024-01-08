@@ -10,7 +10,7 @@
  */
 ?>
 <!-- wp:query {
-	"metadata":{"name":"<?php esc_attr_e( 'Posts Query', 'x3p0-ideas' ) ?>"},
+	"metadata":{"name":"<?= esc_attr__( 'Posts Query', 'x3p0-ideas' ) ?>"},
 	"queryId":0,
 	"query":{
 		"perPage":6,
@@ -32,7 +32,7 @@
 <div class="wp-block-query alignfull pattern-post-list-cover">
 
 	<!-- wp:group {
-		"metadata":{"name":"<?php esc_attr_e( 'Posts Container', 'x3p0-ideas' ) ?>"},
+		"metadata":{"name":"<?= esc_attr__( 'Posts Container', 'x3p0-ideas' ) ?>"},
 		"align":"full",
 		"layout":{"type":"constrained"}
 	} -->
@@ -41,7 +41,7 @@
 		<!-- wp:post-template {"align":"full","style":{"spacing":{"blockGap":"0"}}} -->
 
 			<!-- wp:group {
-				"metadata":{"name":"<?php esc_attr_e( 'Post', 'x3p0-ideas' ) ?>"},
+				"metadata":{"name":"<?= esc_attr__( 'Post', 'x3p0-ideas' ) ?>"},
 				"tagName":"article",
 				"className":"has-link-color",
 				"layout":{"type":"constrained"}
@@ -72,25 +72,20 @@
 					<div class="wp-block-cover__inner-container">
 
 						<!-- wp:group {
-							"metadata":{"name":"<?php esc_attr_e( 'Post Header', 'x3p0-ideas' ) ?>"},
+							"metadata":{"name":"<?= esc_attr__( 'Post Header', 'x3p0-ideas' ) ?>"},
 							"tagName":"header",
 							"style":{"spacing":{"blockGap":"var:preset|spacing|minus-2"}},
 							"layout":{"type":"constrained"}
 						} -->
 						<header class="wp-block-group">
-							<!-- wp:post-title {
-								"metadata":{"name":"<?php esc_attr_e( 'Post Title', 'x3p0-ideas' ) ?>"},
-								"isLink":true
-							} /-->
+							<!-- wp:post-title {"isLink":true} /-->
 
 							<!-- wp:group {
-								"metadata":{"name":"<?php esc_attr_e( 'Post Meta', 'x3p0-ideas' ) ?>"},
+								"metadata":{"name":"<?= esc_attr__( 'Post Meta', 'x3p0-ideas' ) ?>"},
 								"layout":{"type":"flex","flexWrap":"nowrap"}
 							} -->
 							<div class="wp-block-group">
-								<!-- wp:post-date {
-									"metadata":{"name":"<?php esc_attr_e( 'Post Date', 'x3p0-ideas' ) ?>"}
-								} /-->
+								<!-- wp:post-date /-->
 							</div>
 							<!-- /wp:group -->
 						</header>

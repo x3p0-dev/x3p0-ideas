@@ -9,7 +9,7 @@
  */
 ?>
 <!-- wp:query {
-	"metadata":{"name":"<?php esc_attr_e( 'Posts Query', 'x3p0-ideas' ) ?>"},
+	"metadata":{"name":"<?= esc_attr__( 'Posts Query', 'x3p0-ideas' ) ?>"},
 	"queryId":0,
 	"query":{
 		"perPage":3,
