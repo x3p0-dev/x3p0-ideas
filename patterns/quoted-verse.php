@@ -6,7 +6,7 @@
  * Categories: text
  * Block Types: core/verse
  * Keywords: quote, poetry, verse
- * Viewport Width: 640
+ * Viewport Width: 1024
  */
 ?>
 <!-- wp:quote {"className":"is-style-plain"} -->

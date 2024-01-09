@@ -26,10 +26,9 @@
 		"inherit":true
 	},
 	"align":"full",
-	"className":"pattern-post-list-cover",
 	"layout":{"type":"constrained"}
 } -->
-<div class="wp-block-query alignfull pattern-post-list-cover">
+<div class="wp-block-query alignfull">
 
 	<!-- wp:group {
 		"metadata":{"name":"<?= esc_attr__( 'Posts Container', 'x3p0-ideas' ) ?>"},

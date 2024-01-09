@@ -25,7 +25,6 @@
 <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--plus-6);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-6);padding-left:var(--wp--preset--spacing--plus-3)">
 
 	<!-- wp:social-links {
-		"metadata":{"name":"<?= esc_attr__( 'Social Menu', 'x3p0-ideas' ) ?>"},
 		"showLabels":true,
 		"size":"has-normal-icon-size",
 		"layout":{"type":"flex","justifyContent":"center"},

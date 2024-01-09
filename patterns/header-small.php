@@ -21,10 +21,9 @@
 			}
 		}
 	},
-	"className":"pattern-header-default",
 	"layout":{"type":"default"}
 } -->
-<div class="wp-block-group pattern-header-default" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
+<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
 
 	<!-- wp:group {
 		"metadata":{"name":"<?= esc_attr__( 'Header Content', 'x3p0-ideas' ) ?>"},

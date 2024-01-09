@@ -96,11 +96,15 @@ $image = get_theme_file_uri( 'public/media/images/purple-sunset.webp' );
 	} -->
 	<div class="wp-block-group alignfull has-base-color has-contrast-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--base);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--base);padding-left:var(--wp--preset--spacing--plus-3)">
 
-		<!-- wp:group {"layout":{"type":"flex","justifyContent":"space-between"}} -->
+		<!-- wp:group {
+			"layout":{
+				"type":"flex",
+				"justifyContent":"space-between"
+			}
+		} -->
 		<div class="wp-block-group">
 
 			<!-- wp:navigation {
-				"ref":113,
 				"icon":"menu",
 				"layout":{
 					"type":"flex",

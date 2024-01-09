@@ -44,7 +44,12 @@
 
 					<!-- wp:avatar {
 						"size":56,
-						"style":{"layout":{"selfStretch":"fit","flexSize":null}}
+						"style":{
+							"layout":{
+								"selfStretch":"fit",
+								"flexSize":null
+							}
+						}
 					} /-->
 
 					<!-- wp:group {
@@ -82,7 +87,11 @@
 					"tagName":"footer",
 					"metadata":{"name":"<?= esc_attr__( 'Comment Footer', 'x3p0-ideas' ) ?>"},
 					"style":{"spacing":{"blockGap":"var:preset|spacing|minus-2"}},
-					"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"right"},
+					"layout":{
+						"type":"flex",
+						"flexWrap":"nowrap",
+						"justifyContent":"right"
+					},
 					"fontSize":"sm"
 				} -->
 				<footer class="wp-block-group has-sm-font-size">
