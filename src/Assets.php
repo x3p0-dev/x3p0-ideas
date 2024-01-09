@@ -131,7 +131,7 @@ class Assets implements Bootable
 	 * automatically enqueued. Each file should be named
 	 * `{$block_namespace}/{$block_slug}.css`.
 	 *
-	 * @hook  init
+	 * @hook  init  last
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/functions/wp_enqueue_block_style/
 	 */
