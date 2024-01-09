@@ -29,4 +29,19 @@
 .wp-block-template-part.loop.alignfull .wp-block-query {
 	padding-left: 0;
 	padding-right: 0;
+
+	// This ensures that nested pagination gets the global padding in this
+	// particular instance. There's no way to currently add padding to the
+	// Query block or Query Pagination blocks. And wrapping Query Pagination
+	// in a Group block doesn't work because it is conditionally displayed.
+	//
+	// This is important so that the Query Pagination block doesn't butt
+	// against the side of the screen on smaller viewports.
+	//
+	// @link https://github.com/WordPress/gutenberg/issues/44879
+	> .wp-block-query-pagination {
+		box-sizing: content-box;
+		padding-left: var( --wp--style--block-gap );
+		padding-right: var( --wp--style--block-gap );
+	}
 }
