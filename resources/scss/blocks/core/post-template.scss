@@ -32,10 +32,10 @@
 // -----------------------------------------------------------------------------
 
 // Ensures that `cqi` values are based on their container, not the viewport.,
-.wp-block-post-template-is-layout-grid > .wp-block-post {
+.wp-block-post-template-is-layout-grid > .wp-block-post,
+.wp-block-post-template.is-flex-container > .wp-block-post  {
 	container-type: inline-size;
 }
-
 
 .wp-block-query .wp-block-post-template.is-layout-grid {
 	grid-template-columns: repeat( var( --col-count, 1 ), 1fr ) !important;
@@ -71,12 +71,6 @@
 @media ( min-width: 80rem ) {
 	.wp-block-post-template.is-layout-grid.columns-5 { --col-count: 5; }
 	.wp-block-post-template.is-layout-grid.columns-6 { --col-count: 6; }
-}
-
-
-/* Set a query container for flex query loops. */
-.wp-block-post-template.is-flex-container > .wp-block-post {
-	container-type: inline-size;
 }
 
 // -----------------------------------------------------------------------------
