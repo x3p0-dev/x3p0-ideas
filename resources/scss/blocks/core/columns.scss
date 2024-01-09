@@ -18,6 +18,12 @@
 	padding: 0;
 }
 
+// Zero out global padding so that the front end and editor match.
+.has-global-padding > .alignfull > .wp-block-columns {
+	padding-left: 0;
+	padding-right: 0;
+}
+
 // -----------------------------------------------------------------------------
 // Block style variations.
 // -----------------------------------------------------------------------------
