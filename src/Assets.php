@@ -58,7 +58,7 @@ class Assets implements Bootable
 	 * @hook styles_inline_size_limit
 	 * @since 1.0.0
 	 */
-	public function stylesInlineSizeLimit( int $total_inline_limit ): int
+	public function filterInlineStylesLimit( int $total_inline_limit ): int
 	{
 		return self::INLINE_CSS_LIMIT > $total_inline_limit
 		       ? self::INLINE_CSS_LIMIT

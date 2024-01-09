@@ -65,11 +65,11 @@ class Patterns implements Bootable
 	 * patterns by adding them as individual pattern files in the `/patterns`
 	 * folder.
 	 *
-	 * @hook  init
+	 * @hook  init  first
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/functions/register_block_pattern_category/
 	 */
-	public function register(): void
+	public function registerCategories(): void
 	{
 		register_block_pattern_category( 'x3p0-content', [
 			'label'       => __( 'Content', 'x3p0-ideas' ),
@@ -85,7 +85,7 @@ class Patterns implements Bootable
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/functions/unregister_block_pattern/
 	 */
-	public function unregister(): void
+	public function unregisterPatterns(): void
 	{
 		$block_patterns = [
 			'core/table-of-contents' => [ 'x3p0-ideas/table-of-contents' ],

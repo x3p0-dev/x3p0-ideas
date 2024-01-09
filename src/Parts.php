@@ -42,7 +42,7 @@ class Parts implements Bootable
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/default_wp_template_part_areas/
 	 */
-	public function areaDefinitions( array $areas ): array
+	public function registerAreas( array $areas ): array
 	{
 		$areas[] = [
 			'area'        => 'loop',

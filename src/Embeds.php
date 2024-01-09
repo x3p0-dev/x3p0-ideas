@@ -86,7 +86,7 @@ class Embeds implements Bootable
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/embed_thumbnail_image_size/
 	 */
-	public function imageSize(): string
+	public function filterImageSize(): string
 	{
 		return self::IMAGE_SIZE;
 	}
@@ -99,7 +99,7 @@ class Embeds implements Bootable
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/embed_thumbnail_image_shape/
 	 */
-	public function imageShape(): string
+	public function filterImageShape(): string
 	{
 		return self::IMAGE_SHAPE;
 	}
@@ -111,7 +111,7 @@ class Embeds implements Bootable
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/excerpt_length/
 	 */
-	public function excerptLength( int $number ): int
+	public function filterExcerptLength( int $number ): int
 	{
 		return is_embed() ? self::EXCERPT_LENGTH : $number;
 	}
@@ -123,7 +123,7 @@ class Embeds implements Bootable
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/excerpt_more/
 	 */
-	public function excerptMore( string $more_string ): string
+	public function filterExcerptMore( string $more_string ): string
 	{
 		return is_embed() ? '&thinsp;&hellip;' : $more_string;
 	}
@@ -137,7 +137,7 @@ class Embeds implements Bootable
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/embed_site_title_html/
 	 */
-	public function siteTitleHtml( string $site_title ): string
+	public function filterSiteTitleHtml( string $site_title ): string
 	{
 		// Bail if the site has an icon.
 		if ( get_site_icon_url() ) {

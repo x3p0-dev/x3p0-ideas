@@ -38,7 +38,7 @@ class Templates implements Bootable
 	 * @link  https://developer.wordpress.org/reference/hooks/default_template_types/
 	 * @todo  Register missing core templates.
 	 */
-	public function defaultTemplateTypes( array $default_template_types ): array
+	public function filterDefaultTypes( array $default_template_types ): array
 	{
 		// Registers custom template titles for the core templates.
 		$template_titles = [
@@ -72,7 +72,7 @@ class Templates implements Bootable
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/body_class/
 	 */
-	public function bodyClass( array $classes ): array
+	public function filterBodyClass( array $classes ): array
 	{
 		if ( Helpers::isPagedQueryBlock() && ! in_array( 'paged', $classes ) ) {
 			$classes[] = 'paged';
