@@ -32,7 +32,8 @@ export const UL_MARKERS = [
 	{ value: 'dash',   label:   __( 'Dash',   'x3p0-ideas' ) },
 	{ value: 'disc',   label:   __( 'Disc',   'x3p0-ideas' ) },
 	{ value: 'circle', label:   __( 'Circle', 'x3p0-ideas' ) },
-	{ value: 'square', label:   __( 'Square', 'x3p0-ideas' ) }
+	{ value: 'square', label:   __( 'Square', 'x3p0-ideas' ) },
+	{ value: 'none',   label:   __( 'None',   'x3p0-ideas' ) }
 ];
 
 /**
