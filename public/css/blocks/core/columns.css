@@ -1,1 +1,1 @@
-:where(.wp-block-columns.has-background){padding:0}.has-global-padding>.alignfull>.wp-block-columns{padding-left:0;padding-right:0}@media(max-width:782px){.wp-block-columns.is-style-reverse-stack{flex-wrap:wrap-reverse!important}}
+:where(.wp-block-columns){margin-bottom:0}:where(.wp-block-columns.has-background){padding:0}.has-global-padding>.alignfull>.wp-block-columns{padding-left:0;padding-right:0}@media(max-width:782px){.wp-block-columns.is-style-reverse-stack{flex-wrap:wrap-reverse!important}}

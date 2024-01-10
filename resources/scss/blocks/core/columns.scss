@@ -13,6 +13,11 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
+// Zero out core's bottom margin.
+:where( .wp-block-columns ) {
+	margin-bottom: 0;
+}
+
 // Zero out core's hardcoded padding when the block has a background.
 :where( .wp-block-columns.has-background ) {
 	padding: 0;
