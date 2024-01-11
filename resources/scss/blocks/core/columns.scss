@@ -33,6 +33,31 @@
 // Block style variations.
 // -----------------------------------------------------------------------------
 
+// Grid style.
+.wp-block-columns-is-layout-flex.is-style-grid-auto {
+	display: grid !important;
+	grid-template-columns: repeat( 1, 1fr );
+
+	@media ( min-width: 40rem ) {
+		grid-template-columns: repeat( 2, 1fr );
+	}
+
+	@media ( min-width: 64rem ) {
+		&:has( > :where(
+			.wp-block-column:nth-child( 5 ),
+			.wp-block-column:nth-child( 6 )
+		) ) {
+			grid-template-columns: repeat( 3, 1fr );
+		}
+	}
+
+	@media ( min-width: 80rem ) {
+		grid-auto-columns: minmax( 0, 1fr );
+		grid-auto-flow: column;
+	}
+}
+
+// Reverse Stack style.
 // WP breaks at 782px.
 @media ( max-width: wp.$break-medium ) {
 	.wp-block-columns.is-style-reverse-stack {

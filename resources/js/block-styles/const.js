@@ -30,6 +30,7 @@ export const BLOCK_STYLES = {
 		'card': __( 'Card', 'x3p0-ideas' )
 	},
 	'core/columns': {
+		'grid-auto':     __( 'Grid: Auto', 'x3p0-ideas' ),
 		'reverse-stack': __( 'Reverse Mobile Stack', 'x3p0-ideas' )
 	},
 	'core/comment-author-name': {

@@ -28,16 +28,56 @@
 
 // Hover reveal block style.
 .wp-block-cover.is-style-hover-reveal {
-	.wp-block-cover__image-background {
-		opacity: 0;
+	position: relative;
+	border-radius: var( --wp--custom--defaults--border-radius );
+	box-shadow: var( --wp--custom--defaults--shadow );
+
+	// The cover background (used for the overlay), needs to have its
+	// opacity set to `1` so that we have a background when the image is
+	// hidden for the reveal.
+	.wp-block-cover__background {
 		transition: opacity 0.5s ease-in-out;
 	}
 
+	// Only set the opacity if we're not hovered/focused.
+	&:where( :not( :hover, :focus-within ) ) .wp-block-cover__background {
+		opacity: 1;
+	}
+
+	// By default, we zero out the background image's opacity. Then, we
+	// reveal it on hover/focus.
+	.wp-block-cover__image-background {
+		opacity: 0;
+		transition: all 0.5s ease-in-out;
+	}
+
 	&:hover,
-	&:focus {
+	&:focus-within {
 		.wp-block-cover__image-background {
 			opacity: 1;
+			transform: scale( 1.3 );
 		}
+	}
+
+	// Remove text decoration for links.
+	a {
+		text-decoration: none;
+		outline: none;
+	}
+
+	// This will technically take all links and position them over the
+	// entire Cover block container. However, the last link will win out.
+	// We're also making sure that we don't target this when in the editor.
+	&:where( :not( [class*=block-editor] ) ) a:after {
+		content: "";
+		z-index: 1;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 	}
 }
 
