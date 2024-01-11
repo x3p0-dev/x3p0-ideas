@@ -118,7 +118,7 @@ $image = get_theme_file_uri( 'public/media/images/purple-sunset.webp' );
 									}
 								},
 								"backgroundColor":"primary-contrast",
-								"layout":{"type":"constrained"},
+								"layout":{"type":"default"},
 								"fontSize":"sm"
 							} -->
 							<div class="wp-block-group has-primary-contrast-background-color has-background has-sm-font-size" style="padding-top:var(--wp--preset--spacing--minus-3);padding-right:var(--wp--preset--spacing--base);padding-bottom:var(--wp--preset--spacing--minus-3);padding-left:var(--wp--preset--spacing--base)">
@@ -133,7 +133,7 @@ $image = get_theme_file_uri( 'public/media/images/purple-sunset.webp' );
 							<!-- wp:group {
 								"style":{
 									"spacing":{"blockGap":"var:preset|spacing|minus-3"}},
-									"layout":{"type":"constrained"}
+									"layout":{"type":"default"}
 								} -->
 							<div class="wp-block-group">
 
