@@ -16,8 +16,8 @@ $image = get_theme_file_uri( 'public/media/images/purple-sunset.webp' );
 	"style":{
 		"spacing":{
 			"padding":{
-				"top":"var:preset|spacing|plus-3",
-				"bottom":"var:preset|spacing|plus-3",
+				"top":"var:preset|spacing|plus-4",
+				"bottom":"var:preset|spacing|plus-4",
 				"left":"var:preset|spacing|plus-3",
 				"right":"var:preset|spacing|plus-3"
 			},
@@ -27,7 +27,7 @@ $image = get_theme_file_uri( 'public/media/images/purple-sunset.webp' );
 	"backgroundColor":"neutral-base",
 	"layout":{"type":"default"}
 } -->
-<div class="wp-block-group alignfull has-neutral-base-background-color has-background" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
+<div class="wp-block-group alignfull has-neutral-base-background-color has-background" style="padding-top:var(--wp--preset--spacing--plus-4);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-4);padding-left:var(--wp--preset--spacing--plus-3)">
 
 	<!-- wp:group {
 		"style":{"spacing":{"blockGap":"var:preset|spacing|base"}},
@@ -117,11 +117,11 @@ $image = get_theme_file_uri( 'public/media/images/purple-sunset.webp' );
 										}
 									}
 								},
-								"backgroundColor":"neutral-contrast",
+								"backgroundColor":"primary-contrast",
 								"layout":{"type":"constrained"},
 								"fontSize":"sm"
 							} -->
-							<div class="wp-block-group has-neutral-contrast-background-color has-background has-sm-font-size" style="padding-top:var(--wp--preset--spacing--minus-3);padding-right:var(--wp--preset--spacing--base);padding-bottom:var(--wp--preset--spacing--minus-3);padding-left:var(--wp--preset--spacing--base)">
+							<div class="wp-block-group has-primary-contrast-background-color has-background has-sm-font-size" style="padding-top:var(--wp--preset--spacing--minus-3);padding-right:var(--wp--preset--spacing--base);padding-bottom:var(--wp--preset--spacing--minus-3);padding-left:var(--wp--preset--spacing--base)">
 
 								<!-- wp:paragraph -->
 								<p><?php esc_html_e( 'Placeholder', 'x3p0-ideas' ) ?></p>
