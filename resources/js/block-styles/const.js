@@ -46,8 +46,8 @@ export const BLOCK_STYLES = {
 		'icon': __( 'Icon', 'x3p0-ideas' )
 	},
 	'core/cover': {
-		'hover-reveal-image':    __( 'Hover Reveal Image', 'x3p0-ideas' ),
-		'hover-reveal-text':     __( 'Hover Reveal Text',  'x3p0-ideas' ),
+		'reveal-image':          __( 'Reveal Image',       'x3p0-ideas' ),
+		'reveal-text':           __( 'Reveal Text',        'x3p0-ideas' ),
 		'polygon-slant-down-sm': __( 'Slant Down: Small',  'x3p0-ideas' ),
 		'polygon-slant-down-md': __( 'Slant Down: Medium', 'x3p0-ideas' ),
 		'polygon-slant-up-sm':   __( 'Slant Up: Small',    'x3p0-ideas' ),

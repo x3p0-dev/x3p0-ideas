@@ -27,7 +27,7 @@
 // -----------------------------------------------------------------------------
 
 // Hover reveal block styles
-.wp-block-cover[class*=is-style-hover-reveal] {
+.wp-block-cover[class*=is-style-reveal] {
 	border-radius: var( --wp--custom--defaults--border-radius );
 	box-shadow: var( --wp--custom--defaults--shadow );
 
@@ -62,7 +62,7 @@
 }
 
 // Hover reveal background.
-.wp-block-cover.is-style-hover-reveal-image {
+.wp-block-cover.is-style-reveal-image {
 
 	// When not selected, make the background (overlay) fully opaque.
 	&:where( :not(
@@ -92,7 +92,7 @@
 }
 
 // Hover reveal text.
-.wp-block-cover.is-style-hover-reveal-text {
+.wp-block-cover.is-style-reveal-text {
 
 	// When not selected, hide the background (overlay).
 	&:where( :not(
