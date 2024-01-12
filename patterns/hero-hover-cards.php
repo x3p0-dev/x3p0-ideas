@@ -85,10 +85,10 @@ $image = get_theme_file_uri( 'public/media/images/purple-sunset.webp' );
 							}
 						}
 					},
-					"className":"is-style-hover-reveal",
+					"className":"is-style-hover-reveal-image",
 					"layout":{"type":"default"}
 				} -->
-				<div class="wp-block-cover is-style-hover-reveal" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3);min-height:20vh">
+				<div class="wp-block-cover is-style-hover-reveal-image" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3);min-height:20vh">
 
 					<span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim"></span>
 					<img class="wp-block-cover__image-background wp-image-2329" alt="" src="<?= esc_url( $image ) ?>" data-object-fit="cover"/>

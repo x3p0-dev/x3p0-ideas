@@ -26,37 +26,17 @@
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-// Hover reveal block style.
-.wp-block-cover.is-style-hover-reveal {
-	position: relative;
+// Hover reveal block styles
+.wp-block-cover[class*=is-style-hover-reveal] {
 	border-radius: var( --wp--custom--defaults--border-radius );
 	box-shadow: var( --wp--custom--defaults--shadow );
 
-	// The cover background (used for the overlay), needs to have its
-	// opacity set to `1` so that we have a background when the image is
-	// hidden for the reveal.
+	// Position must be relative for the link to cover the entire block.
+	position: relative;
+
+	// Set the transition for the background (overlay).
 	.wp-block-cover__background {
 		transition: opacity 0.5s ease-in-out;
-	}
-
-	// Only set the opacity if we're not hovered/focused.
-	&:where( :not( :hover, :focus-within ) ) .wp-block-cover__background {
-		opacity: 1;
-	}
-
-	// By default, we zero out the background image's opacity. Then, we
-	// reveal it on hover/focus.
-	.wp-block-cover__image-background {
-		opacity: 0;
-		transition: all 0.5s ease-in-out;
-	}
-
-	&:hover,
-	&:focus-within {
-		.wp-block-cover__image-background {
-			opacity: 1;
-			transform: scale( 1.3 );
-		}
 	}
 
 	// Remove text decoration for links.
@@ -78,6 +58,76 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
+	}
+}
+
+// Hover reveal background.
+.wp-block-cover.is-style-hover-reveal-image {
+
+	// When not selected, make the background (overlay) fully opaque.
+	&:where( :not(
+		:hover,
+		:focus-within,
+		.is-selected
+	) ) .wp-block-cover__background {
+		opacity: 1;
+	}
+
+	// When not selected, hide the background image.
+	// Set the transition for the inner container.
+	.wp-block-cover__image-background {
+		opacity: 0;
+		transition: all 0.5s ease-in-out;
+	}
+
+	// Show and scale the background image when selected.
+	&:hover,
+	&:focus-within,
+	&.is-selected {
+		.wp-block-cover__image-background {
+			opacity: 1;
+			transform: scale( 1.3 );
+		}
+	}
+}
+
+// Hover reveal text.
+.wp-block-cover.is-style-hover-reveal-text {
+
+	// When not selected, hide the background (overlay).
+	&:where( :not(
+		:hover,
+		:focus-within,
+		.is-selected
+	) ) .wp-block-cover__background {
+		opacity: 0;
+	}
+
+	// When not selected, there is no background image, but there is a
+	// background gradient, make the background fully opaque.
+	&:where( :not(
+		:hover,
+		:focus-within,
+		.is-selected,
+		:has( .wp-block-cover__image-background )
+	) ) .wp-block-cover__background.has-background-gradient {
+		opacity: 1;
+	}
+
+	// Hide the inner container when not selected.
+	// Set the transition for the inner container.
+	.wp-block-cover__inner-container {
+		opacity: 0;
+		transition: opacity 0.5s ease-in-out;
+	}
+
+	// Show the inner container when selected.
+	&:hover,
+	&:focus-within,
+	&.is-selected {
+		.wp-block-cover__inner-container {
+			opacity: 1;
+		}
 	}
 }
 
