@@ -2,7 +2,7 @@
 	"name": "@x3p0-dev/x3p0-ideas",
 	"scripts": {
 		"start": "wp-scripts start --webpack-src-dir=resources --output-path=public",
-		"build": "wp-scripts build --webpack-src-dir=resources --output-path=public && npm run zip",
+		"build": "wp-scripts build --webpack-src-dir=resources --output-path=public",
 		"zip": "git archive --format zip --output _playground/x3p0-ideas.zip master"
 	},
 	"devDependencies": {
