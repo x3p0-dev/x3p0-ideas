@@ -106,6 +106,8 @@ figure.wp-block-image[class*=-gradient-background] {
 /// specific styles based on context.
 ///
 .wp-block-image.is-style-hand-drawn {
+
+	// The hand-drawn effect is given to the image itself.
 	img {
 		color: inherit;
 		border: 2px solid currentColor;
@@ -118,7 +120,7 @@ figure.wp-block-image[class*=-gradient-background] {
 
 	// If the block also has a gradient background, limit the padding so
 	// that the hand-drawn border still looks decent.
-	.wp-block-image.is-style-hand-drawn[class*=gradient-] img {
+	&[class*=gradient-] img {
 		padding: 2px;
 	}
 
