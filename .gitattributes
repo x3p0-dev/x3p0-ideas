@@ -19,6 +19,7 @@
 *.webp binary
 *.woff binary
 *.woff2 binary
+*.zip binary
 
 ## -----------------------------------------------------------------------------
 ## Ignore folders and files when exporting as a ZIP.
