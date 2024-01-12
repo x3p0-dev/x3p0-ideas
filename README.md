@@ -8,6 +8,8 @@ All the ideas I have. In a theme. **Literally every idea.**
 
 No concept is so outlandish that I won't try to wiggle it in one way or another. Except sidebars. _Sidebars were so 2010._ OK. Maybe I'll add them one day. But com'on—give your content some space to do its thing. Let it be the star of the show. Bells and whistles are for people less interesting than you.
 
+How about [trying out a demo](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/x3p0-dev/x3p0-ideas/master/_playground/blueprint.json) using WordPress Playground?
+
 ## 📛 Obligatory Badges: _Gotta collect 'em all!_
 
 <p>
