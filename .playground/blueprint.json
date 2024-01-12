@@ -1,0 +1,22 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"preferredVersions": {
+		"php": "8.0",
+		"wp": "6.4"
+	},
+	"features": {
+		"networking": true
+	},
+	"steps": [
+		{
+			"step": "installTheme",
+			"themeZipFile": {
+				"resource": "url",
+				"url": "https://github.com/x3p0-dev/x3p0-ideas/archive/refs/heads/master.zip"
+			},
+			"options": {
+				"activate": true
+			}
+		}
+	]
+}
