@@ -73,6 +73,11 @@
 		grid-auto-columns: minmax( 0, 1fr );
 		grid-auto-flow: column;
 	}
+
+	&.is-not-stacked-on-mobile {
+		grid-auto-columns: minmax( 0, 1fr );
+		grid-auto-flow: column;
+	}
 }
 
 ///
