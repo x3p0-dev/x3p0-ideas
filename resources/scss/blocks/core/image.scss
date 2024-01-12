@@ -12,12 +12,13 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
+// Make sure the image block has border box sizing.
 .wp-block-image {
 	box-sizing: border-box;
 }
 
-// WP's CSS for hiding captions isn't always specific enough to overrule custom
-// block styles, so we're giving it a higher specificity.
+// The WordPress lightbox for CSS to hide captions isn't always specific enough
+// to overrule custom block styles, so we're giving it a higher specificity.
 .wp-lightbox-overlay .wp-block-image figcaption.wp-element-caption {
 	display: none;
 }
@@ -33,16 +34,17 @@
 	border-radius: var( --wp--custom--defaults--border-radius );
 }
 
-// Lightbox trigger button.
+// Lightbox trigger button positioning to match the theme's spacing.
 .wp-lightbox-container .lightbox-trigger {
 	top: var( --wp--preset--spacing--minus-2 ) !important;
 	right: var( --wp--preset--spacing--minus-2 ) !important;
 }
 
-// -----------------------------------------------------------------------------
-// Gradient background.
-// -----------------------------------------------------------------------------
-
+///
+/// Gradient background styles for the custom editor feature. Essentially, this
+/// style creates a faux border by placing a background on the block and giving
+/// it padding.
+///
 figure.wp-block-image[class*=-gradient-background] {
 	--image-padding: clamp( 0.5rem, -0.33333333333333326rem + 2.083333333333333cqi, 1rem );
 
@@ -68,7 +70,8 @@ figure.wp-block-image[class*=-gradient-background] {
 		padding: var( --image-padding );
 	}
 
-	// Lightbox trigger button.
+	// Repositions the lightbox trigger button to account for the additional
+	// padding on the image.
 	.lightbox-trigger {
 		top: calc( var( --image-padding ) + var( --wp--preset--spacing--minus-2 ) ) !important;
 		right: calc( var( --image-padding ) + var( --wp--preset--spacing--minus-2 ) ) !important;
@@ -79,7 +82,13 @@ figure.wp-block-image[class*=-gradient-background] {
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-// Borderless style.
+///
+/// The borderless style removes any potential borders around the images, even
+/// styles that are similar to a border, such as outlines and shadows. We also
+/// remove any padding so that backgrounds on the block or image don't appear.
+/// This style targets both the outer block and the nested image to clear away
+/// those styles.
+///
 .wp-block-image.is-style-borderless,
 .wp-block-image.is-style-borderless img {
 	padding: 0 !important;
@@ -88,47 +97,70 @@ figure.wp-block-image[class*=-gradient-background] {
 	outline: none !important;
 }
 
-// Hand-drawn style.
-.wp-block-image[class*=is-style-hand-drawn] img {
-	color: inherit;
-	border: 2px solid currentColor;
-	overflow: hidden;
-	box-shadow: var( --wp--custom--defaults--shadow );
-	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
+///
+/// Adds a hand-drawn style with a custom border.
+///
+/// @todo In the past, there were also caption-left and caption-right variations
+/// upon this style. However, these did not work well when nested in a Gallery
+/// block. In the future, revisit this idea and see if we can unregister
+/// specific styles based on context.
+///
+.wp-block-image.is-style-hand-drawn {
+	img {
+		color: inherit;
+		border: 2px solid currentColor;
+		overflow: hidden;
+		box-shadow: var( --wp--custom--defaults--shadow );
+
+		// No `theme.json` support for this style of radius.
+		border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
+	}
+
+	// If the block also has a gradient background, limit the padding so
+	// that the hand-drawn border still looks decent.
+	.wp-block-image.is-style-hand-drawn[class*=gradient-] img {
+		padding: 2px;
+	}
+
+	// Customize the caption display for this style.
+	// Note: we need to target `.wp-element-caption` to overwrite caption
+	// styles defined in `theme.json`.
+	.wp-element-caption {
+		display: flex;
+		gap: 0.5rem;
+		justify-content: center;
+		align-items: baseline;
+		transform: rotate( 0.5deg );
+		font-family: var( --wp--preset--font-family--handwriting );
+		font-size: var( --wp--preset--font-size--md );
+		line-height: var( --wp--custom--line-height--md );
+	}
+
+	// Adds a curved arrow icon pointing up to the image above.
+	figcaption::before {
+		content: "\2938 ";
+		transform: rotate( 135deg );
+		padding-top: 0.5rem;
+	}
 }
 
-.wp-block-image.is-style-hand-drawn[class*=gradient-] img {
-	padding: 2px;
-}
-
-// We need to target `.wp-element-caption` specifically to overwrite caption
-// styles defined in `theme.json`.
-.wp-block-image.is-style-hand-drawn .wp-element-caption {
-	display: flex;
-	gap: 0.5rem;
-	justify-content: center;
-	align-items: baseline;
-	transform: rotate( 0.5deg );
-	font-family: var( --wp--preset--font-family--handwriting );
-	font-size: var( --wp--preset--font-size--md );
-	line-height: var( --wp--custom--line-height--md );
-}
-
-.wp-block-image.is-style-hand-drawn figcaption::before {
-	content: "\2938 ";
-	transform: rotate( 135deg );
-	padding-top: 0.5rem;
-}
-
-// Icon style.
+///
+/// An icon style that prefixes the caption with a camera icon. 📷
+///
 .wp-block-image.is-style-icon .wp-element-caption {
 	@include inline-icon.prefix( icon.get-url( 'photo-camera' ) );
 	justify-content: center;
 	gap: 0.5rem;
 }
 
-
-// Polaroid style.
+///
+/// Old-school Polaroid picture style that frames the image with a fading border.
+///
+/// Note: it was necessary to target `figure` here to overrule other styles at
+/// the top level of the block. I forgot exactly which styles this was needed
+/// for as I write this inline comment (note to self: keep better inline docs as
+/// I work).
+///
 figure.wp-block-image.is-style-polaroid {
 	padding:          var( --wp--preset--spacing--base );
 	background-color: var( --color-contrast, var( --wp--preset--color--base ) );
@@ -137,87 +169,128 @@ figure.wp-block-image.is-style-polaroid {
 	background-size: auto !important;
 }
 
-.wp-block-image.is-style-polaroid:where( :not( [class*=gradient-] ) ) {
-	box-shadow: var( --wp--custom--defaults--shadow ), 0 0 8rem rgb( 255, 255, 235 ) inset;
+.wp-block-image.is-style-polaroid {
+
+	// Adds an inset shadow to create the faded photo design but only when
+	// there is no gradient background for the image. For those cases, the
+	// gradient wins out.
+	&:where( :not( [class*=gradient-] ) ) {
+		box-shadow: var( --wp--custom--defaults--shadow ), 0 0 8rem rgb( 255, 255, 235 ) inset;
+	}
+
+	// Updates the spacing of the caption, which is different from other
+	// Image blocks. In this case, the caption itself sits within the photo
+	// frame area.
+	.wp-element-caption {
+		margin-top: var( --wp--preset--spacing--base );
+		color: var( --color-base, var( --wp--preset--color--contrast ) );
+		font-family: var( --wp--preset--font-family--handwriting );
+	}
+
+	// Adjustments when the Image block also has a gradient background.
+	&[class*=-gradient-background] {
+
+		// Remove the image padding so that the background appears for
+		// the photo frame and not the inner image.
+		img { padding: 0; }
+
+		// A general-purpose solution to make the text stand out against
+		// various gradient backgrounds. This makes the text white but
+		// gives it a glowing dark text shadow, essentially creating a
+		// sort of text border that fades out.
+		.wp-element-caption {
+			color: var( --wp--preset--color--white );
+			text-shadow: 1px 1px 1px #000, 0 0 8px rgba( 0, 0, 0, 0.7 );
+		}
+	}
 }
 
-// todo - shadow colors that inherit.
-// inset and outer shadow should match.
+// Handling for when the Polaroid image sits within a block with a color variation.
+//
+// @todo The color variation system is likely to be overhauled, and this
+// should no longer be needed.
+//
+// @todo In the case that we keep the original color variation system, the
+// shadow color should inherit, and the inset and outer shadow should match.
 :where( [class*=has-color-var-] ) .wp-block-image.is-style-polaroid:where( :not( [class*=gradient-] ) ) {
 	box-shadow: var( --wp--custom--defaults--shadow );
 }
 
-.wp-block-image.is-style-polaroid .wp-element-caption {
-	margin-top: var( --wp--preset--spacing--base );
-	color: var( --color-base, var( --wp--preset--color--contrast ) );
-	font-family: var( --wp--preset--font-family--handwriting );
-}
-
-.wp-block-image.is-style-polaroid[class*=-gradient-background] {
-	img {
-		padding: 0;
-	}
-	.wp-element-caption {
-		color: var( --wp--preset--color--white );
-		text-shadow: 1px 1px 1px #000, 0 0 8px rgba( 0, 0, 0, 0.7 );
-	}
-}
-
+///
+/// Shared styles for tape variations. This creates a "Scotch" tape effect, as
+/// if the image has been taped to a wall.
+///
 .wp-block-image[class*=is-style-tape] {
 	overflow: visible;
 	position: relative;
 
+	// Adds tape before/after the block. These are defaults that need to be
+	// adjusted for each variation on this style.
+	&::before,
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		background: rgba( 255, 255, 235, 0.5 );
+		box-shadow: 0 2px 5px 0 rgba( 0, 0, 0, 0.3 ), 0 0 4rem rgba( 255, 255, 235, 0.5 ) inset;
+		height: var( --wp--preset--spacing--plus-3 );
+		margin: auto;
+		width: 7rem;
+		z-index: 1;
+	}
+
+	// Caption adjustments.
 	.wp-element-caption {
 		font-family: var( --wp--preset--font-family--handwriting );
 	}
 }
 
-.wp-block-image[class*=is-style-tape]::before,
-.wp-block-image[class*=is-style-tape]::after {
-	content: "";
-	display: block;
-	position: absolute;
-	background: rgba( 255, 255, 235, 0.5 );
-	box-shadow: 0 2px 5px 0 rgba( 0, 0, 0, 0.3 ), 0 0 4rem rgba( 255, 255, 235, 0.5 ) inset;
-	height: var( --wp--preset--spacing--plus-3 );
-	margin: auto;
-	width: 7rem;
-	z-index: 1;
+///
+/// The tap block style adds a single piece of tape that overlays the top-center
+/// of the image.
+///
+.wp-block-image.is-style-tape {
+	&::before {
+		left: 50%;
+		margin-left: -3.5rem;
+		top: calc( -1 * var( --wp--preset--spacing--minus-2 ) );
+		transform: rotate( 8deg );
+	}
+
+	&::after {
+		display: none;
+	}
+
+	// Adjust the positioning when the image has a gradient background. We
+	// must account for the additional padding.
+	&[class*=gradient-]::before {
+		top: calc(
+			-0.75 *
+			clamp( 0.5rem, -0.33333333333333326rem + 2.083333333333333cqi, 1rem )
+		);
+	}
 }
 
-.wp-block-image.is-style-tape::before {
-	left: 50%;
-	margin-left: -3.5rem;
-	top: calc( -1 * var( --wp--preset--spacing--minus-2 ) );
-	transform: rotate( 8deg );
+///
+/// The taped corners style adds two pieces of tape to the corners of the image.
+///
+.wp-block-image.is-style-tape-corners {
+	&::before {
+		left: calc( -1 * var( --wp--preset--spacing--plus-3 ) );
+		top: var( --wp--preset--spacing--minus-2 );
+		transform: rotate( -35deg );
+	}
+
+	&::after {
+		right: calc( -1 * var( --wp--preset--spacing--plus-3 ) ) !important;
+		top: var( --wp--preset--spacing--minus-2 ) !important;
+		bottom: unset !important;
+		left: unset !important;
+		transform: rotate( 45deg);
+	}
 }
 
-.wp-block-image.is-style-tape::after {
-	display: none;
-}
-
-.wp-block-image.is-style-tape[class*=gradient-]::before {
-	top: calc(
-		-0.75 *
-		clamp( 0.5rem, -0.33333333333333326rem + 2.083333333333333cqi, 1rem )
-	);
-}
-
-.wp-block-image.is-style-tape-corners::before {
-	left: calc( -1 * var( --wp--preset--spacing--plus-3 ) );
-	top: var( --wp--preset--spacing--minus-2 );
-	transform: rotate( -35deg );
-}
-
-.wp-block-image.is-style-tape-corners::after {
-	right: calc( -1 * var( --wp--preset--spacing--plus-3 ) ) !important;
-	top: var( --wp--preset--spacing--minus-2 ) !important;
-	bottom: unset !important;
-	left: unset !important;
-	transform: rotate( 45deg);
-}
-
-// Adjustments for image lightbox.
+// Removes the tape effect when the image is inside of the lightbox overlay.
 .wp-lightbox-overlay.active .wp-block-image[class*=is-style-tape] {
 	&::before,
 	&::after {
@@ -225,21 +298,28 @@ figure.wp-block-image.is-style-polaroid {
 	}
 }
 
+// -----------------------------------------------------------------------------
+// Block overrides.
+// -----------------------------------------------------------------------------
+
 // Editor fix. The tape styles use the `::after` pseudo-element as part
 // of their design. But WP also uses this in the editor to show the selected
 // block outline. So, we're attaching an outline to the image itself in this case.
+//
+// @todo Test to see if this is still needed.
 .wp-block-image[class*=is-style-tape].block-editor-block-list__block:focus img {
 	outline: 2px solid var(--wp-admin-theme-color, transparent );
 }
 
-.wp-block-image:where(
-	[class*=is-style-polaroid],
-	[class*=is-style-scotch-tape]
-) .components-resizable-box__handle {
+// Removes the resizable box handle for polaroid style.
+//
+// @todo Test to see if this is still needed.
+.wp-block-image:where( [class*=is-style-polaroid] ) .components-resizable-box__handle {
 	display: none;
 }
 
-// Revert custom styles for lightbox images.
+// Necessary adjustments for images within a lightbox. Just making sure the
+// theme's custom styles don't cause too much craziness.
 .wp-lightbox-overlay .wp-block-image.enlarged-image {
 	padding: 0 !important;
 	border: none !important;

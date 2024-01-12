@@ -12,8 +12,8 @@
 // Fix for WP adding left/right padding to Column blocks within Columns blocks
 // that are nested within constrained layouts. This happens when
 // `useRootPaddingAwareAlignments` is enabled in `theme.json`. Needs more testing.
-.wp-block-columns.alignfull .wp-block-column,
-.editor-styles-wrapper .has-global-padding > .wp-block-columns.alignfull > .wp-block-column {
+//.wp-block-columns.alignfull > .wp-block-column,
+.has-global-padding > .wp-block-columns.alignfull > .wp-block-column {
 	padding-left: 0;
 	padding-right: 0;
 }
@@ -31,19 +31,43 @@
 // Block style variations.
 // -----------------------------------------------------------------------------
 
+///
+/// Shared styles for boxed and card styles. Move style rules to `theme.json`
+/// with support.
+///
+/// @link      https://github.com/WordPress/gutenberg/pull/56540
+/// @wordpress 6.5
+///
 .wp-block-column:where( .is-style-box, .is-style-card ) {
 	overflow: hidden;
 	border-radius: var( --wp--custom--defaults--border-radius, 0 );
 	box-shadow: var( --wp--custom--defaults--shadow );
 }
 
-// `.wp-block-columns` is needed to overrule global padding styles.
+///
+/// The boxed style adds some default padding and a background. Move style
+/// rules to `theme.json` with support.
+///
+/// Note: `.wp-block-columns` is needed to overrule global padding styles. This
+/// may not be specific enough with a move to `theme.json`.
+///
+/// @link      https://github.com/WordPress/gutenberg/pull/56540
+/// @wordpress 6.5
+///
 .wp-block-columns > .wp-block-column.is-style-box,
 .has-global-padding > .wp-block-columns.alignfull > .wp-block-column.is-style-box {
 	padding: var( --wp--style--block-gap );
 	background: var( --wp--preset--color--neutral-base );
 }
 
+///
+/// The card style adds a default border. We're not adding padding here because
+/// not all cards need padding around all of the nested content. Move style
+/// rules to `theme.json` with support.
+///
+/// @link      https://github.com/WordPress/gutenberg/pull/56540
+/// @wordpress 6.5
+///
 .wp-block-column.is-style-card {
 	border: 1px solid var( --wp--preset--color--neutral-subtle );
 }

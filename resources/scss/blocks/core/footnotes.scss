@@ -6,6 +6,12 @@
 ////
 
 // -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+// No fixes...
+
+// -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
 
@@ -34,7 +40,9 @@ a.fn {
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-// Note that we are currently targeting the `<ol>` in case this block is updated
+/// Adds a pull style that pulls the padding closer to the left.
+///
+/// Note that we are currently targeting the `<ol>` in case this block is updated
 // to later have a wrapper `<div>` like similar blocks before WP 6.3.
 ol.wp-block-footnotes.is-style-pull {
 	padding-left: 1em;

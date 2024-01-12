@@ -6,19 +6,28 @@
 ////
 
 // -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+// No fixes...
+
+// -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
 
+// Gives a little spacing to the link to give it some more breathing room when
+// the post count is shown.
 .wp-block-categories-list {
-	a {
-		margin-right: 0.25ch;
-	}
+	margin-right: 0.25ch;
 }
 
 // -----------------------------------------------------------------------------
 // Block style variations.
 // -----------------------------------------------------------------------------
 
+///
+/// Horizontal category lists style.
+///
 .wp-block-categories-list.is-style-horizontal {
 	display: flex;
 	flex-direction: row;

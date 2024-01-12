@@ -12,8 +12,7 @@
 // Fix for WP adding left/right padding to Image blocks within Gallery blocks
 // that are nested within constrained layouts. This happens when
 // `useRootPaddingAwareAlignments` is enabled in `theme.json`. Needs more testing.
-.wp-block-gallery.alignfull .wp-block-image,
-.editor-styles-wrapper .has-global-padding > .wp-block-gallery.alignfull > .wp-block-image {
+.has-global-padding > .wp-block-gallery.alignfull > .wp-block-image {
 	padding-left: 0;
 	padding-right: 0;
 }
@@ -35,23 +34,31 @@
 }
 
 // -----------------------------------------------------------------------------
-// Block style customizations.
+// Block customizations.
 // -----------------------------------------------------------------------------
 
+// Adds a bottom border-radius to captions by default. This is a hacky method
+// to keep the caption background from overflowing the image.
 .wp-block-gallery .wp-block-image figcaption {
 	border-bottom-left-radius: var( --wp--custom--defaults--border-radius );
 	border-bottom-right-radius: var( --wp--custom--defaults--border-radius );
 }
 
+// Use the gallery gap for left/right padding for full-width galleries. This
+// creates consistent spacing across the entire gallery.
 .wp-block-gallery.alignfull {
 	padding-left: var( --wp--style--unstable-gallery-gap, 0 );
 	padding-right: var( --wp--style--unstable-gallery-gap, 0 );
 }
 
+// Use the gallery gap for the full gallery when it has a background, keeping
+// the spacing consistent on all sides.
 .wp-block-gallery.has-background {
 	padding: var( --wp--style--unstable-gallery-gap, 0 );
 }
 
+// Overrides the core hard-coded padding for captions.
+// Note: the crazy selectors here are necessary to overrule core.
 .wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
 	padding: var( --wp--preset--spacing--minus-2 );
 }
@@ -60,18 +67,38 @@
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-.wp-block-gallery.is-style-classic.has-nested-images {
-	align-items: flex-start;
-}
+///
+/// Classic galleries. This style moves the caption below the image (the default
+/// overlays the bottom of the image), matching the classic WordPress design.
+///
+/// Note: For this style to look great, the Gallery really needs to set a
+/// specific size/resolution/aspect-ratio that is consistent. Otherwise, images
+/// may have different heights. For those cases, the default Gallery style will
+/// work best.
+///
+.wp-block-gallery.is-style-classic {
 
-.wp-block-gallery.is-style-classic figure.wp-block-image:where(
-	:not( [class*=is-style-] ),
-	.is-style-default,
-	.is-style-icon
-) figcaption {
-	position: initial;
-	margin: 0;
-	padding: var( --wp--preset--spacing--minus-2 );
-	color: inherit;
-	background: unset;
+	// Overrules the core alignment.
+	&.has-nested-images {
+		align-items: flex-start;
+	}
+
+	// Gives the nested Image block's caption its initial position so that
+	// it naturally flows below the image.
+	//
+	// Note: we're adding this style only when the Image block uses the
+	// default or icon style. Other Image styles have their own handling.
+	// If, in the future, we add support for other styles in `image.scss`,
+	// they also need to be added here.
+	figure.wp-block-image:where(
+		:not( [class*=is-style-] ),
+		.is-style-default,
+		.is-style-icon
+	) figcaption {
+		position: initial;
+		margin: 0;
+		padding: var( --wp--preset--spacing--minus-2 );
+		color: inherit;
+		background: unset;
+	}
 }

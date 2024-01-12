@@ -6,56 +6,71 @@
 ////
 
 // -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+// No fixes...
+
+// -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
 
+///
+/// Provides a nicer base design to the block. The core block has two elements:
+/// `<details>` and a nested `<summary>`. It will also have other nested blocks.
+/// There is no way to customize the summary element from `theme.json`.
+///
 .wp-block-details {
 	transition: all 0.5s ease-in-out;
-	//padding: 0 var( --wp--preset--spacing--plus-3 );
 
+	// Pad the bottom when details element is open.
+	&[open] {
+		padding-bottom: var( --wp--style--block-gap );
+	}
+
+	// Custom styles for the summary.
+	summary {
+		transition: all 0.5s ease-in-out;
+		box-sizing: border-box;
+		padding: var( --wp--preset--spacing--base ) var( --wp--style--block-gap );
+		font-weight: 500;
+	}
+
+	&[open] summary,
+	summary:hover,
+	summary:focus {
+		background: var(
+			--wp--custom--blocks--details--summary-hover,
+			var( --wp--preset--color--neutral-subtle )
+		);
+	}
+
+	// Disable the default browser marker and add a custom one.
+	summary::marker {
+		content: none;
+	}
+
+	summary::after {
+		content: " +";
+		float: right;
+		text-align: right;
+	}
+
+	&[open] summary::after {
+		content: " -"
+	}
+
+	// The original block had a wrapper element around nested blocks after
+	// the summary. However, this was removed, so we must target anything
+	// that's not the summary with left/right margin.
 	> :where( :not( summary ) ) {
 		margin-left: var( --wp--style--block-gap );
 		margin-right: var( --wp--style--block-gap );
 	}
 }
 
-.wp-block-details[open] {
-	padding-bottom: var( --wp--style--block-gap );
-}
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
 
-.wp-block-details summary {
-	transition: all 0.5s ease-in-out;
-	box-sizing: border-box;
-	padding: var( --wp--preset--spacing--base ) var( --wp--style--block-gap );
-	font-weight: 500;
-}
-
-.wp-block-details[open] summary,
-.wp-block-details summary:hover,
-.wp-block-details summary:focus {
-	background: var(
-		--wp--custom--blocks--details--summary-hover,
-		var( --wp--preset--color--neutral-subtle )
-	);
-}
-.wp-block-details summary::marker {
-	content: "+ ";
-}
-
-.wp-block-details[open] summary::marker {
-	content: "- "
-}
-
-.wp-block-details summary::marker {
-	content: none;
-}
-
-.wp-block-details summary::after {
-	content: " +";
-	float: right;
-	text-align: right;
-}
-
-.wp-block-details[open] summary::after {
-	content: " -"
-}
+// No variations...

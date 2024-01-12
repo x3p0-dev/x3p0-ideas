@@ -6,10 +6,20 @@
 ////
 
 // -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+// No fixes...
+
+// -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-// Both classes are needed to overwrite styles in the editor.
+///
+/// Handles styles for elements inside of the Button block.
+///
+/// Note: both classes are needed to overwrite styles in the editor.
+///
 .wp-block-button .wp-block-button__link {
 	code,
 	kbd {
@@ -40,14 +50,23 @@
 // Block style variations.
 // -----------------------------------------------------------------------------
 
+///
+/// A hand-drawn design for the Button block. Most of these style rules should
+/// be moved to `theme.json` with support.
+///
+/// @link      https://github.com/WordPress/gutenberg/pull/56540
+/// @wordpress 6.5
+///
 .wp-block-button.is-style-hand-drawn > .wp-block-button__link.wp-element-button {
-	border: 2px solid currentColor;
 	box-shadow: var( --wp--custom--defaults--shadow );
+	font-family: var( --wp--preset--font-family--handwriting );
 	color: inherit;
 	background-color: transparent;
-	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
-	font-family: var( --wp--preset--font-family--handwriting );
 	outline-color: currentColor;
+	border: 2px solid currentColor;
+
+	// No `theme.json` support for this style of radius.
+	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
 }
 
 .is-style-hand-drawn > .wp-block-button__link:where( :hover, :focus ) {

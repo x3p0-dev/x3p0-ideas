@@ -30,35 +30,61 @@
 }
 
 // -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+// No customizations...
+
+// -----------------------------------------------------------------------------
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-// Grid style.
+///
+/// Grid Auto style. Turns the normal flexbox style into grid. This gives us
+/// better control over the breakpoints for a nicer layout. It also forces all
+/// columns to be the same width.
+///
+/// Note: we're using `nth-child()` to essentially count the total number of
+/// sub-blocks. Technically, there's no native way in CSS to count sub-elements,
+/// but we know that the core Columns block only supports a max of 6 blocks. So
+/// we can use that information to "count" up to the number of columns we need
+/// to target within breaks.
+///
 .wp-block-columns-is-layout-flex.is-style-grid-auto {
 	display: grid !important;
 	grid-template-columns: repeat( 1, 1fr );
 
+	// Break into two columns when there are at least two nested columns.
 	@media ( min-width: 40rem ) {
-		grid-template-columns: repeat( 2, 1fr );
+		&:has( > .wp-block-column:nth-child( 2 ) ) {
+			grid-template-columns: repeat( 2, 1fr );
+		}
 	}
 
+	// Break into three columns when there are at least three nested columns.
 	@media ( min-width: 64rem ) {
-		&:has( > :where(
-			.wp-block-column:nth-child( 5 ),
-			.wp-block-column:nth-child( 6 )
-		) ) {
+		&:has( > .wp-block-column:nth-child( 5 ) ) {
 			grid-template-columns: repeat( 3, 1fr );
 		}
 	}
 
+	// Allow any number of columns at equal width.
 	@media ( min-width: 80rem ) {
 		grid-auto-columns: minmax( 0, 1fr );
 		grid-auto-flow: column;
 	}
 }
 
-// Reverse Stack style.
-// WP breaks at 782px.
+///
+/// Reverses stack. Reverses the order of the columns on "mobile" using the
+/// default WordPress breakpoint.
+///
+/// Note: this is not an ideal method of handling this for screen readers. The
+/// columns are still in their original order in the DOM. But I don't have any
+/// other solutions at the moment. One alternative for at least one use case is
+/// to use the Media & Text block, but that case is only for a two-colum image
+/// and text section.
+///
 @media ( max-width: wp.$break-medium ) {
 	.wp-block-columns.is-style-reverse-stack {
 		flex-wrap: wrap-reverse !important;

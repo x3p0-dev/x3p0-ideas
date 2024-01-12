@@ -16,20 +16,24 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
+// Gives a little spacing to the link to give it some more breathing room when
+// the post count is shown.
 .wp-block-archives-list {
-	a {
-		margin-right: 0.25ch;
-	}
+	margin-right: 0.25ch;
 }
 
 // -----------------------------------------------------------------------------
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-// Core does this really crazy thing in the editor and adds a wrapping "block"
-// container named `.wp-block-archives` around the `.wp-block-archives/-list`
-// block. So, we're having to target this for both the front-end and editor in
-// different ways. 🤦‍♀️
+///
+/// Horizontal archive lists style.
+///
+/// Core does this really crazy thing in the editor and adds a wrapping "block"
+/// container named `.wp-block-archives` around the `.wp-block-archives/-list`
+/// block. So, we're having to target this for both the front-end and editor in
+/// different ways. 🤦‍♀️
+///
 .wp-block-archives.is-style-horizontal .wp-block-archives-list,
 .wp-block-archives-list.is-style-horizontal {
 	display: flex;

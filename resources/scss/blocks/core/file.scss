@@ -9,18 +9,12 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// The editor has an extra wrapper that doesn't exist in the front-end, so we
-// also need to target `*__content-wrapper`.
+// Add border box sizing to the block file.
+// Note: The editor has an extra wrapper that doesn't exist in the front-end, so
+// we also need to target `*__content-wrapper`.
 .wp-block-file,
 .wp-block-file__content-wrapper {
 	box-sizing: border-box;
-
-	// This is just a nicer display and not a bug fix.
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-wrap: wrap;
-	gap: var( --wp--style--block-gap );
 }
 
 // Zero out the hard-coded resizable container margin in the editor.
@@ -50,3 +44,25 @@
 		opacity: 1;
 	}
 }
+
+// -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+// Nicer display for the file block.
+// Note: The editor has an extra wrapper that doesn't exist in the front-end, so
+// we also need to target `*__content-wrapper`.
+.wp-block-file,
+.wp-block-file__content-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: var( --wp--style--block-gap );
+}
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+// No variations...

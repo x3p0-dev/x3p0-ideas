@@ -16,29 +16,66 @@
 }
 
 // -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+// No customizations...
+
+// -----------------------------------------------------------------------------
 // Block style variations.
 // -----------------------------------------------------------------------------
 
+///
+/// Shared styles for boxed and card styles. Move style rules to `theme.json`
+/// with support.
+///
+/// @link      https://github.com/WordPress/gutenberg/pull/56540
+/// @wordpress 6.5
+///
 .wp-block-group:where( .is-style-box, .is-style-card ) {
 	overflow: hidden;
 	border-radius: var( --wp--custom--defaults--border-radius, 0 );
 	box-shadow: var( --wp--custom--defaults--shadow );
 }
 
+///
+/// The boxed style adds some default padding and a background. Move style
+/// rules to `theme.json` with support.
+///
+/// @link      https://github.com/WordPress/gutenberg/pull/56540
+/// @wordpress 6.5
+///
 .wp-block-group.is-style-box {
 	padding: var( --wp--style--block-gap );
 	background: var( --wp--preset--color--neutral-base );
 }
 
+///
+/// The card style adds a default border. We're not adding padding here because
+/// not all cards need padding around all of the nested content. Move style
+/// rules to `theme.json` with support.
+///
+/// @link      https://github.com/WordPress/gutenberg/pull/56540
+/// @wordpress 6.5
+///
 .wp-block-group.is-style-card {
 	border: 1px solid var( --wp--preset--color--neutral-subtle );
 }
 
+///
+/// A hand-drawn design for the Group block. Most of these style rules should
+/// be moved to `theme.json` with support.
+///
+/// @link      https://github.com/WordPress/gutenberg/pull/56540
+/// @wordpress 6.5
+///
 .wp-block-group.is-style-hand-drawn {
 	overflow: hidden;
 	font-family: var( --wp--preset--font-family--handwriting );
 	padding: var( --wp--custom--spacing--global );
 	border: 2px solid currentColor;
-	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
 	box-shadow: var( --wp--custom--defaults--shadow );
+
+	// No `theme.json` support for this style of radius.
+	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
 }

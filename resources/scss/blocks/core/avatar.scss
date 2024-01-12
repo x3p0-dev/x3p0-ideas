@@ -22,9 +22,12 @@
 }
 
 // -----------------------------------------------------------------------------
-// Gradient background.
+// Block customizations.
 // -----------------------------------------------------------------------------
 
+///
+/// Gradient background handling for the avatar.
+///
 .wp-block-avatar[class*=-gradient-background],
 .editor-styles-wrapper .wp-block-avatar[class*=-gradient-background] {
 	background-size: 0 0 !important;
@@ -40,3 +43,9 @@
 		padding: min( 6px, 8.33% );
 	}
 }
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+// No variations...

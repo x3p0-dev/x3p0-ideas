@@ -16,9 +16,20 @@
 }
 
 // -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+// No customizations...
+
+// -----------------------------------------------------------------------------
 // Block style variations.
 // -----------------------------------------------------------------------------
 
+///
+/// Adds a clip-text/knockout style to the block. Essentially, this allows the
+/// background to apply to the text itself instead of the background of the
+/// entire element.
+///
 .wp-block-heading.is-style-clip-text,
 .editor-styles-wrapper .wp-block-heading.is-style-clip-text {
 	background-clip: text !important;
@@ -26,14 +37,23 @@
 	color: transparent !important;
 }
 
-.wp-block-heading.is-style-clip-text:not( .has-background ) {
-	background: var( --wp--preset--gradient--cool-to-warm-spectrum );
+.wp-block-heading.is-style-clip-text {
+
+	// Add a default gradient background if the user hasn't chosen one.
+	&:not( .has-background ) {
+		background: var( --wp--preset--gradient--cool-to-warm-spectrum );
+	}
+
+	// Sub-elements, such as links, need to inherit the heading color for
+	// the clip-text to work.
+	> * {
+		color: inherit !important;
+	}
 }
 
-.wp-block-heading.is-style-clip-text > * {
-	color: inherit !important;
-}
-
+///
+/// Adds text balancing to the block in an attempt to ensure there are no widows.
+///
 .wp-block-heading.is-style-text-wrap-balance {
 	text-wrap: balance;
 }
