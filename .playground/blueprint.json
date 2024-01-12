@@ -17,6 +17,11 @@
 			"options": {
 				"activate": true
 			}
+		},
+		{
+			"step": "login",
+			"username": "admin",
+			"password": "password"
 		}
 	]
 }
