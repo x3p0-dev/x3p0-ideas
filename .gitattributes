@@ -26,6 +26,7 @@
 
 .github/ export-ignore
 .notes/ export-ignore
+.playground/ export-ignore
 docs/ export-ignore
 
 # Don't export folders that are merely copied into `/public`. Note that we're
