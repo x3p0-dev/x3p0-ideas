@@ -3,7 +3,7 @@
 	"scripts": {
 		"start": "wp-scripts start --webpack-src-dir=resources --output-path=public",
 		"build": "wp-scripts build --webpack-src-dir=resources --output-path=public",
-		"zip": "git archive --format zip --output .playground/x3p0-ideas.zip master "
+		"zip": "git archive --format zip --output _playground/x3p0-ideas.zip master "
 	},
 	"devDependencies": {
 		"@wordpress/scripts": "^26.5.0",
