@@ -9,9 +9,7 @@
 		"@wordpress/scripts": "^26.5.0",
 		"copy-webpack-plugin": "^11.0.0",
 		"glob": "^10.2.6",
-		"mini-css-extract-plugin": "^2.7.6",
 		"path": "^0.12.7",
-		"webpack-fix-style-only-entries": "^0.6.1",
 		"webpack-remove-empty-scripts": "^1.0.3"
 	},
 	"dependencies": {
