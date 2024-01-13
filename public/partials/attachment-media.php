@@ -14,8 +14,8 @@ $title = get_the_title( $args['post_id'] );
 <!-- wp:group {"align":"full","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull">
 
-	<!-- wp:file {"id":<?= absint( $args['post_id'] ) ?>,"href":"<?= esc_url( $url ) ?>"} -->
-	<div class="wp-block-file">
+	<!-- wp:file {"id":<?= absint( $args['post_id'] ) ?>,"href":"<?= esc_url( $url ) ?>","className":"is-style-icon"} -->
+	<div class="wp-block-file is-style-icon">
 		<a href="<?= esc_url( $url ) ?>"><?= wp_strip_all_tags( $title ) ?></a>
 		<a href="<?= esc_url( $url ) ?>" class="wp-block-file__button wp-element-button" download><?= esc_html__( 'Download', 'x3p0-ideas' ) ?></a>
 	</div>

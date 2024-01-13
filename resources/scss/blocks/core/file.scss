@@ -5,6 +5,9 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
+@use '../../tools/icon';
+@use '../../tools/inline-icon';
+
 // -----------------------------------------------------------------------------
 // Block fixes.
 // -----------------------------------------------------------------------------
@@ -65,4 +68,11 @@
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-// No variations...
+///
+/// The icon style prefixes the block download button with an icon.
+///
+.wp-block-file.is-style-icon {
+	.wp-block-file__button {
+		@include inline-icon.prefix( icon.get-url( 'download' ) );
+	}
+}
