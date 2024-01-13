@@ -146,7 +146,9 @@ class Blocks implements Bootable
 		// Gets a partial (essentially a dynamic pattern) based on the
 		// attachment type. Must be valid block content.
 		ob_start();
-		locate_template( $partials, true, false );
+		locate_template( $partials, true, false, [
+			'post_id' => $instance->context['postId']
+		] );
 		$media = ob_get_clean();
 
 		// Parse and render the blocks.
