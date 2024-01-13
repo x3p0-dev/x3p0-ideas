@@ -1,5 +1,5 @@
 ###
-## .gitattributes configuration file.
+## Git Attributes configuration file.
 ##
 ## @link https://git-scm.com/docs/gitattributes
 ###
@@ -30,17 +30,25 @@ _playground/ export-ignore
 .notes/ export-ignore
 docs/ export-ignore
 
-# Don't export folders that are merely copied into `/public`. Note that we're
-# retaining the `resources/js` and `resources/scss` folders because they are
-# required for themes submitted to WordPress.org.
-# @link https://make.wordpress.org/themes/handbook/review/required/#9-files
+# Don't export folders that are merely copied into `/public`.
 /resources/fonts export-ignore
 /resources/media export-ignore
 /resources/partials export-ignore
 
+# Note that we're retaining the `resources/js` and `resources/scss` folders,
+# despite them containing dev-only files. They are required for themes submitted
+# to WordPress.org. You may uncomment the following attribute lines if you don't
+# want to export them when archiving.
+# @link https://make.wordpress.org/themes/handbook/review/required/#9-files
+
+# /resources/js
+# /resources/scss
+
 .editorconfig export-ignore
 .gitattributes export-ignore
 .gitignore export-ignore
+composer.json export-ignore
+composer.lock export-ignore
 package-lock.json export-ignore
 package.json export-ignore
 webpack.config.js export-ignore

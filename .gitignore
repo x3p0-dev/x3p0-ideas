@@ -1,3 +1,13 @@
+###
+## Git Ignore configuration file.
+##
+## @link https://git-scm.com/docs/gitignore
+###
+
+## -----------------------------------------------------------------------------
+## Files and folders to ignore on commit (untracked files).
+## -----------------------------------------------------------------------------
+
 /.ideas
 /node_modules
 /vendor
