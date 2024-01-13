@@ -2,8 +2,8 @@
  * Icons library.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright Copyright (c) 2023, Justin Tadlock
- * @license   GPL-2.0-or-later
+ * @copyright Copyright (c) 2023-2024, Justin Tadlock
+ * @license   GPL-3.0-or-later
  */
 
 // https://fonts.google.com/icons?icon.query=list&selected=Material+Symbols+Outlined:list_alt:FILL@0;wght@300;GRAD@-25;opsz@24

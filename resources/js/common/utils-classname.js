@@ -2,8 +2,8 @@
  * Common utility functions.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright Copyright (c) 2023, Justin Tadlock
- * @license   GPL-2.0-or-later
+ * @copyright Copyright (c) 2023-2024, Justin Tadlock
+ * @license   GPL-3.0-or-later
  */
 
 // WordPress dependencies.
