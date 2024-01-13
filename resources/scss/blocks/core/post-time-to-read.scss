@@ -9,10 +9,24 @@
 @use '../../tools/inline-icon';
 
 // -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+// No fixes...
+
+// -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+// No customizations...
+
+// -----------------------------------------------------------------------------
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-// https://fonts.google.com/icons?icon.query=time&selected=Material+Symbols+Sharp:schedule:FILL@1;wght@400;GRAD@0;opsz@24&icon.style=Sharp&icon.platform=web
+///
+/// The icon style prefixes the block text with an icon.
+///
 .wp-block-post-time-to-read.is-style-icon {
 	@include inline-icon.prefix( icon.get-url( 'schedule' ) );
 }

@@ -20,6 +20,7 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
+// Primarily layout adjustments for more consistent handling and styling.
 .wp-block-tag-cloud {
 	display: flex;
 	flex-direction: row;
@@ -39,33 +40,45 @@
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-// Inherit so that developers/users can customize.
+///
+/// The flat style gives all of the tags the same font-size so that they are no
+/// longer in "cloud" format with weighted sizes.
+///
 .wp-block-tag-cloud.is-style-flat a {
+	// Inherit so that developers/users can customize.
 	font-size: inherit !important;
 }
 
-// This is a core block style.
-// Set the default font-weight here instead of on the `<a>`. This way, users can
-// override via design tools.
+///
+/// The outline style is a core style. We're overwriting it to better match the
+/// theme. Much of this needed to be done via CSS rather than `theme.json`.
+///
+/// @todo More testing to see which things can be moved to `theme.json`.
+///
 .wp-block-tag-cloud.is-style-outline {
+	// We're setting the font weight and style at the block level because
+	// the UI design tools end up applying to the links. Setting it at the
+	// block level allows user choice to take over.
 	font-weight: 500;
 	font-size: var( --wp--preset--font-size--sm );
-}
 
-.wp-block-tag-cloud.is-style-outline a {
-	color: currentColor;
-	border: 2px solid currentColor;
-	border-radius: var( --wp--custom--defaults--border-radius );
-	padding: var( --wp--preset--spacing--minus-2 ) var( --wp--preset--spacing--plus-1 );
-	font-size: inherit !important;
-	font-weight: inherit !important;
-	line-height: var( --wp--custom--line-height--sm );
+	a {
+		color: currentColor;
+		border: 2px solid currentColor;
+		border-radius: var( --wp--custom--defaults--border-radius );
+		padding: var( --wp--preset--spacing--minus-2 ) var( --wp--preset--spacing--plus-1 );
+		font-size: inherit !important;
+		font-weight: inherit !important;
+		line-height: var( --wp--custom--line-height--sm );
 
-	&:hover {
-		text-decoration: underline !important;
+		&:hover,
+		&:focus {
+			text-decoration: underline !important;
+		}
 	}
 }
 
+// Inherit the outline font size from the parent element if assigned a preset.
 [class*=-font-size] .wp-block-tag-cloud.is-style-outline a {
 	font-size: inherit !important;
 	line-height: inherit;

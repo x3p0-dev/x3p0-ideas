@@ -9,15 +9,32 @@
 @use '../../tools/inline-icon';
 
 // -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+// No fixes...
+
+// -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+// No customizations...
+
+// -----------------------------------------------------------------------------
 // Block style variations.
 // -----------------------------------------------------------------------------
 
+///
+/// The icon style prefixes the block text with an icon.
+///
 .wp-block-post-date {
 
+	// Published date.
 	&.is-style-icon {
 		@include inline-icon.prefix( icon.get-url( 'calendar-month' ) );
 	}
 
+	// Modified date.
 	&__modified-date.is-style-icon::before {
 		@include inline-icon.modify( icon.get-url( 'calendar-add-on' ) );
 	}

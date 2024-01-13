@@ -6,29 +6,32 @@
 ////
 
 // -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+// No fixes...
+
+// -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-// Override WP's drop-cap implementation with modern solution.
+// Override WP's drop-cap implementation with modern solution. Browser support
+// is pretty robust for `initial-letter`, but there are limitations. And Firefox
+// doesn't support it at all.
+//
+// @link https://caniuse.com/css-initial-letter
+// @todo Revert to regular text in unsupported browsers.
+.has-drop-cap:not( :focus )::first-letter {
 
-// Revert core's implementation.
-.has-drop-cap:not(:focus)::first-letter {
+	// Revert core's implementation.
 	float: none;
 	margin: 0;
 	padding: 0;
 	font: inherit;
 	text-transform: none;
-}
 
-// Re-add support for browsers that support `initial-letter`.
-//
-// Browser support is pretty robust for `initial-letter`, but there are
-// limitations. And Firefox doesn't support it at all.
-// @link https://caniuse.com/css-initial-letter
-//
-// @todo Revert to regular text in unsupported browsers.
-@supports ( initial-letter: 3 ) or ( -webkit-initial-letter: 3 ) {
-	.has-drop-cap:not(:focus)::first-letter {
+	// Re-add support for browsers that support `initial-letter`.
+	@supports ( initial-letter: 3 ) or ( -webkit-initial-letter: 3 ) {
 		-webkit-initial-letter: 3;
 		initial-letter: 3;
 		float: none;
@@ -43,6 +46,12 @@
 // Block style variations.
 // -----------------------------------------------------------------------------
 
+///
+/// The indent style simply indents the paragraph. `text-indent` is not
+/// currently supported in `theme.json`.
+///
+/// @link https://github.com/WordPress/gutenberg/issues/55225
+///
 p.is-style-indent {
 	text-indent: var( --wp--preset--spacing--plus-4 );
 
@@ -51,6 +60,12 @@ p.is-style-indent {
 	}
 }
 
+///
+/// The intro style enlarges the paragraph text size and spacing. It is also
+/// given the primary font-family, which is typically reserved for headings.
+/// This style is ideal for introductory paragraphs to an article that should
+/// stand out.
+///
 p.is-style-intro {
 	margin-top: var( --wp--preset--spacing--plus-4 );
 	margin-bottom: var( --wp--preset--spacing--plus-4 );
@@ -64,6 +79,10 @@ p.is-style-intro {
 	max-width: var( --wp--style--global--wide-size );
 }
 
+///
+/// The lead-in style bolds the first line of a paragraph (and gives it small-
+/// caps if supported).
+///
 p.is-style-lead-in::first-line {
 	font-weight: 700;
 
@@ -73,6 +92,9 @@ p.is-style-lead-in::first-line {
 	font-variant: small-caps;
 }
 
+///
+/// The lede style increases the size and weight of the text.
+///
 p.is-style-lede {
 	font-weight: 500;
 	font-size: var( --wp--preset--font-size--lg );
