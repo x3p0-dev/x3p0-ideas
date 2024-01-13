@@ -21,6 +21,18 @@ class Patterns implements Bootable
 	use HookAnnotation;
 
 	/**
+	 * Patterns that should be conditionally removed if the block is not
+	 * registered for the install.
+	 *
+	 * @since 1.0.0
+	 * @todo  Add `array` type with PHP 8.3-only support.
+	 */
+	protected const CONDITIONAL_PATTERNS = [
+		'core/table-of-contents' => [ 'x3p0-ideas/table-of-contents' ],
+		'x3p0/breadcrumbs'       => [ 'x3p0-ideas/breadcrumbs' ]
+	];
+
+	/**
 	 * Stores the instance of the block type registry.
 	 *
 	 * @since 1.0.0
@@ -87,12 +99,7 @@ class Patterns implements Bootable
 	 */
 	public function unregisterPatterns(): void
 	{
-		$block_patterns = [
-			'core/table-of-contents' => [ 'x3p0-ideas/table-of-contents' ],
-			'x3p0/breadcrumbs'       => [ 'x3p0-ideas/breadcrumbs' ]
-		];
-
-		foreach ( $block_patterns as $block => $patterns ) {
+		foreach ( self::CONDITIONAL_PATTERNS as $block => $patterns ) {
 			foreach ( $patterns as $pattern ) {
 				if ( ! $this->block_types->is_registered( $block ) ) {
 					unregister_block_pattern( $pattern );
