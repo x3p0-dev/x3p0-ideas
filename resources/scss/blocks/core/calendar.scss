@@ -52,10 +52,12 @@
 
 // WP nests a calendar wrapper inside itself in the editor for some crazy reason
 // that I'm sure is some legacy thing. 🫤
-.wp-block-calendar .wp-block-calendar {
+.editor-styles-wrapper .wp-block-calendar .wp-block-calendar {
+	margin-bottom: calc( -1 * var( --wp--preset--spacing--base ) );
 	margin-left: calc( -1 * var( --wp--preset--spacing--plus-3 ) );
 	margin-right: calc( -1 * var( --wp--preset--spacing--plus-3 ) );
 	border: none;
+	box-shadow: none;
 }
 
 .wp-block-calendar table caption {
