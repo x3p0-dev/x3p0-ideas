@@ -82,7 +82,7 @@ class Assets implements Bootable
 	/**
 	 * Loads editor assets.
 	 *
-	 * @hook   enqueue_block_editor_assets
+	 * @hook  enqueue_block_editor_assets
 	 * @since 1.0.0
 	 */
 	public function enqueueEditorAssets(): void
@@ -104,6 +104,10 @@ class Assets implements Bootable
 			$style_asset['dependencies'],
 			$style_asset['version']
 		);
+
+		// Set translations for editor scripts.
+		// @link https://developer.wordpress.org/reference/functions/wp_set_script_translations/
+		wp_set_script_translations( 'x3p0-ideas-editor', 'x3p0-ideas' );
 	}
 
 	/**
