@@ -133,7 +133,7 @@ class Blocks implements Bootable
 
 		// Checks if the attachment is one of supported types and sets
 		// the filename based on that type.
-		foreach ( [ 'image', 'video', 'audio'] as $type ) {
+		foreach ( [ 'image', 'video', 'audio', 'pdf' ] as $type ) {
 			if ( wp_attachment_is( $type, $instance->context['postId'] ) ) {
 				$partials[] = "public/partials/attachment-media-{$type}.php";
 				break;
