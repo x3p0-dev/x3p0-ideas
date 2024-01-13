@@ -19,7 +19,12 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-// No customizations...
+// Ensures that `cqi` values are based on their container, not the viewport. For
+// the Group block's grid layout, we need to specifically target the nested
+// elements because they become the container.
+.wp-block-group-is-layout-grid > * {
+	container-type: inline-size;
+}
 
 // -----------------------------------------------------------------------------
 // Block style variations.
