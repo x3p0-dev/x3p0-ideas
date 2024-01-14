@@ -16,7 +16,8 @@ import { __ } from '@wordpress/i18n';
 export const SUPPORTED_BLOCKS = [
 	'core/archives',
 	'core/categories',
-	'core/list'
+	'core/list',
+	'core/page-list'
 ];
 
 /**
