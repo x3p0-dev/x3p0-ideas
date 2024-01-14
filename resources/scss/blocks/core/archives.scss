@@ -9,6 +9,14 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
+// WordPress adds archive-specific padding to its stylesheet.
+ul.wp-block-archives-list {
+	padding-left: var( --wp--preset--spacing--plus-4 );
+
+	// WordPress reverts our post content list padding.
+	li { padding-left: 0.25em; }
+}
+
 // See note in the "Block style variations" section below on the archives block
 // wrapping an archives block in the editor.
 
@@ -46,5 +54,7 @@
 	li {
 		padding: 0;
 		margin: 0;
+
+		&::marker { content: none; }
 	}
 }

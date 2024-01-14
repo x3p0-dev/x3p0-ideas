@@ -9,7 +9,10 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// No fixes...
+// WordPress reverts our post content list padding.
+ul.wp-block-categories-list li {
+	padding-left: 0.25em;
+}
 
 // -----------------------------------------------------------------------------
 // Block customizations.
@@ -39,6 +42,8 @@
 	li {
 		padding: 0;
 		margin: 0;
+
+		&::marker { content: none; }
 
 		// Kill nested lists with horizontal display.
 		ul { display: none; }
