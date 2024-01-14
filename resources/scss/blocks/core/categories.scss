@@ -9,11 +9,6 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// WordPress reverts our post content list padding.
-ul.wp-block-categories-list li {
-	padding-left: 0.25em;
-}
-
 // -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
@@ -21,7 +16,19 @@ ul.wp-block-categories-list li {
 // Gives a little spacing to the link to give it some more breathing room when
 // the post count is shown.
 .wp-block-categories-list {
-	margin-right: 0.25ch;
+	padding-inline-start: var( --wp--preset--spacing--plus-4 );
+
+	:where( li + li, li > ul, li > ol ) {
+		margin-block-start: var( --wp--preset--spacing--minus-1 );
+	}
+
+	li {
+		padding-left: 0.25em;
+	}
+
+	li a {
+		margin-right: 0.25ch;
+	}
 }
 
 // -----------------------------------------------------------------------------

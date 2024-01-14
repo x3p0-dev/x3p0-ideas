@@ -15,6 +15,21 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
+// Add fluid spacing to list padding.
+.wp-block-list:is( ul, ol ) {
+	padding-inline-start: var( --wp--preset--spacing--plus-4 );
+}
+
+// Loosen the spacing between elements in a list.
+.wp-block-list :where( li + li, li > ul, li > ol ) {
+	margin-block-start: var( --wp--preset--spacing--minus-1 );
+}
+
+// Give the text and marker some breathing room.
+.wp-block-list:is( ul, ol ) li {
+	padding-left: 0.25em;
+}
+
 ol li::marker {
 	font-size: 0.875em;
 }

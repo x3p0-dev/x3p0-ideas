@@ -9,12 +9,6 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-// @todo Our post content list styles are breaking the padding here and
-// probably elsewhere. Fix in `post-content.scss`.
-.wp-block-post-content .wp-block-social-links {
-	padding: 0;
-}
-
 // Padding adjustments.
 .wp-block-social-links .wp-social-link .wp-block-social-link-anchor {
 	padding: var( --wp--preset--spacing--minus-2 );

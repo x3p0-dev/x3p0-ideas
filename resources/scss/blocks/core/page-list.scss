@@ -15,8 +15,20 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-ul.wp-block-page-list li {
-	padding-left: 0.25em;
+ul.wp-block-page-list {
+	padding-inline-start: var( --wp--preset--spacing--plus-4 );
+
+	:where( li + li, li > ul, li > ol ) {
+		margin-block-start: var( --wp--preset--spacing--minus-1 );
+	}
+
+	li {
+		padding-left: 0.25em;
+	}
+
+	&__item__link {
+		margin-right: 0.25ch;
+	}
 }
 
 // -----------------------------------------------------------------------------
