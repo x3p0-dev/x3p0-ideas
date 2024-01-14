@@ -55,7 +55,7 @@ export const BLOCK_STYLES = {
 		'stretch':               __( 'Stretch',            'x3p0-ideas' )
 	},
 	'core/file': {
-		'icon': __( 'Button Icon', 'x3p0-ideas' )
+		'icon': __( 'Icon', 'x3p0-ideas' )
 	},
 	'core/footnotes': {
 		'pull': __( 'Pull', 'x3p0-ideas' )

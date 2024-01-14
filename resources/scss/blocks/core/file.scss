@@ -72,6 +72,14 @@
 /// The icon style prefixes the block download button with an icon.
 ///
 .wp-block-file.is-style-icon {
+
+	&:where( :not( :has( .wp-block-file__button ) ) ) {
+
+		a {
+			@include inline-icon.prefix( icon.get-url( 'download' ) );
+		}
+	}
+
 	.wp-block-file__button {
 		@include inline-icon.prefix( icon.get-url( 'download' ) );
 	}
