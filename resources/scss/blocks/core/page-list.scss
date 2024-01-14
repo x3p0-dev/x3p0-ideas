@@ -23,4 +23,24 @@ ul.wp-block-page-list li {
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-// No variations...
+///
+/// Horizontal list style.
+///
+ul.wp-block-page-list.is-style-horizontal {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: var( --wp--preset--spacing--minus-2 ) var( --wp--preset--spacing--base );
+	list-style: none;
+	padding: 0;
+
+	li {
+		padding: 0;
+		margin: 0;
+
+		&::marker { content: none; }
+
+		// Kill nested lists with horizontal display.
+		ul { display: none; }
+	}
+}

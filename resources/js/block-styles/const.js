@@ -95,6 +95,9 @@ export const BLOCK_STYLES = {
 		'button': __( 'Button', 'x3p0-ideas' ),
 		'icon':   __( 'Icon',   'x3p0-ideas' )
 	},
+	'core/page-list': {
+		'horizontal':  __( 'Horizontal',   'x3p0-ideas' )
+	},
 	'core/paragraph': {
 		'indent':  __( 'Indent',  'x3p0-ideas' ),
 		'intro':   __( 'Intro',   'x3p0-ideas' ),
