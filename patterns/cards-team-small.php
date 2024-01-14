@@ -11,22 +11,22 @@ $image = get_theme_file_uri( 'public/media/images/purple-sunset.webp' );
 ?>
 <!-- wp:group {
 	"tagName":"section",
-	"metadata":{"name":"<?= esc_attr( 'Team Cards', 'x3p0-ideas' ) ?>"},
+	"metadata":{"name":"<?= esc_attr__( 'Cards Container', 'x3p0-ideas' ) ?>"},
 	"align":"full",
 	"style":{
 		"spacing":{
 			"padding":{
-				"top":"var:preset|spacing|plus-4",
-				"bottom":"var:preset|spacing|plus-4",
+				"right":"var:preset|spacing|plus-3",
 				"left":"var:preset|spacing|plus-3",
-				"right":"var:preset|spacing|plus-3"
+				"top":"var:preset|spacing|plus-4",
+				"bottom":"var:preset|spacing|plus-4"
 			}
 		}
 	},
-	"backgroundColor":"neutral-base",
+	"gradient":"90-deg-primary-base-transparent",
 	"layout":{"type":"constrained"}
 } -->
-<section class="wp-block-group alignfull has-neutral-base-background-color has-background" style="padding-top:var(--wp--preset--spacing--plus-4);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-4);padding-left:var(--wp--preset--spacing--plus-3)">
+<section class="wp-block-group alignfull has-90-deg-primary-base-transparent-gradient-background has-background" style="padding-top:var(--wp--preset--spacing--plus-4);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-4);padding-left:var(--wp--preset--spacing--plus-3)">
 
 	<!-- wp:group {
 		"tagName":"header",
