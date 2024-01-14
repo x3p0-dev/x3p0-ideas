@@ -2,8 +2,8 @@
 /**
  * Title: File Download Cards
  * Slug: x3p0-ideas/cards-file-download
- * Categories: columns, services
- * Keywords: download, file, card
+ * Categories: x3p0-grid
+ * Keywords: card, download, file, grid, media
  * Viewport Width: 1376
  */
 $icons = [

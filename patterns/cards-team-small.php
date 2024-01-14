@@ -1,9 +1,9 @@
 <?php
 /**
- * Title: Team: Small Cards
- * Slug: x3p0-ideas/team-cards-small
- * Categories: team
- * Keywords: team, card, profile
+ * Title: Small Team Cards
+ * Slug: x3p0-ideas/cards-team-small
+ * Categories: team, x3p0-grid
+ * Keywords: card, grid, profile, team
  * Viewport Width: 1376
  */
 $url = home_url();

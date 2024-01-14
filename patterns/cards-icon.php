@@ -1,9 +1,9 @@
 <?php
 /**
  * Title: Icon Cards
- * Slug: x3p0-ideas/cards-icon-three-col
- * Categories: team
- * Keywords: card
+ * Slug: x3p0-ideas/cards-icon
+ * Categories: x3p0-grid
+ * Keywords: card, grid
  * Viewport Width: 1376
  */
 $icons = [

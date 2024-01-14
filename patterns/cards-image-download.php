@@ -2,8 +2,8 @@
 /**
  * Title: Image Download Cards
  * Slug: x3p0-ideas/cards-image-download
- * Categories: gallery, columns
- * Keywords: download, file, card, image, gallery
+ * Categories: gallery, x3p0-grid
+ * Keywords: card, download, file, gallery, grid, image, media
  * Viewport Width: 1376
  */
 $image = get_theme_file_uri( 'public/media/images/purple-sunset.webp' );
