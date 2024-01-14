@@ -27,6 +27,15 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
+// Don't add borders to SVG images by default.
+.wp-block-image img[src$=".svg"],
+.wp-block-image a:has( img[src$=".svg"] ),
+.editor-styles-wrapper .wp-block-image img[src$=".svg"],
+.editor-styles-wrapper .wp-block-image a:has( img[src$=".svg"] ) {
+	border: none;
+	box-shadow: none;
+}
+
 // Need to add the default border-radius to the link itself, which may have an
 // outline style. However, it can't inherit the image's radius, so it needs to
 // use the set default.
