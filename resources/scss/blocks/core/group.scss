@@ -15,6 +15,12 @@
 	width: 100%;
 }
 
+// Zero out global padding so that the front end and editor match.
+.has-global-padding > .alignfull > .wp-block-group {
+	padding-left: 0;
+	padding-right: 0;
+}
+
 // -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
