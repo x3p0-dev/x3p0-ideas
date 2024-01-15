@@ -1269,6 +1269,14 @@
 	},
 	"customTemplates": [
 		{
+			"name": "template-blank",
+			"title": "Template: Blank",
+			"postTypes": [
+				"page",
+				"post"
+			]
+		},
+		{
 			"name": "template-canvas",
 			"title": "Template: Canvas",
 			"postTypes": [
