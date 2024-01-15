@@ -43,11 +43,11 @@ $icons = [
 	<header class="wp-block-group">
 
 		<!-- wp:heading {"textAlign":"center"} -->
-		<h2 class="wp-block-heading has-text-align-center">Placeholder Heading</h2>
+		<h2 class="wp-block-heading has-text-align-center"><?= esc_html__( 'Placeholder Heading', 'x3p0-ideas' ) ?></h2>
 		<!-- /wp:heading -->
 
 		<!-- wp:paragraph {"align":"center"} -->
-		<p class="has-text-align-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum turpis quis metus aliquam, id pharetra arcu dignissim. Sed in sollicitudin mi.</p>
+		<p class="has-text-align-center"><?= esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum turpis quis metus aliquam, id pharetra arcu dignissim. Sed in sollicitudin mi.', 'x3p0-ideas' ) ?></p>
 		<!-- /wp:paragraph -->
 
 	</header>
