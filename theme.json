@@ -428,6 +428,7 @@
 				}
 			},
 			"lineHeight": {
+				"2-xs": "1.625",
 				"xs": "1.625",
 				"sm": "1.5",
 				"md": "calc( 3ex + 4px )",
@@ -661,13 +662,18 @@
 			],
 			"fontSizes": [
 				{
+					"name": "2XS - Fluid",
+					"size": "clamp(0.7462rem, 0.2582cqi + 0.6688rem, 0.834rem)",
+					"slug": "2-xs"
+				},
+				{
 					"name": "Extra Small - Fluid",
-					"size": "clamp(0.875rem, 0.44vw + 0.66rem, 0.94rem)",
+					"size": "clamp(0.8395rem, 0.2905cqi + 0.7524rem, 0.9383rem)",
 					"slug": "xs"
 				},
 				{
 					"name": "Small - Fluid",
-					"size": "clamp(0.9375rem, 0.49vw + 0.74rem, 1.06rem)",
+					"size": "clamp(0.9444rem, 0.3268cqi + 0.8464rem, 1.0556rem)",
 					"slug": "sm"
 				},
 				{

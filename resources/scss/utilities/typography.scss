@@ -21,6 +21,7 @@
 .has-md-font-size   { line-height: var( --wp--custom--line-height--md ); }
 .has-sm-font-size   { line-height: var( --wp--custom--line-height--sm ); }
 .has-xs-font-size   { line-height: var( --wp--custom--line-height--xs ); }
+.has-2-xs-font-size { line-height: var( --wp--custom--line-height--2-xs ); }
 
 body:not( .editor-styles-wrapper ) .has-screen-reader-text {
 	clip: rect( 1px, 1px, 1px, 1px );
