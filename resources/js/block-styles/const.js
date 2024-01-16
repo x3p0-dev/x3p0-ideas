@@ -20,7 +20,8 @@ export const BLOCK_STYLES = {
 		'horizontal': __( 'Horizontal', 'x3p0-ideas' )
 	},
 	'core/button': {
-		'hand-drawn': __( 'Hand Drawn', 'x3p0-ideas' )
+		'hand-drawn': __( 'Hand Drawn', 'x3p0-ideas' ),
+		'link':       __( 'Link', 'x3p0-ideas' )
 	},
 	'core/categories': {
 		'horizontal': __( 'Horizontal', 'x3p0-ideas' )
