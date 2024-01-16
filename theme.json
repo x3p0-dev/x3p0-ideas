@@ -998,6 +998,16 @@
 					"lineHeight": "1.75"
 				}
 			},
+			"core/column": {
+				"spacing": {
+					"padding": {
+						"top":"0",
+						"bottom":"0",
+						"left":"0",
+						"right":"0"
+					}
+				}
+			},
 			"core/comments": {
 				"css": "--wp--custom--block-gap--comments: var( --wp--preset--spacing--plus-4 );"
 			},
