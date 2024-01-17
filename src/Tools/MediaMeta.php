@@ -22,7 +22,7 @@ class MediaMeta
 	 * Stores an array of methods to call when specific keys are passed in.
 	 *
 	 * @since 1.0.0
-	 * @todo  Add `string` type with PHP 8.3-only support.
+	 * @todo  Add `array` type with PHP 8.3-only support.
 	 */
 	private const KEY_METHODS = [
 		'aperture'          => 'aperture',
