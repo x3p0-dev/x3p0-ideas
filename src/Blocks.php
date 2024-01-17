@@ -127,28 +127,54 @@ class Blocks implements Bootable
 			return $block_content;
 		}
 
-		// Set up some default variables.
+		// Set up the args to pass to the partial.
+		$args = [ 'post_id' => absint( $instance->context['postId'] ) ];
+
+		// Get the attachment media and metadata markup.
+		$media = $this->renderAttachmentPartial( 'media', $args );
+		$meta  = $this->renderAttachmentPartial( 'meta',  $args );
+
+		return $media . $block_content . $meta;
+	}
+
+	/**
+	 * Returns the rendered attachment partial.
+	 *
+	 * @since 1.0.0
+	 */
+	private function renderAttachmentPartial( string $name, array $args = [] ): string
+	{
 		$partials = [];
-		$html     = '';
 
 		// Checks if the attachment is one of supported types and sets
 		// the filename based on that type.
 		foreach ( [ 'image', 'video', 'audio', 'pdf' ] as $type ) {
-			if ( wp_attachment_is( $type, $instance->context['postId'] ) ) {
-				$partials[] = "public/partials/attachment-media-{$type}.php";
+			if ( wp_attachment_is( $type, $args['post_id'] ) ) {
+				$partials[] = "public/partials/attachment-{$name}-{$type}.php";
 				break;
 			}
 		}
 
 		// Add fallback partial template.
-		$partials[] = 'public/partials/attachment-media.php';
+		$partials[] = "public/partials/attachment-{$name}.php";
+
+		return $this->renderPartial( $partials, $args );
+	}
+
+	/**
+	 * Renders a partial template's blocks.
+	 *
+	 * @since 1.0.0
+	 * @todo  Move this to a separate class.
+	 */
+	private function renderPartial( array $partials, array $args = [] ): string
+	{
+		$html = '';
 
 		// Gets a partial (essentially a dynamic pattern) based on the
 		// attachment type. Must be valid block content.
 		ob_start();
-		locate_template( $partials, true, false, [
-			'post_id' => $instance->context['postId']
-		] );
+		locate_template( $partials, true, false, $args );
 		$media = ob_get_clean();
 
 		// Parse and render the blocks.
@@ -156,6 +182,6 @@ class Blocks implements Bootable
 			$html .= render_block( $media_block );
 		}
 
-		return $html . $block_content;
+		return $html;
 	}
 }
