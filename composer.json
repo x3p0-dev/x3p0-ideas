@@ -1,0 +1,34 @@
+{
+	"name": "x3p0-dev/x3p0-ideas",
+	"type": "wordpress-theme",
+	"license": "GPL-3.0-or-later",
+	"scripts": {
+		"dev":"composer dump-autoload",
+		"prod":"composer dump-autoload -o",
+		"zip": "composer archive --format=zip --file=_playground/x3p0-ideas"
+	},
+	"autoload": {
+		"psr-4": {
+			"X3P0\\Ideas\\": "src/"
+		},
+		"files" : [
+			"src/functions-helpers.php"
+		]
+	},
+	"authors": [
+		{
+			"name": "Justin Tadlock",
+			"email": "justintadlock@gmail.com"
+		}
+	],
+	"minimum-stability": "dev",
+	"prefer-stable": false,
+	"require": {
+                "php": ">=7.4"
+	},
+	"archive": {
+		"exclude": [
+			"!/vendor"
+		]
+	}
+}

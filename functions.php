@@ -11,12 +11,15 @@
 
 namespace X3P0\Ideas;
 
-# Register autoloader for classes.
-require_once get_parent_theme_file_path( 'src/Autoload.php' );
-Autoload::register();
+# Prevent direct execution.
+if ( ! defined( 'ABSPATH' ) ) {
+        exit;
+}
 
-# Load functions files.
-require_once get_parent_theme_file_path( 'src/functions-helpers.php' );
+# Run the autoloader.
+if ( file_exists( get_parent_theme_file_path( 'vendor/autoload.php' ) ) ) {
+	require_once get_parent_theme_file_path( 'vendor/autoload.php' );
+}
 
 # Bootstrap the theme.
 add_action( 'after_setup_theme', __NAMESPACE__ . '\\theme', PHP_INT_MIN );

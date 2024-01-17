@@ -25,10 +25,12 @@
 ## Ignore folders and files when exporting as a ZIP.
 ## -----------------------------------------------------------------------------
 
-_playground/ export-ignore
 .github/ export-ignore
+.ideas/ export-ignore
 .notes/ export-ignore
+_playground/ export-ignore
 docs/ export-ignore
+node_modules/ export-ignore
 
 # Don't export folders that are merely copied into `/public`.
 /resources/fonts export-ignore
@@ -52,3 +54,5 @@ composer.lock export-ignore
 package-lock.json export-ignore
 package.json export-ignore
 webpack.config.js export-ignore
+*.map export-ignore
+.DS_Store export-ignore
