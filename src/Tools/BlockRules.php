@@ -1,9 +1,9 @@
 <?php
 /**
- * Block directives are instructions for how to handle the front-end output of
- * a block. This is done via a limited set of directives that conditionally
- * decide whether the block should be public (should be shown) or not. This
- * could potentially be expanded to include other instructions for how to handle
+ * Block rules are instructions for how to handle the front-end output of a
+ * block. This is done via a limited set of rules that conditionally decide
+ * whether the block should be public (should be shown) or not. This could
+ * potentially be expanded to include other instructions for how to handle
  * blocks, but the primary goal is conditional inclusion. This class doesn't
  * actually alter blocks in any way. It simply checks a block's attributes to
  * perform checks.
@@ -16,14 +16,15 @@
 
 namespace X3P0\Ideas\Tools;
 
-class BlockDirectives
+class BlockRules
 {
 	/**
-	 * List of allowed directives and their callback methods.
+	 * List of allowed rules and their callback methods.
 	 *
 	 * @since 1.0.0
+	 * @todo  Add `array` type with PHP 8.3-only support.
 	 */
-	private array $directives = [
+	private const RULE_METHODS = [
 		'@if'     => 'checkIf',
 		'@unless' => 'checkUnless',
 		'@user'   => 'checkUser'
@@ -31,15 +32,15 @@ class BlockDirectives
 
 	/**
 	 * Checks if the block content is allowed to be shown based on the what
-	 * is returned by the directive method.
+	 * is returned by the rule method.
 	 *
 	 * @since 1.0.0
 	 */
 	public function isPublic( array $block ): bool
 	{
-		foreach ( $this->directives as $directive => $method ) {
-			if ( isset( $block['attrs'][ $directive ] ) ) {
-				$value = $block['attrs'][ $directive ];
+		foreach ( self::RULE_METHODS as $rule => $method ) {
+			if ( isset( $block['attrs'][ $rule ] ) ) {
+				$value = $block['attrs'][ $rule ];
 
 				return is_array( $value )
 				       ? $this->$method( array_map( 'wp_strip_all_tags', $value ) )

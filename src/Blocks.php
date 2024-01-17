@@ -12,7 +12,7 @@ namespace X3P0\Ideas;
 
 use WP_Block;
 use X3P0\Ideas\Contracts\Bootable;
-use X3P0\Ideas\Tools\BlockDirectives;
+use X3P0\Ideas\Tools\BlockRules;
 use X3P0\Ideas\Tools\HookAnnotation;
 
 class Blocks implements Bootable
@@ -20,22 +20,22 @@ class Blocks implements Bootable
 	use HookAnnotation;
 
 	/**
-	 * Instance of block directives, which is used to determine whether to
-	 * show a block.
+	 * Instance of block rules, which is used to determine whether to show
+	 * a block.
 	 *
 	 * @since 1.0.0
 	 * @todo  Move to constructor with PHP 8-only support.
 	 */
-	protected BlockDirectives $directives;
+	protected BlockRules $rules;
 
 	/**
 	 * Sets up the object state.
 	 *
 	 * @since 1.0.0
 	 */
-	public function __construct( BlockDirectives $directives )
+	public function __construct( BlockRules $rules )
 	{
-		$this->directives = $directives;
+		$this->rules = $rules;
 	}
 
 	/**
@@ -69,18 +69,17 @@ class Blocks implements Bootable
 	}
 
 	/**
-	 * Filters block content.
+	 * Filters block content, determining if it should be shown according to
+	 * any rules passed in via attributes.
 	 *
 	 * @hook  render_block  last
 	 * @since 1.0.0
 	 */
-	public function renderBlockByDirective(
+	public function renderBlockByRule(
 		string $block_content,
 		array $block
 	): string {
-		return $this->directives->isPublic( $block )
-		       ? $block_content
-		       : '';
+		return $this->rules->isPublic( $block ) ? $block_content : '';
 	}
 
 	/**

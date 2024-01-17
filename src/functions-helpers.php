@@ -12,7 +12,7 @@ namespace X3P0\Ideas;
 
 use WP_Block_Type_Registry;
 use X3P0\Ideas\Contracts\Bootable;
-use X3P0\Ideas\Tools\BlockDirectives;
+use X3P0\Ideas\Tools\BlockRules;
 
 /**
  * Mini container used to reference the various theme components. Bootstraps the
@@ -32,15 +32,19 @@ function theme( string $component = '' )
 	// If there are no bound components, register and boot them.
 	if ( [] === $bindings ) {
 
+		// Get dependencies.
+		$block_registry = WP_Block_Type_Registry::get_instance();
+		$block_rules    = new BlockRules();
+
 		// Bind instances of the theme's component classes that need to
 		// be booted when the theme launches.
 		$bindings = apply_filters( 'x3p0/ideas/components', [
 			'assets'    => new Assets(),
-			'blocks'    => new Blocks( new BlockDirectives() ),
+			'blocks'    => new Blocks( $block_rules ),
 			'embeds'    => new Embeds(),
 			'media'     => new Media(),
 			'parts'     => new Parts(),
-			'patterns'  => new Patterns( WP_Block_Type_Registry::get_instance() ),
+			'patterns'  => new Patterns( $block_registry ),
 			'templates' => new Templates()
 		] );
 
