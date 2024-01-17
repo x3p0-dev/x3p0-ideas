@@ -33,18 +33,18 @@ function theme( string $component = '' )
 	if ( [] === $bindings ) {
 
 		// Get dependencies.
-		$block_registry = WP_Block_Type_Registry::get_instance();
-		$block_rules    = new BlockRules();
+		$block_types = WP_Block_Type_Registry::get_instance();
+		$block_rules = new BlockRules();
 
 		// Bind instances of the theme's component classes that need to
 		// be booted when the theme launches.
 		$bindings = apply_filters( 'x3p0/ideas/components', [
-			'assets'    => new Assets(),
+			'assets'    => new Assets( $block_types ),
 			'blocks'    => new Blocks( $block_rules ),
 			'embeds'    => new Embeds(),
 			'media'     => new Media(),
 			'parts'     => new Parts(),
-			'patterns'  => new Patterns( $block_registry ),
+			'patterns'  => new Patterns( $block_types ),
 			'templates' => new Templates()
 		] );
 

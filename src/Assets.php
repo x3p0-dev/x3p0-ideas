@@ -39,6 +39,24 @@ class Assets implements Bootable
 	protected const INLINE_CSS_LIMIT = 50000;
 
 	/**
+	 * Stores the instance of the block type registry.
+	 *
+	 * @since 1.0.0
+	 * @todo  Move to constructor with PHP 8-only support.
+	 */
+	protected WP_Block_Type_Registry $block_types;
+
+	/**
+	 * Sets up the object state.
+	 *
+	 * @since 1.0.0
+	 */
+	public function __construct( WP_Block_Type_Registry $block_types )
+	{
+		$this->block_types = $block_types;
+	}
+
+	/**
 	 * Boots the component, running its actions/filters.
 	 *
 	 * @since 1.0.0
@@ -177,7 +195,7 @@ class Assets implements Bootable
 		// Bail if the block is not registered or if the asset file
 		// doesn't exist.
 		if (
-			! WP_Block_Type_Registry::get_instance()->is_registered( "{$namespace}/{$slug}" )
+			! $this->block_types->is_registered( "{$namespace}/{$slug}" )
 			|| ! file_exists( get_parent_theme_file_path( "{$relative}.asset.php" ) )
 		) {
 			return;
