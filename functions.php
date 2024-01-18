@@ -13,7 +13,7 @@ namespace X3P0\Ideas;
 
 # Prevent direct execution.
 if ( ! defined( 'ABSPATH' ) ) {
-        exit;
+	exit;
 }
 
 # Run the autoloader.
