@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<ruleset name="X3P0">
+
+	<!-- Run against the PHPCompatibility ruleset -->
+	<rule ref="WordPress-Extra">
+		<exclude name="Universal.Arrays.DisallowShortArraySyntax"/>
+		<exclude name="NormalizedArrays.Arrays.CommaAfterLast"/>
+		<exclude name="NormalizedArrays.Arrays.ArrayBraceSpacing.SpaceBeforeArrayCloserSingleLine"/>
+		<exclude name="WordPress.Files.FileName"/>
+		<exclude name="WordPress.NamingConventions.ValidFunctionName"/>
+		<exclude name="WordPress.NamingConventions.ValidHookName.UseUnderscores"/>
+		<exclude name="WordPress.WP.AlternativeFunctions"/>
+		<exclude name="Generic.CodeAnalysis.AssignmentInCondition"/>
+		<exclude name="Generic.Functions.FunctionCallArgumentSpacing.TooMuchSpaceAfterComma"/>
+		<exclude name="Generic.Functions.FunctionCallArgumentSpacing.TooMuchSpaceAfterComma"/>
+		<exclude name="Generic.Classes.OpeningBraceSameLine"/>
+		<exclude name="Generic.Functions.OpeningFunctionBraceKernighanRitchie"/>
+		<exclude name="PEAR.Functions.FunctionCallSignature"/>
+		<exclude name="Universal.NamingConventions.NoReservedKeywordParameterNames"/>
+		<exclude name="Generic.WhiteSpace.DisallowSpaceIndent"/>
+		<exclude name="Universal.WhiteSpace.PrecisionAlignment"/>
+		<exclude name="Squiz.PHP.DisallowMultipleAssignments.Found"/>
+		<exclude name="Squiz.PHP.DisallowMultipleAssignments.FoundInControlStructure"/>
+		<exclude name="Squiz.PHP.EmbeddedPhp.ContentAfterOpen"/>
+		<exclude name="Squiz.PHP.EmbeddedPhp.ContentBeforeOpen"/>
+
+		<!-- too many false-positives when not actually overriding a global -->
+		<exclude name="WordPress.WP.GlobalVariablesOverride.Prohibited"/>
+	</rule>
+
+	<rule ref="Generic.PHP.DisallowShortOpenTag.EchoFound">
+		<severity>0</severity>
+	</rule>
+
+	<rule ref="Squiz.PHP.EmbeddedPhp.NoSemicolon">
+		<severity>0</severity>
+	</rule>
+
+	<!-- Run against the PHPCompatibility ruleset -->
+	<rule ref="PHPCompatibilityWP">
+		<include-pattern>*\.php$</include-pattern>
+	</rule>
+	<config name="testVersion" value="7.4-"/>
+
+	<!-- Exclude files and folders. -->
+	<exclude-pattern>*/public/*</exclude-pattern>
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+
+	<!-- Only check the PHP files. -->
+	<arg name="extensions" value="php"/>
+
+</ruleset>
