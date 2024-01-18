@@ -2,8 +2,15 @@
 	"name": "x3p0-dev/x3p0-ideas",
 	"type": "wordpress-theme",
 	"license": "GPL-3.0-or-later",
+	"authors": [
+		{
+			"name": "Justin Tadlock",
+			"email": "justintadlock@gmail.com"
+		}
+	],
 	"scripts": {
 		"dev":"composer dump-autoload",
+		"lint:php": "./vendor/bin/phpcs -s .",
 		"prod":"composer dump-autoload -o",
 		"zip": "composer archive --format=zip --file=_playground/x3p0-ideas"
 	},
@@ -15,20 +22,23 @@
 			"src/functions-helpers.php"
 		]
 	},
-	"authors": [
-		{
-			"name": "Justin Tadlock",
-			"email": "justintadlock@gmail.com"
-		}
-	],
-	"minimum-stability": "dev",
-	"prefer-stable": false,
 	"require": {
                 "php": ">=7.4"
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": false,
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
 	},
 	"archive": {
 		"exclude": [
 			"!/vendor"
 		]
+	},
+	"require-dev": {
+		"wp-coding-standards/wpcs": "^3.0",
+		"phpcompatibility/phpcompatibility-wp": "*"
 	}
 }
