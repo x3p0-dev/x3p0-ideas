@@ -19,7 +19,7 @@ $src     = wp_get_attachment_url( $args['post_id'] );
 		<audio controls src="<?= esc_url( $src ) ?>"></audio>
 
 		<?php if ( $caption ) : ?>
-			<figcaption class="wp-element-caption"><?= $caption ?></figcaption>
+			<figcaption class="wp-element-caption"><?= esc_html( $caption ) ?></figcaption>
 		<?php endif ?>
 	</figure>
 	<!-- /wp:audio -->
