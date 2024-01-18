@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5f3f44e82b79d05e2555cda931a2f962",
+    "content-hash": "5c7ee90712b92b34f92f759bc82e1d31",
     "packages": [],
     "packages-dev": [
         {
@@ -206,16 +206,16 @@
         },
         {
             "name": "phpcompatibility/phpcompatibility-wp",
-            "version": "dev-master",
+            "version": "2.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPCompatibility/PHPCompatibilityWP.git",
-                "reference": "02e4bf7d1f6b64f09abd93cae49166f1dae1f701"
+                "reference": "b6c1e3ee1c35de6c41a511d5eb9bd03e447480a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPCompatibility/PHPCompatibilityWP/zipball/02e4bf7d1f6b64f09abd93cae49166f1dae1f701",
-                "reference": "02e4bf7d1f6b64f09abd93cae49166f1dae1f701",
+                "url": "https://api.github.com/repos/PHPCompatibility/PHPCompatibilityWP/zipball/b6c1e3ee1c35de6c41a511d5eb9bd03e447480a5",
+                "reference": "b6c1e3ee1c35de6c41a511d5eb9bd03e447480a5",
                 "shasum": ""
             },
             "require": {
@@ -223,13 +223,12 @@
                 "phpcompatibility/phpcompatibility-paragonie": "^1.0"
             },
             "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^1.0"
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7"
             },
             "suggest": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^1.0 || This Composer plugin will sort out the PHP_CodeSniffer 'installed_paths' automatically.",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7 || This Composer plugin will sort out the PHP_CodeSniffer 'installed_paths' automatically.",
                 "roave/security-advisories": "dev-master || Helps prevent installing dependencies with known security issues."
             },
-            "default-branch": true,
             "type": "phpcodesniffer-standard",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -256,14 +255,13 @@
             ],
             "support": {
                 "issues": "https://github.com/PHPCompatibility/PHPCompatibilityWP/issues",
-                "security": "https://github.com/PHPCompatibility/PHPCompatibilityWP/security/policy",
                 "source": "https://github.com/PHPCompatibility/PHPCompatibilityWP"
             },
-            "time": "2023-12-08T17:31:57+00:00"
+            "time": "2022-10-24T09:00:36+00:00"
         },
         {
             "name": "phpcsstandards/phpcsextra",
-            "version": "dev-develop",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPCSStandards/PHPCSExtra.git",
@@ -287,7 +285,6 @@
                 "phpcsstandards/phpcsdevtools": "^1.2.1",
                 "phpunit/phpunit": "^4.5 || ^5.0 || ^6.0 || ^7.0 || ^8.0 || ^9.0"
             },
-            "default-branch": true,
             "type": "phpcodesniffer-standard",
             "extra": {
                 "branch-alias": {
@@ -342,16 +339,16 @@
         },
         {
             "name": "phpcsstandards/phpcsutils",
-            "version": "dev-develop",
+            "version": "1.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPCSStandards/PHPCSUtils.git",
-                "reference": "26dcb893d86fbe90ab2a8abd7b08a3fda3602237"
+                "reference": "908247bc65010c7b7541a9551e002db12e9dae70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPCSStandards/PHPCSUtils/zipball/26dcb893d86fbe90ab2a8abd7b08a3fda3602237",
-                "reference": "26dcb893d86fbe90ab2a8abd7b08a3fda3602237",
+                "url": "https://api.github.com/repos/PHPCSStandards/PHPCSUtils/zipball/908247bc65010c7b7541a9551e002db12e9dae70",
+                "reference": "908247bc65010c7b7541a9551e002db12e9dae70",
                 "shasum": ""
             },
             "require": {
@@ -366,7 +363,6 @@
                 "phpcsstandards/phpcsdevcs": "^1.1.6",
                 "yoast/phpunit-polyfills": "^1.1.0 || ^2.0.0"
             },
-            "default-branch": true,
             "type": "phpcodesniffer-standard",
             "extra": {
                 "branch-alias": {
@@ -427,20 +423,20 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2024-01-15T05:03:54+00:00"
+            "time": "2023-12-08T14:50:00+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "dev-master",
+            "version": "3.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPCSStandards/PHP_CodeSniffer.git",
-                "reference": "625975cbabf6534b7ee602608c58e6e1cbafd152"
+                "reference": "14f5fff1e64118595db5408e946f3a22c75807f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/625975cbabf6534b7ee602608c58e6e1cbafd152",
-                "reference": "625975cbabf6534b7ee602608c58e6e1cbafd152",
+                "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/14f5fff1e64118595db5408e946f3a22c75807f7",
+                "reference": "14f5fff1e64118595db5408e946f3a22c75807f7",
                 "shasum": ""
             },
             "require": {
@@ -452,7 +448,6 @@
             "require-dev": {
                 "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0 || ^7.0 || ^8.0 || ^9.3.4"
             },
-            "default-branch": true,
             "bin": [
                 "bin/phpcbf",
                 "bin/phpcs"
@@ -508,7 +503,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2024-01-17T20:50:55+00:00"
+            "time": "2024-01-11T20:47:48+00:00"
         },
         {
             "name": "wp-coding-standards/wpcs",
@@ -578,9 +573,9 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "stability-flags": [],
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": ">=7.4"

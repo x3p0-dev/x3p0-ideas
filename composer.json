@@ -9,10 +9,11 @@
 		}
 	],
 	"scripts": {
-		"dev":"composer dump-autoload",
+		"build": "composer prod && composer zip",
+		"dev": "composer update && composer dump-autoload",
 		"lint:php": "./vendor/bin/phpcs -s .",
-		"prod":"composer dump-autoload -o",
-		"zip": "composer archive --format=zip --file=_playground/x3p0-ideas"
+		"prod": "composer update --no-dev && composer dump-autoload -o --no-dev",
+		"zip": "composer archive --file=x3p0-ideas"
 	},
 	"autoload": {
 		"psr-4": {
@@ -20,25 +21,32 @@
 		},
 		"files" : [
 			"src/functions-helpers.php"
+		],
+		"exclude-from-classmap": [
+			"/vendor/composer/"
 		]
 	},
 	"require": {
                 "php": ">=7.4"
 	},
-	"minimum-stability": "dev",
-	"prefer-stable": false,
-	"config": {
-		"allow-plugins": {
-			"dealerdirect/phpcodesniffer-composer-installer": true
-		}
-	},
-	"archive": {
-		"exclude": [
-			"!/vendor"
-		]
-	},
 	"require-dev": {
 		"wp-coding-standards/wpcs": "^3.0",
 		"phpcompatibility/phpcompatibility-wp": "*"
+	},
+	"minimum-stability": "stable",
+	"prefer-stable": true,
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		},
+		"archive-dir": "./_playground",
+		"archive-format": "zip"
+	},
+	"archive": {
+		"exclude": [
+			"/vendor",
+			"!/vendor/autoload.php",
+			"!/vendor/composer/"
+		]
 	}
 }
