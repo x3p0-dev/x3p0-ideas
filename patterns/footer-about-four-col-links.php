@@ -117,8 +117,8 @@
 								<!-- wp:list-item -->
 								<li><a href="#"><?= esc_html( sprintf(
 									// Translators: %d is the current number in the loop.
-									_n( 'Link %d', 'Link %d', $item, 'x3p0-ideas' ),
-									absint( $item )
+									_n( 'Link %d', 'Link %d', $link, 'x3p0-ideas' ),
+									absint( $link )
 								) ) ?></a></li>
 								<!-- /wp:list-item -->
 
