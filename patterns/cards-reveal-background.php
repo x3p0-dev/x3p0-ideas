@@ -7,7 +7,7 @@
  * Block Types: core/cover
  * Viewport Width: 1376
  */
-$url = home_url();
+$url   = home_url();
 $image = get_theme_file_uri( 'public/media/images/purple-sunset.webp' );
 ?>
 <!-- wp:group {

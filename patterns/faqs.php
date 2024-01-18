@@ -22,7 +22,11 @@
 		<!-- wp:details -->
 		<details class="wp-block-details">
 			<summary>
-				<?php printf( __( 'Question %d?', 'x3p0-ideas'), $number ) ?>
+				<?= esc_html( sprintf(
+					// Translators: %d is the current question.
+					_n( 'Question %d?', 'Question %d', $number, 'x3p0-ideas'),
+					absint( $number )
+				) ) ?>
 			</summary>
 			<!-- wp:paragraph {
 				"placeholder":"<?= esc_attr__( 'Add an answer to the question.', 'x3p0-ideas' ) ?>"

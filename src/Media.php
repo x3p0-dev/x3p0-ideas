@@ -60,11 +60,11 @@ class Media implements Bootable
 	 */
 	public function registerImageSizeNames( array $sizes ): array
 	{
-		$sizes[ 'x3p0-16x9-lg'] = __( '16:9 (Landscape)', 'x3p0-ideas' );
-		$sizes[ 'x3p0-21x9-lg'] = __( '21:9 (Landscape)', 'x3p0-ideas' );
-		$sizes[ 'x3p0-9x16-md'] = __( '9:16 (Portrait)',  'x3p0-ideas' );
-		$sizes[ 'x3p0-3x4-md']  = __( '3:4 (Portrait)',   'x3p0-ideas' );
-		$sizes[ 'x3p0-1x1-md']  = __( '1:1 (Square)',     'x3p0-ideas' );
+		$sizes['x3p0-16x9-lg'] = __( '16:9 (Landscape)', 'x3p0-ideas' );
+		$sizes['x3p0-21x9-lg'] = __( '21:9 (Landscape)', 'x3p0-ideas' );
+		$sizes['x3p0-9x16-md'] = __( '9:16 (Portrait)',  'x3p0-ideas' );
+		$sizes['x3p0-3x4-md']  = __( '3:4 (Portrait)',   'x3p0-ideas' );
+		$sizes['x3p0-1x1-md']  = __( '1:1 (Square)',     'x3p0-ideas' );
 
 		return $sizes;
 	}

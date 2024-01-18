@@ -69,7 +69,12 @@ class Embeds implements Bootable
 		// cannot add our inline styles directly to it due to the way
 		// that its own inline styles are loaded (no way to add ours
 		// after it's been enqueued).
-		wp_register_style( 'x3p0-ideas-embed', false, [ 'wp-embed-template' ] );
+		wp_register_style(
+			'x3p0-ideas-embed',
+			false,
+			[ 'wp-embed-template' ],
+			wp_get_theme( get_template_directory() )->get( 'Version' )
+		);
 
 		// Add inline styles.
 		wp_add_inline_style( 'x3p0-ideas-embed', wp_get_global_stylesheet() );

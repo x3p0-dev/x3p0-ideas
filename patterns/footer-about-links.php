@@ -121,10 +121,11 @@
 						<ul class="has-marker-none is-style-gap-snug">
 							<?php foreach ( range( 1, 4 ) as $item ) : ?>
 								<!-- wp:list-item -->
-								<li><a href="#"><?php printf(
-									esc_html__( 'Link %d', 'x3p0-ideas' ),
-									$item
-								) ?></a></li>
+								<li><a href="#"><?= esc_html( sprintf(
+									// Translators: %d is the current number in the loop.
+									_n( 'Link %d', 'Link %d', $item, 'x3p0-ideas' ),
+									absint( $item )
+								) ) ?></a></li>
 								<!-- /wp:list-item -->
 							<?php endforeach ?>
 						</ul>

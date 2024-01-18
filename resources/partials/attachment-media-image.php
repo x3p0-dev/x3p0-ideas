@@ -20,7 +20,7 @@ $alt     = trim( strip_tags( get_post_meta( $args['post_id'], '_wp_attachment_im
 		<img src="<?= esc_url( $image[0] ) ?>" alt="<?= esc_attr( $alt ) ?>" />
 
 		<?php if ( $caption ) : ?>
-			<figcaption class="wp-element-caption"><?= $caption ?></figcaption>
+			<figcaption class="wp-element-caption"><?= esc_html( $caption ) ?></figcaption>
 		<?php endif ?>
 	</figure>
 	<!-- /wp:image -->

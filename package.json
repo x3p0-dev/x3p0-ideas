@@ -6,6 +6,7 @@
 	"scripts": {
 		"start": "wp-scripts start --webpack-src-dir=resources --output-path=public",
 		"build": "wp-scripts build --webpack-src-dir=resources --output-path=public",
+		"lint:php": "composer lint:php",
 		"zip": "composer zip",
 		"zip:git": "git archive --format zip --output x3p0-ideas.zip master"
 	},

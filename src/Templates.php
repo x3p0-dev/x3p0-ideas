@@ -74,7 +74,7 @@ class Templates implements Bootable
 	 */
 	public function filterBodyClass( array $classes ): array
 	{
-		if ( Helpers::isPagedQueryBlock() && ! in_array( 'paged', $classes ) ) {
+		if ( Helpers::isPagedQueryBlock() && ! in_array( 'paged', $classes, true ) ) {
 			$classes[] = 'paged';
 		}
 

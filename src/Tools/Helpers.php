@@ -32,8 +32,12 @@ class Helpers
 	 */
 	public static function getQueryBlockPage(): int
 	{
-		// Quick check for `query-page`.
+		// Quick check for `query-page`. Ignore nonce warning since we're
+		// not actually processing a form. We're just checking for the
+		// variable and sanitizing it.
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		if ( isset( $_GET['query-page'] ) ) {
+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			return absint( wp_unslash( $_GET['query-page'] ) );
 		}
 
@@ -48,7 +52,7 @@ class Helpers
 		// Queries are based on a specific ID, and there's no surefire
 		// way to know what the query ID might be. So, we're checking
 		// the URL query for the page here.
-		preg_match( "#query-[0-9]\d*-page=([0-9]\d*)#i", $url_query, $matches );
+		preg_match( '#query-[0-9]\d*-page=([0-9]\d*)#i', $url_query, $matches );
 
 		if ( isset( $matches[0], $matches[1] ) ) {
 			return absint( $matches[1] );
