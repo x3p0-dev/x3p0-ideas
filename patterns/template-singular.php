@@ -1,16 +1,18 @@
 <?php
+
 /**
  * Title: Singular Template
  * Slug: x3p0-ideas/template-singular
  * Inserter: no
  * Template Types: attachment, page, single, singular
  */
+
 ?>
 <!-- wp:template-part {"slug":"header","className":"site-header"} /-->
 
 <!-- wp:group {
 	"tagName":"main",
-	"metadata":{"name":"<?= esc_attr__( 'Content', 'x3p0-ideas' ) ?>"},
+	"metadata":{"name":"<?= esc_attr__('Content', 'x3p0-ideas') ?>"},
 	"style":{
 		"spacing":{
 			"padding":{
@@ -25,14 +27,14 @@
 
 	<!-- wp:group {
 		"tagName":"article",
-		"metadata":{"name":"<?= esc_attr__( 'Post', 'x3p0-ideas' ) ?>"},
+		"metadata":{"name":"<?= esc_attr__('Post', 'x3p0-ideas') ?>"},
 		"layout":{"type":"default"}
 	} -->
 	<article class="wp-block-group">
 
 		<!-- wp:group {
 			"tagName":"header",
-			"metadata":{"name":"<?= esc_attr__( 'Post Header', 'x3p0-ideas' ) ?>"},
+			"metadata":{"name":"<?= esc_attr__('Post Header', 'x3p0-ideas') ?>"},
 			"style":{"spacing":{"blockGap":"0"}},
 			"layout":{"type":"constrained"}
 		} -->

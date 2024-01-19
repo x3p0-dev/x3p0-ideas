@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Title: Table of Contents
  * Slug: x3p0-ideas/table-of-contents
@@ -8,9 +9,10 @@
  * Block Types: core/table-of-contents
  * Viewport Width: 640
  */
+
 ?>
 <!-- wp:group {
-	"metadata":{"name":"<?= esc_attr__( 'Table of Contents Container', 'x3p0-ideas' ) ?>"},
+	"metadata":{"name":"<?= esc_attr__('Table of Contents Container', 'x3p0-ideas') ?>"},
 	"style":{
 		"spacing":{
 			"blockGap":"var:preset|spacing|base",
@@ -29,7 +31,7 @@
 
 	<!-- wp:paragraph {"fontFamily":"primary"} -->
 	<p class="has-primary-font-family">
-		<strong><?= esc_html__( 'Table of Contents', 'x3p0-ideas' ) ?></strong>
+		<strong><?= esc_html__('Table of Contents', 'x3p0-ideas') ?></strong>
 	</p>
 	<!-- /wp:paragraph -->
 

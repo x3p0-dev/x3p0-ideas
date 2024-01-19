@@ -7,62 +7,55 @@
 	<arg name="extensions" value="php"/>
 
 	<!-- Exclude files and folders. -->
-	<exclude-pattern>*/(node_modules|public|vendor)/*</exclude-pattern>
+	<exclude-pattern>*/(.notes|node_modules|public|vendor)/*</exclude-pattern>
 
-	<!-- Check PHP compatibility. -->
+	<!--
+	########################################################################
+	Include relevant WordPress rules. We're not using the entire set because
+	many of them conflict with our preferred coding style.
+	########################################################################
+	-->
+	<rule ref="WordPress.CodeAnalysis"/>
+	<rule ref="WordPress.DateTime"/>
+	<rule ref="WordPress.DB"/>
+	<rule ref="WordPress.PHP"/>
+	<rule ref="WordPress.Security"/>
+
+	<!-- This always recommends `wp_remote_get()` when it shouldn't be used. -->
+	<rule ref="WordPress.WP">
+		<exclude name="WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents"/>
+	</rule>
+
+	<!-- Creates too many false-positives in templating files. -->
+	<rule ref="WordPress.WP.GlobalVariablesOverride">
+		<exclude-pattern>*/(patterns|resources\/partials)/*</exclude-pattern>
+	</rule>
+
+	<!--
+	########################################################################
+	Check PHP compatibility.
+	########################################################################
+	-->
 	<rule ref="PHPCompatibilityWP">
 		<include-pattern>*\.php$</include-pattern>
 	</rule>
 
-	<!-- Run against the WordPress Extra ruleset. -->
-	<rule ref="WordPress-Extra">
-		<!-- @todo Review these. -->
-		<exclude name="Generic.CodeAnalysis.AssignmentInCondition"/>
-		<exclude name="Generic.Functions.FunctionCallArgumentSpacing.TooMuchSpaceAfterComma"/>
-		<exclude name="Generic.Classes.OpeningBraceSameLine"/>
-		<exclude name="Generic.Functions.OpeningFunctionBraceKernighanRitchie"/>
-		<exclude name="Generic.WhiteSpace.DisallowSpaceIndent"/>
-		<exclude name="NormalizedArrays.Arrays.ArrayBraceSpacing.SpaceBeforeArrayCloserSingleLine"/>
-		<exclude name="NormalizedArrays.Arrays.CommaAfterLast"/>
-		<exclude name="PEAR.Functions.FunctionCallSignature"/>
-		<exclude name="Squiz.PHP.DisallowMultipleAssignments.Found"/>
-		<exclude name="Squiz.PHP.DisallowMultipleAssignments.FoundInControlStructure"/>
-		<exclude name="Squiz.PHP.EmbeddedPhp.ContentAfterOpen"/>
-		<exclude name="Squiz.PHP.EmbeddedPhp.ContentBeforeOpen"/>
-		<exclude name="Universal.NamingConventions.NoReservedKeywordParameterNames"/>
-		<exclude name="Universal.WhiteSpace.PrecisionAlignment"/>
+	<!--
+	########################################################################
+	Include PSR12 rules.
+	########################################################################
+	-->
+	<rule ref="PSR12">
+		<!-- Tabs forever. -->
+		<exclude name="Generic.WhiteSpace.DisallowTabIndent.TabsUsed"/>
 
-		<!-- Exclude some WordPress sniffs that don't apply. -->
-		<exclude name="WordPress.Files.FileName"/>
-		<exclude name="WordPress.NamingConventions.ValidFunctionName"/>
-		<exclude name="WordPress.NamingConventions.ValidHookName.UseUnderscores"/>
-		<exclude name="WordPress.WP.AlternativeFunctions"/>
-
-		<!--
-		We rely on `.editorconfig` to remove trailing whitespace. This
-		sniff just creates noise in the editor while coding.
-		-->
-		<exclude name="Squiz.WhiteSpace.SuperfluousWhitespace"/>
-
-		<!-- Always allow short array syntax. -->
-		<exclude name="Universal.Arrays.DisallowShortArraySyntax"/>
+		<!-- Disabling line length checks for long strings. -->
+		<exclude name="Generic.Files.LineLength"/>
 	</rule>
 
-	<!--
-	This creates too many false-positives when not actually overriding a
-	global in pattern/partial files.
-	-->
-	<rule ref="WordPress.WP.GlobalVariablesOverride.Prohibited">
+	<!-- Custom spacing used in templating files. -->
+	<rule ref="Squiz.WhiteSpace.ControlStructureSpacing.SpacingAfterOpen">
 		<exclude-pattern>*/(patterns|resources\/partials)/*</exclude-pattern>
 	</rule>
 
-	<!-- Allow short echo tags but not short open tags. -->
-	<rule ref="Generic.PHP.DisallowShortOpenTag.EchoFound">
-		<severity>0</severity>
-	</rule>
-
-	<!-- Allow PHP calls to end without a semicolon for templating. -->
-	<rule ref="Squiz.PHP.EmbeddedPhp.NoSemicolon">
-		<severity>0</severity>
-	</rule>
 </ruleset>

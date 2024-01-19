@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Title: Icon Cards
  * Slug: x3p0-ideas/cards-icon
@@ -6,6 +7,7 @@
  * Keywords: card, grid
  * Viewport Width: 1376
  */
+
 $icons = [
 	'bar-chart',
 	'data-usage',
@@ -17,7 +19,7 @@ $icons = [
 ?>
 <!-- wp:group {
 	"tagName":"section",
-	"metadata":{"name":"<?= esc_attr__( 'Cards Container', 'x3p0-ideas' ) ?>"},
+	"metadata":{"name":"<?= esc_attr__('Cards Container', 'x3p0-ideas') ?>"},
 	"align":"full",
 	"style":{
 		"spacing":{
@@ -36,34 +38,34 @@ $icons = [
 
 	<!-- wp:group {
 		"tagName":"header",
-		"metadata":{"name":"<?= esc_attr__( 'Cards Header', 'x3p0-ideas' ) ?>"},
+		"metadata":{"name":"<?= esc_attr__('Cards Header', 'x3p0-ideas') ?>"},
 		"style":{"spacing":{"blockGap":"var:preset|spacing|base"}},
 		"layout":{"type":"constrained"}
 	} -->
 	<header class="wp-block-group">
 
 		<!-- wp:heading {"textAlign":"center"} -->
-		<h2 class="wp-block-heading has-text-align-center"><?= esc_html__( 'Placeholder Heading', 'x3p0-ideas' ) ?></h2>
+		<h2 class="wp-block-heading has-text-align-center"><?= esc_html__('Placeholder Heading', 'x3p0-ideas') ?></h2>
 		<!-- /wp:heading -->
 
 		<!-- wp:paragraph {"align":"center"} -->
-		<p class="has-text-align-center"><?= esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum turpis quis metus aliquam, id pharetra arcu dignissim. Sed in sollicitudin mi.', 'x3p0-ideas' ) ?></p>
+		<p class="has-text-align-center"><?= esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum turpis quis metus aliquam, id pharetra arcu dignissim. Sed in sollicitudin mi.', 'x3p0-ideas') ?></p>
 		<!-- /wp:paragraph -->
 
 	</header>
 	<!-- /wp:group -->
 
 	<!-- wp:group {
-		"metadata":{"name":"<?= esc_attr__( 'Grid', 'x3p0-ideas' ) ?>"},
+		"metadata":{"name":"<?= esc_attr__('Grid', 'x3p0-ideas') ?>"},
 		"align":"wide",
 		"layout":{"type":"grid","minimumColumnWidth":"16rem"}
 	} -->
 	<div class="wp-block-group alignwide">
 
-		<?php foreach ( $icons as $icon ) : ?>
+		<?php foreach ($icons as $icon) : ?>
 
 			<!-- wp:group {
-				"metadata":{"name":"<?= esc_attr__( 'Card', 'x3p0-ideas' ) ?>"},
+				"metadata":{"name":"<?= esc_attr__('Card', 'x3p0-ideas') ?>"},
 				"style":{
 					"spacing":{
 						"padding":{
@@ -95,16 +97,16 @@ $icons = [
 					"linkDestination":"none"
 				} -->
 				<figure class="wp-block-image size-full is-resized">
-					<img src="<?= esc_url( get_theme_file_uri( "public/media/svg/{$icon}.svg" ) ) ?>" alt="" style="width:48px;height:auto"/>
+					<img src="<?= esc_url(get_theme_file_uri("public/media/svg/{$icon}.svg")) ?>" alt="" style="width:48px;height:auto"/>
 				</figure>
 				<!-- /wp:image -->
 
 				<!-- wp:heading {"fontSize":"xl"} -->
-				<h2 class="wp-block-heading has-xl-font-size"><?= esc_html__( 'Placeholder', 'x3p0-ideas' ) ?></h2>
+				<h2 class="wp-block-heading has-xl-font-size"><?= esc_html__('Placeholder', 'x3p0-ideas') ?></h2>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"fontSize":"sm"} -->
-				<p class="has-sm-font-size"><?= esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'x3p0-ideas' ) ?></p>
+				<p class="has-sm-font-size"><?= esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'x3p0-ideas') ?></p>
 				<!-- /wp:paragraph -->
 
 			</div>

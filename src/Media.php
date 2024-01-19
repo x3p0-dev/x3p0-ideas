@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Media filters and actions.
  *
@@ -44,11 +45,11 @@ class Media implements Bootable
 	 */
 	public function registerImageSizes(): void
 	{
-		add_image_size( 'x3p0-16x9-lg', 2048, 1152, true );
-		add_image_size( 'x3p0-21x9-lg', 2048,  864, true );
-		add_image_size( 'x3p0-9x16-md', 1024, 1820, true );
-		add_image_size( 'x3p0-3x4-md',  1024, 1365, true );
-		add_image_size( 'x3p0-1x1-md',  1024, 1024, true );
+		add_image_size('x3p0-16x9-lg', 2048, 1152, true);
+		add_image_size('x3p0-21x9-lg', 2048, 864, true);
+		add_image_size('x3p0-9x16-md', 1024, 1820, true);
+		add_image_size('x3p0-3x4-md', 1024, 1365, true);
+		add_image_size('x3p0-1x1-md', 1024, 1024, true);
 	}
 
 	/**
@@ -58,13 +59,13 @@ class Media implements Bootable
 	 * @hook  image_size_names_choose
 	 * @since 1.0.0
 	 */
-	public function registerImageSizeNames( array $sizes ): array
+	public function registerImageSizeNames(array $sizes): array
 	{
-		$sizes['x3p0-16x9-lg'] = __( '16:9 (Landscape)', 'x3p0-ideas' );
-		$sizes['x3p0-21x9-lg'] = __( '21:9 (Landscape)', 'x3p0-ideas' );
-		$sizes['x3p0-9x16-md'] = __( '9:16 (Portrait)',  'x3p0-ideas' );
-		$sizes['x3p0-3x4-md']  = __( '3:4 (Portrait)',   'x3p0-ideas' );
-		$sizes['x3p0-1x1-md']  = __( '1:1 (Square)',     'x3p0-ideas' );
+		$sizes['x3p0-16x9-lg'] = __('16:9 (Landscape)', 'x3p0-ideas');
+		$sizes['x3p0-21x9-lg'] = __('21:9 (Landscape)', 'x3p0-ideas');
+		$sizes['x3p0-9x16-md'] = __('9:16 (Portrait)', 'x3p0-ideas');
+		$sizes['x3p0-3x4-md']  = __('3:4 (Portrait)', 'x3p0-ideas');
+		$sizes['x3p0-1x1-md']  = __('1:1 (Square)', 'x3p0-ideas');
 
 		return $sizes;
 	}
@@ -75,7 +76,7 @@ class Media implements Bootable
 	 * @hook  big_image_size_threshold 5
 	 * @since 1.0.0
 	 */
-	public function filterBigImageThreshold( int $threshold ): int
+	public function filterBigImageThreshold(int $threshold): int
 	{
 		return self::THRESHOLD_WIDTH > $threshold
 		       ? self::THRESHOLD_WIDTH
@@ -88,7 +89,7 @@ class Media implements Bootable
 	 * @hook  post_thumbnail_size 5
 	 * @since 1.0.0
 	 */
-	public function filterPostThumbnailSize( string $size ): string
+	public function filterPostThumbnailSize(string $size): string
 	{
 		return 'post-thumbnail' === $size ? 'x3p0-16x9-lg' : $size;
 	}

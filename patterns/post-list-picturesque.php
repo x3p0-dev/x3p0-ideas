@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Title: Post List: Picturesque
  * Slug: x3p0-ideas/post-list-picturesque
@@ -8,9 +9,10 @@
  * Block Types: core/query
  * Viewport Width: 1152
  */
+
 ?>
 <!-- wp:query {
-	"metadata":{"name":"<?= esc_attr__( 'Posts Query', 'x3p0-ideas' ) ?>"},
+	"metadata":{"name":"<?= esc_attr__('Posts Query', 'x3p0-ideas') ?>"},
 	"queryId":0,
 	"query":{
 		"perPage":"3",
@@ -31,7 +33,7 @@
 <div class="wp-block-query alignfull">
 
 	<!-- wp:group {
-		"metadata":{"name":"<?= esc_attr__( 'Posts Container', 'x3p0-ideas' ) ?>"},
+		"metadata":{"name":"<?= esc_attr__('Posts Container', 'x3p0-ideas') ?>"},
 		"align":"full",
 		"style":{
 			"spacing":{
@@ -56,7 +58,7 @@
 
 			<!-- wp:group {
 				"tagName":"article",
-				"metadata":{"name":"<?= esc_attr__( 'Post', 'x3p0-ideas' ) ?>"},
+				"metadata":{"name":"<?= esc_attr__('Post', 'x3p0-ideas') ?>"},
 				"align":"wide",
 				"layout":{"type":"constrained"}
 			} -->
@@ -79,7 +81,7 @@
 				} /-->
 
 				<!-- wp:group {
-					"metadata":{"name":"<?= esc_attr__( 'Post Container', 'x3p0-ideas' ) ?>"},
+					"metadata":{"name":"<?= esc_attr__('Post Container', 'x3p0-ideas') ?>"},
 					"align":"wide",
 					"style":{"spacing":{"blockGap":"var:preset|spacing|base"}},
 					"layout":{"type":"constrained","justifyContent":"center"}
@@ -88,7 +90,7 @@
 
 					<!-- wp:group {
 						"tagName":"header",
-						"metadata":{"name":"<?= esc_attr__( 'Post Header', 'x3p0-ideas' ) ?>"},
+						"metadata":{"name":"<?= esc_attr__('Post Header', 'x3p0-ideas') ?>"},
 						"align":"wide",
 						"style":{"spacing":{"blockGap":"var:preset|spacing|minus-3"}},
 						"layout":{"type":"constrained"}
@@ -96,7 +98,7 @@
 					<header class="wp-block-group alignwide">
 
 						<!-- wp:group {
-							"metadata":{"name":"<?= esc_attr__( 'Post Meta', 'x3p0-ideas' ) ?>"},
+							"metadata":{"name":"<?= esc_attr__('Post Meta', 'x3p0-ideas') ?>"},
 							"style":{
 								"spacing":{
 									"blockGap":"var:preset|spacing|minus-2"
@@ -120,7 +122,7 @@
 					<!-- /wp:group -->
 
 					<!-- wp:post-excerpt {
-						"moreText":"<?= esc_attr__( 'Continue reading →', 'x3p0-ideas' ) ?>",
+						"moreText":"<?= esc_attr__('Continue reading →', 'x3p0-ideas') ?>",
 						"showMoreOnNewLine":false,
 						"excerptLength":35
 					} /-->

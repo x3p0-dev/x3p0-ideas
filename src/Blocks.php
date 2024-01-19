@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Block-related filters.
  *
@@ -33,7 +34,7 @@ class Blocks implements Bootable
 	 *
 	 * @since 1.0.0
 	 */
-	public function __construct( BlockRules $rules )
+	public function __construct(BlockRules $rules)
 	{
 		$this->rules = $rules;
 	}
@@ -59,9 +60,9 @@ class Blocks implements Bootable
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/render_block_data/
 	 */
-	public function renderCoreQueryData( array $parsed_block ): array
+	public function renderCoreQueryData(array $parsed_block): array
 	{
-		if ( 'core/query' === $parsed_block['blockName'] ) {
+		if ('core/query' === $parsed_block['blockName']) {
 			$parsed_block['attrs']['enhancedPagination'] = false;
 		}
 
@@ -79,7 +80,7 @@ class Blocks implements Bootable
 		string $block_content,
 		array $block
 	): string {
-		return $this->rules->isPublic( $block ) ? $block_content : '';
+		return $this->rules->isPublic($block) ? $block_content : '';
 	}
 
 	/**
@@ -93,7 +94,7 @@ class Blocks implements Bootable
 		string $block_content,
 		array $block
 	): string {
-		if ( 'core/calendar' !== $block['blockName'] ) {
+		if ('core/calendar' !== $block['blockName']) {
 			return $block_content;
 		}
 
@@ -120,18 +121,18 @@ class Blocks implements Bootable
 		// the attachment page for this specific post.
 		if (
 			'core/post-content' !== $block['blockName']
-			|| empty( $instance->context['postId'] )
-			|| ! is_attachment( $instance->context['postId'] )
+			|| empty($instance->context['postId'])
+			|| ! is_attachment($instance->context['postId'])
 		) {
 			return $block_content;
 		}
 
 		// Set up the args to pass to the partial.
-		$args = [ 'post_id' => absint( $instance->context['postId'] ) ];
+		$args = [ 'post_id' => absint($instance->context['postId']) ];
 
 		// Get the attachment media and metadata markup.
-		$media = $this->renderAttachmentPartial( 'media', $args );
-		$meta  = $this->renderAttachmentPartial( 'meta',  $args );
+		$media = $this->renderAttachmentPartial('media', $args);
+		$meta  = $this->renderAttachmentPartial('meta', $args);
 
 		return $media . $block_content . $meta;
 	}
@@ -141,14 +142,14 @@ class Blocks implements Bootable
 	 *
 	 * @since 1.0.0
 	 */
-	private function renderAttachmentPartial( string $name, array $args = [] ): string
+	private function renderAttachmentPartial(string $name, array $args = []): string
 	{
 		$partials = [];
 
 		// Checks if the attachment is one of supported types and sets
 		// the filename based on that type.
-		foreach ( [ 'image', 'video', 'audio', 'pdf' ] as $type ) {
-			if ( wp_attachment_is( $type, $args['post_id'] ) ) {
+		foreach ([ 'image', 'video', 'audio', 'pdf' ] as $type) {
+			if (wp_attachment_is($type, $args['post_id'])) {
 				$partials[] = "public/partials/attachment-{$name}-{$type}.php";
 				break;
 			}
@@ -157,7 +158,7 @@ class Blocks implements Bootable
 		// Add fallback partial template.
 		$partials[] = "public/partials/attachment-{$name}.php";
 
-		return $this->renderPartial( $partials, $args );
+		return $this->renderPartial($partials, $args);
 	}
 
 	/**
@@ -166,19 +167,19 @@ class Blocks implements Bootable
 	 * @since 1.0.0
 	 * @todo  Move this to a separate class.
 	 */
-	private function renderPartial( array $partials, array $args = [] ): string
+	private function renderPartial(array $partials, array $args = []): string
 	{
 		$html = '';
 
 		// Gets a partial (essentially a dynamic pattern) based on the
 		// attachment type. Must be valid block content.
 		ob_start();
-		locate_template( $partials, true, false, $args );
+		locate_template($partials, true, false, $args);
 		$media = ob_get_clean();
 
 		// Parse and render the blocks.
-		foreach ( parse_blocks( $media ) as $media_block ) {
-			$html .= render_block( $media_block );
+		foreach (parse_blocks($media) as $media_block) {
+			$html .= render_block($media_block);
 		}
 
 		return $html;

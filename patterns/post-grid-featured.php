@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Title: Post Grid: Featured
  * Slug: x3p0-ideas/post-grid-featured
@@ -8,10 +9,11 @@
  * Block Types: core/query
  * Viewport Width: 1376
  */
-$columns = get_option( 'posts_per_page' ) % 4 === 1 ? 4 : 3; ?>
+
+$columns = get_option('posts_per_page') % 4 === 1 ? 4 : 3; ?>
 
 <!-- wp:query {
-	"metadata":{"name":"<?= esc_attr__( 'Posts Query', 'x3p0-ideas' ) ?>"},
+	"metadata":{"name":"<?= esc_attr__('Posts Query', 'x3p0-ideas') ?>"},
 	"queryId":0,
 	"query":{
 		"perPage":5,
@@ -32,7 +34,7 @@ $columns = get_option( 'posts_per_page' ) % 4 === 1 ? 4 : 3; ?>
 <div class="wp-block-query alignfull">
 
 	<!-- wp:group {
-		"metadata":{"name":"<?= esc_attr__( 'Posts Container', 'x3p0-ideas' ) ?>"},
+		"metadata":{"name":"<?= esc_attr__('Posts Container', 'x3p0-ideas') ?>"},
 		"align":"full",
 		"style":{
 			"spacing":{
@@ -54,13 +56,13 @@ $columns = get_option( 'posts_per_page' ) % 4 === 1 ? 4 : 3; ?>
 			"className":"is-style-featured-col-span-all",
 			"layout":{
 				"type":"grid",
-				"columnCount":<?= absint( $columns ) ?>
+				"columnCount":<?= absint($columns) ?>
 			}
 		} -->
 
 			<!-- wp:group {
 				"tagName":"article",
-				"metadata":{"name":"<?= esc_attr__( 'Post', 'x3p0-ideas' ) ?>"},
+				"metadata":{"name":"<?= esc_attr__('Post', 'x3p0-ideas') ?>"},
 				"layout":{"type":"default"}
 			} -->
 			<article class="wp-block-group">
@@ -92,7 +94,7 @@ $columns = get_option( 'posts_per_page' ) % 4 === 1 ? 4 : 3; ?>
 					<div class="wp-block-cover__inner-container">
 
 						<!-- wp:group {
-							"metadata":{"name":"<?= esc_attr__( 'Post Meta', 'x3p0-ideas' ) ?>"},
+							"metadata":{"name":"<?= esc_attr__('Post Meta', 'x3p0-ideas') ?>"},
 							"layout":{
 								"type":"flex",
 								"flexWrap":"nowrap",
@@ -107,7 +109,7 @@ $columns = get_option( 'posts_per_page' ) % 4 === 1 ? 4 : 3; ?>
 							} /-->
 
 							<!-- wp:group {
-								"metadata":{"name":"<?= esc_attr__( 'Post Date', 'x3p0-ideas' ) ?>"},
+								"metadata":{"name":"<?= esc_attr__('Post Date', 'x3p0-ideas') ?>"},
 								"style":{"spacing":{"blockGap":"0"}},
 								"layout":{
 									"type":"flex",
@@ -141,7 +143,7 @@ $columns = get_option( 'posts_per_page' ) % 4 === 1 ? 4 : 3; ?>
 
 						<!-- wp:group {
 							"tagName":"header",
-							"metadata":{"name":"<?= esc_attr__( 'Post Header', 'x3p0-ideas' ) ?>"},
+							"metadata":{"name":"<?= esc_attr__('Post Header', 'x3p0-ideas') ?>"},
 							"style":{"spacing":{"blockGap":"0"}},
 							"layout":{"type":"default"}
 						} -->

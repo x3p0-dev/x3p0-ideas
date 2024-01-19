@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Title: Small Vertical Profile Cards
  * Slug: x3p0-ideas/cards-profile-stack-small
@@ -6,10 +7,11 @@
  * Keywords: card, grid, profile, team
  * Viewport Width: 1376
  */
+
 ?>
 <!-- wp:group {
 	"tagName":"section",
-	"metadata":{"name":"<?= esc_attr__( 'Cards Container', 'x3p0-ideas' ) ?>"},
+	"metadata":{"name":"<?= esc_attr__('Cards Container', 'x3p0-ideas') ?>"},
 	"align":"full",
 	"style":{
 		"spacing":{
@@ -28,32 +30,32 @@
 
 	<!-- wp:group {
 		"tagName":"header",
-		"metadata":{"name":"<?= esc_attr__( 'Cards Header', 'x3p0-ideas' ) ?>"},
+		"metadata":{"name":"<?= esc_attr__('Cards Header', 'x3p0-ideas') ?>"},
 		"style":{"spacing":{"blockGap":"var:preset|spacing|base"}},
 		"layout":{"type":"constrained"}
 	} -->
 	<header class="wp-block-group">
 		<!-- wp:heading {"textAlign":"center"} -->
-		<h2 class="wp-block-heading has-text-align-center"><?= esc_html__( 'Placeholder Heading', 'x3p0-ideas' ) ?></h2>
+		<h2 class="wp-block-heading has-text-align-center"><?= esc_html__('Placeholder Heading', 'x3p0-ideas') ?></h2>
 		<!-- /wp:heading -->
 
 		<!-- wp:paragraph {"align":"center"} -->
-		<p class="has-text-align-center"><?= esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum turpis quis metus aliquam, id pharetra arcu dignissim. Sed in sollicitudin mi.', 'x3p0-ideas' ) ?></p>
+		<p class="has-text-align-center"><?= esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum turpis quis metus aliquam, id pharetra arcu dignissim. Sed in sollicitudin mi.', 'x3p0-ideas') ?></p>
 		<!-- /wp:paragraph -->
 	</header>
 	<!-- /wp:group -->
 
 	<!-- wp:group {
-		"metadata":{"name":"<?= esc_attr__( 'Grid', 'x3p0-ideas' ) ?>"},
+		"metadata":{"name":"<?= esc_attr__('Grid', 'x3p0-ideas') ?>"},
 		"align":"wide",
 		"layout":{"type":"grid","minimumColumnWidth":"16rem"}
 	} -->
 	<div class="wp-block-group alignwide">
 
-		<?php foreach ( range( 1, 6 ) as $card ) : ?>
+		<?php foreach (range(1, 6) as $card) : ?>
 
 			<!-- wp:group {
-				"metadata":{"name":"<?= esc_attr__( 'Card', 'x3p0-ideas' ) ?>"},
+				"metadata":{"name":"<?= esc_attr__('Card', 'x3p0-ideas') ?>"},
 				"style":{
 					"spacing":{
 						"padding":{
@@ -90,7 +92,7 @@
 				} /-->
 
 				<!-- wp:group {
-					"metadata":{"name":"<?= esc_attr__( 'Card Content', 'x3p0-ideas' ) ?>"},
+					"metadata":{"name":"<?= esc_attr__('Card Content', 'x3p0-ideas') ?>"},
 					"style":{"spacing":{"blockGap":"0"}},
 					"layout":{"type":"default"}
 				} -->
@@ -102,11 +104,11 @@
 						"textColor":"contrast",
 						"fontSize":"lg"
 					} -->
-					<h3 class="wp-block-heading has-text-align-center has-contrast-color has-text-color has-lg-font-size"><?= esc_html__( 'User Name', 'x3p0-ideas' ) ?></h3>
+					<h3 class="wp-block-heading has-text-align-center has-contrast-color has-text-color has-lg-font-size"><?= esc_html__('User Name', 'x3p0-ideas') ?></h3>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph {"align":"center"} -->
-					<p class="has-text-align-center"><?= esc_html__( 'Placeholder Text', 'x3p0-ideas' ) ?></p>
+					<p class="has-text-align-center"><?= esc_html__('Placeholder Text', 'x3p0-ideas') ?></p>
 					<!-- /wp:paragraph -->
 
 				</div>

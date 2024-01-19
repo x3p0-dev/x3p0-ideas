@@ -1,16 +1,18 @@
 <?php
+
 /**
  * Title: Single Template
  * Slug: x3p0-ideas/template-single
  * Inserter: no
  * Template Types: attachment, page, single, singular
  */
+
 ?>
 <!-- wp:template-part {"slug":"header","className":"site-header"} /-->
 
 <!-- wp:group {
 	"tagName":"main",
-	"metadata":{"name":"<?= esc_attr__( 'Content', 'x3p0-ideas' ) ?>"},
+	"metadata":{"name":"<?= esc_attr__('Content', 'x3p0-ideas') ?>"},
 	"style":{
 		"spacing":{
 			"padding":{
@@ -24,7 +26,7 @@
 <main class="wp-block-group" style="padding-top:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3)">
 
 	<!-- wp:group {
-		"metadata":{"name":"<?= esc_attr__( 'Post', 'x3p0-ideas' ) ?>"},
+		"metadata":{"name":"<?= esc_attr__('Post', 'x3p0-ideas') ?>"},
 		"tagName":"article",
 		"layout":{"type":"default"}
 	} -->
@@ -32,7 +34,7 @@
 
 		<!-- wp:group {
 			"tagName":"header",
-			"metadata":{"name":"<?= esc_attr__( 'Post Header', 'x3p0-ideas' ) ?>"},
+			"metadata":{"name":"<?= esc_attr__('Post Header', 'x3p0-ideas') ?>"},
 			"style":{"spacing":{"blockGap":"0"}},
 			"layout":{"type":"constrained"}
 		} -->
@@ -60,7 +62,7 @@
 
 		<!-- wp:group {
 			"tagName":"footer",
-			"metadata":{"name":"<?= esc_attr__( 'Post Footer', 'x3p0-ideas' ) ?>"},
+			"metadata":{"name":"<?= esc_attr__('Post Footer', 'x3p0-ideas') ?>"},
 			"layout":{"type":"constrained"},
 			"fontFamily":"tertiary"
 		} -->

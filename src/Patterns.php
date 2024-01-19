@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The Block Patterns class is responsible for registering block pattern
  * categories and block patterns. However, it's recommended to register patterns
@@ -45,7 +46,7 @@ class Patterns implements Bootable
 	 *
 	 * @since 1.0.0
 	 */
-	public function __construct( WP_Block_Type_Registry $block_types )
+	public function __construct(WP_Block_Type_Registry $block_types)
 	{
 		$this->block_types = $block_types;
 	}
@@ -69,7 +70,7 @@ class Patterns implements Bootable
 	 */
 	public function themeSupport(): void
 	{
-		remove_theme_support( 'core-block-patterns' );
+		remove_theme_support('core-block-patterns');
 	}
 
 	/**
@@ -83,10 +84,10 @@ class Patterns implements Bootable
 	 */
 	public function registerCategories(): void
 	{
-		register_block_pattern_category( 'x3p0-grid', [
-			'label'       => __( 'Grid', 'x3p0-ideas' ),
-			'description' => __( 'A variety of designs that group items in a grid layout.', 'x3p0-ideas' )
-		] );
+		register_block_pattern_category('x3p0-grid', [
+			'label'       => __('Grid', 'x3p0-ideas'),
+			'description' => __('A variety of designs that group items in a grid layout.', 'x3p0-ideas')
+		]);
 	}
 
 	/**
@@ -99,11 +100,9 @@ class Patterns implements Bootable
 	 */
 	public function unregisterPatterns(): void
 	{
-		foreach ( self::CONDITIONAL_PATTERNS as $block => $patterns ) {
-			foreach ( $patterns as $pattern ) {
-				if ( ! $this->block_types->is_registered( $block ) ) {
-					unregister_block_pattern( $pattern );
-				}
+		foreach (self::CONDITIONAL_PATTERNS as $block => $patterns) {
+			if (! $this->block_types->is_registered($block)) {
+				array_map('unregister_block_pattern', $patterns);
 			}
 		}
 	}

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Dynamic pattern for handling image attachment media.
  *
@@ -8,19 +9,19 @@
  * @link      https://github.com/x3p0-dev/x3p0-ideas
  */
 
-$caption = wp_get_attachment_caption( $args['post_id'] );
-$image   = wp_get_attachment_image_src( $args['post_id'], 'x3p0-16x9-lg' );
-$alt     = trim( strip_tags( get_post_meta( $args['post_id'], '_wp_attachment_image_alt', true ) ) );
+$caption = wp_get_attachment_caption($args['post_id']);
+$image   = wp_get_attachment_image_src($args['post_id'], 'x3p0-16x9-lg');
+$alt     = trim(wp_strip_all_tags(get_post_meta($args['post_id'], '_wp_attachment_image_alt', true)));
 ?>
 <!-- wp:group {"align":"full","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull">
 
-	<!-- wp:image {"align":"wide","id":<?= absint( $args['post_id'] ) ?>,"sizeSlug":"x3p0-16x9-lg","linkDestination":"none"} -->
+	<!-- wp:image {"align":"wide","id":<?= absint($args['post_id']) ?>,"sizeSlug":"x3p0-16x9-lg","linkDestination":"none"} -->
 	<figure class="wp-block-image alignwide size-x3p0-16x9-lg">
-		<img src="<?= esc_url( $image[0] ) ?>" alt="<?= esc_attr( $alt ) ?>" />
+		<img src="<?= esc_url($image[0]) ?>" alt="<?= esc_attr($alt) ?>" />
 
-		<?php if ( $caption ) : ?>
-			<figcaption class="wp-element-caption"><?= esc_html( $caption ) ?></figcaption>
+		<?php if ($caption) : ?>
+			<figcaption class="wp-element-caption"><?= esc_html($caption) ?></figcaption>
 		<?php endif ?>
 	</figure>
 	<!-- /wp:image -->

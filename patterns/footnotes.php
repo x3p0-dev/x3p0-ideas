@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Title: Footnotes
  * Slug: x3p0-ideas/footnotes
@@ -8,16 +9,17 @@
  * Block Types: core/footnotes
  * Viewport Width: 640
  */
+
 ?>
 <!-- wp:group {
-	"metadata":{"name":"<?= esc_attr__( 'Footnotes Container', 'x3p0-ideas' ) ?>"},
+	"metadata":{"name":"<?= esc_attr__('Footnotes Container', 'x3p0-ideas') ?>"},
 	"style":{"spacing":{"blockGap":"var:preset|spacing|base"}},
 	"className":"has-color-var-neutral",
 	"layout":{"type":"constrained"}
 } -->
 <div class="wp-block-group has-color-var-neutral">
 	<!-- wp:paragraph -->
-		<p><strong><?php esc_html_e( 'Footnotes', 'x3p0-ideas' ) ?></strong></p>
+		<p><strong><?php esc_html_e('Footnotes', 'x3p0-ideas') ?></strong></p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:footnotes {"className":"is-style-pull"} /-->

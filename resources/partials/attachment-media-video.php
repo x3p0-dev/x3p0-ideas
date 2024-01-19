@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Dynamic pattern for handling video attachment media.
  *
@@ -8,18 +9,18 @@
  * @link      https://github.com/x3p0-dev/x3p0-ideas
  */
 
-$caption = wp_get_attachment_caption( $args['post_id'] );
-$src     = wp_get_attachment_url( $args['post_id'] );
+$caption = wp_get_attachment_caption($args['post_id']);
+$src     = wp_get_attachment_url($args['post_id']);
 ?>
 <!-- wp:group {"align":"full","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull">
 
 	<!-- wp:video {"align":"wide"} -->
 	<figure class="wp-block-video alignwide">
-		<video controls muted src="<?= esc_url( $src ) ?>"></video>
+		<video controls muted src="<?= esc_url($src) ?>"></video>
 
-		<?php if ( $caption ) : ?>
-			<figcaption class="wp-element-caption"><?= esc_html( $caption ) ?></figcaption>
+		<?php if ($caption) : ?>
+			<figcaption class="wp-element-caption"><?= esc_html($caption) ?></figcaption>
 		<?php endif ?>
 	</figure>
 	<!-- /wp:video -->

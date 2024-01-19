@@ -1,23 +1,25 @@
 <?php
+
 /**
  * Title: Archive Template
  * Slug: x3p0-ideas/template-archive
  * Inserter: no
  * Template Types: archive, author, category, date, tag, taxonomy
  */
+
 ?>
 <!-- wp:template-part {"slug":"header","className":"site-header"} /-->
 
 <!-- wp:group {
 	"tagName":"main",
-	"metadata":{"name":"<?= esc_attr__( 'Content', 'x3p0-ideas' ) ?>"},
+	"metadata":{"name":"<?= esc_attr__('Content', 'x3p0-ideas') ?>"},
 	"style":{"spacing":{"blockGap":"0"}},
 	"layout":{"type":"constrained"}
 } -->
 <main class="wp-block-group">
 
 	<!-- wp:group {
-		"metadata":{"name":"<?= esc_attr__( 'Archive Header', 'x3p0-ideas' ) ?>"},
+		"metadata":{"name":"<?= esc_attr__('Archive Header', 'x3p0-ideas') ?>"},
 		"align":"full",
 		"style":{
 			"spacing":{

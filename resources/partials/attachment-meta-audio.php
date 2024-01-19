@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Dynamic pattern for handling audio attachment meta.
  *
@@ -7,20 +8,21 @@
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPL-3.0-or-later
  * @link      https://github.com/x3p0-dev/x3p0-ideas
  */
+
 use X3P0\Ideas\Tools\MediaMeta;
 
-$meta = new MediaMeta( $args['post_id'] );
-$url  = wp_get_attachment_url( $args['post_id'] );
+$meta = new MediaMeta($args['post_id']);
+$url  = wp_get_attachment_url($args['post_id']);
 
 $fields = [
-	'length_formatted' => __( 'Run Time:', 'x3p0-ideas' ),
-	'artist'           => __( 'Artist:', 'x3p0-ideas' ),
-	'album'            => __( 'Album:', 'x3p0-ideas' ),
-	'track_number'     => __( 'Track:', 'x3p0-ideas' ),
-	'year'             => __( 'Year:', 'x3p0-ideas' ),
-	'genre'            => __( 'Genre:', 'x3p0-ideas' ),
-	'mime_type'        => __( 'Mime Type:', 'x3p0-ideas' ),
-	'file_size'        => __( 'Size:', 'x3p0-ideas' )
+	'length_formatted' => __('Run Time:', 'x3p0-ideas'),
+	'artist'           => __('Artist:', 'x3p0-ideas'),
+	'album'            => __('Album:', 'x3p0-ideas'),
+	'track_number'     => __('Track:', 'x3p0-ideas'),
+	'year'             => __('Year:', 'x3p0-ideas'),
+	'genre'            => __('Genre:', 'x3p0-ideas'),
+	'mime_type'        => __('Mime Type:', 'x3p0-ideas'),
+	'file_size'        => __('Size:', 'x3p0-ideas')
 ];
 ?>
 <!-- wp:group {
@@ -31,7 +33,7 @@ $fields = [
 <div class="wp-block-group alignfull">
 
 	<!-- wp:heading {"className":"screen-reader-text"} -->
-	<h2 class="wp-block-heading screen-reader-text"><?= esc_html__( 'Audio Data', 'x3p0-ideas' ) ?></h2>
+	<h2 class="wp-block-heading screen-reader-text"><?= esc_html__('Audio Data', 'x3p0-ideas') ?></h2>
 	<!-- /wp:heading -->
 
 	<!-- wp:group {
@@ -40,9 +42,9 @@ $fields = [
 	} -->
 	<div class="wp-block-group">
 
-		<?php foreach ( $fields as $key => $label ) : ?>
+		<?php foreach ($fields as $key => $label) : ?>
 
-			<?php if ( $meta->has( $key ) ) : ?>
+			<?php if ($meta->has($key)) : ?>
 
 				<!-- wp:group {
 					"style":{
@@ -70,14 +72,14 @@ $fields = [
 						},
 						"fontSize":"sm"
 					} -->
-					<p class="has-sm-font-size" style="font-style:normal;font-weight:500"><?= esc_html( $label ) ?></p>
+					<p class="has-sm-font-size" style="font-style:normal;font-weight:500"><?= esc_html($label) ?></p>
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph {
 						"fontSize":"xs",
 						"fontFamily":"mono"
 					} -->
-					<p class="has-mono-font-family has-xs-font-size"><?php $meta->display( $key ) ?></p>
+					<p class="has-mono-font-family has-xs-font-size"><?php $meta->display($key) ?></p>
 					<!-- /wp:paragraph -->
 
 				</div>
@@ -93,8 +95,8 @@ $fields = [
 	<!-- wp:group {"layout":{"type":"default"},"fontSize":"sm"} -->
 	<div class="wp-block-group has-sm-font-size">
 		<!-- wp:file {
-			"id":<?= absint( $args['post_id'] ) ?>,
-			"href":"<?= esc_url( $url ) ?>",
+			"id":<?= absint($args['post_id']) ?>,
+			"href":"<?= esc_url($url) ?>",
 			"showDownloadButton":false,
 			"style":{
 				"spacing":{
@@ -109,7 +111,7 @@ $fields = [
 			"className":"is-style-icon"
 		} -->
 		<div class="wp-block-file is-style-icon" style="padding-top:var(--wp--preset--spacing--minus-1);padding-right:var(--wp--preset--spacing--base);padding-bottom:var(--wp--preset--spacing--minus-1);padding-left:var(--wp--preset--spacing--base)">
-			<a href="<?= esc_url( $url ) ?>"><?= esc_html__( 'Download', 'x3p0-ideas' ) ?></a>
+			<a href="<?= esc_url($url) ?>"><?= esc_html__('Download', 'x3p0-ideas') ?></a>
 		</div>
 		<!-- /wp:file -->
 

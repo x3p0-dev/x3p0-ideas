@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Title: Comments: Default
  * Slug: x3p0-ideas/comments-default
@@ -7,6 +8,7 @@
  * Block Types: core/comments
  * Viewport Width: 1376
  */
+
 ?>
 <!-- wp:comments {
 	"tagName":"section",
@@ -15,7 +17,7 @@
 <section class="wp-block-comments" style="padding-top:var(--wp--preset--spacing--plus-3)">
 
 	<!-- wp:group {
-		"metadata":{"name":"<?= esc_attr__( 'Comments Container', 'x3p0-ideas' ) ?>"},
+		"metadata":{"name":"<?= esc_attr__('Comments Container', 'x3p0-ideas') ?>"},
 		"layout":{"type":"constrained"}
 	} -->
 	<div class="wp-block-group">
@@ -28,14 +30,14 @@
 
 			<!-- wp:group {
 				"tagName":"article",
-				"metadata":{"name":"<?= esc_attr__( 'Comment', 'x3p0-ideas' ) ?>"},
+				"metadata":{"name":"<?= esc_attr__('Comment', 'x3p0-ideas') ?>"},
 				"layout":{"type":"default"}
 			} -->
 			<article class="wp-block-group">
 
 				<!-- wp:group {
 					"tagName":"header",
-					"metadata":{"name":"<?= esc_attr__( 'Comment Header', 'x3p0-ideas' ) ?>"},
+					"metadata":{"name":"<?= esc_attr__('Comment Header', 'x3p0-ideas') ?>"},
 					"style":{"spacing":{"blockGap":"var:preset|spacing|base"}},
 					"layout":{"type":"flex","flexWrap":"nowrap"},
 					"fontSize":"sm"
@@ -53,7 +55,7 @@
 					} /-->
 
 					<!-- wp:group {
-						"metadata":{"name":"<?= esc_attr__( 'Comment Meta', 'x3p0-ideas' ) ?>"},
+						"metadata":{"name":"<?= esc_attr__('Comment Meta', 'x3p0-ideas') ?>"},
 						"layout":{"type":"default"}
 					} -->
 					<div class="wp-block-group">
@@ -85,7 +87,7 @@
 
 				<!-- wp:group {
 					"tagName":"footer",
-					"metadata":{"name":"<?= esc_attr__( 'Comment Footer', 'x3p0-ideas' ) ?>"},
+					"metadata":{"name":"<?= esc_attr__('Comment Footer', 'x3p0-ideas') ?>"},
 					"style":{"spacing":{"blockGap":"var:preset|spacing|minus-2"}},
 					"layout":{
 						"type":"flex",

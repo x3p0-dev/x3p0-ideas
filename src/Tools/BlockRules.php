@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Block rules are instructions for how to handle the front-end output of a
  * block. This is done via a limited set of rules that conditionally decide
@@ -36,15 +37,15 @@ class BlockRules
 	 *
 	 * @since 1.0.0
 	 */
-	public function isPublic( array $block ): bool
+	public function isPublic(array $block): bool
 	{
-		foreach ( self::RULE_METHODS as $rule => $method ) {
-			if ( isset( $block['attrs'][ $rule ] ) ) {
+		foreach (self::RULE_METHODS as $rule => $method) {
+			if (isset($block['attrs'][ $rule ])) {
 				$value = $block['attrs'][ $rule ];
 
-				return is_array( $value )
-				       ? $this->$method( array_map( 'wp_strip_all_tags', $value ) )
-				       : $this->$method( wp_strip_all_tags( $value ) );
+				return is_array($value)
+				       ? $this->$method(array_map('wp_strip_all_tags', $value))
+				       : $this->$method(wp_strip_all_tags($value));
 			}
 		}
 
@@ -57,10 +58,10 @@ class BlockRules
 	 * @since 1.0.0
 	 * @param string|array $condition
 	 */
-	protected function checkIf( $condition ): bool
+	protected function checkIf($condition): bool
 	{
-		$callable = is_callable( $condition, false, $callback );
-		return $callable ? boolval( $callback() ) : true;
+		$callable = is_callable($condition, false, $callback);
+		return $callable ? boolval($callback()) : true;
 	}
 
 	/**
@@ -69,10 +70,10 @@ class BlockRules
 	 * @since 1.0.0
 	 * @param string|array $condition
 	 */
-	protected function checkUnless( $condition ): bool
+	protected function checkUnless($condition): bool
 	{
-		$callable = is_callable( $condition, false, $callback );
-		return $callable ? ! boolval( $callback() ) : true;
+		$callable = is_callable($condition, false, $callback);
+		return $callable ? ! boolval($callback()) : true;
 	}
 
 	/**
@@ -81,7 +82,7 @@ class BlockRules
 	 * @since 1.0.0
 	 * @param string|int|bool $user
 	 */
-	protected function checkUser( $user ): bool
+	protected function checkUser($user): bool
 	{
 		$logged_in = is_user_logged_in();
 
@@ -89,16 +90,16 @@ class BlockRules
 		// logged-in status. `false` for not logged in. `true` for
 		// logged in. For all other scenarios, the user must be logged
 		// in, so return `false` if they are not.
-		if ( is_bool( $user ) ) {
+		if (is_bool($user)) {
 			return false === $user ? ! $logged_in : $logged_in;
-		} elseif ( ! $logged_in ) {
+		} elseif (! $logged_in) {
 			return false;
 		}
 
 		$current_user = wp_get_current_user();
 
-		return is_numeric( $user )
-		       ? absint( $user ) === $current_user->ID
-		       : $user === $current_user->get( 'user_nicename' );
+		return is_numeric($user)
+		       ? absint($user) === $current_user->ID
+		       : $user === $current_user->get('user_nicename');
 	}
 }

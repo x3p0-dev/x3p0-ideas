@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Title: Gallery: Seamless
  * Slug: x3p0-ideas/gallery-seamless
@@ -8,7 +9,8 @@
  * Block Types: core/gallery
  * Viewport Width: 1376
  */
-$image = get_theme_file_uri( 'public/media/images/default-9x16.webp' );
+
+$image = get_theme_file_uri('public/media/images/default-9x16.webp');
 ?>
 <!-- wp:gallery {
 	"linkTo":"none",
@@ -18,7 +20,7 @@ $image = get_theme_file_uri( 'public/media/images/default-9x16.webp' );
 } -->
 <figure class="wp-block-gallery alignwide has-nested-images columns-default is-cropped">
 
-	<?php foreach ( range( 1, 3 ) as $number ) : ?>
+	<?php foreach (range(1, 3) as $number) : ?>
 
 		<!-- wp:image {
 			"sizeSlug":"x3p0-9x16-md",
@@ -26,7 +28,7 @@ $image = get_theme_file_uri( 'public/media/images/default-9x16.webp' );
 			"style":{"border":{"radius":"0px"}}
 		} -->
 		<figure class="wp-block-image size-x3p0-9x16-md has-custom-border">
-			<img src="<?= esc_url( $image ) ?>" alt="" style="border-radius:0px"/>
+			<img src="<?= esc_url($image) ?>" alt="" style="border-radius:0px"/>
 		</figure>
 		<!-- /wp:image -->
 

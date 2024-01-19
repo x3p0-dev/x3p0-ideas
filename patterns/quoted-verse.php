@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Title: Quoted Verse (Poetry)
  * Slug: x3p0-ideas/quoted-verse
@@ -8,6 +9,7 @@
  * Keywords: quote, poetry, verse
  * Viewport Width: 1024
  */
+
 ?>
 <!-- wp:quote {"className":"is-style-plain"} -->
 <blockquote class="wp-block-quote is-style-plain">

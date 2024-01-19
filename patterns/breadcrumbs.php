@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Title: Breadcrumbs
  * Slug: x3p0-ideas/breadcrumbs
@@ -7,9 +8,10 @@
  * Keywords: breadcrumbs, trail
  * Block Types: x3p0/breadcrumbs
  */
+
 ?>
 <!-- wp:x3p0/breadcrumbs {
-	"metadata":{"name":"<?= esc_attr__( 'Breadcrumbs', 'x3p0-ideas' ) ?>"},
+	"metadata":{"name":"<?= esc_attr__('Breadcrumbs', 'x3p0-ideas') ?>"},
 	"itemsJustification":"left",
 	"align":"full",
 	"style":{

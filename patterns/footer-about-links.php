@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Title: Footer: About + Links
  * Slug: x3p0-ideas/footer-about-links
@@ -7,6 +8,7 @@
  * Keywords: footer
  * Block Types: core/template-part/footer
  */
+
 ?>
 <!-- wp:group {
 	"align":"full",
@@ -61,7 +63,7 @@
 					} /-->
 
 					<!-- wp:paragraph -->
-					<p><?php esc_html_e( 'Find me on any of these platforms. Please get in touch.', 'x3p0-ideas' ) ?></p>
+					<p><?php esc_html_e('Find me on any of these platforms. Please get in touch.', 'x3p0-ideas') ?></p>
 					<!-- /wp:paragraph -->
 
 				</div>
@@ -97,7 +99,7 @@
 			} -->
 			<div class="wp-block-columns">
 
-				<?php foreach ( range( 1, 2 ) as $column ) : ?>
+				<?php foreach (range(1, 2) as $column) : ?>
 
 					<!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|minus-3"}}} -->
 					<div class="wp-block-column">
@@ -113,19 +115,19 @@
 							"fontSize":"xs"
 						} -->
 						<h2 class="wp-block-heading has-xs-font-size" style="font-style:normal;font-weight:600;text-transform:uppercase">
-							<?php esc_html_e( 'Navigation Heading', 'x3p0-ideas' ) ?>
+							<?php esc_html_e('Navigation Heading', 'x3p0-ideas') ?>
 						</h2>
 						<!-- /wp:heading -->
 
 						<!-- wp:list {"className":"has-marker-none is-style-gap-snug"} -->
 						<ul class="has-marker-none is-style-gap-snug">
-							<?php foreach ( range( 1, 4 ) as $item ) : ?>
+							<?php foreach (range(1, 4) as $item) : ?>
 								<!-- wp:list-item -->
-								<li><a href="#"><?= esc_html( sprintf(
+								<li><a href="#"><?= esc_html(sprintf(
 									// Translators: %d is the current number in the loop.
-									_n( 'Link %d', 'Link %d', $item, 'x3p0-ideas' ),
-									absint( $item )
-								) ) ?></a></li>
+									_n('Link %d', 'Link %d', $item, 'x3p0-ideas'),
+									absint($item)
+								)) ?></a></li>
 								<!-- /wp:list-item -->
 							<?php endforeach ?>
 						</ul>

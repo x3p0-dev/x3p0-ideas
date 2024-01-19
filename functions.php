@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Theme functions file, which is auto-loaded by WordPress. This file is used to
  * load any other necessary PHP files and bootstrap the theme.
@@ -12,14 +13,14 @@
 namespace X3P0\Ideas;
 
 # Prevent direct execution.
-if ( ! defined( 'ABSPATH' ) ) {
+if (! defined('ABSPATH')) {
 	exit;
 }
 
 # Run the autoloader.
-if ( file_exists( get_parent_theme_file_path( 'vendor/autoload.php' ) ) ) {
-	require_once get_parent_theme_file_path( 'vendor/autoload.php' );
+if (file_exists(get_parent_theme_file_path('vendor/autoload.php'))) {
+	require_once get_parent_theme_file_path('vendor/autoload.php');
 }
 
 # Bootstrap the theme.
-add_action( 'after_setup_theme', __NAMESPACE__ . '\\theme', PHP_INT_MIN );
+add_action('after_setup_theme', __NAMESPACE__ . '\\theme', PHP_INT_MIN);

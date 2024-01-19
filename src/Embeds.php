@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Embed filters and actions.
  *
@@ -61,7 +62,7 @@ class Embeds implements Bootable
 	 */
 	public function enqueueAssets(): void
 	{
-		$embed_styles = file_get_contents( get_parent_theme_file_path( 'public/css/embed.css' ) );
+		$embed_styles = file_get_contents(get_parent_theme_file_path('public/css/embed.css'));
 
 		// Register empty stylesheet so that our inline styles can
 		// piggyback off of it. Use the core `wp-embed-template` style
@@ -73,15 +74,15 @@ class Embeds implements Bootable
 			'x3p0-ideas-embed',
 			false,
 			[ 'wp-embed-template' ],
-			wp_get_theme( get_template_directory() )->get( 'Version' )
+			wp_get_theme(get_template_directory())->get('Version')
 		);
 
 		// Add inline styles.
-		wp_add_inline_style( 'x3p0-ideas-embed', wp_get_global_stylesheet() );
-		wp_add_inline_style( 'x3p0-ideas-embed', $embed_styles );
+		wp_add_inline_style('x3p0-ideas-embed', wp_get_global_stylesheet());
+		wp_add_inline_style('x3p0-ideas-embed', $embed_styles);
 
 		// Enqueue embed style.
-		wp_enqueue_style( 'x3p0-ideas-embed' );
+		wp_enqueue_style('x3p0-ideas-embed');
 	}
 
 	/**
@@ -116,7 +117,7 @@ class Embeds implements Bootable
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/excerpt_length/
 	 */
-	public function filterExcerptLength( int $number ): int
+	public function filterExcerptLength(int $number): int
 	{
 		return is_embed() ? self::EXCERPT_LENGTH : $number;
 	}
@@ -128,7 +129,7 @@ class Embeds implements Bootable
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/excerpt_more/
 	 */
-	public function filterExcerptMore( string $more_string ): string
+	public function filterExcerptMore(string $more_string): string
 	{
 		return is_embed() ? '&thinsp;&hellip;' : $more_string;
 	}
@@ -142,10 +143,10 @@ class Embeds implements Bootable
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/embed_site_title_html/
 	 */
-	public function filterSiteTitleHtml( string $site_title ): string
+	public function filterSiteTitleHtml(string $site_title): string
 	{
 		// Bail if the site has an icon.
-		if ( get_site_icon_url() ) {
+		if (get_site_icon_url()) {
 			return $site_title;
 		}
 
@@ -156,9 +157,9 @@ class Embeds implements Bootable
 			'<div class="wp-embed-site-title">
 				<a href="%s" target="_top">%s<span>%s</span></a>
 			</div>',
-			esc_url( home_url() ),
+			esc_url(home_url()),
 			$icon,
-			esc_html( get_bloginfo( 'name' ) )
+			esc_html(get_bloginfo('name'))
 		);
 	}
 }

@@ -1,16 +1,18 @@
 <?php
+
 /**
  * Title: 404 Template
  * Slug: x3p0-ideas/template-404
  * Inserter: no
  * Template Types: 404
  */
+
 ?>
 <!-- wp:template-part {"slug":"header","className":"site-header"} /-->
 
 <!-- wp:group {
 	"tagName":"main",
-	"metadata":{"name":"<?= esc_attr__( 'Content', 'x3p0-ideas' ) ?>"},
+	"metadata":{"name":"<?= esc_attr__('Content', 'x3p0-ideas') ?>"},
 	"style":{
 		"spacing":{
 			"padding":{
@@ -34,7 +36,7 @@
 		<header class="wp-block-group">
 			<!-- wp:heading {"level":1} -->
 			<h1 class="wp-block-heading">
-				<?= esc_html__( '404: Nothing Found', 'x3p0-ideas' ) ?>
+				<?= esc_html__('404: Nothing Found', 'x3p0-ideas') ?>
 			</h1>
 			<!-- /wp:heading -->
 		</header>
@@ -47,14 +49,14 @@
 		<div class="wp-block-group is-style-prose">
 
 			<!-- wp:paragraph -->
-			<p><?= esc_html__( 'It looks like you stumbled upon a page that does not exist. Perhaps rolling the dice with a search might help:', 'x3p0-ideas' ) ?></p>
+			<p><?= esc_html__('It looks like you stumbled upon a page that does not exist. Perhaps rolling the dice with a search might help:', 'x3p0-ideas') ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:search {
-				"label":"<?= esc_html__( 'Search', 'x3p0-ideas' ) ?>",
+				"label":"<?= esc_html__('Search', 'x3p0-ideas') ?>",
 				"showLabel":false,
-				"placeholder":"<?= esc_attr__( 'Enter search terms...', 'x3p0-ideas' ) ?>",
-				"buttonText":"<?= esc_html__( 'Search', 'x3p0-ideas' ) ?>",
+				"placeholder":"<?= esc_attr__('Enter search terms...', 'x3p0-ideas') ?>",
+				"buttonText":"<?= esc_html__('Search', 'x3p0-ideas') ?>",
 				"buttonPosition":"button-inside"
 			} /-->
 

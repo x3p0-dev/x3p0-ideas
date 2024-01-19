@@ -11,7 +11,7 @@
 	"scripts": {
 		"build": "composer prod && composer zip",
 		"dev": "composer update && composer dump-autoload",
-		"lint:php": "./vendor/bin/phpcs -s .",
+		"lint:php": "./vendor/bin/phpcs -s --colors .",
 		"prod": "composer update --no-dev && composer dump-autoload -o --no-dev",
 		"zip": "composer archive --file=x3p0-ideas"
 	},

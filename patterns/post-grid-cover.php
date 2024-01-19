@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Title: Post Grid: Cover
  * Slug: x3p0-ideas/post-grid-cover
@@ -8,9 +9,10 @@
  * Block Types: core/query
  * Viewport Width: 1376
  */
+
 ?>
 <!-- wp:query {
-	"metadata":{"name":"<?= esc_attr__( 'Posts Query', 'x3p0-ideas' ) ?>"},
+	"metadata":{"name":"<?= esc_attr__('Posts Query', 'x3p0-ideas') ?>"},
 	"queryId":0,
 	"query":{
 		"perPage":6,
@@ -31,7 +33,7 @@
 <div class="wp-block-query alignfull">
 
 	<!-- wp:group {
-		"metadata":{"name":"<?= esc_attr__( 'Posts Container', 'x3p0-ideas' ) ?>"},
+		"metadata":{"name":"<?= esc_attr__('Posts Container', 'x3p0-ideas') ?>"},
 		"align":"full",
 		"backgroundColor":"black",
 		"layout":{"type":"constrained"}
@@ -47,13 +49,13 @@
 
 			<!-- wp:group {
 				"tagName":"article",
-				"metadata":{"name":"<?= esc_attr__( 'Post', 'x3p0-ideas' ) ?>"},
+				"metadata":{"name":"<?= esc_attr__('Post', 'x3p0-ideas') ?>"},
 				"layout":{"type":"constrained"}
 			} -->
 			<article class="wp-block-group">
 
 				<!-- wp:cover {
-					"metadata":{"name":"<?= esc_attr__( 'Post Container', 'x3p0-ideas' ) ?>"},
+					"metadata":{"name":"<?= esc_attr__('Post Container', 'x3p0-ideas') ?>"},
 					"useFeaturedImage":true,
 					"dimRatio":50,
 					"minHeight":32,
@@ -80,7 +82,7 @@
 
 						<!-- wp:group {
 							"tagName":"header",
-							"metadata":{"name":"<?= esc_attr__( 'Post Header', 'x3p0-ideas' ) ?>"},
+							"metadata":{"name":"<?= esc_attr__('Post Header', 'x3p0-ideas') ?>"},
 							"style":{"spacing":{"blockGap":"0"}},
 							"layout":{"type":"constrained"}
 						} -->
@@ -89,7 +91,7 @@
 							<!-- wp:post-title {"isLink":true} /-->
 
 							<!-- wp:group {
-								"metadata":{"name":"<?= esc_attr__( 'Post Meta', 'x3p0-ideas' ) ?>"},
+								"metadata":{"name":"<?= esc_attr__('Post Meta', 'x3p0-ideas') ?>"},
 								"layout":{"type":"flex","flexWrap":"nowrap"}
 							} -->
 							<div class="wp-block-group">

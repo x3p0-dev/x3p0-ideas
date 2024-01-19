@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Title: Vertical Character Cards
  * Slug: x3p0-ideas/cards-character-stack
@@ -6,11 +7,12 @@
  * Keywords: card, grid, profile, team
  * Viewport Width: 1376
  */
-$image = get_theme_file_uri( 'public/media/images/default-16x9.webp' );
+
+$image = get_theme_file_uri('public/media/images/default-16x9.webp');
 ?>
 <!-- wp:group {
 	"tagName":"section",
-	"metadata":{"name":"<?= esc_attr__( 'Cards Container', 'x3p0-ideas' ) ?>"},
+	"metadata":{"name":"<?= esc_attr__('Cards Container', 'x3p0-ideas') ?>"},
 	"align":"full",
 	"style":{
 		"spacing":{
@@ -33,32 +35,32 @@ $image = get_theme_file_uri( 'public/media/images/default-16x9.webp' );
 
 	<!-- wp:group {
 		"tagName":"header",
-		"metadata":{"name":"<?= esc_attr__( 'Cards Header', 'x3p0-ideas' ) ?>"},
+		"metadata":{"name":"<?= esc_attr__('Cards Header', 'x3p0-ideas') ?>"},
 		"style":{"spacing":{"blockGap":"var:preset|spacing|base"}},
 		"layout":{"type":"constrained"}
 	} -->
 	<header class="wp-block-group">
 		<!-- wp:heading {"textAlign":"center"} -->
-		<h2 class="wp-block-heading has-text-align-center"><?= esc_html__( 'Placeholder Heading', 'x3p0-ideas' ) ?></h2>
+		<h2 class="wp-block-heading has-text-align-center"><?= esc_html__('Placeholder Heading', 'x3p0-ideas') ?></h2>
 		<!-- /wp:heading -->
 
 		<!-- wp:paragraph {"align":"center"} -->
-		<p class="has-text-align-center"><?= esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum turpis quis metus aliquam, id pharetra arcu dignissim. Sed in sollicitudin mi.', 'x3p0-ideas' ) ?></p>
+		<p class="has-text-align-center"><?= esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum turpis quis metus aliquam, id pharetra arcu dignissim. Sed in sollicitudin mi.', 'x3p0-ideas') ?></p>
 		<!-- /wp:paragraph -->
 	</header>
 	<!-- /wp:group -->
 
 	<!-- wp:group {
-		"metadata":{"name":"<?= esc_attr__( 'Grid', 'x3p0-ideas' ) ?>"},
+		"metadata":{"name":"<?= esc_attr__('Grid', 'x3p0-ideas') ?>"},
 		"align":"wide",
 		"layout":{"type":"grid","minimumColumnWidth":"19rem"}
 	} -->
 	<div class="wp-block-group alignwide">
 
-		<?php foreach ( range( 1, 6 ) as $card ) : ?>
+		<?php foreach (range(1, 6) as $card) : ?>
 
 			<!-- wp:group {
-				"metadata":{"name":"<?= esc_attr__( 'Card', 'x3p0-ideas' ) ?>"},
+				"metadata":{"name":"<?= esc_attr__('Card', 'x3p0-ideas') ?>"},
 				"style":{
 					"spacing":{"blockGap":"0"},
 					"dimensions":{"minHeight":"100%"}
@@ -89,11 +91,11 @@ $image = get_theme_file_uri( 'public/media/images/default-16x9.webp' );
 						"linkDestination":"none",
 						"style":{"border":{"radius":"0px"}}
 					} -->
-					<figure class="wp-block-image size-full has-custom-border"><img src="<?= esc_url( $image ) ?>" alt="" style="border-radius:0px;aspect-ratio:4/3;object-fit:cover"/></figure>
+					<figure class="wp-block-image size-full has-custom-border"><img src="<?= esc_url($image) ?>" alt="" style="border-radius:0px;aspect-ratio:4/3;object-fit:cover"/></figure>
 					<!-- /wp:image -->
 
 					<!-- wp:group {
-						"metadata":{"name":"<?= esc_attr__( 'Card Content', 'x3p0-ideas' ) ?>"},
+						"metadata":{"name":"<?= esc_attr__('Card Content', 'x3p0-ideas') ?>"},
 						"style":{
 							"spacing":{
 								"blockGap":"var:preset|spacing|base",
@@ -110,7 +112,7 @@ $image = get_theme_file_uri( 'public/media/images/default-16x9.webp' );
 					<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
 
 						<!-- wp:group {
-							"metadata":{"name":"<?= esc_attr__( 'Card Header', 'x3p0-ideas' ) ?>"},
+							"metadata":{"name":"<?= esc_attr__('Card Header', 'x3p0-ideas') ?>"},
 							"style":{"spacing":{"blockGap":"0"}},
 							"layout":{"type":"constrained"}
 						} -->
@@ -128,21 +130,21 @@ $image = get_theme_file_uri( 'public/media/images/default-16x9.webp' );
 								"textColor":"primary-contrast",
 								"fontSize":"xs"
 							} -->
-							<p class="has-text-align-center has-primary-contrast-color has-text-color has-xs-font-size" style="font-style:normal;font-weight:600;text-transform:uppercase"><?= esc_html__( 'Level 99', 'x3p0-ideas' ) ?></p>
+							<p class="has-text-align-center has-primary-contrast-color has-text-color has-xs-font-size" style="font-style:normal;font-weight:600;text-transform:uppercase"><?= esc_html__('Level 99', 'x3p0-ideas') ?></p>
 							<!-- /wp:paragraph -->
 
 							<!-- wp:heading {
 								"textAlign":"center",
 								"fontSize":"xl"
 							} -->
-							<h2 class="wp-block-heading has-text-align-center has-xl-font-size"><?= esc_html__( 'User Name', 'x3p0-ideas' ) ?></h2>
+							<h2 class="wp-block-heading has-text-align-center has-xl-font-size"><?= esc_html__('User Name', 'x3p0-ideas') ?></h2>
 							<!-- /wp:heading -->
 
 						</div>
 						<!-- /wp:group -->
 
 						<!-- wp:paragraph {"align":"center"} -->
-						<p class="has-text-align-center"><?= esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum turpis quis metus aliquam, id pharetra arcu dignissim.', 'x3p0-ideas' ) ?></p>
+						<p class="has-text-align-center"><?= esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum turpis quis metus aliquam, id pharetra arcu dignissim.', 'x3p0-ideas') ?></p>
 						<!-- /wp:paragraph -->
 
 					</div>
@@ -152,7 +154,7 @@ $image = get_theme_file_uri( 'public/media/images/default-16x9.webp' );
 				<!-- /wp:group -->
 
 				<!-- wp:group {
-					"metadata":{"name":"<?= esc_attr__( 'Card Footer', 'x3p0-ideas' ) ?>"},
+					"metadata":{"name":"<?= esc_attr__('Card Footer', 'x3p0-ideas') ?>"},
 					"align":"full",
 					"style":{"spacing":{"blockGap":"var:preset|spacing|px"}},
 					"backgroundColor":"neutral-base",
@@ -163,7 +165,7 @@ $image = get_theme_file_uri( 'public/media/images/default-16x9.webp' );
 				} -->
 				<div class="wp-block-group alignfull has-neutral-base-background-color has-background">
 
-					<?php foreach ( range( 1, 3 ) as $skill ) : ?>
+					<?php foreach (range(1, 3) as $skill) : ?>
 
 						<!-- wp:group {
 							"style":{

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Title: Footer: Default
  * Slug: x3p0-ideas/footer-default
@@ -7,9 +8,10 @@
  * Keywords: footer
  * Block Types: core/template-part/footer
  */
+
 ?>
 <!-- wp:group {
-	"metadata":{"name":"<?= esc_attr__( 'Footer Container', 'x3p0-ideas' ) ?>"},
+	"metadata":{"name":"<?= esc_attr__('Footer Container', 'x3p0-ideas') ?>"},
 	"style":{
 		"spacing":{
 			"padding":{
@@ -40,7 +42,7 @@
 	<!-- /wp:social-links -->
 
 	<!-- wp:group {
-		"metadata":{"name":"<?= esc_attr__( 'Footer Content', 'x3p0-ideas' ) ?>"},
+		"metadata":{"name":"<?= esc_attr__('Footer Content', 'x3p0-ideas') ?>"},
 		"align":"wide",
 		"style":{"spacing":{"blockGap":"0"}},
 		"layout":{
@@ -56,11 +58,11 @@
 			"className":"is-style-normalize"
 		} /-->
 
-		<?php if ( WP_Block_Type_Registry::get_instance()->is_registered( 'x3p0/powered-by' ) ) : ?>
+		<?php if (WP_Block_Type_Registry::get_instance()->is_registered('x3p0/powered-by')) : ?>
 			<!-- wp:x3p0/powered-by {"poweredByType":"emoji"} /-->
 		<?php else : ?>
 			<!-- wp:paragraph -->
-			<p><?php esc_html_e( 'Powered by WordPress, crazy ideas, and passion.', 'x3p0-ideas' ) ?></p>
+			<p><?php esc_html_e('Powered by WordPress, crazy ideas, and passion.', 'x3p0-ideas') ?></p>
 			<!-- /wp:paragraph -->
 		<?php endif ?>
 	</div>

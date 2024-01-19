@@ -1,16 +1,18 @@
 <?php
+
 /**
  * Title: Home Template
  * Slug: x3p0-ideas/template-home
  * Inserter: no
  * Template Types: home, front-page
  */
+
 ?>
 <!-- wp:template-part {"slug":"header","className":"site-header"} /-->
 
 <!-- wp:group {
 	"tagName":"main",
-	"metadata":{"name":"<?= esc_attr__( 'Content', 'x3p0-ideas' ) ?>"},
+	"metadata":{"name":"<?= esc_attr__('Content', 'x3p0-ideas') ?>"},
 	"style":{"spacing":{"blockGap":"0"}},
 	"className":"site-content",
 	"layout":{"type":"constrained"}

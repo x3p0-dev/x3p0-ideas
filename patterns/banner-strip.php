@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Title: Banner: Strip
  * Slug: x3p0-ideas/banner-strip
@@ -6,9 +7,10 @@
  * Categories: banner
  * Keywords: banner, text
  */
+
 ?>
 <!-- wp:group {
-	"metadata":{"name":"<?= esc_attr__( 'Banner', 'x3p0-ideas' ) ?>"},
+	"metadata":{"name":"<?= esc_attr__('Banner', 'x3p0-ideas') ?>"},
 	"align":"full",
 	"style":{
 		"elements":{
@@ -33,7 +35,7 @@
 } -->
 <div class="wp-block-group alignfull has-base-color has-primary-contrast-background-color has-text-color has-background has-link-color" style="padding-top:var(--wp--preset--spacing--base);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--base);padding-left:var(--wp--preset--spacing--plus-3)">
 	<!-- wp:paragraph {
-		"placeholder":"<?= esc_attr__( 'Write your banner text...', 'x3p0-ideas' ) ?>"
+		"placeholder":"<?= esc_attr__('Write your banner text...', 'x3p0-ideas') ?>"
 	} -->
 	<p></p>
 	<!-- /wp:paragraph -->

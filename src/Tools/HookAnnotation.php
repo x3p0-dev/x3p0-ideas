@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Annotation-based actions and filters for class methods.
  *
@@ -28,16 +29,15 @@ trait HookAnnotation
 	{
 		// Get all of the `public` methods of the class (methods must be
 		// `public` to be used as an action/filter).
-		$methods = ( new ReflectionClass( self::class ) )->getMethods(
+		$methods = (new ReflectionClass(self::class))->getMethods(
 			ReflectionMethod::IS_PUBLIC
 		);
 
 		// Loop through the methods to determine if each should be added
 		// to a hook.
-		foreach ( $methods as $method ) {
-
+		foreach ($methods as $method) {
 			// Ignore constructor methods.
-			if ( $method->isConstructor() ) {
+			if ($method->isConstructor()) {
 				continue;
 			}
 
@@ -47,7 +47,7 @@ trait HookAnnotation
 			);
 
 			// Add the action/filter if there is metadata
-			if ( null !== $meta ) {
+			if (null !== $meta) {
 				add_filter(
 					$meta['hook'],
 					[ $this, $method->name ],
@@ -63,7 +63,7 @@ trait HookAnnotation
 	 *
 	 * @since 1.0.0
 	 */
-	protected function getMetadata( string $doc_comment ): ?array
+	protected function getMetadata(string $doc_comment): ?array
 	{
 		$matches = [];
 
@@ -78,18 +78,18 @@ trait HookAnnotation
 			$matches
 		);
 
-		if ( 1 !== $found ) {
+		if (1 !== $found) {
 			return null;
 		}
 
-		if ( ! isset( $matches[2] ) ) {
+		if (! isset($matches[2])) {
 			return [
 				'hook'     => $matches[1],
 				'priority' => 10,
 			];
 		}
 
-		switch ( $matches[2] ) {
+		switch ($matches[2]) {
 			case 'first':
 				$priority = PHP_INT_MIN;
 				break;

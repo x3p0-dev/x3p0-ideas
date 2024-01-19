@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Title: Text Reveal Cards
  * Slug: x3p0-ideas/cards-reveal-text
@@ -7,12 +8,13 @@
  * Block Types: core/cover
  * Viewport Width: 1376
  */
+
 $url   = home_url();
-$image = get_theme_file_uri( 'public/media/images/purple-sunset.webp' );
+$image = get_theme_file_uri('public/media/images/purple-sunset.webp');
 ?>
 <!-- wp:group {
 	"tagName":"section",
-	"metadata":{"name":"<?= esc_attr__( 'Cards Container', 'x3p0-ideas' ) ?>"},
+	"metadata":{"name":"<?= esc_attr__('Cards Container', 'x3p0-ideas') ?>"},
 	"align":"full",
 	"style":{
 		"spacing":{
@@ -31,34 +33,34 @@ $image = get_theme_file_uri( 'public/media/images/purple-sunset.webp' );
 
 	<!-- wp:group {
 		"tagName":"header",
-		"metadata":{"name":"<?= esc_attr__( 'Cards Header', 'x3p0-ideas' ) ?>"},
+		"metadata":{"name":"<?= esc_attr__('Cards Header', 'x3p0-ideas') ?>"},
 		"style":{"spacing":{"blockGap":"var:preset|spacing|base"}},
 		"layout":{"type":"constrained"}
 	} -->
 	<header class="wp-block-group">
 
 		<!-- wp:heading {"textAlign":"center"} -->
-		<h2 class="wp-block-heading has-text-align-center"><?= esc_html__( 'Placeholder Heading', 'x3p0-ideas' ) ?></h2>
+		<h2 class="wp-block-heading has-text-align-center"><?= esc_html__('Placeholder Heading', 'x3p0-ideas') ?></h2>
 		<!-- /wp:heading -->
 
 		<!-- wp:paragraph {"align":"center"} -->
-		<p class="has-text-align-center"><?= esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum turpis quis metus aliquam, id pharetra arcu dignissim. Sed in sollicitudin mi.', 'x3p0-ideas' ) ?></p>
+		<p class="has-text-align-center"><?= esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum turpis quis metus aliquam, id pharetra arcu dignissim. Sed in sollicitudin mi.', 'x3p0-ideas') ?></p>
 		<!-- /wp:paragraph -->
 
 	</header>
 	<!-- /wp:group -->
 
 	<!-- wp:group {
-		"metadata":{"name":"<?= esc_attr__( 'Grid', 'x3p0-ideas' ) ?>"},
+		"metadata":{"name":"<?= esc_attr__('Grid', 'x3p0-ideas') ?>"},
 		"layout":{"type":"grid","minimumColumnWidth":"16rem"}
 	} -->
 	<div class="wp-block-group">
 
-		<?php foreach ( range( 1, 4 ) as $card ) : ?>
+		<?php foreach (range(1, 4) as $card) : ?>
 
 			<!-- wp:cover {
-				"metadata":{"name":"<?= esc_attr__( 'Card', 'x3p0-ideas' ) ?>"},
-				"url":"<?= esc_url( $image ) ?>",
+				"metadata":{"name":"<?= esc_attr__('Card', 'x3p0-ideas') ?>"},
+				"url":"<?= esc_url($image) ?>",
 				"dimRatio":50,
 				"overlayColor":"contrast",
 				"minHeight":20,
@@ -80,12 +82,12 @@ $image = get_theme_file_uri( 'public/media/images/purple-sunset.webp' );
 			<div class="wp-block-cover is-style-reveal-text has-sm-font-size" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3);min-height:20vh">
 
 				<span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim"></span>
-				<img class="wp-block-cover__image-background" alt="" src="<?= esc_url( $image ) ?>" data-object-fit="cover"/>
+				<img class="wp-block-cover__image-background" alt="" src="<?= esc_url($image) ?>" data-object-fit="cover"/>
 
 				<div class="wp-block-cover__inner-container">
 
 					<!-- wp:group {
-						"metadata":{"name":"<?= esc_attr__( 'Card Container', 'x3p0-ideas' ) ?>"},
+						"metadata":{"name":"<?= esc_attr__('Card Container', 'x3p0-ideas') ?>"},
 						"align":"full",
 						"style":{
 							"dimensions":{"minHeight":"24rem"}
@@ -99,7 +101,7 @@ $image = get_theme_file_uri( 'public/media/images/purple-sunset.webp' );
 					<div class="wp-block-group alignfull" style="min-height:24rem">
 
 						<!-- wp:group {
-							"metadata":{"name":"<?= esc_attr__( 'Card Label', 'x3p0-ideas' ) ?>"},
+							"metadata":{"name":"<?= esc_attr__('Card Label', 'x3p0-ideas') ?>"},
 							"style":{
 								"spacing":{
 									"padding":{
@@ -116,14 +118,14 @@ $image = get_theme_file_uri( 'public/media/images/purple-sunset.webp' );
 						<div class="wp-block-group has-primary-contrast-background-color has-background" style="padding-top:var(--wp--preset--spacing--minus-3);padding-right:var(--wp--preset--spacing--base);padding-bottom:var(--wp--preset--spacing--minus-3);padding-left:var(--wp--preset--spacing--base)">
 
 							<!-- wp:paragraph -->
-							<p><?= esc_html__( 'Placeholder', 'x3p0-ideas' ) ?></p>
+							<p><?= esc_html__('Placeholder', 'x3p0-ideas') ?></p>
 							<!-- /wp:paragraph -->
 
 						</div>
 						<!-- /wp:group -->
 
 						<!-- wp:group {
-							"metadata":{"name":"<?= esc_attr__( 'Card Content', 'x3p0-ideas' ) ?>"},
+							"metadata":{"name":"<?= esc_attr__('Card Content', 'x3p0-ideas') ?>"},
 							"style":{
 								"spacing":{
 									"blockGap":"var:preset|spacing|minus-3"
@@ -134,11 +136,11 @@ $image = get_theme_file_uri( 'public/media/images/purple-sunset.webp' );
 						<div class="wp-block-group">
 
 							<!-- wp:heading {"level":3} -->
-							<h3 class="wp-block-heading"><a href="<?= esc_url( $url ) ?>"><?= esc_html__( 'Placeholder', 'x3p0-ideas' ) ?></a></h3>
+							<h3 class="wp-block-heading"><a href="<?= esc_url($url) ?>"><?= esc_html__('Placeholder', 'x3p0-ideas') ?></a></h3>
 							<!-- /wp:heading -->
 
 							<!-- wp:paragraph -->
-							<p><?= esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'x3p0-ideas' ) ?></p>
+							<p><?= esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'x3p0-ideas') ?></p>
 							<!-- /wp:paragraph -->
 
 						</div>

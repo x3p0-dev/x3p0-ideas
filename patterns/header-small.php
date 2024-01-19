@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Title: Header: Small
  * Slug: x3p0-ideas/header-small
@@ -8,9 +9,10 @@
  * Block Types: core/template-part/header
  * Viewport Width: 1376
  */
+
 ?>
 <!-- wp:group {
-	"metadata":{"name":"<?= esc_attr__( 'Header Container', 'x3p0-ideas' ) ?>"},
+	"metadata":{"name":"<?= esc_attr__('Header Container', 'x3p0-ideas') ?>"},
 	"style":{
 		"spacing":{
 			"padding":{
@@ -26,7 +28,7 @@
 <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
 
 	<!-- wp:group {
-		"metadata":{"name":"<?= esc_attr__( 'Header Content', 'x3p0-ideas' ) ?>"},
+		"metadata":{"name":"<?= esc_attr__('Header Content', 'x3p0-ideas') ?>"},
 		"layout":{"type":"flex","justifyContent":"space-between"}
 	} -->
 	<div class="wp-block-group">

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The Block Template Parts class is responsible for housing any custom code
  * related to template parts.
@@ -42,13 +43,13 @@ class Parts implements Bootable
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/default_wp_template_part_areas/
 	 */
-	public function registerAreas( array $areas ): array
+	public function registerAreas(array $areas): array
 	{
 		$areas[] = [
 			'area'        => 'loop',
 			'area_tag'    => 'div',
-			'label'       => __( 'Loop', 'x3p0-ideas' ),
-			'description' => __( 'The Loop template part defines an area that contains the post list on blog, search results, and other archive-type pages.', 'x3p0-ideas' ),
+			'label'       => __('Loop', 'x3p0-ideas'),
+			'description' => __('The Loop template part defines an area that contains the post list on blog, search results, and other archive-type pages.', 'x3p0-ideas'),
 			'icon'        => 'layout'
 		];
 

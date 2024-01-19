@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Title: Header: Classic Modern
  * Slug: x3p0-ideas/header-classic-modern
@@ -8,7 +9,8 @@
  * Block Types: core/template-part/header
  * Viewport Width: 1376
  */
-$image = get_theme_file_uri( 'public/media/images/purple-sunset.webp' );
+
+$image = get_theme_file_uri('public/media/images/purple-sunset.webp');
 ?>
 <!-- wp:group {
 	"align":"full",
@@ -55,7 +57,7 @@ $image = get_theme_file_uri( 'public/media/images/purple-sunset.webp' );
 	<!-- /wp:group -->
 
 	<!-- wp:cover {
-		"url":"<?= esc_url( $image ) ?>",
+		"url":"<?= esc_url($image) ?>",
 		"id":2268,
 		"dimRatio":0,
 		"focalPoint":{"x":0.5,"y":1},
@@ -67,7 +69,7 @@ $image = get_theme_file_uri( 'public/media/images/purple-sunset.webp' );
 	<div class="wp-block-cover alignfull" style="min-height:24rem">
 
 		<span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span>
-		<img class="wp-block-cover__image-background wp-image-2268" alt="" src="<?= esc_url( $image ) ?>" style="object-position:50% 100%" data-object-fit="cover" data-object-position="50% 100%"/>
+		<img class="wp-block-cover__image-background wp-image-2268" alt="" src="<?= esc_url($image) ?>" style="object-position:50% 100%" data-object-fit="cover" data-object-position="50% 100%"/>
 
 		<div class="wp-block-cover__inner-container">
 			<!-- wp:paragraph {"align":"center"} -->

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Title: Post List: Cover
  * Slug: x3p0-ideas/post-list-cover
@@ -8,9 +9,10 @@
  * Block Types: core/query
  * Viewport Width: 1376
  */
+
 ?>
 <!-- wp:query {
-	"metadata":{"name":"<?= esc_attr__( 'Posts Query', 'x3p0-ideas' ) ?>"},
+	"metadata":{"name":"<?= esc_attr__('Posts Query', 'x3p0-ideas') ?>"},
 	"queryId":0,
 	"query":{
 		"perPage":6,
@@ -31,7 +33,7 @@
 <div class="wp-block-query alignfull">
 
 	<!-- wp:group {
-		"metadata":{"name":"<?= esc_attr__( 'Posts Container', 'x3p0-ideas' ) ?>"},
+		"metadata":{"name":"<?= esc_attr__('Posts Container', 'x3p0-ideas') ?>"},
 		"align":"full",
 		"layout":{"type":"constrained"}
 	} -->
@@ -40,7 +42,7 @@
 		<!-- wp:post-template {"align":"full","style":{"spacing":{"blockGap":"0"}}} -->
 
 			<!-- wp:group {
-				"metadata":{"name":"<?= esc_attr__( 'Post', 'x3p0-ideas' ) ?>"},
+				"metadata":{"name":"<?= esc_attr__('Post', 'x3p0-ideas') ?>"},
 				"tagName":"article",
 				"className":"has-link-color",
 				"layout":{"type":"constrained"}
@@ -71,7 +73,7 @@
 					<div class="wp-block-cover__inner-container">
 
 						<!-- wp:group {
-							"metadata":{"name":"<?= esc_attr__( 'Post Header', 'x3p0-ideas' ) ?>"},
+							"metadata":{"name":"<?= esc_attr__('Post Header', 'x3p0-ideas') ?>"},
 							"tagName":"header",
 							"style":{"spacing":{"blockGap":"var:preset|spacing|minus-2"}},
 							"layout":{"type":"constrained"}
@@ -80,7 +82,7 @@
 							<!-- wp:post-title {"isLink":true} /-->
 
 							<!-- wp:group {
-								"metadata":{"name":"<?= esc_attr__( 'Post Meta', 'x3p0-ideas' ) ?>"},
+								"metadata":{"name":"<?= esc_attr__('Post Meta', 'x3p0-ideas') ?>"},
 								"layout":{"type":"flex","flexWrap":"nowrap"}
 							} -->
 							<div class="wp-block-group">

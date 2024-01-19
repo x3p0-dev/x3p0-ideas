@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Title: Footer: About + Four Link Columns
  * Slug: x3p0-ideas/footer-about-four-col-links
@@ -7,9 +8,10 @@
  * Keywords: footer
  * Block Types: core/template-part/footer
  */
+
 ?>
 <!-- wp:columns {
-	"metadata":{"name":"<?= esc_attr__( 'Footer Columns', 'x3p0-ideas' ) ?>"},
+	"metadata":{"name":"<?= esc_attr__('Footer Columns', 'x3p0-ideas') ?>"},
 	"align":"full",
 	"style":{
 		"spacing":{
@@ -33,7 +35,7 @@
 <div class="wp-block-columns alignfull has-neutral-contrast-color has-neutral-base-background-color has-text-color has-background has-link-color has-xs-font-size" style="padding-top:var(--wp--preset--spacing--plus-6);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-6);padding-left:var(--wp--preset--spacing--plus-3)">
 
 	<!-- wp:column {
-		"metadata":{"name":"<?= esc_attr__( 'About Column', 'x3p0-ideas' ) ?>"},
+		"metadata":{"name":"<?= esc_attr__('About Column', 'x3p0-ideas') ?>"},
 		"style":{"spacing":{"blockGap":"var:preset|spacing|base"}}
 	} -->
 	<div class="wp-block-column">
@@ -53,7 +55,7 @@
 		} /-->
 
 		<!-- wp:paragraph -->
-		<p><?= esc_html__( 'Find me on any of these platforms. Please get in touch.', 'x3p0-ideas' ) ?></p>
+		<p><?= esc_html__('Find me on any of these platforms. Please get in touch.', 'x3p0-ideas') ?></p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:social-links {
@@ -74,17 +76,17 @@
 	</div>
 	<!-- /wp:column -->
 
-	<?php foreach ( range( 1, 2 ) as $column ) : ?>
+	<?php foreach (range(1, 2) as $column) : ?>
 
 		<!-- wp:column {
-			"metadata":{"name":"<?= esc_attr__( 'Links Column', 'x3p0-ideas' ) ?>"}
+			"metadata":{"name":"<?= esc_attr__('Links Column', 'x3p0-ideas') ?>"}
 		} -->
 		<div class="wp-block-column">
 
 			<!-- wp:columns -->
 			<div class="wp-block-columns">
 
-				<?php foreach ( range( 1, 2 ) as $nested ) : ?>
+				<?php foreach (range(1, 2) as $nested) : ?>
 
 					<!-- wp:column {
 						"style":{
@@ -104,7 +106,7 @@
 							},
 							"fontSize":"sm"
 						} -->
-						<h2 class="wp-block-heading has-sm-font-size" style="font-style:normal;font-weight:600"><?= esc_html__( 'Site Navigation', 'x3p0-ideas' ) ?></h2>
+						<h2 class="wp-block-heading has-sm-font-size" style="font-style:normal;font-weight:600"><?= esc_html__('Site Navigation', 'x3p0-ideas') ?></h2>
 						<!-- /wp:heading -->
 
 						<!-- wp:list {
@@ -112,14 +114,14 @@
 						} -->
 						<ul class="has-marker-none is-style-gap-normal">
 
-							<?php foreach ( range( 1, 4 ) as $link ) : ?>
+							<?php foreach (range(1, 4) as $link) : ?>
 
 								<!-- wp:list-item -->
-								<li><a href="#"><?= esc_html( sprintf(
+								<li><a href="#"><?= esc_html(sprintf(
 									// Translators: %d is the current number in the loop.
-									_n( 'Link %d', 'Link %d', $link, 'x3p0-ideas' ),
-									absint( $link )
-								) ) ?></a></li>
+									_n('Link %d', 'Link %d', $link, 'x3p0-ideas'),
+									absint($link)
+								)) ?></a></li>
 								<!-- /wp:list-item -->
 
 							<?php endforeach ?>

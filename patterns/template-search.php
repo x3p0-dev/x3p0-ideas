@@ -1,23 +1,25 @@
 <?php
+
 /**
  * Title: Search Template
  * Slug: x3p0-ideas/template-search
  * Inserter: no
  * Template Types: search
  */
+
 ?>
 <!-- wp:template-part {"slug":"header","className":"site-header"} /-->
 
 <!-- wp:group {
 	"tagName":"main",
-	"metadata":{"name":"<?= esc_attr__( 'Content', 'x3p0-ideas' ) ?>"},
+	"metadata":{"name":"<?= esc_attr__('Content', 'x3p0-ideas') ?>"},
 	"style":{"spacing":{"blockGap":"0"}},
 	"layout":{"type":"constrained"}
 } -->
 <main class="wp-block-group">
 
 	<!-- wp:group {
-		"metadata":{"name":"<?= esc_attr__( 'Search Header', 'x3p0-ideas' ) ?>"},
+		"metadata":{"name":"<?= esc_attr__('Search Header', 'x3p0-ideas') ?>"},
 		"align":"full",
 		"style":{
 			"spacing":{
