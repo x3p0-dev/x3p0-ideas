@@ -87,8 +87,8 @@ class MediaMeta
 	public function has(string $key): bool
 	{
 		return isset($this->meta[ $key ])
-		       ? ! empty($this->meta[ $key ])
-		       : boolval($this->render($key));
+			? ! empty($this->meta[ $key ])
+			: boolval($this->render($key));
 	}
 
 	/**

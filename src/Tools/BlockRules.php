@@ -44,8 +44,8 @@ class BlockRules
 				$value = $block['attrs'][ $rule ];
 
 				return is_array($value)
-				       ? $this->$method(array_map('wp_strip_all_tags', $value))
-				       : $this->$method(wp_strip_all_tags($value));
+					? $this->$method(array_map('wp_strip_all_tags', $value))
+					: $this->$method(wp_strip_all_tags($value));
 			}
 		}
 
@@ -99,7 +99,7 @@ class BlockRules
 		$current_user = wp_get_current_user();
 
 		return is_numeric($user)
-		       ? absint($user) === $current_user->ID
-		       : $user === $current_user->get('user_nicename');
+			? absint($user) === $current_user->ID
+			: $user === $current_user->get('user_nicename');
 	}
 }

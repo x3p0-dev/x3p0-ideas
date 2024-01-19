@@ -79,8 +79,8 @@ class Media implements Bootable
 	public function filterBigImageThreshold(int $threshold): int
 	{
 		return self::THRESHOLD_WIDTH > $threshold
-		       ? self::THRESHOLD_WIDTH
-		       : $threshold;
+			? self::THRESHOLD_WIDTH
+			: $threshold;
 	}
 
 	/**

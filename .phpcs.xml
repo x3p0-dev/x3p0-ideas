@@ -47,11 +47,14 @@
 	-->
 	<rule ref="PSR12">
 		<!-- Tabs forever. -->
-		<exclude name="Generic.WhiteSpace.DisallowTabIndent.TabsUsed"/>
+		<exclude name="Generic.WhiteSpace.DisallowTabIndent"/>
 
 		<!-- Disabling line length checks for long strings. -->
 		<exclude name="Generic.Files.LineLength"/>
 	</rule>
+
+	<!-- Enforce tabbed indentation. -->
+	<rule ref="Generic.WhiteSpace.DisallowSpaceIndent"/>
 
 	<!-- Custom spacing used in templating files. -->
 	<rule ref="Squiz.WhiteSpace.ControlStructureSpacing.SpacingAfterOpen">

@@ -80,8 +80,8 @@ class Assets implements Bootable
 	public function filterInlineStylesLimit(int $total_inline_limit): int
 	{
 		return self::INLINE_CSS_LIMIT > $total_inline_limit
-		       ? self::INLINE_CSS_LIMIT
-		       : $total_inline_limit;
+			? self::INLINE_CSS_LIMIT
+			: $total_inline_limit;
 	}
 
 	/**
