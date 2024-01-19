@@ -31,14 +31,13 @@ class Templates implements Bootable
 	}
 
 	/**
-	 * Filter the core template types.
+	 * Customizes the titles of the default template types.
 	 *
 	 * @hook  default_template_types
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/default_template_types/
-	 * @todo  Register missing core templates.
 	 */
-	public function filterDefaultTypes(array $types): array
+	public function filterTitles(array $types): array
 	{
 		// Defines custom template titles for the core templates.
 		// phpcs:disable Generic.Functions.FunctionCallArgumentSpacing.TooMuchSpaceAfterComma
@@ -58,8 +57,25 @@ class Templates implements Bootable
 		];
 		// phpcs:enable
 
-		// Additional core templates that WordPress does not define for
-		// the site editor for some reason.
+		// Loop through the custom titles and replace the default titles.
+		foreach ($titles as $template => $title) {
+			if (isset($types[ $template ])) {
+				$types[ $template ]['title'] = $title;
+			}
+		}
+
+		return $types;
+	}
+
+	/**
+	 * Adds templates that WordPress does not define by default.
+	 *
+	 * @hook  default_template_types
+	 * @since 1.0.0
+	 * @link  https://developer.wordpress.org/reference/hooks/default_template_types/
+	 */
+	public function registerTypes(array $types): array
+	{
 		$templates = [
 			'audio' => [
 				'title'       => _x('Audio Attachment', 'Template name', 'x3p0-ideas'),
@@ -78,13 +94,6 @@ class Templates implements Bootable
 				'description' => __('Displays when a visitor views the dedicated page that exists for a video attachment.', 'x3p0-ideas'),
 			]
 		];
-
-		// Loop through the custom titles and replace the default titles.
-		foreach ($titles as $template => $title) {
-			if (isset($types[ $template ])) {
-				$types[ $template ]['title'] = $title;
-			}
-		}
 
 		// Loop through the additional templates and add them. Note that
 		// we're first checking if core has registered the template (for
