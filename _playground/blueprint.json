@@ -1,9 +1,9 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
-	"landingPage": "/wp-admin/themes.php",
+	"landingPage": "/wp-admin/site-editor.php",
 	"preferredVersions": {
 		"php": "8.3",
-		"wp": "6.4"
+		"wp": "latest"
 	},
 	"features": {
 		"networking": true
@@ -17,6 +17,13 @@
 			},
 			"options": {
 				"activate": true
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginZipFile": {
+				"resource": "wordpress.org/plugins",
+				"slug": "x3p0-breadcrumbs"
 			}
 		},
 		{
