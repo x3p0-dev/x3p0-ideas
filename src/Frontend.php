@@ -12,8 +12,8 @@
 
 namespace X3P0\Ideas;
 
+use WP;
 use X3P0\Ideas\Contracts\Bootable;
-use X3P0\Ideas\Tools\Helpers;
 use X3P0\Ideas\Tools\HookAnnotation;
 
 class Frontend implements Bootable
@@ -62,6 +62,54 @@ class Frontend implements Bootable
 	}
 
 	/**
+	 * When using a paged Query Loop block, WordPress doesn't set the `paged`
+	 * query var. So functions like `is_paged()` do not work correctly for
+	 * these types of paginated views, and the `paged` body class is missing.
+	 * This action checks for that case and sets sets the `paged` query var.
+	 *
+	 * @hook  parse_request
+	 * @since 1.0.0
+	 */
+	public function parseRequest(WP $wp): void
+	{
+		$page = $this->getQueryBlockPage();
+
+		if (1 < $page) {
+			$wp->query_vars['paged'] = $page;
+		}
+	}
+
+	/**
+	 * Gets the current page number when there's a paginated Query Loop
+	 * block. WordPress doesn't have a conditional function for this.
+	 *
+	 * @since 1.0.0
+	 */
+	private function getQueryBlockPage(): int
+	{
+		// Get the URL query for the requested URI.
+		$request = isset($_SERVER['REQUEST_URI'])
+			? sanitize_url(wp_unslash($_SERVER['REQUEST_URI']))
+			: '';
+
+		$query = wp_parse_url($request, PHP_URL_QUERY);
+
+		// Bail early if this is not a paginated page.
+		if (
+			! $query
+			|| ! str_contains($query, 'query-')
+			|| ! str_contains($query, 'page=')
+		) {
+			return 0;
+		}
+
+		// Checks for `?query-page={x}` and `query-{x}-page={y}`.
+		preg_match('#query-([0-9]\d*-)?page=([0-9]\d*)#i', $query, $matches);
+
+		return isset($matches[2]) ? absint($matches[2]) : 0;
+	}
+
+	/**
 	 * Custom inline CSS size limit.
 	 *
 	 * @hook styles_inline_size_limit
@@ -72,21 +120,5 @@ class Frontend implements Bootable
 		return self::INLINE_CSS_LIMIT > $total_inline_limit
 			? self::INLINE_CSS_LIMIT
 			: $total_inline_limit;
-	}
-
-	/**
-	 * Filter the body class.
-	 *
-	 * @hook  body_class
-	 * @since 1.0.0
-	 * @link  https://developer.wordpress.org/reference/hooks/body_class/
-	 */
-	public function filterBodyClass(array $classes): array
-	{
-		if (Helpers::isPagedQueryBlock() && ! in_array('paged', $classes, true)) {
-			$classes[] = 'paged';
-		}
-
-		return $classes;
 	}
 }
