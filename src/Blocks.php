@@ -11,7 +11,9 @@
 
 namespace X3P0\Ideas;
 
+use FilesystemIterator;
 use WP_Block;
+use WP_Block_Type_Registry;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\BlockRules;
 use X3P0\Ideas\Tools\HookAnnotation;
@@ -19,6 +21,24 @@ use X3P0\Ideas\Tools\HookAnnotation;
 class Blocks implements Bootable
 {
 	use HookAnnotation;
+
+	/**
+	 * Stores the supported block namespaces that we use for block stylesheets.
+	 *
+	 * @since 1.0.0
+	 * @todo  Add `array` type with PHP 8.3-only support.
+	 */
+	protected const NAMESPACES = [
+		'core'
+	];
+
+	/**
+	 * Stores the instance of the block type registry.
+	 *
+	 * @since 1.0.0
+	 * @todo  Move to constructor with PHP 8-only support.
+	 */
+	protected WP_Block_Type_Registry $types;
 
 	/**
 	 * Instance of block rules, which is used to determine whether to show
@@ -34,8 +54,11 @@ class Blocks implements Bootable
 	 *
 	 * @since 1.0.0
 	 */
-	public function __construct(BlockRules $rules)
-	{
+	public function __construct(
+		WP_Block_Type_Registry $types,
+		BlockRules $rules
+	) {
+		$this->types = $types;
 		$this->rules = $rules;
 	}
 
@@ -48,6 +71,73 @@ class Blocks implements Bootable
 	public function boot(): void
 	{
 		$this->hookMethods();
+	}
+
+	/**
+	 * Enqueues block-specific styles so that they only load when the block
+	 * is in use. Block styles stored under `/assets/css/blocks` are
+	 * automatically enqueued. Each file should be named
+	 * `{$block_namespace}/{$block_slug}.css`.
+	 *
+	 * @hook  init  last
+	 * @since 1.0.0
+	 * @link  https://developer.wordpress.org/reference/functions/wp_enqueue_block_style/
+	 */
+	public function enqueueStyles(): void
+	{
+		// Get the block namespace paths.
+		$paths = array_map(
+			fn($namespace) => get_parent_theme_file_path("public/css/blocks/{$namespace}"),
+			self::NAMESPACES
+		);
+
+		// Loop through each of the block namespace paths, get their
+		// stylesheets, and enqueue them.
+		foreach ($paths as $path) {
+			$files = new FilesystemIterator($path);
+
+			foreach ($files as $file) {
+				if (! $file->isDir() && 'css' === $file->getExtension()) {
+					$this->enqueueStyle(
+						basename($path),
+						$file->getBasename('.css')
+					);
+				}
+			}
+		}
+	}
+
+	/**
+	 * Enqueues an individual block stylesheet based on a given block
+	 * namespace and slug.
+	 *
+	 * @since 1.0.0
+	 */
+	private function enqueueStyle(string $namespace, string $slug): void
+	{
+		// Build a relative path and URL string.
+		$relative = "public/css/blocks/{$namespace}/{$slug}";
+
+		// Bail if the block is not registered or if the asset file
+		// doesn't exist.
+		if (
+			! $this->types->is_registered("{$namespace}/{$slug}")
+			|| ! file_exists(get_parent_theme_file_path("{$relative}.asset.php"))
+		) {
+			return;
+		}
+
+		// Get the asset file.
+		$asset = include get_parent_theme_file_path("{$relative}.asset.php");
+
+		// Register the block style.
+		wp_enqueue_block_style("{$namespace}/{$slug}", [
+			'handle' => "x3p0-ideas-block-{$namespace}-{$slug}",
+			'src'    => get_parent_theme_file_uri("{$relative}.css"),
+			'path'   => get_parent_theme_file_path("{$relative}.css"),
+			'deps'   => $asset['dependencies'],
+			'ver'    => $asset['version']
+		]);
 	}
 
 	/**

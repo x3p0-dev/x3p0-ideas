@@ -39,9 +39,10 @@ function theme(string $component = '')
 		// Bind instances of the theme's component classes that need to
 		// be booted when the theme launches.
 		$bindings = [
-			'assets'    => new Assets($block_types),
-			'blocks'    => new Blocks($block_rules),
+			'blocks'    => new Blocks($block_types, $block_rules),
+			'editor'    => new Editor(),
 			'embeds'    => new Embeds(),
+			'frontend'  => new Frontend(),
 			'media'     => new Media(),
 			'parts'     => new Parts(),
 			'patterns'  => new Patterns($block_types),

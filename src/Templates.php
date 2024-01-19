@@ -13,7 +13,6 @@
 namespace X3P0\Ideas;
 
 use X3P0\Ideas\Contracts\Bootable;
-use X3P0\Ideas\Tools\Helpers;
 use X3P0\Ideas\Tools\HookAnnotation;
 
 class Templates implements Bootable
@@ -97,21 +96,5 @@ class Templates implements Bootable
 		}
 
 		return $types;
-	}
-
-	/**
-	 * Filter the body class.
-	 *
-	 * @hook  body_class
-	 * @since 1.0.0
-	 * @link  https://developer.wordpress.org/reference/hooks/body_class/
-	 */
-	public function filterBodyClass(array $classes): array
-	{
-		if (Helpers::isPagedQueryBlock() && ! in_array('paged', $classes, true)) {
-			$classes[] = 'paged';
-		}
-
-		return $classes;
 	}
 }
