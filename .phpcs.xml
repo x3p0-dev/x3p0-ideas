@@ -28,7 +28,7 @@
 
 	<!-- Creates too many false-positives in templating files. -->
 	<rule ref="WordPress.WP.GlobalVariablesOverride">
-		<exclude-pattern>*/(patterns|resources\/partials)/*</exclude-pattern>
+		<exclude-pattern>*/(patterns|views)/*</exclude-pattern>
 	</rule>
 
 	<!--
@@ -58,7 +58,7 @@
 
 	<!-- Custom spacing used in templating files. -->
 	<rule ref="Squiz.WhiteSpace.ControlStructureSpacing.SpacingAfterOpen">
-		<exclude-pattern>*/(patterns|resources\/partials)/*</exclude-pattern>
+		<exclude-pattern>*/(patterns|views)/*</exclude-pattern>
 	</rule>
 
 </ruleset>

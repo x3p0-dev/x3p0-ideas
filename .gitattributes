@@ -35,7 +35,6 @@ node_modules/ export-ignore
 # Don't export folders that are merely copied into `/public`.
 /resources/fonts export-ignore
 /resources/media export-ignore
-/resources/partials export-ignore
 
 # Note that we're retaining the `resources/js` and `resources/scss` folders,
 # despite them containing dev-only files. They are required for themes submitted

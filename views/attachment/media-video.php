@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Dynamic pattern for handling audio attachment media.
+ * Dynamic pattern for handling video attachment media.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright 2023 Justin Tadlock
@@ -9,21 +9,21 @@
  * @link      https://github.com/x3p0-dev/x3p0-ideas
  */
 
-$caption = wp_get_attachment_caption($args['post_id']);
-$src     = wp_get_attachment_url($args['post_id']);
+$caption = wp_get_attachment_caption($data['post_id']);
+$src     = wp_get_attachment_url($data['post_id']);
 ?>
 <!-- wp:group {"align":"full","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull">
 
-	<!-- wp:audio {"id":<?= absint($args['post_id']) ?>} -->
-	<figure class="wp-block-audio">
-		<audio controls src="<?= esc_url($src) ?>"></audio>
+	<!-- wp:video {"align":"wide"} -->
+	<figure class="wp-block-video alignwide">
+		<video controls muted src="<?= esc_url($src) ?>"></video>
 
 		<?php if ($caption) : ?>
 			<figcaption class="wp-element-caption"><?= esc_html($caption) ?></figcaption>
 		<?php endif ?>
 	</figure>
-	<!-- /wp:audio -->
+	<!-- /wp:video -->
 
 </div>
 <!-- /wp:group -->

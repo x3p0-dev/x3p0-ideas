@@ -15,8 +15,8 @@ use FilesystemIterator;
 use WP_Block;
 use WP_Block_Type_Registry;
 use X3P0\Ideas\Contracts\Bootable;
-use X3P0\Ideas\Tools\BlockRules;
-use X3P0\Ideas\Tools\HookAnnotation;
+use X3P0\Ideas\Tools\{BlockRules, HookAnnotation};
+use X3P0\Ideas\Views\Engine;
 
 class Blocks implements Bootable
 {
@@ -26,7 +26,7 @@ class Blocks implements Bootable
 	 * Stores the supported block namespaces that we use for block stylesheets.
 	 *
 	 * @since 1.0.0
-	 * @todo  Add `array` type with PHP 8.3-only support.
+	 * @todo  Type hint with PHP 8.3+ requirement.
 	 */
 	protected const NAMESPACES = [
 		'core'
@@ -36,7 +36,7 @@ class Blocks implements Bootable
 	 * Stores the instance of the block type registry.
 	 *
 	 * @since 1.0.0
-	 * @todo  Move to constructor with PHP 8-only support.
+	 * @todo  Promote via the constructor with PHP 8.0+ requirement.
 	 */
 	protected WP_Block_Type_Registry $types;
 
@@ -45,21 +45,32 @@ class Blocks implements Bootable
 	 * a block.
 	 *
 	 * @since 1.0.0
-	 * @todo  Move to constructor with PHP 8-only support.
+	 * @todo  Promote via the constructor with PHP 8.0+ requirement.
 	 */
 	protected BlockRules $rules;
+
+	/**
+	 * Instance of the view engine.
+	 *
+	 * @since 1.0.0
+	 * @todo  Promote via the constructor with PHP 8.0+ requirement.
+	 */
+	protected Engine $views;
 
 	/**
 	 * Sets up the object state.
 	 *
 	 * @since 1.0.0
+	 * @todo  Promote to properties with PHP 8.0+ requirement.
 	 */
 	public function __construct(
 		WP_Block_Type_Registry $types,
-		BlockRules $rules
+		BlockRules $rules,
+		Engine $views
 	) {
 		$this->types = $types;
 		$this->rules = $rules;
+		$this->views = $views;
 	}
 
 	/**
@@ -217,14 +228,18 @@ class Blocks implements Bootable
 			return $block_content;
 		}
 
-		// Set up the args to pass to the partial.
-		$args = [ 'post_id' => absint($instance->context['postId']) ];
+		// Assign needed data.
+		$post_id = absint($instance->context['postId']);
+		$data    = [ 'post_id' => $post_id ];
 
-		// Get the attachment media and metadata markup.
-		$media = $this->renderAttachmentPartial('media', $args);
-		$meta  = $this->renderAttachmentPartial('meta', $args);
+		// Get the media and meta view names.
+		$media = $this->attachmentViewNames('media', $post_id);
+		$meta  = $this->attachmentViewNames('meta', $post_id);
 
-		return $media . $block_content . $meta;
+		// Renders the media + block content + meta.
+		return $this->views->renderIf($media, $data)
+			. $block_content
+			. $this->views->renderIf($meta, $data);
 	}
 
 	/**
@@ -232,46 +247,17 @@ class Blocks implements Bootable
 	 *
 	 * @since 1.0.0
 	 */
-	private function renderAttachmentPartial(string $name, array $args = []): string
+	private function attachmentViewNames(string $name, int $post_id): array
 	{
-		$partials = [];
-
-		// Checks if the attachment is one of supported types and sets
-		// the filename based on that type.
 		foreach ([ 'image', 'video', 'audio', 'pdf' ] as $type) {
-			if (wp_attachment_is($type, $args['post_id'])) {
-				$partials[] = "public/partials/attachment-{$name}-{$type}.php";
-				break;
+			if (wp_attachment_is($type, $post_id)) {
+				return [
+					"attachment.{$name}-{$type}",
+					"attachment.{$name}"
+				];
 			}
 		}
 
-		// Add fallback partial template.
-		$partials[] = "public/partials/attachment-{$name}.php";
-
-		return $this->renderPartial($partials, $args);
-	}
-
-	/**
-	 * Renders a partial template's blocks.
-	 *
-	 * @since 1.0.0
-	 * @todo  Move this to a separate class.
-	 */
-	private function renderPartial(array $partials, array $args = []): string
-	{
-		$html = '';
-
-		// Gets a partial (essentially a dynamic pattern) based on the
-		// attachment type. Must be valid block content.
-		ob_start();
-		locate_template($partials, true, false, $args);
-		$media = ob_get_clean();
-
-		// Parse and render the blocks.
-		foreach (parse_blocks($media) as $media_block) {
-			$html .= render_block($media_block);
-		}
-
-		return $html;
+		return [ "attachment-{$name}" ];
 	}
 }

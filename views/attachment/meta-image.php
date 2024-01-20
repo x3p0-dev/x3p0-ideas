@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Dynamic pattern for handling audio attachment meta.
+ * Dynamic pattern for handling image attachment meta.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright 2023 Justin Tadlock
@@ -11,18 +11,19 @@
 
 use X3P0\Ideas\Tools\MediaMeta;
 
-$meta = new MediaMeta($args['post_id']);
-$url  = wp_get_attachment_url($args['post_id']);
+$meta  = new MediaMeta($data['post_id']);
+$image = wp_get_attachment_image_src($data['post_id'], 'x3p0-16x9-lg');
 
 $fields = [
-	'length_formatted' => __('Run Time:', 'x3p0-ideas'),
-	'artist'           => __('Artist:', 'x3p0-ideas'),
-	'album'            => __('Album:', 'x3p0-ideas'),
-	'track_number'     => __('Track:', 'x3p0-ideas'),
-	'year'             => __('Year:', 'x3p0-ideas'),
-	'genre'            => __('Genre:', 'x3p0-ideas'),
-	'mime_type'        => __('Mime Type:', 'x3p0-ideas'),
-	'file_size'        => __('Size:', 'x3p0-ideas')
+	'dimensions'        => __('Dimensions:', 'x3p0-ideas'),
+	'created_timestamp' => __('Date:', 'x3p0-ideas'),
+	'camera'            => __('Camera:', 'x3p0-ideas'),
+	'aperture'          => __('Aperture:', 'x3p0-ideas'),
+	'focal_length'      => __('Focal Length:', 'x3p0-ideas'),
+	'iso'               => __('ISO:', 'x3p0-ideas'),
+	'shutter_speed'     => __('Shutter Speed:', 'x3p0-ideas'),
+	'mime_type'         => __('Mime Type:', 'x3p0-ideas'),
+	'file_size'         => __('Size:', 'x3p0-ideas')
 ];
 ?>
 <!-- wp:group {
@@ -33,7 +34,7 @@ $fields = [
 <div class="wp-block-group alignfull">
 
 	<!-- wp:heading {"className":"screen-reader-text"} -->
-	<h2 class="wp-block-heading screen-reader-text"><?= esc_html__('Audio Data', 'x3p0-ideas') ?></h2>
+	<h2 class="wp-block-heading screen-reader-text"><?= esc_html__('Image Data', 'x3p0-ideas') ?></h2>
 	<!-- /wp:heading -->
 
 	<!-- wp:group {
@@ -95,8 +96,8 @@ $fields = [
 	<!-- wp:group {"layout":{"type":"default"},"fontSize":"sm"} -->
 	<div class="wp-block-group has-sm-font-size">
 		<!-- wp:file {
-			"id":<?= absint($args['post_id']) ?>,
-			"href":"<?= esc_url($url) ?>",
+			"id":<?= absint($data['post_id']) ?>,
+			"href":"<?= esc_url($image[0]) ?>",
 			"showDownloadButton":false,
 			"style":{
 				"spacing":{
@@ -111,7 +112,7 @@ $fields = [
 			"className":"is-style-icon"
 		} -->
 		<div class="wp-block-file is-style-icon" style="padding-top:var(--wp--preset--spacing--minus-1);padding-right:var(--wp--preset--spacing--base);padding-bottom:var(--wp--preset--spacing--minus-1);padding-left:var(--wp--preset--spacing--base)">
-			<a href="<?= esc_url($url) ?>"><?= esc_html__('Download', 'x3p0-ideas') ?></a>
+			<a href="<?= esc_url($image[0]) ?>"><?= esc_html__('Download', 'x3p0-ideas') ?></a>
 		</div>
 		<!-- /wp:file -->
 
