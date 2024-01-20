@@ -26,7 +26,7 @@ class Patterns implements Bootable
 	 * registered for the install.
 	 *
 	 * @since 1.0.0
-	 * @todo  Add `array` type with PHP 8.3-only support.
+	 * @todo  Type hint with PHP 8.3+ requirement.
 	 */
 	protected const CONDITIONAL_PATTERNS = [
 		'core/table-of-contents' => [ 'x3p0-ideas/table-of-contents' ],
@@ -37,7 +37,7 @@ class Patterns implements Bootable
 	 * Stores the instance of the block type registry.
 	 *
 	 * @since 1.0.0
-	 * @todo  Move to constructor with PHP 8-only support.
+	 * @todo  Promote via the constructor with PHP 8.0+ requirement.
 	 */
 	protected WP_Block_Type_Registry $block_types;
 
@@ -45,6 +45,7 @@ class Patterns implements Bootable
 	 * Sets up the object state.
 	 *
 	 * @since 1.0.0
+	 * @todo  Promote params to properties with PHP 8.0+ requirement.
 	 */
 	public function __construct(WP_Block_Type_Registry $block_types)
 	{

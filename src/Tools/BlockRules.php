@@ -23,7 +23,7 @@ class BlockRules
 	 * List of allowed rules and their callback methods.
 	 *
 	 * @since 1.0.0
-	 * @todo  Add `array` type with PHP 8.3-only support.
+	 * @todo  Type hint with PHP 8.3+ requirement.
 	 */
 	private const RULE_METHODS = [
 		'@if'     => 'checkIf',

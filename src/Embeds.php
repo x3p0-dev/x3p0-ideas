@@ -22,7 +22,7 @@ class Embeds implements Bootable
 	 * Image size to use for featured images.
 	 *
 	 * @since 1.0.0
-	 * @todo  Add `string` type with PHP 8.3-only support.
+	 * @todo  Type hint with PHP 8.3+ requirement.
 	 */
 	protected const IMAGE_SIZE = 'x3p0-21x9-lg';
 
@@ -30,7 +30,7 @@ class Embeds implements Bootable
 	 * Image shape to use for featured images (`rectangular` or `square`).
 	 *
 	 * @since 1.0.0
-	 * @todo  Add `string` type with PHP 8.3-only support.
+	 * @todo  Type hint with PHP 8.3+ requirement.
 	 */
 	protected const IMAGE_SHAPE = 'rectangular';
 
@@ -38,7 +38,7 @@ class Embeds implements Bootable
 	 * Maximum number of words in the excerpt.
 	 *
 	 * @since 1.0.0
-	 * @todo  Add `int` type with PHP 8.3-only support.
+	 * @todo  Type hint with PHP 8.3+ requirement.
 	 */
 	protected const EXCERPT_LENGTH = 24;
 

@@ -46,7 +46,7 @@ class View implements Stringable
 	 * Sets up the view properties.
 	 *
 	 * @since 1.0.0
-	 * @todo  Promote to properties with PHP 8.0+ requirement.
+	 * @todo  Promote params to properties with PHP 8.0+ requirement.
 	 */
 	public function __construct(string $name, array $data = [])
 	{

@@ -61,7 +61,7 @@ class Blocks implements Bootable
 	 * Sets up the object state.
 	 *
 	 * @since 1.0.0
-	 * @todo  Promote to properties with PHP 8.0+ requirement.
+	 * @todo  Promote params to properties with PHP 8.0+ requirement.
 	 */
 	public function __construct(
 		WP_Block_Type_Registry $types,
@@ -177,10 +177,8 @@ class Blocks implements Bootable
 	 * @hook  render_block  last
 	 * @since 1.0.0
 	 */
-	public function renderBlockByRule(
-		string $block_content,
-		array $block
-	): string {
+	public function renderByRule(string $block_content, array $block): string
+	{
 		return $this->rules->isPublic($block) ? $block_content : '';
 	}
 

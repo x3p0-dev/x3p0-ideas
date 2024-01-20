@@ -24,7 +24,7 @@ class Frontend implements Bootable
 	 * Inline CSS limit.
 	 *
 	 * @since 1.0.0
-	 * @todo  Add `int` type with PHP 8.3-only support.
+	 * @todo  Type hint with PHP 8.3+ requirement.
 	 */
 	protected const INLINE_CSS_LIMIT = 50000;
 
