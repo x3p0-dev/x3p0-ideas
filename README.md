@@ -10,7 +10,9 @@ No concept is so outlandish that I won't try to wiggle it in one way or another.
 
 ## 🔎 Demo
 
-The theme demo is hosted on WordPress Playground, which is a system that runs WordPress directly in your browser. You can fully test the theme as if you were running it on your own site. [Give it a try →](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/x3p0-dev/x3p0-ideas/master/_playground/blueprint.json).
+The theme demo is hosted on WordPress Playground, which is a system that runs WordPress directly in your browser. You can fully test the theme as if you were running it on your own site. So go ahead and give it a try!
+
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/x3p0-dev/x3p0-ideas/master/_playground/blueprint.json" style="padding:0.5em 1em;border:2px solid currentColor;">Playground Demo →</a></p>
 
 ## 📄 Installation Instructions
 
