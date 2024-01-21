@@ -2,18 +2,30 @@
 	"name": "x3p0-dev/x3p0-ideas",
 	"type": "wordpress-theme",
 	"license": "GPL-3.0-or-later",
-	"authors": [
-		{
-			"name": "Justin Tadlock",
-			"email": "justintadlock@gmail.com"
-		}
-	],
 	"scripts": {
-		"build": "composer prod && composer zip",
-		"dev": "composer update && composer dump-autoload",
+		"build": [
+			"composer prod",
+			"composer zip"
+		],
+		"dev": [
+			"composer update",
+			"composer dump-autoload"
+		],
+		"prod": [
+			"composer var:none",
+			"composer update --no-dev",
+			"composer dump-autoload -o --no-dev"
+		],
 		"lint:php": "./vendor/bin/phpcs -s --colors .",
-		"prod": "composer update --no-dev && composer dump-autoload -o --no-dev",
-		"zip": "composer archive --file=x3p0-ideas"
+		"zip": "composer archive --file=x3p0-ideas",
+		"var:none": "composer config extra.x3p0.variation \"\"",
+		"var:default": "composer config extra.x3p0.variation \"default\"",
+		"var:bookish": "composer config extra.x3p0.variation \"a-little-bit-bookish\""
+	},
+	"extra": {
+		"x3p0": {
+			"variation": ""
+		}
 	},
 	"autoload": {
 		"psr-4": {
@@ -24,6 +36,15 @@
 		],
 		"exclude-from-classmap": [
 			"/vendor/composer/"
+		]
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"X3P0\\Ideas\\Tests\\": "tests/"
+		},
+		"files" : [
+			"tests/bootstrap.php",
+			"tests/functions-helpers.php"
 		]
 	},
 	"require": {
@@ -48,5 +69,11 @@
 			"!/vendor/autoload.php",
 			"!/vendor/composer/"
 		]
-	}
+	},
+	"authors": [
+		{
+			"name": "Justin Tadlock",
+			"email": "justintadlock@gmail.com"
+		}
+	]
 }

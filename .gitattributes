@@ -31,6 +31,7 @@
 _playground/ export-ignore
 docs/ export-ignore
 node_modules/ export-ignore
+tests/ export-ignore
 
 # Don't export folders that are merely copied into `/public`.
 /resources/fonts export-ignore
