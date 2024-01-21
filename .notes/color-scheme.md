@@ -14,7 +14,7 @@
 
 ## Colors
 
-### Secondary
+### Default
 
 ```scss
 --neutral-50: #f4f6fb;
@@ -52,4 +52,23 @@
 --secondary-800: #065f43;
 --secondary-900: #064e38;
 --secondary-950: #022c1f;
+```
+
+### A Little Bit Bookish
+
+```scss
+--primary-50: #fcf5f4;
+--primary-100: #fae8e6;
+--primary-200: #f7d5d1;
+--primary-300: #f0b8b1;
+--primary-400: #e58f84;
+--primary-500: #d76a5c;
+--primary-600: #c65a4c;
+--primary-700: #a33f32;
+--primary-800: #87372d;
+--primary-900: #71332b;
+--primary-950: #3d1712;
+
+
+
 ```

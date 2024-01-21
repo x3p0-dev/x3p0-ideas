@@ -1,0 +1,222 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"title": "A Little Bit Bookish",
+	"settings": {
+		"custom": {
+			"defaults": {
+				"borderRadius": "4px",
+				"shadow": "none",
+				"fadedGradient": "linear-gradient( 225deg, #cdb8a425, transparent 80% ), linear-gradient( 180deg, transparent -40%, var( --wp--preset--color--base ) 100% )"
+			},
+			"embed": {
+				"fontFamily": "var:preset|font-family|secondary"
+			}
+		},
+		"color": {
+			"palette": [
+				{
+					"slug": "base",
+					"color": "#f5f1ea",
+					"name": "Base"
+				},
+				{
+					"slug": "contrast",
+					"color": "#000000",
+					"name": "Contrast"
+				},
+				{
+					"slug": "primary-50",
+					"color": "#fcf5f4",
+					"name": "Primary: 50"
+				},
+				{
+					"slug": "primary-100",
+					"color": "#fae8e6",
+					"name": "Primary: 100"
+				},
+				{
+					"slug": "primary-300",
+					"color": "#f0b8b1",
+					"name": "Primary: 300"
+				},
+				{
+					"slug": "primary-500",
+					"color": "#d76a5c",
+					"name": "Primary: 500"
+				},
+				{
+					"slug": "primary-700",
+					"color": "#a33f32",
+					"name": "Primary: 700"
+				},
+				{
+					"slug": "primary-900",
+					"color": "#71332b",
+					"name": "Primary: 900"
+				},
+				{
+					"slug": "primary-950",
+					"color": "#3d1712",
+					"name": "Primary: 950"
+				},
+				{
+					"slug": "neutral-50",
+					"color": "#f9f6f3",
+					"name": "Neutral: 50"
+				},
+				{
+					"slug": "neutral-100",
+					"color": "#f0ebe4",
+					"name": "Neutral: 100"
+				},
+				{
+					"slug": "neutral-300",
+					"color": "#ccb9a5",
+					"name": "Neutral: 300"
+				},
+				{
+					"slug": "neutral-500",
+					"color": "#a88367",
+					"name": "Neutral: 500"
+				},
+				{
+					"slug": "neutral-700",
+					"color": "#815d4d",
+					"name": "Neutral: 700"
+				},
+				{
+					"slug": "neutral-900",
+					"color": "#564038",
+					"name": "Neutral: 900"
+				},
+				{
+					"slug": "neutral-950",
+					"color": "#2e201c",
+					"name": "Neutral: 950"
+				}
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "Playfair, Superclarendon, 'Bookman Old Style', 'URW Bookman', 'URW Bookman L', 'Georgia Pro', Georgia, serif",
+					"slug": "primary",
+					"name": "Primary (Playfair)",
+					"fontFace": [
+						{
+							"fontFamily": "Playfair",
+							"fontWeight": "200 700",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./public/fonts/playfair/playfair.woff2" ]
+						},
+						{
+							"fontFamily": "Playfair",
+							"fontWeight": "200 700",
+							"fontStyle": "italic",
+							"fontStretch": "normal",
+							"src": [ "file:./public/fonts/playfair/playfair-italic.woff2" ]
+						}
+					]
+				},
+				{
+					"fontFamily": "Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif",
+					"slug": "secondary",
+					"name": "Secondary (Charter)"
+				},
+				{
+					"fontFamily": "Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif",
+					"slug": "tertiary",
+					"name": "Tertiary (Didone)"
+				},
+				{
+					"fontFamily": "\"Source Code Pro\", Monaco, Consolas, \"Andale Mono WT\", \"Andale Mono\", \"Lucida Console\", \"Lucida Sans Typewriter\", \"DejaVu Sans Mono\", \"Bitstream Vera Sans Mono\", \"Liberation Mono\", \"Nimbus Mono L\", \"Courier New\", Courier, monospace",
+					"slug": "mono",
+					"name": "Monospace"
+				},
+				{
+					"fontFamily": "'Dancing Script', cursive",
+					"slug": "handwriting",
+					"name": "Handwriting (Dancing Script)",
+					"fontFace": [
+						{
+							"fontFamily": "Dancing Script",
+							"fontWeight": "400 700",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./public/fonts/dancing-script/dancing-script.woff2" ]
+						}
+					]
+				}
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"gradient": "linear-gradient( 225deg, #cdb8a425, transparent 25% ), linear-gradient( 45deg, #cdb8a425, transparent 25% )"
+		},
+		"elements": {
+			"caption": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|handwriting",
+					"fontSize": "var:preset|font-size|lg",
+					"lineHeight": "var:custom|font-size|lg"
+				}
+			},
+			"cite": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|handwriting",
+					"fontSize": "var:preset|font-size|lg",
+					"lineHeight": "var:custom|font-size|lg"
+				}
+			}
+		},
+		"blocks": {
+			"core/avatar": {
+				"border": {
+					"width": "3px",
+					"color": "var:preset|color|primary-500",
+					"style": "solid"
+				}
+			},
+			"core/calendar": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|handwriting"
+				}
+			},
+			"core/pullquote": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|primary",
+					"fontStyle": "italic"
+				}
+			},
+			"core/quote": {
+				"typography": {
+					"fontStyle": "italic"
+				}
+			},
+			"core/site-title": {
+				"typography": {
+					"fontSize": "var:preset|font-size|lg",
+					"fontStyle": "italic",
+					"fontWeight": "900",
+					"textTransform": "none"
+				}
+			},
+			"core/verse": {
+				"typography": {
+					"fontSize": "var:preset|font-size|lg",
+					"lineHeight": "1.67"
+				}
+			},
+			"x3p0/breadcrumbs": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|handwriting",
+					"fontSize": "var:preset|font-size|md",
+					"lineHeight": "var:custom|line-height|md"
+				}
+			}
+		}
+	}
+}
