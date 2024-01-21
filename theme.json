@@ -792,9 +792,9 @@
 					}
 				},
 				"typography": {
-					"fontSize": "var:preset|font-size|sm",
+					"fontSize": "var:preset|font-size|xs",
 					"fontWeight": "500",
-					"lineHeight": "var:custom|line-height|sm"
+					"lineHeight": "var:custom|line-height|xs"
 				},
 				":active": {
 					"outline": {
