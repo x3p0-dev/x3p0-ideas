@@ -58,7 +58,7 @@
 ///
 .wp-block-group.is-style-box {
 	padding: var( --wp--style--block-gap );
-	background: var( --wp--preset--color--neutral-base );
+	background: var( --wp--preset--color--neutral-50 );
 }
 
 ///
@@ -70,7 +70,7 @@
 /// @wordpress 6.5
 ///
 .wp-block-group.is-style-card {
-	border: 1px solid var( --wp--preset--color--neutral-subtle );
+	border: 1px solid var( --wp--preset--color--neutral-100 );
 }
 
 ///

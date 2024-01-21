@@ -38,9 +38,9 @@ body:not( .editor-styles-wrapper ) .has-screen-reader-text {
 
 .editor-styles-wrapper .has-screen-reader-text {
 	padding: var( --wp--preset--spacing--minus-3 ) var( --wp--preset--spacing--plus-3 ) !important;
-	color: var( --wp--preset--color--neutral-contrast ) !important;
-	background: var( --wp--preset--color--neutral-base ) !important;
-	border: 1px dashed var( --wp--preset--color--neutral-subtle ) !important;
+	color: var( --wp--preset--color--neutral-900 ) !important;
+	background: var( --wp--preset--color--neutral-50 ) !important;
+	border: 1px dashed var( --wp--preset--color--neutral-100 ) !important;
 
 }
 

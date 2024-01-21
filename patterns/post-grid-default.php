@@ -69,7 +69,7 @@
 					"style":{
 						"border":{
 							"bottom":{
-								"color":"var:preset|color|primary-contrast",
+								"color":"var:preset|color|primary-700",
 								"width":"5px"
 							},
 							"top":{},

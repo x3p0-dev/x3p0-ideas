@@ -23,10 +23,10 @@
 			}
 		}
 	},
-	"gradient":"90-deg-primary-base-transparent",
+	"gradient":"90-deg-primary-50-transparent",
 	"layout":{"type":"constrained"}
 } -->
-<section class="wp-block-group alignfull has-90-deg-primary-base-transparent-gradient-background has-background" style="padding-top:var(--wp--preset--spacing--plus-4);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-4);padding-left:var(--wp--preset--spacing--plus-3)">
+<section class="wp-block-group alignfull has-90-deg-primary-50-transparent-gradient-background has-background" style="padding-top:var(--wp--preset--spacing--plus-4);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-4);padding-left:var(--wp--preset--spacing--plus-3)">
 
 	<!-- wp:group {
 		"tagName":"header",
@@ -68,12 +68,12 @@
 					},
 					"border":{
 						"top":{
-							"color":"var:preset|color|primary-contrast",
+							"color":"var:preset|color|primary-700",
 							"width":"0.25rem"
 						}
 					}
 				},
-				"textColor":"neutral-muted",
+				"textColor":"neutral-500",
 				"gradient":"180-deg-transparent-base",
 				"className":"is-style-card",
 				"layout":{
@@ -82,7 +82,7 @@
 				},
 				"fontSize":"sm"
 			} -->
-			<div class="wp-block-group is-style-card has-neutral-muted-color has-180-deg-transparent-base-gradient-background has-text-color has-background has-sm-font-size" style="border-top-color:var(--wp--preset--color--primary-contrast);border-top-width:0.25rem;padding-top:var(--wp--preset--spacing--base);padding-right:var(--wp--preset--spacing--base);padding-bottom:var(--wp--preset--spacing--base);padding-left:var(--wp--preset--spacing--base)">
+			<div class="wp-block-group is-style-card has-neutral-500-color has-180-deg-transparent-base-gradient-background has-text-color has-background has-sm-font-size" style="border-top-color:var(--wp--preset--color--primary-700);border-top-width:0.25rem;padding-top:var(--wp--preset--spacing--base);padding-right:var(--wp--preset--spacing--base);padding-bottom:var(--wp--preset--spacing--base);padding-left:var(--wp--preset--spacing--base)">
 
 				<!-- wp:avatar {
 					"userId":1,

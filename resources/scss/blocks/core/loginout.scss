@@ -27,8 +27,8 @@
 		border: 2px solid transparent;
 		border-radius: var( --wp--custom--defaults--border-radius );
 		color: var( --wp--preset--color--white );
-		background: var( --wp--preset--color--primary-contrast );
-		outline: 0 solid var( --wp--preset--color--primary-emphasis );
+		background: var( --wp--preset--color--primary-700 );
+		outline: 0 solid var( --wp--preset--color--primary-950 );
 		outline-offset: 2px;
 		padding: var( --wp--preset--spacing--minus-2 ) var( --wp--preset--spacing--plus-1 );
 		font-size: var( --wp--preset--font-size--sm );
@@ -37,11 +37,11 @@
 
 		&:active,
 		&:focus {
-			background: var( --wp--preset--color--primary-emphasis );
+			background: var( --wp--preset--color--primary-950 );
 			outline-width: 2px;
 		}
 		&:hover {
-			background: var( --wp--preset--color--primary-emphasis );
+			background: var( --wp--preset--color--primary-950 );
 			text-decoration: underline;
 		}
 	}

@@ -24,5 +24,5 @@
 			}
 		}
 	},
-	"gradient":"90-deg-neutral-base-transparent"
+	"gradient":"90-deg-neutral-50-transparent"
 } /-->

@@ -22,11 +22,11 @@
 			}
 		}
 	},
-	"backgroundColor":"neutral-base",
+	"backgroundColor":"neutral-50",
 	"layout":{"type":"default"},
 	"fontSize":"sm"
 } -->
-<div class="wp-block-group alignfull has-neutral-base-background-color has-background has-sm-font-size" style="padding-top:var(--wp--preset--spacing--plus-6);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-6);padding-left:var(--wp--preset--spacing--plus-3)">
+<div class="wp-block-group alignfull has-neutral-50-background-color has-background has-sm-font-size" style="padding-top:var(--wp--preset--spacing--plus-6);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-6);padding-left:var(--wp--preset--spacing--plus-3)">
 
 	<!-- wp:columns -->
 	<div class="wp-block-columns">

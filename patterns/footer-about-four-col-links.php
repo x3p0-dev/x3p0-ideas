@@ -24,15 +24,15 @@
 		},
 		"elements":{
 			"link":{
-				"color":{"text":"var:preset|color|neutral-contrast"}
+				"color":{"text":"var:preset|color|neutral-900"}
 			}
 		}
 	},
-	"backgroundColor":"neutral-base",
-	"textColor":"neutral-contrast",
+	"backgroundColor":"neutral-50",
+	"textColor":"neutral-900",
 	"fontSize":"xs"
 } -->
-<div class="wp-block-columns alignfull has-neutral-contrast-color has-neutral-base-background-color has-text-color has-background has-link-color has-xs-font-size" style="padding-top:var(--wp--preset--spacing--plus-6);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-6);padding-left:var(--wp--preset--spacing--plus-3)">
+<div class="wp-block-columns alignfull has-neutral-900-color has-neutral-50-background-color has-text-color has-background has-link-color has-xs-font-size" style="padding-top:var(--wp--preset--spacing--plus-6);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-6);padding-left:var(--wp--preset--spacing--plus-3)">
 
 	<!-- wp:column {
 		"metadata":{"name":"<?= esc_attr__('About Column', 'x3p0-ideas') ?>"},
@@ -59,7 +59,7 @@
 		<!-- /wp:paragraph -->
 
 		<!-- wp:social-links {
-			"iconColor":"neutral-muted",
+			"iconColor":"neutral-500",
 			"iconColorValue":"#715036",
 			"size":"has-large-icon-size",
 			"className":"is-style-logos-only"

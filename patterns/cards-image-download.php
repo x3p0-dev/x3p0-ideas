@@ -24,10 +24,10 @@ $image = get_theme_file_uri('public/media/images/purple-sunset.webp');
 			}
 		}
 	},
-	"gradient":"90-deg-primary-base-transparent",
+	"gradient":"90-deg-primary-50-transparent",
 	"layout":{"type":"constrained"}
 } -->
-<section class="wp-block-group alignfull has-90-deg-primary-base-transparent-gradient-background has-background" style="padding-top:var(--wp--preset--spacing--plus-4);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-4);padding-left:var(--wp--preset--spacing--plus-3)">
+<section class="wp-block-group alignfull has-90-deg-primary-50-transparent-gradient-background has-background" style="padding-top:var(--wp--preset--spacing--plus-4);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-4);padding-left:var(--wp--preset--spacing--plus-3)">
 
 	<!-- wp:group {
 		"tagName":"header",
@@ -121,11 +121,11 @@ $image = get_theme_file_uri('public/media/images/purple-sunset.webp');
 							"fontWeight":"600"
 						}
 					},
-					"backgroundColor":"neutral-base",
+					"backgroundColor":"neutral-50",
 					"layout":{"type":"default"},
 					"fontSize":"xs"
 				} -->
-				<div class="wp-block-group has-neutral-base-background-color has-background has-xs-font-size" style="font-style:normal;font-weight:600">
+				<div class="wp-block-group has-neutral-50-background-color has-background has-xs-font-size" style="font-style:normal;font-weight:600">
 
 					<!-- wp:file {
 						"href":"<?= esc_url($image) ?>",

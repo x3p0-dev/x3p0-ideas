@@ -1,1 +1,1 @@
-.wp-block-social-link:has(a:focus){outline:2px solid var(--wp--preset--color--primary-contrast);outline-offset:2px}.wp-block-social-link .wp-block-social-link-anchor{outline:none}
+.wp-block-social-link:has(a:focus){outline:2px solid var(--wp--preset--color--primary-700);outline-offset:2px}.wp-block-social-link .wp-block-social-link-anchor{outline:none}

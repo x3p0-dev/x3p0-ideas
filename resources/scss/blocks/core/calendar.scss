@@ -18,7 +18,7 @@
 // Overwrites WP's default border-color on cells. This is hardcoded, and themes
 // have no way to customize it via `theme.json`.
 .wp-block-calendar table:where( :not( .has-text-color ) ) :is( td, th ) {
-	border-color: var( --color-muted, var( --wp--preset--color--neutral-subtle ) );
+	border-color: var( --color-muted, var( --wp--preset--color--neutral-100 ) );
 }
 
 // -----------------------------------------------------------------------------
@@ -44,10 +44,10 @@
 
 .wp-block-calendar {
 	padding: 0 var( --wp--preset--spacing--plus-3 ) var( --wp--preset--spacing--base );
-	border: 1px solid var( --wp--preset--color--neutral-base );
-	border-top: 4px solid var( --color--contrast, var( --wp--preset--color--primary-contrast ) );
+	border: 1px solid var( --wp--preset--color--neutral-50 );
+	border-top: 4px solid var( --color--contrast, var( --wp--preset--color--primary-700 ) );
 	box-sizing: border-box;
-	background: var( --wp--preset--color--neutral-base );
+	background: var( --wp--preset--color--neutral-50 );
 }
 
 // WP nests a calendar wrapper inside itself in the editor for some crazy reason
@@ -77,7 +77,7 @@
 }
 
 .wp-block-calendar table tbody {
-	border: 1px solid var( --color-muted, var( --wp--preset--color--neutral-subtle ) );
+	border: 1px solid var( --color-muted, var( --wp--preset--color--neutral-100 ) );
 }
 
 .wp-block-calendar table td:where( :not( .pad ) ) {

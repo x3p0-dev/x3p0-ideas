@@ -91,55 +91,40 @@
 
 
 .has-color-var-neutral {
-	color: var( --wp--preset--color--neutral-contrast );
-	background: var( --wp--preset--color--neutral-base );
-	border: 1px solid var( --wp--preset--color--neutral-subtle );
+	color: var( --wp--preset--color--neutral-900 );
+	background: var( --wp--preset--color--neutral-50 );
+	border: 1px solid var( --wp--preset--color--neutral-100 );
 	border-radius: var( --wp--custom--defaults--border-radius );
 	box-shadow: var( --wp--custom--defaults--shadow );
 
 	:where( :not( pre ) > code ) {
-		background: var( --wp--preset--color--neutral-subtle );
+		background: var( --wp--preset--color--neutral-100 );
 	}
 }
 
 
 [class*=has-color-var-] .has-color-var-neutral {
-	--color-base: var( --wp--preset--color--neutral-base );
-	--color-subtle: var( --wp--preset--color--neutral-subtle );
-	--color-muted: var( --wp--preset--color--neutral-muted );
-	--color-contrast: var( --wp--preset--color--neutral-contrast );
-	--color-emphasis: var( --wp--preset--color--neutral-emphasis );
+	--color-base: var( --wp--preset--color--neutral-50 );
+	--color-subtle: var( --wp--preset--color--neutral-100 );
+	--color-muted: var( --wp--preset--color--neutral-500 );
+	--color-contrast: var( --wp--preset--color--neutral-900 );
+	--color-emphasis: var( --wp--preset--color--neutral-950 );
 }
 
 
 .has-color-var-primary {
-	--color-base: var( --wp--preset--color--primary-base );
-	--color-subtle: var( --wp--preset--color--primary-subtle );
-	--color-muted: var( --wp--preset--color--primary-muted );
-	--color-contrast: var( --wp--preset--color--primary-contrast );
-	--color-emphasis: var( --wp--preset--color--primary-emphasis );
+	--color-base: var( --wp--preset--color--primary-50 );
+	--color-subtle: var( --wp--preset--color--primary-100 );
+	--color-muted: var( --wp--preset--color--primary-500 );
+	--color-contrast: var( --wp--preset--color--primary-900 );
+	--color-emphasis: var( --wp--preset--color--primary-950 );
 }
 
 .has-color-var-secondary {
-	--color-base: var( --wp--preset--color--secondary-base );
-	--color-subtle: var( --wp--preset--color--secondary-subtle );
-	--color-muted: var( --wp--preset--color--secondary-muted );
-	--color-contrast: var( --wp--preset--color--secondary-contrast );
-	--color-emphasis: var( --wp--preset--color--secondary-emphasis );
+	--color-base: var( --wp--preset--color--secondary-50 );
+	--color-subtle: var( --wp--preset--color--secondary-100 );
+	--color-muted: var( --wp--preset--color--secondary-500 );
+	--color-contrast: var( --wp--preset--color--secondary-900 );
+	--color-emphasis: var( --wp--preset--color--secondary-950 );
 }
 
-.has-color-var-positive {
-	--color-base: var( --wp--preset--color--positive-base );
-	--color-subtle: var( --wp--preset--color--positive-subtle );
-	--color-muted: var( --wp--preset--color--positive-muted );
-	--color-contrast: var( --wp--preset--color--positive-contrast );
-	--color-emphasis: var( --wp--preset--color--positive-emphasis );
-}
-
-.has-color-var-negative {
-	--color-base: var( --wp--preset--color--negative-base );
-	--color-subtle: var( --wp--preset--color--negative-subtle );
-	--color-muted: var( --wp--preset--color--negative-muted );
-	--color-contrast: var( --wp--preset--color--negative-contrast );
-	--color-emphasis: var( --wp--preset--color--negative-emphasis );
-}

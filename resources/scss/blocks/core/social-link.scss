@@ -10,7 +10,7 @@
 // -----------------------------------------------------------------------------
 
 .wp-block-social-link:has( a:focus ) {
-	outline: 2px solid var( --wp--preset--color--primary-contrast );
+	outline: 2px solid var( --wp--preset--color--primary-700 );
 	outline-offset: 2px;
 }
 

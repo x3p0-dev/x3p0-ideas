@@ -24,14 +24,14 @@ $image = get_theme_file_uri('public/media/images/default-16x9.webp');
 			}
 		}
 	},
-	"gradient":"90-deg-primary-base-transparent",
+	"gradient":"90-deg-primary-50-transparent",
 	"layout":{
 		"type":"constrained",
 		"contentSize":"40rem",
 		"wideSize":"80rem"
 	}
 } -->
-<section class="wp-block-group alignfull has-90-deg-primary-base-transparent-gradient-background has-background" style="padding-top:var(--wp--preset--spacing--plus-4);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-4);padding-left:var(--wp--preset--spacing--plus-3)">
+<section class="wp-block-group alignfull has-90-deg-primary-50-transparent-gradient-background has-background" style="padding-top:var(--wp--preset--spacing--plus-4);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-4);padding-left:var(--wp--preset--spacing--plus-3)">
 
 	<!-- wp:group {
 		"tagName":"header",
@@ -127,10 +127,10 @@ $image = get_theme_file_uri('public/media/images/default-16x9.webp');
 										"fontWeight":"600"
 									}
 								},
-								"textColor":"primary-contrast",
+								"textColor":"primary-700",
 								"fontSize":"xs"
 							} -->
-							<p class="has-text-align-center has-primary-contrast-color has-text-color has-xs-font-size" style="font-style:normal;font-weight:600;text-transform:uppercase"><?= esc_html__('Level 99', 'x3p0-ideas') ?></p>
+							<p class="has-text-align-center has-primary-700-color has-text-color has-xs-font-size" style="font-style:normal;font-weight:600;text-transform:uppercase"><?= esc_html__('Level 99', 'x3p0-ideas') ?></p>
 							<!-- /wp:paragraph -->
 
 							<!-- wp:heading {
@@ -157,13 +157,13 @@ $image = get_theme_file_uri('public/media/images/default-16x9.webp');
 					"metadata":{"name":"<?= esc_attr__('Card Footer', 'x3p0-ideas') ?>"},
 					"align":"full",
 					"style":{"spacing":{"blockGap":"var:preset|spacing|px"}},
-					"backgroundColor":"neutral-base",
+					"backgroundColor":"neutral-50",
 					"layout":{
 						"type":"grid",
 						"minimumColumnWidth":"30%"
 					}
 				} -->
-				<div class="wp-block-group alignfull has-neutral-base-background-color has-background">
+				<div class="wp-block-group alignfull has-neutral-50-background-color has-background">
 
 					<?php foreach (range(1, 3) as $skill) : ?>
 

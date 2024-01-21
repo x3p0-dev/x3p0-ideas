@@ -25,17 +25,34 @@ export const useVariationColors = () => {
 	Object.keys( VARIATIONS ).forEach( ( type ) => {
 		let shades = {};
 
-		COLOR_SHADES.forEach( ( shade ) => {
-			const name = 'default' === type
-				? shade
-				: `${ type }-${ shade }`;
-
-			const result = palette.find(
-				( { slug } ) => slug == name
+		if ( 'default' === type ) {
+			const base = palette.find(
+				( { slug } ) => slug == 'base'
+			);
+			const contrast = palette.find(
+				( { slug } ) => slug == 'contrast'
 			);
 
-			if ( result ) {
-				shades[ shade ] = result.color;
+			if ( base && contrast ) {
+				shades[ 'base' ] = base.color;
+				shades[ 'contrast' ] = contrast.color;
+			}
+		}
+
+		COLOR_SHADES.forEach( ( shade ) => {
+			if ( 'default' !== type ) {
+
+				const name = 'default' === type
+					? shade
+					: `${ type }-${ shade }`;
+
+				const result = palette.find(
+					( { slug } ) => slug == name
+				);
+
+				if ( result ) {
+					shades[ shade ] = result.color;
+				}
 			}
 		} );
 

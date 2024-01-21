@@ -8,7 +8,7 @@
 label,
 // `<label>` element not used in the editor.
 .wp-block-search__label {
-	color: var( --wp--preset--color--neutral-muted );
+	color: var( --wp--preset--color--neutral-500 );
 	font-size: var( --wp--preset--font-size--xs );
 	text-transform: uppercase;
 }
@@ -31,11 +31,11 @@ label:has(
 	select:focus
 ),
 .wp-block-search__label:has( + .wp-block-search__inside-wrapper > .wp-block-search__input:focus ) {
-	color: var( --color-contrast, var( --wp--preset--color--primary-contrast ) );
+	color: var( --color-contrast, var( --wp--preset--color--primary-700 ) );
 }
 
 input {
-	accent-color: var( --wp--preset--color--primary-contrast );
+	accent-color: var( --wp--preset--color--primary-700 );
 }
 
 // Adds form element styles, which aren't yet supported in `theme.json`.
@@ -66,7 +66,7 @@ textarea,
 	box-shadow: var( --wp--custom--defaults--shadow );
 
 	&:focus {
-		outline: 2px solid var( --wp--preset--color--primary-contrast );
+		outline: 2px solid var( --wp--preset--color--primary-700 );
 		outline-offset: 2px;
 	}
 }
@@ -101,7 +101,7 @@ select {
 	padding-left: var( --wp--preset--spacing--minus-1 );
 
 	&:has( .wp-block-search__input:focus ) {
-		outline: 2px solid var( --wp--preset--color--primary-contrast );
+		outline: 2px solid var( --wp--preset--color--primary-700 );
 		outline-offset: 2px;
 	}
 }

@@ -57,7 +57,7 @@
 .wp-block-columns > .wp-block-column.is-style-box,
 .has-global-padding > .wp-block-columns.alignfull > .wp-block-column.is-style-box {
 	padding: var( --wp--style--block-gap );
-	background: var( --wp--preset--color--neutral-base );
+	background: var( --wp--preset--color--neutral-50 );
 }
 
 ///
@@ -69,5 +69,5 @@
 /// @wordpress 6.5
 ///
 .wp-block-column.is-style-card {
-	border: 1px solid var( --wp--preset--color--neutral-subtle );
+	border: 1px solid var( --wp--preset--color--neutral-100 );
 }

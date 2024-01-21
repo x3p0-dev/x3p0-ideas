@@ -18,12 +18,12 @@
 @mixin base() {
 	display: inline-block;
 	text-decoration: none;
-	color: var( --wp--preset--color--primary-base );
-	background-color: var( --wp--preset--color--primary-contrast );
+	color: var( --wp--preset--color--primary-50 );
+	background-color: var( --wp--preset--color--primary-700 );
 	border-radius: var( --wp--custom--defaults--border-radius );
 
 	&:hover,
 	&:focus {
-		background-color: var( --wp--preset--color--primary-emphasis );
+		background-color: var( --wp--preset--color--primary-950 );
 	}
 }

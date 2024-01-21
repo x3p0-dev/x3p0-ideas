@@ -29,11 +29,11 @@
 			}
 		}
 	},
-	"backgroundColor":"primary-contrast",
+	"backgroundColor":"primary-700",
 	"textColor":"base",
 	"layout":{"type":"default"}
 } -->
-<div class="wp-block-group alignfull has-base-color has-primary-contrast-background-color has-text-color has-background has-link-color" style="padding-top:var(--wp--preset--spacing--base);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--base);padding-left:var(--wp--preset--spacing--plus-3)">
+<div class="wp-block-group alignfull has-base-color has-primary-700-background-color has-text-color has-background has-link-color" style="padding-top:var(--wp--preset--spacing--base);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--base);padding-left:var(--wp--preset--spacing--plus-3)">
 	<!-- wp:paragraph {
 		"placeholder":"<?= esc_attr__('Write your banner text...', 'x3p0-ideas') ?>"
 	} -->

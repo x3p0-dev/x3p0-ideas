@@ -22,7 +22,7 @@ a {
 
 	&:hover img {
 		box-shadow:
-		0 0 16px -3px var(--wp--preset--color--neutral-muted);
+		0 0 16px -3px var(--wp--preset--color--neutral-500);
 	}
 }
 
@@ -38,8 +38,8 @@ abbr[title] {
 	font-family: var( --wp--preset--font-family--mono );
 	font-size: clamp( var( --wp--preset--font-size--xs ), 0.8125em, 0.8125em );
 	font-weight: 600;
-	color: var( --wp--preset--color--neutral-emphasis, inherit );
-	background: var( --wp--preset--color--neutral-base, inherit );
+	color: var( --wp--preset--color--neutral-950, inherit );
+	background: var( --wp--preset--color--neutral-50, inherit );
 }
 
 kbd {
@@ -48,16 +48,16 @@ kbd {
 	font-family: var( --wp--preset--font-family--mono );
 	font-size: clamp( var( --wp--preset--font-size--xs ), 0.8125em, 0.8125em );
 	color: var( --wp--preset--color--contrast );
-	border: 1px solid var( --wp--preset--color--neutral-muted );
+	border: 1px solid var( --wp--preset--color--neutral-500 );
 	border-radius: 0.25rem;
 	box-shadow: var( --wp--preset--shadow--sm );
 }
 
 ins {
 	padding: 0.125em 0;
-	color: var( --wp--preset--color--positive-contrast );
-	background: var( --wp--preset--color--positive-base );
-	border-bottom: 1px solid var( --wp--preset--color--positive-muted );
+	color: var( --wp--preset--color--primary-900 );
+	background: var( --wp--preset--color--neutral-50 );
+	border-bottom: 2px solid var( --wp--preset--color--primary-700);
 	text-decoration: none;
 }
 
@@ -67,8 +67,8 @@ mark {
 
 // Style <mark> elements but avoid WP's "highlight" rich text element.
 mark:where( :not( .has-inline-color ):not( [style] ) ) {
-	color: var( --wp--preset--color--neutral-emphasis, inherit );
-	background: var( --wp--preset--color--neutral-subtle, inherit );
+	color: var( --wp--preset--color--neutral-950, inherit );
+	background: var( --wp--preset--color--neutral-100, inherit );
 }
 
 :where( h1, h2, h3, h4, h5 h6 ) > mark {
@@ -78,9 +78,9 @@ mark:where( :not( .has-inline-color ):not( [style] ) ) {
 
 del,
 s {
-	color: var( --wp--preset--color--negative-muted );
-	text-decoration-color: var( --wp--preset--color--negative-contrast );
-	text-decoration-thickness: 2px;
+	color: var( --wp--preset--color--neutral-300 );
+	text-decoration-color: var( --wp--preset--color--primary-700 );
+	text-decoration-thickness: clamp( 2px, 0.125em, 0.125em );
 }
 
 sup,

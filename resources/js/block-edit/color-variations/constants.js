@@ -33,20 +33,20 @@ export const VARIATIONS = {
 	'neutral':   __( 'Neutral',  'x3p0-ideas'  ),
 	'primary':   __( 'Primary',  'x3p0-ideas'  ),
 	'secondary': __( 'Secondary', 'x3p0-ideas' ),
-	'tertiary':  __( 'Tertiary',  'x3p0-ideas' ),
-	'positive':  __( 'Positive', 'x3p0-ideas'  ),
-	'negative':  __( 'Negative', 'x3p0-ideas'  )
+	'tertiary':  __( 'Tertiary',  'x3p0-ideas' )
 };
 
 /**
  * @description Color shades that are paired with each variation (e.g.,
- * `primary-base`, `primary-subtle`, etc.)
+ * `primary-50`, `primary-100`, etc.)
  * @type {array}
  */
 export const COLOR_SHADES = [
-	'base',
-	'subtle',
-	'muted',
-	'contrast',
-	'emphasis'
+	'50',
+	'100',
+	'300',
+	'500',
+	'700',
+	'900',
+	'950'
 ];

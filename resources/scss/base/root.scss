@@ -13,13 +13,13 @@
 }
 
 ::selection {
-	color: var( --color-base, var( --wp--preset--color--primary-base ) );
-	background: var( --color-contrast, var( --wp--preset--color--primary-contrast ) );
+	color: var( --color-base, var( --wp--preset--color--primary-50 ) );
+	background: var( --color-contrast, var( --wp--preset--color--primary-700 ) );
 }
 
-.has-primary-contrast-background-color ::selection {
-	color: var( --color-base, var( --wp--preset--color--primary-contrast ) );
-	background: var( --color-contrast, var( --wp--preset--color--primary-base ) );
+.has-primary-700-background-color ::selection {
+	color: var( --color-base, var( --wp--preset--color--primary-700 ) );
+	background: var( --color-contrast, var( --wp--preset--color--primary-50 ) );
 }
 
 // No way to target this wrapper in `theme.json`, so we're canceling the block

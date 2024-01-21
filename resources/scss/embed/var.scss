@@ -27,10 +27,10 @@
 	--color: var( --wp--custom--embed--color, var( --wp--preset--color--contrast ) );
 	--background: var( --wp--custom--embed--background, var( --wp--preset--color--base ) );
 	--link-color: var( --wp--custom--embed--link-color, currentColor );
-	--link-hover-color: var( --wp--custom--embed--link-hover-color, var( --wp--preset--color--primary-contrast ) );
+	--link-hover-color: var( --wp--custom--embed--link-hover-color, var( --wp--preset--color--primary-700 ) );
 
 	// Border and shadow.
-	--border-color: var( --wp--custom--embed--border-color, var( --wp--preset--color--neutral-subtle ) );
+	--border-color: var( --wp--custom--embed--border-color, var( --wp--preset--color--neutral-100 ) );
 	--border-style: var( --wp--custom--embed--border-style, solid );
 	--border-width: var( --wp--custom--embed--border-width, 1px );
 	--border-radius: var( --wp--custom--embed--border-radius, var( --wp--custom--defaults--border-radius ) );

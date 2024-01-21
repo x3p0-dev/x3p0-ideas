@@ -70,7 +70,7 @@
 
 // Use negative color (generally red) for required marker.
 .wp-block-post-comments-form .required {
-	color: var( --wp--preset--color--negative-contrast );
+	color: var( --wp--preset--color--primary-700 );
 }
 
 // Overwrites WP's default form field padding with a theme spacing size.

@@ -31,10 +31,10 @@ $icons = [
 			}
 		}
 	},
-	"gradient":"90-deg-primary-base-transparent",
+	"gradient":"90-deg-primary-50-transparent",
 	"layout":{"type":"constrained"}
 } -->
-<section class="wp-block-group alignfull has-90-deg-primary-base-transparent-gradient-background has-background" style="padding-top:var(--wp--preset--spacing--plus-4);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-4);padding-left:var(--wp--preset--spacing--plus-3)">
+<section class="wp-block-group alignfull has-90-deg-primary-50-transparent-gradient-background has-background" style="padding-top:var(--wp--preset--spacing--plus-4);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-4);padding-left:var(--wp--preset--spacing--plus-3)">
 
 	<!-- wp:group {
 		"tagName":"header",
@@ -78,7 +78,7 @@ $icons = [
 					},
 					"border":{
 						"top":{
-							"color":"var:preset|color|primary-contrast",
+							"color":"var:preset|color|primary-700",
 							"width":"4px"
 						}
 					}
@@ -87,7 +87,7 @@ $icons = [
 				"className":"is-style-card",
 				"layout":{"type":"default"}
 			} -->
-			<div class="wp-block-group is-style-card has-180-deg-transparent-base-gradient-background has-background" style="border-top-color:var(--wp--preset--color--primary-contrast);border-top-width:4px;padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-1);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-1)">
+			<div class="wp-block-group is-style-card has-180-deg-transparent-base-gradient-background has-background" style="border-top-color:var(--wp--preset--color--primary-700);border-top-width:4px;padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-1);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-1)">
 
 				<!-- wp:image {
 					"lightbox":{"enabled":false},
