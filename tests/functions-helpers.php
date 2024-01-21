@@ -19,7 +19,7 @@ namespace X3P0\Ideas\Tests;
 function bootstrap(): void
 {
 	// Only run tests when in development mode.
-	if (! wp_is_development_mode('theme') || ! wp_is_development_mode('all')) {
+	if (! wp_is_development_mode('theme')) {
 		return;
 	}
 
