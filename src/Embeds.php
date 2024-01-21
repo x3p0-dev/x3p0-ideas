@@ -155,6 +155,7 @@ class Embeds implements Bootable
 				<a href="%s" target="_top">%s<span>%s</span></a>
 			</div>',
 			esc_url(home_url()),
+			// phpcs:ignore WordPress.WP.CapitalPDangit
 			block_core_social_link_get_icon('wordpress'),
 			esc_html(get_bloginfo('name'))
 		);

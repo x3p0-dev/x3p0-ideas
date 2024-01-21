@@ -36,4 +36,12 @@ body {
 	--theme-spacing--plus-8:  clamp( 1.86rem,  22.9cqi + -5.81rem,  8.85rem );
 	--theme-spacing--plus-9:  clamp( 1.86rem,  29.4cqi + -7.76rem, 11.06rem );
 	--theme-spacing--plus-10: clamp( 1.86rem, 37.53cqi + -10.2rem, 13.82rem );
+
+	// We disable WordPress' default font sizes in favor of our own. But,
+	// because users may have used these sizes in the past, we map them to
+	// the theme's custom sizes.
+	--wp--preset--font-size--small: var(--wp--preset--font-size--xs);
+	--wp--preset--font-size--medium: var(--wp--preset--font-size--md);
+	--wp--preset--font-size--large: var(--wp--preset--font-size--2-xl);
+	--wp--preset--font-size--x-large: var(--wp--preset--font-size--3-xl);
 }

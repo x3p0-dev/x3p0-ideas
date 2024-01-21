@@ -41,14 +41,15 @@ function theme(string $component = '')
 		// Bind instances of the theme's component classes that need to
 		// be booted when the theme launches.
 		$bindings = [
-			'blocks'    => new Blocks($block_types, $block_rules, $view_engine),
-			'editor'    => new Editor(),
-			'embeds'    => new Embeds(),
-			'frontend'  => new Frontend(),
-			'media'     => new Media(),
-			'parts'     => new Parts(),
-			'patterns'  => new Patterns($block_types),
-			'templates' => new Templates()
+			'blocks'     => new Blocks($block_types, $block_rules, $view_engine),
+			'editor'     => new Editor(),
+			'embeds'     => new Embeds(),
+			'frontend'   => new Frontend(),
+			'media'      => new Media(),
+			'parts'      => new Parts(),
+			'patterns'   => new Patterns($block_types),
+			'templates'  => new Templates(),
+			'theme-json' => new ThemeJson()
 		];
 
 		// Boot each of the components.

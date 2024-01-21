@@ -23,6 +23,27 @@
 .has-xs-font-size   { line-height: var( --wp--custom--line-height--xs ); }
 .has-2-xs-font-size { line-height: var( --wp--custom--line-height--2-xs ); }
 
+// Line height fixes for core-defined font sizes.
+.has-x-large-font-size {
+	font-size: var(--wp--preset--font-size--3-xl) !important;
+	line-height: var(--wp--custom--line-height--3-xl);
+}
+
+.has-large-font-size {
+	font-size: var(--wp--preset--font-size--2-xl) !important;
+	line-height: var(--wp--custom--line-height--2-xl);
+}
+
+.has-medium-size {
+	font-size: var(--wp--preset--font-size--md) !important;
+	line-height: var(--wp--custom--line-height--md);
+}
+
+.has-small-font-size {
+	font-size: var(--wp--preset--font-size--xs) !important;
+	line-height: var(--wp--custom--line-height--xs);
+}
+
 body:not( .editor-styles-wrapper ) .has-screen-reader-text {
 	clip: rect( 1px, 1px, 1px, 1px );
 	word-wrap: normal!important;
