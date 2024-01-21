@@ -35,7 +35,7 @@
 	</p>
 	<!-- /wp:paragraph -->
 
-	<!-- wp:table-of-contents /-->
+	<!-- wp:table-of-contents {"className":"is-style-pull"} /-->
 
 </div>
 <!-- /wp:group -->
