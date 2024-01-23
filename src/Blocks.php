@@ -186,17 +186,13 @@ class Blocks implements Bootable
 	 * Really hacky method to replace the arrows in the calendar to match
 	 * the theme's arrows.
 	 *
-	 * @hook  render_block
+	 * @hook  render_block_core/calendar
 	 * @since 1.0.0
 	 */
 	public function renderCoreCalendar(
 		string $block_content,
 		array $block
 	): string {
-		if ('core/calendar' !== $block['blockName']) {
-			return $block_content;
-		}
-
 		return str_replace(
 			[ '&raquo;', '&laquo;' ],
 			[ '&rarr;',  '&larr;'  ],
@@ -208,7 +204,7 @@ class Blocks implements Bootable
 	 * Filters the post content block when viewing single attachment views
 	 * and returns block-based media content.
 	 *
-	 * @hook  render_block
+	 * @hook  render_block_core/post-content
 	 * @since 1.0.0
 	 */
 	public function renderCorePostContent(
@@ -219,8 +215,7 @@ class Blocks implements Bootable
 		// Bail early if there's no post ID or not specifically viewing
 		// the attachment page for this specific post.
 		if (
-			'core/post-content' !== $block['blockName']
-			|| empty($instance->context['postId'])
+			empty($instance->context['postId'])
 			|| ! is_attachment($instance->context['postId'])
 		) {
 			return $block_content;
