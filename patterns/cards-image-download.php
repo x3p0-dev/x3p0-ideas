@@ -59,7 +59,17 @@ $image = get_theme_file_uri('public/media/images/purple-sunset.webp');
 
 			<!-- wp:group {
 				"metadata":{"name":"<?= esc_attr__('Card', 'x3p0-ideas') ?>"},
-				"style":{"spacing":{"blockGap":"0"}},
+				"style":{
+					"spacing":{
+						"padding":{
+							"top":"0",
+							"bottom":"0",
+							"left":"0",
+							"right":"0"
+						},
+						"blockGap":"0"
+					}
+				},
 				"gradient":"180-deg-transparent-base",
 				"className":"is-style-card",
 				"layout":{
@@ -70,7 +80,7 @@ $image = get_theme_file_uri('public/media/images/purple-sunset.webp');
 				},
 				"fontSize":"sm"
 			} -->
-			<div class="wp-block-group is-style-card has-180-deg-transparent-base-gradient-background has-background has-sm-font-size">
+			<div class="wp-block-group is-style-card has-180-deg-transparent-base-gradient-background has-background has-sm-font-size" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 
 				<!-- wp:image {
 					"lightbox":{"enabled":false},
@@ -78,9 +88,10 @@ $image = get_theme_file_uri('public/media/images/purple-sunset.webp');
 					"scale":"cover",
 					"sizeSlug":"x3p0-16x9-lg",
 					"linkDestination":"none",
-					"style":{"border":{"radius":"0px"}}
+					"style":{"border":{"radius":"0px"}},
+					"className":"is-style-borderless"
 				} -->
-				<figure class="wp-block-image size-x3p0-16x9-lg has-custom-border">
+				<figure class="wp-block-image size-x3p0-16x9-lg has-custom-border is-style-borderless">
 					<img src="<?= esc_url($image) ?>" alt="" style="border-radius:0px;aspect-ratio:16/9;object-fit:cover"/>
 				</figure>
 				<!-- /wp:image -->

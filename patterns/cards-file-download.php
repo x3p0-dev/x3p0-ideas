@@ -75,7 +75,15 @@ $download = get_theme_file_uri('public/media/images/purple-sunset.webp');
 							"width":"4px"
 						}
 					},
-					"spacing":{"blockGap":"0"}
+					"spacing":{
+						"padding":{
+							"top":"0",
+							"bottom":"0",
+							"left":"0",
+							"right":"0"
+						},
+						"blockGap":"0"
+					}
 				},
 				"gradient":"180-deg-transparent-base",
 				"className":"is-style-card",
@@ -87,7 +95,7 @@ $download = get_theme_file_uri('public/media/images/purple-sunset.webp');
 				},
 				"fontSize":"sm"
 			} -->
-			<div class="wp-block-group is-style-card has-180-deg-transparent-base-gradient-background has-background has-sm-font-size" style="border-top-color:var(--wp--preset--color--primary-700);border-top-width:4px">
+			<div class="wp-block-group is-style-card has-180-deg-transparent-base-gradient-background has-background has-sm-font-size" style="border-top-color:var(--wp--preset--color--primary-700);border-top-width:4px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 
 				<!-- wp:group {
 					"metadata":{"name":"<?= esc_attr__('Card Content', 'x3p0-ideas') ?>"},

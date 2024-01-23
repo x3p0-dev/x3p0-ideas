@@ -57,15 +57,7 @@
 			<!-- wp:group {
 				"metadata":{"name":"<?= esc_attr__('Card', 'x3p0-ideas') ?>"},
 				"style":{
-					"spacing":{
-						"padding":{
-							"left":"var:preset|spacing|plus-3",
-							"right":"var:preset|spacing|plus-3",
-							"top":"var:preset|spacing|plus-3",
-							"bottom":"var:preset|spacing|plus-3"
-						},
-						"blockGap":"var:preset|spacing|base"
-					},
+					"spacing":{"blockGap":"var:preset|spacing|base"},
 					"border":{
 						"top":{
 							"color":"var:preset|color|primary-700",
@@ -83,7 +75,7 @@
 				},
 				"fontSize":"sm"
 			} -->
-			<div class="wp-block-group is-style-card has-neutral-500-color has-180-deg-transparent-base-gradient-background has-text-color has-background has-sm-font-size" style="border-top-color:var(--wp--preset--color--primary-700);border-top-width:0.25rem;padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
+			<div class="wp-block-group is-style-card has-neutral-500-color has-180-deg-transparent-base-gradient-background has-text-color has-background has-sm-font-size" style="border-top-color:var(--wp--preset--color--primary-700);border-top-width:0.25rem">
 
 				<!-- wp:avatar {
 					"userId":1,

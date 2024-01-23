@@ -11,7 +11,7 @@
 
 // Row blocks within Stack blocks lose their width and collapse. This breaks
 // the content justification set for the nested Row.
-.wp-block-group-is-layout-flex.is-vertical > :where( .wp-block-group-is-layout-flex:not( .is-vertical ) ) {
+.wp-block-group-is-layout-flex.is-vertical > :where(.wp-block-group-is-layout-flex:not(.is-vertical)) {
 	width: 100%;
 }
 
@@ -37,16 +37,19 @@
 // -----------------------------------------------------------------------------
 
 ///
-/// Shared styles for boxed and card styles. Move style rules to `theme.json`
-/// with support.
+/// Shared CSS for variations that have a "boxed" design. Move style rules to
+/// `theme.json` with support.
+///
+/// We must use the `:is()` selector here to overrule global padding styles.
 ///
 /// @link      https://github.com/WordPress/gutenberg/pull/56540
 /// @wordpress 6.5
 ///
-.wp-block-group:where( .is-style-box, .is-style-card ) {
+.wp-block-group:is(.is-style-box, .is-style-card, .is-style-hand-drawn) {
 	overflow: hidden;
-	border-radius: var( --wp--custom--global--border-radius, 0 );
-	box-shadow: var( --wp--custom--global--shadow );
+	padding: var(--wp--style--block-gap);
+	border-radius: var(--wp--custom--global--border-radius, 0);
+	box-shadow: var(--wp--custom--global--shadow);
 }
 
 ///
@@ -56,10 +59,8 @@
 /// @link      https://github.com/WordPress/gutenberg/pull/56540
 /// @wordpress 6.5
 ///
-.wp-block-group.is-style-box,
-.editor-styles-wrapper .wp-block-group.is-style-box {
-	padding: var( --wp--style--block-gap );
-	background: var( --wp--preset--color--neutral-50 );
+.wp-block-group.is-style-box {
+	background: var(--wp--preset--color--neutral-50);
 }
 
 ///
@@ -73,7 +74,10 @@
 .wp-block-group.is-style-card {
 	border: var(--wp--custom--global--border-width, 1px)
 		var(--wp--custom--global--border-style, solid)
-		var(--wp--custom--global--border-color, var( --wp--preset--color--neutral-100 ));
+		var(
+			--wp--custom--global--border-color,
+			var(--wp--preset--color--neutral-100)
+		);
 }
 
 ///
@@ -84,11 +88,8 @@
 /// @wordpress 6.5
 ///
 .wp-block-group.is-style-hand-drawn {
-	overflow: hidden;
-	font-family: var( --wp--preset--font-family--handwriting );
-	padding: var( --wp--custom--spacing--global );
+	font-family: var(--wp--preset--font-family--handwriting);
 	border: 2px solid currentColor;
-	box-shadow: var( --wp--custom--global--shadow );
 
 	// No `theme.json` support for this style of radius.
 	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;

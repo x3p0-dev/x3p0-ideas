@@ -62,7 +62,15 @@ $image = get_theme_file_uri('public/media/images/default-16x9.webp');
 			<!-- wp:group {
 				"metadata":{"name":"<?= esc_attr__('Card', 'x3p0-ideas') ?>"},
 				"style":{
-					"spacing":{"blockGap":"0"},
+					"spacing":{
+						"padding":{
+							"top":"0",
+							"bottom":"0",
+							"left":"0",
+							"right":"0"
+						},
+						"blockGap":"0"
+					},
 					"dimensions":{"minHeight":"100%"}
 				},
 				"gradient":"180-deg-transparent-base",
@@ -76,7 +84,7 @@ $image = get_theme_file_uri('public/media/images/default-16x9.webp');
 				},
 				"fontSize":"sm"
 			} -->
-			<div class="wp-block-group is-style-card has-180-deg-transparent-base-gradient-background has-background has-sm-font-size" style="min-height:100%">
+			<div class="wp-block-group is-style-card has-180-deg-transparent-base-gradient-background has-background has-sm-font-size" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;min-height:100%">
 
 				<!-- wp:group {
 					"style":{"spacing":{"blockGap":"0"}},
@@ -89,9 +97,10 @@ $image = get_theme_file_uri('public/media/images/default-16x9.webp');
 						"scale":"cover",
 						"sizeSlug":"full",
 						"linkDestination":"none",
-						"style":{"border":{"radius":"0px"}}
+						"style":{"border":{"radius":"0px"}},
+						"className":"is-style-borderless"
 					} -->
-					<figure class="wp-block-image size-full has-custom-border"><img src="<?= esc_url($image) ?>" alt="" style="border-radius:0px;aspect-ratio:4/3;object-fit:cover"/></figure>
+					<figure class="wp-block-image size-full has-custom-border is-style-borderless"><img src="<?= esc_url($image) ?>" alt="" style="border-radius:0px;aspect-ratio:4/3;object-fit:cover"/></figure>
 					<!-- /wp:image -->
 
 					<!-- wp:group {

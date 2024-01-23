@@ -59,13 +59,21 @@
 				"tagName":"article",
 				"metadata":{"name":"<?= esc_attr__('Post', 'x3p0-ideas') ?>"},
 				"style":{
-					"spacing":{"blockGap":"0"},
+					"spacing":{
+						"padding":{
+							"top":"0",
+							"bottom":"0",
+							"left":"0",
+							"right":"0"
+						},
+						"blockGap":"0"
+					},
 					"dimensions":{"minHeight":"100%"}
 				},
 				"className":"is-style-card",
 				"layout":{"type":"flex","orientation":"vertical"}
 			} -->
-			<article class="wp-block-group is-style-card" style="min-height:100%">
+			<article class="wp-block-group is-style-card" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;min-height:100%">
 
 				<!-- wp:post-featured-image {
 					"isLink":true,
