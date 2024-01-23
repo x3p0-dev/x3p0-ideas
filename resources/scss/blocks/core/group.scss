@@ -70,7 +70,9 @@
 /// @wordpress 6.5
 ///
 .wp-block-group.is-style-card {
-	border: 1px solid var( --wp--preset--color--neutral-100 );
+	border: var(--wp--custom--defaults--border-width, 1px)
+		var(--wp--custom--defaults--border-style, solid)
+		var(--wp--custom--defaults--border-color, var( --wp--preset--color--neutral-100 ));
 }
 
 ///

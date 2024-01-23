@@ -47,6 +47,9 @@
 	font-size: var( --wp--preset--font-size--xs );
 	font-weight: 500;
 	letter-spacing: 0.0625em;
+}
+
+:where( .wp-block-social-links:is( .has-large-icon-size, .has-huge-icon-size ) ) {
 	text-transform: uppercase;
 }
 

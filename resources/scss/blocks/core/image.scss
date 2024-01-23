@@ -43,6 +43,16 @@
 	border-radius: var( --wp--custom--defaults--border-radius );
 }
 
+// Match hover background with that defined by `a img:hover`.
+.wp-lightbox-container img {
+	transition: box-shadow 0.5s ease-in-out;
+
+	&:hover {
+		box-shadow:
+		0 0 16px -3px var(--wp--preset--color--neutral-500);
+	}
+}
+
 // Lightbox trigger button positioning to match the theme's spacing.
 .wp-lightbox-container .lightbox-trigger {
 	top: var( --wp--preset--spacing--minus-2 ) !important;

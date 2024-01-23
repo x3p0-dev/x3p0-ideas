@@ -17,7 +17,10 @@
 
 	color: var( --color-contrast );
 	background: var( --color-base );
-	border: 1px solid var( --color-subtle );
+	border: var(--wp--custom--defaults--border-width, 1px)
+		var(--wp--custom--defaults--border-style, solid)
+		var(--wp--custom--defaults--border-color, var(--color-subtle));
+
 	border-radius: var( --wp--custom--defaults--border-radius );
 	box-shadow: var( --wp--custom--defaults--shadow );
 
@@ -93,7 +96,10 @@
 .has-color-var-neutral {
 	color: var( --wp--preset--color--neutral-900 );
 	background: var( --wp--preset--color--neutral-50 );
-	border: 1px solid var( --wp--preset--color--neutral-100 );
+	border: var(--wp--custom--defaults--border-width, 1px)
+		var(--wp--custom--defaults--border-style, solid)
+		var(--wp--custom--defaults--border-color, var(--wp--preset--color--neutral-100));
+
 	border-radius: var( --wp--custom--defaults--border-radius );
 	box-shadow: var( --wp--custom--defaults--shadow );
 

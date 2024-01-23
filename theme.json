@@ -5,6 +5,26 @@
 		"background": {
 			"backgroundImage": true
 		},
+		"blocks": {
+			"core/image": {
+				"lightbox": {
+					"allowEditing": true,
+					"enabled": true
+				}
+			},
+			"core/navigation-submenu": {
+				"custom": {
+					"color": "var( --wp--preset--color--contrast )",
+					"background": "var( --wp--preset--color--base )",
+					"border": "2px solid var( --wp--preset--color--neutral-900 )",
+					"border-radius": "var( --wp--custom--defaults--border-radius )",
+					"link-color": "inherit",
+					"link-background": "inherit",
+					"link-hover-color": "inherit",
+					"link-hover-background": "var( --wp--preset--color--neutral-50 )"
+				}
+			}
+		},
 		"border": {
 			"color": true,
 			"radius": true,
@@ -300,29 +320,9 @@
 					"name": "Contrast"
 				},
 				{
-					"slug": "primary-50",
-					"color": "#f0f8fe",
-					"name": "Primary: 50"
-				},
-				{
-					"slug": "primary-100",
-					"color": "#ddeffc",
-					"name": "Primary: 100"
-				},
-				{
-					"slug": "primary-300",
-					"color": "#99d5f7",
-					"name": "Primary: 300"
-				},
-				{
-					"slug": "primary-500",
-					"color": "#45a1ec",
-					"name": "Primary: 500"
-				},
-				{
-					"slug": "primary-700",
-					"color": "#2770ce",
-					"name": "Primary: 700"
+					"slug": "primary-950",
+					"color": "#1a3151",
+					"name": "Primary: 950"
 				},
 				{
 					"slug": "primary-900",
@@ -330,39 +330,29 @@
 					"name": "Primary: 900"
 				},
 				{
-					"slug": "primary-950",
-					"color": "#1a3151",
-					"name": "Primary: 950"
+					"slug": "primary-700",
+					"color": "#2770ce",
+					"name": "Primary: 700"
 				},
 				{
-					"slug": "secondary-50",
-					"color": "#fbf4ff",
-					"name": "Secondary: 50"
+					"slug": "primary-500",
+					"color": "#45a1ec",
+					"name": "Primary: 500"
 				},
 				{
-					"slug": "secondary-100",
-					"color": "#f5e6ff",
-					"name": "Secondary: 100"
+					"slug": "primary-300",
+					"color": "#99d5f7",
+					"name": "Primary: 300"
 				},
 				{
-					"slug": "secondary-300",
-					"color": "#ddaeff",
-					"name": "Secondary: 300"
+					"slug": "primary-100",
+					"color": "#ddeffc",
+					"name": "Primary: 100"
 				},
 				{
-					"slug": "secondary-500",
-					"color": "#b447ff",
-					"name": "Secondary: 500"
-				},
-				{
-					"slug": "secondary-700",
-					"color": "#8c13dd",
-					"name": "Secondary: 700"
-				},
-				{
-					"slug": "secondary-900",
-					"color": "#611390",
-					"name": "Secondary: 900"
+					"slug": "primary-50",
+					"color": "#f0f8fe",
+					"name": "Primary: 50"
 				},
 				{
 					"slug": "secondary-950",
@@ -370,29 +360,39 @@
 					"name": "Secondary: 950"
 				},
 				{
-					"slug": "neutral-50",
-					"color": "#f4f6fb",
-					"name": "Neutral: 50"
+					"slug": "secondary-900",
+					"color": "#611390",
+					"name": "Secondary: 900"
 				},
 				{
-					"slug": "neutral-100",
-					"color": "#e9edf5",
-					"name": "Neutral: 100"
+					"slug": "secondary-700",
+					"color": "#8c13dd",
+					"name": "Secondary: 700"
 				},
 				{
-					"slug": "neutral-300",
-					"color": "#a3bbd6",
-					"name": "Neutral: 300"
+					"slug": "secondary-500",
+					"color": "#b447ff",
+					"name": "Secondary: 500"
 				},
 				{
-					"slug": "neutral-500",
-					"color": "#4f78a8",
-					"name": "Neutral: 500"
+					"slug": "secondary-300",
+					"color": "#ddaeff",
+					"name": "Secondary: 300"
 				},
 				{
-					"slug": "neutral-700",
-					"color": "#324d72",
-					"name": "Neutral: 700"
+					"slug": "secondary-100",
+					"color": "#f5e6ff",
+					"name": "Secondary: 100"
+				},
+				{
+					"slug": "secondary-50",
+					"color": "#fbf4ff",
+					"name": "Secondary: 50"
+				},
+				{
+					"slug": "neutral-950",
+					"color": "#1e293b",
+					"name": "Neutral: 950"
 				},
 				{
 					"slug": "neutral-900",
@@ -400,13 +400,34 @@
 					"name": "Neutral: 900"
 				},
 				{
-					"slug": "neutral-950",
-					"color": "#1e293b",
-					"name": "Neutral: 950"
+					"slug": "neutral-700",
+					"color": "#324d72",
+					"name": "Neutral: 700"
+				},
+				{
+					"slug": "neutral-500",
+					"color": "#4f78a8",
+					"name": "Neutral: 500"
+				},
+				{
+					"slug": "neutral-300",
+					"color": "#a3bbd6",
+					"name": "Neutral: 300"
+				},
+				{
+					"slug": "neutral-100",
+					"color": "#e9edf5",
+					"name": "Neutral: 100"
+				},
+				{
+					"slug": "neutral-50",
+					"color": "#f4f6fb",
+					"name": "Neutral: 50"
 				}
 			]
 		},
 		"custom": {
+			"variation": "ideas-experiments-and-things",
 			"defaults": {
 				"borderRadius": "6px",
 				"shadow": "var( --wp--preset--shadow--sm )",
@@ -420,28 +441,16 @@
 					"placeholderColor": "var:preset|color|neutral-500"
 				}
 			},
-			"blocks": {
-				"navigation-submenu": {
-					"color": "var( --wp--preset--color--contrast )",
-					"background": "var( --wp--preset--color--base )",
-					"border": "2px solid var( --wp--preset--color--neutral-900 )",
-					"border-radius": "var( --wp--custom--defaults--border-radius )",
-					"link-color": "inherit",
-					"link-background": "inherit",
-					"link-hover-color": "inherit",
-					"link-hover-background": "var( --wp--preset--color--neutral-50 )"
-				}
-			},
 			"lineHeight": {
 				"2-xs": "1.625",
 				"xs": "1.625",
-				"sm": "1.5",
-				"md": "calc( 3ex + 4px )",
-				"lg": "calc( 3ex + 4px )",
-				"xl": "calc( 2.5625ex + 4px )",
-				"2-xl": "calc( 2.5ex + 4px )",
-				"3-xl": "calc( 2.25ex + 4px )",
-				"4-xl": "calc( 2ex + 4px )",
+				"sm": "1.625",
+				"md": "1.67",
+				"lg": "1.5",
+				"xl": "1.4",
+				"2-xl": "1.2",
+				"3-xl": "1.2",
+				"4-xl": "1.2",
 				"5-xl": "1.0625",
 				"6-xl": "1.03125",
 				"7-xl": "1.015625"
@@ -736,15 +745,7 @@
 			"textTransform": true,
 			"writingMode": true
 		},
-		"useRootPaddingAwareAlignments": true,
-		"blocks": {
-			"core/image": {
-				"lightbox": {
-					"allowEditing": true,
-					"enabled": true
-				}
-			}
-		}
+		"useRootPaddingAwareAlignments": true
 	},
 	"styles": {
 		"color": {
@@ -774,7 +775,7 @@
 					"width": "2px"
 				},
 				"color": {
-					"text": "var:preset|color|white",
+					"text": "var:preset|color|base",
 					"background": "var:preset|color|primary-700"
 				},
 				"outline": {

@@ -12,15 +12,13 @@
 			"composer dump-autoload"
 		],
 		"prod": [
-			"composer var:none",
+			"composer config extra.x3p0.variation \"\"",
 			"composer update --no-dev",
 			"composer dump-autoload -o --no-dev"
 		],
 		"lint:php": "./vendor/bin/phpcs -s --colors .",
 		"zip": "composer archive --file=x3p0-ideas",
-		"var:none": "composer config extra.x3p0.variation \"\"",
-		"var:default": "composer config extra.x3p0.variation \"default\"",
-		"var:bookish": "composer config extra.x3p0.variation \"a-little-bit-bookish\""
+		"var": "composer config extra.x3p0.variation"
 	},
 	"extra": {
 		"x3p0": {

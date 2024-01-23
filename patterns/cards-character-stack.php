@@ -24,14 +24,14 @@ $image = get_theme_file_uri('public/media/images/default-16x9.webp');
 			}
 		}
 	},
-	"gradient":"90-deg-primary-50-transparent",
+	"gradient":"90-deg-neutral-50-transparent",
 	"layout":{
 		"type":"constrained",
 		"contentSize":"40rem",
 		"wideSize":"80rem"
 	}
 } -->
-<section class="wp-block-group alignfull has-90-deg-primary-50-transparent-gradient-background has-background" style="padding-top:var(--wp--preset--spacing--plus-4);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-4);padding-left:var(--wp--preset--spacing--plus-3)">
+<section class="wp-block-group alignfull has-90-deg-neutral-50-transparent-gradient-background has-background" style="padding-top:var(--wp--preset--spacing--plus-4);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-4);padding-left:var(--wp--preset--spacing--plus-3)">
 
 	<!-- wp:group {
 		"tagName":"header",

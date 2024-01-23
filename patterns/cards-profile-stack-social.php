@@ -23,10 +23,10 @@
 			}
 		}
 	},
-	"gradient":"90-deg-primary-50-transparent",
+	"gradient":"90-deg-neutral-50-transparent",
 	"layout":{"type":"constrained"}
 } -->
-<section class="wp-block-group alignfull has-90-deg-primary-50-transparent-gradient-background has-background" style="padding-top:var(--wp--preset--spacing--plus-4);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-4);padding-left:var(--wp--preset--spacing--plus-3)">
+<section class="wp-block-group alignfull has-90-deg-neutral-50-transparent-gradient-background has-background" style="padding-top:var(--wp--preset--spacing--plus-4);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-4);padding-left:var(--wp--preset--spacing--plus-3)">
 
 	<!-- wp:group {
 		"tagName":"header",
