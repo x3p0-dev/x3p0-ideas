@@ -56,7 +56,8 @@
 /// @link      https://github.com/WordPress/gutenberg/pull/56540
 /// @wordpress 6.5
 ///
-.wp-block-group.is-style-box {
+.wp-block-group.is-style-box,
+.editor-styles-wrapper .wp-block-group.is-style-box {
 	padding: var( --wp--style--block-gap );
 	background: var( --wp--preset--color--neutral-50 );
 }

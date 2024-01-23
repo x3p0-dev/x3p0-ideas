@@ -39,7 +39,9 @@ import {
  * 	setAttributes={props.setAttributes}
  * />
  */
-export default ( { attributes: { className }, setAttributes } ) => {
+export default ( { attributes, setAttributes } ) => {
+
+	const { className } = attributes;
 	// Get the variation colors.
 	const variationColors = useVariationColors();
 
@@ -55,6 +57,35 @@ export default ( { attributes: { className }, setAttributes } ) => {
 		</Flex> )
 	);
 
+	// Update color attributes.
+	const updateAttributes = ( variation ) => {
+
+		const newClass = updateVariationClass(
+			className,
+			variation,
+			currentVariation
+		);
+
+		if ( 'default' === variation ) {
+			setAttributes({
+				borderColor: false,
+				backgroundColor: false,
+				textColor: false,
+				gradient: false,
+				className: newClass
+			});
+			return;
+		}
+
+		setAttributes({
+			borderColor: `${variation}-100`,
+			backgroundColor: `${variation}-50`,
+			textColor: `${variation}-900`,
+			gradient: false,
+			className: newClass
+		});
+	}
+
 	// Builds a menu item for a variation.
 	const variationMenuItem = ( variation, index ) => {
 		const colorIndicators = indicators( variation );
@@ -68,13 +99,7 @@ export default ( { attributes: { className }, setAttributes } ) => {
 				className="x3p0-color-var-picker__button"
 				isSelected={ currentVariation === value }
 				isPressed={ currentVariation === value }
-				onClick={ () => setAttributes( {
-					className: updateVariationClass(
-						className,
-						value,
-						currentVariation
-					)
-				} ) }
+				onClick={ () => updateAttributes( variation ) }
 			>
 				<HStack>
 					<ZStack

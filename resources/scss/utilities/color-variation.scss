@@ -5,21 +5,9 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
-// Must overwrite global padding in the editor, so keep the `.has-global-padding`
-// version of this.
-[class*=has-color-var-],
-[class*=has-color-var-].has-global-padding {
-	padding: var( --wp--style--block-gap );
-}
-
-[class*=has-color-var-]:where( :not( .has-color-var-neutral ) ),
-[class*=has-color-var-] .has-color-var-neutral {
-
-	color: var( --color-contrast );
-	background: var( --color-base );
-	border: var(--wp--custom--defaults--border-width, 1px)
-		var(--wp--custom--defaults--border-style, solid)
-		var(--wp--custom--defaults--border-color, var(--color-subtle));
+:where([class*="900-color"][class*="50-background-color"][class*="100-border-color"]) {
+	border-width: var(--wp--custom--defaults--border-width, 1px);
+	border-style: var(--wp--custom--defaults--border-style, solid);
 
 	border-radius: var( --wp--custom--defaults--border-radius );
 	box-shadow: var( --wp--custom--defaults--shadow );
@@ -92,13 +80,11 @@
 	}
 }
 
-
-.has-color-var-neutral {
-	color: var( --wp--preset--color--neutral-900 );
-	background: var( --wp--preset--color--neutral-50 );
-	border: var(--wp--custom--defaults--border-width, 1px)
-		var(--wp--custom--defaults--border-style, solid)
-		var(--wp--custom--defaults--border-color, var(--wp--preset--color--neutral-100));
+:where(
+	.has-neutral-900-color.has-neutral-50-background-color.has-neutral-100-border-color
+) {
+	border-width: var(--wp--custom--defaults--border-width, 1px);
+	border-style: var(--wp--custom--defaults--border-style, solid);
 
 	border-radius: var( --wp--custom--defaults--border-radius );
 	box-shadow: var( --wp--custom--defaults--shadow );
@@ -108,17 +94,9 @@
 	}
 }
 
-
-[class*=has-color-var-] .has-color-var-neutral {
-	--color-base: var( --wp--preset--color--neutral-50 );
-	--color-subtle: var( --wp--preset--color--neutral-100 );
-	--color-muted: var( --wp--preset--color--neutral-500 );
-	--color-contrast: var( --wp--preset--color--neutral-900 );
-	--color-emphasis: var( --wp--preset--color--neutral-950 );
-}
-
-
-.has-color-var-primary {
+:where(
+	.has-primary-900-color.has-primary-50-background-color.has-primary-100-border-color
+) {
 	--color-base: var( --wp--preset--color--primary-50 );
 	--color-subtle: var( --wp--preset--color--primary-100 );
 	--color-muted: var( --wp--preset--color--primary-500 );
@@ -126,7 +104,9 @@
 	--color-emphasis: var( --wp--preset--color--primary-950 );
 }
 
-.has-color-var-secondary {
+:where(
+	.has-secondary-900-color.has-secondary-50-background-color.has-secondary-100-border-color
+) {
 	--color-base: var( --wp--preset--color--secondary-50 );
 	--color-subtle: var( --wp--preset--color--secondary-100 );
 	--color-muted: var( --wp--preset--color--secondary-500 );
