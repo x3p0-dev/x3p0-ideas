@@ -50,7 +50,8 @@
 	},
 	"require-dev": {
 		"wp-coding-standards/wpcs": "^3.0",
-		"phpcompatibility/phpcompatibility-wp": "*"
+		"phpcompatibility/phpcompatibility-wp": "*",
+		"symfony/var-dumper": "^6.4"
 	},
 	"minimum-stability": "stable",
 	"prefer-stable": true,
