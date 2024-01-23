@@ -63,37 +63,37 @@
 				},
 				{
 					"slug": "secondary-950",
-					"color": "#43006c",
+					"color": "#0b231c",
 					"name": "Secondary: 950"
 				},
 				{
 					"slug": "secondary-900",
-					"color": "#611390",
+					"color": "#153f33",
 					"name": "Secondary: 900"
 				},
 				{
 					"slug": "secondary-700",
-					"color": "#8c13dd",
+					"color": "#1d5f4a",
 					"name": "Secondary: 700"
 				},
 				{
 					"slug": "secondary-500",
-					"color": "#b447ff",
+					"color": "#318c6b",
 					"name": "Secondary: 500"
 				},
 				{
 					"slug": "secondary-300",
-					"color": "#ddaeff",
+					"color": "#88cdb0",
 					"name": "Secondary: 300"
 				},
 				{
 					"slug": "secondary-100",
-					"color": "#f5e6ff",
+					"color": "#daf1e4",
 					"name": "Secondary: 100"
 				},
 				{
 					"slug": "secondary-50",
-					"color": "#fbf4ff",
+					"color": "#f0f9f5",
 					"name": "Secondary: 50"
 				},
 				{
