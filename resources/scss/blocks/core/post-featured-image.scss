@@ -13,7 +13,7 @@
 // outline style. However, it can't inherit the image's radius, so it needs to
 // use the set default.
 .wp-block-post-featured-image a:has( img ) {
-	border-radius: var( --wp--custom--defaults--border-radius );
+	border-radius: var( --wp--custom--global--border-radius );
 }
 
 

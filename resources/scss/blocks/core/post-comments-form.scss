@@ -25,7 +25,7 @@
 // WP hardcodes a zeroed out box-shadow, overruling the `shadow` property set
 // in `theme.json` on the `button` element.
 .wp-block-post-comments-form input[type=submit] {
-	box-shadow: var( --wp--custom--defaults--shadow );
+	box-shadow: var( --wp--custom--global--shadow );
 }
 
 // -----------------------------------------------------------------------------

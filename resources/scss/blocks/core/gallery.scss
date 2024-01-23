@@ -40,8 +40,8 @@
 // Adds a bottom border-radius to captions by default. This is a hacky method
 // to keep the caption background from overflowing the image.
 .wp-block-gallery .wp-block-image figcaption {
-	border-bottom-left-radius: var( --wp--custom--defaults--border-radius );
-	border-bottom-right-radius: var( --wp--custom--defaults--border-radius );
+	border-bottom-left-radius: var( --wp--custom--global--border-radius );
+	border-bottom-right-radius: var( --wp--custom--global--border-radius );
 }
 
 // Use the gallery gap for left/right padding for full-width galleries. This

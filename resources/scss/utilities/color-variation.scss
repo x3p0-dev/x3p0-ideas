@@ -6,11 +6,11 @@
 ////
 
 :where([class*="900-color"][class*="50-background-color"][class*="100-border-color"]) {
-	border-width: var(--wp--custom--defaults--border-width, 1px);
-	border-style: var(--wp--custom--defaults--border-style, solid);
+	border-width: var(--wp--custom--global--border-width, 1px);
+	border-style: var(--wp--custom--global--border-style, solid);
 
-	border-radius: var( --wp--custom--defaults--border-radius );
-	box-shadow: var( --wp--custom--defaults--shadow );
+	border-radius: var( --wp--custom--global--border-radius );
+	box-shadow: var( --wp--custom--global--shadow );
 
 	hr {
 		color: var( --color-muted );
@@ -83,11 +83,11 @@
 :where(
 	.has-neutral-900-color.has-neutral-50-background-color.has-neutral-100-border-color
 ) {
-	border-width: var(--wp--custom--defaults--border-width, 1px);
-	border-style: var(--wp--custom--defaults--border-style, solid);
+	border-width: var(--wp--custom--global--border-width, 1px);
+	border-style: var(--wp--custom--global--border-style, solid);
 
-	border-radius: var( --wp--custom--defaults--border-radius );
-	box-shadow: var( --wp--custom--defaults--shadow );
+	border-radius: var( --wp--custom--global--border-radius );
+	box-shadow: var( --wp--custom--global--shadow );
 
 	:where( :not( pre ) > code ) {
 		background: var( --wp--preset--color--neutral-100 );

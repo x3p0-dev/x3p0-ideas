@@ -62,8 +62,8 @@ textarea,
 	border: var( --wp--custom--elements--form-input--border-width, 1px )
 		var( --wp--custom--elements--form-input--border-width, solid )
 		var( --color-muted, var( --wp--custom--elements--form-input--border-color, none ) );
-	border-radius: var( --wp--custom--defaults--border-radius );
-	box-shadow: var( --wp--custom--defaults--shadow );
+	border-radius: var( --wp--custom--global--border-radius );
+	box-shadow: var( --wp--custom--global--shadow );
 
 	&:focus {
 		outline: 2px solid var( --wp--preset--color--primary-700 );

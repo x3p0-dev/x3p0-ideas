@@ -58,7 +58,7 @@
 	background: var(--wp--preset--color--contrast);
 	min-height: 38px; // Needed for the text-only button
 	padding: 0.25rem 0.5rem !important;
-	border-radius: var( --wp--custom--defaults--border-radius );
+	border-radius: var( --wp--custom--global--border-radius );
 }
 
 .wp-block-navigation__responsive-container.is-menu-open,
@@ -97,8 +97,10 @@
 	border-radius: var( --wp--custom--border-radius, 0 );
 	color: var( --wp--custom--color );
 	background: var( --wp--custom--background );
-	border: var( --wp--custom--border, none );
 	box-shadow: var( --wp--custom--shadow, none );
+	border: var( --wp--custom--border-width, 0 )
+		var( --wp--custom--border-style, solid )
+		var( --wp--custom--border-color, transparent );
 
 	.wp-block-navigation-item {
 		transition: all 0.5s ease-in-out;

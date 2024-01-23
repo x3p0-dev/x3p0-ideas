@@ -46,8 +46,8 @@
 	//
 	// @link      https://github.com/WordPress/gutenberg/pull/56540
 	// @wordpress 6.5
-	border-radius: var( --wp--custom--defaults--border-radius );
-	box-shadow: var( --wp--custom--defaults--shadow );
+	border-radius: var( --wp--custom--global--border-radius );
+	box-shadow: var( --wp--custom--global--shadow );
 
 	// Position must be relative for the link to cover the entire block.
 	position: relative;

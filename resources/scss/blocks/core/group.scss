@@ -45,8 +45,8 @@
 ///
 .wp-block-group:where( .is-style-box, .is-style-card ) {
 	overflow: hidden;
-	border-radius: var( --wp--custom--defaults--border-radius, 0 );
-	box-shadow: var( --wp--custom--defaults--shadow );
+	border-radius: var( --wp--custom--global--border-radius, 0 );
+	box-shadow: var( --wp--custom--global--shadow );
 }
 
 ///
@@ -71,9 +71,9 @@
 /// @wordpress 6.5
 ///
 .wp-block-group.is-style-card {
-	border: var(--wp--custom--defaults--border-width, 1px)
-		var(--wp--custom--defaults--border-style, solid)
-		var(--wp--custom--defaults--border-color, var( --wp--preset--color--neutral-100 ));
+	border: var(--wp--custom--global--border-width, 1px)
+		var(--wp--custom--global--border-style, solid)
+		var(--wp--custom--global--border-color, var( --wp--preset--color--neutral-100 ));
 }
 
 ///
@@ -88,7 +88,7 @@
 	font-family: var( --wp--preset--font-family--handwriting );
 	padding: var( --wp--custom--spacing--global );
 	border: 2px solid currentColor;
-	box-shadow: var( --wp--custom--defaults--shadow );
+	box-shadow: var( --wp--custom--global--shadow );
 
 	// No `theme.json` support for this style of radius.
 	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;

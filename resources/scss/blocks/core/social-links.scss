@@ -68,7 +68,7 @@
 .wp-block-social-links.is-style-hand-drawn .wp-block-social-link {
 	border: 2px solid currentColor;
 	overflow: hidden;
-	box-shadow: var( --wp--custom--defaults--shadow );
+	//box-shadow: var( --wp--custom--global--shadow );
 	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
 	font-family: var( --wp--preset--font-family--handwriting );
 }

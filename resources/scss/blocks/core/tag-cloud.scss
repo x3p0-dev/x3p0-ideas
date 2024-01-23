@@ -65,7 +65,7 @@
 	a {
 		color: currentColor;
 		border: 2px solid currentColor;
-		border-radius: var( --wp--custom--defaults--border-radius );
+		border-radius: var( --wp--custom--global--border-radius );
 		padding: var( --wp--preset--spacing--minus-2 ) var( --wp--preset--spacing--plus-1 );
 		font-size: inherit !important;
 		font-weight: inherit !important;

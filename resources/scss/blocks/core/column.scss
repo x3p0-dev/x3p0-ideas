@@ -40,8 +40,8 @@
 ///
 .wp-block-column:where( .is-style-box, .is-style-card ) {
 	overflow: hidden;
-	border-radius: var( --wp--custom--defaults--border-radius, 0 );
-	box-shadow: var( --wp--custom--defaults--shadow );
+	border-radius: var( --wp--custom--global--border-radius, 0 );
+	box-shadow: var( --wp--custom--global--shadow );
 }
 
 ///

@@ -23,9 +23,9 @@
 	}
 
 	.login-submit input[type=submit] {
-		box-shadow: var( --wp--custom--defaults--shadow );
+		box-shadow: var( --wp--custom--global--shadow );
 		border: 2px solid transparent;
-		border-radius: var( --wp--custom--defaults--border-radius );
+		border-radius: var( --wp--custom--global--border-radius );
 		color: var( --wp--preset--color--white );
 		background: var( --wp--preset--color--primary-700 );
 		outline: 0 solid var( --wp--preset--color--primary-950 );

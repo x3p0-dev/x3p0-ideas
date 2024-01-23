@@ -6,11 +6,13 @@
 		"blocks": {
 			"core/navigation-submenu": {
 				"custom": {
-					"background": "var( --wp--preset--color--neutral-50 )",
-					"border": "1px solid var( --wp--preset--color--neutral-50 )",
-					"shadow": "var( --wp--preset--shadow--xl )",
-					"link-hover-color": "var( --wp--preset--color--primary-700 )",
-					"link-hover-background": "var( --wp--preset--color--neutral-100 )"
+					"background": "var:preset|color|neutral-50",
+					"borderWidth": "1px",
+					"borderStyle": "solid",
+					"borderColor": "var:preset|color|neutral-50",
+					"shadow": "var:preset|shadow|xl",
+					"linkHoverColor": "var:preset|color|primary-700",
+					"linkHoverBackground": "var:preset|color|neutral-100"
 				}
 			}
 		},
@@ -135,10 +137,10 @@
 		},
 		"custom": {
 			"variation": "chestnut-rose",
-			"defaults": {
+			"global": {
 				"borderWidth": "0",
 				"borderRadius": "8px",
-				"shadow": "var( --wp--preset--shadow--xl )"
+				"shadow": "var:preset|shadow|xl"
 			},
 			"embed": {
 				"fontFamily": "'JetBrains Mono', monospace"
@@ -267,6 +269,9 @@
 				"color": {
 					"text": "var:preset|color|primary-500"
 				}
+			},
+			"core/social-link": {
+				"shadow": "var:preset|shadow|lg"
 			},
 			"core/site-title": {
 				"typography": {
