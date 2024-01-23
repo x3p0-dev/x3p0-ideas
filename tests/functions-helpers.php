@@ -28,7 +28,7 @@ function bootstrap(): void
 	}
 
 	// Let developers disable testing.
-	if ( false === apply_filters('x3p0/ideas/tests', true)) {
+	if (false === apply_filters('x3p0/ideas/tests', true)) {
 		return;
 	}
 
@@ -75,13 +75,13 @@ function config(string $key = '', $default = '')
 
 function setVarDumper(): void
 {
-	VarDumper::setHandler( function( $var ) {
+	VarDumper::setHandler(function($var) {
 		$cloner      = new VarCloner();
 		$html_dumper = new HtmlDumper();
 
-		$html_dumper->setTheme( 'light' );
+		$html_dumper->setTheme('light');
 
-		$html_dumper->setStyles( [
+		$html_dumper->setStyles([
 			'default' => '
 				box-sizing: border-box;
 				position: relative;
@@ -113,10 +113,10 @@ function setVarDumper(): void
 			'ref'       => 'color: #3b82f6;',
 			'str'       => 'color: #16a34a;',
 			'toggle'    => 'padding: 0 0.5rem'
-		] );
+		]);
 
 		$dumper = PHP_SAPI === 'cli' ? new CliDumper() : $html_dumper;
 
-		$dumper->dump( $cloner->cloneVar( $var ) );
-	} );
+		$dumper->dump($cloner->cloneVar($var));
+	});
 }
