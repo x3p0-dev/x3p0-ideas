@@ -36,8 +36,8 @@
 	} -->
 	<div class="wp-block-group">
 
-		<!-- wp:heading {"textAlign":"center","className":"has-text-shadow-sm"} -->
-		<h2 class="wp-block-heading has-text-align-center has-text-shadow-sm"><?= esc_html__('Ready to change your life?', 'x3p0-ideas') ?><br><?= esc_html__('Start today.', 'x3p0-ideas') ?></h2>
+		<!-- wp:heading {"textAlign":"center"} -->
+		<h2 class="wp-block-heading has-text-align-center"><?= esc_html__('Ready to change your life?', 'x3p0-ideas') ?><br><?= esc_html__('Start today.', 'x3p0-ideas') ?></h2>
 		<!-- /wp:heading -->
 
 		<!-- wp:buttons {
