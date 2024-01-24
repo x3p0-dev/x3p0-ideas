@@ -11,12 +11,18 @@
 
 $caption = wp_get_attachment_caption($data['post_id']);
 $image   = wp_get_attachment_image_src($data['post_id'], 'x3p0-16x9-lg');
-$alt     = trim(wp_strip_all_tags(get_post_meta($data['post_id'], '_wp_attachment_image_alt', true)));
+$alt     = get_post_meta($data['post_id'], '_wp_attachment_image_alt', true);
+
 ?>
 <!-- wp:group {"align":"full","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull">
 
-	<!-- wp:image {"align":"wide","id":<?= absint($data['post_id']) ?>,"sizeSlug":"x3p0-16x9-lg","linkDestination":"none"} -->
+	<!-- wp:image {
+		"align":"wide",
+		"id":<?= absint($data['post_id']) ?>,
+		"sizeSlug":"x3p0-16x9-lg",
+		"linkDestination":"none"
+	} -->
 	<figure class="wp-block-image alignwide size-x3p0-16x9-lg">
 		<img src="<?= esc_url($image[0]) ?>" alt="<?= esc_attr($alt) ?>" />
 

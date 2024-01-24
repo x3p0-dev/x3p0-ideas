@@ -20,6 +20,7 @@ $fields = [
 	'mime_type'        => __('Mime Type:', 'x3p0-ideas'),
 	'file_size'        => __('Size:', 'x3p0-ideas')
 ];
+
 ?>
 <!-- wp:group {
 	"style":{"spacing":{"blockGap":"var:preset|spacing|base"}},

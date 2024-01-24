@@ -11,6 +11,7 @@
 
 $caption = wp_get_attachment_caption($data['post_id']);
 $src     = wp_get_attachment_url($data['post_id']);
+
 ?>
 <!-- wp:group {"align":"full","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull">
