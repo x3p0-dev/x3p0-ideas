@@ -192,14 +192,7 @@
 				"typography": {
 					"fontFamily": "var:preset|font-family|tertiary",
 					"fontSize": "var:preset|font-size|md",
-					"lineHeight": "var:custom|font-size|md"
-				}
-			},
-			"cite": {
-				"typography": {
-					"fontFamily": "var:preset|font-family|tertiary",
-					"fontSize": "var:preset|font-size|lg",
-					"lineHeight": "var:custom|font-size|lg"
+					"lineHeight": "var:custom|line-height|md"
 				}
 			}
 		},
@@ -220,11 +213,29 @@
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",
 					"fontStyle": "italic"
+				},
+				"elements": {
+					"cite": {
+						"typography": {
+							"fontFamily": "var:preset|font-family|tertiary",
+							"fontSize": "var:preset|font-size|lg",
+							"lineHeight": "var:custom|font-size|lg"
+						}
+					}
 				}
 			},
 			"core/quote": {
 				"typography": {
 					"fontStyle": "italic"
+				},
+				"elements": {
+					"cite": {
+						"typography": {
+							"fontFamily": "var:preset|font-family|tertiary",
+							"fontSize": "var:preset|font-size|lg",
+							"lineHeight": "var:custom|font-size|lg"
+						}
+					}
 				}
 			},
 			"core/site-title": {

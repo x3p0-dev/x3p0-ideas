@@ -821,14 +821,10 @@
 			},
 			"cite": {
 				"color": {
-					"text": "var:preset|color|neutral-500"
+					"text": "var:preset|color|neutral-700"
 				},
 				"typography": {
-					"fontFamily": "var:preset|font-family|tertiary",
-					"fontSize": "0.9375em",
-					"fontStyle": "normal",
-					"fontWeight": "300",
-					"letterSpacing": "0"
+					"fontStyle": "italic"
 				}
 			},
 			"heading": {
@@ -1136,8 +1132,14 @@
 				},
 				"elements": {
 					"cite": {
+						"color": {
+							"text": "var:preset|color|neutral-500"
+						},
 						"typography": {
-							"fontSize": "max( 50%, var( --wp--preset--font-size--lg ) )"
+							"fontFamily": "var:preset|font-family|tertiary",
+							"fontSize": "max( 50%, var( --wp--preset--font-size--lg ) )",
+							"fontWeight": "300",
+							"letterSpacing": "0"
 						}
 					}
 				}
@@ -1179,6 +1181,19 @@
 								"left": "var:preset|spacing|plus-3",
 								"right": "var:preset|spacing|plus-3"
 							}
+						}
+					}
+				},
+				"elements": {
+					"cite": {
+						"color": {
+							"text": "var:preset|color|neutral-500"
+						},
+						"typography": {
+							"fontFamily": "var:preset|font-family|tertiary",
+							"fontSize": "0.9375em",
+							"fontWeight": "300",
+							"letterSpacing": "0"
 						}
 					}
 				}

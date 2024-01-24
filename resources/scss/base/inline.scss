@@ -106,7 +106,7 @@ video {
 }
 
 // Prefix `cite` elements (WP doesn't support element CSS in `theme.json`).
-cite::before {
+blockquote cite::before {
 	content: "\2013\000A0";
 }
 
