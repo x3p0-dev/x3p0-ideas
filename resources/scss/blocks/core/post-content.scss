@@ -42,7 +42,7 @@
 }
 
 .wp-block-post-content > * + :is( h1, h2, h3, h4, h5, h6 )  {
-	margin-block-start: max( 1.5em, 3rem );
+	margin-block-start: min(1.5em, 3rem);
 }
 
 .wp-block-post-content > :is( h1, h2, h3, h4, h5, h6 ) + * {
