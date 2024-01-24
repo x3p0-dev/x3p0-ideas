@@ -23,14 +23,15 @@ use Symfony\Component\VarDumper\Dumper\{HtmlDumper, CliDumper};
 function bootstrap(): void
 {
 	// Only run when in development mode.
-	if (! wp_is_development_mode('theme')) {
+	if (
+		! wp_is_development_mode('theme')
+		|| false === apply_filters('x3p0/ideas/dev', true))
+	{
 		return;
 	}
 
-	// Let developers disable dev features.
-	if (false === apply_filters('x3p0/ideas/dev', true)) {
-		return;
-	}
+	// Don't inline stylesheets while in dev mode.
+	add_filter('styles_inline_size_limit', '__return_zero', PHP_INT_MAX);
 
 	// Set the Symfony var dumper, giving it a nicer color scheme. Use
 	// `dump()` instead of `var_dump()` or `dd()` to dump and die.
