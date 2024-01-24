@@ -28,7 +28,7 @@
 .github/ export-ignore
 .ideas/ export-ignore
 .notes/ export-ignore
-_playground/ export-ignore
+.playground/ export-ignore
 docs/ export-ignore
 node_modules/ export-ignore
 tests/ export-ignore

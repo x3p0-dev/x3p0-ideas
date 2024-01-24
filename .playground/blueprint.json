@@ -13,7 +13,7 @@
 			"step": "installTheme",
 			"themeZipFile": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/x3p0-dev/x3p0-ideas/master/_playground/x3p0-ideas.zip"
+				"url": "https://raw.githubusercontent.com/x3p0-dev/assets/master/x3p0-ideas/x3p0-ideas.zip"
 			},
 			"options": {
 				"activate": true

@@ -12,7 +12,7 @@ No concept is so outlandish that I won't try to wiggle it in one way or another.
 
 The theme demo is hosted on WordPress Playground, which is a system that runs WordPress directly in your browser. You can fully test the theme as if you were running it on your own site. So go ahead and give it a try!
 
-<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/x3p0-dev/x3p0-ideas/master/_playground/blueprint.json">Playground Demo →</a></p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/x3p0-dev/x3p0-ideas/master/.playground/blueprint.json">Playground Demo →</a></p>
 
 ## 📄 Installation Instructions
 
@@ -20,7 +20,7 @@ The theme demo is hosted on WordPress Playground, which is a system that runs Wo
 
 **_Ideal for people who just want something to download and install._**
 
-If you just want to give the theme a test run, it's easiest to use the Playground link above. But feel free to [grab the ZIP file](https://github.com/x3p0-dev/x3p0-ideas/raw/master/_playground/x3p0-ideas.zip) and follow the WordPress documentation on [installing a theme from a ZIP file](https://wordpress.org/documentation/article/work-with-themes/).
+If you just want to give the theme a test run, it's easiest to use the Playground link above. But feel free to [grab the ZIP file](https://raw.githubusercontent.com/x3p0-dev/assets/master/x3p0-ideas/x3p0-ideas.zip) and follow the WordPress documentation on [installing a theme from a ZIP file](https://wordpress.org/documentation/article/work-with-themes/).
 
 ### Developer Version
 

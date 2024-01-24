@@ -59,7 +59,7 @@
 		"allow-plugins": {
 			"dealerdirect/phpcodesniffer-composer-installer": true
 		},
-		"archive-dir": "./_playground",
+		"archive-dir": "./",
 		"archive-format": "zip"
 	},
 	"archive": {
