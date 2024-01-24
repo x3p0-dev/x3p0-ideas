@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Title: Single Template
- * Slug: x3p0-ideas/template-single
+ * Title: Single Post Template
+ * Slug: x3p0-ideas/template-single-post
  * Inserter: no
  * Template Types: attachment, page, single, singular
  */
