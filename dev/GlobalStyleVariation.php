@@ -41,6 +41,17 @@ class GlobalStyleVariation implements Bootable
 	use HookAnnotation;
 
 	/**
+	 * Mappings for short variation names.
+	 *
+	 * @since 1.0.0
+	 * @todo  Add type hinting with PHP 8.3+ requirement.
+	 */
+	private const SHORT_NAMES = [
+		'bookish'  => 'a-little-bit-bookish',
+		'chestnut' => 'chestnut-rose'
+	];
+
+	/**
 	 * Stores the current style variation for testing.
 	 *
 	 * @since 1.0.0
@@ -56,7 +67,9 @@ class GlobalStyleVariation implements Bootable
 	 */
 	public function __construct(string $variation = '')
 	{
-		$this->variation = $variation;
+		$this->variation = isset(self::SHORT_NAMES[$variation])
+			? self::SHORT_NAMES[$variation]
+			: $variation;
 	}
 
 	/**
