@@ -4,21 +4,17 @@
 	"license": "GPL-3.0-or-later",
 	"scripts": {
 		"build": [
-			"composer prod",
-			"composer zip"
+			"composer config extra.x3p0.variation \"\"",
+			"composer update --no-dev",
+			"composer dump-autoload -o --no-dev"
 		],
 		"dev": [
 			"composer update",
 			"composer dump-autoload"
 		],
-		"prod": [
-			"composer config extra.x3p0.variation \"\"",
-			"composer update --no-dev",
-			"composer dump-autoload -o --no-dev"
-		],
 		"lint:php": "./vendor/bin/phpcs -s --colors .",
-		"zip": "composer archive --file=x3p0-ideas",
-		"var": "composer config extra.x3p0.variation"
+		"var": "composer config extra.x3p0.variation",
+		"zip": "composer archive --file=x3p0-ideas"
 	},
 	"extra": {
 		"x3p0": {
@@ -38,11 +34,11 @@
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"X3P0\\Ideas\\Tests\\": "tests/"
+			"X3P0\\Ideas\\Dev\\": "dev/"
 		},
 		"files" : [
-			"tests/bootstrap.php",
-			"tests/functions-helpers.php"
+			"dev/bootstrap.php",
+			"dev/functions-helpers.php"
 		]
 	},
 	"require": {

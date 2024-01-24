@@ -9,26 +9,26 @@
  * @link      https://github.com/x3p0-dev/x3p0-ideas
  */
 
-namespace X3P0\Ideas\Tests;
+namespace X3P0\Ideas\Dev;
 
 use Symfony\Component\VarDumper\VarDumper;
 use Symfony\Component\VarDumper\Cloner\VarCloner;
 use Symfony\Component\VarDumper\Dumper\{HtmlDumper, CliDumper};
 
 /**
- * Bootstraps the tests.
+ * Bootstraps dev mode.
  *
  * @since 1.0.0
  */
 function bootstrap(): void
 {
-	// Only run tests when in development mode.
+	// Only run when in development mode.
 	if (! wp_is_development_mode('theme')) {
 		return;
 	}
 
-	// Let developers disable testing.
-	if (false === apply_filters('x3p0/ideas/tests', true)) {
+	// Let developers disable dev features.
+	if (false === apply_filters('x3p0/ideas/dev', true)) {
 		return;
 	}
 

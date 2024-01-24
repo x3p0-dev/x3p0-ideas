@@ -30,7 +30,7 @@
  * @link      https://github.com/x3p0-dev/x3p0-ideas
  */
 
-namespace X3P0\Ideas\Tests;
+namespace X3P0\Ideas\Dev;
 
 use WP_Theme_JSON_Data;
 use X3P0\Ideas\Contracts\Bootable;
