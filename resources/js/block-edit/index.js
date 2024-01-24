@@ -7,12 +7,18 @@
  */
 
 // Internal dependencies.
-import filters from './filters';
+import withColorVariation     from './color-variations';
+import withGradientBackground from './gradient-background';
+import withListMarker         from './list-markers';
+import withScreenReaderText   from './screen-reader-text';
+import withTextShadow         from './text-shadow';
 
 // WordPress dependencies.
 import { addFilter } from '@wordpress/hooks';
 
-// Register each of the block edit filters.
-Object.keys( filters ).forEach( ( filter ) =>
-	addFilter( 'editor.BlockEdit', `x3p0/ideas/${ filter }`, filters[ filter ] )
-);
+// Add filters.
+addFilter('editor.BlockEdit', 'x3p0-ideas-color-variation',     withColorVariation);
+addFilter('editor.BlockEdit', 'x3p0-ideas-gradient-background', withGradientBackground);
+addFilter('editor.BlockEdit', 'x3p0-ideas-list-marker',         withListMarker);
+addFilter('editor.BlockEdit', 'x3p0-ideas-text-shadow',         withTextShadow);
+addFilter('editor.BlockEdit', 'x3p0-ideas-screen-reader-text',  withScreenReaderText);

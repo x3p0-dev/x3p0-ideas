@@ -44,102 +44,15 @@ hr.wp-block-separator.is-style-hand-drawn {
 	margin-bottom: -20px !important;
 	padding: var( --wp--preset--spacing--base );
 	border-width: var( --wp--preset--spacing--minus-2 ) 0 0;
-	border-radius: 255px 15px 0 0/15px 4px 0 0 !important;
+	border-radius: 255px 15px 0 0/15px 4px 0 0;
 
-	// Don't kill the background when the block also has an icon style.
-	&:where( :not( [class*=has-icon] ) ) {
+	&:where([class*=gradient-background]) {
+		margin-bottom: 0 !important;
+		padding: 4px;
+		border-radius: 94% 6% 95% 5% / 95% 4% 96% 5%;
+	}
+
+	&:where(:not([class*=gradient-background])) {
 		background: none !important;
 	}
 }
-
-// -----------------------------------------------------------------------------
-// Icon styles.
-// -----------------------------------------------------------------------------
-
-// Creates an icon style separator. This is coupled with a custom control in
-// the editor UI for picking an icon and adding a `has-icon-{icon}` class.
-hr.wp-block-separator[class*=has-icon] {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border: none;
-	text-align: center;
-	height: auto;
-
-	// Some characters get cut off. This ensures they are visible.
-	overflow: visible;
-
-	// Use `!important` to overrule core's use of the `background` shorthand
-	// instead of the targeted property itself.
-	background-color: transparent !important;
-	background-repeat: repeat-x !important;
-	background-position: 0% 50% !important;
-	background-size: 100% 2px !important;
-
-	// Don't use `!important` for the background image, which allows user-
-	// selected background gradients to work.
-	background-image: linear-gradient( 90deg, currentColor, currentColor );
-
-	&::before {
-		content: var( --hr-icon, "\2766" ); // floral heart default.
-		padding: 0 0.5em;
-		font-size: var( --wp--preset--font-size--xl );
-		line-height: 1;
-		background-color: var( --color-base, var( --wp--preset--color--base ) );
-	}
-
-	// If parent has background color, inherit. This is important because
-	// the icon uses the "base" background as a default to hide (or cut out)
-	// the parent `<hr>` background gradient. Note that this doesn't work
-	// with the Cover block, which uses a `<span>` element that is positioned
-	// as an overlay (not a true background). The only fix for this is to
-	// wrap the Separator in a Group block and add a background color to it.
-	:where( .has-background[class*=-background-color] ) &,
-	:where( .has-background[class*=-background-color] ) &::before {
-		background-color: inherit !important;
-	}
-
-	// Integrates the icon style with known block styles. Some of these are
-	// not going to be perfect since their designs can clash.
-	&.is-style-wide {
-		background-size: 100% var( --wp--preset--spacing--minus-2 ) !important;
-	}
-
-	&.is-style-dashed {
-		background-repeat: space no-repeat !important;
-		background-size: 15% 2px!important;
-	}
-
-	&.is-style-dotted {
-		background-repeat: space no-repeat !important;
-		background-size: 2.2% 2px!important;
-	}
-
-	&.is-style-double {
-		background-repeat: space !important;
-		background-size: 100% 34% !important;
-	}
-
-	&.is-style-hand-drawn {
-		background-position-y: top !important;
-		background-size: 100% 6px !important;
-	}
-}
-
-.has-icon-❦ { --hr-icon: "❦"; } // floral heart
-.has-icon-🌼 { --hr-icon: "🌼"; }
-.has-icon-☀️ { --hr-icon: "☀️"; }
-.has-icon-🪶 { --hr-icon: "🪶"; }
-.has-icon-🔥 { --hr-icon: "🔥"; }
-.has-icon-🍃 { --hr-icon: "🍃"; }
-.has-icon-☕ { --hr-icon: "☕"; }
-.has-icon-🍻 { --hr-icon: "🍻"; }
-.has-icon-🪷 { --hr-icon: "🪷"; }
-.has-icon-🫠 { --hr-icon: "🫠"; }
-.has-icon-🎸 { --hr-icon: "🎸"; }
-.has-icon-✏️ { --hr-icon: "✏️"; }
-.has-icon-🚀 { --hr-icon: "🚀"; }
-.has-icon-☘️ { --hr-icon: "☘️"; }
-.has-icon-⭐ { --hr-icon: "⭐"; }
-.has-icon-🌻 { --hr-icon: "🌻"; }
-.has-icon-⛱️ { --hr-icon: "⛱️"; }
