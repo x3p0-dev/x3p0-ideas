@@ -55,9 +55,3 @@
 		margin-top: var( --wp--preset--spacing--base );
 	}
 }
-
-// Use same font as Verse block (see `verse.scss`) for the `<cite>` element
-// when quoting a Verse.
-.wp-block-quote:has( .wp-block-verse ) cite {
-	font-family: var( --wp--preset--font-family--handwriting );
-}

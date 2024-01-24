@@ -152,9 +152,6 @@ figure.wp-block-image[class*=-gradient-background] {
 		justify-content: center;
 		align-items: baseline;
 		transform: rotate( 0.5deg );
-		font-family: var( --wp--preset--font-family--handwriting );
-		font-size: var( --wp--preset--font-size--md );
-		line-height: var( --wp--custom--line-height--md );
 	}
 
 	// Adds a curved arrow icon pointing up to the image above.
@@ -205,7 +202,6 @@ figure.wp-block-image.is-style-polaroid {
 	.wp-element-caption {
 		margin-top: var( --wp--preset--spacing--base );
 		color: var( --color-base, var( --wp--preset--color--contrast ) );
-		font-family: var( --wp--preset--font-family--handwriting );
 	}
 
 	// Adjustments when the Image block also has a gradient background.
@@ -258,11 +254,6 @@ figure.wp-block-image.is-style-polaroid {
 		margin: auto;
 		width: 7rem;
 		z-index: 1;
-	}
-
-	// Caption adjustments.
-	.wp-element-caption {
-		font-family: var( --wp--preset--font-family--handwriting );
 	}
 }
 

@@ -162,19 +162,9 @@
 					"name": "Secondary (Charter)"
 				},
 				{
-					"fontFamily": "Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif",
-					"slug": "tertiary",
-					"name": "Tertiary (Didone)"
-				},
-				{
-					"fontFamily": "\"Source Code Pro\", Monaco, Consolas, \"Andale Mono WT\", \"Andale Mono\", \"Lucida Console\", \"Lucida Sans Typewriter\", \"DejaVu Sans Mono\", \"Bitstream Vera Sans Mono\", \"Liberation Mono\", \"Nimbus Mono L\", \"Courier New\", Courier, monospace",
-					"slug": "mono",
-					"name": "Monospace"
-				},
-				{
 					"fontFamily": "'Dancing Script', cursive",
-					"slug": "handwriting",
-					"name": "Handwriting (Dancing Script)",
+					"slug": "tertiary",
+					"name": "Tertiary (Dancing Script)",
 					"fontFace": [
 						{
 							"fontFamily": "Dancing Script",
@@ -184,6 +174,11 @@
 							"src": [ "file:./public/fonts/dancing-script/dancing-script.woff2" ]
 						}
 					]
+				},
+				{
+					"fontFamily": "ui-monospace, 'Fira Code', 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace",
+					"slug": "mono",
+					"name": "Monospace"
 				}
 			]
 		}
@@ -195,14 +190,14 @@
 		"elements": {
 			"caption": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|handwriting",
-					"fontSize": "var:preset|font-size|lg",
-					"lineHeight": "var:custom|font-size|lg"
+					"fontFamily": "var:preset|font-family|tertiary",
+					"fontSize": "var:preset|font-size|md",
+					"lineHeight": "var:custom|font-size|md"
 				}
 			},
 			"cite": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|handwriting",
+					"fontFamily": "var:preset|font-family|tertiary",
 					"fontSize": "var:preset|font-size|lg",
 					"lineHeight": "var:custom|font-size|lg"
 				}
@@ -218,7 +213,7 @@
 			},
 			"core/calendar": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|handwriting"
+					"fontFamily": "var:preset|font-family|tertiary"
 				}
 			},
 			"core/pullquote": {
@@ -248,7 +243,7 @@
 			},
 			"x3p0/breadcrumbs": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|handwriting",
+					"fontFamily": "var:preset|font-family|tertiary",
 					"fontSize": "var:preset|font-size|md",
 					"lineHeight": "var:custom|line-height|md"
 				}

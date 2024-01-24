@@ -178,7 +178,7 @@
 					]
 				},
 				{
-					"fontFamily": "\"JetBrains Mono\", monospace",
+					"fontFamily": "'JetBrains Mono', ui-monospace, 'Fira Code', 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace",
 					"slug": "secondary",
 					"name": "Secondary (JetBrains Mono)",
 					"fontFace": [
@@ -201,6 +201,11 @@
 							]
 						}
 					]
+				},
+				{
+					"fontFamily": "'JetBrains Mono', ui-monospace, 'Fira Code', 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace",
+					"slug": "mono",
+					"name": "Monospace"
 				}
 			]
 		}
@@ -231,7 +236,6 @@
 			},
 			"caption": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|secondary",
 					"fontStyle": "italic",
 					"fontWeight": "300",
 					"fontSize": "var:preset|font-size|xs",
@@ -240,7 +244,6 @@
 			},
 			"cite": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|secondary",
 					"fontStyle": "italic",
 					"fontWeight": "300",
 					"fontSize": "var:preset|font-size|xs",

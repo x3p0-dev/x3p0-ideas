@@ -650,30 +650,9 @@
 					]
 				},
 				{
-					"fontFamily": "inherit",
-					"slug": "tertiary",
-					"name": "Tertiary (Inherited)"
-				},
-				{
 					"fontFamily": "ui-monospace, 'Fira Code', 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace",
 					"slug": "mono",
 					"name": "Monospace"
-				},
-				{
-					"fontFamily": "Mali, \"Segoe Print\", \"Bradley Hand\", Chilanka, TSCu_Comic, casual, cursive",
-					"slug": "handwriting",
-					"name": "Handwriting (Mali)",
-					"fontFace": [
-						{
-							"fontFamily": "Mali",
-							"fontWeight": "400",
-							"fontStyle": "normal",
-							"fontStretch": "normal",
-							"src": [
-								"file:./public/fonts/mali/mali-regular.woff2"
-							]
-						}
-					]
 				}
 			],
 			"fontSizes": [
@@ -1274,7 +1253,7 @@
 			},
 			"core/verse": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|handwriting"
+					"fontFamily": "var:preset|font-family|tertiary"
 				}
 			},
 			"x3p0/breadcrumbs": {

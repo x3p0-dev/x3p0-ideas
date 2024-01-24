@@ -5,6 +5,15 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
+// Defines the `--wp--preset--font-family--tertiary` font-family early. This way
+// we can overrule it via `settings.typography.fontFamilies` in `theme.json`.
+// This family is primarily used for, well...tertiary text. Things such as
+// captions, citations, etc.
+:root {
+	--wp--preset--font-family--tertiary: inherit;
+}
+
+
 // Sets up theme spacing properties that are mapped to spacing presets in the
 // `theme.json`. At first glance, it might seem silly to do this (it probably
 // is, depending on your perspective). But this essentially "shields" the values
