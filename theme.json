@@ -914,7 +914,7 @@
 				"border": {
 					"radius": "9999em"
 				},
-				"css": "& img { box-shadow: var( --wp--custom--global--shadow ); }"
+				"css": "& img {\n\tbox-shadow: var( --wp--custom--global--shadow );\n}"
 			},
 			"core/button": {
 				"variations": {
@@ -1004,7 +1004,7 @@
 						"top": "var:preset|spacing|base"
 					}
 				},
-				"css": "& > li { border-radius: var( --wp--custom--global--border-radius ); box-shadow: var( --wp--custom--global--shadow ); padding: var( --wp--preset--spacing--plus-3 ); background: var( --wp--preset--color--neutral-50 ); }"
+				"css": "& > li {\n\tborder-radius: var( --wp--custom--global--border-radius );\n\tbox-shadow: var( --wp--custom--global--shadow );\n\tpadding: var( --wp--preset--spacing--plus-3 );\n\tbackground: var( --wp--preset--color--neutral-50 );\n}"
 			},
 			"core/cover": {
 				"color": {
@@ -1060,7 +1060,7 @@
 				"border": {
 					"radius": "var:custom|global|border-radius"
 				},
-				"css": "{ border-radius: var( --wp--custom--global--border-radius ); } & img {\n\tbox-shadow: var( --wp--custom--global--shadow );\n}",
+				"css": "{\n\tborder-radius: var( --wp--custom--global--border-radius ); }\n\n& img {\n\tbox-shadow: var( --wp--custom--global--shadow );\n}",
 				"variations": {
 					"rounded": {
 						"border": {
@@ -1078,7 +1078,7 @@
 				}
 			},
 			"core/navigation": {
-				"css": "& .wp-block-navigation__responsive-container-close svg { width: 30px; height: 30px; } & .wp-block-navigation__responsive-container-open svg { width: 30px; height: 30px; }",
+				"css": "& .wp-block-navigation__responsive-container-close svg {\n\twidth: 30px; height: 30px;\n}\n\n& .wp-block-navigation__responsive-container-open svg {\n\twidth: 30px;\n\theight: 30px;\n}",
 				"spacing": {
 					"blockGap": "var( --wp--preset--spacing--base ) var( --wp--preset--spacing--plus-3 )"
 				},
@@ -1261,7 +1261,7 @@
 					"fontSize": "var:preset|font-size|sm",
 					"lineHeight": "var:custom|line-height|sm"
 				},
-				"css": "& a { font-weight: 500; text-decoration: none; } & a:hover { text-decoration: underline; }"
+				"css": "& a {\n\tfont-weight: 500;\n\ttext-decoration: none;\n}\n\n& a:hover {\n\ttext-decoration: underline;\n}"
 			}
 		}
 	},
