@@ -89,7 +89,7 @@ class Frontend implements Bootable
 	{
 		// Get the URL query for the requested URI.
 		$request = isset($_SERVER['REQUEST_URI'])
-			? sanitize_url(wp_unslash($_SERVER['REQUEST_URI']))
+			? esc_url_raw(wp_unslash($_SERVER['REQUEST_URI']))
 			: '';
 
 		$query = wp_parse_url($request, PHP_URL_QUERY);
