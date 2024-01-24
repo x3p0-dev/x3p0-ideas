@@ -43,33 +43,3 @@
 	font-size: var(--wp--preset--font-size--xs) !important;
 	line-height: var(--wp--custom--line-height--xs);
 }
-
-body:not( .editor-styles-wrapper ) .has-screen-reader-text {
-	clip: rect( 1px, 1px, 1px, 1px );
-	word-wrap: normal!important;
-	border: 0;
-	clip-path: inset(50%);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
-}
-
-.editor-styles-wrapper .has-screen-reader-text {
-	padding: var( --wp--preset--spacing--minus-3 ) var( --wp--preset--spacing--plus-3 ) !important;
-	color: var( --wp--preset--color--neutral-900 ) !important;
-	background: var( --wp--preset--color--neutral-50 ) !important;
-	border: 1px dashed var( --wp--preset--color--neutral-100 ) !important;
-
-}
-
-.editor-styles-wrapper .has-screen-reader-text::before {
-	@include inline-icon.icon( icon.get-url( 'visibility-off' ) );
-	position: absolute;
-	top: var( --wp--preset--spacing--minus-2 );
-	right: var( --wp--preset--spacing--minus-2 );
-	width: min( 1em, 24px );
-	height: min( 1em, 24px );
-}

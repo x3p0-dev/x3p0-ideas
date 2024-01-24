@@ -10,7 +10,6 @@
 import withColorVariation     from './color-variations';
 import withGradientBackground from './gradient-background';
 import withListMarker         from './list-markers';
-import withScreenReaderText   from './screen-reader-text';
 import withTextShadow         from './text-shadow';
 
 // WordPress dependencies.
@@ -21,4 +20,3 @@ addFilter('editor.BlockEdit', 'x3p0-ideas-color-variation',     withColorVariati
 addFilter('editor.BlockEdit', 'x3p0-ideas-gradient-background', withGradientBackground);
 addFilter('editor.BlockEdit', 'x3p0-ideas-list-marker',         withListMarker);
 addFilter('editor.BlockEdit', 'x3p0-ideas-text-shadow',         withTextShadow);
-addFilter('editor.BlockEdit', 'x3p0-ideas-screen-reader-text',  withScreenReaderText);
