@@ -5,20 +5,19 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
+// Search's `<label>` element not used in the editor.
 label,
-// `<label>` element not used in the editor.
 .wp-block-search__label {
-	color: var( --wp--preset--color--neutral-500 );
-	font-size: var( --wp--preset--font-size--xs );
-	text-transform: uppercase;
+	color:       var(--wp--custom--elements--label--color, inherit);
+	font-family: var(--wp--custom--elements--label--font-family, inherit);
+	font-size:   var(--wp--custom--elements--label--font-size, inherit);
+	font-style:  var(--wp--custom--elements--label--font-style, inherit);
+	font-weight: var(--wp--custom--elements--label--font-weight, inherit);
 }
 
-:where( input[type="checkbox"], input[type="radio"] ) + label,
-label:has( :where( input[type="checkbox"], input[type="radio"] ) ) {
-	//color: inherit;
-	//font-size: inherit;
-	font-size: var( --wp--preset--font-size--sm );
-	text-transform: none;
+:where(input[type="checkbox"], input[type="radio"]) + label,
+label:has(:where(input[type="checkbox"], input[type="radio"])) {
+	font-size: var(--wp--preset--font-size--sm);
 }
 
 
@@ -30,51 +29,53 @@ label:has(
 	textarea:focus,
 	select:focus
 ),
-.wp-block-search__label:has( + .wp-block-search__inside-wrapper > .wp-block-search__input:focus ) {
-	color: var( --wp--preset--color--primary-700 );
+.wp-block-search__label:has(
+	+ .wp-block-search__inside-wrapper > .wp-block-search__input:focus
+) {
+	color: var(--wp--custom--elements--label--focus-color, inherit);
 }
 
 input {
-	accent-color: var( --wp--preset--color--primary-700 );
+	accent-color: var(
+		--wp--custom--elements--input-accent-color,
+		var(--wp--preset--color--primary-700)
+	);
 }
 
 // Adds form element styles, which aren't yet supported in `theme.json`.
-input:where( :not( [type=checkbox] ):not( [type=radio ] ) ),
+input:where(:not([type=checkbox]):not([type=radio ])),
 select,
 textarea,
-:where( .wp-block-search__button-inside .wp-block-search__inside-wrapper ),
+:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper),
 .wp-block-search__input,
 .wp-block-post-comments-form :is(
-	input:not( [type=checkbox] ):not( [type=radio ] ):not( .wp-element-button ),
+	input:not([type=checkbox]):not([type=radio ]):not(.wp-element-button),
 	textarea
 ) {
-	appearance: none;
-	padding: var( --wp--preset--spacing--minus-3 ) var( --wp--preset--spacing--minus-1 );
-	font-family: inherit;
-	font-size: inherit;
-	//font-size: var( --wp--preset--font-size--sm );
-	//line-height: 1;
-	font-style: normal;
-	font-weight: 400;
-	line-height: inherit;
-	color: var( --wp--custom--elements--form-input--color, inherit );
-	background: var( --wp--custom--elements--form-input--background, transparent );
-	border: var( --wp--custom--elements--form-input--border-width, 1px )
-		var( --wp--custom--elements--form-input--border-width, solid )
-		var( --wp--custom--elements--form-input--border-color, none );
-	border-radius: var( --wp--custom--global--border-radius );
-	box-shadow: var( --wp--custom--global--shadow );
+	appearance:  none;
+	padding:     var(--wp--preset--spacing--minus-3) var(--wp--preset--spacing--minus-1);
+	font-family: var(--wp--custom--elements--input--font-family, inherit);
+	font-size:   var(--wp--custom--elements--input--font-size, inherit);
+	font-style:  var(--wp--custom--elements--input--font-style, inherit);
+	font-weight: var(--wp--custom--elements--input--font-weight, inherit);
+	line-height: var(--wp--custom--elements--input--line-height, inherit);
+	color:       var(--wp--custom--elements--input--color, inherit);
+	background:  var(--wp--custom--elements--input--background, transparent);
+
+	border: var(--wp--custom--elements--input--border-width, 1px)
+		var(--wp--custom--elements--input--border-width, solid)
+		var(--wp--custom--elements--input--border-color, none);
+
+	border-radius: var(--wp--custom--global--border-radius, none);
+	box-shadow:    var(--wp--custom--global--shadow, none);
 
 	&:focus {
-		outline: 2px solid var( --wp--preset--color--primary-700 );
+		outline: 2px solid var(
+			--wp--custom--elements--input-accent-color,
+			var(--wp--preset--color--primary-700)
+		);
 		outline-offset: 2px;
 	}
-}
-
-textarea,
-.wp-block-post-comments-form .comment-form-comment textarea {
-	//font-size: var( --wp--preset--font-size--sm );
-	//line-height: var( --wp--custom--line-height--sm );
 }
 
 select {
@@ -82,11 +83,11 @@ select {
 	// Recreate the arrow with a linear-gradient.
 	// https://codepen.io/vkjgr/pen/VYMeXp
 	background-image:
-		linear-gradient( 45deg, transparent 50%, currentColor 50% ),
-		linear-gradient( 135deg, currentColor 50%, transparent 50% );
+		linear-gradient(45deg, transparent 50%, currentColor 50%),
+		linear-gradient(135deg, currentColor 50%, transparent 50%);
 	background-position:
-		calc( 100% - 1.25em ) center,
-		calc( 100% - 0.9375em ) center;
+		calc(100% - 1.25em) center,
+		calc(100% - 0.9375em) center;
 	background-size: 0.3125em 0.3125em, 0.3125em 0.3125em;
 	background-repeat: no-repeat;
 }
@@ -96,12 +97,15 @@ select {
 	opacity: 0.5;
 }
 
-:where( .wp-block-search__button-inside .wp-block-search__inside-wrapper ) {
-	padding: var( --wp--preset--spacing--minus-3 );
-	padding-left: var( --wp--preset--spacing--minus-1 );
+:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) {
+	padding: var(--wp--preset--spacing--minus-3);
+	padding-left: var(--wp--preset--spacing--minus-1);
 
-	&:has( .wp-block-search__input:focus ) {
-		outline: 2px solid var( --wp--preset--color--primary-700 );
+	&:has(.wp-block-search__input:focus) {
+		outline: 2px solid var(
+			--wp--custom--elements--input-accent-color,
+			var(--wp--preset--color--primary-700)
+		);
 		outline-offset: 2px;
 	}
 }

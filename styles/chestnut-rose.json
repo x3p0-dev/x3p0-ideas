@@ -142,6 +142,11 @@
 				"borderRadius": "8px",
 				"shadow": "var:preset|shadow|xl"
 			},
+			"elements": {
+				"label": {
+					"fontSize": "var:preset|font-size|xs"
+				}
+			},
 			"embed": {
 				"fontFamily": "'JetBrains Mono', monospace"
 			}
