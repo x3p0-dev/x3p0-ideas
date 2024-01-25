@@ -611,7 +611,8 @@
 			]
 		},
 		"typography": {
-			"customFontSize": true,
+			"customFontSize": false,
+			"defaultFontSizes": false,
 			"dropCap": true,
 			"fontFamilies": [
 				{

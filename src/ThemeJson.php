@@ -43,11 +43,18 @@ class ThemeJson implements Bootable
 	}
 
 	/**
-	 * Removes the core font-sizes, which are re-added in Gutenberg 16.9. In
-	 * the past, if a theme defined a set of custom sizes, these were not
-	 * shown. Currently, there is no way to disable the core sizes via
-	 * `theme.json`, so we're removing them via a filter.
+	 * Removes the core font-sizes entirely from the being rendered. We're
+	 * handling the fallbacks for this via CSS.
+	 *
+	 * These were merged (and put at the top) of the font-size picker in
+	 * Gutenberg 16.9 with no `theme.json`-method of disabling them. In the
+	 * past, if a theme defined a set of custom sizes, these were not shown.
 	 * @link https://github.com/WordPress/gutenberg/issues/55744
+	 *
+	 * Gutenberg 17.6 added the `defaultFontSizes` prop:
+	 * @link https://github.com/WordPress/gutenberg/pull/56661
+	 *
+	 * @todo Remove above notes with WordPress 6.5+ min. requirement.
 	 *
 	 * @hook  wp_theme_json_data_default
 	 * @param WP_Theme_JSON_Data  The Gutenberg plugin breaks this.
