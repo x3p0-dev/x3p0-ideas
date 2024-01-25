@@ -20,8 +20,8 @@ if (! defined('ABSPATH')) {
 }
 
 # Run the autoloader.
-if (       file_exists(get_parent_theme_file_path('vendor/autoload.php'))) {
-	require_once get_parent_theme_file_path('vendor/autoload.php'   );
+if (file_exists(get_parent_theme_file_path('vendor/autoload.php'))) {
+	require_once get_parent_theme_file_path('vendor/autoload.php');
 }
 
 # Bootstrap the theme.
