@@ -1046,12 +1046,13 @@
 				"shadow": "var:custom|global|shadow",
 				"spacing": {
 					"padding": {
-						"top": "var:preset|spacing|plus-3",
-						"bottom": "var:preset|spacing|plus-3",
+						"top": "var:preset|spacing|base",
+						"bottom": "var:preset|spacing|base",
 						"left": "var:preset|spacing|plus-3",
 						"right": "var:preset|spacing|plus-3"
 					}
-				}
+				},
+				"css": ":has(object) {\n\tpadding: var(--wp--preset--spacing--plus-3);\n}"
 			},
 			"core/gallery": {
 				"typography": {
