@@ -181,7 +181,7 @@ figure.wp-block-image[class*=-gradient-background] {
 ///
 figure.wp-block-image.is-style-polaroid {
 	padding:          var( --wp--preset--spacing--base );
-	background-color: var( --color-contrast, var( --wp--preset--color--base ) );
+	background-color: var( --wp--preset--color--base );
 	transition: all 0.5s ease-in-out;
 	overflow: visible;
 	background-size: auto !important;
@@ -201,7 +201,7 @@ figure.wp-block-image.is-style-polaroid {
 	// frame area.
 	.wp-element-caption {
 		margin-top: var( --wp--preset--spacing--base );
-		color: var( --color-base, var( --wp--preset--color--contrast ) );
+		color: var( --wp--preset--color--contrast );
 	}
 
 	// Adjustments when the Image block also has a gradient background.

@@ -5,112 +5,21 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
-:where([class*="900-color"][class*="50-background-color"][class*="100-border-color"]) {
-	border-width: var(--wp--custom--global--border-width, 1px);
-	border-style: var(--wp--custom--global--border-style, solid);
+// Valid color variations will have three specific classes set for the color,
+// background, and border. By checking if these classes exists, we can handle
+// all color variations with a single rule.
+:is([class*="900-color"][class*="50-background-color"][class*="100-border-color"]) {
+	border-width:  var(--wp--custom--global--border-width, 1px);
+	border-style:  var(--wp--custom--global--border-style, solid);
+	border-radius: var(--wp--custom--global--border-radius, none);
+	box-shadow:    var(--wp--custom--global--shadow, none);
 
-	border-radius: var( --wp--custom--global--border-radius );
-	box-shadow: var( --wp--custom--global--shadow );
-
-	hr {
-		color: var( --color-muted );
-	}
-
-	// Do we really want to set blocks, or is that too much of a battle?
-	:is( pre, .wp-block-file ) {
-		color: var( --color-emphasis );
-		background-color: var( --color-subtle );
-		border-color: var( --color-muted );
-	}
-
-	blockquote,
-	.wp-block-pullquote {
-		color: var( --color-contrast );
-		background-color: var( --color-base );
-		border-color: var( --color-muted );
-	}
-
-	li::marker {
-		color: var( --color-muted );
-	}
-
-	a {
-		color: var( --color-emphasis );
-	}
-
-	:where( :not( pre ) > code ) {
-		color: var( --color-emphasis );
-		background: var( --color-subtle );
-	}
-
-	cite {
-		color: var( --color-muted );
-	}
-
-	kbd {
-		color: var( --color--contrast );
-		border-color: var( --color-muted );
-	}
-
-	ins {
-		color: var( --color-emphasis );
-		background: var( --color-subtle );
-		border-color: var( --color-contrast );
-	}
-
-	mark:where( :not( .has-inline-color ):not( [style] ) ) {
-		color: var( --color-emphasis );
-		background: var( --color-subtle );
-	}
-
-	del,
-	s {
-		color: var( --color-muted );
-		text-decoration-color: var( --color-contrast );
-	}
-
-	.wp-element-caption {
-		color: var( --color-muted );
-	}
-
-	.wp-element-button {
-		color: var( --color-base );
-		background: var( --color-contrast );
-		border-color: var( --color-contrast );
+	// All sub-elements should inherit the colors by default.
+	:where(*) {
+		color: inherit;
+		background-color: inherit;
+		border-color: inherit;
+		text-decoration-color: currentColor;
+		outline-color: currentColor;
 	}
 }
-
-:where(
-	.has-neutral-900-color.has-neutral-50-background-color.has-neutral-100-border-color
-) {
-	border-width: var(--wp--custom--global--border-width, 1px);
-	border-style: var(--wp--custom--global--border-style, solid);
-
-	border-radius: var( --wp--custom--global--border-radius );
-	box-shadow: var( --wp--custom--global--shadow );
-
-	:where( :not( pre ) > code ) {
-		background: var( --wp--preset--color--neutral-100 );
-	}
-}
-
-:where(
-	.has-primary-900-color.has-primary-50-background-color.has-primary-100-border-color
-) {
-	--color-base: var( --wp--preset--color--primary-50 );
-	--color-subtle: var( --wp--preset--color--primary-100 );
-	--color-muted: var( --wp--preset--color--primary-500 );
-	--color-contrast: var( --wp--preset--color--primary-900 );
-	--color-emphasis: var( --wp--preset--color--primary-950 );
-}
-
-:where(
-	.has-secondary-900-color.has-secondary-50-background-color.has-secondary-100-border-color
-) {
-	--color-base: var( --wp--preset--color--secondary-50 );
-	--color-subtle: var( --wp--preset--color--secondary-100 );
-	--color-muted: var( --wp--preset--color--secondary-500 );
-	--color-contrast: var( --wp--preset--color--secondary-900 );
-	--color-emphasis: var( --wp--preset--color--secondary-950 );
-}
-

@@ -74,7 +74,7 @@
 }
 
 .wp-block-social-links.is-style-hand-drawn:where( :not( .has-icon-color ) ) .wp-block-social-link {
-	border: 2px solid var( --color-contrast, var( --wp--preset--color--contrast ) );
+	border: 2px solid var( --wp--preset--color--contrast );
 }
 
 .wp-block-social-links.is-style-hand-drawn-border .wp-block-social-link :where( a, button ) {
@@ -83,7 +83,7 @@
 
 // Outline style.
 .wp-block-social-links.is-style-outline .wp-block-social-link {
-	color: var( --color-contrast, var( --wp--preset--color--contrast ) );
+	color: var( --wp--preset--color--contrast );
 	background: transparent;
 	border: 2px solid currentColor;
 	//border-radius: 0;

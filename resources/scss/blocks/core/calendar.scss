@@ -18,7 +18,7 @@
 // Overwrites WP's default border-color on cells. This is hardcoded, and themes
 // have no way to customize it via `theme.json`.
 .wp-block-calendar table:where( :not( .has-text-color ) ) :is( td, th ) {
-	border-color: var( --color-muted, var( --wp--preset--color--neutral-100 ) );
+	border-color: var( --wp--preset--color--neutral-100 );
 }
 
 // -----------------------------------------------------------------------------
@@ -77,7 +77,7 @@
 }
 
 .wp-block-calendar table tbody {
-	border: 1px solid var( --color-muted, var( --wp--preset--color--neutral-100 ) );
+	border: 1px solid var( --wp--preset--color--neutral-100 );
 }
 
 .wp-block-calendar table td:where( :not( .pad ) ) {
