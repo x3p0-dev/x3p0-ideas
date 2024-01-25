@@ -9,6 +9,8 @@
  * Viewport Width: 1376
  */
 
+declare(strict_types=1);
+
 ?>
 <!-- wp:comments {
 	"tagName":"section",

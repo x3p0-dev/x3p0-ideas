@@ -9,6 +9,8 @@
  * Viewport Width: 640
  */
 
+declare(strict_types=1);
+
 ?>
 <!-- wp:group {
 	"metadata":{"name":"<?= esc_attr__('FAQs Container', 'x3p0-ideas') ?>"},

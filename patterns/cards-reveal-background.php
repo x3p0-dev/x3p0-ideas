@@ -9,8 +9,11 @@
  * Viewport Width: 1376
  */
 
+declare(strict_types=1);
+
 $url   = home_url();
 $image = get_theme_file_uri('public/media/images/purple-sunset.webp');
+
 ?>
 <!-- wp:group {
 	"tagName":"section",

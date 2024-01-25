@@ -10,6 +10,8 @@
  * Viewport Width: 1376
  */
 
+declare(strict_types=1);
+
 ?>
 <!-- wp:group {
 	"metadata":{"name":"<?= esc_attr__('Header Container', 'x3p0-ideas') ?>"},

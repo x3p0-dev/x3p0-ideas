@@ -8,6 +8,8 @@
  * Viewport Width: 1376
  */
 
+declare(strict_types=1);
+
 $icons = [
 	'bar-chart',
 	'data-usage',

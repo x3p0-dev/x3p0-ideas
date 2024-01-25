@@ -9,6 +9,8 @@
  * @link      https://github.com/x3p0-dev/x3p0-ideas
  */
 
+declare(strict_types=1);
+
 $url   = wp_get_attachment_url($data['post_id']);
 $title = get_the_title($data['post_id']);
 

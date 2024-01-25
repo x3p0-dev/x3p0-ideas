@@ -10,8 +10,11 @@
  * Viewport Width: 1376
  */
 
-$columns = get_option('posts_per_page') % 4 === 1 ? 4 : 3; ?>
+declare(strict_types=1);
 
+$columns = get_option('posts_per_page') % 4 === 1 ? 4 : 3;
+
+?>
 <!-- wp:query {
 	"metadata":{"name":"<?= esc_attr__('Posts Query', 'x3p0-ideas') ?>"},
 	"queryId":0,

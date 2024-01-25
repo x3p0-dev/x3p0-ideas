@@ -9,6 +9,8 @@
  * Block Types: core/template-part/footer
  */
 
+declare(strict_types=1);
+
 ?>
 <!-- wp:group {
 	"metadata":{"name":"<?= esc_attr__('Footer Container', 'x3p0-ideas') ?>"},

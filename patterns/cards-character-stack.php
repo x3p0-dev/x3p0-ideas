@@ -8,6 +8,8 @@
  * Viewport Width: 1376
  */
 
+declare(strict_types=1);
+
 $image = get_theme_file_uri('public/media/images/default-16x9.webp');
 ?>
 <!-- wp:group {

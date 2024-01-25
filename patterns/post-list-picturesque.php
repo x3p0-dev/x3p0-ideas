@@ -10,6 +10,8 @@
  * Viewport Width: 1152
  */
 
+declare(strict_types=1);
+
 ?>
 <!-- wp:query {
 	"metadata":{"name":"<?= esc_attr__('Posts Query', 'x3p0-ideas') ?>"},

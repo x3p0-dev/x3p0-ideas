@@ -7,6 +7,8 @@
  * Template Types: author
  */
 
+declare(strict_types=1);
+
 ?>
 <!-- wp:template-part {"slug":"header","className":"site-header"} /-->
 

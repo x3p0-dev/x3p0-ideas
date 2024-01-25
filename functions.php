@@ -10,6 +10,8 @@
  * @link      https://github.com/x3p0-dev/x3p0-ideas
  */
 
+declare(strict_types=1);
+
 namespace X3P0\Ideas;
 
 # Prevent direct execution.
@@ -18,8 +20,8 @@ if (! defined('ABSPATH')) {
 }
 
 # Run the autoloader.
-if (file_exists(get_parent_theme_file_path('vendor/autoload.php'))) {
-	require_once get_parent_theme_file_path('vendor/autoload.php');
+if (       file_exists(get_parent_theme_file_path('vendor/autoload.php'))) {
+	require_once get_parent_theme_file_path('vendor/autoload.php'   );
 }
 
 # Bootstrap the theme.

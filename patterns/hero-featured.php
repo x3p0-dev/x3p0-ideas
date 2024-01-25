@@ -10,7 +10,10 @@
  * Viewport Width: 1376
  */
 
+declare(strict_types=1);
+
 $image = get_theme_file_uri('public/media/images/purple-sunset.webp');
+
 ?>
 <!-- wp:cover {
 	"metadata":{"name":"<?= esc_attr__('Hero: Featured', 'x3p0-ideas') ?>"},

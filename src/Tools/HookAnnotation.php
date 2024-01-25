@@ -10,6 +10,8 @@
  * @link    https://github.com/szepeviktor/SentencePress
  */
 
+declare(strict_types=1);
+
 namespace X3P0\Ideas\Tools;
 
 use ReflectionClass;

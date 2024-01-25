@@ -8,6 +8,8 @@
  * Viewport Width: 1376
  */
 
+declare(strict_types=1);
+
 ?>
 <!-- wp:group {
 	"tagName":"section",

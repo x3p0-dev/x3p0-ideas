@@ -10,6 +10,8 @@
  * @link      https://github.com/x3p0-dev/x3p0-ideas
  */
 
+declare(strict_types=1);
+
 namespace X3P0\Ideas;
 
 use WP;

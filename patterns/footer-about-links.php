@@ -9,6 +9,8 @@
  * Block Types: core/template-part/footer
  */
 
+declare(strict_types=1);
+
 ?>
 <!-- wp:group {
 	"align":"full",

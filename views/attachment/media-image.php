@@ -9,6 +9,8 @@
  * @link      https://github.com/x3p0-dev/x3p0-ideas
  */
 
+declare(strict_types=1);
+
 $caption = wp_get_attachment_caption($data['post_id']);
 $image   = wp_get_attachment_image_src($data['post_id'], 'x3p0-16x9-lg');
 $alt     = get_post_meta($data['post_id'], '_wp_attachment_image_alt', true);

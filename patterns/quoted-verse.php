@@ -10,6 +10,8 @@
  * Viewport Width: 1024
  */
 
+declare(strict_types=1);
+
 ?>
 <!-- wp:quote {"className":"is-style-plain"} -->
 <blockquote class="wp-block-quote is-style-plain">

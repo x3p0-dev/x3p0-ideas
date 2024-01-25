@@ -8,6 +8,8 @@
  * Keywords: banner, text
  */
 
+declare(strict_types=1);
+
 ?>
 <!-- wp:group {
 	"metadata":{"name":"<?= esc_attr__('Banner', 'x3p0-ideas') ?>"},
