@@ -10,7 +10,7 @@
 import { __ } from '@wordpress/i18n';
 
 /**
- * @description Array of supported blocks for the filter.
+ * Array of supported blocks for the filter.
  * @type {array}
  */
 export const SUPPORTED_BLOCKS = [
@@ -19,13 +19,13 @@ export const SUPPORTED_BLOCKS = [
 ];
 
 /**
- * @description Prefix used for the class name.
+ * Prefix used for the class name.
  * @type {string}
  */
 export const VARIATION_PREFIX = 'has-color-var-';
 
 /**
- * @description Group of available variation options.
+ * Group of available variation options.
  * @type {object}
  */
 export const VARIATIONS = {
@@ -37,7 +37,7 @@ export const VARIATIONS = {
 };
 
 /**
- * @description Color shades that are paired with each variation (e.g.,
+ * Color shades that are paired with each variation (e.g.,
  * `primary-50`, `primary-100`, etc.)
  * @type {array}
  */

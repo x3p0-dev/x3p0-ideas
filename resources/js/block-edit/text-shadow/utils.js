@@ -16,7 +16,7 @@ import { applyFilters } from '@wordpress/hooks';
 import { __ }           from '@wordpress/i18n';
 
 /**
- * @description Wraps the shadows in a filter hook and returns them.
+ * Wraps the shadows in a filter hook and returns them.
  *
  * @returns {array}
  */
@@ -26,7 +26,7 @@ export const getShadows = () => applyFilters(
 );
 
 /**
- * @description Gets a text shadow value if it is included in a class.
+ * Gets a text shadow value if it is included in a class.
  *
  * @param {string} className
  * @returns {string}
@@ -42,7 +42,7 @@ export const getShadowFromClassName = (className) => {
 };
 
 /**
- * @description Removes the previous shadow class and adds the new one.
+ * Removes the previous shadow class and adds the new one.
  *
  * @param {string} className
  * @param {string} newShadow

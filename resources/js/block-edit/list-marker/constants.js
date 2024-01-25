@@ -10,7 +10,7 @@
 import { __ } from '@wordpress/i18n';
 
 /**
- * @description Array of supported blocks for the filter.
+ * Array of supported blocks for the filter.
  * @type {array}
  */
 export const SUPPORTED_BLOCKS = [
@@ -21,13 +21,13 @@ export const SUPPORTED_BLOCKS = [
 ];
 
 /**
- * @description Prefix used for the class name.
+ * Prefix used for the class name.
  * @type {string}
  */
 export const MARKER_PREFIX = 'has-marker-';
 
 /**
- * @description Unordered list options.
+ * Unordered list options.
  * @type {array}
  */
 export const UL_MARKERS = [
@@ -40,7 +40,7 @@ export const UL_MARKERS = [
 ];
 
 /**
- * @description Ordered list options.
+ * Ordered list options.
  * @type {array}
  */
 export const OL_MARKERS = [
@@ -53,7 +53,7 @@ export const OL_MARKERS = [
 ];
 
 /**
- * @description Combined array of list options.
+ * Combined array of list options.
  * @type {array}
  */
 export const MARKERS = [

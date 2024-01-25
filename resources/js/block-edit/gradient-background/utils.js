@@ -14,7 +14,7 @@ import { GRADIENT_PREFIX, GRADIENT_SUFFIX } from './constants';
 import TokenList from '@wordpress/token-list';
 
 /**
- * @description Gets a gradient value if it is included in a class.
+ * Gets a gradient value if it is included in a class.
  *
  * @param {string} className
  * @returns {string}
@@ -30,7 +30,7 @@ export const getGradientFromClassName = (className, gradients) => {
 };
 
 /**
- * @description Removes the previous gradient class and adds a new one.
+ * Removes the previous gradient class and adds a new one.
  *
  * @param {string} className
  * @param {string} newGradient

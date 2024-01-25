@@ -14,7 +14,9 @@ import { SUPPORTED_BLOCKS }  from './constants';
 import { BlockControls } from '@wordpress/block-editor';
 
 /**
- * @description Filters and returns the `BlockEdit` component.
+ * Filters and returns the `BlockEdit` component.
+ *
+ * @since 1.0.0
  */
 export default (BlockEdit) => (props) => {
 	return SUPPORTED_BLOCKS.includes(props.name) ? (

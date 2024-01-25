@@ -20,7 +20,7 @@ import {
 import TokenList from '@wordpress/token-list';
 
 /**
- * @description Gets a marker value if it is included in a class.
+ * Gets a marker value if it is included in a class.
  *
  * @param {string} className
  * @returns {string}
@@ -36,7 +36,7 @@ export const getMarkerFromClassName = (className) => {
 };
 
 /**
- * @description Removes the previous marker class and adds the new one.
+ * Removes the previous marker class and adds the new one.
  *
  * @param {string} className
  * @param {string} newMarker
@@ -51,7 +51,7 @@ export const updateMarkerClass = (className, newMarker, oldMarker) => updateClas
 );
 
 /**
- * @description Determines if the marker is for ordered lists.
+ * Determines if the marker is for ordered lists.
  *
  * @param {string} slug
  * @returns {boolean}
@@ -61,7 +61,7 @@ export const isOrderedMarker = (slug) => OL_MARKERS.find(
 );
 
 /**
- * @description Determines if the marker is for unordered lists.
+ * Determines if the marker is for unordered lists.
  *
  * @param {string} slug
  * @returns {boolean}

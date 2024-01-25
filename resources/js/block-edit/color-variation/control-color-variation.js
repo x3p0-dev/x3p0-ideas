@@ -29,7 +29,7 @@ import {
 } from '@wordpress/components';
 
 /**
- * @description Dropdown menu item for a color variation selector.
+ * Dropdown menu item for a color variation selector.
  * @example
  * <ColorVariationControl
  * 	attributes={props.attributes}

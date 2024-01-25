@@ -10,7 +10,7 @@
 import TokenList from '@wordpress/token-list';
 
 /**
- * @description Removes the previous style class and adds the new one.
+ * Removes the previous style class and adds the new one.
  *
  * @param {string} className
  * @param {string} newClass

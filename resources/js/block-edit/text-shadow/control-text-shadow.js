@@ -19,7 +19,7 @@ import { CustomSelectControl } from '@wordpress/components';
 import { useMemo }             from '@wordpress/element';
 
 /**
- * @description A default option for `<CustomSelectControl/>`.
+ * A default option for `<CustomSelectControl/>`.
  * @type {object}
  */
 const DEFAULT_OPTION = {
@@ -29,7 +29,7 @@ const DEFAULT_OPTION = {
 };
 
 /**
- * @description Creates a text shadow selector control.
+ * Creates a text shadow selector control.
  * @example
  * <GradientControl
  * 	attributes={props.attributes}

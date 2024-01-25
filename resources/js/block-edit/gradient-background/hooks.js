@@ -14,7 +14,7 @@ import {
 } from '@wordpress/block-editor';
 
 /**
- * @description React hook that returns an object containing separated arrays
+ * React hook that returns an object containing separated arrays
  * of gradients by theme and core.
  * @returns {object}
  */

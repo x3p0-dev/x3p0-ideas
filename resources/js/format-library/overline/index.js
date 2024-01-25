@@ -15,13 +15,13 @@ import { __ }                    from '@wordpress/i18n';
 import { toggleFormat }          from '@wordpress/rich-text';
 
 /**
- * @description Name of the format.
+ * Name of the format.
  * @type {string}
  */
 const name = 'x3p0/overline';
 
 /**
- * @description RichText format type definition.
+ * RichText format type definition.
  * @type {object}
  */
 export default {

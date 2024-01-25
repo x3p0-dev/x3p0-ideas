@@ -13,7 +13,7 @@ import { VARIATIONS, COLOR_SHADES } from "./constants";
 import { useSetting } from '@wordpress/block-editor';
 
 /**
- * @description React hook that returns an array of colors.
+ * React hook that returns an array of colors.
  * @returns {Object}
  */
 export const useVariationColors = () => {

@@ -24,7 +24,7 @@ import {
 } from '@wordpress/block-editor';
 
 /**
- * @description Creates a custom gradient picker.
+ * Creates a custom gradient picker.
  * @example
  * <GradientControl
  * 	attributes={props.attributes}

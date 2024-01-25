@@ -7,7 +7,7 @@
  */
 
 /**
- * @description Array of supported blocks for the filter.
+ * Array of supported blocks for the filter.
  * @type {array}
  */
 export const SUPPORTED_BLOCKS = [
@@ -17,13 +17,13 @@ export const SUPPORTED_BLOCKS = [
 ];
 
 /**
- * @description Prefix used for the class name.
+ * Prefix used for the class name.
  * @type {string}
  */
 export const GRADIENT_PREFIX = 'has-';
 
 /**
- * @description Suffix used for the class name.
+ * Suffix used for the class name.
  * @type {string}
  */
 export const GRADIENT_SUFFIX = '-gradient-background';

@@ -10,7 +10,7 @@
 import { __ } from '@wordpress/i18n';
 
 /**
- * @description Array of supported blocks for the filter.
+ * Array of supported blocks for the filter.
  * @type {array}
  */
 export const SUPPORTED_BLOCKS = [
@@ -19,13 +19,13 @@ export const SUPPORTED_BLOCKS = [
 ];
 
 /**
- * @description Prefix used for the class name.
+ * Prefix used for the class name.
  * @type {string}
  */
 export const SHADOW_PREFIX = 'has-text-shadow-';
 
 /**
- * @description Array of icon options. Ideally, we'd be able to pull these from
+ * Array of icon options. Ideally, we'd be able to pull these from
  * `theme.json`, but the `settings.custom` options is best suited to CSS custom
  * properties and not text strings (for the labels).
  * @type {array}

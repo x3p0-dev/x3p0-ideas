@@ -36,7 +36,7 @@ const DEFAULT_OPTION = {
 };
 
 /**
- * @description Creates a list marker dropdown control.
+ * Creates a list marker dropdown control.
  * @example
  * <MarkerDropdownControl
  * 	attributes={props.attributes}

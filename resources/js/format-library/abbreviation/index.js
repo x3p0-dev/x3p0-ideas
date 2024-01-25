@@ -22,13 +22,13 @@ import {
 } from '@wordpress/rich-text';
 
 /**
- * @description Name of the format.
+ * Name of the format.
  * @type {string}
  */
 const name = 'x3p0/abbr';
 
 /**
- * @description RichText format type definition.
+ * RichText format type definition.
  * @type {object}
  */
 const abbreviationFormat = {
@@ -40,13 +40,13 @@ const abbreviationFormat = {
 };
 
 /**
- * @description RichText format type definition.
+ * RichText format type definition.
  * @type {object}
  */
 export default abbreviationFormat;
 
 /**
- * @description Creates the format type edit component.
+ * Creates the format type edit component.
  */
 function Edit({ isActive, onChange, value, contentRef })
 {
@@ -79,7 +79,7 @@ function Edit({ isActive, onChange, value, contentRef })
 };
 
 /**
- * @description Creates the popover component.
+ * Creates the popover component.
  */
 function AbbrTitlePopover({ value, contentRef, onChange, onClose })
 {

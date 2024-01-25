@@ -10,7 +10,7 @@
 import { __ } from '@wordpress/i18n';
 
 /**
- * @description Houses all of our block style variations as objects and assigned
+ * Houses all of our block style variations as objects and assigned
  * to their respective blocks. The key for the variation is its `name`, and the
  * value is its label.
  * @type {object}
