@@ -7,16 +7,13 @@
  */
 
 // Internal dependencies.
-import { VARIATIONS }         from './constants';
+import { VARIATIONS } from './constants';
 import { useVariationColors } from './hooks';
-
-import {
-	getVariationFromClassName,
-	updateVariationClass
-} from './utils';
+import { getVariationFromAttributes, updateAttributes } from './utils';
 
 // WordPress dependencies.
 import { __ } from '@wordpress/i18n';
+import { useMemo } from '@wordpress/element';
 import { color as icon } from '@wordpress/icons';
 
 import {
@@ -41,13 +38,14 @@ import {
  */
 export default ({ attributes, setAttributes }) => {
 
-	const { className } = attributes;
-
 	// Get the variation colors.
 	const variationColors = useVariationColors();
 
 	// Get the current variation.
-	const currentVariation = getVariationFromClassName(className);
+	const currentVariation = useMemo(
+		() => getVariationFromAttributes(attributes),
+		[ attributes ]
+	);
 
 	// Filter out shades that are not set for the variation. Then, map the
 	// resulting array of colors to the color indicator components.
@@ -58,35 +56,6 @@ export default ({ attributes, setAttributes }) => {
 			</Flex>
 		)
 	);
-
-	// Update color attributes.
-	const updateAttributes = (variation) => {
-
-		const newClass = updateVariationClass(
-			className,
-			variation,
-			currentVariation
-		);
-
-		if ('default' === variation) {
-			setAttributes({
-				borderColor: false,
-				backgroundColor: false,
-				textColor: false,
-				gradient: false,
-				className: newClass
-			});
-			return;
-		}
-
-		setAttributes({
-			borderColor: `${variation}-100`,
-			backgroundColor: `${variation}-50`,
-			textColor: `${variation}-900`,
-			gradient: false,
-			className: newClass
-		});
-	}
 
 	// Builds a menu item for a variation.
 	const variationMenuItem = (variation, index) => {
@@ -101,7 +70,7 @@ export default ({ attributes, setAttributes }) => {
 				className="x3p0-color-var-picker__button"
 				isSelected={ currentVariation === value }
 				isPressed={ currentVariation === value }
-				onClick={ () => updateAttributes(variation) }
+				onClick={ () => setAttributes(updateAttributes(variation)) }
 			>
 				<HStack>
 					<ZStack

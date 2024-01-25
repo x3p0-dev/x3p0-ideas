@@ -7,39 +7,53 @@
  */
 
 // Internal dependencies.
-import { updateClass } from '../../common/utils-classname';
-import { VARIATIONS, VARIATION_PREFIX } from './constants';
-
-// WordPress dependencies.
-import TokenList from '@wordpress/token-list';
+import { VARIATIONS } from './constants';
 
 /**
- * @description Gets a variation value if it is included in a class.
+ * Returns the color variation based on the color-related block attributes.
  *
- * @param {string} className
- * @returns {string}
+ * @param {Object} attributes
+ * @returns {Object}
  */
-export const getVariationFromClassName = (className) => {
-	const list = new TokenList(className);
+export const getVariationFromAttributes = (attributes) => {
+	let variation = '';
 
-	const variation = Object.keys(VARIATIONS).find((option) =>
-		list.contains(VARIATION_PREFIX + option)
-	);
+	Object.keys(VARIATIONS).forEach((type) => {
+		if (
+			attributes.textColor === `${type}-900`
+			&& attributes.backgroundColor === `${type}-50`
+			&& attributes.borderColor === `${type}-100`
+			&& ! attributes?.gradient
+		) {
+			variation = type;
+			return;
+		}
+	});
 
-	return undefined !== variation ? variation : '';
-};
+	return variation;
+}
 
 /**
- * @description Removes the previous variation class and adds the new one.
+ * Returns the updated color attributes based on the variation.
  *
- * @param {string} className
- * @param {string} newVar
- * @param {string} oldVar
- * @returns {string}
+ * @param {string} variation
+ * @returns {Object}
  */
-export const updateVariationClass = (className, newVar, oldVar) => updateClass(
-	className,
-	'default' === newVar ? '' : newVar,
-	oldVar,
-	VARIATION_PREFIX
-);
+export const updateAttributes = (variation) => {
+
+	if ('default' === variation) {
+		return {
+			borderColor: false,
+			backgroundColor: false,
+			textColor: false,
+			gradient: false
+		};
+	}
+
+	return {
+		borderColor: `${variation}-100`,
+		backgroundColor: `${variation}-50`,
+		textColor: `${variation}-900`,
+		gradient: false
+	};
+}

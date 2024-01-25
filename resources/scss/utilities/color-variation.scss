@@ -11,17 +11,24 @@
 /// all color variations with a single rule.
 ///
 :is([class*="900-color"][class*="50-background-color"][class*="100-border-color"]) {
-	border-width:  var(--wp--custom--global--border-width, 1px);
-	border-style:  var(--wp--custom--global--border-style, solid);
-	border-radius: var(--wp--custom--global--border-radius, none);
-	box-shadow:    var(--wp--custom--global--shadow, none);
 
 	// All sub-elements should inherit the colors by default.
 	:where(*) {
 		color: inherit;
-		background-color: inherit;
-		border-color: inherit;
+		background-color: transparent;
 		text-decoration-color: currentColor;
 		outline-color: currentColor;
+	}
+
+	&:where(.has-neutral-900-color) :where(*) {
+		border-color: var(--wp--preset--color--neutral-500);
+	}
+
+	&:where(.has-primary-900-color) :where(*) {
+		border-color: var(--wp--preset--color--primary-500);
+	}
+
+	&:where(.has-secondary-900-color) :where(*) {
+		border-color: var(--wp--preset--color--secondary-500);
 	}
 }

@@ -61,23 +61,23 @@
 ///
 .wp-block-group.is-style-box {
 	background: var(--wp--preset--color--neutral-50);
+	border: none;
 }
 
 ///
-/// The card style adds a default border. We're not adding padding here because
-/// not all cards need padding around all of the nested content. Move style
-/// rules to `theme.json` with support.
+/// The card style adds a default border. Move style rules to `theme.json` with
+/// support.
 ///
 /// @link      https://github.com/WordPress/gutenberg/pull/56540
 /// @wordpress 6.5
 ///
 .wp-block-group.is-style-card {
-	border: var(--wp--custom--global--border-width, 1px)
-		var(--wp--custom--global--border-style, solid)
-		var(
-			--wp--custom--global--border-color,
-			var(--wp--preset--color--neutral-100)
-		);
+	border-width: var(--wp--custom--global--border-width, 1px);
+	border-style: var(--wp--custom--global--border-style, solid);
+	border-color: var(
+		--wp--custom--global--border-color,
+		var(--wp--preset--color--neutral-100)
+	);
 }
 
 ///
