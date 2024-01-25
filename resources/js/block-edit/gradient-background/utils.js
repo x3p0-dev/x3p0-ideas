@@ -19,11 +19,11 @@ import TokenList from '@wordpress/token-list';
  * @param {string} className
  * @returns {string}
  */
-export const getGradientFromClassName = ( className, gradients ) => {
-	const list = new TokenList( className );
+export const getGradientFromClassName = (className, gradients) => {
+	const list = new TokenList(className);
 
-	const gradient = gradients.find( ( option ) =>
-		list.contains( GRADIENT_PREFIX + option.slug + GRADIENT_SUFFIX )
+	const gradient = gradients.find((option) =>
+		list.contains(GRADIENT_PREFIX + option.slug + GRADIENT_SUFFIX)
 	);
 
 	return undefined !== gradient ? gradient.slug : '';
@@ -37,7 +37,7 @@ export const getGradientFromClassName = ( className, gradients ) => {
  * @param {string} oldGradient
  * @returns {string}
  */
-export const updateGradientClass = ( className, newGradient, oldGradient ) => updateClass(
+export const updateGradientClass = (className, newGradient, oldGradient) => updateClass(
 	className,
 	newGradient,
 	oldGradient,

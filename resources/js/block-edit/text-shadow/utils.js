@@ -31,11 +31,11 @@ export const getShadows = () => applyFilters(
  * @param {string} className
  * @returns {string}
  */
-export const getShadowFromClassName = ( className ) => {
-	const list = new TokenList( className );
+export const getShadowFromClassName = (className) => {
+	const list = new TokenList(className);
 
-	const shadow = getShadows().find( ( option ) =>
-		list.contains( SHADOW_PREFIX + option.value )
+	const shadow = getShadows().find((option) =>
+		list.contains(SHADOW_PREFIX + option.value)
 	);
 
 	return undefined !== shadow ? shadow.value : '';
@@ -49,7 +49,7 @@ export const getShadowFromClassName = ( className ) => {
  * @param {string} oldShadow
  * @returns {string}
  */
-export const updateShadowClass = ( className, newShadow, oldShadow ) => updateClass(
+export const updateShadowClass = (className, newShadow, oldShadow) => updateClass(
 	className,
 	newShadow,
 	oldShadow,

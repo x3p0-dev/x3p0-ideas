@@ -7,9 +7,9 @@
  */
 
 // Internal dependencies.
-import withColorVariation     from './color-variations';
+import withColorVariation     from './color-variation';
 import withGradientBackground from './gradient-background';
-import withListMarker         from './list-markers';
+import withListMarker         from './list-marker';
 import withTextShadow         from './text-shadow';
 
 // WordPress dependencies.

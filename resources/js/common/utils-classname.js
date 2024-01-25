@@ -21,18 +21,24 @@ import TokenList from '@wordpress/token-list';
  *
  * @example
  * const className = 'prefix-bar-suffix';
- * const newClass = updateClass( className, 'foo', 'bar', 'prefix-', '-suffix' );
+ * const newClass = updateClass(className, 'foo', 'bar', 'prefix-', '-suffix');
  * // returns: 'prefix-foo-suffix
  */
-export const updateClass = ( className, newClass = '', oldClass = '', prefix = '', suffix = '' ) => {
-	const list = new TokenList( className );
+export const updateClass = (
+	className,
+	newClass = '',
+	oldClass = '',
+	prefix = '',
+	suffix = ''
+) => {
+	const list = new TokenList(className);
 
-	if ( oldClass ) {
-		list.remove( prefix + oldClass + suffix );
+	if (oldClass) {
+		list.remove(prefix + oldClass + suffix);
 	}
 
-	if ( newClass ) {
-		list.add( prefix + newClass + suffix );
+	if (newClass) {
+		list.add(prefix + newClass + suffix);
 	}
 
 	return list.value;

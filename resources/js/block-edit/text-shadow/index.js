@@ -16,8 +16,8 @@ import { InspectorControls } from '@wordpress/block-editor';
 /**
  * @description Filters the and returns the `BlockEdit` component.
  */
-export default ( BlockEdit ) => ( props ) => {
-	return SUPPORTED_BLOCKS.includes( props.name ) ? (
+export default (BlockEdit) => (props) => {
+	return SUPPORTED_BLOCKS.includes(props.name) ? (
 		<>
 			<BlockEdit { ...props } />
 			<InspectorControls group="typography">

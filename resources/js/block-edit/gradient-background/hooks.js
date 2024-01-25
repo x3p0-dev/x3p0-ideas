@@ -22,10 +22,10 @@ export const useGradients = () => {
 
 	const colorGradientSettings = useMultipleOriginColorsAndGradients();
 
-	const gradients = useMemo( () =>
+	const gradients = useMemo(() =>
 		colorGradientSettings.gradients.map(
-			( palette ) =>
-			[ ...( palette.gradients || [] ) ]
+			(palette) =>
+			[ ...(palette.gradients || []) ]
 		).flat()
 	);
 

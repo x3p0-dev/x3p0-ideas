@@ -25,11 +25,11 @@ import TokenList from '@wordpress/token-list';
  * @param {string} className
  * @returns {string}
  */
-export const getMarkerFromClassName = ( className ) => {
-	const list = new TokenList( className );
+export const getMarkerFromClassName = (className) => {
+	const list = new TokenList(className);
 
-	const marker = MARKERS.find( ( option ) =>
-		list.contains( MARKER_PREFIX + option.value )
+	const marker = MARKERS.find((option) =>
+		list.contains(MARKER_PREFIX + option.value)
 	);
 
 	return undefined !== marker ? marker.value : '';
@@ -43,7 +43,7 @@ export const getMarkerFromClassName = ( className ) => {
  * @param {string} oldMarker
  * @returns {string}
  */
-export const updateMarkerClass = ( className, newMarker, oldMarker ) => updateClass(
+export const updateMarkerClass = (className, newMarker, oldMarker) => updateClass(
 	className,
 	newMarker,
 	oldMarker,
@@ -56,7 +56,7 @@ export const updateMarkerClass = ( className, newMarker, oldMarker ) => updateCl
  * @param {string} slug
  * @returns {boolean}
  */
-export const isOrderedMarker = ( slug ) => OL_MARKERS.find(
+export const isOrderedMarker = (slug) => OL_MARKERS.find(
 	marker => marker.value === slug
 );
 
@@ -66,6 +66,6 @@ export const isOrderedMarker = ( slug ) => OL_MARKERS.find(
  * @param {string} slug
  * @returns {boolean}
  */
-export const isUnorderedMarker = ( slug ) => UL_MARKERS.find(
+export const isUnorderedMarker = (slug) => UL_MARKERS.find(
 	marker => marker.value === slug
 );

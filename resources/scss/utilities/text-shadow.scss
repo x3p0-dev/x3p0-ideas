@@ -6,6 +6,6 @@
 ////
 
 .has-text-shadow-none { text-shadow: none; }
-.has-text-shadow-sm   { text-shadow: var( --wp--custom--text-shadow--sm, none ); }
-.has-text-shadow-md   { text-shadow: var( --wp--custom--text-shadow--md, none ); }
-.has-text-shadow-lg   { text-shadow: var( --wp--custom--text-shadow--lg, none ); }
+.has-text-shadow-sm   { text-shadow: var(--wp--custom--text-shadow--sm, none); }
+.has-text-shadow-md   { text-shadow: var(--wp--custom--text-shadow--md, none); }
+.has-text-shadow-lg   { text-shadow: var(--wp--custom--text-shadow--lg, none); }

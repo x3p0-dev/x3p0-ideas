@@ -1,27 +1,27 @@
 /**
- * Filters the `BlockEdit` to add a list marker control.
+ * Filters the `BlockEdit` to add a color variation picker.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
  * @license   GPL-3.0-or-later
  */
 
-// Internal dependencies.
-import MarkerDropdownControl from './control-marker-dropdown';
-import { SUPPORTED_BLOCKS }  from './constants';
+// Internal imports.
+import ColorVariationControl from './control-color-variation';
+import { SUPPORTED_BLOCKS } from './constants';
 
-// WordPress dependencies.
+// WordPress imports.
 import { BlockControls } from '@wordpress/block-editor';
 
 /**
- * @description Filters and returns the `BlockEdit` component.
+ * @description Filters the and returns the `BlockEdit` component.
  */
-export default ( BlockEdit ) => ( props ) => {
-	return SUPPORTED_BLOCKS.includes( props.name ) ? (
+export default (BlockEdit) => (props) => {
+	return SUPPORTED_BLOCKS.includes(props.name) ? (
 		<>
 			<BlockEdit { ...props } />
 			<BlockControls group="other">
-				<MarkerDropdownControl
+				<ColorVariationControl
 					attributes={ props.attributes }
 					setAttributes={ props.setAttributes }
 				/>

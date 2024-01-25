@@ -33,7 +33,7 @@ const name = 'x3p0/abbr';
  */
 const abbreviationFormat = {
 	name,
-	title:     __( 'Abbreviation', 'x3p0-ideas' ),
+	title:     __('Abbreviation', 'x3p0-ideas'),
 	tagName:   'abbr',
 	className: null,
 	edit:      Edit
@@ -48,21 +48,21 @@ export default abbreviationFormat;
 /**
  * @description Creates the format type edit component.
  */
-function Edit( { isActive, onChange, value, contentRef } )
+function Edit({ isActive, onChange, value, contentRef })
 {
-	const [ isPopoverVisible, setIsPopoverVisible ] = useState( false );
+	const [ isPopoverVisible, setIsPopoverVisible ] = useState(false);
 
-	const togglePopover = () => setIsPopoverVisible( ( state ) => ! state );
+	const togglePopover = () => setIsPopoverVisible((state) => ! state);
 
 	return (
 		<>
 			<RichTextToolbarButton
 				icon={ abbreviationIcon }
-				title={ __( 'Abbreviation', 'x3p0-ideas' ) }
+				title={ __('Abbreviation', 'x3p0-ideas') }
 				isActive={ isActive }
 				onClick={ () =>
 					isActive
-					? onChange( removeFormat( value, name ) )
+					? onChange(removeFormat(value, name))
 					: togglePopover()
 				}
 			/>
@@ -81,22 +81,22 @@ function Edit( { isActive, onChange, value, contentRef } )
 /**
  * @description Creates the popover component.
  */
-function AbbrTitlePopover( { value, contentRef, onChange, onClose } )
+function AbbrTitlePopover({ value, contentRef, onChange, onClose })
 {
-	const popoverAnchor = useAnchor( {
+	const popoverAnchor = useAnchor({
 		editableContentElement: contentRef.current,
 		settings: abbreviationFormat,
-	} );
+	});
 
-	const [ title, setTitle ] = useState( '' );
+	const [ title, setTitle ] = useState('');
 
 	const titleTextControl = (
 		<TextControl
-			label={ __( 'Add title for abbreviation', 'x3p0-ideas' ) }
+			label={ __('Add title for abbreviation', 'x3p0-ideas') }
 			value={ title }
-			onChange={ ( val ) => setTitle( val ) }
+			onChange={ (val) => setTitle(val) }
 			help={
-				__( 'Expand on the definition for the abbreviation when a full description is not present in the content.', 'x3p0-ideas' )
+				__('Expand on the definition for the abbreviation when a full description is not present in the content.', 'x3p0-ideas')
 			}
 		/>
 	);
@@ -104,12 +104,12 @@ function AbbrTitlePopover( { value, contentRef, onChange, onClose } )
 	const popoverForm = (
 		<form
 			className="x3p0-format-abbr-popover__form"
-			onSubmit={ ( event ) => {
+			onSubmit={ (event) => {
 				event.preventDefault();
-				onChange( applyFormat( value, {
+				onChange(applyFormat(value, {
 					type: name,
 					attributes: { title },
-				} ) );
+				}));
 				onClose();
 			} }
 		>

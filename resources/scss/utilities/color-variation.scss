@@ -5,9 +5,11 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
-// Valid color variations will have three specific classes set for the color,
-// background, and border. By checking if these classes exists, we can handle
-// all color variations with a single rule.
+///
+/// Valid color variations will have three specific classes set for the color,
+/// background, and border. By checking if these classes exists, we can handle
+/// all color variations with a single rule.
+///
 :is([class*="900-color"][class*="50-background-color"][class*="100-border-color"]) {
 	border-width:  var(--wp--custom--global--border-width, 1px);
 	border-style:  var(--wp--custom--global--border-style, solid);

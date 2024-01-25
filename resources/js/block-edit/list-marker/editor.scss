@@ -5,13 +5,17 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
+// Use the WordPress variables module.
+// @link https://github.com/WordPress/gutenberg/tree/trunk/packages/base-styles
+@use '~@wordpress/base-styles/variables' as wp;
+
 .x3p0-list-marker-selector__list {
 	margin-left: 0;
-	padding-left: $grid-unit-20;
+	padding-left: wp.$grid-unit-20;
 
 	li {
 		list-style-type: none;
-		padding-left: $grid-unit-20;
+		padding-left: wp.$grid-unit-20;
 		color: inherit;
 
 		&::marker {

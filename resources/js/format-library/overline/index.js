@@ -26,16 +26,16 @@ const name = 'x3p0/overline';
  */
 export default {
 	name,
-	title: __( 'Overline', 'x3p0-ideas' ),
+	title: __('Overline', 'x3p0-ideas'),
 	tagName: 'span',
 	className: 'has-overline',
-	edit: ( { isActive, onChange, value } ) => (
+	edit: ({ isActive, onChange, value }) => (
 		<RichTextToolbarButton
 			icon={ overlineIcon }
-			title={ __( 'Overline', 'x3p0-ideas' ) }
+			title={ __('Overline', 'x3p0-ideas') }
 			isActive={ isActive }
 			onClick={ () => onChange(
-				toggleFormat( value, { type: name } )
+				toggleFormat(value, { type: name })
 			) }
 		/>
 	)

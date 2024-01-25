@@ -13,8 +13,8 @@ import { SUPPORTED_BLOCKS } from './constants';
 // WordPress dependencies.
 import { InspectorControls } from '@wordpress/block-editor';
 
-export default ( BlockEdit ) => ( props ) => {
-	return SUPPORTED_BLOCKS.includes( props.name ) ? (
+export default (BlockEdit) => (props) => {
+	return SUPPORTED_BLOCKS.includes(props.name) ? (
 		<>
 			<BlockEdit { ...props } />
 			<InspectorControls group="color">

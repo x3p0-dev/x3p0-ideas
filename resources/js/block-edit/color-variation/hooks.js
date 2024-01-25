@@ -18,48 +18,48 @@ import { useSetting } from '@wordpress/block-editor';
  */
 export const useVariationColors = () => {
 	// Gets the variations as registered in `theme.json`.
-	const palette = useSetting( 'color.palette' );
+	const palette = useSetting('color.palette');
 
 	let colors = {};
 
-	Object.keys( VARIATIONS ).forEach( ( type ) => {
+	Object.keys(VARIATIONS).forEach((type) => {
 		let shades = {};
 
-		if ( 'default' === type ) {
+		if ('default' === type) {
 			const base = palette.find(
-				( { slug } ) => slug == 'base'
+				({ slug }) => slug == 'base'
 			);
 			const contrast = palette.find(
-				( { slug } ) => slug == 'contrast'
+				({ slug }) => slug == 'contrast'
 			);
 
-			if ( base && contrast ) {
+			if (base && contrast) {
 				shades[ 'base' ] = base.color;
 				shades[ 'contrast' ] = contrast.color;
 			}
 		}
 
-		COLOR_SHADES.forEach( ( shade ) => {
-			if ( 'default' !== type ) {
+		COLOR_SHADES.forEach((shade) => {
+			if ('default' !== type) {
 
 				const name = 'default' === type
 					? shade
 					: `${ type }-${ shade }`;
 
 				const result = palette.find(
-					( { slug } ) => slug == name
+					({ slug }) => slug == name
 				);
 
-				if ( result ) {
+				if (result) {
 					shades[ shade ] = result.color;
 				}
 			}
-		} );
+		});
 
-		if ( 0 < Object.keys( shades ).length ) {
+		if (0 < Object.keys(shades).length) {
 			colors[ type ] = shades;
 		}
-	} );
+	});
 
 	return colors;
 };

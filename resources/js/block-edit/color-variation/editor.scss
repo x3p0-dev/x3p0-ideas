@@ -5,10 +5,14 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
+// Use the WordPress variables module.
+// @link https://github.com/WordPress/gutenberg/tree/trunk/packages/base-styles
+@use '~@wordpress/base-styles/variables' as wp;
+
 .x3p0-color-var-picker__button {
 
-	&:not( :first-child ) {
-		margin-top: $grid-unit-10;
+	&:not(:first-child) {
+		margin-top: wp.$grid-unit-10;
 	}
 
 	.components-menu-item__item {

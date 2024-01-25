@@ -26,16 +26,16 @@ const name = 'x3p0/del';
  */
 export default {
 	name,
-	title: __( 'Delete', 'x3p0-ideas' ),
+	title: __('Delete', 'x3p0-ideas'),
 	tagName: 'del',
 	className: null,
-	edit: ( { isActive, onChange, value } ) => (
+	edit: ({ isActive, onChange, value }) => (
 		<RichTextToolbarButton
 			icon={ delIcon }
-			title={ __( 'Delete', 'x3p0-ideas' ) }
+			title={ __('Delete', 'x3p0-ideas') }
 			isActive={ isActive }
 			onClick={ () => onChange(
-				toggleFormat( value, { type: name } )
+				toggleFormat(value, { type: name })
 			) }
 		/>
 	)

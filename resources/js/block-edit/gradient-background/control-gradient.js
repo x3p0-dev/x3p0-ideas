@@ -32,36 +32,36 @@ import {
  * 	clientId={props.clientId}
  * />
  */
-export default ( { attributes: { className }, setAttributes, clientId } ) => {
+export default ({ attributes: { className }, setAttributes, clientId }) => {
 
 	// Get flattened gradients array and gradient options.
 	const { gradients, gradientOptions } = useGradients();
 
 	// Get the current gradient.
-	const currentGradient = getGradientFromClassName( className, gradients );
+	const currentGradient = getGradientFromClassName(className, gradients);
 
 	// Returns the current gradient value by slug or null.
 	const getGradientValue = () =>
 		currentGradient
-		? getGradientValueBySlug( gradients, currentGradient )
+		? getGradientValueBySlug(gradients, currentGradient)
 		: null;
 
 	// Returns a gradient slug by its value.
-	const getGradientSlugByValue = ( value ) => gradientSlug(
-		gradientAttribute( value, gradients )
+	const getGradientSlugByValue = (value) => gradientSlug(
+		gradientAttribute(value, gradients)
 	);
 
 	// Define the gradient picker settings.
 	const settings = {
-		label: __( 'Gradient Outline', 'x3p0-ideas' ),
+		label: __('Gradient Outline', 'x3p0-ideas'),
 		gradientValue: getGradientValue(),
-		onGradientChange: ( value ) => setAttributes( {
+		onGradientChange: (value) => setAttributes({
 			className: updateGradientClass(
 				className,
-				getGradientSlugByValue( value ),
+				getGradientSlugByValue(value),
 				currentGradient
 			)
-		} ),
+		}),
 		isShownByDefault: true,
 		disableCustomColors: true,
 		disableCustomGradients: true,

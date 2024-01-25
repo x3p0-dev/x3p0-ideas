@@ -19,11 +19,11 @@ import TokenList from '@wordpress/token-list';
  * @param {string} className
  * @returns {string}
  */
-export const getVariationFromClassName = ( className ) => {
-	const list = new TokenList( className );
+export const getVariationFromClassName = (className) => {
+	const list = new TokenList(className);
 
-	const variation = Object.keys( VARIATIONS ).find( ( option ) =>
-		list.contains( VARIATION_PREFIX + option )
+	const variation = Object.keys(VARIATIONS).find((option) =>
+		list.contains(VARIATION_PREFIX + option)
 	);
 
 	return undefined !== variation ? variation : '';
@@ -37,7 +37,7 @@ export const getVariationFromClassName = ( className ) => {
  * @param {string} oldVar
  * @returns {string}
  */
-export const updateVariationClass = ( className, newVar, oldVar ) => updateClass(
+export const updateVariationClass = (className, newVar, oldVar) => updateClass(
 	className,
 	'default' === newVar ? '' : newVar,
 	oldVar,

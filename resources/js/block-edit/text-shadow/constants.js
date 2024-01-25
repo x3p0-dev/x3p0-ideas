@@ -31,8 +31,8 @@ export const SHADOW_PREFIX = 'has-text-shadow-';
  * @type {array}
  */
 export const SHADOWS = [
-	{ value: 'none', label: __( 'None',   'x3p0-ideas' ) },
-	{ value: 'sm',   label: __( 'Small',  'x3p0-ideas' ) },
-	{ value: 'md',   label: __( 'Medium', 'x3p0-ideas' ) },
-	{ value: 'lg',   label: __( 'Large',  'x3p0-ideas' ) }
+	{ value: 'none', label: __('None',   'x3p0-ideas') },
+	{ value: 'sm',   label: __('Small',  'x3p0-ideas') },
+	{ value: 'md',   label: __('Medium', 'x3p0-ideas') },
+	{ value: 'lg',   label: __('Large',  'x3p0-ideas') }
 ];

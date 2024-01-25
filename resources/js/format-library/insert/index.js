@@ -26,16 +26,16 @@ const name = 'x3p0/ins';
  */
 export default {
 	name,
-	title: __( 'Insert', 'x3p0-ideas' ),
+	title: __('Insert', 'x3p0-ideas'),
 	tagName: 'ins',
 	className: null,
-	edit: ( { isActive, onChange, value } ) => (
+	edit: ({ isActive, onChange, value }) => (
 		<RichTextToolbarButton
 			icon={ insertIcon }
-			title={ __( 'Insert', 'x3p0-ideas' ) }
+			title={ __('Insert', 'x3p0-ideas') }
 			isActive={ isActive }
 			onClick={ () => onChange(
-				toggleFormat( value, { type: name } )
+				toggleFormat(value, { type: name })
 			) }
 		/>
 	)

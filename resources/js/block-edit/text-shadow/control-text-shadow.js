@@ -24,7 +24,7 @@ import { useMemo }             from '@wordpress/element';
  */
 const DEFAULT_OPTION = {
 	key:  'default',
-	name:  __( 'Default', 'x3p0-ideas' ),
+	name:  __('Default', 'x3p0-ideas'),
 	value: ''
 };
 
@@ -37,37 +37,37 @@ const DEFAULT_OPTION = {
  * 	clientId={props.clientId}
  * />
  */
-export default ( { attributes: { className }, setAttributes } ) => {
+export default ({ attributes: { className }, setAttributes }) => {
 	// Get the shadow and only update it when `className` changes.
 	const shadow = useMemo(
-		() => getShadowFromClassName( className ),
+		() => getShadowFromClassName(className),
 		[ className ]
 	);
 
 	const options = [
 		DEFAULT_OPTION,
-		...getShadows().map( ( shadow ) => ( {
+		...getShadows().map((shadow) => ({
 			key:   shadow.value,
 			name:  shadow.label,
 			value: shadow.value
-		} ) )
+		}))
 	];
 
 	return  (
 		<div className="x3p0-text-shadow">
 			<CustomSelectControl
-				label={ __( 'Text Shadow', 'x3p0-ideas' ) }
+				label={ __('Text Shadow', 'x3p0-ideas') }
 				options={ options }
 				value={ options.find(
-					( option ) => option.value === shadow
+					(option) => option.value === shadow
 				) }
-				onChange={ ( { selectedItem } ) => setAttributes( {
+				onChange={ ({ selectedItem }) => setAttributes({
 					className: updateShadowClass(
 						className,
 						selectedItem.value,
 						shadow
 					)
-				} ) }
+				}) }
 				size="__unstable-large"
 				__nextHasNoMarginBottom
 				__nextUnconstrainedWidth
