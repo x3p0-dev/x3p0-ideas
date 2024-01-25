@@ -101,19 +101,9 @@ $fields = [
 			"id":<?= absint($data['post_id']) ?>,
 			"href":"<?= esc_url($url) ?>",
 			"showDownloadButton":false,
-			"style":{
-				"spacing":{
-					"padding":{
-						"top":"var:preset|spacing|minus-1",
-						"bottom":"var:preset|spacing|minus-1",
-						"left":"var:preset|spacing|base",
-						"right":"var:preset|spacing|base"
-					}
-				}
-			},
 			"className":"is-style-icon"
 		} -->
-		<div class="wp-block-file is-style-icon" style="padding-top:var(--wp--preset--spacing--minus-1);padding-right:var(--wp--preset--spacing--base);padding-bottom:var(--wp--preset--spacing--minus-1);padding-left:var(--wp--preset--spacing--base)">
+		<div class="wp-block-file is-style-icon">
 			<a href="<?= esc_url($url) ?>"><?= esc_html__('Download', 'x3p0-ideas') ?></a>
 		</div>
 		<!-- /wp:file -->
