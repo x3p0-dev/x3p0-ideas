@@ -7,14 +7,14 @@
 
 // Some blocks, like Archives, wrap the list in an extra block `<div>` wrapper
 // in the editor and apply the class to this wrapper.
-:where( ul, ol )[class*=has-marker-],
-:where( .wp-block-archives-list )[class*=has-marker-] ul {
+:where( ul, ol, .wp-block-archives )[class*=has-marker-],
+:where( .wp-block-archives )[class*=has-marker-] ul {
 	list-style: var( --list-type, revert );
 }
 
 // Marker styles.
-:where( ul, ol, .wp-block-archives-list ).has-marker-arrow li::marker { content: "\2192\20"; }
-:where( ul, ol, .wp-block-archives-list ).has-marker-dash li::marker { content: "\2013\20"; }
+:where( ul, ol, .wp-block-archives ).has-marker-arrow li::marker { content: "\2192\20"; }
+:where( ul, ol, .wp-block-archives ).has-marker-dash li::marker { content: "\2013\20"; }
 
 .has-marker-disc   { --list-type: disc;    }
 .has-marker-circle { --list-type: circle;  }
@@ -26,18 +26,22 @@
 .has-marker-upper-alpha  { --list-type: upper-alpha; }
 .has-marker-lower-roman  { --list-type: lower-roman; }
 .has-marker-upper-roman  { --list-type: upper-roman; }
+.has-marker-none         { --list-type: none; }
 
 // Need to target the element for higher specificity to overrule some blocks,
 // such as Page List.
 ul.has-marker-none,
 ol.has-marker-none,
 ul.has-marker-none > li,
-ol.has-marker-none > li {
-	--list-type: none;
+ol.has-marker-none > li,
+.wp-block-archives-list.has-marker-none,
+.wp-block-archives.has-marker-none .wp-block-archives {
 	padding-left: 0;
 	padding-right: 0;
 }
 
-:where( :where( ul, ol, .wp-block-archives-list )[class*=has-marker-] :where( ul, ol ) ) {
+.has
+
+:where( :where( ul, ol, .wp-block-archives )[class*=has-marker-] :where( ul, ol ) ) {
 	list-style-type: inherit;
 }

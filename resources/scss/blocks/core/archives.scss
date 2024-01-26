@@ -62,3 +62,18 @@ ul.wp-block-archives-list {
 		&::marker { content: none; }
 	}
 }
+
+///
+/// The spread list style adds space between the link and post count.
+///
+.wp-block-archives.is-style-spread .wp-block-archives-list,
+.wp-block-archives-list.is-style-spread {
+	padding-left: 1em;
+}
+
+.wp-block-archives.is-style-spread .wp-block-archives__content {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: flex-start;
+	justify-content: space-between;
+}

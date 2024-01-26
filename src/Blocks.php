@@ -191,10 +191,8 @@ class Blocks implements Bootable
 	 * @hook  render_block_core/calendar
 	 * @since 1.0.0
 	 */
-	public function renderCoreCalendar(
-		string $block_content,
-		array $block
-	): string {
+	public function renderCoreCalendar(string $block_content): string
+	{
 		return str_replace(
 			[ '&raquo;', '&laquo;' ],
 			[ '&rarr;',  '&larr;'  ],
@@ -247,12 +245,33 @@ class Blocks implements Bootable
 		foreach ([ 'image', 'video', 'audio', 'pdf' ] as $type) {
 			if (wp_attachment_is($type, $post_id)) {
 				return [
-					"attachment.{$name}-{$type}",
-					"attachment.{$name}"
+					"attachment/{$name}-{$type}",
+					"attachment/{$name}"
 				];
 			}
 		}
 
 		return [ "attachment-{$name}" ];
+	}
+
+	/**
+	 * Filter on the `widget_archives_args` hook, which is also used in the
+	 * Archives block to pass the arguments to the `wp_get_archives()`
+	 * function. We're using it here to give a wrapper `<div>` to individual
+	 * list items. This provides a bit more design flexibility with custom
+	 * block styles.
+	 *
+	 * @hook  widget_archives_args last
+	 * @since 1.0.0
+	 */
+	public function setWidgetArchivesArgs(array $args): array
+	{
+		$before = $args['before'] ?? '';
+		$after  = $args['after'] ?? '';
+
+		$args['before'] = '<div class="wp-block-archives__content">' . $before;
+		$args['after']  = $after . '</div>';
+
+		return $args;
 	}
 }
