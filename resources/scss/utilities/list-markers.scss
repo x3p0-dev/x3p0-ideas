@@ -27,8 +27,12 @@
 .has-marker-lower-roman  { --list-type: lower-roman; }
 .has-marker-upper-roman  { --list-type: upper-roman; }
 
-.has-marker-none,
-.has-marker-none > li {
+// Need to target the element for higher specificity to overrule some blocks,
+// such as Page List.
+ul.has-marker-none,
+ol.has-marker-none,
+ul.has-marker-none > li,
+ol.has-marker-none > li {
 	--list-type: none;
 	padding-left: 0;
 	padding-right: 0;
