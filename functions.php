@@ -17,9 +17,9 @@ namespace X3P0\Ideas;
 # Prevent direct access.
 defined('ABSPATH') || exit;
 
-# Run the autoloader.
-if (file_exists(get_parent_theme_file_path('vendor/autoload.php'))) {
-	require_once get_parent_theme_file_path('vendor/autoload.php');
+# Load the autoloader.
+if (! class_exists(Blocks::class) && is_file(__DIR__ . '/vendor/autoload.php')) {
+	require_once __DIR__ . '/vendor/autoload.php';
 }
 
 # Bootstrap the theme.
