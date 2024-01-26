@@ -77,4 +77,18 @@ class Editor implements Bootable
 		// @link https://developer.wordpress.org/reference/functions/wp_set_script_translations/
 		wp_set_script_translations('x3p0-ideas-editor', 'x3p0-ideas');
 	}
+
+	/**
+	 * Customizes the block editor settings.
+	 *
+	 * @hook  block_editor_settings_all
+	 * @since 1.0.0
+	 */
+	public function registerSettings(array $settings): array
+	{
+		$settings['imageDefaultSize']   = 'x3p0-16x9-lg';
+		$settings['fontLibraryEnabled'] = false;
+
+		return $settings;
+	}
 }

@@ -41,6 +41,9 @@ function bootstrap(): void
 
 	// Test global style variation set via `composer.json`.
 	(new GlobalStyleVariation((string) config('variation')))->boot();
+
+	// Boot the block editor customizations for dev mode.
+	(new Editor())->boot();
 }
 
 /**
