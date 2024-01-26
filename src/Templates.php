@@ -70,7 +70,7 @@ class Templates implements Bootable
 	}
 
 	/**
-	 * Adds templates that WordPress does not define by default.
+	 * Adds templates if WordPress hasn't defined them by default.
 	 *
 	 * @hook  default_template_types
 	 * @since 1.0.0
@@ -78,33 +78,25 @@ class Templates implements Bootable
 	 */
 	public function registerTypes(array $types): array
 	{
-		$templates = [
-			'audio' => [
-				'title'       => _x('Audio Attachment', 'Template name', 'x3p0-ideas'),
-				'description' => __('Displays when a visitor views the dedicated page that exists for an audio attachment.', 'x3p0-ideas'),
-			],
-			'image' => [
-				'title'       => _x('Image Attachment', 'Template name', 'x3p0-ideas'),
-				'description' => __('Displays when a visitor views the dedicated page that exists for an image attachment.', 'x3p0-ideas'),
-			],
-			'single-post' => [
-				'title'       => _x('Single Post', 'Template name', 'x3p0-ideas'),
-				'description' => __('Displays single posts on your website unless a custom template has been applied to that post or a more specific template exists.', 'x3p0-ideas'),
-			],
-			'video' => [
-				'title'       => _x('Video Attachment', 'Template name', 'x3p0-ideas'),
-				'description' => __('Displays when a visitor views the dedicated page that exists for a video attachment.', 'x3p0-ideas'),
-			]
+		$types['audio'] ??= [
+			'title'       => _x('Audio Attachment', 'Template name', 'x3p0-ideas'),
+			'description' => __('Displays when a visitor views the dedicated page that exists for an audio attachment.', 'x3p0-ideas'),
 		];
 
-		// Loop through the additional templates and add them. Note that
-		// we're first checking if core has registered the template (for
-		// forward compatibility).
-		foreach ($templates as $template => $options) {
-			if (! isset($types[ $template ])) {
-				$types[ $template ] = $options;
-			}
-		}
+		$types['image'] ??= [
+			'title'       => _x('Image Attachment', 'Template name', 'x3p0-ideas'),
+			'description' => __('Displays when a visitor views the dedicated page that exists for an image attachment.', 'x3p0-ideas'),
+		];
+
+		$types['single-post'] ??= [
+			'title'       => _x('Single Post', 'Template name', 'x3p0-ideas'),
+			'description' => __('Displays single posts on your website unless a custom template has been applied to that post or a more specific template exists.', 'x3p0-ideas'),
+		];
+
+		$types['video'] ??= [
+			'title'       => _x('Video Attachment', 'Template name', 'x3p0-ideas'),
+			'description' => __('Displays when a visitor views the dedicated page that exists for a video attachment.', 'x3p0-ideas'),
+		];
 
 		return $types;
 	}
