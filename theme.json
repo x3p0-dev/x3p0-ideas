@@ -1023,6 +1023,11 @@
 								"text": "inherit"
 							}
 						}
+					},
+					"heading": {
+						"color": {
+							"text": "var:preset|color|white"
+						}
 					}
 				}
 			},
