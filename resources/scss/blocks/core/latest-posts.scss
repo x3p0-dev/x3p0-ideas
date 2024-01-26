@@ -1,0 +1,106 @@
+////
+/// Latest Posts block CSS.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+// -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+// Zero out WP's margin bottom.
+.wp-block-latest-posts.wp-block-latest-posts__list.is-grid li {
+	margin-bottom: 0;
+}
+
+// Old school clearfix for floated images.
+.wp-block-latest-posts:has(
+	.wp-block-latest-posts__featured-image:where(.alignleft, .alignright)
+) {
+	> li::after,
+	.wp-block-latest-posts__post-excerpt::before {
+		content:    ".";
+		display:    block;
+		height:     0;
+		clear:      both;
+		visibility: hidden;
+	}
+}
+
+.wp-block-latest-posts__featured-image {
+
+	> img {
+		border-radius: var(--wp--custom--global--border-radius);
+		box-shadow: var(--wp--custom--global--shadow);
+	}
+
+	&:where(.alignleft, .alignright) {
+		max-width: 20%;
+
+		> img { max-width: 100% !important; }
+	}
+}
+
+// -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+.wp-block-latest-posts.wp-block-latest-posts__list:where(:not(:has(
+	.wp-block-latest-posts__post-excerpt,
+	.wp-block-latest-posts__post-content,
+	.wp-block-latest-posts__featured-image
+))) {
+	list-style: revert;
+	padding-inline-start: var( --wp--preset--spacing--plus-4 );
+
+	:where( li + li, li > ul, li > ol ) {
+		margin-block-start: var( --wp--preset--spacing--minus-1 );
+	}
+
+	// We need to reset the overflow to allow the markers to show up. WP
+	// sets this to `hidden` by default.
+	li {
+		overflow: initial;
+		padding-left: 0.25em;
+	}
+
+	li a {
+		margin-right: 0.25ch;
+	}
+}
+
+.wp-block-latest-posts.is-grid {
+	container-type: inline-size;
+}
+
+.wp-block-latest-posts:where(:not(.is-grid)):has(.wp-block-latest-posts__featured-image) li + li {
+	margin-top: var(--wp--preset--spacing--base);
+}
+
+.wp-block-latest-posts__post-author,
+.wp-block-latest-posts__post-date {
+	text-transform: capitalize;
+	font-size: min(0.9375em, 1.0625rem);
+}
+
+
+.wp-block-latest-posts__post-excerpt {
+	margin: var(--wp--style--block-gap) 0 0;
+	font-size: min(1em, 1.1875rem);
+}
+
+.wp-block-latest-posts__post-content {
+	margin: var(--wp--preset--spacing--plus-3) 0 0;
+}
+
+.wp-block-latest-posts__post-excerpt,
+.wp-block-latest-posts__post-content {
+	clear: both;
+}
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+// No variations...
