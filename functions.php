@@ -14,10 +14,8 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas;
 
-# Prevent direct execution.
-if (! defined('ABSPATH')) {
-	exit;
-}
+# Prevent direct access.
+defined('ABSPATH') || exit;
 
 # Run the autoloader.
 if (file_exists(get_parent_theme_file_path('vendor/autoload.php'))) {

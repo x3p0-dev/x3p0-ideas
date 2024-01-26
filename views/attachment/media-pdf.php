@@ -11,6 +11,9 @@
 
 declare(strict_types=1);
 
+# Prevent direct access.
+defined('ABSPATH') || exit;
+
 $url   = wp_get_attachment_url($data['post_id']);
 $title = get_the_title($data['post_id']);
 

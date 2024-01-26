@@ -10,6 +10,9 @@
 
 declare(strict_types=1);
 
+# Prevent direct access.
+defined('ABSPATH') || exit;
+
 ?>
 <!-- wp:group {
 	"metadata":{"name":"<?= esc_attr__('Banner', 'x3p0-ideas') ?>"},

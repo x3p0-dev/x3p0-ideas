@@ -11,6 +11,9 @@
 
 declare(strict_types=1);
 
+# Prevent direct access.
+defined('ABSPATH') || exit;
+
 ?>
 <!-- wp:x3p0/breadcrumbs {
 	"metadata":{"name":"<?= esc_attr__('Breadcrumbs', 'x3p0-ideas') ?>"},

@@ -12,6 +12,9 @@
 
 declare(strict_types=1);
 
+# Prevent direct access.
+defined('ABSPATH') || exit;
+
 ?>
 <!-- wp:group {
 	"metadata":{"name":"<?= esc_attr__('Header Container', 'x3p0-ideas') ?>"},

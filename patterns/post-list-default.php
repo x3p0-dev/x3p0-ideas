@@ -11,6 +11,9 @@
 
 declare(strict_types=1);
 
+# Prevent direct access.
+defined('ABSPATH') || exit;
+
 ?>
 <!-- wp:query {
 	"metadata":{"name":"<?= esc_attr__('Posts Query', 'x3p0-ideas') ?>"},

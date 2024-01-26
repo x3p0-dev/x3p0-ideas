@@ -13,6 +13,9 @@ declare(strict_types=1);
 
 use X3P0\Ideas\Tools\MediaMeta;
 
+# Prevent direct access.
+defined('ABSPATH') || exit;
+
 $meta = new MediaMeta($data['post_id']);
 $url  = wp_get_attachment_url($data['post_id']);
 

@@ -11,6 +11,9 @@
 
 declare(strict_types=1);
 
+# Prevent direct access.
+defined('ABSPATH') || exit;
+
 $caption = wp_get_attachment_caption($data['post_id']);
 $src     = wp_get_attachment_url($data['post_id']);
 

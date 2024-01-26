@@ -10,6 +10,9 @@
 
 declare(strict_types=1);
 
+# Prevent direct access.
+defined('ABSPATH') || exit;
+
 $icons = [
 	'bar-chart',
 	'data-usage',

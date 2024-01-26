@@ -12,6 +12,9 @@
 
 declare(strict_types=1);
 
+# Prevent direct access.
+defined('ABSPATH') || exit;
+
 $columns = get_option('posts_per_page') % 4 === 1 ? 4 : 3;
 
 ?>

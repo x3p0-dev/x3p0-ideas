@@ -13,6 +13,9 @@ declare(strict_types=1);
 
 use X3P0\Ideas\Tools\MediaMeta;
 
+# Prevent direct access.
+defined('ABSPATH') || exit;
+
 $meta  = new MediaMeta($data['post_id']);
 $image = wp_get_attachment_image_src($data['post_id'], 'x3p0-16x9-lg');
 

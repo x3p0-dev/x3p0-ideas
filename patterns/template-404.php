@@ -9,6 +9,9 @@
 
 declare(strict_types=1);
 
+# Prevent direct access.
+defined('ABSPATH') || exit;
+
 ?>
 <!-- wp:template-part {"slug":"header","className":"site-header"} /-->
 

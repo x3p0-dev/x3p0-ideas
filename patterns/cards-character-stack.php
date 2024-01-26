@@ -10,6 +10,9 @@
 
 declare(strict_types=1);
 
+# Prevent direct access.
+defined('ABSPATH') || exit;
+
 $image = get_theme_file_uri('public/media/images/default-16x9.webp');
 ?>
 <!-- wp:group {
