@@ -482,6 +482,7 @@
 			"minHeight": true
 		},
 		"layout": {
+			"allowCustomContentAndWideSize": false,
 			"contentSize": "40rem",
 			"wideSize": "64rem"
 		},
