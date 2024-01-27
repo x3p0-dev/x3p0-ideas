@@ -15,7 +15,7 @@ declare(strict_types=1);
 defined('ABSPATH') || exit;
 
 $url   = home_url();
-$image = get_theme_file_uri('public/media/images/purple-sunset.webp');
+$image = get_theme_file_uri('public/media/images/mountain-road.webp');
 
 ?>
 <!-- wp:group {

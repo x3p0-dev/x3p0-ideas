@@ -22,7 +22,7 @@ $icons = [
 	'show-chart'
 ];
 
-$download = get_theme_file_uri('public/media/images/purple-sunset.webp');
+$download = get_theme_file_uri('public/media/images/mountain-road.webp');
 ?>
 <!-- wp:group {
 	"tagName":"section",

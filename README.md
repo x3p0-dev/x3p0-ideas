@@ -37,6 +37,12 @@ You'll need Git, Node.js, npm, and Composer installed on your machine. To instal
 
 X3P0: Ideas is free software, and is released under the terms of the GNU General Public License version 3 or (at your option) any later version. See [LICENSE.md](https://github.com/x3p0-dev/x3p0-ideas/blob/master/LICENSE.md) for complete license.
 
+### Third-Party Resources
+
+The following third-party resources were used in creating the theme:
+
+- [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/) licensed [photo](https://wordpress.org/photos/photo/7306520a20/) by [annezazu](https://wordpress.org/photos/author/annezazu/) (@annezazu) from the [WordPress Photo Directory](https://wordpress.org/photos/).
+
 ## 📛 Obligatory Badges: _Gotta collect 'em all!_
 
 <p>

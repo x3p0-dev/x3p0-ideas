@@ -194,6 +194,11 @@
 			],
 			"gradients": [
 				{
+					"gradient": "linear-gradient( 45deg, var( --wp--preset--color--neutral-900 ) 0%, transparent max( 70vw, 40rem ) )",
+					"name": "Linear: Neutral 900 ↗ Transparent",
+					"slug": "45-deg-primary-900-transparent"
+				},
+				{
 					"gradient": "linear-gradient( 180deg, transparent -40%, var( --wp--preset--color--base ) 100% )",
 					"name": "Linear: Transparent ↓ Base",
 					"slug": "180-deg-transparent-base"
@@ -1031,11 +1036,10 @@
 					},
 					"heading": {
 						"color": {
-							"text": "var:preset|color|white"
+							"text": "inherit"
 						}
 					}
-				},
-				"css": "&.is-light :where(h1,h2,h3,h4,h5,h6) {\n\tcolor: var(--wp--preset--color--contrast);\n}"
+				}
 			},
 			"core/details": {
 				"border": {
