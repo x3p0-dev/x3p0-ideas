@@ -28,6 +28,10 @@ colors to trickle down automatically blocks, elements, etc. This creates less wo
 	- Stye variations may include other shades as needed, following the same numeric naming convention.
 	- All style variations must include at least the `primary` and `neutral` color sets.
 	- Other color sets are allowed but must follow the naming rules.
+- **White and Black Colors:**
+	- If any style variation or child theme does not include a pure white (`#ffffff`) or pure black (`#000000`) color in one of the color sets, they must:
+		- Either register those colors with the slugs of `white` and `black`, respectively.
+		- Or enable `settings.color.defaultPalette` in `theme.json`.
 
 ## Tools
 

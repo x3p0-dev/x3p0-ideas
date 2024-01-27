@@ -131,6 +131,11 @@
 					"slug": "neutral-50",
 					"color": "#eeece7",
 					"name": "Neutral: 50"
+				},
+				{
+					"slug": "white",
+					"color": "#ffffff",
+					"name": "White"
 				}
 			]
 		},
