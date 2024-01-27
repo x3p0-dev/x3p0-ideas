@@ -123,4 +123,21 @@ class Frontend implements Bootable
 			? self::INLINE_CSS_LIMIT
 			: $total_inline_limit;
 	}
+
+	/**
+	 * Adds the style variation to the body class.
+	 *
+	 * @hook  body_class
+	 * @since 1.0.0
+	 */
+	public function filterBodyClass(array $classes): array
+	{
+		$variation = wp_get_global_settings([ 'custom', 'variation' ]);
+
+		if (is_string($variation)) {
+			$classes[] = esc_attr(sanitize_key("variation-{$variation}"));
+		}
+
+		return $classes;
+	}
 }
