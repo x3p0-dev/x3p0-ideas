@@ -33,7 +33,9 @@
 			"width": true
 		},
 		"color": {
-			"custom": true,
+			"custom": false,
+			"customDuotone": true,
+			"customGradient": true,
 			"defaultDuotone": false,
 			"defaultGradients": true,
 			"defaultPalette": true,
