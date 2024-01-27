@@ -10,7 +10,7 @@
 					"borderWidth": "1px",
 					"borderStyle": "solid",
 					"borderColor": "var:preset|color|neutral-50",
-					"shadow": "var:preset|shadow|xl",
+					"shadow": "var:preset|shadow|lg",
 					"linkHoverColor": "var:preset|color|primary-700",
 					"linkHoverBackground": "var:preset|color|neutral-100"
 				}
@@ -140,7 +140,7 @@
 			"global": {
 				"borderWidth": "0",
 				"borderRadius": "8px",
-				"shadow": "var:preset|shadow|xl"
+				"shadow": "var:preset|shadow|lg"
 			},
 			"elements": {
 				"label": {
@@ -227,7 +227,7 @@
 					"fontSize": "var:preset|font-size|xs",
 					"lineHeight": "var:custom|line-height|xs"
 				},
-				"shadow": "var:preset|shadow|lg",
+				"shadow": "var:preset|shadow|md",
 				":focus": {
 					"color": {
 						"background": "var:preset|color|primary-500"
@@ -271,7 +271,7 @@
 				}
 			},
 			"core/social-link": {
-				"shadow": "var:preset|shadow|lg"
+				"shadow": "var:preset|shadow|md"
 			},
 			"core/site-title": {
 				"typography": {

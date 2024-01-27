@@ -432,7 +432,7 @@
 			"variation": "ideas-experiments-and-things",
 			"global": {
 				"borderRadius": "6px",
-				"shadow": "var:preset|shadow|sm",
+				"shadow": "var:preset|shadow|md",
 				"fadedGradient": "linear-gradient( 180deg, transparent -40%, var( --wp--preset--color--base ) 100% )"
 			},
 			"elements": {
@@ -453,12 +453,12 @@
 				"2-xs": "1.625",
 				"xs": "1.625",
 				"sm": "1.625",
-				"md": "1.67",
+				"md": "1.6875",
 				"lg": "1.5",
-				"xl": "1.4",
-				"2-xl": "1.2",
-				"3-xl": "1.2",
-				"4-xl": "1.2",
+				"xl": "1.3125",
+				"2-xl": "1.25",
+				"3-xl": "1.1875",
+				"4-xl": "1.125",
 				"5-xl": "1.0625",
 				"6-xl": "1.03125",
 				"7-xl": "1.015625"
@@ -483,29 +483,34 @@
 		"shadow": {
 			"presets": [
 				{
+					"name": "XS",
+					"slug": "xs",
+					"shadow": "0 1px 2px 0 rgb(0 0 0 / 0.05)"
+				},
+				{
 					"name": "Small",
 					"slug": "sm",
-					"shadow": "0 1px 2px 0 rgb(0 0 0 / 0.05)"
+					"shadow": "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)"
 				},
 				{
 					"name": "Medium",
 					"slug": "md",
-					"shadow": "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)"
+					"shadow": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)"
 				},
 				{
 					"name": "Large",
 					"slug": "lg",
-					"shadow": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)"
+					"shadow": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)"
 				},
 				{
 					"name": "XL",
 					"slug": "xl",
-					"shadow": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)"
+					"shadow": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)"
 				},
 				{
 					"name": "2XL",
 					"slug": "2-xl",
-					"shadow": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)"
+					"shadow": "0 25px 50px -12px rgb(0 0 0 / 0.25)"
 				},
 				{
 					"name": "Inner",
