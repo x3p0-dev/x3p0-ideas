@@ -1,0 +1,45 @@
+////
+/// Navigation Submenu block CSS.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+// -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+// Sets the width of the submenu container when hovered.
+.wp-block-navigation .has-child {
+
+	&.has-child-selected,
+	&.is-selected,
+	&:not(.open-on-click):hover {
+
+		> .wp-block-navigation__submenu-container {
+			min-width: 16rem !important;
+		}
+	}
+}
+
+.wp-block-navigation__submenu-container .has-child .wp-block-navigation__submenu-icon {
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+
+.wp-block-navigation__submenu-container .wp-block-navigation-item {
+	border-radius: inherit;
+	transition: all 0.5s ease-in-out;
+}
+
+// -----------------------------------------------------------------------------
+// Responsive menu when it is open.
+// -----------------------------------------------------------------------------
+
+nav.wp-block-navigation .is-menu-open .wp-block-navigation-submenu .wp-block-navigation__submenu-container {
+	border-radius: 0;
+	border: none;
+	background: transparent;
+	padding: 0;
+	box-shadow: none;
+}

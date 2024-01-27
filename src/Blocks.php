@@ -154,6 +154,35 @@ class Blocks implements Bootable
 	}
 
 	/**
+	 * Filters the Navigation Submenu block args to set custom selectors via
+	 * the Selectors API. We must do this so that values set in `theme.json`
+	 * for `core/navigation-submenu` are applied only to the submenu
+	 * container. Without this, the values are set to both the container
+	 * and the parent menu item.
+	 *
+	 * @hook  register_block_type_args  last
+	 * @since 1.0.0
+	 * @link  https://developer.wordpress.org/block-editor/reference-guides/block-api/block-selectors/
+	 * @link  https://github.com/WordPress/gutenberg/issues/39392
+	 */
+	public function setCoreNavigationSubmenuArgs(array $args, string $name): array
+	{
+		if ('core/navigation-submenu' !== $name) {
+			return $args;
+		}
+
+		return [ 'selectors' => [
+			// Target the submenu and the responsive container.
+			'root'       => '.wp-block-navigation-submenu .wp-block-navigation__submenu-container, nav.wp-block-navigation.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open',
+			'color'      => 'nav.wp-block-navigation .wp-block-navigation-submenu .wp-block-navigation__submenu-container, nav.wp-block-navigation.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open',
+			// Only target the submenu.
+			'border'     => 'nav.wp-block-navigation .wp-block-navigation-submenu .wp-block-navigation__submenu-container',
+			'spacing'    => '.wp-block-navigation-submenu .wp-block-navigation__submenu-container',
+			'typography' => '.wp-block-navigation-submenu .wp-block-navigation__submenu-container'
+		] ] + $args;
+	}
+
+	/**
 	 * Disables the enhanced pagination feature for the Query Loop block.
 	 * There is currently no `theme.json`-supported method of disabling it,
 	 * so the only method is to filter the block data itself before render.

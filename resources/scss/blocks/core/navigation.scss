@@ -6,28 +6,71 @@
 ////
 
 // -----------------------------------------------------------------------------
-// Block fixes.
+// Block customizations.
 // -----------------------------------------------------------------------------
-
-// Zeroes out WP's inherited gap between items in the mobile menu.
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content,
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item,
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__container {
-	gap: var( --wp--preset--spacing--minus-2 );
-}
-
-// Zeroes out WP's default padding for submenus in the mobile menu.
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__submenu-container {
-	padding-top: 0;
-}
-
-.wp-block-navigation__responsive-container.has-modal-open .wp-block-navigation__responsive-close {
-	max-width: 100%;
-}
 
 // Zeroes out margins from general list spacing.
 .wp-block-navigation .wp-block-navigation-item {
 	margin: 0;
+}
+
+.wp-block-navigation .wp-block-navigation__submenu-icon {
+	margin-left: var(--wp--preset--spacing--minus-2);
+}
+
+.wp-block-navigation button.wp-block-navigation__responsive-container-open,
+.wp-block-navigation button.wp-block-navigation__responsive-container-close {
+
+	// `theme.json`-supported styles.
+	color:         var(--wp--custom--toggle--color);
+	background:    var(--wp--custom--toggle--background);
+	border-width:  var(--wp--custom--toggle--border-width);
+	border-style:  var(--wp--custom--toggle--border-style);
+	border-color:  var(--wp--custom--toggle--border-color);
+	border-radius: var(--wp--custom--toggle--border-radius);
+
+	padding: var(--wp--preset--spacing--minus-2) var(--wp--preset--spacing--minus-1);
+
+	svg {
+		width: 20px;
+		height: 20px;
+	}
+}
+
+.wp-block-navigation__responsive-container-close svg {
+	transform: scale(0.9);
+}
+
+// -----------------------------------------------------------------------------
+// Responsive menu when it is open.
+// -----------------------------------------------------------------------------
+
+.wp-block-navigation__responsive-container.is-menu-open {
+	> * { color: inherit; }
+	// Fixes mobile padding.
+	padding: var(--wp--style--block-gap);
+
+	// Fix justification when menu is initially aligned right.
+	--navigation-layout-justification-setting: flex-start;
+
+	:is(.wp-block-navigation-item, .wp-block-navigation__container, .wp-block-page-list) {
+		--navigation-layout-justification-setting: flex-start;
+	}
+
+	.wp-block-navigation__container {
+		width: 100%;
+	}
+
+	// Zeroes out WP's inherited gap between items in the mobile menu.
+	.wp-block-navigation-item,
+	.wp-block-navigation__responsive-container-content,
+	.wp-block-navigation__responsive-container-content .wp-block-navigation__container {
+		gap: 0;
+	}
+
+	.wp-block-navigation__responsive-close {
+		max-width: 100%;
+	}
 }
 
 // Removes top margin that's added when the admin bar is shown. This makes sense
@@ -35,108 +78,4 @@
 // ton of whitespace instead.
 .has-modal-open .admin-bar .is-menu-open .wp-block-navigation__responsive-dialog {
 	margin-top: 0;
-}
-
-// Fixes mobile padding.
-.has-modal-open .wp-block-navigation__responsive-dialog {
-	padding: var( --wp--style--block-gap );
-}
-.wp-block-navigation__responsive-container-close {
-	top: var( --wp--style--block-gap );
-	right: var( --wp--style--block-gap );
-}
-
-// -----------------------------------------------------------------------------
-// Block customizations.
-// -----------------------------------------------------------------------------
-
-.wp-block-navigation__responsive-container-open,
-.wp-block-navigation__responsive-container-close {
-	// @todo remove important
-	// editor overwrites this.
-	color: var(--wp--preset--color--base) !important;
-	background: var(--wp--preset--color--contrast);
-	min-height: 38px; // Needed for the text-only button
-	padding: 0.25rem 0.5rem !important;
-	border-radius: var( --wp--custom--global--border-radius );
-}
-
-.wp-block-navigation__responsive-container.is-menu-open,
-.wp-block-navigation__responsive-container.is-menu-open :is(
-	.wp-block-navigation-item,
-	.wp-block-navigation__container,
-	.wp-block-page-list
-) {
-	--navigation-layout-justification-setting: flex-start;
-}
-
-.has-modal-open .wp-block-navigation {
-	font-size: 1.125rem;
-	line-height: 1.75;
-}
-
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container {
-	width: 100%;
-}
-
-// Adding the color here prevents a weird flash from core's defined default
-// color and the theme's link transition style.
-.wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container {
-	color: var( --wp--custom--color );
-	background: var( --wp--custom--background );
-}
-
-.has-modal-open .wp-block-navigation-submenu .wp-block-navigation__submenu-container {
-	padding-top: 0;
-	padding-bottom: 0;
-}
-
-.wp-block-navigation .wp-block-navigation__responsive-container:not( .has-modal-open ) .has-child:not( .open-on-click ):hover > .wp-block-navigation__submenu-container {
-	min-width: 16rem;
-	border: none;
-	border-radius: var( --wp--custom--border-radius, 0 );
-	color: var( --wp--custom--color );
-	background: var( --wp--custom--background );
-	box-shadow: var( --wp--custom--shadow, none );
-	border: var( --wp--custom--border-width, 0 )
-		var( --wp--custom--border-style, solid )
-		var( --wp--custom--border-color, transparent );
-
-	.wp-block-navigation-item {
-		transition: all 0.5s ease-in-out;
-	}
-
-	.wp-block-navigation-item:hover,
-	.wp-block-navigation-item:focus {
-		color: var( --wp--custom--link-hover-color, inherit );
-		background: var( --wp--custom--link-hover-background, inherit );
-	}
-}
-
-.wp-block-navigation__submenu-container .has-child .wp-block-navigation__submenu-icon {
-	margin-left: 1rem;
-	margin-right: 1rem;
-}
-
-.wp-block-navigation-submenu .wp-block-navigation__submenu-container {
-	padding: 1rem;
-}
-
-:where( .wp-block-navigation .wp-block-navigation__submenu-container :where(
-	.wp-block-navigation-item a:not( .wp-element-button ),
-	.wp-block-navigation-submenu a:not( .wp-element-button ),
-	.wp-block-navigation-submenu button.wp-block-navigation-item__content,
-	.wp-block-pages-list__item button.wp-block-navigation-item__content
-) ) {
-	padding: 0.5rem 1rem;
-}
-
-.wp-block-navigation-submenu li,
-:where( .wp-block-navigation__submenu-container .wp-block-navigation-item a:not( .wp-element-button ) ) {
-	border-radius: inherit;
-}
-
-// Remove outline for nav.
-.wp-block-navigation a:where(:not(.wp-element-button)):focus {
-	outline: none;
 }

@@ -3,19 +3,6 @@
 	"version": 2,
 	"title": "Chestnut Rose",
 	"settings": {
-		"blocks": {
-			"core/navigation-submenu": {
-				"custom": {
-					"background": "var:preset|color|neutral-50",
-					"borderWidth": "1px",
-					"borderStyle": "solid",
-					"borderColor": "var:preset|color|neutral-50",
-					"shadow": "var:preset|shadow|lg",
-					"linkHoverColor": "var:preset|color|primary-700",
-					"linkHoverBackground": "var:preset|color|neutral-100"
-				}
-			}
-		},
 		"color": {
 			"palette": [
 				{
@@ -264,6 +251,37 @@
 					"fontSize": "var:preset|font-size|xs",
 					"lineHeight": "var:custom|line-height|xs"
 				}
+			},
+			"core/navigation-submenu": {
+				"border": {
+					"width": "1px",
+					"style": "solid",
+					"color": "var:preset|color|neutral-50",
+					"radius": "var:custom|global|border-radius"
+				},
+				"color": {
+					"text": "var:preset|color|contrast",
+					"background": "var:preset|color|neutral-50"
+				},
+				"shadow": "var:preset|shadow|lg",
+				"typography": {
+					"fontSize": "var:preset|font-size|xs"
+				},
+				"elements": {
+					"link": {
+						":focus": {
+							"color": {
+								"text": "var:preset|color|primary-700"
+							}
+						},
+						":hover": {
+							"color": {
+								"text": "var:preset|color|primary-700"
+							}
+						}
+					}
+				},
+				"css": "& .wp-block-navigation-item:hover, .wp-block-navigation-item:focus {\n\tcolor: var(--wp--preset--color--700);\n\tbackground: var(--wp--preset--color--neutral-100);\n}"
 			},
 			"core/separator": {
 				"color": {

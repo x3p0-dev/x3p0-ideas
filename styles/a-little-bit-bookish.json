@@ -6,6 +6,7 @@
 		"custom": {
 			"variation": "a-little-bit-bookish",
 			"global": {
+				"borderWidth": "1px",
 				"borderRadius": "4px",
 				"shadow": "none",
 				"fadedGradient": "linear-gradient( 225deg, #cdb8a425, transparent 80% ), linear-gradient( 180deg, transparent -40%, var( --wp--preset--color--base ) 100% )"
