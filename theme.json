@@ -1029,7 +1029,8 @@
 							"text": "var:preset|color|white"
 						}
 					}
-				}
+				},
+				"css": "&.is-light :where(h1,h2,h3,h4,h5,h6) {\n\tcolor: var(--wp--preset--color--contrast);\n}"
 			},
 			"core/details": {
 				"border": {
@@ -1289,7 +1290,24 @@
 					"fontSize": "var:preset|font-size|sm",
 					"lineHeight": "var:custom|line-height|sm"
 				},
-				"css": "& a {\n\tfont-weight: 500;\n\ttext-decoration: none;\n}\n\n& a:hover {\n\ttext-decoration: underline;\n}"
+				"elements": {
+					"link": {
+						"typography": {
+							"fontWeight": "500",
+							"textDecoration": "none"
+						},
+						":focus": {
+							"typography": {
+								"textDecoration": "underline"
+							}
+						},
+						":hover": {
+							"typography": {
+								"textDecoration": "underline"
+							}
+						}
+					}
+				}
 			}
 		}
 	},
