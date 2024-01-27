@@ -20,7 +20,8 @@
 						"borderWidth": "0",
 						"borderStyle": "solid",
 						"borderColor": "transparent",
-						"borderRadius": "4px"
+						"borderRadius": "4px",
+						"shadow": "var:preset|shadow|md"
 					}
 				}
 			}

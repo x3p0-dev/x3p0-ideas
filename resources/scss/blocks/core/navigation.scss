@@ -5,6 +5,10 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
+// Use the WordPress breakpoints module.
+// @link https://github.com/WordPress/gutenberg/tree/trunk/packages/base-styles
+@use '~@wordpress/base-styles/breakpoints' as wp-breakpoints;
+
 // -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
@@ -14,22 +18,28 @@
 	margin: 0;
 }
 
+// This targets the hover/click icon next to the top-level menu items when they
+// have a submenu.
 .wp-block-navigation .wp-block-navigation__submenu-icon {
 	margin-left: var(--wp--preset--spacing--minus-2);
 }
 
+// Custom styles for the open/close toggle button and its inner SVG. We're
+// fighting a lot of specificity in the editor, so the `!important` instances
+// below, well...they're kind of important.
 .wp-block-navigation button.wp-block-navigation__responsive-container-open,
 .wp-block-navigation button.wp-block-navigation__responsive-container-close {
 
 	// `theme.json`-supported styles.
-	color:         var(--wp--custom--toggle--color);
+	color:         var(--wp--custom--toggle--color) !important;
 	background:    var(--wp--custom--toggle--background);
 	border-width:  var(--wp--custom--toggle--border-width);
 	border-style:  var(--wp--custom--toggle--border-style);
 	border-color:  var(--wp--custom--toggle--border-color);
 	border-radius: var(--wp--custom--toggle--border-radius);
+	box-shadow:    var(--wp--custom--toggle--shadow);
 
-	padding: var(--wp--preset--spacing--minus-2) var(--wp--preset--spacing--minus-1);
+	padding: var(--wp--preset--spacing--minus-2) var(--wp--preset--spacing--minus-1) !important;
 
 	svg {
 		width: 20px;
@@ -45,23 +55,27 @@
 // Responsive menu when it is open.
 // -----------------------------------------------------------------------------
 
+// Targets the wrapper for the entire nav menu when it is open.
 .wp-block-navigation__responsive-container.is-menu-open {
-	> * { color: inherit; }
+	> * {
+		color: inherit;
+	}
+
 	// Fixes mobile padding.
 	padding: var(--wp--style--block-gap);
 
 	// Fix justification when menu is initially aligned right.
-	--navigation-layout-justification-setting: flex-start;
-
 	:is(.wp-block-navigation-item, .wp-block-navigation__container, .wp-block-page-list) {
 		--navigation-layout-justification-setting: flex-start;
 	}
 
+	// Ensures the navigation menu itself is full width.
 	.wp-block-navigation__container {
 		width: 100%;
 	}
 
-	// Zeroes out WP's inherited gap between items in the mobile menu.
+	// Zeroes out WP's inherited gap between items in the mobile menu. Note
+	// that our links have padding on them, which takes care of the spacing.
 	.wp-block-navigation-item,
 	.wp-block-navigation__responsive-container-content,
 	.wp-block-navigation__responsive-container-content .wp-block-navigation__container {
@@ -76,6 +90,8 @@
 // Removes top margin that's added when the admin bar is shown. This makes sense
 // in general, but the menu is completely above the admin bar, so we just get a
 // ton of whitespace instead.
-.has-modal-open .admin-bar .is-menu-open .wp-block-navigation__responsive-dialog {
-	margin-top: 0;
+@media (max-width: wp-breakpoints.$break-medium) {
+	.has-modal-open .admin-bar .is-menu-open .wp-block-navigation__responsive-dialog {
+		margin-top: 0;
+	}
 }
