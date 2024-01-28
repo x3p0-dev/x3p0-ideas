@@ -88,6 +88,10 @@ export const BLOCK_STYLES = {
 		'gap-loose':   __('Gap: Loose',   'x3p0-ideas'),
 		'horizontal':  __('Horizontal',   'x3p0-ideas')
 	},
+	'core/list-item': {
+		'cancel-circle': __('Cancel Circle', 'x3p0-ideas'),
+		'check-circle':  __('Check Circle', 'x3p0-ideas')
+	},
 	'core/loginout': {
 		'button': __('Button', 'x3p0-ideas'),
 		'icon':   __('Icon',   'x3p0-ideas')
