@@ -13,3 +13,6 @@
 /vendor
 *.map
 .DS_Store
+
+/styles/80s-starship.json
+/styles/love-story.json
