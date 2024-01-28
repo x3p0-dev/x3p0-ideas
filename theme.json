@@ -1032,6 +1032,11 @@
 					"minHeight": "30rem"
 				},
 				"elements": {
+					"cite": {
+						"color": {
+							"text": "inherit"
+						}
+					},
 					"link": {
 						":any-link": {
 							"color": {
@@ -1223,9 +1228,6 @@
 				},
 				"elements": {
 					"cite": {
-						"color": {
-							"text": "var:preset|color|neutral-500"
-						},
 						"typography": {
 							"fontFamily": "var:preset|font-family|tertiary",
 							"fontSize": "max( 50%, var( --wp--preset--font-size--lg ) )",
