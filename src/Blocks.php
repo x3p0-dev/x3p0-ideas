@@ -16,6 +16,7 @@ namespace X3P0\Ideas;
 use FilesystemIterator;
 use WP_Block;
 use WP_Block_Type_Registry;
+use WP_HTML_Tag_Processor;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\{BlockRules, HookAnnotation};
 use X3P0\Ideas\Views\Engine;
@@ -227,6 +228,28 @@ class Blocks implements Bootable
 			[ '&rarr;',  '&larr;'  ],
 			$block_content
 		);
+	}
+
+	/**
+	 * WordPress doesn't add the taxonomy name to the tag cloud wrapper. In
+	 * order for taxonomy-based block styles to work, the theme is adding
+	 * a `.taxonomy-{taxonomy}` class to the wrapper.
+	 *
+	 * @hook  render_block_core/tag-cloud
+	 * @since 1.0.0
+	 */
+	public function renderCoreTagCloud(string $block_content, array $block): string
+	{
+		$processor = new WP_HTML_Tag_Processor($block_content);
+
+		if ($processor->next_tag('p')) {
+			$processor->add_class(sprintf(
+				'taxonomy-%s',
+				esc_attr($block['attrs']['taxonomy'] ?? 'post_tag')
+			));
+		}
+
+		return $processor->get_updated_html();
 	}
 
 	/**

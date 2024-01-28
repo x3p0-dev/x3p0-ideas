@@ -5,6 +5,9 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
+@use '../../tools/icon';
+@use '../../tools/inline-icon';
+
 // -----------------------------------------------------------------------------
 // Block fixes.
 // -----------------------------------------------------------------------------
@@ -25,13 +28,10 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	gap: var( --wp--preset--spacing--minus-2 ) var( --wp--preset--spacing--base );
-
-	// Keep: Use this to trickle down to block styles when needed.
-	font-size: inherit;
+	gap: var(--wp--preset--spacing--minus-2) var(--wp--preset--spacing--base);
 
 	.tag-link-count {
-		color: var( --wp--preset--color--neutral-500 );
+		color: var(--wp--preset--color--neutral-500);
 		font-weight: 400;
 	}
 }
@@ -50,26 +50,42 @@
 }
 
 ///
+/// The icon style prefixes all of the tag links with an icon.
+///
+/// Note: WordPress wraps the tag cloud in the admin with a `<div>` with the
+/// block class and two inner `<div>` elements before getting to the actual
+/// `<p>` tag.
+///
+.wp-block-tag-cloud.is-style-icon,
+.wp-block-tag-cloud.is-style-icon .wp-block-tag-cloud {
+
+	a {
+		@include inline-icon.prefix(icon.get-url('tag'));
+		font-size: inherit !important;
+		font-weight: inherit !important;
+	}
+
+	&.taxonomy-category a::before {
+		@include inline-icon.modify(icon.get-url('folder'));
+	}
+}
+
+///
 /// The outline style is a core style. We're overwriting it to better match the
 /// theme. Much of this needed to be done via CSS rather than `theme.json`.
 ///
 /// @todo More testing to see which things can be moved to `theme.json`.
 ///
 .wp-block-tag-cloud.is-style-outline {
-	// We're setting the font weight and style at the block level because
-	// the UI design tools end up applying to the links. Setting it at the
-	// block level allows user choice to take over.
-	font-weight: 500;
-	font-size: var( --wp--preset--font-size--sm );
 
 	a {
 		color: currentColor;
 		border: 2px solid currentColor;
-		border-radius: var( --wp--custom--global--border-radius );
-		padding: var( --wp--preset--spacing--minus-2 ) var( --wp--preset--spacing--plus-1 );
+		border-radius: var(--wp--custom--global--border-radius);
+		padding: var(--wp--preset--spacing--minus-2) var(--wp--preset--spacing--plus-1);
 		font-size: inherit !important;
 		font-weight: inherit !important;
-		line-height: var( --wp--custom--line-height--sm );
+		line-height: var(--wp--custom--line-height--sm);
 
 		&:hover,
 		&:focus {

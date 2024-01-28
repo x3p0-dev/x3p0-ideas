@@ -159,6 +159,7 @@ export const BLOCK_STYLES = {
 		'pull':              __('Pull',      'x3p0-ideas')
 	},
 	'core/tag-cloud': {
-		'flat': __('Flat', 'x3p0-ideas')
+		'flat': __('Flat', 'x3p0-ideas'),
+		'icon': __('Icon', 'x3p0-ideas')
 	}
 };

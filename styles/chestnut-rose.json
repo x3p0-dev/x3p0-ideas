@@ -350,6 +350,11 @@
 					"lineHeight": "var:custom|line-height|xs"
 				}
 			},
+			"core/tag-cloud": {
+				"typography": {
+					"fontSize": "var:preset|font-size|xs"
+				}
+			},
 			"core/verse": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|secondary",
