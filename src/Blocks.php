@@ -209,9 +209,9 @@ class Blocks implements Bootable
 	 * @hook  render_block  last
 	 * @since 1.0.0
 	 */
-	public function renderByRule(string $block_content, array $block): string
+	public function renderByRule(string $content, array $block): string
 	{
-		return $this->rules->isPublic($block) ? $block_content : '';
+		return $this->rules->isPublic($block) ? $content : '';
 	}
 
 	/**
@@ -221,12 +221,12 @@ class Blocks implements Bootable
 	 * @hook  render_block_core/calendar
 	 * @since 1.0.0
 	 */
-	public function renderCoreCalendar(string $block_content): string
+	public function renderCoreCalendar(string $content): string
 	{
 		return str_replace(
 			[ '&raquo;', '&laquo;' ],
 			[ '&rarr;',  '&larr;'  ],
-			$block_content
+			$content
 		);
 	}
 
@@ -238,9 +238,9 @@ class Blocks implements Bootable
 	 * @hook  render_block_core/tag-cloud
 	 * @since 1.0.0
 	 */
-	public function renderCoreTagCloud(string $block_content, array $block): string
+	public function renderCoreTagCloud(string $content, array $block): string
 	{
-		$processor = new WP_HTML_Tag_Processor($block_content);
+		$processor = new WP_HTML_Tag_Processor($content);
 
 		if ($processor->next_tag('p')) {
 			$processor->add_class(sprintf(
@@ -260,7 +260,7 @@ class Blocks implements Bootable
 	 * @since 1.0.0
 	 */
 	public function renderCorePostContent(
-		string $block_content,
+		string $content,
 		array $block,
 		WP_Block $instance
 	): string {
@@ -270,7 +270,7 @@ class Blocks implements Bootable
 			empty($instance->context['postId'])
 			|| ! is_attachment($instance->context['postId'])
 		) {
-			return $block_content;
+			return $content;
 		}
 
 		// Assign needed data.
@@ -283,7 +283,7 @@ class Blocks implements Bootable
 
 		// Renders the media + block content + meta.
 		return $this->views->renderIf($media, $data)
-			. $block_content
+			. $content
 			. $this->views->renderIf($meta, $data);
 	}
 
