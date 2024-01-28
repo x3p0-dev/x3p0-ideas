@@ -75,8 +75,11 @@ figure.wp-block-image[class*=-gradient-background] {
 
 	// Note that the editor has an extra wrapper `<div>` around the image,
 	// so we must inherit here so that we can inherit on the `<img>` tag.
+	// The image can also have a link wrapper, so it must also inherit for
+	// both the front end and editor.
 	> div,
-	> a {
+	> a,
+	> div > a {
 		background: inherit;
 	}
 
@@ -222,55 +225,31 @@ figure.wp-block-image.is-style-polaroid {
 	}
 }
 
-// Handling for when the Polaroid image sits within a block with a color variation.
-//
-// @todo The color variation system is likely to be overhauled, and this
-// should no longer be needed.
-//
-// @todo In the case that we keep the original color variation system, the
-// shadow color should inherit, and the inset and outer shadow should match.
-:where( [class*=has-color-var-] ) .wp-block-image.is-style-polaroid:where( :not( [class*=gradient-] ) ) {
-	box-shadow: var( --wp--custom--global--shadow );
-}
-
 ///
-/// Shared styles for tape variations. This creates a "Scotch" tape effect, as
-/// if the image has been taped to a wall.
+/// The tape block style adds a single piece of tape that overlays the top-center
+/// of the image.
 ///
-.wp-block-image[class*=is-style-tape] {
+.wp-block-image.is-style-tape {
 	overflow: visible;
 	position: relative;
 
 	// Adds tape before/after the block. These are defaults that need to be
 	// adjusted for each variation on this style.
-	&::before,
-	&::after {
+	&::before {
 		content: "";
 		display: block;
 		position: absolute;
 		background: rgba( 255, 255, 235, 0.5 );
 		box-shadow: 0 2px 5px 0 rgba( 0, 0, 0, 0.3 ), 0 0 4rem rgba( 255, 255, 235, 0.5 ) inset;
 		height: var( --wp--preset--spacing--plus-3 );
-		margin: auto;
+	//	margin: auto;
 		width: 7rem;
 		z-index: 1;
-	}
-}
 
-///
-/// The tap block style adds a single piece of tape that overlays the top-center
-/// of the image.
-///
-.wp-block-image.is-style-tape {
-	&::before {
 		left: 50%;
-		margin-left: -3.5rem;
+		margin: auto auto auto -3.5rem;
 		top: calc( -1 * var( --wp--preset--spacing--minus-2 ) );
 		transform: rotate( 8deg );
-	}
-
-	&::after {
-		display: none;
 	}
 
 	// Adjust the positioning when the image has a gradient background. We
@@ -283,27 +262,8 @@ figure.wp-block-image.is-style-polaroid {
 	}
 }
 
-///
-/// The taped corners style adds two pieces of tape to the corners of the image.
-///
-.wp-block-image.is-style-tape-corners {
-	&::before {
-		left: calc( -1 * var( --wp--preset--spacing--plus-3 ) );
-		top: var( --wp--preset--spacing--minus-2 );
-		transform: rotate( -35deg );
-	}
-
-	&::after {
-		right: calc( -1 * var( --wp--preset--spacing--plus-3 ) ) !important;
-		top: var( --wp--preset--spacing--minus-2 ) !important;
-		bottom: unset !important;
-		left: unset !important;
-		transform: rotate( 45deg);
-	}
-}
-
 // Removes the tape effect when the image is inside of the lightbox overlay.
-.wp-lightbox-overlay.active .wp-block-image[class*=is-style-tape] {
+.wp-lightbox-overlay.active .wp-block-image.is-style-tape {
 	&::before,
 	&::after {
 		display: none;
@@ -319,7 +279,7 @@ figure.wp-block-image.is-style-polaroid {
 // block outline. So, we're attaching an outline to the image itself in this case.
 //
 // @todo Test to see if this is still needed.
-.wp-block-image[class*=is-style-tape].block-editor-block-list__block:focus img {
+.wp-block-image.is-style-tape.block-editor-block-list__block:focus img {
 	outline: 2px solid var(--wp-admin-theme-color, transparent );
 }
 
