@@ -215,18 +215,28 @@ class Blocks implements Bootable
 	}
 
 	/**
-	 * Really hacky method to replace the arrows in the calendar to match
-	 * the theme's arrows.
+	 * Adds a caption class and replaces nav arrows.
 	 *
 	 * @hook  render_block_core/calendar
 	 * @since 1.0.0
 	 */
 	public function renderCoreCalendar(string $content): string
 	{
+		$processor = new WP_HTML_Tag_Processor($content);
+
+		// Ensures the table caption has the same class as other the
+		// other captions in WordPress. The `.wp-element-caption` class
+		// is necessary for styling this via `theme.json`.
+		if ($processor->next_tag('caption')) {
+			$processor->add_class('wp-element-caption');
+		}
+
+		// Hacky method to replace the arrows until the HTML API allows
+		// replacing inner text.
 		return str_replace(
 			[ '&raquo;', '&laquo;' ],
 			[ '&rarr;',  '&larr;'  ],
-			$content
+			$processor->get_updated_html()
 		);
 	}
 
