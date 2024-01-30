@@ -10,6 +10,13 @@
 						"color": "var:preset|color|neutral-950"
 					}
 				}
+			},
+			"core/navigation": {
+				"custom": {
+					"toggle": {
+						"shadow": "var:preset|shadow|sm"
+					}
+				}
 			}
 		},
 		"color": {
