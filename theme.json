@@ -1536,6 +1536,13 @@
 			"postTypes": [
 				"post"
 			]
+		},
+		{
+			"name": "template-post-featured-split",
+			"title": "Single Post: Featured Split",
+			"postTypes": [
+				"post"
+			]
 		}
 	],
 	"templateParts": [
