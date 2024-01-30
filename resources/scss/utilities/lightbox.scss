@@ -6,16 +6,16 @@
 ////
 
 .wp-lightbox-overlay {
-	background: var( --wp--preset--color--contrast );
+	background: var(--wp--custom--lightbox--overlay--background, var(--wp--preset--color--contrast));
 
 	.scrim {
 		background: none !important;
 	}
 
 	.close-button {
-		right: calc( env( safe-area-inset-right ) + var( --wp--preset--spacing--plus-3 ) );
-		top: calc( env( safe-area-inset-top ) + var( --wp--preset--spacing--base ) );
-		fill: var( --wp--preset--color--base ) !important;
+		right: calc(env(safe-area-inset-right) + var(--wp--preset--spacing--plus-3));
+		top: calc(env(safe-area-inset-top) + var(--wp--preset--spacing--base));
+		fill: var(--wp--custom--lightbox--overlay--color, var(--wp--preset--color--base)) !important;
 
 		svg {
 			width: 24px;
