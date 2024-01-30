@@ -48,8 +48,7 @@
 	transition: box-shadow 0.5s ease-in-out;
 
 	&:hover {
-		box-shadow:
-		0 0 16px -3px var(--wp--preset--color--neutral-500);
+		box-shadow: var(--wp--preset--shadow--enlarge);
 	}
 }
 
@@ -73,6 +72,9 @@ figure.wp-block-image[class*=-gradient-background] {
 	// this to `auto`.
 	background-size: 0 0 !important;
 
+	// Remove any theme/variation padding from the wrapper.
+	padding: 0;
+
 	// Note that the editor has an extra wrapper `<div>` around the image,
 	// so we must inherit here so that we can inherit on the `<img>` tag.
 	// The image can also have a link wrapper, so it must also inherit for
@@ -89,6 +91,7 @@ figure.wp-block-image[class*=-gradient-background] {
 	img {
 		background-color: inherit;
 		background-image: inherit;
+		border: none;
 		padding: var( --image-padding );
 	}
 
@@ -114,6 +117,7 @@ figure.wp-block-image[class*=-gradient-background] {
 .wp-block-image.is-style-borderless,
 .wp-block-image.is-style-borderless img {
 	padding: 0 !important;
+	background: none !important;
 	border: none !important;
 	box-shadow: none !important;
 	outline: none !important;
@@ -128,6 +132,10 @@ figure.wp-block-image[class*=-gradient-background] {
 /// specific styles based on context.
 ///
 .wp-block-image.is-style-hand-drawn {
+
+	// Remove any theme/variation padding from the wrapper.
+	padding: 0;
+	background: none;
 
 	// The hand-drawn effect is given to the image itself.
 	img {

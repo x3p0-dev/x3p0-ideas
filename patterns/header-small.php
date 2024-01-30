@@ -37,7 +37,18 @@ defined('ABSPATH') || exit;
 		"layout":{"type":"flex","justifyContent":"space-between"}
 	} -->
 	<div class="wp-block-group">
-		<!-- wp:site-title /-->
+
+		<!-- wp:group {
+			"metadata":{"name":"<?= esc_attr__('Branding', 'x3p0-ideas') ?>"},
+			"style":{"spacing":{"blockGap":"var:preset|spacing|minus-1"}},
+			"layout":{"type":"flex","flexWrap":"nowrap"}
+		} -->
+		<div class="wp-block-group">
+			<!-- wp:site-logo /-->
+			<!-- wp:site-title /-->
+		</div>
+		<!-- /wp:group -->
+
 		<!-- wp:navigation {
 			"icon":"menu",
 			"layout":{

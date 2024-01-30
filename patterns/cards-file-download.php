@@ -74,12 +74,6 @@ $download = get_theme_file_uri('public/media/images/mountain-road.webp');
 			<!-- wp:group {
 				"metadata":{"name":"<?= esc_attr__('Card', 'x3p0-ideas') ?>"},
 				"style":{
-					"border":{
-						"top":{
-							"color":"var:preset|color|primary-700",
-							"width":"4px"
-						}
-					},
 					"spacing":{
 						"padding":{
 							"top":"0",
@@ -100,7 +94,7 @@ $download = get_theme_file_uri('public/media/images/mountain-road.webp');
 				},
 				"fontSize":"sm"
 			} -->
-			<div class="wp-block-group is-style-card has-180-deg-transparent-base-gradient-background has-background has-sm-font-size" style="border-top-color:var(--wp--preset--color--primary-700);border-top-width:4px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
+			<div class="wp-block-group is-style-card has-180-deg-transparent-base-gradient-background has-background has-sm-font-size" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 
 				<!-- wp:group {
 					"metadata":{"name":"<?= esc_attr__('Card Content', 'x3p0-ideas') ?>"},
@@ -124,9 +118,10 @@ $download = get_theme_file_uri('public/media/images/mountain-road.webp');
 						"width":"48px",
 						"height":"auto",
 						"sizeSlug":"full",
-						"linkDestination":"none"
+						"linkDestination":"none",
+						"className":"is-style-borderless"
 					} -->
-					<figure class="wp-block-image size-full is-resized">
+					<figure class="wp-block-image size-full is-resized is-style-borderless">
 						<img src="<?= esc_url(get_theme_file_uri("public/media/svg/{$icon}.svg")) ?>" alt="" style="width:48px;height:auto"/>
 					</figure>
 					<!-- /wp:image -->

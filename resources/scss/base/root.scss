@@ -5,20 +5,17 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
-// Defaults.
-* {
-	// Enables features from the registered fonts.
-	font-feature-settings: "tnum", "ss01" 1;
-	font-variant-numeric: slashed-zero;
-}
-
+// Custom colors for selecting text in the browser. Can be set in `theme.json`
+// via `custom.global.::selectionColor` and `custom.global.::selectionBackground`.
 ::selection {
-	color: var(--wp--preset--color--primary-50);
-	background: var(--wp--preset--color--primary-700);
+	color: var(--wp--custom--global--selection-color);
+	background: var(--wp--custom--global--selection-background);
 }
 
-// No way to target this wrapper in `theme.json`, so we're canceling the block
-// gap via CSS.
+// WordPress has no standard method of controlling the gap between blocks at the
+// top level of the site other than wrapping the site in yet-another-div. This
+// gives us an easy to either wipe out or customize the gap via
+// `custom.siteBlocks.gap` in `theme.json`.
 .wp-site-blocks > * {
-	margin-top: 0;
+	margin-top: var(--wp--custom--site-blocks--gap, var(--wp--style--block-gap));
 }

@@ -87,20 +87,14 @@ defined('ABSPATH') || exit;
 					"height":"18rem",
 					"style":{
 						"border":{
-							"radius":"0px",
-							"bottom":{
-								"color":"var:preset|color|primary-700",
-								"width":"5px"
-							},
-							"top":{},
-							"right":{},
-							"left":{}
+							"radius":"0px"
 						},
 						"layout":{
 							"selfStretch":"fixed",
 							"flexSize":"18rem"
 						}
-					}
+					},
+					"className":"is-style-borderless"
 				} /-->
 
 				<!-- wp:group {

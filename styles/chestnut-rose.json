@@ -255,6 +255,20 @@
 			}
 		},
 		"blocks": {
+			"core/cover": {
+				"elements": {
+					"h1": {
+						"typography": {
+							"fontWeight": "200"
+						}
+					},
+					"h2": {
+						"typography": {
+							"fontWeight": "200"
+						}
+					}
+				}
+			},
 			"core/gallery": {
 				"typography": {
 					"fontStyle": "italic",

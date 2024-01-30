@@ -25,24 +25,21 @@
 
 	// Pad the bottom when details element is open.
 	&[open] {
-		padding-bottom: var( --wp--style--block-gap );
+		padding-bottom: var(--wp--style--block-gap);
 	}
 
 	// Custom styles for the summary.
 	summary {
 		transition: all 0.5s ease-in-out;
 		box-sizing: border-box;
-		padding: var( --wp--preset--spacing--base ) var( --wp--style--block-gap );
+		padding: var(--wp--preset--spacing--base) var(--wp--style--block-gap);
 		font-weight: 500;
 	}
 
 	&[open] summary,
 	summary:hover,
 	summary:focus {
-		background: var(
-			--wp--custom--blocks--details--summary-hover,
-			var( --wp--preset--color--neutral-100 )
-		);
+		background: var(--wp--custom--elements--summary--hover-background);
 	}
 
 	// Disable the default browser marker and add a custom one.
@@ -63,21 +60,21 @@
 	// The original block had a wrapper element around nested blocks after
 	// the summary. However, this was removed, so we must target anything
 	// that's not the summary with left/right margin.
-	> :where( :not( summary ) ) {
-		margin-left: var( --wp--style--block-gap );
-		margin-right: var( --wp--style--block-gap );
+	> :where(:not(summary)) {
+		margin-left: var(--wp--style--block-gap);
+		margin-right: var(--wp--style--block-gap);
 	}
 }
 
 // Handle nested code blocks by removing spacing on the inside of the details
 // content area.
-.wp-block-details:has( summary + .wp-block-code:last-child ),
-.wp-block-details:has( summary + .wp-block-code + .block-list-appender ) {
+.wp-block-details:has(summary + .wp-block-code:last-child),
+.wp-block-details:has(summary + .wp-block-code + .block-list-appender) {
 	padding: 0;
 
 	.wp-block-code {
 		margin: 0;
-		padding: var( --wp--style--block-gap );
+		padding: var(--wp--style--block-gap);
 		border: none;
 		box-shadow: none;
 		outline: none;

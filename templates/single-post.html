@@ -29,7 +29,19 @@
 			"layout":{"type":"constrained"}
 		} -->
 		<header class="wp-block-group">
+
+			<!-- wp:group {
+				"style":{"spacing":{"blockGap":"var:preset|spacing|base"}},
+				"layout":{"type":"flex","flexWrap":"wrap"},
+				"fontSize":"sm"
+			} -->
+			<div class="wp-block-group has-sm-font-size">
+				<!-- wp:post-date /-->
+			</div>
+			<!-- /wp:group -->
+
 			<!-- wp:post-title {"level":1} /-->
+
 		</header>
 		<!-- /wp:group -->
 
@@ -42,9 +54,9 @@
 			"tagName":"footer",
 			"metadata":{"name":"Post Footer"},
 			"layout":{"type":"constrained"},
-			"fontFamily":"tertiary"
+			"fontSize":"sm"
 		} -->
-		<footer class="wp-block-group has-tertiary-font-family">
+		<footer class="wp-block-group has-sm-font-size">
 
 			<!-- wp:group {
 				"style":{"spacing":{"blockGap":"0"}},

@@ -70,12 +70,6 @@ defined('ABSPATH') || exit;
 							"right":"var:preset|spacing|base"
 						},
 						"blockGap":"var:preset|spacing|base"
-					},
-					"border":{
-						"top":{
-							"color":"var:preset|color|primary-700",
-							"width":"0.25rem"
-						}
 					}
 				},
 				"textColor":"neutral-500",
@@ -87,7 +81,7 @@ defined('ABSPATH') || exit;
 				},
 				"fontSize":"sm"
 			} -->
-			<div class="wp-block-group is-style-card has-neutral-500-color has-180-deg-transparent-base-gradient-background has-text-color has-background has-sm-font-size" style="border-top-color:var(--wp--preset--color--primary-700);border-top-width:0.25rem;padding-top:var(--wp--preset--spacing--base);padding-right:var(--wp--preset--spacing--base);padding-bottom:var(--wp--preset--spacing--base);padding-left:var(--wp--preset--spacing--base)">
+			<div class="wp-block-group is-style-card has-neutral-500-color has-180-deg-transparent-base-gradient-background has-text-color has-background has-sm-font-size" style="padding-top:var(--wp--preset--spacing--base);padding-right:var(--wp--preset--spacing--base);padding-bottom:var(--wp--preset--spacing--base);padding-left:var(--wp--preset--spacing--base)">
 
 				<!-- wp:avatar {
 					"userId":1,

@@ -117,6 +117,9 @@ export const BLOCK_STYLES = {
 	'core/post-comments-link': {
 		'icon': __('Icon', 'x3p0-ideas')
 	},
+	'core/post-featured-image': {
+		'borderless': __('Borderless', 'x3p0-ideas')
+	},
 	'core/post-date': {
 		'icon': __('Icon', 'x3p0-ideas')
 	},

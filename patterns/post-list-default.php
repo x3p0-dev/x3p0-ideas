@@ -75,10 +75,9 @@ defined('ABSPATH') || exit;
 
 					<!-- wp:group {
 						"metadata":{"name":"<?= esc_attr__('Post Meta', 'x3p0-ideas') ?>"},
-						"layout":{"type":"flex","flexWrap":"nowrap"},
-						"fontFamily":"tertiary"
+						"layout":{"type":"flex","flexWrap":"nowrap"}
 					} -->
-					<div class="wp-block-group has-tertiary-font-family has-sm-font-size">
+					<div class="wp-block-group has-sm-font-size">
 						<!-- wp:post-date /-->
 					</div>
 					<!-- /wp:group -->

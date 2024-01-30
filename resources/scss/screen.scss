@@ -1,8 +1,8 @@
 ////
 /// Primary theme stylesheet, which is used for both the front end and the
-/// editor. Note that it is named `screen.scss` instead of `style.scss` because
-/// `wp-scripts` renames that file to `style-index.scss`. But, it's also an
-/// easy way to differentiate it from `print.scss`, which I'll totally add one
+/// editor. Note that it is named `screen` instead of `style` because
+/// `wp-scripts` renames that file to `style-index`. But, it's also an
+/// easy way to differentiate it from `print`, which I'll totally add one
 /// day. I promise.
 ///
 /// @author Justin Tadlock <justintadlock@gmail.com>
@@ -10,16 +10,16 @@
 ////
 
 // Base/Defaults.
-@use 'base/var.scss';
-@use 'base/root.scss';
-@use 'base/inline.scss';
-@use 'base/forms.scss';
+@use 'base/var';
+@use 'base/root';
+@use 'base/elements';
+@use 'base/forms';
 
 // Utilities.
-@use 'utilities/color-variation.scss';
-@use 'utilities/helpers.scss';
-@use 'utilities/lightbox.scss';
-@use 'utilities/list-markers.scss';
-@use 'utilities/rich-text.scss';
-@use 'utilities/text-shadow.scss';
-@use 'utilities/typography.scss';
+@use 'utilities/color-variation';
+@use 'utilities/helpers';
+@use 'utilities/lightbox';
+@use 'utilities/list-markers';
+@use 'utilities/rich-text';
+@use 'utilities/text-shadow';
+@use 'utilities/typography';

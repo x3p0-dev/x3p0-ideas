@@ -21,6 +21,11 @@
 	border-color: var( --wp--preset--color--neutral-100 );
 }
 
+// Overwrite WP's hardcoded text color.
+.wp-block-calendar table:where(:not(.has-text-color)) {
+	color: var(--wp--preset--color--contrast);
+}
+
 // -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
@@ -43,27 +48,20 @@
 }
 
 .wp-block-calendar {
-	padding: 0 var( --wp--preset--spacing--plus-3 ) var( --wp--preset--spacing--base );
-	border: 1px solid var( --wp--preset--color--neutral-50 );
-	border-top: 4px solid var( --color--contrast, var( --wp--preset--color--primary-700 ) );
 	box-sizing: border-box;
-	background: var( --wp--preset--color--neutral-50 );
+}
+
+.wp-block-calendar table {
+	overflow: hidden;
 }
 
 // WP nests a calendar wrapper inside itself in the editor for some crazy reason
 // that I'm sure is some legacy thing. 🫤
-.editor-styles-wrapper .wp-block-calendar .wp-block-calendar {
-	margin-bottom: calc( -1 * var( --wp--preset--spacing--base ) );
-	margin-left: calc( -1 * var( --wp--preset--spacing--plus-3 ) );
-	margin-right: calc( -1 * var( --wp--preset--spacing--plus-3 ) );
+.editor-styles-wrapper .wp-block-calendar:has(.wp-block-calendar) {
+	padding: 0;
 	border: none;
 	box-shadow: none;
-}
-
-.wp-block-calendar table caption {
-	padding: var( --wp--preset--spacing--base ) var( --wp--preset--spacing--plus-3 );
-	margin: 0 calc( -1 * var( --wp--preset--spacing--plus-3 ) ) var( --wp--preset--spacing--base );
-	background: var( --wp--preset--color--base );
+	outline: 0;
 }
 
 .wp-block-calendar table thead {
@@ -89,7 +87,6 @@
 	padding: var( --wp--preset--spacing--minus-1 ) var( --wp--preset--spacing--minus-3 );
 	font-size: var( --wp--preset--font-size--sm );
 	line-height: var( --wp--custom--line-height--sm );
-	text-transform: uppercase;
 }
 
 // -----------------------------------------------------------------------------

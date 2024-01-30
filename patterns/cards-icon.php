@@ -80,28 +80,23 @@ $icons = [
 							"right":"var:preset|spacing|plus-1"
 						},
 						"blockGap":"var:preset|spacing|base"
-					},
-					"border":{
-						"top":{
-							"color":"var:preset|color|primary-700",
-							"width":"4px"
-						}
 					}
 				},
 				"gradient":"180-deg-transparent-base",
 				"className":"is-style-card",
 				"layout":{"type":"default"}
 			} -->
-			<div class="wp-block-group is-style-card has-180-deg-transparent-base-gradient-background has-background" style="border-top-color:var(--wp--preset--color--primary-700);border-top-width:4px;padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-1);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-1)">
+			<div class="wp-block-group is-style-card has-180-deg-transparent-base-gradient-background has-background" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-1);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-1)">
 
 				<!-- wp:image {
 					"lightbox":{"enabled":false},
 					"width":"48px",
 					"height":"auto",
 					"sizeSlug":"full",
-					"linkDestination":"none"
+					"linkDestination":"none",
+					"className":"is-style-borderless"
 				} -->
-				<figure class="wp-block-image size-full is-resized">
+				<figure class="wp-block-image size-full is-resized is-style-borderless">
 					<img src="<?= esc_url(get_theme_file_uri("public/media/svg/{$icon}.svg")) ?>" alt="" style="width:48px;height:auto"/>
 				</figure>
 				<!-- /wp:image -->

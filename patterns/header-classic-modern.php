@@ -53,8 +53,7 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 						"fontWeight":"400"
 					}
 				},
-				"fontSize":"sm",
-				"fontFamily":"tertiary"
+				"fontSize":"sm"
 			} /-->
 		</div>
 		<!-- /wp:group -->

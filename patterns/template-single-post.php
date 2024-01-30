@@ -48,9 +48,9 @@ defined('ABSPATH') || exit;
 			<!-- wp:group {
 				"style":{"spacing":{"blockGap":"var:preset|spacing|base"}},
 				"layout":{"type":"flex","flexWrap":"wrap"},
-				"fontFamily":"tertiary"
+				"fontSize":"sm"
 			} -->
-			<div class="wp-block-group has-tertiary-font-family">
+			<div class="wp-block-group has-sm-font-size">
 				<!-- wp:post-date /-->
 			</div>
 			<!-- /wp:group -->
@@ -69,9 +69,9 @@ defined('ABSPATH') || exit;
 			"tagName":"footer",
 			"metadata":{"name":"<?= esc_attr__('Post Footer', 'x3p0-ideas') ?>"},
 			"layout":{"type":"constrained"},
-			"fontFamily":"tertiary"
+			"fontSize":"sm"
 		} -->
-		<footer class="wp-block-group has-tertiary-font-family">
+		<footer class="wp-block-group has-sm-font-size">
 
 			<!-- wp:group {
 				"style":{"spacing":{"blockGap":"0"}},
