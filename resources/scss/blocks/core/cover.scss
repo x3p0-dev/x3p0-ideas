@@ -22,6 +22,12 @@
 	padding: 0;
 }
 
+// If a cover block has a nav menu in it that is opened, give it a high z-index
+// to ensure the menu pops over the site toolbar.
+.wp-block-cover:has(.is-menu-open) {
+	z-index: 999999;
+}
+
 // -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
