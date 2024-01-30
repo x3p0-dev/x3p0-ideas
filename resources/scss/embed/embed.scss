@@ -28,8 +28,12 @@
 }
 
 // Featured image.
-.wp-embed-featured-image img {
+.wp-embed-featured-image img,
+.wp-embed-featured-image a img {
 	display: block;
+	outline: none !important;
+	box-shadow: none !important;
+	border-radius: 0 !important;
 }
 
 // Heading.
@@ -85,6 +89,10 @@
 	width: 32px;
 	height: 32px;
 	transform: none;
+}
+
+.wp-embed-site-title svg {
+	fill: currentColor;
 }
 
 
