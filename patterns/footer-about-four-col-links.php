@@ -64,8 +64,8 @@ defined('ABSPATH') || exit;
 		<!-- /wp:paragraph -->
 
 		<!-- wp:social-links {
-			"iconColor":"neutral-500",
-			"iconColorValue":"#715036",
+			"iconColor":"neutral-900",
+			"iconColorValue":"#000000",
 			"size":"has-large-icon-size",
 			"className":"is-style-logos-only"
 		} -->
@@ -103,15 +103,17 @@ defined('ABSPATH') || exit;
 					<div class="wp-block-column">
 
 						<!-- wp:heading {
+							"level":3,
 							"style":{
 								"typography":{
 									"fontStyle":"normal",
 									"fontWeight":"600"
 								}
 							},
-							"fontSize":"sm"
+							"fontSize":"sm",
+							"fontFamily":"secondary"
 						} -->
-						<h2 class="wp-block-heading has-sm-font-size" style="font-style:normal;font-weight:600"><?= esc_html__('Site Navigation', 'x3p0-ideas') ?></h2>
+						<h3 class="wp-block-heading has-secondary-font-family has-sm-font-size" style="font-style:normal;font-weight:600"><?= esc_html__('Site Navigation', 'x3p0-ideas') ?></h3>
 						<!-- /wp:heading -->
 
 						<!-- wp:list {
