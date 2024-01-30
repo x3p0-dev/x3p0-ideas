@@ -294,20 +294,20 @@
 		"elements": {
 			"button": {
 				"color": {
-					"text": "var:preset|color|neutral-950",
-					"background": "var:preset|color|neutral-50"
+					"text": "var:preset|color|primary-950",
+					"background": "var:preset|color|primary-50"
 				},
 				"shadow": "var:preset|shadow|md",
 				":focus": {
 					"color": {
 						"text": "var:preset|color|primary-950",
-						"background": "var:preset|color|primary-50"
+						"background": "var:preset|color|primary-100"
 					}
 				},
 				":hover": {
 					"color": {
 						"text": "var:preset|color|primary-950",
-						"background": "var:preset|color|primary-50"
+						"background": "var:preset|color|primary-100"
 					}
 				}
 			},
