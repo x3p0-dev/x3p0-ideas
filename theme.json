@@ -226,6 +226,11 @@
 					"slug": "270-deg-primary-50-transparent"
 				},
 				{
+					"gradient": "var(--wp--custom--global--fade-in-gradient, linear-gradient( 180deg, transparent -40%, var( --wp--preset--color--base ) 100% ))",
+					"name": "Fade In",
+					"slug": "fade-in"
+				},
+				{
 					"gradient": "linear-gradient(to right, rgb(16, 185, 129), rgb(101, 163, 13))",
 					"name": "Emerald",
 					"slug": "emerald"

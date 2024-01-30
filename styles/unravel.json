@@ -156,7 +156,8 @@
 				"borderColor": "var:preset|color|neutral-100",
 				"borderWidth": "1px",
 				"borderRadius": "0px",
-				"shadow": "var:preset|shadow|lg"
+				"shadow": "var:preset|shadow|lg",
+				"fadeInGradient": "linear-gradient(180deg, transparent, #2b303d)"
 			}
 		},
 		"shadow": {
@@ -265,7 +266,7 @@
 	},
 	"styles": {
 		"color": {
-			"gradient": "linear-gradient(180deg, rgb(44 39 55), rgb(44 39 55 / 0.8), rgb(44 39 55 / 0.6), rgb(44 39 55 / 0.4), rgb(44 39 55 / 0.2), transparent 96rem)"
+			"gradient": "linear-gradient(180deg, rgb(44 39 55), rgb(44 39 55 / 0.8), rgb(44 39 55 / 0.6), rgb(44 39 55 / 0.4), rgb(44 39 55 / 0.2), transparent 200vh)"
 		},
 		"css": ":where(h1,h2,h3) {\n\ttext-shadow: var(--wp--custom--text-shadow--sm);\n}",
 		"elements": {
