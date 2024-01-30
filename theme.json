@@ -6,6 +6,13 @@
 			"backgroundImage": true
 		},
 		"blocks": {
+			"core/cover": {
+				"custom":{
+					"fadeIn": {
+						"color": "var:preset|color|contrast"
+					}
+				}
+			},
 			"core/image": {
 				"lightbox": {
 					"allowEditing": true,

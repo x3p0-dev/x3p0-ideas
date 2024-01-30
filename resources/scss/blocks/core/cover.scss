@@ -36,6 +36,13 @@
 // -----------------------------------------------------------------------------
 
 ///
+// Fade-in background gradient style.
+///
+.wp-block-cover.is-style-fade-in {
+	color: var(--wp--custom--fade-in--color, #000000);
+}
+
+///
 // Reveal styles reveal one part of the Cover block and/or hide another. There
 // are multiple styles that build off the same `.is-style-reveal` base class.
 ///

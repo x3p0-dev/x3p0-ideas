@@ -3,6 +3,15 @@
 	"version": 2,
 	"title": "Unravel",
 	"settings": {
+		"blocks": {
+			"core/cover": {
+				"custom":{
+					"fadeIn": {
+						"color": "var:preset|color|neutral-950"
+					}
+				}
+			}
+		},
 		"color": {
 			"palette": [
 				{
