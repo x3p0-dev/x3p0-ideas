@@ -29,6 +29,8 @@
 // below, well...they're kind of important.
 .wp-block-navigation button.wp-block-navigation__responsive-container-open,
 .wp-block-navigation button.wp-block-navigation__responsive-container-close {
+	transition: 0.5s ease-in-out;
+	transition-property: color, background-color, border-color, outline-color;
 
 	// `theme.json`-supported styles.
 	color:         var(--wp--custom--toggle--color) !important;
@@ -41,6 +43,11 @@
 
 	padding: var(--wp--preset--spacing--minus-2) var(--wp--preset--spacing--minus-1) !important;
 
+	&:hover,
+	&:focus {
+		color:      var(--wp--custom--toggle--hover-color, var(--wp--custom--toggle--color)) !important;
+		background: var(--wp--custom--toggle--hover-background, var(--wp--custom--toggle--background));
+	}
 	svg {
 		width: 20px;
 		height: 20px;

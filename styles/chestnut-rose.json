@@ -3,6 +3,18 @@
 	"version": 2,
 	"title": "Chestnut Rose",
 	"settings": {
+		"blocks": {
+			"core/navigation": {
+				"custom": {
+					"toggle": {
+						"color": "var:preset|color|white",
+						"background": "var:preset|color|primary-700",
+						"borderRadius": "4px",
+						"hoverBackground": "var:preset|color|primary-900"
+					}
+				}
+			}
+		},
 		"color": {
 			"palette": [
 				{
