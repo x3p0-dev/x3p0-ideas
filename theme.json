@@ -1481,6 +1481,17 @@
 				}
 			},
 			"x3p0/breadcrumbs": {
+				"color": {
+					"gradient": "var:preset|gradient|90-deg-neutral-50-transparent"
+				},
+				"spacing": {
+					"padding":{
+						"top": "var:preset|spacing|base",
+						"right": "var:preset|spacing|plus-3",
+						"bottom": "var:preset|spacing|base",
+						"left": "var:preset|spacing|plus-3"
+					}
+				},
 				"typography": {
 					"fontSize": "var:preset|font-size|sm",
 					"lineHeight": "var:custom|line-height|sm"
