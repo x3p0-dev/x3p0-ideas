@@ -2,9 +2,9 @@
 
 /**
  * Title: Post Author Card
- * Slug: x3p0-ideas/post-author-card
+ * Slug: x3p0-ideas/card-post-author
  * Description:
- * Categories: about, team
+ * Categories: x3p0-card
  */
 
 declare(strict_types=1);

@@ -31,7 +31,7 @@ class Patterns implements Bootable
 	 * @todo  Type hint with PHP 8.3+ requirement.
 	 */
 	protected const CONDITIONAL_PATTERNS = [
-		'core/table-of-contents' => [ 'x3p0-ideas/table-of-contents' ],
+		'core/table-of-contents' => [ 'x3p0-ideas/card-table-of-contents' ],
 		'x3p0/breadcrumbs'       => [ 'x3p0-ideas/breadcrumbs' ]
 	];
 

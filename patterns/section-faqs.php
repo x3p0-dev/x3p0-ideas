@@ -2,9 +2,9 @@
 
 /**
  * Title: FAQs
- * Slug: x3p0-ideas/faqs
+ * Slug: x3p0-ideas/section-faqs
  * Description: Outputs a list of configurable FAQ items.
- * Categories: text
+ * Categories: text, x3p0-section
  * Keywords: faq, accordion, toggle, questions, answers
  * Viewport Width: 640
  */
