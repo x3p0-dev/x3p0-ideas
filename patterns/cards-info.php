@@ -64,21 +64,14 @@ defined('ABSPATH') || exit;
 			<!-- wp:group {
 				"style":{
 					"spacing":{
-						"blockGap":"var:preset|spacing|minus-3",
-						"padding":{
-							"top":"var:preset|spacing|base",
-							"bottom":"var:preset|spacing|base",
-							"left":"var:preset|spacing|base",
-							"right":"var:preset|spacing|base"
-						}
-					},
-					"border":{"radius":"4px"}
+						"blockGap":"var:preset|spacing|minus-3"
+					}
 				},
 				"className":"is-style-card",
 				"layout":{"type":"default"},
 				"fontSize":"xs"
 			} -->
-			<div class="wp-block-group is-style-card has-xs-font-size" style="border-radius:4px;padding-top:var(--wp--preset--spacing--base);padding-right:var(--wp--preset--spacing--base);padding-bottom:var(--wp--preset--spacing--base);padding-left:var(--wp--preset--spacing--base)">
+			<div class="wp-block-group is-style-card has-xs-font-size">
 
 				<!-- wp:heading {"level":3,"fontSize":"md"} -->
 				<h3 class="wp-block-heading has-md-font-size" id="browse-the-resources"><a href="#"><?= esc_html__('Placeholder Text', 'x3p0-ideas') ?></a></h3>
