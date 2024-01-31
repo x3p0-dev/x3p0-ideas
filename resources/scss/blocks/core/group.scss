@@ -42,12 +42,13 @@
 ///
 /// We must use the `:is()` selector here to overrule global padding styles.
 ///
-/// @link      https://github.com/WordPress/gutenberg/pull/56540
+/// @link      https://github.com/WordPress/gutenberg/pull/57908
 /// @wordpress 6.5
 ///
-.wp-block-group:is(.is-style-box, .is-style-card, .is-style-hand-drawn) {
+.wp-block-group:is(.is-style-box, .is-style-hand-drawn),
+.editor-styles-wrapper .wp-block-group:is(.is-style-box, .is-style-hand-drawn) {
 	overflow: hidden;
-	padding: var(--wp--style--block-gap);
+	padding: var(--wp--preset--spacing--plus-3);
 	border-radius: var(--wp--custom--global--border-radius, 0);
 	box-shadow: var(--wp--custom--global--shadow);
 }
@@ -56,7 +57,7 @@
 /// The boxed style adds some default padding and a background. Move style
 /// rules to `theme.json` with support.
 ///
-/// @link      https://github.com/WordPress/gutenberg/pull/56540
+/// @link      https://github.com/WordPress/gutenberg/pull/57908
 /// @wordpress 6.5
 ///
 .wp-block-group.is-style-box {
@@ -68,20 +69,27 @@
 /// The card style adds a default border. Move style rules to `theme.json` with
 /// support.
 ///
-/// @link      https://github.com/WordPress/gutenberg/pull/56540
+/// @link      https://github.com/WordPress/gutenberg/pull/57908
 /// @wordpress 6.5
 ///
-.wp-block-group.is-style-card {
-	border-width: var(--wp--custom--card--border-width, var(--wp--custom--global--border-width, 1px));
-	border-style: var(--wp--custom--card--border-style, var(--wp--custom--global--border-style, solid));
-	border-color: var(--wp--custom--card--border-color, var(--wp--custom--global--border-color, transparent));
+.wp-block-group.is-style-card,
+.editor-styles-wrapper .wp-block-group.is-style-card {
+	overflow:      hidden;
+	color:         var(--wp--custom--card--color, inherit);
+	background:    var(--wp--custom--card--background, transparent);
+	border-width:  var(--wp--custom--card--border-width, var(--wp--custom--global--border-width, 1px));
+	border-style:  var(--wp--custom--card--border-style, var(--wp--custom--global--border-style, solid));
+	border-color:  var(--wp--custom--card--border-color, var(--wp--custom--global--border-color, transparent));
+	border-radius: var(--wp--custom--card--border-radius, var(--wp--custom--global--border-radius));
+	padding:       var(--wp--custom--card--padding, var(--wp--preset--spacing--plus-3));
+	box-shadow:    var(--wp--custom--card--shadow, var(--wp--custom--global--shadow));
 }
 
 ///
 /// A hand-drawn design for the Group block. Most of these style rules should
 /// be moved to `theme.json` with support.
 ///
-/// @link      https://github.com/WordPress/gutenberg/pull/56540
+/// @link      https://github.com/WordPress/gutenberg/pull/57908
 /// @wordpress 6.5
 ///
 .wp-block-group.is-style-hand-drawn {
@@ -90,4 +98,22 @@
 
 	// No `theme.json` support for this style of radius.
 	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
+}
+
+///
+/// The section style is meant for grouping several blocks. It was primarily
+/// built for full-width sections, but the alignment/width is controlled at the
+/// block level.
+///
+/// @link      https://github.com/WordPress/gutenberg/pull/57908
+/// @wordpress 6.5
+///
+.wp-block-group.is-style-section,
+.editor-styles-wrapper .wp-block-group.is-style-section {
+	color:        var(--wp--custom--section--color, inherit);
+	background:   var(--wp--custom--section--background, transparent);
+	border-width: var(--wp--custom--section--border-width, 0);
+	border-style: var(--wp--custom--section--border-style, solid);
+	border-color: var(--wp--custom--section--border-color, transparent);
+	padding:      var(--wp--custom--section--padding, 0);
 }

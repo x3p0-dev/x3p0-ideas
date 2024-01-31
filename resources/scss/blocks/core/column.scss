@@ -35,7 +35,7 @@
 /// Shared styles for boxed and card styles. Move style rules to `theme.json`
 /// with support.
 ///
-/// @link      https://github.com/WordPress/gutenberg/pull/56540
+/// @link      https://github.com/WordPress/gutenberg/pull/57908
 /// @wordpress 6.5
 ///
 .wp-block-column:where( .is-style-box, .is-style-card ) {
@@ -51,7 +51,7 @@
 /// Note: `.wp-block-columns` is needed to overrule global padding styles. This
 /// may not be specific enough with a move to `theme.json`.
 ///
-/// @link      https://github.com/WordPress/gutenberg/pull/56540
+/// @link      https://github.com/WordPress/gutenberg/pull/57908
 /// @wordpress 6.5
 ///
 .wp-block-columns > .wp-block-column.is-style-box,
@@ -65,7 +65,7 @@
 /// not all cards need padding around all of the nested content. Move style
 /// rules to `theme.json` with support.
 ///
-/// @link      https://github.com/WordPress/gutenberg/pull/56540
+/// @link      https://github.com/WordPress/gutenberg/pull/57908
 /// @wordpress 6.5
 ///
 .wp-block-column.is-style-card {

@@ -65,7 +65,8 @@ export const BLOCK_STYLES = {
 	'core/group': {
 		'box':        __('Box',        'x3p0-ideas'),
 		'card':       __('Card',       'x3p0-ideas'),
-		'hand-drawn': __('Hand Drawn', 'x3p0-ideas')
+		'hand-drawn': __('Hand Drawn', 'x3p0-ideas'),
+		'section':    __('Section',    'x3p0-ideas' )
 	},
 	'core/heading': {
 		'clip-text':         __('Clip Text', 'x3p0-ideas'),

@@ -16,14 +16,15 @@ defined('ABSPATH') || exit;
 
 ?>
 <!-- wp:group {
-	"metadata":{"name":"<?= esc_attr__('FAQs Container', 'x3p0-ideas') ?>"},
+	"tagName":"section",
+	"metadata":{"name":"<?= esc_attr__('Section', 'x3p0-ideas') ?>"},
+	"align":"full",
+	"className":"is-style-section",
 	"layout":{"type":"constrained"}
 } -->
-<div class="wp-block-group">
+<section class="wp-block-group alignfull is-style-section">
 
-	<!-- wp:heading -->
-	<h2 class="wp-block-heading"><?= esc_html__('FAQs', 'x3p0-ideas') ?></h2>
-	<!-- /wp:heading -->
+	<!-- wp:pattern {"slug":"x3p0-ideas/section-header"} /-->
 
 	<?php foreach (range(1, 4) as $number) : ?>
 		<!-- wp:details -->
@@ -44,5 +45,5 @@ defined('ABSPATH') || exit;
 		<!-- /wp:details -->
 	<?php endforeach ?>
 
-</div>
+</section>
 <!-- /wp:group -->
