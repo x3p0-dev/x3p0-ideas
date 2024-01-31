@@ -25,51 +25,29 @@
 			"tagName":"header",
 			"align":"full",
 			"style":{
-				"spacing":{
-					"margin":{
-						"bottom":"var:preset|spacing|plus-5"
-					}
-				}
-			},
+				"spacing":{"margin":{"bottom":"var:preset|spacing|plus-5"}},
+				"elements":{"link":{"color":{"text":"var:preset|color|neutral-950"}}}},
+			"backgroundColor":"neutral-50",
+			"textColor":"neutral-950",
 			"layout":{"type":"default"}
 		} -->
-		<header class="wp-block-group alignfull" style="margin-bottom:var(--wp--preset--spacing--plus-5)">
+		<header class="wp-block-group alignfull has-neutral-950-color has-neutral-50-background-color has-text-color has-background has-link-color" style="margin-bottom:var(--wp--preset--spacing--plus-5)">
 
 			<!-- wp:columns {
+				"verticalAlignment":null,
 				"align":"full",
-				"style":{
-					"spacing":{"blockGap":{"top":"0","left":"0"}},
-					"elements":{
-						"link":{
-							"color":{
-								"text":"var:preset|color|neutral-950"
-							}
-						},
-						"heading":{
-							"color":{
-								"text":"var:preset|color|neutral-950"
-							}
-						}
-					},
-					"border":{
-						"top":{"color":"var:preset|color|neutral-100"},
-						"right":{},
-						"bottom":{"color":"var:preset|color|neutral-100"},
-						"left":{}
-					}
-				},
-				"textColor":"neutral-950",
-				"gradient":"90-deg-neutral-50-transparent",
+				"style":{"spacing":{"blockGap":{"top":"0","left":"0"}}},
 				"className":"is-style-reverse-stack"
 			} -->
-			<div class="wp-block-columns alignfull is-style-reverse-stack has-neutral-950-color has-90-deg-neutral-50-transparent-gradient-background has-text-color has-background has-link-color" style="border-top-color:var(--wp--preset--color--neutral-100);border-bottom-color:var(--wp--preset--color--neutral-100)">
+			<div class="wp-block-columns alignfull is-style-reverse-stack">
 
 				<!-- wp:column {
-					"verticalAlignment":"stretch",
+					"verticalAlignment":"bottom",
+					"width":"55%",
 					"style":{
 						"spacing":{
 							"padding":{
-								"top":"var:preset|spacing|plus-10",
+								"top":"var:preset|spacing|plus-8",
 								"bottom":"var:preset|spacing|plus-3",
 								"left":"var:preset|spacing|plus-3",
 								"right":"var:preset|spacing|plus-3"
@@ -78,7 +56,7 @@
 					},
 					"layout":{"type":"constrained"}
 				} -->
-				<div class="wp-block-column is-vertically-aligned-stretch" style="padding-top:var(--wp--preset--spacing--plus-10);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
+				<div class="wp-block-column is-vertically-aligned-bottom" style="padding-top:var(--wp--preset--spacing--plus-8);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3);flex-basis:55%">
 
 					<!-- wp:group {
 						"style":{"dimensions":{"minHeight":"100%"}},
@@ -103,9 +81,7 @@
 						} -->
 						<div class="wp-block-group has-sm-font-size">
 							<!-- wp:avatar {"size":48,"isLink":true} /-->
-
 							<!-- wp:post-author-name {"isLink":true} /-->
-
 							<!-- wp:post-date {"className":"is-style-icon"} /-->
 						</div>
 						<!-- /wp:group -->
@@ -131,9 +107,10 @@
 
 						<!-- wp:cover {
 							"useFeaturedImage":true,
+							"dimRatio":0,
 							"minHeight":50,
 							"minHeightUnit":"vh",
-							"gradient":"fade-in",
+							"isDark":false,
 							"style":{
 								"layout":{
 									"selfStretch":"fill",
@@ -142,15 +119,14 @@
 							},
 							"layout":{"type":"default"}
 						} -->
-						<div class="wp-block-cover" style="min-height:50vh">
-							<span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim has-background-gradient has-fade-in-gradient-background"></span>
+						<div class="wp-block-cover is-light" style="min-height:50vh">
+							<span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span>
 
 							<div class="wp-block-cover__inner-container">
 								<!-- wp:paragraph {"align":"center","placeholder":"Write title…","fontSize":"large"} -->
 								<p class="has-text-align-center has-large-font-size"></p>
 								<!-- /wp:paragraph -->
 							</div>
-
 						</div>
 						<!-- /wp:cover -->
 
