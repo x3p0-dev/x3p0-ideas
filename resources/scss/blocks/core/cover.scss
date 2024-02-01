@@ -96,6 +96,7 @@
 // Style for revealing the Cover background image on hover/focus.
 ///
 .wp-block-cover.is-style-reveal-image {
+	overflow: hidden;
 
 	// When not selected, make the background (overlay) fully opaque.
 	&:where( :not(
@@ -128,6 +129,7 @@
 // Style for revealing the Cover text/content on hover/focus.
 ///
 .wp-block-cover.is-style-reveal-text {
+	overflow: hidden;
 
 	// When not selected, hide the background (overlay).
 	&:where( :not(

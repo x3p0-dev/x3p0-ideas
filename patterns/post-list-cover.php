@@ -37,78 +37,73 @@ defined('ABSPATH') || exit;
 } -->
 <div class="wp-block-query alignfull">
 
-	<!-- wp:group {
-		"metadata":{"name":"<?= esc_attr__('Posts Container', 'x3p0-ideas') ?>"},
+	<!-- wp:post-template {
 		"align":"full",
-		"layout":{"type":"constrained"}
+		"style":{"spacing":{"blockGap":"0"}}
 	} -->
-	<div class="wp-block-group alignfull">
 
-		<!-- wp:post-template {"align":"full","style":{"spacing":{"blockGap":"0"}}} -->
+		<!-- wp:cover {
+			"useFeaturedImage":true,
+			"isUserOverlayColor":true,
+			"minHeight":100,
+			"minHeightUnit":"vh",
+			"gradient":"45-deg-dark-transparent",
+			"tagName":"article",
+			"metadata":{"name":"<?= esc_attr__('Post', 'x3p0-ideas') ?>"},
+			"style":{
+				"spacing":{
+					"padding":{
+						"top":"var:preset|spacing|plus-3",
+						"right":"var:preset|spacing|plus-3",
+						"bottom":"var:preset|spacing|plus-3",
+						"left":"var:preset|spacing|plus-3"
+					}
+				}
+			},
+			"layout":{"type":"constrained"}
+		} -->
+		<article class="wp-block-cover" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3);min-height:100vh">
 
-			<!-- wp:group {
-				"metadata":{"name":"<?= esc_attr__('Post', 'x3p0-ideas') ?>"},
-				"tagName":"article",
-				"className":"has-link-color",
-				"layout":{"type":"constrained"}
-			} -->
-			<article class="wp-block-group has-link-color">
+			<span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim has-background-gradient has-45-deg-dark-transparent-gradient-background"></span>
+			<div class="wp-block-cover__inner-container">
 
-				<!-- wp:cover {
-					"useFeaturedImage":true,
-					"dimRatio":50,
-					"minHeight":100,
-					"minHeightUnit":"vh",
-					"align":"full",
+				<!-- wp:group {
+					"tagName":"header",
+					"metadata":{"name":"<?= esc_attr__('Post Header', 'x3p0-ideas') ?>"},
 					"style":{
 						"spacing":{
-							"padding":{
-								"top":"var:preset|spacing|plus-3",
-								"right":"var:preset|spacing|plus-3",
-								"bottom":"var:preset|spacing|plus-3",
-								"left":"var:preset|spacing|plus-3"
-							}
+							"blockGap":"var:preset|spacing|minus-2"
 						}
 					},
-					"layout":{"type":"constrained"}
+					"layout":{"type":"default"}
 				} -->
-				<div class="wp-block-cover alignfull" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3);min-height:100vh">
+				<header class="wp-block-group">
 
-					<span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span>
-					<div class="wp-block-cover__inner-container">
+					<!-- wp:post-title {"textAlign":"center","isLink":true} /-->
 
-						<!-- wp:group {
-							"metadata":{"name":"<?= esc_attr__('Post Header', 'x3p0-ideas') ?>"},
-							"tagName":"header",
-							"style":{"spacing":{"blockGap":"var:preset|spacing|minus-2"}},
-							"layout":{"type":"constrained"}
-						} -->
-						<header class="wp-block-group">
-							<!-- wp:post-title {"isLink":true} /-->
-
-							<!-- wp:group {
-								"metadata":{"name":"<?= esc_attr__('Post Meta', 'x3p0-ideas') ?>"},
-								"layout":{"type":"flex","flexWrap":"nowrap"}
-							} -->
-							<div class="wp-block-group">
-								<!-- wp:post-date /-->
-							</div>
-							<!-- /wp:group -->
-						</header>
-						<!-- /wp:group -->
-
+					<!-- wp:group {
+						"metadata":{"name":"<?= esc_attr__('Post Meta', 'x3p0-ideas') ?>"},
+						"layout":{
+							"type":"flex",
+							"flexWrap":"nowrap",
+							"verticalAlignment":"center",
+							"justifyContent":"center"
+						}
+					} -->
+					<div class="wp-block-group">
+						<!-- wp:post-date /-->
 					</div>
+					<!-- /wp:group -->
 
-				</div>
-				<!-- /wp:cover -->
+				</header>
+				<!-- /wp:group -->
 
-			</article>
-			<!-- /wp:group -->
+			</div>
 
-		<!-- /wp:post-template -->
+		</article>
+		<!-- /wp:cover -->
 
-	</div>
-	<!-- /wp:group -->
+	<!-- /wp:post-template -->
 
 	<!-- wp:query-pagination {
 		"paginationArrow":"arrow",
