@@ -31,7 +31,7 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 			"metadata":{"name":"<?= esc_attr__('Card', 'x3p0-ideas') ?>"},
 			"url":"<?= esc_url($image) ?>",
 			"dimRatio":50,
-			"overlayColor":"contrast",
+			"overlayColor":"black",
 			"minHeight":20,
 			"minHeightUnit":"vh",
 			"style":{
@@ -50,7 +50,7 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 		} -->
 		<div class="wp-block-cover is-style-reveal-image has-sm-font-size" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3);min-height:20vh">
 
-			<span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim"></span>
+			<span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim"></span>
 			<img class="wp-block-cover__image-background" alt="" src="<?= esc_url($image) ?>" data-object-fit="cover"/>
 
 			<div class="wp-block-cover__inner-container">
@@ -82,9 +82,10 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 							}
 						},
 						"backgroundColor":"primary-700",
+						"textColor":"primary-50",
 						"layout":{"type":"default"}
 					} -->
-					<div class="wp-block-group has-primary-700-background-color has-background" style="padding-top:var(--wp--preset--spacing--minus-3);padding-right:var(--wp--preset--spacing--base);padding-bottom:var(--wp--preset--spacing--minus-3);padding-left:var(--wp--preset--spacing--base)">
+					<div class="wp-block-group has-primary-50-color has-primary-700-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--minus-3);padding-right:var(--wp--preset--spacing--base);padding-bottom:var(--wp--preset--spacing--minus-3);padding-left:var(--wp--preset--spacing--base)">
 
 						<!-- wp:paragraph -->
 						<p><?= esc_html__('Placeholder', 'x3p0-ideas') ?></p>

@@ -99,7 +99,7 @@
 	overflow: hidden;
 
 	// When not selected, make the background (overlay) fully opaque.
-	&:where( :not(
+	&:is( :not(
 		:hover,
 		:focus-within,
 		.is-selected
