@@ -14,6 +14,9 @@
 			"core/navigation": {
 				"custom": {
 					"toggle": {
+						"color": "var:preset|color|primary-950",
+						"background": "var:preset|color|primary-100",
+						"hoverBackground": "var:preset|color|primary-300",
 						"shadow": "var:preset|shadow|sm"
 					}
 				}
