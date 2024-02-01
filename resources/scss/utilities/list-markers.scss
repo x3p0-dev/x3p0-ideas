@@ -7,26 +7,22 @@
 
 // Some blocks, like Archives, wrap the list in an extra block `<div>` wrapper
 // in the editor and apply the class to this wrapper.
-:where( ul, ol, .wp-block-archives )[class*=has-marker-],
-:where( .wp-block-archives )[class*=has-marker-] ul {
-	list-style: var( --list-type, revert );
+:where(ul, ol, .wp-block-archives)[class*=has-marker-],
+:where(.wp-block-archives)[class*=has-marker-] ul {
+	list-style: var(--list-type, revert);
 }
 
 // Marker styles.
-:where( ul, ol, .wp-block-archives ).has-marker-arrow li::marker { content: "\2192\20"; }
-:where( ul, ol, .wp-block-archives ).has-marker-dash li::marker { content: "\2013\20"; }
-
-.has-marker-disc   { --list-type: disc;    }
-.has-marker-circle { --list-type: circle;  }
-.has-marker-square { --list-type: square;  }
-
+.has-marker-none         { --list-type: none; }
+.has-marker-disc         { --list-type: disc; }
+.has-marker-circle       { --list-type: circle; }
+.has-marker-square       { --list-type: square; }
 .has-marker-decimal      { --list-type: decimal; }
 .has-marker-leading-zero { --list-type: decimal-leading-zero; }
 .has-marker-lower-alpha  { --list-type: lower-alpha; }
 .has-marker-upper-alpha  { --list-type: upper-alpha; }
 .has-marker-lower-roman  { --list-type: lower-roman; }
 .has-marker-upper-roman  { --list-type: upper-roman; }
-.has-marker-none         { --list-type: none; }
 
 // Need to target the element for higher specificity to overrule some blocks,
 // such as Page List.
@@ -40,8 +36,10 @@ ol.has-marker-none > li,
 	padding-right: 0;
 }
 
-.has
-
-:where( :where( ul, ol, .wp-block-archives )[class*=has-marker-] :where( ul, ol ) ) {
+:where(:where(
+	ul,
+	ol,
+	.wp-block-archives
+)[class*=has-marker-] :where(ul, ol)) {
 	list-style-type: inherit;
 }

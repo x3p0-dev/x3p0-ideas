@@ -23,16 +23,13 @@
 		}
 	}
 
-	&.has-marker-disc li {    list-style-type: disc;    }
-	&.has-marker-circle li {  list-style-type: circle;  }
-	&.has-marker-square li {  list-style-type: square;  }
-	&.has-marker-arrow li::marker { content: "\2192\20"; }
-	&.has-marker-dash li::marker { content: "\2013\20"; }
-
-	&.has-marker-decimal li::marker { content: "0." }
-	&.has-marker-leading-zero li::marker { content: "00." }
-	&.has-marker-lower-alpha li { list-style-type: lower-alpha; }
-	&.has-marker-upper-alpha li { list-style-type: upper-alpha; }
-	&.has-marker-lower-roman li { list-style-type: lower-roman; }
-	&.has-marker-upper-roman li { list-style-type: upper-roman; }
+	&.has-marker-disc li         { list-style-type: disc;   }
+	&.has-marker-circle li       { list-style-type: circle; }
+	&.has-marker-square li       { list-style-type: square; }
+	&.has-marker-decimal li      { list-style-type: decimal; }
+	&.has-marker-leading-zero li { list-style-type: decimal-leading-zero; }
+	&.has-marker-lower-alpha li  { list-style-type: lower-alpha; }
+	&.has-marker-upper-alpha li  { list-style-type: upper-alpha; }
+	&.has-marker-lower-roman li  { list-style-type: lower-roman; }
+	&.has-marker-upper-roman li  { list-style-type: upper-roman; }
 }
