@@ -28,10 +28,16 @@
 // Block style variations.
 // -----------------------------------------------------------------------------
 
+///
+/// The pull style "pulls" the list back to be flush with the text.
+///
 .wp-block-table-of-contents.is-style-pull > ol {
 	padding-left: 1em;
 }
 
+///
+/// The unordered style makes the `<ol>` tags appear as an unordered list.
+///
 .wp-block-table-of-contents.is-style-marker-unordered ol {
 	list-style: disc;
 
@@ -42,8 +48,11 @@
 	}
 }
 
-.wp-block-table-of-contents.is-style-chapters,
-.wp-block-table-of-contents.is-style-chapters-and-subs {
+///
+/// The chapters style gives the ToC a `Chapter {num}` prefix for top-level
+/// items and a `{num}.{num}` prefix for sub-items.
+///
+.wp-block-table-of-contents.is-style-chapters {
 
 	ol {
 		list-style: none;
@@ -59,7 +68,7 @@
 	}
 
 	li + li {
-		margin-top: var( --wp--preset--spacing--plus-3 );
+		margin-top: var( --wp--preset--spacing--base );
 	}
 
 	li::before {
@@ -74,7 +83,7 @@
 	}
 
 	li li {
-		margin-top: var( --wp--preset--spacing--minus-2 );
+		margin-top: var( --wp--preset--spacing--base );
 
 		&::before {
 			content: counters( chapter, '.', decimal );
@@ -85,13 +94,4 @@
 			margin-top: 0;
 		}
 	}
-
-}
-
-.wp-block-table-of-contents.is-style-chapters ol > li > ol {
-	display: none;
-}
-
-.wp-block-table-of-contents.is-style-chapters-and-subs li + li {
-	margin-top: var( --wp--preset--spacing--base );
 }

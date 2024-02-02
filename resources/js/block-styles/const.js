@@ -157,8 +157,7 @@ export const BLOCK_STYLES = {
 		'normalize': __('Normalize', 'x3p0-ideas')
 	},
 	'core/table-of-contents': {
-		'chapters':          __('Chapters', 'x3p0-ideas'),
-		'chapters-and-subs': __('Chapters With Sub-headings', 'x3p0-ideas'),
+		'chapters':          __('Chapters',  'x3p0-ideas'),
 		'marker-unordered':  __('Unordered', 'x3p0-ideas'),
 		'pull':              __('Pull',      'x3p0-ideas')
 	},
