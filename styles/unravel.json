@@ -321,6 +321,7 @@
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",
 					"fontSize": "var:preset|font-size|lg",
+					"lineHeight": "var:custom|line-height|lg",
 					"fontWeight": "300"
 				}
 			},
@@ -354,7 +355,8 @@
 			},
 			"core/gallery": {
 				"typography": {
-					"fontSize": "var:preset|font-size|lg"
+					"fontSize": "var:preset|font-size|lg",
+					"lineHeight": "var:custom|line-height|lg"
 				}
 			},
 			"core/navigation": {
