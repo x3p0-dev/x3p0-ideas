@@ -20,7 +20,7 @@
 .editor-styles-wrapper .wp-block-comments > * + .wp-block.wp-block-comments-pagination {
 	margin-block-start: var(
 		--wp--custom--block-gap--comments,
-		var( --wp--style--block-gap )
+		var(--wp--style--block-gap)
 	);
 }
 

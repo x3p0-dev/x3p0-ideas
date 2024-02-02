@@ -41,7 +41,19 @@
 	// @link https://github.com/WordPress/gutenberg/issues/44879
 	> .wp-block-query-pagination {
 		box-sizing: content-box;
-		padding-left: var( --wp--style--block-gap );
-		padding-right: var( --wp--style--block-gap );
+		padding-left: var(--wp--style--block-gap);
+		padding-right: var(--wp--style--block-gap);
 	}
 }
+
+// -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+// No customizations...
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+// No variations...

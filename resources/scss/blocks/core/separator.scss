@@ -8,26 +8,45 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
+// -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+///
+/// When the separator has a gradient background, it doesn't work correctly
+/// because we're actually dealing with borders. Fix this by removing the border
+/// and giving the separator a height.
+///
+/// @todo Add Gutenberg ticket link.
+///
 .wp-block-separator.has-background[class*=-gradient] {
 	border: none;
 	height: 2px;
 }
 
 // -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+// No customizations...
+
+// -----------------------------------------------------------------------------
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-// Most of these need their background reset because WP sets both the `core`
+// Most of these need their background reset because WP sets both the `color`
 // and `background` values for the block's color. All we need is the color,
 // which WP automatically applies to the border via `currentColor`.
 
-// Basic border-style variations.
+///
+/// Normal dashed, dotted, and double border styles.
+///
 hr.wp-block-separator:is(
 	.is-style-dashed,
 	.is-style-dotted,
 	.is-style-double
 ) {
-	border-width: var( --wp--preset--spacing--minus-3 ) 0 0;
+	border-width: var(--wp--preset--spacing--minus-3) 0 0;
 	background-color: transparent !important;
 }
 
@@ -35,15 +54,17 @@ hr.wp-block-separator.is-style-dashed { border-style: dashed; }
 hr.wp-block-separator.is-style-dotted { border-style: dotted; }
 
 hr.wp-block-separator.is-style-double {
-	border-width: var( --wp--preset--spacing--minus-2 ) 0 0;
+	border-width: var(--wp--preset--spacing--minus-2) 0 0;
 	border-style: double;
 }
 
-// Hand-drawn style.
+///
+/// Hand-drawn style.
+///
 hr.wp-block-separator.is-style-hand-drawn {
 	margin-bottom: -20px !important;
-	padding: var( --wp--preset--spacing--base );
-	border-width: var( --wp--preset--spacing--minus-2 ) 0 0;
+	padding: var(--wp--preset--spacing--base);
+	border-width: var(--wp--preset--spacing--minus-2) 0 0;
 	border-radius: 255px 15px 0 0/15px 8px 0 0;
 	transform: rotate(-1deg);
 

@@ -15,22 +15,16 @@
 	padding: 0;
 }
 
-// The block doesn't have spacing support, so this is a necessary hack to add in
-// some padding when it has a background.
-.wp-block-pullquote.has-background {
-	padding: var( --wp--style--block-gap );
-}
-
 // Faux `blockGap` support.
-.wp-block-pullquote blockquote > * {
-	margin-block-start: 0;
-	margin-block-end: 0;
+:where(.wp-block-pullquote blockquote > *) {
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
-.wp-block-pullquote blockquote > * + * {
-	margin-block-start: var(
+:where(.wp-block-pullquote blockquote > * + *) {
+	margin-top: var(
 		--wp--custom--block-gap--pullquote,
-		var( --wp--style--block-gap )
+		var(--wp--style--block-gap)
 	);
 }
 
@@ -38,9 +32,6 @@
 // element itself.
 .wp-block-pullquote blockquote > cite {
 	display: block;
-
-	// Custom spacing.
-	margin-top: var( --wp--preset--spacing--minus-2 );
 }
 
 // -----------------------------------------------------------------------------
@@ -88,8 +79,8 @@
 // Figure element needed to overwrite styles in editor.
 
 figure.wp-block-pullquote.is-style-hand-drawn {
-	padding: var( --wp--style--block-gap ) 0;
-	border-color: var( --wp--preset--color--contrast );
-	border-width: var( --wp--preset--spacing--minus-2 ) 0;
+	padding:       var(--wp--style--block-gap) 0;
+	border-color:  var(--wp--preset--color--contrast);
+	border-width:  var(--wp--preset--spacing--minus-2) 0;
 	border-radius: 255px 15px 255px 15px/15px 10px 15px 10px !important;
 }

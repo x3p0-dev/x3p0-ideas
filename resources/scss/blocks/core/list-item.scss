@@ -24,14 +24,23 @@
 // Block style variations.
 // -----------------------------------------------------------------------------
 
+///
+/// Adds a check-circle icon before the list item.
+///
 li.is-style-check-circle {
 	@include inline-icon.prefix(icon.get-url('check-circle'));
 }
 
+///
+/// Adds a cancel/x-circle icon before the list item.
+///
 li.is-style-cancel-circle {
 	@include inline-icon.prefix(icon.get-url('cancel-circle'));
 }
 
+///
+/// Shared list item styles to increase the icon size.
+///
 li.is-style-check-circle::before,
 li.is-style-cancel-circle::before {
 	width: 1.5em;

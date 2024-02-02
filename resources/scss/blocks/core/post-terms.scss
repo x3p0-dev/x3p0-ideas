@@ -21,26 +21,37 @@
 // This addresses that by making the block a flex layout and adding a gap. This
 // works regardless of whether the space was added or not.
 .wp-block-post-terms {
-	--wp--custom--block-gap--post-terms: var( --wp--preset--spacing--minus-3 );
+	--wp--custom--block-gap--post-terms: var(--wp--preset--spacing--minus-3);
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
-	gap: var( --wp--custom--block-gap--post-terms );
+	gap: var(--wp--custom--block-gap--post-terms);
 
 	&__separator {
-		margin-left: calc( -1 * var( --wp--custom--block-gap--post-terms ) );
+		margin-left: calc(-1 * var(--wp--custom--block-gap--post-terms));
 	}
 }
 
 // -----------------------------------------------------------------------------
-// Block styles.
+// Block customizations.
 // -----------------------------------------------------------------------------
 
-.wp-block-post-terms.is-style-button {
-	--wp--custom--block-gap--post-terms: var( --wp--preset--spacing--minus-1 );
+// No customizations...
 
-	font-size: var( --wp--preset--font-size--xs );
-	line-height: var( --wp--custom--line-height--xs );
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+///
+/// Turns the post term links into a button.
+///
+/// @todo Figure out how this gap should be implemented. Is this flexbox?
+///
+.wp-block-post-terms.is-style-button {
+	--wp--custom--gap: var(--wp--preset--spacing--minus-1);
+
+	font-size: var(--wp--preset--font-size--xs);
+	line-height: var(--wp--custom--line-height--xs);
 
 	.wp-block-post-terms__separator { display: none; }
 
@@ -49,13 +60,19 @@
 	}
 }
 
+///
+/// Adds an icon before the post terms list. Note that we currently support the
+/// category and tag taxonomies. The fallback is a folder icon.
+///
+/// @todo Add support for other common taxonomies. Needs research.
+///
 .wp-block-post-terms.is-style-icon {
 
 	&::before {
-		@include inline-icon.icon( icon.get-url( 'folder' ) );
+		@include inline-icon.icon(icon.get-url('folder'));
 	}
 
 	&.taxonomy-post_tag::before {
-		@include inline-icon.modify( icon.get-url( 'tag' ) );
+		@include inline-icon.modify(icon.get-url('tag'));
 	}
 }

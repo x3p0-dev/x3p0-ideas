@@ -9,9 +9,28 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// Addition of `:is()` to work in the editor.
-:is( h1, h2, h3, h4, h5, h6, p ).wp-block-site-title.is-style-normalize,
-:is( h1, h2, h3, h4, h5, h6, p ).wp-block-site-title.is-style-normalize > a {
+// No fixes...
+
+// -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+// No customizations...
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+///
+/// The normalize style reverts the block, regardless of its tag to the size of
+/// the current text and removes any special styling. This is for use in places
+/// like the footer where the Site Title will often have a different style than
+/// it does in the header.
+///
+/// Note: use of `:is()` to work in the editor.
+///
+:is(h1, h2, h3, h4, h5, h6, p).wp-block-site-title.is-style-normalize,
+:is(h1, h2, h3, h4, h5, h6, p).wp-block-site-title.is-style-normalize > a {
 	font: inherit;
 	background: revert;
 	border: revert;

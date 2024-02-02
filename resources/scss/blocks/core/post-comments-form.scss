@@ -24,8 +24,10 @@
 
 // WP hardcodes a zeroed out box-shadow, overruling the `shadow` property set
 // in `theme.json` on the `button` element.
+//
+// @todo move this to general form handling.
 .wp-block-post-comments-form input[type=submit] {
-	box-shadow: var( --wp--custom--global--shadow );
+	box-shadow: var(--wp--custom--global--shadow);
 }
 
 // -----------------------------------------------------------------------------
@@ -42,17 +44,17 @@
 .wp-block-post-comments-form .comment-reply-title + * {
 	margin-block-start: var(
 		--wp--custom--block-gap--comments-form,
-		var( --wp--preset--spacing--base )
+		var(--wp--preset--spacing--base)
 	);
 }
 
 // Creates a grid display for the comment form.
 .wp-block-post-comments-form .comment-form {
 	display: grid;
-	grid-template-columns: repeat( 2, 1fr );
+	grid-template-columns: repeat(2, 1fr);
 	gap: var(
 		--wp--custom--block-gap--comments-form,
-		var( --wp--preset--spacing--base )
+		var(--wp--preset--spacing--base)
 	);
 
 	// By default, all items span the full width of the grid.
@@ -62,7 +64,7 @@
 	}
 
 	// Aligns the author and email fields into a single row.
-	@media ( min-width: 40rem ) {
+	@media (min-width: 40rem) {
 		.comment-form-author { grid-column: 1/1; }
 		.comment-form-email  { grid-column: 2/2; }
 	}
@@ -70,13 +72,13 @@
 
 // Use negative color (generally red) for required marker.
 .wp-block-post-comments-form .required {
-	color: var( --wp--preset--color--primary-700 );
+	color: var(--wp--preset--color--primary-700);
 }
 
 // Overwrites WP's default form field padding with a theme spacing size.
-.wp-block-post-comments-form input:not( [type=submit] ):not( [type=checkbox] ),
+.wp-block-post-comments-form input:not([type=submit]):not([type=checkbox]),
 .wp-block-post-comments-form textarea {
-	padding: var( --wp--preset--spacing--minus-2 );
+	padding: var(--wp--preset--spacing--minus-2);
 }
 
 // -----------------------------------------------------------------------------
@@ -92,19 +94,19 @@
 	.comment-form-email,
 	.comment-form-url {
 		label {
-			@include inline-icon.prefix( icon.get-url( 'comment' ) );
+			@include inline-icon.prefix(icon.get-url('comment'));
 		}
 	}
 
 	.comment-form-author label::before {
-		@include inline-icon.modify( icon.get-url( 'user' ) );
+		@include inline-icon.modify(icon.get-url('user'));
 	}
 
 	.comment-form-email label::before {
-		@include inline-icon.modify( icon.get-url( 'mail' ) );
+		@include inline-icon.modify(icon.get-url('mail'));
 	}
 
 	.comment-form-url label::before {
-		@include inline-icon.modify( icon.get-url( 'link' ) );
+		@include inline-icon.modify(icon.get-url('link'));
 	}
 }

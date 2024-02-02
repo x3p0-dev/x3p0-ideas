@@ -9,8 +9,22 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// Move to an editor-only file.
+// Fixes margins in the editor.
+//
+// @todo Move to an editor-only file.
 .edit-post-visual-editor__post-title-wrapper,
 .is-root-container.wp-block-post-content {
-	margin-top: var( --wp--style--block-gap ) !important;
+	margin-top: var(--wp--style--block-gap) !important;
 }
+
+// -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+// No customizations...
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+// No variations...

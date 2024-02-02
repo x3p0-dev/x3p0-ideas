@@ -27,10 +27,6 @@ export const BLOCK_STYLES = {
 	'core/categories': {
 		'horizontal': __('Horizontal', 'x3p0-ideas')
 	},
-	'core/column': {
-		'box':  __('Box',  'x3p0-ideas'),
-		'card': __('Card', 'x3p0-ideas')
-	},
 	'core/columns': {
 		'grid-auto':     __('Grid: Auto', 'x3p0-ideas'),
 		'reverse-stack': __('Reverse Mobile Stack', 'x3p0-ideas')
@@ -103,7 +99,6 @@ export const BLOCK_STYLES = {
 	},
 	'core/paragraph': {
 		'indent':  __('Indent',  'x3p0-ideas'),
-		'intro':   __('Intro',   'x3p0-ideas'),
 		'lead-in': __('Lead-in', 'x3p0-ideas'),
 		'lede':    __('Lede',    'x3p0-ideas')
 	},

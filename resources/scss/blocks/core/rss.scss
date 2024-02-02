@@ -35,7 +35,6 @@
 	margin-top: var(--wp--preset--spacing--minus-1);
 }
 
-
 // Must target `<ul>` because WordPress wraps a `<div>` with the same block
 // class around the `<ul>` in the editor. 🤦‍♀️
 ul.wp-block-rss:where(:not(.has-excerpts)) {

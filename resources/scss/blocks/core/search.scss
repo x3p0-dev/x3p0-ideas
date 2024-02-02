@@ -40,7 +40,9 @@
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-
+///
+/// Adds an icon to the search label.
+///
 .wp-block-search.is-style-icon {
 
 	.wp-block-search__label {
@@ -51,7 +53,11 @@
 	}
 }
 
-// Small size. Needed??
+///
+/// Small size.
+///
+/// @todo Test to see if this style is necessary and if there are better methods
+///       of making the form smaller when needed.
 .wp-block-search.is-style-sm {
 	font-size: var( --wp--preset--font-size--sm );
 

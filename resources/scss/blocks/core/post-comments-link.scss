@@ -28,5 +28,5 @@
 /// The icon style prefixes the block text with an icon.
 ///
 .wp-block-post-comments-link.is-style-icon {
-	@include inline-icon.prefix( icon.get-url( 'comment' ) );
+	@include inline-icon.prefix(icon.get-url('comment'));
 }

@@ -40,8 +40,8 @@
 .wp-block-heading.is-style-clip-text {
 
 	// Add a default gradient background if the user hasn't chosen one.
-	&:not( .has-background ) {
-		background: var( --wp--preset--gradient--cool-to-warm-spectrum );
+	&:not(.has-background) {
+		background: var(--wp--preset--gradient--cool-to-warm-spectrum);
 	}
 
 	// Sub-elements, such as links, need to inherit the heading color for

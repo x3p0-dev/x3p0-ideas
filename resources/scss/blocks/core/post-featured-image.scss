@@ -6,33 +6,20 @@
 ////
 
 // -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+// No fixes...
+
+// -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
 
 // Need to add the default border-radius to the link itself, which may have an
 // outline style. However, it can't inherit the image's radius, so it needs to
 // use the set default.
-.wp-block-post-featured-image a:has( img ) {
-	border-radius: var( --wp--custom--global--border-radius );
-}
-
-
-@media ( max-width: 40rem ) {
-	.wp-block-post-template :where(
-		.wp-block-post-featured-image[style*="16/9"],
-		.wp-block-post-featured-image[style*="16 / 9"]
-	 ) {
-		aspect-ratio: 4/3 !important;
-	}
-}
-
-@media ( max-width: 56rem ) {
-	.wp-block-post-template-is-layout-grid :where(
-		.wp-block-post-featured-image[style*="16/9"],
-		.wp-block-post-featured-image[style*="16 / 9"]
-	 ) {
-		aspect-ratio: 4/3 !important;
-	}
+.wp-block-post-featured-image a:has(img) {
+	border-radius: var(--wp--custom--global--border-radius);
 }
 
 // -----------------------------------------------------------------------------
@@ -45,10 +32,13 @@ figure.wp-block-post-featured-image[class*=-gradient-background] {
 	img {
 		background-color: inherit;
 		background-image: inherit;
-		padding: clamp( 0.5rem, -0.33333333333333326rem + 2.083333333333333cqi, 1rem );
+		padding: clamp(0.5rem, -0.33333333333333326rem + 2.083333333333333cqi, 1rem);
 	}
 }
 
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
 
 ///
 /// The borderless style removes any potential borders around the images, even

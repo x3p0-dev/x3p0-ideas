@@ -31,11 +31,11 @@
 
 	// Published date.
 	&.is-style-icon {
-		@include inline-icon.prefix( icon.get-url( 'calendar-month' ) );
+		@include inline-icon.prefix(icon.get-url('calendar-month'));
 	}
 
 	// Modified date.
 	&__modified-date.is-style-icon::before {
-		@include inline-icon.modify( icon.get-url( 'calendar-add-on' ) );
+		@include inline-icon.modify(icon.get-url('calendar-add-on'));
 	}
 }

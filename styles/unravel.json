@@ -20,6 +20,13 @@
 						"shadow": "var:preset|shadow|sm"
 					}
 				}
+			},
+			"core/paragraph": {
+				"custom": {
+					"dropCap": {
+						"fontFamily": "var:preset|font-family|primary"
+					}
+				}
 			}
 		},
 		"color": {

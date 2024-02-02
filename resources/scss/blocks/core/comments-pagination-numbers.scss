@@ -14,14 +14,14 @@
 .is-layout-constrained > .wp-block-comments-pagination:where(
 	:not(.alignleft):not(.alignright):not(.alignfull)
 ) {
-	max-width: var( --wp--style--global--content-size );
+	max-width: var(--wp--style--global--content-size);
 }
 
 // Core zeroes out the margin for this block entirely in the editor. This is
 // more of a stopgap fix than anything. This "fix" uses what *should* be the
 // default but can also break user choice. 🤷‍♀️
 .editor-styles-wrapper .wp-block-comments-pagination.block-editor-block-list__layout {
-	margin-top: var( --wp--style--block-gap );
+	margin-top: var(--wp--style--block-gap);
 }
 
 // Adds some baseline layout to pagination numbers.
@@ -29,6 +29,18 @@
 	display: flex;
 	gap: var(
 		--wp--custom--block-gap--comments-pagination-numbers,
-		var( --wp--preset--spacing--minus-2 )
+		var(--wp--preset--spacing--minus-2)
 	);
 }
+
+// -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+// No customizations...
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+// No variations...

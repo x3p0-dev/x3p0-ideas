@@ -32,7 +32,7 @@
 
 // Overwrite WP's hard-coded font-size so that it inherits from its parent. Note:
 // it's impossible to set this via `theme.json`.
-.wp-block-file:not( .wp-element-button ) {
+.wp-block-file:not(.wp-element-button) {
 	font-size: inherit;
 }
 
@@ -61,7 +61,7 @@
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
-	gap: var( --wp--style--block-gap );
+	gap: var(--wp--style--block-gap);
 }
 
 // -----------------------------------------------------------------------------
@@ -73,14 +73,14 @@
 ///
 .wp-block-file.is-style-icon {
 
-	&:where( :not( :has( .wp-block-file__button ) ) ) {
+	&:where(:not(:has(.wp-block-file__button))) {
 
 		a {
-			@include inline-icon.prefix( icon.get-url( 'download' ) );
+			@include inline-icon.prefix(icon.get-url('download'));
 		}
 	}
 
 	.wp-block-file__button {
-		@include inline-icon.prefix( icon.get-url( 'download' ) );
+		@include inline-icon.prefix(icon.get-url('download'));
 	}
 }

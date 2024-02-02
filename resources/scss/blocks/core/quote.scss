@@ -10,7 +10,7 @@
 // -----------------------------------------------------------------------------
 
 // Zero out default browser spacing.
-:where( .wp-block-quote ) {
+:where(.wp-block-quote) {
 	margin: 0;
 	padding: 0;
 }
@@ -22,36 +22,39 @@
 }
 
 // Faux `blockGap` support.
-// @todo Remove with WP 6.5 support.
-// @link https://github.com/WordPress/gutenberg/pull/56064
-.wp-block-quote > * {
+//
+// @todo       Remove with WP 6.5 support.
+// @link       https://github.com/WordPress/gutenberg/pull/56064
+// @wordpress  6.5
+:where(.wp-block-quote > *) {
 	margin-block-start: 0;
 	margin-block-end: 0;
 }
 
-.wp-block-quote > * + * {
+:where(.wp-block-quote > * + *) {
 	margin-block-start: var(
 		--wp--custom--block-gap--quote,
-		var( --wp--style--block-gap )
+		var(--wp--style--block-gap)
 	);
 }
-
 
 // -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-.wp-block-quote cite {
-	margin-top: var( --wp--preset--spacing--minus-2 );
-}
+// No customizations.
 
-.wp-block-quote.is-style-plain:has( .wp-block-verse ),
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+.wp-block-quote.is-style-plain:has(.wp-block-verse),
 // Note that we must double-up on the `.is-style-plain` class to overrule how
 // WP outputs styles from `theme.json`.
-.editor-styles-wrapper .wp-block-quote.is-style-plain.is-style-plain:has( .wp-block-verse ) {
+.editor-styles-wrapper .wp-block-quote.is-style-plain.is-style-plain:has(.wp-block-verse) {
 	padding: 0;
 
 	cite {
-		margin-top: var( --wp--preset--spacing--base );
+		margin-top: var(--wp--preset--spacing--base);
 	}
 }

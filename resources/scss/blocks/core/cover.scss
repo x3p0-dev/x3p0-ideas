@@ -12,13 +12,13 @@
 // Add default padding to the Cover block and to the inner container when it has
 // global padding.
 .wp-block-cover,
-.wp-block-cover:where( :not( [style*=padding] ) ) .wp-block-cover__inner-container.has-global-padding {
-	padding: var( --wp--style--block-gap );
+.wp-block-cover:where(:not([style*=padding])) .wp-block-cover__inner-container.has-global-padding {
+	padding: var(--wp--style--block-gap);
 }
 
 // Remove the padding from the Cover block when the inner container has global
 // padding. Paired with the above rule. 👆
-.wp-block-cover:has( .wp-block-cover__inner-container.has-global-padding ) {
+.wp-block-cover:has(.wp-block-cover__inner-container.has-global-padding) {
 	padding: 0;
 }
 
@@ -33,8 +33,8 @@
 // -----------------------------------------------------------------------------
 
 // Add a default text shadow to Headings inside the Cover.
-:where( .wp-block-cover .wp-block-heading ) {
-	text-shadow: var( --wp--custom--text-shadow--sm );
+:where(.wp-block-cover .wp-block-heading) {
+	text-shadow: var(--wp--custom--text-shadow--sm);
 }
 
 // -----------------------------------------------------------------------------
@@ -42,15 +42,15 @@
 // -----------------------------------------------------------------------------
 
 ///
-// Fade-in background gradient style.
+/// Fade-in background gradient style.
 ///
 .wp-block-cover.is-style-fade-in {
 	color: var(--wp--custom--fade-in--color, #000000);
 }
 
 ///
-// Reveal styles reveal one part of the Cover block and/or hide another. There
-// are multiple styles that build off the same `.is-style-reveal` base class.
+/// Reveal styles reveal one part of the Cover block and/or hide another. There
+/// are multiple styles that build off the same `.is-style-reveal` base class.
 ///
 .wp-block-cover[class*=is-style-reveal] {
 
@@ -59,8 +59,8 @@
 	//
 	// @link      https://github.com/WordPress/gutenberg/pull/57908
 	// @wordpress 6.5
-	border-radius: var( --wp--custom--global--border-radius );
-	box-shadow: var( --wp--custom--global--shadow );
+	border-radius: var(--wp--custom--global--border-radius);
+	box-shadow: var(--wp--custom--global--shadow);
 
 	// Position must be relative for the link to cover the entire block.
 	position: relative;
@@ -79,7 +79,7 @@
 	// This will technically take all links and position them over the
 	// entire Cover block container. However, the last link will win out.
 	// We're also making sure that we don't target this when in the editor.
-	&:where( :not( [class*=block-editor] ) ) a:after {
+	&:where(:not([class*=block-editor])) a:after {
 		content: "";
 		z-index: 1;
 		position: absolute;
@@ -93,17 +93,17 @@
 }
 
 ///
-// Style for revealing the Cover background image on hover/focus.
+/// Style for revealing the Cover background image on hover/focus.
 ///
 .wp-block-cover.is-style-reveal-image {
 	overflow: hidden;
 
 	// When not selected, make the background (overlay) fully opaque.
-	&:is( :not(
+	&:is(:not(
 		:hover,
 		:focus-within,
 		.is-selected
-	) ) .wp-block-cover__background {
+	)) .wp-block-cover__background {
 		opacity: 1;
 	}
 
@@ -120,34 +120,34 @@
 	&.is-selected {
 		.wp-block-cover__image-background {
 			opacity: 1;
-			transform: scale( 1.3 );
+			transform: scale(1.3);
 		}
 	}
 }
 
 ///
-// Style for revealing the Cover text/content on hover/focus.
+/// Style for revealing the Cover text/content on hover/focus.
 ///
 .wp-block-cover.is-style-reveal-text {
 	overflow: hidden;
 
 	// When not selected, hide the background (overlay).
-	&:where( :not(
+	&:where(:not(
 		:hover,
 		:focus-within,
 		.is-selected
-	) ) .wp-block-cover__background {
+	)) .wp-block-cover__background {
 		opacity: 0;
 	}
 
 	// When not selected, there is no background image, but there is a
 	// background gradient, make the background fully opaque.
-	&:where( :not(
+	&:where(:not(
 		:hover,
 		:focus-within,
 		.is-selected,
-		:has( .wp-block-cover__image-background )
-	) ) .wp-block-cover__background.has-background-gradient {
+		:has(.wp-block-cover__image-background)
+	)) .wp-block-cover__background.has-background-gradient {
 		opacity: 1;
 	}
 
@@ -169,17 +169,14 @@
 }
 
 ///
-// Stretches items inside of a Cover block and justifies the space between.
-//
-// @todo Check uses of this and whether it is still needed.
+/// Stretches items inside of a Cover block and justifies the space between.
 ///
-
 .wp-block-cover.is-style-stretch {
 	align-items: stretch;
-}
 
-.wp-block-cover.is-style-stretch .wp-block-cover__inner-container {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+	.wp-block-cover.is-style-stretch .wp-block-cover__inner-container {
+		display:         flex;
+		flex-direction:  column;
+		justify-content: space-between;
+	}
 }

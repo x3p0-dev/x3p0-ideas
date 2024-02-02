@@ -1362,6 +1362,11 @@
 				},
 				"elements": {
 					"cite": {
+						"spacing": {
+							"margin": {
+								"top": "var:preset|spacing|minus-2"
+							}
+						},
 						"typography": {
 							"fontSize": "max( 50%, var( --wp--preset--font-size--lg ) )",
 							"fontWeight": "300",
@@ -1414,6 +1419,11 @@
 					"cite": {
 						"color": {
 							"text": "var:preset|color|neutral-500"
+						},
+						"spacing": {
+							"margin": {
+								"top": "var:preset|spacing|minus-2"
+							}
 						},
 						"typography": {
 							"fontSize": "0.9375em",
