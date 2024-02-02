@@ -12,11 +12,12 @@
 // Sets the width of the submenu container when hovered.
 .wp-block-navigation .has-child {
 
-	&.has-child-selected,
-	&.is-selected,
-	&:not(.open-on-click):hover {
+	&.has-child-selected >,
+	&.is-selected >,
+	&:not(.open-on-click):hover >,
+	.wp-block-navigation-submenu__toggle[aria-expanded=true] ~ {
 
-		> .wp-block-navigation__submenu-container {
+		.wp-block-navigation__submenu-container {
 			min-width: 16rem !important;
 		}
 	}
@@ -30,6 +31,23 @@
 .wp-block-navigation__submenu-container .wp-block-navigation-item {
 	border-radius: inherit;
 	transition: all 0.5s ease-in-out;
+}
+
+// Fixes the toggle `<button>` when menu items are "open on click."
+.wp-block-navigation-submenu .wp-block-navigation-item.open-on-click .wp-block-navigation-submenu__toggle {
+	padding: var(
+		--wp--custom--submenu-toggle--padding,
+		var(--wp--preset--spacing--minus-2) var(--wp--preset--spacing--base)
+	);
+}
+
+// Hover background color for list items.
+.wp-block-navigation-submenu .wp-block-navigation-item:hover,
+.wp-block-navigation-submenu .wp-block-navigation-item:focus {
+	background: var(
+		--wp--custom--submenu-item--hover-background,
+		var(--wp--preset--color--neutral-50)
+	);
 }
 
 // -----------------------------------------------------------------------------

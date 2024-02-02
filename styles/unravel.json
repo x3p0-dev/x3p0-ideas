@@ -416,7 +416,7 @@
 						}
 					}
 				},
-				"css": "& .wp-block-navigation-item:hover, .wp-block-navigation-item:focus {\n\tbackground: var(--wp--preset--color--primary-50);\n}"
+				"css": "--wp--custom--submenu-item--hover-background: var(--wp--preset--color--primary-50);"
 			},
 			"core/pullquote": {
 				"color": {

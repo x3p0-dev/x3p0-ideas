@@ -1318,8 +1318,7 @@
 							}
 						}
 					}
-				},
-				"css": "& .wp-block-navigation-item:hover, .wp-block-navigation-item:focus {\n\tbackground: var(--wp--preset--color--neutral-50);\n}"
+				}
 			},
 			"core/post-featured-image": {
 				"border": {
