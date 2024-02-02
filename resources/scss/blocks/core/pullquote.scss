@@ -89,12 +89,7 @@
 
 figure.wp-block-pullquote.is-style-hand-drawn {
 	padding: var( --wp--style--block-gap ) 0;
-	font-family: var( --wp--preset--font-family--tertiary );
 	border-color: var( --wp--preset--color--contrast );
 	border-width: var( --wp--preset--spacing--minus-2 ) 0;
 	border-radius: 255px 15px 255px 15px/15px 10px 15px 10px !important;
-
-	cite {
-		font-family: inherit;
-	}
 }

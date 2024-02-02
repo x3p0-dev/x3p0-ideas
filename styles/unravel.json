@@ -442,6 +442,10 @@
 				}
 			},
 			"core/quote": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|tertiary",
+					"fontStyle": "italic"
+				},
 				"elements": {
 					"cite": {
 						"color": {
@@ -449,7 +453,7 @@
 						},
 						"typography": {
 							"fontFamily": "var:preset|font-family|primary",
-							"fontSize": "1.1em",
+							"fontSize": "1.125em",
 							"fontWeight": "300"
 						}
 					}
