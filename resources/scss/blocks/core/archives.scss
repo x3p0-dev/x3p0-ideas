@@ -1,33 +1,33 @@
 ////
 /// Archives block CSS.
 ///
+/// Core does this really crazy thing in the editor and adds a wrapping "block"
+/// container named `.wp-block-archives` around the `.wp-block-archives/-list`
+/// block. So, we're having to target this for both the front-end and editor in
+/// different ways. 🤦‍♀️
+///
 /// @author Justin Tadlock <justintadlock@gmail.com>
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
+
+@use '../../tools/list';
 
 // -----------------------------------------------------------------------------
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// See note in the "Block style variations" section below on the archives block
-// wrapping an archives block in the editor.
+// No fixes...
 
 // -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-// Gives a little spacing to the link to give it some more breathing room when
-// the post count is shown.
-ul.wp-block-archives-list {
-	padding-inline-start: var( --wp--preset--spacing--plus-4 );
-
-	:where( li + li, li > ul, li > ol ) {
-		margin-block-start: var( --wp--preset--spacing--minus-1 );
-	}
-
-	li {
-		padding-left: 0.25em;
-	}
+///
+/// Include the base list style.
+///
+ul.wp-block-archives-list,
+:where(.wp-block-archives ul.wp-block-archives-list) {
+	@include list.flow();
 
 	li a {
 		margin-right: 0.25ch;
@@ -39,28 +39,11 @@ ul.wp-block-archives-list {
 // -----------------------------------------------------------------------------
 
 ///
-/// Horizontal archive lists style.
-///
-/// Core does this really crazy thing in the editor and adds a wrapping "block"
-/// container named `.wp-block-archives` around the `.wp-block-archives/-list`
-/// block. So, we're having to target this for both the front-end and editor in
-/// different ways. 🤦‍♀️
+/// Horizontal list style.
 ///
 .wp-block-archives.is-style-horizontal .wp-block-archives-list,
 .wp-block-archives-list.is-style-horizontal {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	gap: var( --wp--preset--spacing--minus-2 ) var( --wp--preset--spacing--base );
-	list-style: none;
-	padding: 0;
-
-	li {
-		padding: 0;
-		margin: 0;
-
-		&::marker { content: none; }
-	}
+	@include list.horizontal();
 }
 
 ///
@@ -68,6 +51,7 @@ ul.wp-block-archives-list {
 ///
 .wp-block-archives.is-style-spread .wp-block-archives-list,
 .wp-block-archives-list.is-style-spread {
+	--wp--custom--list-style: none;
 	padding-left: 1em;
 }
 

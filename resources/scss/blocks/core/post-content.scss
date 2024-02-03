@@ -5,9 +5,13 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
+@use '../../tools/list';
+
 // -----------------------------------------------------------------------------
 // Block fixes.
 // -----------------------------------------------------------------------------
+
+// No fixes...
 
 // -----------------------------------------------------------------------------
 // Block style customizations.
@@ -19,21 +23,11 @@
 // editor does not yet recognize and output the block style class when its
 // applied in the template.
 
-// Add fluid spacing to list padding.
-:where(.wp-block-post-content :where(ul, ol)),
-.wp-block-list:is(ul, ol) {
-	padding-inline-start: var(--wp--preset--spacing--plus-4);
-}
-
-// Loosen the spacing between elements in a list.
-:where(.wp-block-post-content :where(li + li, li > ul, li > ol)) {
-	margin-block-start: var(--wp--preset--spacing--minus-1);
-}
-
-// Give the text and marker some breathing room.
-:where(.wp-block-post-content :where(ul, ol):not([class*=wp-block-]) li),
-:where(.wp-block-post-content :is(ul, ol).wp-block-list li) {
-	padding-left: 0.25em;
+///
+/// Include the base list style.
+///
+:where(.wp-block-post-content :where(ul, ol)) {
+	@include list.flow();
 }
 
 // Loosens the spacing above headings tightens the spacing below.
@@ -54,3 +48,9 @@
 .wp-block-post-content > :is(h1, h2, h3, h4, h5, h6):is(.has-screen-reader-text) + *  {
 	margin-block-start: var(--wp--style--block-gap);
 }
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+// No variations...

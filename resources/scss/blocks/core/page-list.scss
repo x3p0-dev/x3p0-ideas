@@ -5,6 +5,8 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
+@use '../../tools/list';
+
 // -----------------------------------------------------------------------------
 // Block fixes.
 // -----------------------------------------------------------------------------
@@ -16,15 +18,7 @@
 // -----------------------------------------------------------------------------
 
 ul.wp-block-page-list {
-	padding-inline-start: var( --wp--preset--spacing--plus-4 );
-
-	:where( li + li, li > ul, li > ol ) {
-		margin-block-start: var( --wp--preset--spacing--minus-1 );
-	}
-
-	li {
-		padding-left: 0.25em;
-	}
+	@include list.flow();
 
 	&__item__link {
 		margin-right: 0.25ch;
@@ -39,20 +33,5 @@ ul.wp-block-page-list {
 /// Horizontal list style.
 ///
 ul.wp-block-page-list.is-style-horizontal {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	gap: var( --wp--preset--spacing--minus-2 ) var( --wp--preset--spacing--base );
-	list-style: none;
-	padding: 0;
-
-	li {
-		padding: 0;
-		margin: 0;
-
-		&::marker { content: none; }
-
-		// Kill nested lists with horizontal display.
-		ul { display: none; }
-	}
+	@include list.horizontal();
 }

@@ -80,10 +80,6 @@ export const BLOCK_STYLES = {
 		'tape':         __('Tape',         'x3p0-ideas')
 	},
 	'core/list': {
-		'gap-snug':    __('Gap: Snug',    'x3p0-ideas'),
-		'gap-normal':  __('Gap: Normal',  'x3p0-ideas'),
-		'gap-relaxed': __('Gap: Relaxed', 'x3p0-ideas'),
-		'gap-loose':   __('Gap: Loose',   'x3p0-ideas'),
 		'horizontal':  __('Horizontal',   'x3p0-ideas')
 	},
 	'core/list-item': {

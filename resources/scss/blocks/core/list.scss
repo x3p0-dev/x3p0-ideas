@@ -5,6 +5,8 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
+@use '../../tools/list';
+
 // -----------------------------------------------------------------------------
 // Block fixes.
 // -----------------------------------------------------------------------------
@@ -15,19 +17,11 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-// Add fluid spacing to list padding.
-.wp-block-list:is( ul, ol ) {
-	padding-inline-start: var( --wp--preset--spacing--plus-4 );
-}
-
-// Loosen the spacing between elements in a list.
-.wp-block-list :where( li + li, li > ul, li > ol ) {
-	margin-block-start: var( --wp--preset--spacing--minus-1 );
-}
-
-// Give the text and marker some breathing room.
-.wp-block-list:is( ul, ol ) li {
-	padding-left: 0.25em;
+///
+/// Include the base list style.
+///
+.wp-block-list:is(ul, ol) {
+	@include list.flow();
 }
 
 ol li::marker {
@@ -35,7 +29,7 @@ ol li::marker {
 }
 
 li::marker {
-	color: var( --wp--preset--color--neutral-500 );
+	color: var(--wp--preset--color--neutral-500);
 }
 
 [class*=has-text-color-] li::marker {
@@ -46,45 +40,10 @@ li::marker {
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-// Gap styles.
-:where( ul, ol )[class*=is-style-gap-] :where( li + li, li > ul, li > ol ) {
-	margin-block-start: var( --wp--custom--blocks--list--gap, 0 );
-}
-
-:where( ul, ol ).is-style-gap-snug {
-	--wp--custom--blocks--list--gap: 0;
-	li { padding-left: 0; }
-}
-
-:where( ul, ol ).is-style-gap-normal {
-	--wp--custom--blocks--list--gap: var( --wp--preset--spacing--minus-1 );
-	li { padding-left: 0.25em; }
-}
-
-:where( ul, ol ).is-style-gap-relaxed {
-	--wp--custom--blocks--list--gap: var( --wp--preset--spacing--plus-1 );
-	li { padding-left: 0.5em; }
-}
-
-:where( ul, ol ).is-style-gap-loose {
-	--wp--custom--blocks--list--gap: var( --wp--preset--spacing--plus-3 );
-	li { padding-left: 0.75em; }
-}
-
-// Horizontal list style.
-:where( ul, ol ).is-style-horizontal {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	gap: var( --wp--preset--spacing--minus-2 ) var( --wp--preset--spacing--base );
-	list-style: none;
-	padding: 0;
-
-	li {
-		padding: 0;
-		margin: 0;
-
-		// Kill nested lists with horizontal display.
-		ul { display: none; }
-	}
+///
+/// Horizontal list style.
+///
+:is(ul, ol).is-style-horizontal,
+.wp-block-list.is-style-horizontal {
+	@include list.horizontal();
 }

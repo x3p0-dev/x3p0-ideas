@@ -5,6 +5,8 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
+@use '../../tools/list';
+
 // -----------------------------------------------------------------------------
 // Block fixes.
 // -----------------------------------------------------------------------------
@@ -13,18 +15,11 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-// Gives a little spacing to the link to give it some more breathing room when
-// the post count is shown.
+///
+/// Include the base list style.
+///
 .wp-block-categories-list {
-	padding-inline-start: var( --wp--preset--spacing--plus-4 );
-
-	:where( li + li, li > ul, li > ol ) {
-		margin-block-start: var( --wp--preset--spacing--minus-1 );
-	}
-
-	li {
-		padding-left: 0.25em;
-	}
+	@include list.flow();
 
 	li a {
 		margin-right: 0.25ch;
@@ -36,23 +31,8 @@
 // -----------------------------------------------------------------------------
 
 ///
-/// Horizontal category lists style.
+/// Horizontal list style.
 ///
 ul.wp-block-categories-list.is-style-horizontal {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	gap: var( --wp--preset--spacing--minus-2 ) var( --wp--preset--spacing--base );
-	list-style: none;
-	padding: 0;
-
-	li {
-		padding: 0;
-		margin: 0;
-
-		&::marker { content: none; }
-
-		// Kill nested lists with horizontal display.
-		ul { display: none; }
-	}
+	@include list.horizontal();
 }
