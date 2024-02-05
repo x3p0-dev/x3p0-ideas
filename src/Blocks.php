@@ -18,7 +18,7 @@ use WP_Block;
 use WP_Block_Type_Registry;
 use WP_HTML_Tag_Processor;
 use X3P0\Ideas\Contracts\Bootable;
-use X3P0\Ideas\Tools\{BlockRules, HookAnnotation};
+use X3P0\Ideas\Tools\{BlockRules, CodeBlockHighlight, HookAnnotation};
 use X3P0\Ideas\Views\Engine;
 
 class Blocks implements Bootable
@@ -212,6 +212,17 @@ class Blocks implements Bootable
 	public function renderByRule(string $content, array $block): string
 	{
 		return $this->rules->isPublic($block) ? $content : '';
+	}
+
+	/**
+	 * Adds a caption class and replaces nav arrows.
+	 *
+	 * @hook  render_block_core/code
+	 * @since 1.0.0
+	 */
+	public function renderCoreCode(string $content, array $block): string
+	{
+		return (new CodeBlockHighlight($content, $block))->render();
 	}
 
 	/**

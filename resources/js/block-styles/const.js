@@ -27,6 +27,9 @@ export const BLOCK_STYLES = {
 	'core/categories': {
 		'horizontal': __('Horizontal', 'x3p0-ideas')
 	},
+	'core/code': {
+		'highlight': __('Highlight', 'x3p0-ideas')
+	},
 	'core/columns': {
 		'grid-auto':     __('Grid: Auto', 'x3p0-ideas'),
 		'reverse-stack': __('Reverse Mobile Stack', 'x3p0-ideas')
