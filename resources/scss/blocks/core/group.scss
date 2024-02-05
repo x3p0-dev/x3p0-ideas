@@ -78,24 +78,6 @@
 }
 
 ///
-/// A hand-drawn design for the Group block. Most of these style rules should
-/// be moved to `theme.json` with support.
-///
-/// @link      https://github.com/WordPress/gutenberg/pull/57908
-/// @wordpress 6.5
-///
-.wp-block-group.is-style-hand-drawn {
-	overflow: hidden;
-	padding: var(--wp--preset--spacing--plus-3);
-	border-radius: var(--wp--custom--global--border-radius, 0);
-	box-shadow: var(--wp--custom--global--shadow);
-	border: 2px solid currentColor;
-
-	// No `theme.json` support for this style of radius.
-	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
-}
-
-///
 /// The message style is intended for notes, warnings, notices, etc. Move style
 /// rules to `theme.json` with support.
 ///

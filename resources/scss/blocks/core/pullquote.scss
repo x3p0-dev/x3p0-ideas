@@ -75,12 +75,3 @@
 	line-height: 0.25;
 	font-weight: 700;
 }
-
-// Figure element needed to overwrite styles in editor.
-
-figure.wp-block-pullquote.is-style-hand-drawn {
-	padding:       var(--wp--style--block-gap) 0;
-	border-color:  var(--wp--preset--color--contrast);
-	border-width:  var(--wp--preset--spacing--minus-2) 0;
-	border-radius: 255px 15px 255px 15px/15px 10px 15px 10px !important;
-}

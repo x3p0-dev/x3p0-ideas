@@ -65,21 +65,6 @@
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-.wp-block-social-links.is-style-hand-drawn .wp-block-social-link {
-	border: 2px solid currentColor;
-	overflow: hidden;
-	//box-shadow: var( --wp--custom--global--shadow );
-	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
-}
-
-.wp-block-social-links.is-style-hand-drawn:where( :not( .has-icon-color ) ) .wp-block-social-link {
-	border: 2px solid var( --wp--preset--color--contrast );
-}
-
-.wp-block-social-links.is-style-hand-drawn-border .wp-block-social-link :where( a, button ) {
-	font-family: inherit;
-}
-
 // Outline style.
 .wp-block-social-links.is-style-outline .wp-block-social-link {
 	color: var( --wp--preset--color--contrast );

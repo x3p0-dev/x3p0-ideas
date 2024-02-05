@@ -21,8 +21,7 @@ export const BLOCK_STYLES = {
 		'spread':     __('Spread', 'x3p0-ideas')
 	},
 	'core/button': {
-		'hand-drawn': __('Hand Drawn', 'x3p0-ideas'),
-		'link':       __('Link', 'x3p0-ideas')
+		'link': __('Link', 'x3p0-ideas')
 	},
 	'core/categories': {
 		'horizontal': __('Horizontal', 'x3p0-ideas')
@@ -62,11 +61,10 @@ export const BLOCK_STYLES = {
 		'classic': __('Classic', 'x3p0-ideas')
 	},
 	'core/group': {
-		'box':        __('Box',        'x3p0-ideas'),
-		'card':       __('Card',       'x3p0-ideas'),
-		'hand-drawn': __('Hand Drawn', 'x3p0-ideas'),
-		'message':    __('Message',    'x3p0-ideas'),
-		'section':    __('Section',    'x3p0-ideas')
+		'box':        __('Box',     'x3p0-ideas'),
+		'card':       __('Card',    'x3p0-ideas'),
+		'message':    __('Message', 'x3p0-ideas'),
+		'section':    __('Section', 'x3p0-ideas')
 	},
 	'core/heading': {
 		'clip-text':         __('Clip Text', 'x3p0-ideas'),
@@ -131,8 +129,7 @@ export const BLOCK_STYLES = {
 		'icon': __('Icon', 'x3p0-ideas')
 	},
 	'core/pullquote': {
-		'hand-drawn': __('Hand Drawn', 'x3p0-ideas'),
-		'mark-top':   __('Mark: Top',  'x3p0-ideas')
+		'mark-top': __('Mark: Top',  'x3p0-ideas')
 	},
 	'core/search': {
 		'icon': __('Icon', 'x3p0-ideas'),
@@ -145,8 +142,7 @@ export const BLOCK_STYLES = {
 		'hand-drawn': __('Hand Drawn', 'x3p0-ideas')
 	},
 	'core/social-links': {
-		'hand-drawn': __('Hand Drawn', 'x3p0-ideas'),
-		'outline':    __('Outline',    'x3p0-ideas')
+		'outline': __('Outline',    'x3p0-ideas')
 	},
 	'core/site-title': {
 		'normalize': __('Normalize', 'x3p0-ideas')
