@@ -45,7 +45,8 @@
 /// @link      https://github.com/WordPress/gutenberg/pull/57908
 /// @wordpress 6.5
 ///
-.wp-block-group.is-style-box {
+.wp-block-group.is-style-box,
+.editor-styles-wrapper .wp-block-group.is-style-box {
 	overflow:      hidden;
 	color:         var(--wp--custom--box--color, inherit);
 	background:    var(--wp--custom--box--background, transparent);
@@ -84,7 +85,8 @@
 /// @link      https://github.com/WordPress/gutenberg/pull/57908
 /// @wordpress 6.5
 ///
-.wp-block-group.is-style-message {
+.wp-block-group.is-style-message,
+.editor-styles-wrapper .wp-block-group.is-style-message {
 	overflow:      hidden;
 	color:         var(--wp--custom--message--color, inherit);
 	background:    var(--wp--custom--message--background, transparent);
