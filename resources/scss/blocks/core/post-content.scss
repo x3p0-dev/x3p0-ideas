@@ -5,7 +5,7 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
-@use '../../tools/list';
+@use '../../tools/prose';
 
 // -----------------------------------------------------------------------------
 // Block fixes.
@@ -23,30 +23,8 @@
 // editor does not yet recognize and output the block style class when its
 // applied in the template.
 
-///
-/// Include the base list style.
-///
-:where(.wp-block-post-content :where(ul, ol)) {
-	@include list.flow();
-}
-
-// Loosens the spacing above headings tightens the spacing below.
-.wp-block-post-content > :is(h1, h2, h3, h4, h5, h6) {
-	margin-block-end: 0.35em;
-}
-
-.wp-block-post-content > * + :is(h1, h2, h3, h4, h5, h6)  {
-	margin-block-start: min(1.5em, 3rem);
-}
-
-.wp-block-post-content > :is(h1, h2, h3, h4, h5, h6) + * {
-	margin-block-start: 0;
-}
-
-.wp-block-post-content > :where(hr, .wp-block-spacer) + :is(h1, h2, h3, h4, h5, h6),
-.wp-block-post-content > :is(h1, h2, h3, h4, h5, h6) + :where(hr, .wp-block-spacer),
-.wp-block-post-content > :is(h1, h2, h3, h4, h5, h6):is(.has-screen-reader-text) + *  {
-	margin-block-start: var(--wp--style--block-gap);
+.wp-block-post-content {
+	@include prose.prose();
 }
 
 // -----------------------------------------------------------------------------

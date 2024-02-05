@@ -13,6 +13,41 @@
 					}
 				}
 			},
+			"core/group": {
+				"custom": {
+					"box": {
+						"background": "var:preset|color|neutral-50",
+						"borderStyle": "var:custom|global|border-style",
+						"borderWidth": "var:custom|global|border-width",
+						"borderRadius": "var:custom|global|border-radius",
+						"shadow": "var:custom|global|shadow",
+						"padding": "var:preset|spacing|plus-3"
+					},
+					"card": {
+						"color": "inherit",
+						"background": "var:preset|gradient|180-deg-transparent-base",
+						"borderColor": "var(--wp--preset--color--primary-700) var(--wp--custom--global--border-color) var(--wp--custom--global--border-color)",
+						"borderStyle": "var:custom|global|border-style",
+						"borderWidth": "4px var(--wp--custom--global--border-width) var(--wp--custom--global--border-width)",
+						"borderRadius": "var:custom|global|border-radius",
+						"shadow": "var:custom|global|shadow",
+						"padding": "var:preset|spacing|plus-3"
+					},
+					"message": {
+						"color": "var:preset|color|primary-900",
+						"background": "var:preset|color|primary-50",
+						"borderStyle": "var:custom|global|border-style",
+						"borderWidth": "var:custom|global|border-width",
+						"borderRadius": "var:custom|global|border-radius",
+						"shadow": "var:custom|global|shadow",
+						"padding": "var:preset|spacing|plus-3"
+					},
+					"section": {
+						"background": "var:preset|gradient|90-deg-neutral-50-transparent",
+						"padding": "var(--wp--preset--spacing--plus-4) var(--wp--preset--spacing--plus-3)"
+					}
+				}
+			},
 			"core/image": {
 				"lightbox": {
 					"allowEditing": true,
@@ -448,12 +483,6 @@
 		},
 		"custom": {
 			"variation": "ideas-experiments-and-things",
-			"card": {
-				"background": "var:preset|gradient|180-deg-transparent-base",
-				"borderColor": "var(--wp--preset--color--primary-700) var(--wp--custom--global--border-color) var(--wp--custom--global--border-color)",
-				"borderStyle": "var:custom|global|border-style",
-				"borderWidth": "4px var(--wp--custom--global--border-width) var(--wp--custom--global--border-width)"
-			},
 			"color": {
 				"dark": "var:preset|color|black",
 				"light": "var:preset|color|white"
@@ -528,10 +557,6 @@
 				"6-xl": "1.03125",
 				"7-xl": "1.015625"
 			},
-			"section": {
-				"background": "var:preset|gradient|90-deg-neutral-50-transparent",
-				"padding": "var(--wp--preset--spacing--plus-4) var(--wp--preset--spacing--plus-3)"
-			},
 			"siteBlocks": {
 				"gap": "0"
 			},
@@ -547,7 +572,6 @@
 			"minHeight": true
 		},
 		"layout": {
-			"allowCustomContentAndWideSize": false,
 			"contentSize": "40rem",
 			"wideSize": "64rem"
 		},
@@ -1485,6 +1509,9 @@
 					"fontSize": "var:preset|font-size|sm",
 					"lineHeight": "var:custom|line-height|sm"
 				}
+			},
+			"outermost/icon-block": {
+				"css": "& svg {\n\tfill: currentColor;\n}"
 			},
 			"x3p0/breadcrumbs": {
 				"color": {

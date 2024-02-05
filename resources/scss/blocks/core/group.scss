@@ -5,6 +5,8 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
+@use '../../tools/prose';
+
 // -----------------------------------------------------------------------------
 // Block fixes.
 // -----------------------------------------------------------------------------
@@ -37,23 +39,6 @@
 // -----------------------------------------------------------------------------
 
 ///
-/// Shared CSS for variations that have a "boxed" design. Move style rules to
-/// `theme.json` with support.
-///
-/// We must use the `:is()` selector here to overrule global padding styles.
-///
-/// @link      https://github.com/WordPress/gutenberg/pull/57908
-/// @wordpress 6.5
-///
-.wp-block-group:is(.is-style-box, .is-style-hand-drawn),
-.editor-styles-wrapper .wp-block-group:is(.is-style-box, .is-style-hand-drawn) {
-	overflow: hidden;
-	padding: var(--wp--preset--spacing--plus-3);
-	border-radius: var(--wp--custom--global--border-radius, 0);
-	box-shadow: var(--wp--custom--global--shadow);
-}
-
-///
 /// The boxed style adds some default padding and a background. Move style
 /// rules to `theme.json` with support.
 ///
@@ -61,8 +46,15 @@
 /// @wordpress 6.5
 ///
 .wp-block-group.is-style-box {
-	background: var(--wp--preset--color--neutral-50);
-	border: none;
+	overflow:      hidden;
+	color:         var(--wp--custom--box--color, inherit);
+	background:    var(--wp--custom--box--background, transparent);
+	border-width:  var(--wp--custom--box--border-width, 0);
+	border-style:  var(--wp--custom--box--border-style, solid);
+	border-color:  var(--wp--custom--box--border-color, transparent);
+	border-radius: var(--wp--custom--box--border-radius, 0);
+	padding:       var(--wp--custom--box--padding, 0);
+	box-shadow:    var(--wp--custom--box--shadow, none);
 }
 
 ///
@@ -77,12 +69,12 @@
 	overflow:      hidden;
 	color:         var(--wp--custom--card--color, inherit);
 	background:    var(--wp--custom--card--background, transparent);
-	border-width:  var(--wp--custom--card--border-width, var(--wp--custom--global--border-width, 1px));
-	border-style:  var(--wp--custom--card--border-style, var(--wp--custom--global--border-style, solid));
-	border-color:  var(--wp--custom--card--border-color, var(--wp--custom--global--border-color, transparent));
-	border-radius: var(--wp--custom--card--border-radius, var(--wp--custom--global--border-radius));
-	padding:       var(--wp--custom--card--padding, var(--wp--preset--spacing--plus-3));
-	box-shadow:    var(--wp--custom--card--shadow, var(--wp--custom--global--shadow));
+	border-width:  var(--wp--custom--card--border-width, 0);
+	border-style:  var(--wp--custom--card--border-style, solid);
+	border-color:  var(--wp--custom--card--border-color, transparent);
+	border-radius: var(--wp--custom--card--border-radius, 0);
+	padding:       var(--wp--custom--card--padding, 0);
+	box-shadow:    var(--wp--custom--card--shadow, none);
 }
 
 ///
@@ -93,10 +85,35 @@
 /// @wordpress 6.5
 ///
 .wp-block-group.is-style-hand-drawn {
+	overflow: hidden;
+	padding: var(--wp--preset--spacing--plus-3);
+	border-radius: var(--wp--custom--global--border-radius, 0);
+	box-shadow: var(--wp--custom--global--shadow);
 	border: 2px solid currentColor;
 
 	// No `theme.json` support for this style of radius.
 	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
+}
+
+///
+/// The message style is intended for notes, warnings, notices, etc. Move style
+/// rules to `theme.json` with support.
+///
+/// @link      https://github.com/WordPress/gutenberg/pull/57908
+/// @wordpress 6.5
+///
+.wp-block-group.is-style-message {
+	overflow:      hidden;
+	color:         var(--wp--custom--message--color, inherit);
+	background:    var(--wp--custom--message--background, transparent);
+	border-width:  var(--wp--custom--message--border-width, 0);
+	border-style:  var(--wp--custom--message--border-style, solid);
+	border-color:  var(--wp--custom--message--border-color, transparent);
+	border-radius: var(--wp--custom--message--border-radius, 0);
+	padding:       var(--wp--custom--message--padding, 0);
+	box-shadow:    var(--wp--custom--message--shadow, none);
+
+	@include prose.prose();
 }
 
 ///

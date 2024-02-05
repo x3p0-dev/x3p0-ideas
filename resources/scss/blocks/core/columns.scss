@@ -55,7 +55,7 @@
 	grid-template-columns: repeat( 1, 1fr );
 
 	// Break into two columns when there are at least two nested columns.
-	@media ( min-width: 40rem ) {
+	@media ( min-width: 48rem ) {
 		&:has( > .wp-block-column:nth-child( 2 ) ) {
 			grid-template-columns: repeat( 2, 1fr );
 		}

@@ -34,7 +34,10 @@ defined('ABSPATH') || exit;
 
 	<!-- wp:group {
 		"metadata":{"name":"<?= esc_attr__('Branding', 'x3p0-ideas') ?>"},
-		"style":{"spacing":{"blockGap":"var:preset|spacing|minus-1"}},
+		"style":{
+			"spacing":{"blockGap":"var:preset|spacing|minus-1"},
+			"layout":{"selfStretch":"fill","flexSize":null}
+		},
 		"layout":{"type":"flex","flexWrap":"nowrap"}
 	} -->
 	<div class="wp-block-group">

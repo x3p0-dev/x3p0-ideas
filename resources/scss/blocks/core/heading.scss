@@ -19,7 +19,12 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-// No customizations...
+///
+/// Text-shadow support that can be set in `theme.json`.
+///
+.wp-block-heading {
+	text-shadow: var(--wp--custom--text-shadow, none);
+}
 
 // -----------------------------------------------------------------------------
 // Block style variations.

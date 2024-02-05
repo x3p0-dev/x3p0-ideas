@@ -11,6 +11,25 @@
 					}
 				}
 			},
+			"core/group": {
+				"custom": {
+					"box": {
+						"borderColor": "var:preset|color|neutral-100",
+						"borderStyle": "double",
+						"borderWidth": "3px"
+					},
+					"card": {
+						"borderColor": "var:custom|global|border-color",
+						"borderStyle": "var:custom|global|border-style",
+						"borderWidth": "var:custom|global|border-width"
+					},
+					"message": {
+						"borderColor": "var:custom|global|border-color",
+						"borderStyle": "var:custom|global|border-style",
+						"borderWidth": "var:custom|global|border-width"
+					}
+				}
+			},
 			"core/navigation": {
 				"custom": {
 					"toggle": {
@@ -160,11 +179,6 @@
 		},
 		"custom": {
 			"variation": "unravel",
-			"card": {
-				"borderColor": "var:custom|global|border-color",
-				"borderStyle": "var:custom|global|border-style",
-				"borderWidth": "var:custom|global|border-width"
-			},
 			"color": {
 				"dark": "var:preset|color|neutral-50"
 			},
@@ -305,19 +319,19 @@
 			"button": {
 				"color": {
 					"text": "var:preset|color|primary-950",
-					"background": "var:preset|color|primary-50"
+					"background": "var:preset|color|primary-100"
 				},
 				"shadow": "var:preset|shadow|md",
 				":focus": {
 					"color": {
 						"text": "var:preset|color|primary-950",
-						"background": "var:preset|color|primary-100"
+						"background": "var:preset|color|primary-300"
 					}
 				},
 				":hover": {
 					"color": {
 						"text": "var:preset|color|primary-950",
-						"background": "var:preset|color|primary-100"
+						"background": "var:preset|color|primary-300"
 					}
 				}
 			},
@@ -470,7 +484,7 @@
 				"border": {
 					"color": "var:preset|color|neutral-100",
 					"style": "double",
-					"width": "4px"
+					"width": "3px"
 				},
 				"shadow": "var:custom|global|shadow",
 				"spacing": {
