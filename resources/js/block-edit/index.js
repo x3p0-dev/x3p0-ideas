@@ -7,6 +7,7 @@
  */
 
 // Internal dependencies.
+import withCodeLanguage       from './code-language';
 import withGradientBackground from './gradient-background';
 import withListMarker         from './list-marker';
 import withTextShadow         from './text-shadow';
@@ -15,6 +16,7 @@ import withTextShadow         from './text-shadow';
 import { addFilter } from '@wordpress/hooks';
 
 // Add filters.
+addFilter('editor.BlockEdit', 'x3p0-ideas-code-language',       withCodeLanguage);
 addFilter('editor.BlockEdit', 'x3p0-ideas-gradient-background', withGradientBackground);
 addFilter('editor.BlockEdit', 'x3p0-ideas-list-marker',         withListMarker);
 addFilter('editor.BlockEdit', 'x3p0-ideas-text-shadow',         withTextShadow);
