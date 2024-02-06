@@ -58,7 +58,8 @@ export const BLOCK_STYLES = {
 		'pull': __('Pull', 'x3p0-ideas')
 	},
 	'core/gallery': {
-		'classic': __('Classic', 'x3p0-ideas')
+		'classic': __('Classic', 'x3p0-ideas'),
+		'reverse': __('Reverse', 'x3p0-ideas')
 	},
 	'core/group': {
 		'box':        __('Box',     'x3p0-ideas'),

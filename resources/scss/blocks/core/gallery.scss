@@ -102,3 +102,14 @@
 		background: unset;
 	}
 }
+
+///
+/// Reverses the direction and wrap of the gallery. This is useful for galleries
+/// with an image count that doesn't match evenly with the column count. For
+/// example, a three-column gallery with five images. The bottom row will have
+/// two images that are wider than the row with three images. This allows users
+/// to flip the direction to have the larger images sitting on the top row.
+///
+.wp-block-gallery.is-style-reverse {
+	flex-flow: row-reverse wrap-reverse;
+}

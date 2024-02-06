@@ -3,7 +3,7 @@
 /**
  * Title: Image Download Cards
  * Slug: x3p0-ideas/grid-cards-image-download
- * Categories: gallery, x3p0-grid
+ * Categories: x3p0-grid
  * Keywords: card, download, file, gallery, grid, image, media
  * Viewport Width: 896
  */

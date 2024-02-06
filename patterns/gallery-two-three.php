@@ -15,61 +15,30 @@ declare(strict_types=1);
 # Prevent direct access.
 defined('ABSPATH') || exit;
 
-$image = get_theme_file_uri('public/media/images/default-16x9.webp');
+$image = get_theme_file_uri('public/media/images/mountain-road.webp');
 
 ?>
-<!-- wp:group {
+<!-- wp:gallery {
+	"columns":3,
+	"linkTo":"none",
+	"sizeSlug":"x3p0-16x9-lg",
 	"align":"wide",
-	"style":{"spacing":{"blockGap":"var:preset|spacing|base"}},
-	"layout":{"type":"default"}
+	"className":"is-style-reverse"
 } -->
-<div class="wp-block-group alignwide">
+<figure class="wp-block-gallery alignwide has-nested-images columns-3 is-cropped is-style-reverse">
 
-	<!-- wp:gallery {
-		"columns":2,
-		"linkTo":"none",
-		"sizeSlug":"x3p0-16x9-lg"
-	} -->
-	<figure class="wp-block-gallery has-nested-images columns-2 is-cropped">
+	<?php foreach (range(1, 5) as $number) : ?>
 
-		<?php foreach (range(1, 2) as $number) : ?>
+		<!-- wp:image {
+			"sizeSlug":"x3p0-16x9-lg",
+			"linkDestination":"none"
+		} -->
+		<figure class="wp-block-image size-x3p0-16x9-lg">
+			<img src="<?= esc_url($image) ?>" alt=""/>
+		</figure>
+		<!-- /wp:image -->
 
-			<!-- wp:image {
-				"sizeSlug":"x3p0-16x9-lg",
-				"linkDestination":"none"
-			} -->
-			<figure class="wp-block-image size-x3p0-16x9-lg">
-				<img src="<?= esc_url($image) ?>" alt=""/>
-			</figure>
-			<!-- /wp:image -->
+	<?php endforeach ?>
 
-		<?php endforeach ?>
-
-	</figure>
-	<!-- /wp:gallery -->
-
-	<!-- wp:gallery {
-		"columns":3,
-		"linkTo":"none",
-		"sizeSlug":"x3p0-16x9-lg"
-	} -->
-	<figure class="wp-block-gallery has-nested-images columns-3 is-cropped">
-
-		<?php foreach (range(1, 3) as $number) : ?>
-
-			<!-- wp:image {
-				"sizeSlug":"x3p0-16x9-lg",
-				"linkDestination":"none"
-			} -->
-			<figure class="wp-block-image size-x3p0-16x9-lg">
-				<img src="<?= esc_url($image) ?>" alt=""/>
-			</figure>
-			<!-- /wp:image -->
-
-		<?php endforeach ?>
-
-	</figure>
-	<!-- /wp:gallery -->
-
-</div>
-<!-- /wp:group -->
+</figure>
+<!-- /wp:gallery -->
