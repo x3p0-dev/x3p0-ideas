@@ -97,6 +97,11 @@ class Patterns implements Bootable
 			'description' => __('A variety of designs that group items in a grid layout.', 'x3p0-ideas')
 		]);
 
+		register_block_pattern_category('x3p0-hero', [
+			'label'       => __('Heroes', 'x3p0-ideas'),
+			'description' => __('Large, full-width sections that make a statement.', 'x3p0-ideas')
+		]);
+
 		register_block_pattern_category('x3p0-section', [
 			'label'       => __('Sections', 'x3p0-ideas'),
 			'description' => __('A variety of designs that group items in a section', 'x3p0-ideas')

@@ -4,7 +4,7 @@
  * Title: Hero: Featured
  * Slug: x3p0-ideas/hero-featured
  * Description: Make a statement.
- * Categories: featured
+ * Categories: featured, x3p0-hero
  * Keywords: hero, cover, intro, about
  * Block Types: core/cover
  * Viewport Width: 1376
