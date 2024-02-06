@@ -135,7 +135,7 @@ $icon = get_theme_file_uri('public/media/svg/earthquake.svg');
 				}
 			}
 		},
-		"layout":{"type":"constrained"}
+		"layout":{"type":"default"}
 	} -->
 	<div class="wp-block-group" style="padding-right:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
 
