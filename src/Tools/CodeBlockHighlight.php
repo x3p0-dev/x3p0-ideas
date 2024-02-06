@@ -212,7 +212,7 @@ class CodeBlockHighlight
 
 		return sprintf(
 			'<span class="wp-block-code-toolbar__label">%s</span>',
-			esc_html( $prefix . $this->language . $suffix )
+			esc_html($prefix . $this->language . $suffix)
 		);
 	}
 

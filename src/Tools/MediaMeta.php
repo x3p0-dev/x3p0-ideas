@@ -188,14 +188,14 @@ class MediaMeta
 	 */
 	protected function createdTimestamp(): string
 	{
-		$timestamp = $this->get('created_timestamp');
+		if (! $timestamp = $this->get('created_timestamp')) {
+			return '';
+		}
 
-		return ! $timestamp ? '' : esc_html(
-			date_i18n(
-				get_option('date_format'),
-				intval($timestamp)
-			)
-		);
+		return esc_html(date_i18n(
+			get_option('date_format'),
+			intval($timestamp)
+		));
 	}
 
 	/**
@@ -261,9 +261,11 @@ class MediaMeta
 	 */
 	protected function focalLength(): string
 	{
-		$focal = $this->get('focal_length');
+		if (! $focal = $this->get('focal_length')) {
+			return '';
+		}
 
-		return ! $focal ? '' : sprintf(
+		return sprintf(
 			// Translators: %s is the focal length of a camera.
 			esc_html__('%s mm', 'x3p0-ideas'),
 			absint($focal)

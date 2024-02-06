@@ -65,6 +65,7 @@ class Embeds implements Bootable
 	public function enqueueAssets(): void
 	{
 		$embed_styles = file_get_contents(get_parent_theme_file_path('public/css/embed.css'));
+		$style_asset  = include get_parent_theme_file_path('public/css/embed.asset.php');
 
 		// Register empty stylesheet so that our inline styles can
 		// piggyback off of it. Use the core `wp-embed-template` style
@@ -76,7 +77,7 @@ class Embeds implements Bootable
 			'x3p0-ideas-embed',
 			false,
 			[ 'wp-embed-template' ],
-			wp_get_theme(get_template_directory())->get('Version')
+			$style_asset['version']
 		);
 
 		// Add inline styles.
