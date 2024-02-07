@@ -184,6 +184,25 @@ class Blocks implements Bootable
 	}
 
 	/**
+	 * Adds support for background images to the Heading block so that the
+	 * `clip-text` style variation can work.
+	 *
+	 * @hook  register_block_type_args  last
+	 * @since 1.0.0
+	 */
+	public function setCoreHeadingArgs(array $args, string $name): array
+	{
+		if ('core/heading' === $name && !isset($args['supports']['background'])) {
+			$args['supports']['background'] = [
+				'backgroundImage' => true,
+				'backgroundSize'  => true
+			];
+		}
+
+		return $args;
+	}
+
+	/**
 	 * Disables the enhanced pagination feature for the Query Loop block.
 	 * There is currently no `theme.json`-supported method of disabling it,
 	 * so the only method is to filter the block data itself before render.
