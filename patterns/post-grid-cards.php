@@ -152,8 +152,7 @@ defined('ABSPATH') || exit;
 					<!-- wp:post-excerpt {
 						"moreText":"<?= esc_attr__(' Continue reading →', 'x3p0-ideas') ?>",
 						"showMoreOnNewLine":false,
-						"excerptLength":20,
-						"fontSize":"md"
+						"excerptLength":20
 					} /-->
 
 				</div>
