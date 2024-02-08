@@ -3,7 +3,7 @@
 /**
  * Title: Section: Small Horizontal Profile Cards
  * Slug: x3p0-ideas/section-cards-profile-row-small
- * Categories: team, x3p0-section
+ * Categories: team, x3p0-grid
  * Keywords: card, grid, profile, team
  * Viewport Width: 1376
  */
@@ -32,7 +32,20 @@ defined('ABSPATH') || exit;
 <section class="wp-block-group alignfull is-style-section" style="padding-right:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
 
 	<!-- wp:pattern {"slug":"x3p0-ideas/section-header"} /-->
-	<!-- wp:pattern {"slug":"x3p0-ideas/grid-cards-profile-row-small"} /-->
+
+	<!-- wp:group {
+		"metadata":{"name":"<?= esc_attr__('Grid', 'x3p0-ideas') ?>"},
+		"align":"wide",
+		"layout":{"type":"grid","minimumColumnWidth":"16rem"}
+	} -->
+	<div class="wp-block-group alignwide">
+
+		<?php foreach (range(1, 6) as $card) : ?>
+			<!-- wp:pattern {"slug":"x3p0-ideas/card-profile-row-small"} /-->
+		<?php endforeach ?>
+
+	</div>
+	<!-- /wp:group -->
 
 </section>
 <!-- /wp:group -->

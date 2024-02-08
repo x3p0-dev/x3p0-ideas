@@ -3,8 +3,7 @@
 /**
  * Title: Section Header
  * Slug: x3p0-ideas/section-header
- * Categories: x3p0-section
- * Keywords: text
+ * Categories: x3p0-layout
  * Viewport Width: 1376
  */
 
