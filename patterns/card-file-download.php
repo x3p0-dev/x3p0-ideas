@@ -47,8 +47,8 @@ $download = get_theme_file_uri('public/media/images/mountain-road.webp');
 			"spacing":{
 				"blockGap":"var:preset|spacing|base",
 				"padding":{
-					"top":"var:preset|spacing|plus-4",
-					"bottom":"var:preset|spacing|plus-4",
+					"top":"var:preset|spacing|plus-3",
+					"bottom":"var:preset|spacing|plus-3",
 					"left":"var:preset|spacing|plus-3",
 					"right":"var:preset|spacing|plus-3"
 				}
@@ -56,7 +56,7 @@ $download = get_theme_file_uri('public/media/images/mountain-road.webp');
 		},
 		"layout":{"type":"default"}
 	} -->
-	<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--plus-4);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-4);padding-left:var(--wp--preset--spacing--plus-3)">
+	<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
 
 		<!-- wp:image {
 			"lightbox":{"enabled":false},
@@ -82,41 +82,22 @@ $download = get_theme_file_uri('public/media/images/mountain-road.webp');
 	</div>
 	<!-- /wp:group -->
 
-	<!-- wp:group {
-		"metadata":{"name":"<?= esc_attr__('Card Footer', 'x3p0-ideas') ?>"},
+	<!-- wp:file {
+		"href":"<?= esc_url($download) ?>",
+		"showDownloadButton":false,
 		"style":{
-			"typography":{
-				"fontStyle":"normal",
-				"fontWeight":"600"
+			"border":{
+				"width":"0px",
+				"style":"none"
 			}
 		},
-		"backgroundColor":"neutral-50",
-		"layout":{"type":"default"},
-		"fontSize":"xs"
+		"className":"is-style-icon",
+		"fontSize":"sm"
 	} -->
-	<div class="wp-block-group has-neutral-50-background-color has-background has-xs-font-size" style="font-style:normal;font-weight:600">
-
-		<!-- wp:file {
-			"href":"<?= esc_url($download) ?>",
-			"showDownloadButton":false,
-			"style":{
-				"spacing":{
-					"padding":{
-						"top":"var:preset|spacing|minus-1",
-						"bottom":"var:preset|spacing|minus-1"
-					}
-				},
-				"color":{"background":"#ffffff00"}
-			},
-			"className":"is-style-icon"
-		} -->
-		<div class="wp-block-file is-style-icon has-background" style="background-color:#ffffff00;padding-top:var(--wp--preset--spacing--minus-1);padding-bottom:var(--wp--preset--spacing--minus-1)">
-			<a href="<?= esc_url($download) ?>"><?= esc_html__('Download', 'x3p0-ideas') ?></a>
-		</div>
-		<!-- /wp:file -->
-
+	<div class="wp-block-file is-style-icon has-sm-font-size" style="border-style:none;border-width:0px">
+		<a href="<?= esc_url($download) ?>"><?= esc_html__('Download', 'x3p0-ideas') ?></a>
 	</div>
-	<!-- /wp:group -->
+	<!-- /wp:file -->
 
 </div>
 <!-- /wp:group -->

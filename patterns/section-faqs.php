@@ -32,7 +32,7 @@ defined('ABSPATH') || exit;
 			<summary>
 				<?= esc_html(sprintf(
 					// Translators: %d is the current question.
-					_n('Question %d?', 'Question %d', $number, 'x3p0-ideas'),
+					_n('Question %d?', 'Question %d?', $number, 'x3p0-ideas'),
 					absint($number)
 				)) ?>
 			</summary>

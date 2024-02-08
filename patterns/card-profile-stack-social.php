@@ -93,6 +93,7 @@ defined('ABSPATH') || exit;
 	<!-- /wp:group -->
 
 	<!-- wp:group {
+		"tagName":"footer",
 		"metadata":{"name":"<?= esc_attr__('Card Footer', 'x3p0-ideas') ?>"},
 		"style":{
 			"typography":{
@@ -108,10 +109,9 @@ defined('ABSPATH') || exit;
 				}
 			}
 		},
-		"backgroundColor":"neutral-50",
 		"layout":{"type":"default"}
 	} -->
-	<div class="wp-block-group has-neutral-50-background-color has-background" style="padding-top:var(--wp--preset--spacing--base);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--base);padding-left:var(--wp--preset--spacing--plus-3);font-style:normal;font-weight:600">
+	<footer class="wp-block-group" style="padding-top:var(--wp--preset--spacing--base);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--base);padding-left:var(--wp--preset--spacing--plus-3);font-style:normal;font-weight:600">
 
 		<!-- wp:social-links {"iconColor":"neutral-500","iconColorValue":"#715036","size":"has-large-icon-size","className":"is-style-logos-only","layout":{"type":"flex","justifyContent":"center"}} -->
 		<ul class="wp-block-social-links has-large-icon-size has-icon-color is-style-logos-only">
@@ -123,7 +123,7 @@ defined('ABSPATH') || exit;
 		</ul>
 		<!-- /wp:social-links -->
 
-	</div>
+	</footer>
 	<!-- /wp:group -->
 
 </div>

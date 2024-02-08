@@ -3,6 +3,17 @@
 	"version": 2,
 	"title": "A Little Bit Bookish",
 	"settings": {
+		"blocks": {
+			"core/group": {
+				"custom": {
+					"cardFooter": {
+						"background": "transparent",
+						"borderColor": "var:custom|global|border-color",
+						"borderWidth": "1px 0 0"
+					}
+				}
+			}
+		},
 		"custom": {
 			"variation": "a-little-bit-bookish",
 			"global": {

@@ -13,6 +13,8 @@ declare(strict_types=1);
 # Prevent direct access.
 defined('ABSPATH') || exit;
 
+$url = home_url();
+
 ?>
 <!-- wp:group {
 	"style":{
@@ -27,7 +29,7 @@ defined('ABSPATH') || exit;
 <div class="wp-block-group is-style-card has-xs-font-size">
 
 	<!-- wp:heading {"level":3,"fontSize":"md"} -->
-	<h3 class="wp-block-heading has-md-font-size" id="browse-the-resources"><a href="#"><?= esc_html__('Placeholder Text', 'x3p0-ideas') ?></a></h3>
+	<h3 class="wp-block-heading has-md-font-size" id="browse-the-resources"><a href="<?= esc_url($url) ?>"><?= esc_html__('Placeholder Text', 'x3p0-ideas') ?></a></h3>
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph -->

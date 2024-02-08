@@ -23,6 +23,10 @@
 						"borderStyle": "var:custom|global|border-style",
 						"borderWidth": "var:custom|global|border-width"
 					},
+					"cardFooter": {
+						"borderColor": "var:custom|global|border-color",
+						"borderWidth": "1px 0 0"
+					},
 					"message": {
 						"borderColor": "var:custom|global|border-color",
 						"borderStyle": "var:custom|global|border-style",

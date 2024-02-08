@@ -18,26 +18,47 @@ $icon = get_theme_file_uri('public/media/svg/earthquake.svg');
 ?>
 <!-- wp:group {
 	"metadata":{"name":"<?= esc_attr__('Card', 'x3p0-ideas') ?>"},
-	"style":{"spacing":{"padding":{"left":"0","right":"0"}}},
+	"style":{
+		"spacing":{
+			"padding":{
+				"top":"0",
+				"bottom":"0",
+				"left":"0",
+				"right":"0"
+			},
+			"blockGap":"0"
+		},
+		"dimensions":{
+			"minHeight":"0px"
+		}
+	},
 	"className":"is-style-card",
-	"layout":{"type":"default"},
+	"layout":{
+		"type":"flex",
+		"orientation":"vertical",
+		"justifyContent":"stretch",
+		"verticalAlignment":"space-between"
+	},
 	"fontSize":"xs"
 } -->
-<div class="wp-block-group is-style-card has-xs-font-size" style="padding-right:0;padding-left:0">
+<div class="wp-block-group is-style-card has-xs-font-size" style="min-height:0px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 
 	<!-- wp:group {
+		"tagName":"header",
 		"style":{
 			"spacing":{
 				"blockGap":"var:preset|spacing|minus-3",
 				"padding":{
-					"right":"var:preset|spacing|plus-3",
-					"left":"var:preset|spacing|plus-3"
+					"top":"var:preset|spacing|plus-3",
+					"bottom":"var:preset|spacing|plus-3",
+					"left":"var:preset|spacing|plus-3",
+					"right":"var:preset|spacing|plus-3"
 				}
 			}
 		},
-		"layout":{"type":"constrained"}
+		"layout":{"type":"default"}
 	} -->
-	<div class="wp-block-group" style="padding-right:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
+	<header class="wp-block-group" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
 
 		<!-- wp:heading {"level":3,"fontSize":"xl"} -->
 		<h3 class="wp-block-heading has-xl-font-size"><?= esc_html__('Placeholder', 'x3p0-ideas') ?></h3>
@@ -47,7 +68,7 @@ $icon = get_theme_file_uri('public/media/svg/earthquake.svg');
 		<p><?= esc_html__('Lorem ipsum dolor sit...', 'x3p0-ideas') ?></p>
 		<!-- /wp:paragraph -->
 
-	</div>
+	</header>
 	<!-- /wp:group -->
 
 	<!-- wp:group {
@@ -63,7 +84,10 @@ $icon = get_theme_file_uri('public/media/svg/earthquake.svg');
 			}
 		},
 		"backgroundColor":"neutral-50",
-		"layout":{"type":"flex","flexWrap":"nowrap"}
+		"layout":{
+			"type":"flex",
+			"flexWrap":"nowrap"
+		}
 	} -->
 	<div class="wp-block-group has-neutral-50-background-color has-background" style="padding-top:var(--wp--preset--spacing--base);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--base);padding-left:var(--wp--preset--spacing--plus-3)">
 
@@ -93,17 +117,31 @@ $icon = get_theme_file_uri('public/media/svg/earthquake.svg');
 	<!-- /wp:group -->
 
 	<!-- wp:group {
+		"metadata":{
+			"name":"<?= esc_attr__('Card Content', 'x3p0-ideas') ?>"
+		},
 		"style":{
 			"spacing":{
 				"padding":{
+					"top":"var:preset|spacing|plus-3",
+					"bottom":"var:preset|spacing|plus-3",
 					"left":"var:preset|spacing|plus-3",
 					"right":"var:preset|spacing|plus-3"
 				}
+			},
+			"layout":{
+				"selfStretch":"fill",
+				"flexSize":null
 			}
 		},
-		"layout":{"type":"default"}
+		"layout":{
+			"type":"flex",
+			"orientation":"vertical",
+			"justifyContent":"stretch",
+			"verticalAlignment":"space-between"
+		}
 	} -->
-	<div class="wp-block-group" style="padding-right:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
+	<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
 
 		<!-- wp:list {"className":"has-marker-none"} -->
 		<ul class="has-marker-none">
@@ -122,22 +160,6 @@ $icon = get_theme_file_uri('public/media/svg/earthquake.svg');
 
 		</ul>
 		<!-- /wp:list -->
-
-	</div>
-	<!-- /wp:group -->
-
-	<!-- wp:group {
-		"style":{
-			"spacing":{
-				"padding":{
-					"right":"var:preset|spacing|plus-3",
-					"left":"var:preset|spacing|plus-3"
-				}
-			}
-		},
-		"layout":{"type":"default"}
-	} -->
-	<div class="wp-block-group" style="padding-right:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
 
 		<!-- wp:buttons -->
 		<div class="wp-block-buttons">

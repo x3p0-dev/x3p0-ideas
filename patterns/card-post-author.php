@@ -51,14 +51,8 @@ defined('ABSPATH') || exit;
 			"layout":{"type":"default"}
 		} -->
 		<div class="wp-block-group">
-
-			<!-- wp:post-author-name {
-				"isLink":true,
-				"className":"is-style-default"
-			} /-->
-
+			<!-- wp:post-author-name {"isLink":true } /-->
 			<!-- wp:post-author-biography {"fontSize":"sm"} /-->
-
 		</div>
 		<!-- /wp:group -->
 

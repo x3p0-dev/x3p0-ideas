@@ -33,6 +33,9 @@
 						"shadow": "var:custom|global|shadow",
 						"padding": "var:preset|spacing|plus-3"
 					},
+					"cardFooter": {
+						"background": "var:preset|color|neutral-50"
+					},
 					"message": {
 						"color": "var:preset|color|primary-900",
 						"background": "var:preset|color|primary-50",

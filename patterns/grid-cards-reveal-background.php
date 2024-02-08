@@ -20,10 +20,10 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 ?>
 <!-- wp:group {
 	"metadata":{"name":"<?= esc_attr__('Grid', 'x3p0-ideas') ?>"},
-	"align":"full",
+	"align":"wide",
 	"layout":{"type":"grid","minimumColumnWidth":"16rem"}
 } -->
-<div class="wp-block-group alignfull">
+<div class="wp-block-group alignwide">
 
 	<?php foreach (range(1, 4) as $card) : ?>
 

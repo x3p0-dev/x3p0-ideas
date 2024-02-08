@@ -19,7 +19,6 @@ defined('ABSPATH') || exit;
 	"style":{
 		"spacing":{"blockGap":"var:preset|spacing|base"}
 	},
-	"textColor":"neutral-500",
 	"gradient":"180-deg-transparent-base",
 	"className":"is-style-card",
 	"layout":{
@@ -29,7 +28,7 @@ defined('ABSPATH') || exit;
 	},
 	"fontSize":"sm"
 } -->
-<div class="wp-block-group is-style-card has-neutral-500-color has-180-deg-transparent-base-gradient-background has-text-color has-background has-sm-font-size">
+<div class="wp-block-group is-style-card has-180-deg-transparent-base-gradient-background has-background has-sm-font-size">
 
 	<!-- wp:avatar {
 		"userId":1,
