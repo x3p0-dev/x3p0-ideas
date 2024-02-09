@@ -15,11 +15,8 @@ declare(strict_types=1);
 defined('ABSPATH') || exit;
 
 ?>
-<!-- wp:comments {
-	"tagName":"section",
-	"style":{"spacing":{"padding":{"top":"var:preset|spacing|plus-3"}}}
-} -->
-<section class="wp-block-comments" style="padding-top:var(--wp--preset--spacing--plus-3)">
+<!-- wp:comments {"tagName":"section"} -->
+<section class="wp-block-comments">
 
 	<!-- wp:group {
 		"metadata":{"name":"<?= esc_attr__('Comments Container', 'x3p0-ideas') ?>"},
