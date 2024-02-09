@@ -14,6 +14,8 @@ defined('ABSPATH') || exit;
 
 ?>
 <!-- wp:group {
+	"allowedBlocks":["core/heading","core/paragraph","core/buttons"],
+	"lock":{"move":true,"remove":true},
 	"tagName":"header",
 	"metadata":{"name":"<?= esc_attr__('Section Header', 'x3p0-ideas') ?>"},
 	"style":{"spacing":{"blockGap":"var:preset|spacing|base"}},
@@ -21,7 +23,13 @@ defined('ABSPATH') || exit;
 } -->
 <header class="wp-block-group">
 
-	<!-- wp:heading {"textAlign":"center"} -->
+	<!-- wp:heading {
+		"lock":{
+			"move":false,
+			"remove":true
+		},
+		"textAlign":"center"
+	} -->
 	<h2 class="wp-block-heading has-text-align-center"><?= esc_html__('Placeholder Heading', 'x3p0-ideas') ?></h2>
 	<!-- /wp:heading -->
 

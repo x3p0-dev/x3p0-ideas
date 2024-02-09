@@ -24,7 +24,14 @@ defined('ABSPATH') || exit;
 
 	<!-- wp:pattern {"slug":"x3p0-ideas/section-header"} /-->
 
-	<!-- wp:group {"layout":{"type":"default"}} -->
+	<!-- wp:group {
+		"lock":{
+			"move":true,
+			"remove":true
+		},
+		"metadata":{"name":"<?= esc_attr__('Section Content', 'x3p0-ideas') ?>"},
+		"layout":{"type":"default"}
+	} -->
 	<div class="wp-block-group"></div>
 	<!-- /wp:group -->
 
