@@ -84,3 +84,15 @@
 		@include inline-icon.prefix(icon.get-url('download'));
 	}
 }
+
+///
+/// The plain style removes custom styling from the block.
+///
+.wp-block-file.is-style-plain,
+.editor-styles-wrapper .wp-block-file.is-style-plain {
+	padding: 0;
+	border: none;
+	background: none;
+	box-shadow: none;
+	outline: none;
+}
