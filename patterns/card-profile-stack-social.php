@@ -26,17 +26,15 @@ defined('ABSPATH') || exit;
 			}
 		}
 	},
-	"textColor":"neutral-500",
 	"className":"is-style-card",
 	"layout":{
 		"type":"flex",
 		"orientation":"vertical",
 		"justifyContent":"stretch",
 		"verticalAlignment":"space-between"
-	},
-	"fontSize":"sm"
+	}
 } -->
-<div class="wp-block-group is-style-card has-neutral-500-color has-text-color has-sm-font-size" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:0;padding-bottom:0;padding-left:0">
+<div class="wp-block-group is-style-card" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:0;padding-bottom:0;padding-left:0">
 
 	<!-- wp:group {
 		"style":{
@@ -113,7 +111,18 @@ defined('ABSPATH') || exit;
 	} -->
 	<footer class="wp-block-group" style="padding-top:var(--wp--preset--spacing--base);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--base);padding-left:var(--wp--preset--spacing--plus-3);font-style:normal;font-weight:600">
 
-		<!-- wp:social-links {"iconColor":"neutral-500","iconColorValue":"#715036","size":"has-large-icon-size","className":"is-style-logos-only","layout":{"type":"flex","justifyContent":"center"}} -->
+		<!-- wp:social-links {
+			"templateLock":"all",
+			"lock":{"move":true,"remove":true},
+			"iconColor":"contrast",
+			"iconColorValue":"#000000",
+			"size":"has-large-icon-size",
+			"className":"is-style-logos-only",
+			"layout":{
+				"type":"flex",
+				"justifyContent":"center"
+			}
+		} -->
 		<ul class="wp-block-social-links has-large-icon-size has-icon-color is-style-logos-only">
 			<!-- wp:social-link {"url":"https://wordpress.org","service":"wordpress"} /-->
 			<!-- wp:social-link {"url":"https://github.com","service":"github"} /-->
