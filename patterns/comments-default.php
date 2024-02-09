@@ -26,9 +26,7 @@ defined('ABSPATH') || exit;
 
 		<!-- wp:comments-title {"showPostTitle":false} /-->
 
-		<!-- wp:comment-template {
-			"style":{"spacing":{"margin":{"top":"var:preset|spacing|minus-2"}}}
-		} -->
+		<!-- wp:comment-template -->
 
 			<!-- wp:group {
 				"tagName":"article",
