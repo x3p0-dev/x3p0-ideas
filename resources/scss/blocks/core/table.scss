@@ -1,3 +1,9 @@
+////
+/// Table block CSS.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
 
 // -----------------------------------------------------------------------------
 // Block fixes.
@@ -8,13 +14,13 @@
 	text-align: left;
 }
 
-.wp-block-table :is( tr, th, td, tbody ) {
+.wp-block-table :is(tr, th, td, tbody) {
 	border-width: 0;
 }
 
 // `theme.json` border support for tables is horribly broken, so we're just
 // inheriting everything here.
-.wp-block-table.has-border-color :is( thead, tfoot, tr th, tr td ) {
+.wp-block-table.has-border-color :is(thead, tfoot, tr th, tr td) {
 	border-color: inherit;
 }
 
@@ -24,38 +30,47 @@
 
 // Make WP's default borders smaller.
 .wp-block-table thead {
-	border-bottom: 1px solid var( --wp--preset--color--neutral-100 );
+	border-bottom: 1px solid var(--wp--preset--color--neutral-100);
 }
 
 .wp-block-table tfoot,
-.wp-block-table tbody tr:where( :not( :first-child ) ) {
-	border-top: 1px solid var( --wp--preset--color--neutral-100 );
+.wp-block-table tbody tr:where(:not(:first-child)) {
+	border-top: 1px solid var(--wp--preset--color--neutral-100);
 }
 
 // Less prominent bold for headers.
-.wp-block-table :where( th, tfoot ) {
+.wp-block-table :where(th, tfoot) {
 	font-weight: 600;
 }
 
-.wp-block-table :is( th, td ) {
-	padding: var( --wp--preset--spacing--minus-1 ) var( --wp--preset--spacing--base );
+.wp-block-table :is(th, td) {
+	padding: var(--wp--preset--spacing--minus-1) var(--wp--preset--spacing--base);
 }
 
 // -----------------------------------------------------------------------------
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-// Core `stripes` style adjustments. Styling via `theme.json` appends CSS to the
-// table instead of the wrapper.
+///
+/// Core `stripes` style adjustments. Styling via `theme.json` appends CSS to
+/// the table instead of the wrapper. Also allows customization of stripe row
+/// variables, such as color and background.
+///
 .wp-block-table.is-style-stripes {
 	border: none;
 
 	tbody tr {
 		border: none;
 	}
-}
 
-.wp-block-table.is-style-stripes tbody tr:nth-child( odd ) {
-	// differentiate between neutral and other color variations.
-	background-color: var( --wp--preset--color--neutral-50 );
+	tbody tr:nth-child(odd) {
+		background: transparent;
+	}
+
+	thead tr,
+	tbody tr:nth-child(even),
+	tbody:has(tr:last-child:nth-child(odd)) + tfoot tr {
+		color:      var(--wp--custom--stripes--stripe-color, inherit);
+		background: var(--wp--custom--stripes--stripe-background, transparent);
+	}
 }

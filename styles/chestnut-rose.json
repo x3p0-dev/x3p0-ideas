@@ -18,7 +18,7 @@
 				"custom": {
 					"outline": {
 						"color": "var:preset|color|neutral-700",
-						"borderColor": "var:preset|color|neutral-100",
+						"borderColor": "var:preset|color|neutral-50",
 						"borderWidth": "1px"
 					}
 				}

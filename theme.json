@@ -77,6 +77,13 @@
 						"borderRadius": "var:custom|global|border-radius"
 					}
 				}
+			},
+			"core/table": {
+				"custom": {
+					"stripes": {
+						"stripeBackground": "var:preset|color|neutral-50"
+					}
+				}
 			}
 		},
 		"border": {
