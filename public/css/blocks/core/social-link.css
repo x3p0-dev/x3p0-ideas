@@ -1,1 +1,1 @@
-.wp-block-social-link:has(a:focus){outline:2px solid var(--wp--preset--color--primary-700);outline-offset:2px}.wp-block-social-link .wp-block-social-link-anchor{outline:none}
+.wp-block-social-link.wp-social-link:hover{transform:scale(1.05)}.wp-block-social-link:where(:hover,:focus) .wp-block-social-link-label{text-decoration-line:underline}.wp-block-social-link .wp-block-social-link-anchor{outline:none}.wp-block-social-links .wp-social-link .wp-block-social-link-anchor{padding:var(--wp--preset--spacing--minus-2)}

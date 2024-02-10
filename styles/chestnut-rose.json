@@ -13,6 +13,15 @@
 						"hoverBackground": "var:preset|color|primary-900"
 					}
 				}
+			},
+			"core/social-links": {
+				"custom": {
+					"outline": {
+						"color": "var:preset|color|neutral-700",
+						"borderColor": "var:preset|color|neutral-100",
+						"borderWidth": "1px"
+					}
+				}
 			}
 		},
 		"color": {

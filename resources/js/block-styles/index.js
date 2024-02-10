@@ -21,6 +21,7 @@ import {
 domReady(() => {
 	// Remove core block styles.
 	unregisterBlockStyle('core/separator', 'dots');
+	unregisterBlockStyle('core/social-links', 'pill-shape');
 
 	// Loop through each of the blocks to get its style variations. Then,
 	// loop through the variations and register them.

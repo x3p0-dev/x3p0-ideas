@@ -69,6 +69,14 @@
 						"shadow": "var:preset|shadow|md"
 					}
 				}
+			},
+			"core/social-links": {
+				"custom": {
+					"outline": {
+						"borderWidth": "2px",
+						"borderRadius": "var:custom|global|border-radius"
+					}
+				}
 			}
 		},
 		"border": {

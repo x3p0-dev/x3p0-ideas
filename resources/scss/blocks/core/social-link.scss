@@ -6,14 +6,48 @@
 ////
 
 // -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+// No fixes...
+
+// -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-.wp-block-social-link:has( a:focus ) {
-	outline: 2px solid var( --wp--preset--color--primary-700 );
-	outline-offset: 2px;
+///
+/// Lower the scale slightly on hover.
+///
+/// Note: must double up on selector to override core stylesheet.
+///
+.wp-block-social-link.wp-social-link:hover {
+	transform: scale(1.05);
 }
 
+///
+/// Adds an underline to the social link label on hover/focus.
+///
+.wp-block-social-link:where(:hover, :focus) .wp-block-social-link-label {
+	text-decoration-line: underline;
+}
+
+///
+/// Remove the theme's outline for links.
+///
 .wp-block-social-link .wp-block-social-link-anchor {
 	outline: none;
 }
+
+///
+/// Adjusts the padding for social links. Note that we must specifically target
+/// the `.wp-block-social-links` parent to overrule the core style rule.
+///
+.wp-block-social-links .wp-social-link .wp-block-social-link-anchor {
+	padding: var(--wp--preset--spacing--minus-2);
+}
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+// No variations...
