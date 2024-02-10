@@ -18,10 +18,7 @@
 .wp-block-comments > * + *,
 // Necessary fix for a hardcoded margin in the editor.
 .editor-styles-wrapper .wp-block-comments > * + .wp-block.wp-block-comments-pagination {
-	margin-block-start: var(
-		--wp--custom--block-gap--comments,
-		var(--wp--style--block-gap)
-	);
+	margin-block-start: var(--wp--custom--gap, var(--wp--style--block-gap));
 }
 
 // -----------------------------------------------------------------------------

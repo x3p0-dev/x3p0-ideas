@@ -40,27 +40,27 @@
 // Adds a bottom border-radius to captions by default. This is a hacky method
 // to keep the caption background from overflowing the image.
 .wp-block-gallery .wp-block-image figcaption {
-	border-bottom-left-radius: var( --wp--custom--global--border-radius );
-	border-bottom-right-radius: var( --wp--custom--global--border-radius );
+	border-bottom-left-radius: var(--wp--custom--global--border-radius);
+	border-bottom-right-radius: var(--wp--custom--global--border-radius);
 }
 
 // Use the gallery gap for left/right padding for full-width galleries. This
 // creates consistent spacing across the entire gallery.
 .wp-block-gallery.alignfull {
-	padding-left: var( --wp--style--unstable-gallery-gap, 0 );
-	padding-right: var( --wp--style--unstable-gallery-gap, 0 );
+	padding-left: var(--wp--style--unstable-gallery-gap, 0);
+	padding-right: var(--wp--style--unstable-gallery-gap, 0);
 }
 
 // Use the gallery gap for the full gallery when it has a background, keeping
 // the spacing consistent on all sides.
 .wp-block-gallery.has-background {
-	padding: var( --wp--style--unstable-gallery-gap, 0 );
+	padding: var(--wp--style--unstable-gallery-gap, 0);
 }
 
 // Overrides the core hard-coded padding for captions.
 // Note: the crazy selectors here are necessary to overrule core.
 .wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
-	padding: var( --wp--preset--spacing--minus-2 );
+	padding: var(--wp--preset--spacing--minus-2);
 }
 
 // -----------------------------------------------------------------------------
@@ -91,13 +91,13 @@
 	// If, in the future, we add support for other styles in `image.scss`,
 	// they also need to be added here.
 	figure.wp-block-image:where(
-		:not( [class*=is-style-] ),
+		:not([class*=is-style-]),
 		.is-style-default,
 		.is-style-icon
 	) figcaption {
 		position: initial;
 		margin: 0;
-		padding: var( --wp--preset--spacing--minus-2 );
+		padding: var(--wp--preset--spacing--minus-2);
 		color: inherit;
 		background: unset;
 	}

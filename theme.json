@@ -1182,6 +1182,13 @@
 				},
 				"css": "& > li {\n\tborder-radius: var( --wp--custom--global--border-radius );\n\tbox-shadow: var( --wp--custom--global--shadow );\n\tpadding: var( --wp--preset--spacing--plus-3 );\n\tbackground: var( --wp--preset--color--neutral-50 );\n}"
 			},
+			"core/comments-title": {
+				"spacing": {
+					"margin": {
+						"bottom": "0.5em"
+					}
+				}
+			},
 			"core/cover": {
 				"color": {
 					"text": "var:preset|color|white"

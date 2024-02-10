@@ -31,7 +31,7 @@
 
 .wp-block-latest-comments .avatar,
 .wp-block-latest-comments__comment-avatar {
-	box-shadow: var( --wp--custom--global--shadow );
+	box-shadow: var(--wp--custom--global--shadow);
 	border-radius: 1.5em;
 	float: none;
 	width: 48px;
@@ -48,7 +48,7 @@
 }
 
 .wp-block-latest-comments__comment-excerpt {
-	margin: var( --wp--preset--spacing--minus-3 ) 0 0;
+	margin: var(--wp--preset--spacing--minus-3) 0 0;
 
 	p {
 		margin: 0;
@@ -71,10 +71,10 @@ ol.wp-block-latest-comments:where(
 // class around the `<ol>` in the editor. 🤦‍♀️
 ol.wp-block-latest-comments:where(:not(.has-avatars, .has-excerpts)) {
 	list-style: revert;
-	padding-inline-start: var( --wp--preset--spacing--plus-4 );
+	padding-inline-start: var(--wp--preset--spacing--plus-4);
 
 	.wp-block-latest-comments & {
-		padding-inline-start: var( --wp--preset--spacing--plus-4 );
+		padding-inline-start: var(--wp--preset--spacing--plus-4);
 	}
 
 	.wp-block-latest-comments__comment {
@@ -85,7 +85,7 @@ ol.wp-block-latest-comments:where(:not(.has-avatars, .has-excerpts)) {
 	}
 
 	:where(li + li) {
-		margin-block-start: var( --wp--preset--spacing--minus-1 );
+		margin-block-start: var(--wp--preset--spacing--minus-1);
 	}
 }
 
