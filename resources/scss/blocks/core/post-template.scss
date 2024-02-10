@@ -21,12 +21,6 @@
 	padding: 0;
 }
 
-// Zero out global padding in the editor so that this matches the front end.
-.editor-styles-wrapper .has-global-padding > .alignfull > .wp-block-post-template {
-	padding-left: 0;
-	padding-right: 0;
-}
-
 // Ensure list styling doesn't overrule the post template.
 .wp-block-post-template {
 	list-style: none !important;
