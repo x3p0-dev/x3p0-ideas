@@ -350,10 +350,13 @@
 				}
 			},
 			"core/pullquote": {
+				"typography": {
+					"fontStyle": "italic"
+				},
 				"elements": {
 					"cite": {
 						"typography": {
-							"fontStyle": "italic",
+							"fontStyle": "normal",
 							"fontWeight": "300",
 							"fontSize": "var:preset|font-size|xs",
 							"lineHeight": "var:custom|line-height|xs"
@@ -362,10 +365,13 @@
 				}
 			},
 			"core/quote": {
+				"typography": {
+					"fontStyle": "italic"
+				},
 				"elements": {
 					"cite": {
 						"typography": {
-							"fontStyle": "italic",
+							"fontStyle": "normal",
 							"fontWeight": "300",
 							"fontSize": "var:preset|font-size|xs",
 							"lineHeight": "var:custom|line-height|xs"
