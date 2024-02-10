@@ -46,10 +46,8 @@ export const BLOCK_STYLES = {
 		'icon': __('Icon', 'x3p0-ideas')
 	},
 	'core/cover': {
-		'fade-in':      __('Fade In',      'x3p0-ideas'),
-		'reveal-image': __('Reveal Image', 'x3p0-ideas'),
-		'reveal-text':  __('Reveal Text',  'x3p0-ideas'),
-		'stretch':      __('Stretch',      'x3p0-ideas')
+		'fade-in': __('Fade In', 'x3p0-ideas'),
+		'stretch': __('Stretch', 'x3p0-ideas')
 	},
 	'core/file': {
 		'icon':  __('Icon', 'x3p0-ideas'),
