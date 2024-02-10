@@ -152,6 +152,9 @@ class CodeBlockHighlight
 
 		// Replace line-breaks with newlines so that Prism doesn't put
 		// all of the code in a single line.
+		//
+		// The line breaks are currently being added by Gutenberg.
+		// @link https://github.com/WordPress/gutenberg/issues/58659
 		$content = str_ireplace(
 			[ '<br>', '<br/>', '<br />' ],
 			"\n",
