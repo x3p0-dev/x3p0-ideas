@@ -258,7 +258,7 @@ class Blocks implements Bootable
 		// other captions in WordPress. The `.wp-element-caption` class
 		// is necessary for styling this via `theme.json`.
 		if ($processor->next_tag('caption')) {
-			$processor->add_class('wp-element-caption');
+			$processor->add_class(wp_theme_get_element_class_name('caption'));
 		}
 
 		// Hacky method to replace the arrows until the HTML API allows
@@ -295,7 +295,7 @@ class Blocks implements Bootable
 			$processor->next_tag([ 'class_name'=> 'login-submit'])
 			&& $processor->next_tag('input')
 		) {
-			$processor->add_class('wp-element-button');
+			$processor->add_class(wp_theme_get_element_class_name('button'));
 		}
 
 		return $processor->get_updated_html();
