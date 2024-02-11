@@ -21,35 +21,11 @@
 		display: block;
 		width: 100%;
 	}
-
-	.login-submit input[type=submit] {
-		box-shadow: var( --wp--custom--global--shadow );
-		border: 2px solid transparent;
-		border-radius: var( --wp--custom--global--border-radius );
-		color: var( --wp--preset--color--white );
-		background: var( --wp--preset--color--primary-700 );
-		outline: 0 solid var( --wp--preset--color--primary-950 );
-		outline-offset: 2px;
-		padding: var( --wp--preset--spacing--minus-2 ) var( --wp--preset--spacing--plus-1 );
-		font-size: var( --wp--preset--font-size--sm );
-		font-weight: 500;
-		line-height: var( --wp--custom--line-height--sm );
-
-		&:active,
-		&:focus {
-			background: var( --wp--preset--color--primary-950 );
-			outline-width: 2px;
-		}
-		&:hover {
-			background: var( --wp--preset--color--primary-950 );
-			text-decoration: underline;
-		}
-	}
 }
 
 // Navigation settings are not applied to the login/out link.
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-loginout  {
-	align-items: var( --navigation-layout-justification-setting, initial );
+	align-items: var(--navigation-layout-justification-setting, initial);
 	display: flex;
 	flex-direction: column;
 }
@@ -60,10 +36,10 @@
 
 .wp-block-loginout form {
 	display: grid;
-	grid-template-columns: repeat( 1, 1fr );
+	grid-template-columns: repeat(1, 1fr);
 	gap: var(
 		--wp--custom--block-gap--comments-form,
-		var( --wp--preset--spacing--base )
+		var(--wp--preset--spacing--base)
 	);
 
 	> * {
@@ -75,26 +51,26 @@
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-.wp-block-loginout.is-style-button:not( .has-login-form ) a {
+.wp-block-loginout.is-style-button:not(.has-login-form) a {
 	@include inline-button.medium();
 }
 
 .wp-block-loginout.is-style-icon {
 
-	&:not( .has-login-form ) {
-		@include inline-icon.prefix( icon.get-url( 'lock' ) );
+	&:not(.has-login-form) {
+		@include inline-icon.prefix(icon.get-url('lock'));
 
 		&.logged-in::before {
-			@include inline-icon.modify( icon.get-url( 'lock-open' ) );
+			@include inline-icon.modify(icon.get-url('lock-open'));
 		}
 	}
 
 	.login-username label,
 	.login-password label {
-		@include inline-icon.prefix( icon.get-url( 'person' ) );
+		@include inline-icon.prefix(icon.get-url('person'));
 	}
 
 	.login-password label::before {
-		@include inline-icon.modify( icon.get-url( 'key' ) );
+		@include inline-icon.modify(icon.get-url('key'));
 	}
 }

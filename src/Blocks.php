@@ -271,6 +271,37 @@ class Blocks implements Bootable
 	}
 
 	/**
+	 * Adds the `.wp-element-button` class to the login form's submit button.
+	 * This is currently missing from core WP.
+	 *
+	 * @hook  render_block_core/loginout
+	 * @since 1.0.0
+	 * @link  https://github.com/WordPress/gutenberg/issues/50466
+	 */
+	public function renderCoreLoginout(string $content, array $block): string
+	{
+		if (
+			empty($block['attrs']['displayLoginAsForm'])
+			|| is_user_logged_in()
+		) {
+			return $content;
+		}
+
+		$processor = new WP_HTML_Tag_Processor($content);
+
+		// Specifically look for the wrapping `<p class="login-submit">`
+		// element and the next input tag.
+		if (
+			$processor->next_tag([ 'class_name'=> 'login-submit'])
+			&& $processor->next_tag('input')
+		) {
+			$processor->add_class('wp-element-button');
+		}
+
+		return $processor->get_updated_html();
+	}
+
+	/**
 	 * WordPress doesn't add the taxonomy name to the tag cloud wrapper. In
 	 * order for taxonomy-based block styles to work, the theme is adding
 	 * a `.taxonomy-{taxonomy}` class to the wrapper.
