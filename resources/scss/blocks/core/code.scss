@@ -36,7 +36,7 @@
 /// Code syntax highlighting variation. On the server side, this is a wrapping
 /// `<div> around the `<pre>` element.
 ///
-.wp-block-code:where(.is-style-highlight:has(pre)) {
+.wp-block-code:is(.is-style-highlight:has(pre)) {
 	overflow: hidden;
 	box-sizing: border-box;
 	padding: 0;

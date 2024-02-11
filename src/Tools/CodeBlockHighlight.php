@@ -121,23 +121,26 @@ class CodeBlockHighlight
 					'',
 					$class
 				));
-			} elseif ('is-style-highlight' === $class) {
-				$this->is_highlight = true;
-				$processor->remove_class('is-style-highlight');
 			}
 		}
 
-		// Change the `<pre>` class.
-		$processor->remove_class('wp-block-code');
-		$processor->add_class('wp-block-code__code');
+		// Update the code block HTML if this is a highlighted
+		if ('' !== $this->language || $processor->has_class('is-style-highlight')) {
+			$this->is_highlight = true;
 
-		// Get the block alignment.
-		if (isset($this->block['attrs']['align'])) {
-			$this->align = "align{$this->block['attrs']['align']}";
-			$processor->remove_class($this->align);
+			// Update the block classes.
+			$processor->remove_class('wp-block-code');
+			$processor->remove_class('is-style-highlight');
+			$processor->add_class('wp-block-code__code');
+
+			// Get the block alignment.
+			if (isset($this->block['attrs']['align'])) {
+				$this->align = "align{$this->block['attrs']['align']}";
+				$processor->remove_class($this->align);
+			}
+
+			$this->content = $processor->get_updated_html();
 		}
-
-		$this->content = $processor->get_updated_html();
 	}
 
 	/**
@@ -151,12 +154,8 @@ class CodeBlockHighlight
 			return $this->content;
 		}
 
-		// Only enqueue assets if we have a specific language. Automatic
-		// detection is slower and not always perfect. Also, let's just
-		// lean toward explicit declaration.
-		if ('' !== $this->language) {
-			$this->enqueueAssets();
-		}
+		// Enqueue the `prism.js` script and any other assets.
+		$this->enqueueAssets();
 
 		// Replace line-breaks with newlines so that Prism doesn't put
 		// all of the code in a single line.
