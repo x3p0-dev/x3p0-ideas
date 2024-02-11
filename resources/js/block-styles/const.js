@@ -67,7 +67,7 @@ export const BLOCK_STYLES = {
 		'section':    __('Section', 'x3p0-ideas')
 	},
 	'core/heading': {
-		'clip-text':         __('Clip Text', 'x3p0-ideas'),
+		'knockout':          __('Knockout', 'x3p0-ideas'),
 		'text-wrap-balance': __('Wrap: Balance', 'x3p0-ideas')
 	},
 	'core/home-link': {

@@ -35,14 +35,18 @@
 /// background to apply to the text itself instead of the background of the
 /// entire element.
 ///
-.wp-block-heading.is-style-clip-text,
-.editor-styles-wrapper .wp-block-heading.is-style-clip-text {
+.wp-block-heading.is-style-knockout,
+.editor-styles-wrapper .wp-block-heading.is-style-knockout{
 	background-clip: text !important;
 	-webkit-background-clip: text !important;
 	color: transparent !important;
+
+	// Always remove text-shadow, which obscures the background with this
+	// technique for knockout text.
+	text-shadow: none !important
 }
 
-.wp-block-heading.is-style-clip-text {
+.wp-block-heading.is-style-knockout {
 
 	// Add a default gradient background if the user hasn't chosen one.
 	&:not(.has-background) {
