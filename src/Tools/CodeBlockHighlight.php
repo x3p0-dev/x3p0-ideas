@@ -30,10 +30,10 @@ class CodeBlockHighlight
 	 * @todo  Type hint with PHP 8.3+ requirement.
 	 */
 	protected const LABEL_WRAPPERS = [
-		'default' => [ 'prefix' => '&lt;',  'suffix' => '/&gt;' ],
-		'php'     => [ 'prefix' => '&lt;?', 'suffix' => ''      ],
-		'css'     => [ 'prefix' => '{',     'suffix' => '}'     ],
-		'scss'    => [ 'prefix' => '{',     'suffix' => '}'     ]
+		'default' => [ 'prefix' => '<',  'suffix' => '/>' ],
+		'php'     => [ 'prefix' => '<?', 'suffix' => ''   ],
+		'css'     => [ 'prefix' => '{',  'suffix' => '}'  ],
+		'scss'    => [ 'prefix' => '{',  'suffix' => '}'  ]
 	];
 
 	/**
@@ -123,13 +123,21 @@ class CodeBlockHighlight
 				));
 			} elseif ('is-style-highlight' === $class) {
 				$this->is_highlight = true;
+				$processor->remove_class('is-style-highlight');
 			}
 		}
 
+		// Change the `<pre>` class.
+		$processor->remove_class('wp-block-code');
+		$processor->add_class('wp-block-code__code');
+
 		// Get the block alignment.
 		if (isset($this->block['attrs']['align'])) {
-			$this->align = $this->block['attrs']['align'];
+			$this->align = "align{$this->block['attrs']['align']}";
+			$processor->remove_class($this->align);
 		}
+
+		$this->content = $processor->get_updated_html();
 	}
 
 	/**
@@ -162,8 +170,8 @@ class CodeBlockHighlight
 		);
 
 		return sprintf(
-			'<div class="wp-block-code-wrap%s">%s%s</div>',
-			'' === $this->align ? '' : esc_attr(" align{$this->align}"),
+			'<div class="wp-block-code is-style-highlight%s">%s%s</div>',
+			'' === $this->align ? '' : esc_attr(" {$this->align}"),
 			$this->renderToolbar(),
 			$content
 		);
@@ -177,7 +185,7 @@ class CodeBlockHighlight
 	protected function renderToolbar(): string
 	{
 		return sprintf(
-			'<div class="wp-block-code-toolbar" aria-hidden="true">%s%s</div>',
+			'<div class="wp-block-code__toolbar" aria-hidden="true">%s%s</div>',
 			$this->renderToolbarIcon(),
 			$this->renderToolbarLabel()
 		);
@@ -197,7 +205,7 @@ class CodeBlockHighlight
 			: self::TOOLBAR_ICONS['default'];
 
 		return sprintf(
-			'<span class="wp-block-code-toolbar__icon">%s</span>',
+			'<span class="wp-block-code__toolbar-icon">%s</span>',
 			str_repeat($icon, 3)
 		);
 	}
@@ -214,7 +222,7 @@ class CodeBlockHighlight
 			?? self::LABEL_WRAPPERS['default'];
 
 		return sprintf(
-			'<span class="wp-block-code-toolbar__label">%s</span>',
+			'<span class="wp-block-code__toolbar-label">%s</span>',
 			esc_html($prefix . $this->language . $suffix)
 		);
 	}

@@ -16,6 +16,6 @@ window.Prism.manual = true;
 import './prism';
 
 // Target our code blocks only.
-document.querySelectorAll('.wp-block-code-wrap').forEach(
+document.querySelectorAll('.wp-block-code.is-style-highlight').forEach(
 	(block) => Prism.highlightAllUnder(block)
 );

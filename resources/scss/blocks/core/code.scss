@@ -33,23 +33,31 @@
 // -----------------------------------------------------------------------------
 
 ///
-/// Code syntax highlighting variation.
+/// Code syntax highlighting variation. On the server side, this is a wrapping
+/// `<div> around the `<pre>` element.
 ///
-.wp-block-code-wrap {
+.wp-block-code:where(.is-style-highlight:has(pre)) {
 	overflow: hidden;
 	box-sizing: border-box;
-	border-color: var(--wp--custom--global--border-color);
-	border-style: var(--wp--custom--global--border-style);
-	border-width: var(--wp--custom--global--border-width);
+	padding: 0;
+	border-color:  var(--wp--custom--global--border-color);
+	border-style:  var(--wp--custom--global--border-style);
+	border-width:  var(--wp--custom--global--border-width);
 	border-radius: var(--wp--custom--global--border-radius);
-	box-shadow: var(--wp--custom--global--shadow);
+	box-shadow:    var(--wp--custom--global--shadow);
+
+	// Reset what would've normally been a `<pre>` tag styling.
+	word-wrap: initial;
 
 	::selection {
 		color: currentColor;
 		background: #334155;
 	}
+}
 
-	.wp-block-code-toolbar {
+.wp-block-code {
+
+	&__toolbar {
 		box-sizing: border-box;
 		display: flex;
 		justify-content: space-between;
@@ -58,11 +66,12 @@
 		color: #cbd5e1;
 		font-family: var(--wp--preset--font-family--mono);
 		font-size: 14px;
+		line-height: 1.5;
 		padding: var(--wp--preset--spacing--minus-1) var(--wp--preset--spacing--base);
 		gap: 2px;
 	}
 
-	.wp-block-code-toolbar__icon {
+	&__toolbar-icon {
 		display: flex;
 		gap: 2px;
 
@@ -81,105 +90,127 @@
 		}
 	}
 
-	.wp-block-code-toolbar__label {
+	&__toolbar-label {
 		line-height: 1;
 		background: rgba(255, 255, 255, 0.03);
 		padding: 4px 8px;
-		border-radius: var(--wp--custom--global--border-radius);
 	}
 
-	> .wp-block-code {
-		max-height: calc(90vh - 46px); // 46px is mobile size of WP toolbar.
-		margin: 0 !important;
+	&__code {
+		tab-size: 4;
+		box-sizing: border-box;
+		overflow: auto;
+		word-wrap: normal;
+
+		max-height: calc(
+			100vh
+			- 46px
+			- (var(--wp--preset--spacing--minus-1) * 2)
+			- (var(--wp--preset--spacing--plus-3) * 2)
+		); // 46px is mobile size of WP toolbar.
+
+		margin: 0;
 		padding: var(--wp--preset--spacing--base) var(--wp--preset--spacing--plus-3);
-		border: none;
-		border-top: 1px solid #334155;
+
+		// Set defaults so they can be overwritten properly via the UI.
+		border: 0 solid transparent;
+		border-top-width: 1px;
+		border-top-color: #334155;
 		border-radius: 0;
 		box-shadow: none;
 		outline: none;
 	}
 }
 
-.wp-block-code.is-style-highlight {
-	background: #1e293b;
+.wp-block-code__code {
 	color: #7e848f;
-	tab-size: 4;
 	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	background: #1e293b;
 
-	.token.keyword {
+	&.language-css,
+	&.language-scss {
+		color: #fde68a;
+	}
+
+	&.language-js,
+	&.language-javascript {
+		color: #34d399;
+	}
+
+	.keyword {
 		color: #a78bfa;
 	}
 
-	.token.comment,
-	.token.prolog,
-	.token.doctype,
-	.token.cdata {
+	.comment,
+	.prolog,
+	.doctype,
+	.cdata {
 		color: #64748b;
 		font-style: italic;
 	}
 
-	.token.punctuation {
+	.punctuation {
 		color: #94a3b8;
 	}
 
 	// ?
-	.token.tag,
-	.token.symbol,
-	.token.deleted {
+	.tag,
+	.symbol,
+	.deleted {
 	}
 
-	.token.property {
+	.property {
 		color: #fde68a;
 	}
 
-	.token.constant {
+	.constant {
 		color: #cbd5e1;
 	}
 
-	.token.boolean,
-	.token.number {
+	.boolean,
+	.number {
 		color: #fdba74;
 	}
 
-	.token.selector {
+	.selector {
 		color: #7dd3fc;
 	}
 
-	.token.attr-name,
-	.token.string,
-	.token.char,
-	.token.builtin,
-	.token.inserted {
+	.attr-name,
+	.string,
+	.char,
+	.builtin,
+	.inserted {
 		color: #94a3b8;
 	}
 
-	.token.entity,
-	.token.url,
-	.language-css .token.string,
-	.style .token.string,
-	.token.variable,
-	.token.parameter,
-	.token.interpolation {
+	.entity,
+	.url,
+	.language-css .string,
+	.style .string,
+	.variable,
+	.parameter,
+	.interpolation {
 		color: #34d399;
 	}
 
-	.token.operator {
+	.operator {
 		color: #a5f3fc;
 	}
 
-	.token.atrule,
-	.token.attr-value,
-	.token.function {
+	.atrule,
+	.attr-value,
+	.function {
 		color: #7dd3fc;
 	}
 
-	.token.class-name,
-	.token.maybe-class-name,
-	.token.package {
+	.class-name,
+	.maybe-class-name,
+	.package {
 		color: #fde68a;
 	}
 
-	.token.attribute {
+	.attribute {
 		.punctuation {
 			color: #a78bfa;
 		}
@@ -190,36 +221,26 @@
 
 	// ?
 	// opening <?php tag uses this important.
-	.token.regex,
-	.token.important {
+	.regex,
+	.important {
 		color: #fb7185;
 	}
 
-	//.token.important,
-	.token.bold {
+	//.important,
+	.bold {
 		font-weight: bold;
 	}
-	.token.italic {
+	.italic {
 		font-style: italic;
 	}
 
-	.token.entity {
+	.entity {
 		cursor: help;
 	}
 
-	&.language-css,
-	&.language-scss {
-		color: #fde68a;
-	}
-
-	&.language-css .token.property,
-	&.language-scss .token.property {
+	&.language-css .property,
+	&.language-scss .property {
 		color: #cbd5e1;
-	}
-
-	&.language-js,
-	&.language-javascript {
-		color: #34d399;
 	}
 
 	&.language-php {
@@ -234,10 +255,5 @@
 		.this.keyword + .operator + .property {
 			color: #34d399;
 		}
-	}
-
-	.editor-styles-wrapper &,
-	&:where(:not([class*=language-])) {
-		color: #cbd5e1;
 	}
 }
