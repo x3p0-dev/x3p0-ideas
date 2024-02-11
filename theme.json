@@ -84,6 +84,14 @@
 						"stripeBackground": "var:preset|color|neutral-50"
 					}
 				}
+			},
+			"core/tag-cloud": {
+				"custom": {
+					"outline": {
+						"borderWidth": "2px",
+						"borderRadius": "var:custom|global|border-radius"
+					}
+				}
 			}
 		},
 		"border": {
