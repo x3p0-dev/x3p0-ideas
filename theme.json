@@ -531,6 +531,8 @@
 					"color": "var:preset|color|contrast",
 					"background": "var:preset|color|neutral-50",
 					"borderColor": "var:preset|color|neutral-100",
+					"borderRadius": "var:custom|global|border-radius",
+					"shadow": "var:custom|global|shadow",
 					"placeholderColor": "var:preset|color|neutral-500",
 					"accentColor": "var:preset|color|primary-700"
 				},
@@ -550,12 +552,16 @@
 				"label": {
 					"color": "var:preset|color|neutral-500",
 					"fontSize": "var:preset|font-size|sm",
-					"focusColor": "var:preset|color|primary-700"
+					"focusColor": "var:preset|color|primary-700",
+					"checkFontSize": "var:preset|font-size|sm"
 				},
 				"mark": {
 					"padding": "0.125em 0.25em",
 					"color": "var:preset|color|neutral-950",
 					"background": "var:preset|color|neutral-100"
+				},
+				"::placeholder": {
+					"color": "var:preset|color|neutral-300"
 				},
 				"summary": {
 					"hoverBackground": "var:preset|color|neutral-100"

@@ -1,0 +1,126 @@
+////
+/// Form mixin.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+///
+/// Default label styles.
+///
+@mixin label() {
+	color:       var(--wp--custom--elements--label--color, inherit);
+	font-family: var(--wp--custom--elements--label--font-family, inherit);
+	font-size:   var(--wp--custom--elements--label--font-size, inherit);
+	font-style:  var(--wp--custom--elements--label--font-style, inherit);
+	font-weight: var(--wp--custom--elements--label--font-weight, inherit);
+
+	&:has(
+		+ :where(input:not([type=submit]):not([type=checkbox])),
+		+ textarea,
+		+ select
+	) {
+		display: block;
+		margin-bottom: var(--wp--preset--spacing--minus-3);
+	}
+
+	// When the label's input is focused, give it a focus color.
+	&:has(
+		+ input:focus,
+		+ textarea:focus,
+		+ select:focus,
+		input:focus,
+		textarea:focus,
+		select:focus
+	) {
+		color: var(--wp--custom--elements--label--focus-color, inherit);
+	}
+
+	// When the label is next to or wraps a checkbox or radio, use a
+	// different design set. Generally, you want this to read as normal text.
+	input[type="checkbox"] + &,
+	input[type="radio"] + &,
+	&:has(
+		input[type="checkbox"],
+		input[type="radio"]
+	) {
+		color:       var(--wp--custom--elements--label--check-color, inherit);
+		font-family: var(--wp--custom--elements--label--check-font-family, inherit);
+		font-size:   var(--wp--custom--elements--label--check-font-size, inherit);
+		font-style:  var(--wp--custom--elements--label--check-font-style, inherit);
+		font-weight: var(--wp--custom--elements--label--check-font-weight, inherit);
+	}
+}
+
+///
+/// Default placeholder styles.
+///
+@mixin placeholder() {
+	color: var(--wp--custom--elements--placeholder--color, inherit);
+}
+
+///
+/// Default input styles.
+///
+@mixin input() {
+	appearance:  none;
+	padding:     var(--wp--preset--spacing--minus-3) var(--wp--preset--spacing--minus-1);
+
+	color:       var(--wp--custom--elements--input--color, inherit);
+	background:  var(--wp--custom--elements--input--background, transparent);
+
+	font-family: var(--wp--custom--elements--input--font-family, inherit);
+	font-size:   var(--wp--custom--elements--input--font-size, inherit);
+	font-style:  var(--wp--custom--elements--input--font-style, inherit);
+	font-weight: var(--wp--custom--elements--input--font-weight, inherit);
+	line-height: var(--wp--custom--elements--input--line-height, inherit);
+
+	border-color:  var(--wp--custom--elements--input--border-color, none);
+	border-style:  var(--wp--custom--elements--input--border-width, solid);
+	border-width:  var(--wp--custom--elements--input--border-width, 1px);
+	border-radius: var(--wp--custom--elements--input--border-radius, none);
+	box-shadow:    var(--wp--custom--elements--input--shadow, none);
+
+	&:focus {
+		outline: 2px solid var(
+			--wp--custom--elements--input-accent-color,
+			var(--wp--preset--color--primary-700)
+		);
+		outline-offset: 2px;
+	}
+}
+
+///
+/// Default checkbox and radio styles.
+///
+@mixin checkable() {
+	accent-color: var(
+		--wp--custom--elements--input-accent-color,
+		var(--wp--preset--color--primary-700)
+	);
+
+	padding: 0;
+	border: none;
+	box-shadow: none;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+///
+/// Default select styles.
+///
+@mixin select() {
+	cursor: pointer;
+	// Recreate the arrow with a linear-gradient.
+	// https://codepen.io/vkjgr/pen/VYMeXp
+	background-image:
+		linear-gradient(45deg, transparent 50%, currentColor 50%),
+		linear-gradient(135deg, currentColor 50%, transparent 50%);
+	background-position:
+		calc(100% - 1.25em) center,
+		calc(100% - 0.9375em) center;
+	background-size: 0.3125em 0.3125em, 0.3125em 0.3125em;
+	background-repeat: no-repeat;
+}

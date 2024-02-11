@@ -5,6 +5,7 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
+@use '../../tools/form';
 @use '../../tools/icon';
 @use '../../tools/inline-icon';
 
@@ -21,18 +22,87 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
+.wp-block-search {
+
+	// In the editor, this is a `<div>` instead of a real `<label>`.
+	&__label {
+		@include form.label();
+
+		// Because of the structure, this label doesn't pick up the
+		// mixin's bottom margin.
+		margin-bottom: var(--wp--preset--spacing--minus-3);
+	}
+
+	// The label for the search form is placed before the inside wrapper.
+	// So we must specifically look for the sibling wrapper with a nested
+	// search input field to change the label's color when focused.
+	&__label:has(
+		+ .wp-block-search__inside-wrapper .wp-block-search__input:focus
+	) {
+		color: var(--wp--custom--elements--label--focus-color, inherit);
+	}
+
+	// Input styling, which includes styling the inside wrapper to appear as
+	// if it were the input itself when the button is shown inside.
+	&__input,
+	&__button-inside .wp-block-search__inside-wrapper {
+		@include form.input();
+	}
+
+	// When the search input field is not hidden, give the button a left
+	// margin. We can't use `gap` here on the wrapper itself because the
+	// browser will recognize the `<input>` before the button and show the
+	// gap, even when the input is hidden.
+	//
+	// Note: use `:is()` for higher specificity than `:where()` to overrule
+	// WordPress's style rule that zeroes this out.
+	&:is(:not(.wp-block-search__searchfield-hidden)) .wp-block-search__button {
+		margin-left: var(--wp--preset--spacing--minus-2);
+	}
+
+	// When the button is placed inside the input wrapper, we need to change
+	// the wrapper design to behave like the search `<input>` itself.
+	&__button-inside {
+		.wp-block-search__inside-wrapper {
+			padding: var(--wp--preset--spacing--minus-3);
+			padding-left: var(--wp--preset--spacing--minus-1);
+		}
+
+		.wp-block-search__inside-wrapper:has(.wp-block-search__input:focus) {
+			outline: 2px solid var(
+				--wp--custom--elements--input-accent-color,
+				var(--wp--preset--color--primary-700)
+			);
+			outline-offset: 2px;
+		}
+
+		// Reset the search input field's styles
+		.wp-block-search__input {
+			padding: 0;
+			background: none;
+			border: none;
+			box-shadow: none;
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		.wp-block-search__button {
+			padding: 0.25rem 0.75rem;
+		}
+	}
+}
+
+///
+/// User selected colors.
+///
 .has-text-color .wp-block-search {
 	&.wp-block-search__button-inside .wp-block-search__inside-wrapper,
 	.wp-block-search__input {
 		color: currentColor;
 		background: transparent;
 		border-color: currentColor;
-	}
-}
-
-.wp-block-search.wp-block-search__button-inside {
-	.wp-block-search__button {
-		padding: 0.25rem 0.75rem;
 	}
 }
 

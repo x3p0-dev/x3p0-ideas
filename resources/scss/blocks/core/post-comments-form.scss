@@ -5,6 +5,7 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
+@use '../../tools/form';
 @use '../../tools/icon';
 @use '../../tools/inline-icon';
 
@@ -70,15 +71,24 @@
 	}
 }
 
+// Import label styling. We must specifically target the default field labels to
+// overrule some core styles (like label margins).
+.wp-block-post-comments-form label,
+.wp-block-post-comments-form .comment-form-author label,
+.wp-block-post-comments-form .comment-form-email label,
+.wp-block-post-comments-form .comment-form-url label {
+	@include form.label();
+}
+
+// Import form input styling.
+.wp-block-post-comments-form input:not([type=submit]):not([type=checkbox]),
+.wp-block-post-comments-form textarea {
+	@include form.input();
+}
+
 // Use negative color (generally red) for required marker.
 .wp-block-post-comments-form .required {
 	color: var(--wp--preset--color--primary-700);
-}
-
-// Overwrites WP's default form field padding with a theme spacing size.
-.wp-block-post-comments-form input:not([type=submit]):not([type=checkbox]),
-.wp-block-post-comments-form textarea {
-	padding: var(--wp--preset--spacing--minus-2);
 }
 
 // -----------------------------------------------------------------------------
