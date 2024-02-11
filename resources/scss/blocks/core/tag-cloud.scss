@@ -74,14 +74,16 @@
 /// The outline style is a core style. We're overwriting it to better match the
 /// theme. Much of this needed to be done via CSS rather than `theme.json`.
 ///
-/// @todo More testing to see which things can be moved to `theme.json`.
-///
 .wp-block-tag-cloud.is-style-outline {
 
 	a {
-		color: currentColor;
-		border: 2px solid currentColor;
-		border-radius: var(--wp--custom--global--border-radius);
+		color:         var(--wp--custom--outline--color, inherit);
+		background:    var(--wp--custom--outline--background, transparent);
+		border-width:  var(--wp--custom--outline--border-width, 1px);
+		border-style:  var(--wp--custom--outline--border-style, solid);
+		border-color:  var(--wp--custom--outline--border-color, currentColor);
+		border-radius: var(--wp--custom--outline--border-radius, 0);
+
 		padding: var(--wp--preset--spacing--minus-2) var(--wp--preset--spacing--plus-1);
 		font-size: inherit !important;
 		font-weight: inherit !important;

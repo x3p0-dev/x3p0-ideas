@@ -50,6 +50,20 @@
 						"fontFamily": "var:preset|font-family|primary"
 					}
 				}
+			},
+			"core/social-links": {
+				"custom": {
+					"outline": {
+						"borderWidth": "3px"
+					}
+				}
+			},
+			"core/tag-cloud": {
+				"custom": {
+					"outline": {
+						"borderWidth": "3px"
+					}
+				}
 			}
 		},
 		"color": {
@@ -256,7 +270,6 @@
 		},
 		"typography": {
 			"customFontSize": false,
-			"defaultFontSizes": false,
 			"dropCap": true,
 			"fluid": false,
 			"fontFamilies": [
@@ -377,6 +390,15 @@
 					"width": "1px"
 				},
 				"css": "& img {\n\tbox-shadow: none;\n}"
+			},
+			"core/button": {
+				"variations": {
+					"outline": {
+						"border": {
+							"width": "3px"
+						}
+					}
+				}
 			},
 			"core/gallery": {
 				"typography": {
