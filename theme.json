@@ -1599,6 +1599,9 @@
 					"lineHeight": "var:custom|line-height|sm"
 				}
 			},
+			"core/table-of-contents": {
+				"css": "& ol {\n\tlist-style: initial;\n}"
+			},
 			"outermost/icon-block": {
 				"css": "& svg {\n\tfill: currentColor;\n}"
 			},

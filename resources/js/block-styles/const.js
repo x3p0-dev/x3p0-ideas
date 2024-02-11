@@ -148,9 +148,8 @@ export const BLOCK_STYLES = {
 		'normalize': __('Normalize', 'x3p0-ideas')
 	},
 	'core/table-of-contents': {
-		'chapters':  __('Chapters',  'x3p0-ideas'),
-		'unordered': __('Unordered', 'x3p0-ideas'),
-		'pull':      __('Pull',      'x3p0-ideas')
+		'chapters': __('Chapters', 'x3p0-ideas'),
+		'pull':     __('Pull',     'x3p0-ideas')
 	},
 	'core/tag-cloud': {
 		'flat': __('Flat', 'x3p0-ideas'),

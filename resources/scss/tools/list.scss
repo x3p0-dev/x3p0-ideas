@@ -10,7 +10,6 @@
 /// Default `<ul>` or `<ol>` list styles
 ///
 @mixin flow() {
-	list-style: var(--wp--custom--list-style, initial);
 	padding-inline-start: var(--wp--preset--spacing--plus-4);
 
 	:where(
@@ -31,8 +30,7 @@
 /// Turns a `<ul>` or `<ol>` list into a horizontal, flex-based list.
 ///
 @mixin horizontal() {
-	--wp--custom--list-style: none;
-
+	list-style: none;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;

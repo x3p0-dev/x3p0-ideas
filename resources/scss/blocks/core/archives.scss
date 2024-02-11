@@ -51,7 +51,7 @@ ul.wp-block-archives-list,
 ///
 .wp-block-archives.is-style-spread .wp-block-archives-list,
 .wp-block-archives-list.is-style-spread {
-	--wp--custom--list-style: none;
+	list-style: none;
 	padding-left: 0;
 }
 

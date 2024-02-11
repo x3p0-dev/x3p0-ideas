@@ -36,19 +36,6 @@
 }
 
 ///
-/// The unordered style makes the `<ol>` tags appear as an unordered list.
-///
-.wp-block-table-of-contents.is-style-unordered ol {
-	list-style: disc;
-
-	> li ol {
-		list-style: circle;
-
-		> li ol { list-style: square; }
-	}
-}
-
-///
 /// The chapters style gives the ToC a `Chapter {num}` prefix for top-level
 /// items and a `{num}.{num}` prefix for sub-items.
 ///
