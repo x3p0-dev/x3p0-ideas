@@ -99,21 +99,17 @@ class Blocks implements Bootable
 	 */
 	public function enqueueStyles(): void
 	{
-		// Get the block namespace paths.
-		$paths = array_map(
-			fn($namespace) => get_parent_theme_file_path("public/css/blocks/{$namespace}"),
-			self::NAMESPACES
-		);
-
 		// Loop through each of the block namespace paths, get their
 		// stylesheets, and enqueue them.
-		foreach ($paths as $path) {
-			$files = new FilesystemIterator($path);
+		foreach (self::NAMESPACES as $namespace) {
+			$files = new FilesystemIterator(
+				get_parent_theme_file_path("public/css/blocks/{$namespace}")
+			);
 
 			foreach ($files as $file) {
 				if (! $file->isDir() && 'css' === $file->getExtension()) {
 					$this->enqueueStyle(
-						basename($path),
+						$namespace,
 						$file->getBasename('.css')
 					);
 				}
@@ -236,17 +232,6 @@ class Blocks implements Bootable
 	/**
 	 * Adds a caption class and replaces nav arrows.
 	 *
-	 * @hook  render_block_core/code
-	 * @since 1.0.0
-	 */
-	public function renderCoreCode(string $content, array $block): string
-	{
-		return (new CodeBlockHighlight($content, $block))->render();
-	}
-
-	/**
-	 * Adds a caption class and replaces nav arrows.
-	 *
 	 * @hook  render_block_core/calendar
 	 * @since 1.0.0
 	 */
@@ -271,6 +256,17 @@ class Blocks implements Bootable
 	}
 
 	/**
+	 * Adds a caption class and replaces nav arrows.
+	 *
+	 * @hook  render_block_core/code
+	 * @since 1.0.0
+	 */
+	public function renderCoreCode(string $content, array $block): string
+	{
+		return (new CodeBlockHighlight($content, $block))->render();
+	}
+
+	/**
 	 * Adds the `.wp-element-button` class to the login form's submit button.
 	 * This is currently missing from core WP.
 	 *
@@ -292,7 +288,7 @@ class Blocks implements Bootable
 		// Specifically look for the wrapping `<p class="login-submit">`
 		// element and the next input tag.
 		if (
-			$processor->next_tag([ 'class_name'=> 'login-submit'])
+			$processor->next_tag([ 'class_name'=> 'login-submit' ])
 			&& $processor->next_tag('input')
 		) {
 			$processor->add_class(wp_theme_get_element_class_name('button'));
