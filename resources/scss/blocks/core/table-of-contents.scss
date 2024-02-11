@@ -38,7 +38,7 @@
 ///
 /// The unordered style makes the `<ol>` tags appear as an unordered list.
 ///
-.wp-block-table-of-contents.is-style-marker-unordered ol {
+.wp-block-table-of-contents.is-style-unordered ol {
 	list-style: disc;
 
 	> li ol {

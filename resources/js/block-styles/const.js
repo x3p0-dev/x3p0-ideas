@@ -82,7 +82,7 @@ export const BLOCK_STYLES = {
 		'tape':         __('Tape',         'x3p0-ideas')
 	},
 	'core/list': {
-		'horizontal':  __('Horizontal',   'x3p0-ideas')
+		'horizontal':  __('Horizontal', 'x3p0-ideas')
 	},
 	'core/list-item': {
 		'cancel-circle': __('Cancel Circle', 'x3p0-ideas'),
@@ -93,7 +93,7 @@ export const BLOCK_STYLES = {
 		'icon':   __('Icon',   'x3p0-ideas')
 	},
 	'core/page-list': {
-		'horizontal':  __('Horizontal',   'x3p0-ideas')
+		'horizontal':  __('Horizontal', 'x3p0-ideas')
 	},
 	'core/paragraph': {
 		'indent':  __('Indent',  'x3p0-ideas'),
@@ -148,9 +148,9 @@ export const BLOCK_STYLES = {
 		'normalize': __('Normalize', 'x3p0-ideas')
 	},
 	'core/table-of-contents': {
-		'chapters':          __('Chapters',  'x3p0-ideas'),
-		'marker-unordered':  __('Unordered', 'x3p0-ideas'),
-		'pull':              __('Pull',      'x3p0-ideas')
+		'chapters':  __('Chapters',  'x3p0-ideas'),
+		'unordered': __('Unordered', 'x3p0-ideas'),
+		'pull':      __('Pull',      'x3p0-ideas')
 	},
 	'core/tag-cloud': {
 		'flat': __('Flat', 'x3p0-ideas'),
