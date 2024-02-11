@@ -5,16 +5,37 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
+@use '../../tools/list';
+
 // -----------------------------------------------------------------------------
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// Zero out WP's margin bottom.
+///
+/// WordPress adds a wrapping `<div>` (with no class) around the block in the
+/// editor. This breaks wide/full alignment. The following style rules add the
+/// width to the parent `<div>` if it contains a wide-/full-aligned block.
+///
+.editor-styles-wrapper div:has(.wp-block-latest-posts.alignwide:first-child) {
+	max-width: var(--wp--style--global--wide-size) !important;
+}
+
+.editor-styles-wrapper div:has(.wp-block-latest-posts.alignfull:first-child) {
+	max-width: 100% !important;
+	padding: 0;
+}
+
+///
+/// Zero out WP's margin bottom. *Why, why, why?*
+///
 .wp-block-latest-posts.wp-block-latest-posts__list.is-grid li {
 	margin-bottom: 0;
 }
 
-// Old school clearfix for floated images.
+///
+/// Old school clearfix for floated images. Who thought I'd be writing code like
+/// this in 2024?
+///
 .wp-block-latest-posts:has(
 	.wp-block-latest-posts__featured-image:where(.alignleft, .alignright)
 ) {
@@ -28,6 +49,10 @@
 	}
 }
 
+///
+/// Ensures the featured image uses the theme's global styles and fixes left
+/// and right-aligned images.
+///
 .wp-block-latest-posts__featured-image {
 
 	> img {
@@ -46,58 +71,136 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-.wp-block-latest-posts.wp-block-latest-posts__list:where(:not(:has(
-	.wp-block-latest-posts__post-excerpt,
-	.wp-block-latest-posts__post-content,
-	.wp-block-latest-posts__featured-image
-))) {
-	list-style: revert;
-	padding-inline-start: var( --wp--preset--spacing--plus-4 );
-
-	:where( li + li, li > ul, li > ol ) {
-		margin-block-start: var( --wp--preset--spacing--minus-1 );
-	}
-
-	// We need to reset the overflow to allow the markers to show up. WP
-	// sets this to `hidden` by default.
+.wp-block-latest-posts {
 	li {
-		overflow: initial;
-		padding-left: 0.25em;
+		padding: 0;
 	}
 
-	li a {
-		margin-right: 0.25ch;
+	// WP doesn't add this class in the editor.
+	&__post-title {
+		font-family: var(--wp--preset--font-family--primary);
+		font-weight: 700;
+		text-decoration: none;
+	}
+
+	// We must capitalize because WP uses lowercase for "by Author Name,"
+	// which makes it look like a rebellious teen wanted to be cool online
+	// using lowercase.
+	&__post-author,
+	&__post-date {
+		text-transform: capitalize;
+		font-size: min(0.9375em, 1.0625rem);
+	}
+
+	&__post-excerpt {
+		margin: var(--wp--preset--spacing--base) 0 0;
+		font-size: min(1em, 1.1875rem);
+	}
+
+	&__post-full-content {
+		margin: var(--wp--style--block-gap) 0 0;
+	}
+
+	&__post-excerpt,
+	&__post-full-content {
+		clear: both;
+	}
+
+	&:has(
+		.wp-block-latest-posts__post-excerpt,
+		.wp-block-latest-posts__post-full-content
+	) {
+		.wp-block-latest-posts__post-title {
+			font-size: var(--wp--preset--font-size--md);
+			line-height: var(--wp--custom--line-height--md);
+		}
 	}
 }
 
+///
+/// Regular list style. Note that we must specifically target `:not(.is-grid)`
+/// because there is no specific class for the list style.
+///
+.wp-block-latest-posts.wp-block-latest-posts__list:where(:not(.is-grid)) {
+
+	// Add extra whitespace when there are featured images.
+	&:has(.wp-block-latest-posts__featured-image) li + li {
+		margin-top: var(--wp--preset--spacing--base);
+	}
+
+	&:has(
+		.wp-block-latest-posts__post-excerpt,
+		.wp-block-latest-posts__post-full-content
+	) li + li {
+		margin-top: var(--wp--style--block-gap);
+	}
+
+	// When there is no excerpt, content, or featured image, treat the block
+	// like a normal list.
+	&:not(:has(
+		.wp-block-latest-posts__post-excerpt,
+		.wp-block-latest-posts__post-full-content,
+		.wp-block-latest-posts__featured-image
+	)) {
+		@include list.flow();
+
+		// We need to reset the overflow to allow the markers to show up.
+		// WP sets this to `hidden` by default.
+		li {
+			overflow: initial;
+		}
+
+		li a {
+			margin-right: 0.25ch;
+		}
+
+		.wp-block-latest-posts__post-title {
+			font-weight: inherit;
+			text-decoration: underline;
+		}
+	}
+}
+
+///
+/// Grid list style. WP uses CSS flexbox for this out of the box, so we're just
+/// switching it up to an actual grid.
+///
 .wp-block-latest-posts.is-grid {
 	container-type: inline-size;
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	gap: var(--wp--style--block-gap);
+
+	// Break into two columns when there are at least two nested columns.
+	@media (min-width: 48rem) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	// Break into three columns when there are at least three nested columns.
+	@media (min-width: 64rem) {
+		&:where(
+			.columns-3,
+			.columns-4,
+			.columns-5,
+			.columns-6
+		) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	// Allow any number of columns at equal width.
+	@media (min-width: 80rem) {
+		&.columns-4 { grid-template-columns: repeat(4, 1fr); }
+		&.columns-5 { grid-template-columns: repeat(5, 1fr); }
+		&.columns-6 { grid-template-columns: repeat(6, 1fr); }
+	}
+
+	li {
+		width: 100%;
+		margin: 0;
+	}
 }
 
-.wp-block-latest-posts:where(:not(.is-grid)):has(.wp-block-latest-posts__featured-image) li + li {
-	margin-top: var(--wp--preset--spacing--base);
-}
-
-.wp-block-latest-posts__post-author,
-.wp-block-latest-posts__post-date {
-	text-transform: capitalize;
-	font-size: min(0.9375em, 1.0625rem);
-}
-
-
-.wp-block-latest-posts__post-excerpt {
-	margin: var(--wp--style--block-gap) 0 0;
-	font-size: min(1em, 1.1875rem);
-}
-
-.wp-block-latest-posts__post-content {
-	margin: var(--wp--preset--spacing--plus-3) 0 0;
-}
-
-.wp-block-latest-posts__post-excerpt,
-.wp-block-latest-posts__post-content {
-	clear: both;
-}
 
 // -----------------------------------------------------------------------------
 // Block style variations.
