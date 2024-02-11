@@ -31,6 +31,7 @@ export const LANGUAGE_PREFIX = 'language-';
  */
 export const LANGUAGES = [
 	{ value: 'css',   label: __('CSS',  'x3p0-ideas') },
+	{ value: 'html',  label: __( 'HTML', 'x3p0-ideas') },
 	{ value: 'js',    label: __('JavaScript', 'x3p0-ideas') },
 	{ value: 'php',   label: __('PHP',  'x3p0-ideas') },
 	{ value: 'scss',  label: __('SCSS',  'x3p0-ideas') }
