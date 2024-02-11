@@ -1052,7 +1052,11 @@
 			"core/button": {
 				"variations": {
 					"outline": {
+						"color": {
+							"background": "transparent"
+						},
 						"border": {
+							"color": "currentColor",
 							"width": { "ref": "styles.elements.button.border.width" }
 						},
 						"outline": {
