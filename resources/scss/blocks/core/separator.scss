@@ -17,7 +17,7 @@
 /// because we're actually dealing with borders. Fix this by removing the border
 /// and giving the separator a height.
 ///
-/// @todo Add Gutenberg ticket link.
+/// @link https://github.com/WordPress/gutenberg/issues/52986
 ///
 .wp-block-separator.has-background[class*=-gradient] {
 	border: none;

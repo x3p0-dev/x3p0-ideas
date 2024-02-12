@@ -1,1 +1,1 @@
-.wp-block-term-description>:is(*,p){margin-block-end:0;margin-block-start:0}.wp-block-term-description>*+:is(*,p){margin-block-start:var(--wp--custom--block-gap--term-description,var(--wp--style--block-gap))}
+.wp-block-term-description>:is(*,p){margin-block-end:0;margin-block-start:0}.wp-block-term-description>*+:is(*,p){margin-block-start:var(--wp--custom--gap,var(--wp--style--block-gap))}

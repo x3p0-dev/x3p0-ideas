@@ -12,13 +12,17 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// Make sure the image block has border box sizing.
+///
+/// Make sure the image block has border box sizing.
+///
 .wp-block-image {
 	box-sizing: border-box;
 }
 
-// The WordPress lightbox for CSS to hide captions isn't always specific enough
-// to overrule custom block styles, so we're giving it a higher specificity.
+///
+/// The WordPress lightbox for CSS to hide captions isn't always specific enough
+/// to overrule custom block styles, so we're giving it a higher specificity.
+///
 .wp-lightbox-overlay .wp-block-image figcaption.wp-element-caption {
 	display: none;
 }
@@ -250,7 +254,6 @@ figure.wp-block-image.is-style-polaroid {
 		background: rgba(255, 255, 235, 0.5);
 		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3), 0 0 4rem rgba(255, 255, 235, 0.5) inset;
 		height: var(--wp--preset--spacing--plus-3);
-	//	margin: auto;
 		width: 7rem;
 		z-index: 1;
 
@@ -282,24 +285,30 @@ figure.wp-block-image.is-style-polaroid {
 // Block overrides.
 // -----------------------------------------------------------------------------
 
-// Editor fix. The tape styles use the `::after` pseudo-element as part
-// of their design. But WP also uses this in the editor to show the selected
-// block outline. So, we're attaching an outline to the image itself in this case.
-//
-// @todo Test to see if this is still needed.
+///
+/// Editor fix. The tape styles use the `::after` pseudo-element as part
+/// of their design. But WP also uses this in the editor to show the selected
+/// block outline. So, we're attaching an outline to the image itself in this case.
+///
+/// @todo Test to see if this is still needed.
+///
 .wp-block-image.is-style-tape.block-editor-block-list__block:focus img {
 	outline: 2px solid var(--wp-admin-theme-color, transparent);
 }
 
-// Removes the resizable box handle for polaroid style.
-//
-// @todo Test to see if this is still needed.
+///
+/// Removes the resizable box handle for polaroid style.
+///
+/// @todo Test to see if this is still needed.
+///
 .wp-block-image:where([class*=is-style-polaroid]) .components-resizable-box__handle {
 	display: none;
 }
 
-// Necessary adjustments for images within a lightbox. Just making sure the
-// theme's custom styles don't cause too much craziness.
+///
+/// Necessary adjustments for images within a lightbox. Just making sure the
+/// theme's custom styles don't cause too much craziness.
+///
 .wp-lightbox-overlay .wp-block-image.enlarged-image {
 	padding: 0 !important;
 	border: none !important;

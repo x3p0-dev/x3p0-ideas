@@ -9,25 +9,35 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// WP hardcodes a `max-width: 100%` on this block in the editor. 🤦‍♀️
+///
+/// WP hardcodes a `max-width: 100%` on this block in the editor. 🤦‍♀️
+///
 .editor-styles-wrapper .wp-block-query-pagination:where(
 	:not(.alignwide):not(.alignfull)
 )  {
 	max-width: var(--wp--style--global--content-size);
 }
 
-// Fixes WP's hard coded margin for this in the editor, which breaks the block
-// gap for any containing block.
+///
+/// Fixes WP's hard coded margin for this in the editor, which breaks the block
+/// gap for any containing block.
+///
 .editor-styles-wrapper .is-layout-constrained > * + .wp-block-query-pagination.block-editor-block-list__layout {
 	margin-block-start: var(--wp--style--block-gap);
 }
 
-// Remove WP's hard-coded bottom and right margin on sub-blocks.
+///
+/// Remove WP's hard-coded bottom and right margin on sub-blocks.
+///
 .wp-block-query-pagination > [class*=wp-block-query-pagination-] {
 	margin: 0;
 }
 
-// No dimensions or inner blocks layout width support for the block yet.
+///
+/// No dimensions or inner blocks layout width support for the block yet.
+///
+/// @link https://github.com/WordPress/gutenberg/issues/44879
+///
 .has-global-padding > .alignfull > .wp-block-query-pagination {
 	box-sizing: content-box;
 	padding-right: var(--wp--style--root--padding-right);

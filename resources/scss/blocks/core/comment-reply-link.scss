@@ -24,6 +24,9 @@
 // Block style variations.
 // -----------------------------------------------------------------------------
 
+///
+/// Icon style.
+///
 .wp-block-comment-reply-link.is-style-icon {
 	@include inline-icon.prefix(icon.get-url('reply'));
 }

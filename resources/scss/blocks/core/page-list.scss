@@ -17,6 +17,9 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
+///
+/// Import base list styling.
+///
 ul.wp-block-page-list {
 	@include list.flow();
 

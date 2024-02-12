@@ -9,26 +9,34 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// Fix for WP adding left/right padding to Image blocks within Gallery blocks
-// that are nested within constrained layouts. This happens when
-// `useRootPaddingAwareAlignments` is enabled in `theme.json`. Needs more testing.
+///
+/// Fix for WP adding left/right padding to Image blocks within Gallery blocks
+/// that are nested within constrained layouts. This happens when
+/// `useRootPaddingAwareAlignments` is enabled in `theme.json`.
+///
+/// @todo Needs more testing.
+///
 .has-global-padding > .wp-block-gallery.alignfull > .wp-block-image {
 	padding-left: 0;
 	padding-right: 0;
 }
 
-// WordPress hardcodes a 13px font-size for captions. At that size, captions
-// are so unreadable that they may as well not exist. 🙈
-//
-// This CSS makes it possible to set the font-size and line-height via the `
-// core/gallery` or `core/image` typography styles in `theme.json`.
+///
+/// WordPress hardcodes a 13px font-size for captions. At that size, captions
+/// are so unreadable that they may as well not exist. 🙈
+///
+/// This CSS makes it possible to set the font-size and line-height via the `
+/// core/gallery` or `core/image` typography styles in `theme.json`.
+///
 .wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
 	font-size: inherit;
 	line-height: inherit;
 }
 
-// WordPress doesn't zero out inherited margins from `styles.element.cite` in
-// `theme.json`, which breaks the positioning of the caption for gallery images.
+///
+/// WordPress doesn't zero out inherited margins from `styles.element.cite` in
+/// `theme.json`, which breaks the positioning of the caption for gallery images.
+///
 .wp-block-gallery figure.wp-block-image figcaption {
 	margin: 0;
 }
@@ -37,28 +45,37 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-// Adds a bottom border-radius to captions by default. This is a hacky method
-// to keep the caption background from overflowing the image.
+///
+/// Adds a bottom border-radius to captions by default. This is a hacky method
+/// to keep the caption background from overflowing the image when its rounded.
+///
 .wp-block-gallery .wp-block-image figcaption {
 	border-bottom-left-radius: var(--wp--custom--global--border-radius);
 	border-bottom-right-radius: var(--wp--custom--global--border-radius);
 }
 
-// Use the gallery gap for left/right padding for full-width galleries. This
-// creates consistent spacing across the entire gallery.
+///
+/// Use the gallery gap for left/right padding for full-width galleries. This
+/// creates consistent spacing across the entire gallery.
+///
 .wp-block-gallery.alignfull {
 	padding-left: var(--wp--style--unstable-gallery-gap, 0);
 	padding-right: var(--wp--style--unstable-gallery-gap, 0);
 }
 
-// Use the gallery gap for the full gallery when it has a background, keeping
-// the spacing consistent on all sides.
+///
+/// Use the gallery gap for the full gallery when it has a background, keeping
+/// the spacing consistent on all sides.
+///
 .wp-block-gallery.has-background {
 	padding: var(--wp--style--unstable-gallery-gap, 0);
 }
 
-// Overrides the core hard-coded padding for captions.
-// Note: the crazy selectors here are necessary to overrule core.
+///
+/// Overrides the core hard-coded padding for captions.
+///
+/// Note: the crazy selectors here are necessary to overrule core.
+///
 .wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
 	padding: var(--wp--preset--spacing--minus-2);
 }

@@ -12,33 +12,45 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// Add border box sizing to the block file.
-// Note: The editor has an extra wrapper that doesn't exist in the front-end, so
-// we also need to target `*__content-wrapper`.
+///
+/// Add border box sizing to the block file.
+///
+/// Note: The editor has an extra wrapper that doesn't exist in the front-end,
+/// so we also need to target `*__content-wrapper`.
+///
 .wp-block-file,
 .wp-block-file__content-wrapper {
 	box-sizing: border-box;
 }
 
-// Zero out the hard-coded resizable container margin in the editor.
+///
+/// Zero out the hard-coded resizable container margin in the editor.
+///
 .wp-block-file .components-resizable-box__container {
 	margin: 0;
 }
 
-// Zero out WP's bottom spacing on embedded media (test with PDF).
+///
+/// Zero out WP's bottom spacing on embedded media (test with PDF).
+///
 .wp-block-file__embed {
 	margin-bottom: 0;
 }
 
-// Overwrite WP's hard-coded font-size so that it inherits from its parent. Note:
-// it's impossible to set this via `theme.json`.
+///
+/// Overwrite WP's hard-coded font-size so that it inherits from its parent.
+///
+/// Note: it's impossible to set this via `theme.json`.
+///
 .wp-block-file:not(.wp-element-button) {
 	font-size: inherit;
 }
 
-// Core sets the opacity on these states for the file button for some crazy
-// reason or another. 🤪 It sets some other things too, but those can be easily
-// set via `theme.json`.
+///
+/// Core sets the opacity on these states for the file button for some crazy
+/// reason or another. 🤪 It sets some other things too, but those can be easily
+/// overwritten via `theme.json`.
+///
 .wp-block-file__button {
 	&:active,
 	&:focus,
@@ -52,9 +64,12 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-// Nicer display for the file block.
-// Note: The editor has an extra wrapper that doesn't exist in the front-end, so
-// we also need to target `*__content-wrapper`.
+///
+/// Uses flexbox for the File block for better control over the layout.
+///
+/// Note: The editor has an extra wrapper that doesn't exist in the front-end, so
+/// we also need to target `*__content-wrapper`.
+///
 .wp-block-file,
 .wp-block-file__content-wrapper {
 	display: flex;

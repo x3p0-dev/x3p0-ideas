@@ -9,27 +9,30 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// Zero out default browser spacing.
+///
+/// Zero out default browser spacing.
+///
 .wp-block-pullquote blockquote {
 	margin: 0;
 	padding: 0;
 }
 
-// Faux `blockGap` support.
+///
+/// Faux `blockGap` support.
+///
 :where(.wp-block-pullquote blockquote > *) {
 	margin-top: 0;
 	margin-bottom: 0;
 }
 
 :where(.wp-block-pullquote blockquote > * + *) {
-	margin-top: var(
-		--wp--custom--block-gap--pullquote,
-		var(--wp--style--block-gap)
-	);
+	margin-top: var(--wp--custom--gap, var(--wp--style--block-gap));
 }
 
-// Cite doesn't have a standalone block-level wrapper, so it should be a block
-// element itself.
+///
+/// Cite doesn't have a standalone block-level wrapper, so it should be a block
+/// element itself.
+///
 .wp-block-pullquote blockquote > cite {
 	display: block;
 }
@@ -38,6 +41,9 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
+///
+/// Adds text balancing and quotes.
+///
 .wp-block-pullquote blockquote {
 	text-wrap: balance;
 
@@ -55,7 +61,9 @@
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-// Mark top style.
+///
+/// The mark top style adds a quotation mark above the quote.
+///
 .wp-block-pullquote.is-style-mark-top,
 .editor-styles-wrapper .wp-block-pullquote.is-style-mark-top {
 	padding: 0;
@@ -66,12 +74,12 @@
 	padding: 1em 0 0;
 	display: flex;
 	flex-direction: column;
-}
 
-.wp-block-pullquote.is-style-mark-top blockquote::before {
-	content: open-quote;
-	color: currentColor;
-	font-size: 4em;
-	line-height: 0.25;
-	font-weight: 700;
+	&::before {
+		content: open-quote;
+		color: currentColor;
+		font-size: 4em;
+		line-height: 0.25;
+		font-weight: 700;
+	}
 }

@@ -9,21 +9,27 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// Add default padding to the Cover block and to the inner container when it has
-// global padding.
+///
+/// Add default padding to the Cover block and to the inner container when it has
+/// global padding.
+///
 .wp-block-cover,
 .wp-block-cover:where(:not([style*=padding])) .wp-block-cover__inner-container.has-global-padding {
 	padding: var(--wp--style--block-gap);
 }
 
-// Remove the padding from the Cover block when the inner container has global
-// padding. Paired with the above rule. 👆
+///
+/// Remove the padding from the Cover block when the inner container has global
+/// padding. Paired with the above rule. 👆
+///
 .wp-block-cover:has(.wp-block-cover__inner-container.has-global-padding) {
 	padding: 0;
 }
 
-// If a cover block has a nav menu in it that is opened, give it a high z-index
-// to ensure the menu pops over the site toolbar.
+///
+/// If a cover block has a nav menu in it that is opened, give it a high z-index
+/// to ensure the menu pops over the WordPress toolbar.
+///
 .wp-block-cover:has(.is-menu-open) {
 	z-index: 999999;
 }
@@ -32,7 +38,9 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-// Add a default text shadow to Headings inside the Cover.
+///
+/// Add a default text shadow to Headings inside the Cover.
+///
 :where(.wp-block-cover .wp-block-heading) {
 	text-shadow: var(--wp--custom--text-shadow--sm);
 }

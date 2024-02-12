@@ -9,7 +9,11 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// Make sure the link inherits user typography settings.
+///
+/// Make sure the link inherits user typography settings.
+///
+/// @todo Maybe remove. Is this still needed?
+///
 .wp-block-button[style*=font-weight] .wp-block-button__link { font-weight: inherit; }
 .wp-block-button[style*=font-style] .wp-block-button__link { font-style: inherit; }
 

@@ -13,13 +13,17 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// Zero out core's bottom margin.
-:where( .wp-block-columns ) {
+///
+/// Zero out core's bottom margin.
+///
+:where(.wp-block-columns) {
 	margin-bottom: 0;
 }
 
-// Zero out core's hardcoded padding when the block has a background.
-:where( .wp-block-columns.has-background ) {
+///
+/// Zero out core's hardcoded padding when the block has a background.
+///
+:where(.wp-block-columns.has-background) {
 	padding: 0;
 }
 
@@ -46,30 +50,30 @@
 ///
 .wp-block-columns-is-layout-flex.is-style-grid-auto {
 	display: grid !important;
-	grid-template-columns: repeat( 1, 1fr );
+	grid-template-columns: repeat(1, 1fr);
 
 	// Break into two columns when there are at least two nested columns.
-	@media ( min-width: 48rem ) {
-		&:has( > .wp-block-column:nth-child( 2 ) ) {
-			grid-template-columns: repeat( 2, 1fr );
+	@media (min-width: 48rem) {
+		&:has(> .wp-block-column:nth-child(2)) {
+			grid-template-columns: repeat(2, 1fr);
 		}
 	}
 
 	// Break into three columns when there are at least three nested columns.
-	@media ( min-width: 64rem ) {
-		&:has( > .wp-block-column:nth-child( 5 ) ) {
-			grid-template-columns: repeat( 3, 1fr );
+	@media (min-width: 64rem) {
+		&:has(> .wp-block-column:nth-child(5)) {
+			grid-template-columns: repeat(3, 1fr);
 		}
 	}
 
 	// Allow any number of columns at equal width.
-	@media ( min-width: 80rem ) {
-		grid-auto-columns: minmax( 0, 1fr );
+	@media (min-width: 80rem) {
+		grid-auto-columns: minmax(0, 1fr);
 		grid-auto-flow: column;
 	}
 
 	&.is-not-stacked-on-mobile {
-		grid-auto-columns: minmax( 0, 1fr );
+		grid-auto-columns: minmax(0, 1fr);
 		grid-auto-flow: column;
 	}
 }
@@ -84,7 +88,7 @@
 /// to use the Media & Text block, but that case is only for a two-colum image
 /// and text section.
 ///
-@media ( max-width: wp.$break-medium ) {
+@media (max-width: wp.$break-medium) {
 	.wp-block-columns.is-style-reverse-stack {
 		flex-wrap: wrap-reverse !important;
 	}

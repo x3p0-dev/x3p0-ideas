@@ -15,17 +15,18 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-// Need to add the default border-radius to the link itself, which may have an
-// outline style. However, it can't inherit the image's radius, so it needs to
-// use the set default.
+///
+/// Need to add the default border-radius to the link itself, which may have an
+/// outline style. However, it can't inherit the image's radius, so it needs to
+/// use the set default.
+///
 .wp-block-post-featured-image a:has(img) {
 	border-radius: var(--wp--custom--global--border-radius);
 }
 
-// -----------------------------------------------------------------------------
-// Gradient background.
-// -----------------------------------------------------------------------------
-
+///
+/// Gradient background handling.
+///
 figure.wp-block-post-featured-image[class*=-gradient-background] {
 	background-size: 0 0 !important;
 

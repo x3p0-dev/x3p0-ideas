@@ -15,7 +15,9 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-// Ensures that `cqi` values are based on their container, not the viewport.
+///
+/// Ensures that `cqi` values are based on their container, not the viewport.
+///
 .wp-block-media-text__content {
 	container-type: inline-size;
 }

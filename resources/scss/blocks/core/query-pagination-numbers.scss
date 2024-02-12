@@ -9,7 +9,9 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// Adds some baseline layout to pagination numbers.
+///
+/// Adds some baseline layout to pagination numbers.
+///
 .wp-block-query-pagination-numbers {
 	display: flex;
 	gap: var(--wp--custom--gap, var(--wp--preset--spacing--minus-2));
@@ -19,7 +21,9 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-// Hide the pagination numbers on small screens.
+///
+/// Hide the pagination numbers on small screens.
+///
 @media (max-width: 40rem) {
 	.wp-block-query-pagination-numbers {
 		display: none;

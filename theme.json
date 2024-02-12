@@ -1417,6 +1417,14 @@
 					}
 				}
 			},
+			"core/post-comments-form": {
+				"elements": {
+					"button": {
+						"shadow": "var(--wp--preset--shadow--md) !important"
+					}
+				},
+				"css": "& .required {\n\tcolor: var(--wp--preset--color--primary-700);\n}"
+			},
 			"core/post-featured-image": {
 				"border": {
 					"radius": "var:custom|global|border-radius"

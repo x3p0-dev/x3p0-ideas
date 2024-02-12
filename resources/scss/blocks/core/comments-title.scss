@@ -9,12 +9,16 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
+///
 /// Box sizing.
+///
 .wp-block-comments-title {
 	box-sizing: border-box;
 }
 
+///
 /// Remove core's default padding.
+///
 .wp-block-comments-title.has-background {
 	padding: 0;
 }

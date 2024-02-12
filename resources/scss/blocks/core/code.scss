@@ -9,7 +9,9 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// WordPress dumps styles on the `<code>` element instead of the `<pre>`. 🤮
+///
+/// WordPress dumps styles on the `<code>` element instead of the `<pre>`. 🤮
+///
 .wp-block-code {
 	overflow: auto;
 	word-wrap: normal;

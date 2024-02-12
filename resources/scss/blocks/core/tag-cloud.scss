@@ -63,6 +63,14 @@
 		@include inline-icon.prefix(icon.get-url('tag'));
 		font-size: inherit !important;
 		font-weight: inherit !important;
+
+		&:has(.tag-link-count) {
+			text-decoration-line: none;
+		}
+
+		&:has(.tag-link-count):where(:hover, :focus) {
+			text-decoration-line: underline;
+		}
 	}
 
 	&.taxonomy-category a::before {

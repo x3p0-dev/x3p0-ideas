@@ -11,8 +11,12 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// Row blocks within Stack blocks lose their width and collapse. This breaks
-// the content justification set for the nested Row.
+///
+/// Row blocks within Stack blocks lose their width and collapse. This breaks
+/// the content justification set for the nested Row.
+///
+/// @todo Investigate further.
+///
 .wp-block-group-is-layout-flex.is-vertical > :where(.wp-block-group-is-layout-flex:not(.is-vertical)) {
 	width: 100%;
 }
@@ -21,9 +25,11 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-// Ensures that `cqi` values are based on their container, not the viewport. For
-// the Group block's grid layout, we need to specifically target the nested
-// elements because they become the container.
+///
+/// Ensures that `cqi` values are based on their container, not the viewport. For
+/// the Group block's grid layout, we need to specifically target the nested
+/// elements because they become the container.
+///
 .wp-block-group-is-layout-grid > * {
 	container-type: inline-size;
 }

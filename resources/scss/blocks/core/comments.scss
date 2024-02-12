@@ -9,7 +9,9 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// Faux `blockGap` support.
+///
+/// Faux `blockGap` support.
+///
 .wp-block-comments > * {
 	margin-block-start: 0;
 	margin-block-end: 0;

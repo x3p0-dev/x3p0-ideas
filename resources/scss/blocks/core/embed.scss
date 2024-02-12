@@ -15,6 +15,12 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
+///
+/// Give 100% width to WordPress site embeds.
+///
+/// @todo The `.wp-embedded-content` class doesn't exist, so we need to
+/// investigate whether we should give all embeds this same treatment.
+///
 .wp-block-embed.is-type-wp-embed .wp-embedded-content {
 	width: 100%;
 }

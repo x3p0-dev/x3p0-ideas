@@ -13,8 +13,11 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// The login form is pretty much a hot mess at this point.
-// @link https://github.com/WordPress/gutenberg/issues/50466
+///
+/// The login form is pretty much a hot mess at this point.
+///
+/// @link https://github.com/WordPress/gutenberg/issues/50466
+///
 .wp-block-loginout form {
 	input:not([type=submit]):not([type=checkbox]):not([type=hidden]) {
 		box-sizing: border-box;
@@ -23,7 +26,11 @@
 	}
 }
 
-// Navigation settings are not applied to the login/out link.
+///
+/// Navigation settings are not applied to the login/out link.
+///
+/// @todo Investigate why this isn't working correctly.
+///
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-loginout  {
 	align-items: var(--navigation-layout-justification-setting, initial);
 	display: flex;
@@ -34,14 +41,15 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
+///
+/// Use grid to handle the form layout.
+///
 .wp-block-loginout form {
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
-	gap: var(
-		--wp--custom--block-gap--comments-form,
-		var(--wp--preset--spacing--base)
-	);
+	gap: var(--wp--custom--gap, var(--wp--preset--spacing--base));
 
+	// Zero out core's margins.
 	> * {
 		margin: 0;
 	}
@@ -51,10 +59,16 @@
 // Block style variations.
 // -----------------------------------------------------------------------------
 
+///
+/// Button style applies only when using the link form of this block.
+///
 .wp-block-loginout.is-style-button:not(.has-login-form) a {
 	@include inline-button.medium();
 }
 
+///
+/// The icon block style adds icons to either the link or the form elements.
+///
 .wp-block-loginout.is-style-icon {
 
 	&:not(.has-login-form) {

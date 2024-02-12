@@ -9,33 +9,44 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// Zero out potential spacing on list items. WordPress puts the post in an
-// unordered list, so other styles on `<li>` items easily affect this.
-:where(.wp-block-post-template > .wp-block-post) {
-	margin: 0;
-	padding: 0;
-}
-
-// Zero out padding when background is applied.
+///
+/// Zero out padding when background is applied.
+///
 .wp-block-post-template.has-background {
 	padding: 0;
 }
 
-// Ensure list styling doesn't overrule the post template.
+///
+/// Ensure list styling doesn't overrule the post template.
+///
 .wp-block-post-template {
 	list-style: none !important;
+}
+
+///
+/// Zero out potential spacing on list items. WordPress puts the post in an
+/// unordered list, so other styles on `<li>` items easily affect this.
+///
+:where(.wp-block-post-template > .wp-block-post) {
+	margin: 0;
+	padding: 0;
 }
 
 // -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-// Ensures that `cqi` values are based on their container, not the viewport.,
+///
+/// Ensures that `cqi` values are based on their container, not the viewport.
+///
 .wp-block-post-template-is-layout-grid > .wp-block-post,
 .wp-block-post-template.is-flex-container > .wp-block-post  {
 	container-type: inline-size;
 }
 
+///
+/// Breakpoint handling that better matches the theme.
+///
 .wp-block-query .wp-block-post-template.is-layout-grid {
 	grid-template-columns: repeat(var(--col-count, 1), 1fr) !important;
 }
@@ -77,12 +88,12 @@
 // -----------------------------------------------------------------------------
 
 ///
-// The flex style brings back the OG flexbox handling of Query Loop / Post
-// Template blocks. The biggest difference between the two is that CSS grid
-// maintains a consistent column count when there is an uneven number of posts,
-// which is desirable in many situations. But CSS flex allows the bottom row to
-// fill out any leftover space.
-//
+/// The flex style brings back the OG flexbox handling of Query Loop / Post
+/// Template blocks. The biggest difference between the two is that CSS grid
+/// maintains a consistent column count when there is an uneven number of posts,
+/// which is desirable in many situations. But CSS flex allows the bottom row to
+/// fill out any leftover space.
+///
 .wp-block-post-template.is-style-flex {
 	display: flex !important;
 	flex-wrap: wrap;

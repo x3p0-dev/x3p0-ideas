@@ -25,10 +25,16 @@
 // Block style variations.
 // -----------------------------------------------------------------------------
 
+///
+/// Button style.
+///
 .wp-block-navigation .wp-block-home-link.is-style-button .wp-block-home-link__content {
 	@include inline-button.medium();
 }
 
+///
+/// Icon style.
+///
 .wp-block-home-link.is-style-icon .wp-block-home-link__content {
 	@include inline-icon.prefix( icon.get-url( 'home' ) );
 }

@@ -1,6 +1,10 @@
 ////
 /// Post Comments Form block CSS.
 ///
+/// Note: The comment form input wrappers do not have any classes in the editor:
+/// e.g., `<p class="comment-form-comment">` is simply `<p>`. But they are
+/// correct on the front end.
+///
 /// @author Justin Tadlock <justintadlock@gmail.com>
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
@@ -13,29 +17,21 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// Note: The comment form input wrappers do not have any classes in the editor:
-// e.g., `<p class="comment-form-comment">` is simply `<p>`. But they are
-// correct on the front end.
-
-// Fixes misaligned checkbox and label when the label wraps two or more lines.
-// This is because core uses centered alignment.
+///
+/// Fixes misaligned checkbox and label when the label wraps two or more lines.
+/// This is because core uses centered alignment.
+///
 .wp-block-post-comments-form .comment-form-cookies-consent {
 	align-items: baseline;
-}
-
-// WP hardcodes a zeroed out box-shadow, overruling the `shadow` property set
-// in `theme.json` on the `button` element.
-//
-// @todo move this to general form handling.
-.wp-block-post-comments-form input[type=submit] {
-	box-shadow: var(--wp--custom--global--shadow);
 }
 
 // -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-// Faux `blockGap` support.
+///
+/// Faux `blockGap` support.
+///
 .wp-block-post-comments-form > * {
 	margin-block-start: 0;
 	margin-block-end: 0;
@@ -43,20 +39,16 @@
 
 .wp-block-post-comments-form > * + *,
 .wp-block-post-comments-form .comment-reply-title + * {
-	margin-block-start: var(
-		--wp--custom--block-gap--comments-form,
-		var(--wp--preset--spacing--base)
-	);
+	margin-block-start: var(--wp--custom--gap, var(--wp--preset--spacing--base));
 }
 
-// Creates a grid display for the comment form.
+///
+/// Creates a grid display for the comment form.
+///
 .wp-block-post-comments-form .comment-form {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	gap: var(
-		--wp--custom--block-gap--comments-form,
-		var(--wp--preset--spacing--base)
-	);
+	gap: var(--wp--custom--gap, var(--wp--preset--spacing--base));
 
 	// By default, all items span the full width of the grid.
 	> * {
@@ -71,8 +63,10 @@
 	}
 }
 
-// Import label styling. We must specifically target the default field labels to
-// overrule some core styles (like label margins).
+///
+/// Import label styling. We must specifically target the default field labels
+/// to overrule some core styles (like label margins).
+///
 .wp-block-post-comments-form label,
 .wp-block-post-comments-form .comment-form-author label,
 .wp-block-post-comments-form .comment-form-email label,
@@ -80,23 +74,21 @@
 	@include form.label();
 }
 
-// Import form input styling.
+///
+/// Import form input styling.
+///
 .wp-block-post-comments-form input:not([type=submit]):not([type=checkbox]),
 .wp-block-post-comments-form textarea {
 	@include form.input();
-}
-
-// Use negative color (generally red) for required marker.
-.wp-block-post-comments-form .required {
-	color: var(--wp--preset--color--primary-700);
 }
 
 // -----------------------------------------------------------------------------
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-// The comment form is currently a single block. Therefore, we cannot add
-// individual block styles for each of the form inputs.
+///
+/// Adds icons to the various form elements.
+///
 .wp-block-post-comments-form.is-style-icons {
 
 	.comment-form-comment,
