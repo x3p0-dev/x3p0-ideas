@@ -374,6 +374,19 @@ class Blocks implements Bootable
 	}
 
 	/**
+	 * Adds missing wrapping `<li>` to the Loginout block when used in a
+	 * navigation menu.
+	 *
+	 * @hook  block_core_navigation_listable_blocks
+	 * @since 1.0.0
+	 * @link  https://github.com/WordPress/gutenberg/pull/55551
+	 */
+	public function setListItemWrapper(array $blocks): array
+	{
+		return [ 'core/loginout' ] + $blocks;
+	}
+
+	/**
 	 * Filter on the `widget_archives_args` hook, which is also used in the
 	 * Archives block to pass the arguments to the `wp_get_archives()`
 	 * function. We're using it here to give a wrapper `<div>` to individual

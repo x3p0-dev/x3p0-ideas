@@ -26,17 +26,6 @@
 	}
 }
 
-///
-/// Navigation settings are not applied to the login/out link.
-///
-/// @todo Investigate why this isn't working correctly.
-///
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-loginout  {
-	align-items: var(--navigation-layout-justification-setting, initial);
-	display: flex;
-	flex-direction: column;
-}
-
 // -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
@@ -71,10 +60,10 @@
 ///
 .wp-block-loginout.is-style-icon {
 
-	&:not(.has-login-form) {
+	&:not(.has-login-form) a {
 		@include inline-icon.prefix(icon.get-url('lock'));
 
-		&.logged-in::before {
+		&.logged-in a::before {
 			@include inline-icon.modify(icon.get-url('lock-open'));
 		}
 	}
