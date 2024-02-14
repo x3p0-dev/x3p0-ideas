@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace X3P0\Ideas;
 
 use WP_Block_Type_Registry;
+use X3P0\Ideas\Bindings;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\BlockRules;
 use X3P0\Ideas\Views\Engine;
@@ -43,6 +44,7 @@ function theme(string $component = '')
 		// Bind instances of the theme's component classes that need to
 		// be booted when the theme launches.
 		$bindings = [
+			'bindings'   => new Bindings\Component([ Bindings\Media::class ]),
 			'blocks'     => new Blocks($block_types, $block_rules, $view_engine),
 			'editor'     => new Editor(),
 			'embeds'     => new Embeds(),

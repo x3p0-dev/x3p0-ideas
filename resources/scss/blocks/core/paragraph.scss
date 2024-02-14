@@ -58,6 +58,19 @@ p {
 	}
 }
 
+///
+/// Image metadata paragraphs for use with the Block Bindings API. Eventually,
+/// we'll be able to remove this when the Group block supports bindings. Right
+/// now, we're stuck with a custom class in the Paragraph block and nested
+/// `<span>` elements.
+///
+.media-data {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
 // -----------------------------------------------------------------------------
 // Block style variations.
 // -----------------------------------------------------------------------------

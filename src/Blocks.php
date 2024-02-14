@@ -361,7 +361,7 @@ class Blocks implements Bootable
 	 */
 	private function attachmentViewNames(string $name, int $post_id): array
 	{
-		foreach ([ 'image', 'video', 'audio', 'pdf' ] as $type) {
+		foreach ([ 'video', 'audio', 'pdf' ] as $type) {
 			if (wp_attachment_is($type, $post_id)) {
 				return [
 					"attachment/{$name}-{$type}",
