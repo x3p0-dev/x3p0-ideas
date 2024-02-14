@@ -19,6 +19,8 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas\Tools;
 
+use WP_Block;
+
 class BlockRules
 {
 	/**
@@ -29,6 +31,7 @@ class BlockRules
 	 */
 	private const RULE_METHODS = [
 		'@if'     => 'checkIf',
+		'@ifAttr' => 'checkIfAttr',
 		'@unless' => 'checkUnless',
 		'@user'   => 'checkUser'
 	];
@@ -39,15 +42,15 @@ class BlockRules
 	 *
 	 * @since 1.0.0
 	 */
-	public function isPublic(array $block): bool
+	public function isPublic(array $block, WP_Block $instance): bool
 	{
 		foreach (self::RULE_METHODS as $rule => $method) {
 			if (isset($block['attrs'][ $rule ])) {
 				$value = $block['attrs'][ $rule ];
 
 				return is_array($value)
-					? $this->$method(array_map('wp_strip_all_tags', $value))
-					: $this->$method(wp_strip_all_tags($value));
+					? $this->$method(array_map('wp_strip_all_tags', $value), $block, $instance)
+					: $this->$method(wp_strip_all_tags($value), $block, $instance);
 			}
 		}
 
@@ -60,10 +63,21 @@ class BlockRules
 	 * @since 1.0.0
 	 * @param string|array $condition
 	 */
-	protected function checkIf($condition): bool
+	protected function checkIf($condition, array $block, WP_Block $instance): bool
 	{
 		$callable = is_callable($condition, false, $callback);
 		return $callable ? boolval($callback()) : true;
+	}
+
+	/**
+	 * Show the block if the attribute has a value.
+	 *
+	 * @since 1.0.0
+	 * @param string|array $condition
+	 */
+	protected function checkIfAttr(string $attr, array $block, WP_Block $instance): bool
+	{
+		return ! empty($instance->attributes[$attr]);
 	}
 
 	/**
@@ -72,7 +86,7 @@ class BlockRules
 	 * @since 1.0.0
 	 * @param string|array $condition
 	 */
-	protected function checkUnless($condition): bool
+	protected function checkUnless($condition, array $block, WP_Block $instance): bool
 	{
 		$callable = is_callable($condition, false, $callback);
 		return $callable ? ! boolval($callback()) : true;
@@ -84,7 +98,7 @@ class BlockRules
 	 * @since 1.0.0
 	 * @param string|int|bool $user
 	 */
-	protected function checkUser($user): bool
+	protected function checkUser($user, array $block, WP_Block $instance): bool
 	{
 		$logged_in = is_user_logged_in();
 

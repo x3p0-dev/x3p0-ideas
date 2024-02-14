@@ -44,6 +44,7 @@ $fields = [
 		<?php foreach ($fields as $key => $label) : ?>
 
 			<!-- wp:paragraph {
+				"@ifAttr":"content",
 				"metadata":{
 					"bindings":{
 						"content":{

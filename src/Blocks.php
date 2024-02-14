@@ -224,9 +224,12 @@ class Blocks implements Bootable
 	 * @hook  render_block  last
 	 * @since 1.0.0
 	 */
-	public function renderByRule(string $content, array $block): string
-	{
-		return $this->rules->isPublic($block) ? $content : '';
+	public function renderByRule(
+		string $content,
+		array $block,
+		WP_Block $instance
+	): string {
+		return $this->rules->isPublic($block, $instance) ? $content : '';
 	}
 
 	/**
