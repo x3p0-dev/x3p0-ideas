@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas;
 
+use WP_Block_Bindings_Registry;
 use WP_Block_Type_Registry;
 use X3P0\Ideas\Bindings;
 use X3P0\Ideas\Contracts\Bootable;
@@ -37,14 +38,17 @@ function theme(string $component = '')
 	// If there are no bound components, register and boot them.
 	if ([] === $bindings) {
 		// Get dependencies.
-		$block_types = WP_Block_Type_Registry::get_instance();
-		$block_rules = new BlockRules();
-		$view_engine = new Engine();
+		$block_bindings = WP_Block_Bindings_Registry::get_instance();
+		$block_types    = WP_Block_Type_Registry::get_instance();
+		$block_rules    = new BlockRules();
+		$view_engine    = new Engine();
+
+		$binding_sources = [ Bindings\Media::class ];
 
 		// Bind instances of the theme's component classes that need to
 		// be booted when the theme launches.
 		$bindings = [
-			'bindings'   => new Bindings\Component([ Bindings\Media::class ]),
+			'bindings'   => new Bindings\Component($block_bindings, $binding_sources),
 			'blocks'     => new Blocks($block_types, $block_rules, $view_engine),
 			'editor'     => new Editor(),
 			'embeds'     => new Embeds(),

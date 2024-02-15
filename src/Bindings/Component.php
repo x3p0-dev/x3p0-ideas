@@ -14,12 +14,20 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas\Bindings;
 
+use WP_Block_Bindings_Registry;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\HookAnnotation;
 
 class Component implements Bootable
 {
 	use HookAnnotation;
+
+	/**
+	 * Stores the instance of the core block bindings
+	 *
+	 * @since 1.0.0
+	 */
+	protected WP_Block_Bindings_Registry $bindings;
 
 	/**
 	 * Stores an array of `Binding` classes to register the bindings sources.
@@ -33,9 +41,12 @@ class Component implements Bootable
 	 *
 	 * @since 1.0.0
 	 */
-	public function __construct(array $sources)
-	{
-		$this->sources = $sources;
+	public function __construct(
+		WP_Block_Bindings_Registry $bindings,
+		array $sources
+	) {
+		$this->bindings = $bindings;
+		$this->sources  = $sources;
 	}
 
 	/**
@@ -57,13 +68,13 @@ class Component implements Bootable
 	 */
 	public function register(): void
 	{
-		foreach ($this->sources as $source) {
-			$binding_source = new $source();
+		foreach ($this->sources as $class) {
+			$source = new $class();
 
-			register_block_bindings_source($binding_source->name(), [
-				'label'              => $binding_source->label(),
-				'get_value_callback' => [ $binding_source, 'callback' ],
-				'uses_context'       => $binding_source->usesContext()
+			$this->bindings->register($source->name(), [
+				'label'              => $source->label(),
+				'get_value_callback' => [ $source, 'callback' ],
+				'uses_context'       => $source->usesContext()
 			]);
 		}
 	}
