@@ -46,7 +46,7 @@ class Templates implements Bootable
 		$titles = [
 			'404'        => _x('Error 404',        'Template name', 'x3p0-ideas'),
 			'archive'    => _x('Archive',          'Template name', 'x3p0-ideas'),
-			'attachment' => _x('Media Attachment', 'Template name', 'x3p0-ideas'),
+			'attachment' => _x('Media',            'Template name', 'x3p0-ideas'),
 			'author'     => _x('Author Archive',   'Template name', 'x3p0-ideas'),
 			'category'   => _x('Category Archive', 'Template name', 'x3p0-ideas'),
 			'date'       => _x('Date Archive',     'Template name', 'x3p0-ideas'),
@@ -79,12 +79,12 @@ class Templates implements Bootable
 	public function registerTypes(array $types): array
 	{
 		$types['audio'] ??= [
-			'title'       => _x('Audio Attachment', 'Template name', 'x3p0-ideas'),
+			'title'       => _x('Media: Audio', 'Template name', 'x3p0-ideas'),
 			'description' => __('Displays when a visitor views the dedicated page that exists for an audio attachment.', 'x3p0-ideas'),
 		];
 
 		$types['image'] ??= [
-			'title'       => _x('Image Attachment', 'Template name', 'x3p0-ideas'),
+			'title'       => _x('Media: Image', 'Template name', 'x3p0-ideas'),
 			'description' => __('Displays when a visitor views the dedicated page that exists for an image attachment.', 'x3p0-ideas'),
 		];
 
@@ -94,7 +94,7 @@ class Templates implements Bootable
 		];
 
 		$types['video'] ??= [
-			'title'       => _x('Video Attachment', 'Template name', 'x3p0-ideas'),
+			'title'       => _x('Media: Video', 'Template name', 'x3p0-ideas'),
 			'description' => __('Displays when a visitor views the dedicated page that exists for a video attachment.', 'x3p0-ideas'),
 		];
 

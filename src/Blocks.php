@@ -347,14 +347,15 @@ class Blocks implements Bootable
 		$post_id = absint($instance->context['postId']);
 		$data    = [ 'post_id' => $post_id ];
 
-		// Get the media and meta view names.
-		$media = $this->attachmentViewNames('media', $post_id);
-		$meta  = $this->attachmentViewNames('meta', $post_id);
+		// Get the media view names.
+		$media = $this->attachmentViewNames(
+			'media',
+			[ 'video', 'audio', 'pdf' ],
+			$post_id
+		);
 
 		// Renders the media + block content + meta.
-		return $this->views->renderIf($media, $data)
-			. $content
-			. $this->views->renderIf($meta, $data);
+		return $this->views->renderIf($media, $data) . $content;
 	}
 
 	/**
@@ -362,9 +363,9 @@ class Blocks implements Bootable
 	 *
 	 * @since 1.0.0
 	 */
-	private function attachmentViewNames(string $name, int $post_id): array
+	private function attachmentViewNames(string $name, array $types, int $post_id): array
 	{
-		foreach ([ 'video', 'audio', 'pdf' ] as $type) {
+		foreach ($types as $type) {
 			if (wp_attachment_is($type, $post_id)) {
 				return [
 					"attachment/{$name}-{$type}",
