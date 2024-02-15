@@ -62,7 +62,8 @@ class Component implements Bootable
 
 			register_block_bindings_source($binding_source->name(), [
 				'label'              => $binding_source->label(),
-				'get_value_callback' => [ $binding_source, 'callback' ]
+				'get_value_callback' => [ $binding_source, 'callback' ],
+				'uses_context'       => $binding_source->usesContext()
 			]);
 		}
 	}

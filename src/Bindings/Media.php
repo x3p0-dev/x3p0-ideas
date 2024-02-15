@@ -53,6 +53,16 @@ class Media
 	}
 
 	/**
+	 * Returns the context.
+	 *
+	 * @since 1.0.0
+	 */
+	public function usesContext(): array
+	{
+		return [ 'postType', 'postId' ];
+	}
+
+	/**
 	 * Returns media data based on the bound attribute.
 	 *
 	 * @since 1.0.0
