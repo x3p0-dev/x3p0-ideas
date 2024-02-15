@@ -30,10 +30,10 @@ class BlockRules
 	 * @todo  Type hint with PHP 8.3+ requirement.
 	 */
 	private const RULE_METHODS = [
-		'@if'     => 'checkIf',
-		'@ifAttr' => 'checkIfAttr',
-		'@unless' => 'checkUnless',
-		'@user'   => 'checkUser'
+		'if'     => 'checkIf',
+		'ifAttr' => 'checkIfAttr',
+		'unless' => 'checkUnless',
+		'user'   => 'checkUser'
 	];
 
 	/**
@@ -44,9 +44,18 @@ class BlockRules
 	 */
 	public function isPublic(array $block, WP_Block $instance): bool
 	{
-		foreach (self::RULE_METHODS as $rule => $method) {
-			if (isset($block['attrs'][ $rule ])) {
-				$value = $block['attrs'][ $rule ];
+		if (
+			! isset($block['attrs']['metadata']['@rules'])
+			|| ! is_array($block['attrs']['metadata']['@rules'])
+		) {
+			return true;
+		}
+
+		$rules = $block['attrs']['metadata']['@rules'];
+
+		foreach ($rules as $rule => $value) {
+			if (isset(self::RULE_METHODS[$rule])) {
+				$method = self::RULE_METHODS[$rule];
 
 				return is_array($value)
 					? $this->$method(array_map('wp_strip_all_tags', $value), $block, $instance)
