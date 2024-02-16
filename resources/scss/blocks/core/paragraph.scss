@@ -67,8 +67,13 @@ p {
 .media-data {
 	display: flex;
 	flex-wrap: nowrap;
-	justify-content: space-between;
 	align-items: center;
+
+	// Only justify with space-between if we have the inner elements. This
+	// is to avoid the right alignment of the placeholder text in the editor.
+	&:has(.media-data__label, .media-data__content) {
+		justify-content: space-between;
+	}
 }
 
 // -----------------------------------------------------------------------------
