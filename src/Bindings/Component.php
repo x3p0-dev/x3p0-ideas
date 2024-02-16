@@ -15,7 +15,7 @@ declare(strict_types=1);
 namespace X3P0\Ideas\Bindings;
 
 use WP_Block_Bindings_Registry;
-use X3P0\Ideas\Contracts\Bootable;
+use X3P0\Ideas\Contracts\{BindingsSource, Bootable};
 use X3P0\Ideas\Tools\HookAnnotation;
 
 class Component implements Bootable
@@ -26,13 +26,15 @@ class Component implements Bootable
 	 * Stores the instance of the core block bindings
 	 *
 	 * @since 1.0.0
+	 * @todo  Promote via the constructor with PHP 8.0+ requirement.
 	 */
 	protected WP_Block_Bindings_Registry $bindings;
 
 	/**
-	 * Stores an array of `Binding` classes to register the bindings sources.
+	 * An array of `BlockBindings` classes to register the bindings sources.
 	 *
 	 * @since 1.0.0
+	 * @todo  Promote via the constructor with PHP 8.0+ requirement.
 	 */
 	protected array $sources = [];
 
@@ -40,6 +42,7 @@ class Component implements Bootable
 	 * Sets up the initial object state.
 	 *
 	 * @since 1.0.0
+	 * @todo  Promote params to properties with PHP 8.0+ requirement.
 	 */
 	public function __construct(
 		WP_Block_Bindings_Registry $bindings,
@@ -68,14 +71,17 @@ class Component implements Bootable
 	 */
 	public function register(): void
 	{
-		foreach ($this->sources as $class) {
-			$source = new $class();
+		foreach ($this->sources as $binding_source) {
+			if (! is_subclass_of($binding_source, BindingsSource::class)) {
+				continue;
+			}
 
-			$this->bindings->register($source->name(), [
-				'label'              => $source->label(),
-				'get_value_callback' => [ $source, 'callback' ],
-				'uses_context'       => $source->usesContext()
-			]);
+			$source = new $binding_source();
+
+			$this->bindings->register(
+				$source->name(),
+				$source->options()
+			);
 		}
 	}
 }

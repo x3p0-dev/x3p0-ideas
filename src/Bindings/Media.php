@@ -14,9 +14,10 @@ declare(strict_types=1);
 namespace X3P0\Ideas\Bindings;
 
 use WP_Block;
+use X3P0\Ideas\Contracts\BindingsSource;
 use X3P0\Ideas\Tools\MediaMeta;
 
-class Media
+class Media implements BindingsSource
 {
 	/**
 	 * Stores the post ID.
@@ -33,40 +34,37 @@ class Media
 	private array $meta = [];
 
 	/**
-	 * Returns the block bindings source name.
+	 * Returns the name of the bindings source.
 	 *
 	 * @since 1.0.0
 	 */
+	#[\Override]
 	public function name(): string
 	{
 		return 'x3p0/media';
 	}
 
 	/**
-	 * Returns the block bindings source label.
+	 * Returns the bindings source registration arguments.
 	 *
 	 * @since 1.0.0
 	 */
-	public function label(): string
- 	{
-		return __('Media Data', 'x3p0-ideas');
-	}
-
-	/**
-	 * Returns the context.
-	 *
-	 * @since 1.0.0
-	 */
-	public function usesContext(): array
+	#[\Override]
+	public function options(): array
 	{
-		return [ 'postType', 'postId' ];
+		return [
+			'label'              => __('Media Data', 'x3p0-ideas'),
+			'uses_context'       => [ 'postType', 'postId'],
+			'get_value_callback' => [ $this, 'callback' ]
+		];
 	}
 
 	/**
 	 * Returns media data based on the bound attribute.
 	 *
-	 * @since 1.0.0
+	 * @since  1.0.0
 	 * @return mixed
+	 * @todo   Add `mixed` return type with PHP 8.0+ requirement.
 	 */
 	public function callback(array $args, WP_Block $block, string $name)
 	{
