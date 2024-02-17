@@ -134,7 +134,7 @@ class Media implements BindingsSource
 			return false;
 		}
 
-		$meta = $this->meta[ $this->post_id ] ?? new MediaMeta($this->post_id);
+		$meta = $this->meta[ $this->post_id ] ?? new MediaMeta(get_post($this->post_id));
 
 		$data = $meta->render($args['key']);
 
