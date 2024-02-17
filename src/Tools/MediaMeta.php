@@ -208,12 +208,12 @@ class MediaMeta
 		$width  = absint($this->get('width'));
 		$height = absint($this->get('height'));
 
-		return ! $width || ! $height ? '' : sprintf(
+		return ! $width || ! $height ? '' : esc_html(sprintf(
 			// Translators: Media dimensions - 1 is width and 2 is height.
-			esc_html__('%1$s &#215; %2$s', 'x3p0-ideas'),
-			esc_html(number_format_i18n($width)),
-			esc_html(number_format_i18n($height))
-		);
+			__('%1$s &#215; %2$s', 'x3p0-ideas'),
+			number_format_i18n($width),
+			number_format_i18n($height)
+		));
 	}
 
 	/**
