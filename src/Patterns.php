@@ -143,7 +143,10 @@ class Patterns implements Bootable
 	{
 		foreach (self::CONDITIONAL_PATTERNS as $block => $patterns) {
 			if (! $this->block_types->is_registered($block)) {
-				array_map([ $this->patterns, 'unregister' ], $patterns);
+				array_walk(
+					$patterns,
+					fn($pattern) => $this->patterns->unregister($pattern)
+				);
 			}
 		}
 	}

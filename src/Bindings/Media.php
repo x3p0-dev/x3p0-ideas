@@ -29,6 +29,7 @@ class Media implements BindingsSource
 	/**
 	 * Stores instances of the `MediaMeta` class by post ID.
 	 *
+	 * @var   MediaMeta[]
 	 * @since 1.0.0
 	 */
 	private array $meta = [];
@@ -63,8 +64,8 @@ class Media implements BindingsSource
 	 * Returns media data based on the bound attribute.
 	 *
 	 * @since  1.0.0
-	 * @return mixed
-	 * @todo   Add `mixed` return type with PHP 8.0+ requirement.
+	 * @return string|false
+	 * @todo   Add union return type with PHP 8.0+ requirement.
 	 */
 	public function callback(array $args, WP_Block $block, string $name)
 	{
@@ -85,7 +86,9 @@ class Media implements BindingsSource
 	/**
 	 * Returns an attachment source URL.
 	 *
-	 * @since 1.0.0
+	 * @since  1.0.0
+	 * @return string|false
+	 * @todo   Add union return type with PHP 8.0+ requirement.
 	 */
 	private function boundUrl(array $args)
 	{
@@ -104,17 +107,23 @@ class Media implements BindingsSource
 	/**
 	 * Returns an attachment source URL.
 	 *
-	 * @since 1.0.0
+	 * @since  1.0.0
+	 * @return string|false
+	 * @todo   Add union return type with PHP 8.0+ requirement.
 	 */
 	private function boundSrc()
 	{
-		return esc_url(wp_get_attachment_url($this->post_id));
+		$url = wp_get_attachment_url($this->post_id);
+
+		return $url ? esc_url($url) : false;
 	}
 
 	/**
 	 * Returns an image attachment alt text.
 	 *
-	 * @since 1.0.0
+	 * @since  1.0.0
+	 * @return string|false
+	 * @todo   Add union return type with PHP 8.0+ requirement.
 	 */
 	private function boundAlt()
 	{
@@ -126,7 +135,9 @@ class Media implements BindingsSource
 	/**
 	 * Returns an attachment's media metadata based on key.
 	 *
-	 * @since 1.0.0
+	 * @since  1.0.0
+	 * @return string|false
+	 * @todo   Add union return type with PHP 8.0+ requirement.
 	 */
 	private function boundMeta(array $args)
 	{

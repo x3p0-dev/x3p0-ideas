@@ -29,6 +29,7 @@ class Blocks implements Bootable
 	 * Stores the supported block namespaces that we use for block stylesheets.
 	 *
 	 * @since 1.0.0
+	 * @var   string[]
 	 * @todo  Type hint with PHP 8.3+ requirement.
 	 */
 	protected const NAMESPACES = [

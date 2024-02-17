@@ -34,6 +34,7 @@ class Component implements Bootable
 	 * An array of `BlockBindings` classes to register the bindings sources.
 	 *
 	 * @since 1.0.0
+	 * @var   BindingsSource[]
 	 * @todo  Promote via the constructor with PHP 8.0+ requirement.
 	 */
 	protected array $sources = [];
@@ -42,6 +43,7 @@ class Component implements Bootable
 	 * Sets up the initial object state.
 	 *
 	 * @since 1.0.0
+	 * @param BindingsSource[]  $sources
 	 * @todo  Promote params to properties with PHP 8.0+ requirement.
 	 */
 	public function __construct(
