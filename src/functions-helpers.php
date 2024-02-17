@@ -14,6 +14,8 @@ declare(strict_types=1);
 namespace X3P0\Ideas;
 
 use WP_Block_Bindings_Registry;
+use WP_Block_Patterns_Registry;
+use WP_Block_Pattern_Categories_Registry;
 use WP_Block_Type_Registry;
 use X3P0\Ideas\Bindings;
 use X3P0\Ideas\Contracts\Bootable;
@@ -37,12 +39,15 @@ function theme(string $component = '')
 
 	// If there are no bound components, register and boot them.
 	if ([] === $bindings) {
-		// Get dependencies.
+		// WordPress dependencies.
 		$block_bindings = WP_Block_Bindings_Registry::get_instance();
 		$block_types    = WP_Block_Type_Registry::get_instance();
-		$block_rules    = new BlockRules();
-		$view_engine    = new Engine();
+		$patterns       = WP_Block_Patterns_Registry::get_instance();
+		$pattern_cats   = WP_Block_Pattern_Categories_Registry::get_instance();
 
+		// Theme dependencies.
+		$block_rules     = new BlockRules();
+		$view_engine     = new Engine();
 		$binding_sources = [ Bindings\Media::class ];
 
 		// Bind instances of the theme's component classes that need to
@@ -55,7 +60,7 @@ function theme(string $component = '')
 			'frontend'   => new Frontend(),
 			'media'      => new Media(),
 			'parts'      => new Parts(),
-			'patterns'   => new Patterns($block_types),
+			'patterns'   => new Patterns($patterns, $pattern_cats, $block_types),
 			'templates'  => new Templates(),
 			'theme-json' => new ThemeJson()
 		];

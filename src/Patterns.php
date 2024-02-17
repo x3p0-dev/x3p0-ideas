@@ -15,6 +15,8 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas;
 
+use WP_Block_Patterns_Registry;
+use WP_Block_Pattern_Categories_Registry;
 use WP_Block_Type_Registry;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\HookAnnotation;
@@ -36,6 +38,22 @@ class Patterns implements Bootable
 	];
 
 	/**
+	 * Stores the instance of the patterns registry.
+	 *
+	 * @since 1.0.0
+	 * @todo  Promote via the constructor with PHP 8.0+ requirement.
+	 */
+	protected WP_Block_Patterns_Registry $patterns;
+
+	/**
+	 * Stores the instance of the pattern categories registry.
+	 *
+	 * @since 1.0.0
+	 * @todo  Promote via the constructor with PHP 8.0+ requirement.
+	 */
+	protected WP_Block_Pattern_Categories_Registry $categories;
+
+	/**
 	 * Stores the instance of the block type registry.
 	 *
 	 * @since 1.0.0
@@ -49,8 +67,13 @@ class Patterns implements Bootable
 	 * @since 1.0.0
 	 * @todo  Promote params to properties with PHP 8.0+ requirement.
 	 */
-	public function __construct(WP_Block_Type_Registry $block_types)
-	{
+	public function __construct(
+		WP_Block_Patterns_Registry $patterns,
+		WP_Block_Pattern_Categories_Registry $categories,
+		WP_Block_Type_Registry $block_types
+	) {
+		$this->patterns    = $patterns;
+		$this->categories  = $categories;
 		$this->block_types = $block_types;
 	}
 
@@ -87,22 +110,22 @@ class Patterns implements Bootable
 	 */
 	public function registerCategories(): void
 	{
-		register_block_pattern_category('x3p0-card', [
+		$this->categories->register('x3p0-card', [
 			'label'       => __('Cards', 'x3p0-ideas'),
 			'description' => __('A variety of card-based designs.', 'x3p0-ideas')
 		]);
 
-		register_block_pattern_category('x3p0-grid', [
+		$this->categories->register('x3p0-grid', [
 			'label'       => __('Grids', 'x3p0-ideas'),
 			'description' => __('A variety of designs that group items in a grid layout.', 'x3p0-ideas')
 		]);
 
-		register_block_pattern_category('x3p0-hero', [
+		$this->categories->register('x3p0-hero', [
 			'label'       => __('Heroes', 'x3p0-ideas'),
 			'description' => __('Large, full-width sections that make a statement.', 'x3p0-ideas')
 		]);
 
-		register_block_pattern_category('x3p0-layout', [
+		$this->categories->register('x3p0-layout', [
 			'label'       => __('Layout', 'x3p0-ideas'),
 			'description' => __('Basic building blocks for arranging custom layouts.', 'x3p0-ideas')
 		]);
@@ -120,7 +143,7 @@ class Patterns implements Bootable
 	{
 		foreach (self::CONDITIONAL_PATTERNS as $block => $patterns) {
 			if (! $this->block_types->is_registered($block)) {
-				array_map('unregister_block_pattern', $patterns);
+				array_map([ $this->patterns, 'unregister' ], $patterns);
 			}
 		}
 	}
