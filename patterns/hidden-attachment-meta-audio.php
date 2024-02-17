@@ -59,9 +59,7 @@ $fields = [
 							}
 						}
 					},
-					"@rules":{
-						"ifAttr":"content"
-					}
+					"@ifAttribute":"content"
 				},
 				"placeholder":"<?= esc_attr('Connected to a custom field', 'x3p0-ideas') ?>",
 				"fontSize":"sm",

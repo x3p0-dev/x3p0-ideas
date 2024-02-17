@@ -30,10 +30,10 @@ class BlockRules
 	 * @todo  Type hint with PHP 8.3+ requirement.
 	 */
 	private const RULE_METHODS = [
-		'if'     => 'checkIf',
-		'ifAttr' => 'checkIfAttr',
-		'unless' => 'checkUnless',
-		'user'   => 'checkUser'
+		'@if'          => 'checkIf',
+		'@ifAttribute' => 'checkIfAttribute',
+		'@unless'      => 'checkUnless',
+		'@user'        => 'checkUser'
 	];
 
 	/**
@@ -45,21 +45,21 @@ class BlockRules
 	public function isPublic(array $block, WP_Block $instance): bool
 	{
 		if (
-			! isset($block['attrs']['metadata']['@rules'])
-			|| ! is_array($block['attrs']['metadata']['@rules'])
+			! isset($block['attrs']['metadata'])
+			|| ! is_array($block['attrs']['metadata'])
 		) {
 			return true;
 		}
 
-		$rules = $block['attrs']['metadata']['@rules'];
+		$metadata = $block['attrs']['metadata'];
 
-		foreach ($rules as $rule => $value) {
-			if (isset(self::RULE_METHODS[$rule])) {
-				$method = self::RULE_METHODS[$rule];
-
-				return is_array($value)
-					? $this->$method(array_map('wp_strip_all_tags', $value), $block, $instance)
-					: $this->$method(wp_strip_all_tags($value), $block, $instance);
+		foreach (self::RULE_METHODS as $rule => $method) {
+			if (isset($metadata[$rule])) {
+				return $this->$method(
+					wp_strip_all_tags($metadata[$rule]),
+					$block,
+					$instance
+				);
 			}
 		}
 
@@ -84,7 +84,7 @@ class BlockRules
 	 * @since 1.0.0
 	 * @param string|array $condition
 	 */
-	protected function checkIfAttr(string $attr, array $block, WP_Block $instance): bool
+	protected function checkIfAttribute(string $attr, array $block, WP_Block $instance): bool
 	{
 		return ! empty($instance->attributes[$attr]);
 	}
