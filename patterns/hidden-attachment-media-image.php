@@ -31,7 +31,8 @@ defined('ABSPATH') || exit;
 				"alt":{
 					"source":"x3p0/media"
 				}
-			}
+			},
+			"@ifAttribute":"url"
 		}
 	} -->
 	<figure class="wp-block-image alignwide size-x3p0-16x9-lg">

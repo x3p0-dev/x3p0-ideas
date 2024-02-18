@@ -37,6 +37,7 @@ $fields = [
 	<!-- /wp:heading -->
 
 	<!-- wp:group {
+		"templateLock":"insert",
 		"style":{"spacing":{"blockGap":"var:preset|spacing|minus-3"}},
 		"layout":{"type":"default"}
 	} -->
