@@ -71,13 +71,17 @@ class Media implements BindingsSource
 	{
 		$this->post_id = $block->context['postId'] ?? get_the_ID();
 
-		switch ($name) {
+		// If no key is explicitly passed in, use the attribute name.
+		$args['key'] ??= $name;
+
+		switch ($args['key']) {
 			case 'url':
-				return $this->boundUrl($args);
 			case 'src':
-				return $this->boundSrc();
+				return $this->boundUrl($args);
 			case 'alt':
 				return $this->boundAlt();
+			case 'caption':
+				return $this->boundCaption();
 			default:
 				return $this->boundMeta($args);
 		}
@@ -101,18 +105,6 @@ class Media implements BindingsSource
 			return is_array($image) ? esc_url($image[0]) : false;
 		}
 
-		return $this->boundSrc($args);
-	}
-
-	/**
-	 * Returns an attachment source URL.
-	 *
-	 * @since  1.0.0
-	 * @return string|false
-	 * @todo   Add union return type with PHP 8.0+ requirement.
-	 */
-	private function boundSrc()
-	{
 		$url = wp_get_attachment_url($this->post_id);
 
 		return $url ? esc_url($url) : false;
@@ -133,6 +125,20 @@ class Media implements BindingsSource
 	}
 
 	/**
+	 * Returns an image attachment alt text.
+	 *
+	 * @since  1.0.0
+	 * @return string|false
+	 * @todo   Add union return type with PHP 8.0+ requirement.
+	 */
+	private function boundCaption()
+	{
+		$caption = wp_get_attachment_caption($this->post_id);
+
+		return $caption ? esc_html($caption) : false;
+	}
+
+	/**
 	 * Returns an attachment's media metadata based on key.
 	 *
 	 * @since  1.0.0
@@ -141,13 +147,9 @@ class Media implements BindingsSource
 	 */
 	private function boundMeta(array $args)
 	{
-		if (! isset($args['key'])) {
-			return false;
-		}
+		$this->meta[ $this->post_id ] ??= new MediaMeta(get_post($this->post_id));
 
-		$meta = $this->meta[ $this->post_id ] ?? new MediaMeta(get_post($this->post_id));
-
-		$data = $meta->render($args['key']);
+		$data = $this->meta[ $this->post_id ]->render($args['key']);
 
 		// If there's a label, let's wrap it and the metadata in some
 		// markup. Basically, this is our way of doing conditionals at
