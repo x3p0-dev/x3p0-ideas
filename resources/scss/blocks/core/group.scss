@@ -126,3 +126,20 @@
 	border-color: var(--wp--custom--section--border-color, transparent);
 	padding:      var(--wp--custom--section--padding, 0);
 }
+
+///
+/// Site Footer section.
+///
+/// @link      https://github.com/WordPress/gutenberg/pull/57908
+/// @wordpress 6.5
+///
+.wp-block-group.is-style-site-footer,
+.editor-styles-wrapper .wp-block-group.is-style-site-footer {
+	font-family:  var(--wp--custom--site-footer--font-family, inherit);
+	color:        var(--wp--custom--site-footer--color, inherit);
+	background:   var(--wp--custom--site-footer--background, transparent);
+	border-width: var(--wp--custom--site-footer--border-width, 0);
+	border-style: var(--wp--custom--site-footer--border-style, solid);
+	border-color: var(--wp--custom--site-footer--border-color, transparent);
+	padding:      var(--wp--custom--site-footer--padding, 0);
+}

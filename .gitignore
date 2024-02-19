@@ -17,4 +17,5 @@
 /styles/*.json
 !/styles/a-little-bit-bookish.json
 !/styles/chestnut-rose.json
+!/styles/extant.json
 !/styles/unravel.json

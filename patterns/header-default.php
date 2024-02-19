@@ -28,9 +28,10 @@ defined('ABSPATH') || exit;
 			}
 		}
 	},
-	"layout":{"type":"flex","justifyContent":"space-between"}
+	"layout":{"type":"flex","justifyContent":"space-between"},
+	"className":"is-style-site-header"
 } -->
-<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
+<div class="wp-block-group is-style-site-header" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
 
 	<!-- wp:group {
 		"metadata":{"name":"<?= esc_attr__('Branding', 'x3p0-ideas') ?>"},

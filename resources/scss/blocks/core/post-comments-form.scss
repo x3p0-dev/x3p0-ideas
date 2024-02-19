@@ -18,18 +18,6 @@
 // -----------------------------------------------------------------------------
 
 ///
-/// Fixes misaligned checkbox and label when the label wraps two or more lines.
-/// This is because core uses centered alignment.
-///
-.wp-block-post-comments-form .comment-form-cookies-consent {
-	align-items: baseline;
-}
-
-// -----------------------------------------------------------------------------
-// Block customizations.
-// -----------------------------------------------------------------------------
-
-///
 /// Faux `blockGap` support.
 ///
 .wp-block-post-comments-form > * {
@@ -37,10 +25,34 @@
 	margin-block-end: 0;
 }
 
-.wp-block-post-comments-form > * + *,
-.wp-block-post-comments-form .comment-reply-title + * {
+.wp-block-post-comments-form > * + * {
 	margin-block-start: var(--wp--custom--gap, var(--wp--preset--spacing--base));
 }
+
+///
+/// Fixes misaligned checkbox and label when the label wraps two or more lines.
+/// This is because core uses centered alignment.
+///
+.wp-block-post-comments-form .comment-form-cookies-consent {
+	align-items: baseline;
+}
+
+///
+/// Comment "logged in as" message styling. This is not a block in core (as of
+/// WP 6.5) and cannot be customized directly via the interface. So we need to
+/// connect it to `theme.json` styling.
+///
+.logged-in-as {
+	font-family:  var(--wp--custom--logged-in-as--font-family, inherit);
+	font-size:    var(--wp--custom--logged-in-as--font-size, inherit);
+	font-weight:  var(--wp--custom--logged-in-as--font-weight, inherit);
+	line-height:  var(--wp--custom--logged-in-as--line-height, inherit);
+	color:        var(--wp--custom--logged-in-as--color, currentColor);
+}
+
+// -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
 
 ///
 /// Creates a grid display for the comment form.
