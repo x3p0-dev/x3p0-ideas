@@ -20,7 +20,7 @@
 			},
 			"core/post-comments-form": {
 				"custom": {
-					"loggedInAs": {
+					"commentNotes": {
 						"color": "var:preset|color|neutral-500",
 						"fontSize": "var:preset|font-size|xs",
 						"lineHeight": "var:preset|line-height|xs"

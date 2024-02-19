@@ -37,19 +37,6 @@
 	align-items: baseline;
 }
 
-///
-/// Comment "logged in as" message styling. This is not a block in core (as of
-/// WP 6.5) and cannot be customized directly via the interface. So we need to
-/// connect it to `theme.json` styling.
-///
-.logged-in-as {
-	font-family:  var(--wp--custom--logged-in-as--font-family, inherit);
-	font-size:    var(--wp--custom--logged-in-as--font-size, inherit);
-	font-weight:  var(--wp--custom--logged-in-as--font-weight, inherit);
-	line-height:  var(--wp--custom--logged-in-as--line-height, inherit);
-	color:        var(--wp--custom--logged-in-as--color, currentColor);
-}
-
 // -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
@@ -73,6 +60,27 @@
 		.comment-form-author { grid-column: 1/1; }
 		.comment-form-email  { grid-column: 2/2; }
 	}
+}
+
+///
+/// Comment "logged in as" message styling. This is not a block in core (as of
+/// WP 6.5) and cannot be customized directly via the interface. So we need to
+/// connect it to `theme.json` styling.
+///
+.logged-in-as,
+.comment-notes {
+	font-family:  var(--wp--custom--comment-notes--font-family, inherit);
+	font-size:    var(--wp--custom--comment-notes--font-size, inherit);
+	font-weight:  var(--wp--custom--comment-notes--font-weight, inherit);
+	line-height:  var(--wp--custom--comment-notes--line-height, inherit);
+	color:        var(--wp--custom--comment-notes--color, currentColor);
+}
+
+///
+/// Comment form "required" color.
+///
+.wp-block-post-comments-form .required {
+	color: var(--wp--custom--required--color, inherit);
 }
 
 ///

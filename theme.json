@@ -70,6 +70,13 @@
 					}
 				}
 			},
+			"core/post-comments-form": {
+				"custom": {
+					"required": {
+						"color": "var:preset|color|primary-700"
+					}
+				}
+			},
 			"core/separator": {
 				"color": {
 					"customGradient": false
