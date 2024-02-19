@@ -18,7 +18,7 @@
 	.wp-block-navigation-submenu__toggle[aria-expanded=true] ~ {
 
 		.wp-block-navigation__submenu-container {
-			min-width: 16rem !important;
+			min-width: var(--wp--custom--min-width, 16rem) !important;
 		}
 	}
 }

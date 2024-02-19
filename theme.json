@@ -1540,9 +1540,6 @@
 				},
 				"elements": {
 					"cite": {
-						"color": {
-							"text": "var:preset|color|neutral-500"
-						},
 						"spacing": {
 							"margin": {
 								"top": "var:preset|spacing|minus-2"
