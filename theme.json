@@ -1487,7 +1487,7 @@
 							}
 						},
 						"typography": {
-							"fontSize": "max( 50%, var( --wp--preset--font-size--lg ) )",
+							"fontSize": "clamp(var(--wp--preset--font-size--xs), 0.8125em, var(--wp--preset--font-size--lg))",
 							"fontWeight": "300",
 							"letterSpacing": "0"
 						}

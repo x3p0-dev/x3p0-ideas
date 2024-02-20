@@ -346,9 +346,7 @@
 					"cite": {
 						"typography": {
 							"fontStyle": "normal",
-							"fontWeight": "300",
-							"fontSize": "var:preset|font-size|xs",
-							"lineHeight": "var:custom|line-height|xs"
+							"fontWeight": "300"
 						}
 					}
 				}

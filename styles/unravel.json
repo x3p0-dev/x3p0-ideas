@@ -482,7 +482,7 @@
 						},
 						"typography": {
 							"fontFamily": "var:preset|font-family|primary",
-							"fontSize": "1.1em",
+							"fontSize": "clamp(var(--wp--preset--font-size--md), 1.1em, var(--wp--preset--font-size--xl))",
 							"fontWeight": "300"
 						}
 					}
