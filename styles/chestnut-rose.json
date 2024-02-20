@@ -277,18 +277,7 @@
 		},
 		"blocks": {
 			"core/cover": {
-				"elements": {
-					"h1": {
-						"typography": {
-							"fontWeight": "200"
-						}
-					},
-					"h2": {
-						"typography": {
-							"fontWeight": "200"
-						}
-					}
-				}
+				"css": "& :where(:is(h1, h2).wp-block-heading) {\n\tfont-weight: 200;\n}"
 			},
 			"core/gallery": {
 				"typography": {

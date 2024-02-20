@@ -1246,18 +1246,9 @@
 						"color": {
 							"text": "inherit"
 						}
-					},
-					"h1": {
-						"typography": {
-							"fontWeight": "900"
-						}
-					},
-					"h2": {
-						"typography": {
-							"fontWeight": "900"
-						}
 					}
-				}
+				},
+				"css": "& :where(:is(h1, h2).wp-block-heading) {\n\tfont-weight: 900;\n}"
 			},
 			"core/details": {
 				"border": {
