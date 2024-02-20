@@ -48,7 +48,10 @@ function theme(string $component = '')
 		// Theme dependencies.
 		$block_rules     = new BlockRules();
 		$view_engine     = new Engine();
-		$binding_sources = [ Bindings\Media::class ];
+		$binding_sources = [
+			Bindings\Media::class,
+			Bindings\Theme::class
+		];
 
 		// Bind instances of the theme's component classes that need to
 		// be booted when the theme launches.

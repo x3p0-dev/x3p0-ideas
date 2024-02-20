@@ -67,8 +67,20 @@ defined('ABSPATH') || exit;
 		<?php if (WP_Block_Type_Registry::get_instance()->is_registered('x3p0/powered-by')) : ?>
 			<!-- wp:x3p0/powered-by {"poweredByType":"emoji"} /-->
 		<?php else : ?>
-			<!-- wp:paragraph -->
-			<p><?php esc_html_e('Powered by WordPress, crazy ideas, and passion.', 'x3p0-ideas') ?></p>
+			<!-- wp:paragraph {
+				"metadata":{
+					"bindings":{
+						"content":{
+							"source":"x3p0/theme",
+							"args":{
+								"key":"superpower"
+							}
+						}
+					}
+				},
+				"placeholder":"<?= esc_attr__('Powered by WordPress, crazy ideas, and passion.', 'x3p0-ideas') ?>"
+			} -->
+			<p></p>
 			<!-- /wp:paragraph -->
 		<?php endif ?>
 	</div>
