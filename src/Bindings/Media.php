@@ -20,6 +20,19 @@ use X3P0\Ideas\Tools\MediaMeta;
 class Media implements BindingsSource
 {
 	/**
+	 * Map of keys to their associated methods.
+	 *
+	 * @since 1.0.0
+	 * @todo  Type hint with PHP 8.3+ requirement.
+	 */
+	private const KEY_METHODS = [
+		'alt'     => 'boundAlt',
+		'caption' => 'boundCaption',
+		'src'     => 'boundUrl', // alias for `url`
+		'url'     => 'boundUrl'
+	];
+
+	/**
 	 * Stores the post ID.
 	 *
 	 * @since 1.0.0
@@ -74,17 +87,13 @@ class Media implements BindingsSource
 		// If no key is explicitly passed in, use the attribute name.
 		$args['key'] ??= $name;
 
-		switch ($args['key']) {
-			case 'url':
-			case 'src':
-				return $this->boundUrl($args);
-			case 'alt':
-				return $this->boundAlt();
-			case 'caption':
-				return $this->boundCaption();
-			default:
-				return $this->boundMeta($args);
+		if (isset(self::KEY_METHODS[ $args['key'] ])) {
+			$method = self::KEY_METHODS[ $args['key'] ];
+
+			return $this->$method($args);
 		}
+
+		return $this->boundMeta($args);
 	}
 
 	/**

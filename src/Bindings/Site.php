@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Theme binding class.
+ * Site binding class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
@@ -15,9 +15,8 @@ namespace X3P0\Ideas\Bindings;
 
 use WP_Block;
 use X3P0\Ideas\Contracts\BindingsSource;
-use X3P0\Ideas\Tools\Superpower;
 
-class Theme implements BindingsSource
+class Site implements BindingsSource
 {
 	/**
 	 * Map of keys to their associated methods.
@@ -26,10 +25,8 @@ class Theme implements BindingsSource
 	 * @todo  Type hint with PHP 8.3+ requirement.
 	 */
 	private const KEY_METHODS = [
-		'name'       => 'boundName',
-		'url'        => 'boundUrl',
-		'link'       => 'boundLink',
-		'superpower' => 'boundSuperpower'
+		'copyright' => 'boundCopyright',
+		'year'      => 'boundYear'
 	];
 
 	/**
@@ -40,7 +37,7 @@ class Theme implements BindingsSource
 	#[\Override]
 	public function name(): string
 	{
-		return 'x3p0/theme';
+		return 'x3p0/site';
 	}
 
 	/**
@@ -52,13 +49,13 @@ class Theme implements BindingsSource
 	public function options(): array
 	{
 		return [
-			'label'              => __('Theme Data', 'x3p0-ideas'),
+			'label'              => __('Site Data', 'x3p0-ideas'),
 			'get_value_callback' => [ $this, 'callback' ]
 		];
 	}
 
 	/**
-	 * Returns media data based on the bound attribute.
+	 * Returns site data based on the bound attribute.
 	 *
 	 * @since  1.0.0
 	 * @return string|false
@@ -76,55 +73,26 @@ class Theme implements BindingsSource
 	}
 
 	/**
-	 * Returns the theme name.
+	 * Returns the site copyright statement.
 	 *
 	 * @since 1.0.0
 	 */
-	private function boundName(): string
+	private function boundCopyright(): string
 	{
-		return esc_html(wp_get_theme(get_template())->display('Name'));
+		return esc_html(sprintf(
+			// Translators: %s is the current year.
+			__('Copyright &copy; %s', 'x3p0-ideas'),
+			$this->boundYear()
+		));
 	}
 
 	/**
-	 * Returns the theme URL.
+	 * Returns the current year.
 	 *
 	 * @since 1.0.0
 	 */
-	private function boundUrl(): string
+	private function boundYear(): string
 	{
-		$url = wp_get_theme(get_template())->display('ThemeURI');
-
-		return $url ? esc_url($url) : '';
-	}
-
-	/**
-	 * Returns the theme link.
-	 *
-	 * @since 1.0.0
-	 */
-	private function boundLink(): string
-	{
-		if ($url = $this->boundUrl()) {
-			return sprintf(
-				'<a href="%s" class="theme-name theme-name--link">%s</a>',
-				esc_url($url),
-				esc_html($this->boundName())
-			);
-		}
-
-		return sprintf(
-			'<span class="theme-name">%s</span>',
-			esc_html($this->boundName())
-		);
-	}
-
-	/**
-	 * Returns a randomly-generated "powered by" message.
-	 *
-	 * @since 1.0.0
-	 */
-	private function boundSuperpower(array $args): string
-	{
-		return esc_html((new Superpower())->text($args['type'] ?? ''));
+		return esc_html(date_i18n('Y'));
 	}
 }

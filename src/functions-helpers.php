@@ -50,6 +50,7 @@ function theme(string $component = '')
 		$view_engine     = new Engine();
 		$binding_sources = [
 			Bindings\Media::class,
+			Bindings\Site::class,
 			Bindings\Theme::class
 		];
 
