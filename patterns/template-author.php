@@ -42,7 +42,7 @@ defined('ABSPATH') || exit;
 	<div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
 
 		<!-- wp:group {
-			"style":{"spacing":{"blockGap":"var:preset|spacing|plus-2"}},
+			"style":{"spacing":{"blockGap":"var:preset|spacing|base"}},
 			"layout":{"type":"flex","flexWrap":"nowrap"}
 		} -->
 		<div class="wp-block-group">
