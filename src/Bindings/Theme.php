@@ -29,7 +29,8 @@ class Theme implements BindingsSource
 		'name'       => 'boundName',
 		'url'        => 'boundUrl',
 		'link'       => 'boundLink',
-		'superpower' => 'boundSuperpower'
+		'superpower' => 'boundSuperpower',
+		'helloDolly' => 'boundHelloDolly'
 	];
 
 	/**
@@ -126,5 +127,23 @@ class Theme implements BindingsSource
 	private function boundSuperpower(array $args): string
 	{
 		return esc_html((new Superpower())->text($args['type'] ?? ''));
+	}
+
+	/**
+	 * Returns a random lyric from the Hello Dolly plugin if available.
+	 *
+	 * @since 1.0.0
+	 */
+	private function boundHelloDolly(): string
+	{
+		if (function_exists('hello_dolly_get_lyric')) {
+			return esc_html(sprintf(
+				// Translators: %s is a lyric from the Hello Dolly plugin.
+				__('🎺 🎶 %s', 'x3p0-ideas'),
+				hello_dolly_get_lyric()
+			));
+		}
+
+		return '';
 	}
 }
