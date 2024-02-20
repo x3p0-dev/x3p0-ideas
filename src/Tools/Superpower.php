@@ -44,7 +44,7 @@ class Superpower
 			// 2022-10-05 - @justintadlock
 			__('Powered by elbow grease. Held together by tape and bubble gum.', 'x3p0-ideas'),
 			__('Powered by an old mixtape and memories of lost love.', 'x3p0-ideas'),
-			__('Powered by thoughts of old love letters.', 'x3p-powered-by')
+			__('Powered by thoughts of old love letters.', 'x3p0-ideas')
 		];
 
 		// @todo Come up with emoji equivalents for the messages that
@@ -64,7 +64,7 @@ class Superpower
 			// 2022-10-05 - @justintadlock
 		//	__('Powered by elbow grease. Held together by tape and bubble gum.', 'x3p0-ideas'),
 			__('Powered by an old mix 💿 and memories of 💔.', 'x3p0-ideas'),
-			__('Powered by thoughts of old 💌.', 'x3p0-powered-by')
+			__('Powered by thoughts of old 💌.', 'x3p0-ideas')
 		];
 	}
 
