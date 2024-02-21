@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas\Contracts;
 
-interface BindingsSource
+interface BlockBindingsSource
 {
 	/**
 	 * Returns the name of the bindings source.

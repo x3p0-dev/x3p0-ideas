@@ -15,7 +15,7 @@ declare(strict_types=1);
 namespace X3P0\Ideas\Bindings;
 
 use WP_Block_Bindings_Registry;
-use X3P0\Ideas\Contracts\{BindingsSource, Bootable};
+use X3P0\Ideas\Contracts\{BlockBindingsSource, Bootable};
 use X3P0\Ideas\Tools\HookAnnotation;
 
 class Component implements Bootable
@@ -34,7 +34,7 @@ class Component implements Bootable
 	 * An array of `BlockBindings` classes to register the bindings sources.
 	 *
 	 * @since 1.0.0
-	 * @var   BindingsSource[]
+	 * @var   BlockBindingsSource[]
 	 * @todo  Promote via the constructor with PHP 8.0+ requirement.
 	 */
 	protected array $sources = [];
@@ -43,7 +43,7 @@ class Component implements Bootable
 	 * Sets up the initial object state.
 	 *
 	 * @since 1.0.0
-	 * @param BindingsSource[]  $sources
+	 * @param BlockBindingsSource[]  $sources
 	 * @todo  Promote params to properties with PHP 8.0+ requirement.
 	 */
 	public function __construct(
@@ -74,7 +74,7 @@ class Component implements Bootable
 	public function register(): void
 	{
 		foreach ($this->sources as $binding_source) {
-			if (! is_subclass_of($binding_source, BindingsSource::class)) {
+			if (! is_subclass_of($binding_source, BlockBindingsSource::class)) {
 				continue;
 			}
 
