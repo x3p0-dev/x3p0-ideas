@@ -7,10 +7,13 @@
  */
 
 // WordPress dependencies.
-import { __ } from '@wordpress/i18n';
+import { __, sprintf } from '@wordpress/i18n';
 import { grid } from '@wordpress/icons';
 import domReady from '@wordpress/dom-ready';
 import { getBlockVariations, registerBlockVariation } from '@wordpress/blocks';
+
+// Internal dependencies.
+import { copyrightIcon } from '../common/utils-icon';
 
 // Registers the theme spacer as the default so that---with any luck---users
 // will choose the theme spacing sizes over custom sizes. Note that there is
@@ -26,6 +29,35 @@ registerBlockVariation('core/spacer', {
 	},
 	isActive: (blockAttributes) =>
 		blockAttributes.height && blockAttributes.height.includes('var:preset|spacing|')
+});
+
+registerBlockVariation('core/paragraph', {
+	name:       'x3p0/site-copyright',
+	title:      __('Site Copyright', 'x3p0-ideas'),
+	description: __('Displays the site copyright date.', 'x3p0-ideas'),
+	category:   'widgets',
+	keywords:   [ 'copyright' ],
+	icon:       copyrightIcon,
+	scope:      [ 'inserter' ],
+	attributes: {
+		metadata: {
+			bindings: {
+				content: {
+					source: 'x3p0/site',
+					args: {
+						key: 'copyright'
+					}
+				}
+			}
+		},
+		content: sprintf(
+			__('Copyright © %s', 'x3p0-ideas'),
+			new Date().getFullYear()
+		)
+	},
+	isActive: (blockAttributes) =>
+		'x3p0/site' === blockAttributes?.metadata?.bindings?.content?.source
+		&& 'copyright' === blockAttributes?.metadata?.bindings?.content?.args?.key
 });
 
 // `getBlockVariations()` returns `undefined` unless we wait until the DOM is
