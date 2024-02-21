@@ -52,8 +52,9 @@
 ///
 /// Fade-in background gradient style.
 ///
-.wp-block-cover.is-style-fade-in {
-	color: var(--wp--custom--fade-in--color, #000000);
+.wp-block-cover.is-style-fade-in,
+.editor-styles-wrapper .wp-block-cover.is-style-fade-in {
+	color: var(--wp--custom--fade-in--color, var(--wp--preset--color--black));
 }
 
 ///
