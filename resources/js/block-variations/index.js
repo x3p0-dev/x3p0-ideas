@@ -8,7 +8,6 @@
 
 // Internal dependencies.
 import grid          from './grid';
-import spacer        from './spacer';
 import siteCopyright from './site-copyright';
 
 // WordPress dependencies.
@@ -17,7 +16,6 @@ import { getBlockVariations, registerBlockVariation } from '@wordpress/blocks';
 
 // Register each block variation.
 registerBlockVariation(siteCopyright.block, siteCopyright.variation);
-registerBlockVariation(spacer.block,        spacer.variation);
 
 // `getBlockVariations()` returns `undefined` unless we wait until the DOM is
 // ready. We need this to conditionally register variations.

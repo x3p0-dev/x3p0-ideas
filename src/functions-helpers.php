@@ -66,7 +66,8 @@ function theme(string $component = '')
 			'parts'      => new Parts(),
 			'patterns'   => new Patterns($patterns, $pattern_cats, $block_types),
 			'templates'  => new Templates(),
-			'theme-json' => new ThemeJson()
+			'theme-json' => new ThemeJson(),
+			'variations' => new Variations()
 		];
 
 		// Boot each of the components.
