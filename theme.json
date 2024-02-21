@@ -1078,6 +1078,7 @@
 				"variations": {
 					"outline": {
 						"color": {
+							"text": "currentColor",
 							"background": "transparent"
 						},
 						"border": {
