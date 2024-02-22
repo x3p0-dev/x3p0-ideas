@@ -157,22 +157,11 @@ class CodeBlockHighlight
 		// Enqueue the `prism.js` script and any other assets.
 		$this->enqueueAssets();
 
-		// Replace line-breaks with newlines so that Prism doesn't put
-		// all of the code in a single line.
-		//
-		// The line breaks are currently being added by Gutenberg.
-		// @link https://github.com/WordPress/gutenberg/issues/58659
-		$content = str_ireplace(
-			[ '<br>', '<br/>', '<br />' ],
-			"\n",
-			$this->content
-		);
-
 		return sprintf(
 			'<div class="wp-block-code is-style-highlight%s">%s%s</div>',
 			'' === $this->align ? '' : esc_attr(" {$this->align}"),
 			$this->renderToolbar(),
-			$content
+			$this->content
 		);
 	}
 
