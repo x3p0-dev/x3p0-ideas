@@ -47,6 +47,13 @@ export const insertIcon = (
 	</svg>
 );
 
+// https://fonts.google.com/icons?selected=Material+Symbols+Sharp:label_important:FILL@1;wght@400;GRAD@0;opsz@24&icon.query=label&icon.style=Sharp
+export const labelImportantIcon = (
+	<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+		<path d="m120-200 180-280-180-280h522l198 280-198 280H120Z"/>
+	</svg>
+);
+
 // https://fonts.google.com/icons?icon.query=highlight&selected=Material+Symbols+Outlined:format_ink_highlighter:FILL@0;wght@300;GRAD@-25;opsz@24
 export const markIcon = (
 	<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">

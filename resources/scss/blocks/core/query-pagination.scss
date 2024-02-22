@@ -48,7 +48,19 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-// No customizations...
+///
+/// Hands a custom pagination label block binding + variation.
+///
+.wp-block-query-pagination:has(
+	.wp-block-query-pagination__label,
+	.wp-block-query-pagination-next
+) .wp-block-query-pagination-previous {
+	display: none;
+}
+
+.wp-block-query-pagination.is-layout-flex .wp-block-query-pagination__label {
+	margin-right: auto;
+}
 
 // -----------------------------------------------------------------------------
 // Block style variations.

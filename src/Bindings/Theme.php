@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace X3P0\Ideas\Bindings;
 
 use WP_Block;
+use WP_Query;
 use X3P0\Ideas\Contracts\BlockBindingsSource;
 use X3P0\Ideas\Tools\Superpower;
 
@@ -26,11 +27,12 @@ class Theme implements BlockBindingsSource
 	 * @todo  Type hint with PHP 8.3+ requirement.
 	 */
 	private const KEY_METHODS = [
-		'name'       => 'boundName',
-		'url'        => 'boundUrl',
-		'link'       => 'boundLink',
-		'superpower' => 'boundSuperpower',
-		'helloDolly' => 'boundHelloDolly'
+		'name'            => 'boundName',
+		'url'             => 'boundUrl',
+		'link'            => 'boundLink',
+		'superpower'      => 'boundSuperpower',
+		'helloDolly'      => 'boundHelloDolly',
+		'paginationLabel' => 'boundPaginationLabel'
 	];
 
 	/**
@@ -54,7 +56,8 @@ class Theme implements BlockBindingsSource
 	{
 		return [
 			'label'              => __('Theme Data', 'x3p0-ideas'),
-			'get_value_callback' => [ $this, 'callback' ]
+			'get_value_callback' => [ $this, 'callback' ],
+			'uses_context'       => [ 'queryId', 'query' ]
 		];
 	}
 
@@ -70,7 +73,7 @@ class Theme implements BlockBindingsSource
 		if (isset($args['key']) && isset(self::KEY_METHODS[ $args['key'] ])) {
 			$method = self::KEY_METHODS[ $args['key'] ];
 
-			return $this->$method($args);
+			return $this->$method($args, $block);
 		}
 
 		return false;
@@ -145,5 +148,46 @@ class Theme implements BlockBindingsSource
 		}
 
 		return '';
+	}
+
+	/**
+	 * Returns a pagination label: "Page 00 / 00". This is intended to be
+	 * used within the Query Pagination block.
+	 *
+	 * @since 1.0.0
+	 */
+	private function boundPaginationLabel(array $args, WP_Block $block): string
+	{
+		// Bail early if there's no query.
+		if (! isset($block->context['query'])) {
+			return '';
+		}
+
+		$query = $block->context['query']['inherit'] ? $GLOBALS['wp_query'] : false;
+
+		// If this is a custom query.
+		if (! $query) {
+			$key = isset($block->context['queryId'])
+				? "query-{$block->context['queryId']}-page"
+				: 'query-page';
+
+			$page  = absint($_GET[ $key ] ?? 1);
+			$query = new WP_Query(
+				build_query_vars_from_query_block($block, $page)
+			);
+
+			// Reset the global post data.
+			wp_reset_postdata();
+		}
+
+		$page ??= $query->query_vars['paged'] > 0 ? $query->query_vars['paged'] : 1;
+		$max  ??= $query->max_num_pages;
+
+		return sprintf(
+			// Translators: 1 is the current page, 2 is the total pages.
+			__('Page %1$s / %2$s', 'x3p0-ideas'),
+			absint($page),
+			absint($max)
+		);
 	}
 }
