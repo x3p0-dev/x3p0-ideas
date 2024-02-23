@@ -30,8 +30,7 @@
 	}
 
 	> :where(hr, .wp-block-spacer) + :is(h1, h2, h3, h4, h5, h6),
-	> :is(h1, h2, h3, h4, h5, h6) + :where(hr, .wp-block-spacer),
-	> :is(h1, h2, h3, h4, h5, h6):is(.has-screen-reader-text) + *  {
+	> :is(h1, h2, h3, h4, h5, h6) + :where(hr, .wp-block-spacer) {
 		margin-block-start: var(--wp--style--block-gap);
 	}
 }
