@@ -241,6 +241,13 @@
 					}
 				}
 			},
+			"core/query-pagination": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|tertiary",
+					"fontSize": "var:preset|font-size|md",
+					"lineHeight": "var:custom|line-height|md"
+				}
+			},
 			"core/quote": {
 				"typography": {
 					"fontStyle": "italic"

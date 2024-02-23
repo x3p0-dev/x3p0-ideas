@@ -52,7 +52,11 @@
 /// Hands a custom pagination label block binding + variation.
 ///
 .wp-block-query-pagination.is-content-justification-right {
-	gap: 1ch;
+	gap: 1rem;
+
+	.wp-block-query-pagination-numbers {
+		--wp--custom--gap: 1rem;
+	}
 
 	// Don't display previous pagination link if there's a next link.
 	&:has(

@@ -412,6 +412,13 @@
 					"fontFamily": "var:preset|font-family|primary"
 				}
 			},
+			"core/query-pagination": {
+				"typography": {
+					"fontSize": "var:preset|font-size|sm",
+					"lineHeight": "var:custom|line-height|sm",
+					"fontWeight": "500"
+				}
+			},
 			"core/quote": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary"
