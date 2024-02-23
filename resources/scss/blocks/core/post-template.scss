@@ -27,7 +27,7 @@
 /// Zero out potential spacing on list items. WordPress puts the post in an
 /// unordered list, so other styles on `<li>` items easily affect this.
 ///
-:where(.wp-block-post-template > .wp-block-post) {
+.wp-block-post-template > .wp-block-post {
 	margin: 0;
 	padding: 0;
 }

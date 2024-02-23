@@ -21,7 +21,7 @@
 	}
 
 	&:where(ul, ol):not([class*=wp-block-]) li,
-	&:is(ul, ol) li {
+	&:where(ul, ol) li {
 		padding-left: 0.25em;
 	}
 }
