@@ -12,14 +12,13 @@ import { __, sprintf } from '@wordpress/i18n';
 export default {
 	block: 'core/paragraph',
 	variation: {
-		name:       'x3p0/pagination-label',
-		title:      __('Pagination Label', 'x3p0-ideas'),
+		name:        'x3p0/pagination-label',
+		title:       __('Pagination Label', 'x3p0-ideas'),
 		description: __('Displays the pagination current and total pages.', 'x3p0-ideas'),
-		category:   'theme',
-		parent:     [ 'query-pagination' ],
-		icon:       labelImportantIcon,
-		scope:      [ 'inserter' ],
-		attributes: {
+		category:    'theme',
+		icon:        labelImportantIcon,
+		scope:       [ 'inserter' ],
+		attributes:  {
 			metadata: {
 				bindings: {
 					content: {
@@ -30,8 +29,8 @@ export default {
 					}
 				}
 			},
-			content: __('Page 3 / 7:', 'x3p0-ideas'),
-			className: "wp-block-query-pagination__label"
+			content: sprintf(__('Page %1$s / %2$s:', 'x3p0-ideas'), 3, 7),
+			className: "pagination-label"
 		},
 		isActive: (blockAttributes) =>
 			'x3p0/theme' === blockAttributes?.metadata?.bindings?.content?.source

@@ -51,15 +51,20 @@
 ///
 /// Hands a custom pagination label block binding + variation.
 ///
-.wp-block-query-pagination:has(
-	.wp-block-query-pagination__label,
-	.wp-block-query-pagination-next
-) .wp-block-query-pagination-previous {
-	display: none;
-}
+.wp-block-query-pagination.is-content-justification-right {
+	gap: 1ch;
 
-.wp-block-query-pagination.is-layout-flex .wp-block-query-pagination__label {
-	margin-right: auto;
+	// Don't display previous pagination link if there's a next link.
+	&:has(
+		.wp-block-query-pagination-next:last-child
+	) .pagination-label + .wp-block-query-pagination-previous {
+		display: none;
+	}
+
+	// Pushes the pagination label to the left.
+	.pagination-label:first-child {
+		margin-right: auto;
+	}
 }
 
 // -----------------------------------------------------------------------------

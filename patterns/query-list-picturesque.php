@@ -69,8 +69,26 @@ defined('ABSPATH') || exit;
 
 	<!-- wp:query-pagination {
 		"paginationArrow":"arrow",
-		"layout":{"type":"flex","justifyContent":"space-between"}
+		"layout":{
+			"type":"flex",
+			"justifyContent":"right"
+		}
 	} -->
+		<!-- wp:paragraph {
+			"metadata":{
+				"bindings":{
+					"content":{
+						"source":"x3p0/theme",
+						"args":{
+							"key":"paginationLabel"
+						}
+					}
+				}
+			},
+			"className":"pagination-label"
+		} -->
+		<p class="pagination-label"><?= esc_html__('Page 3 / 7:', 'x3p0-ideas') ?></p>
+		<!-- /wp:paragraph -->
 		<!-- wp:query-pagination-previous /-->
 		<!-- wp:query-pagination-numbers /-->
 		<!-- wp:query-pagination-next /-->

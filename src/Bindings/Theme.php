@@ -180,13 +180,20 @@ class Theme implements BlockBindingsSource
 			wp_reset_postdata();
 		}
 
+		// Get the max number of pages and digit count for padding with
+		// leading zeroes.
+		$max = $query->max_num_pages;
+		$pad = $max !== 0 ? absint(floor(log10($max) + 1)) : 1;
+
+		// Get the current page and pad it with leading zeroes to match
+		// the max number of pages.
 		$page ??= $query->query_vars['paged'] > 0 ? $query->query_vars['paged'] : 1;
-		$max  ??= $query->max_num_pages;
+		$page = str_pad(strval($page), $pad, "0", STR_PAD_LEFT);
 
 		return sprintf(
 			// Translators: 1 is the current page, 2 is the total pages.
-			__('Page %1$s / %2$s', 'x3p0-ideas'),
-			absint($page),
+			__('Page %1$s / %2$s:', 'x3p0-ideas'),
+			esc_html($page), // This is a padded string.
 			absint($max)
 		);
 	}

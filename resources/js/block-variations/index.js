@@ -8,7 +8,7 @@
 
 // Internal dependencies.
 import grid            from './grid';
-//import paginationLabel from './pagination-label';
+import paginationLabel from './pagination-label';
 import siteCopyright   from './site-copyright';
 
 // WordPress dependencies.
@@ -16,7 +16,7 @@ import domReady from '@wordpress/dom-ready';
 import { getBlockVariations, registerBlockVariation } from '@wordpress/blocks';
 
 // Register each block variation.
-//registerBlockVariation(paginationLabel.block, paginationLabel.variation);
+registerBlockVariation(paginationLabel.block, paginationLabel.variation);
 registerBlockVariation(siteCopyright.block, siteCopyright.variation);
 
 // `getBlockVariations()` returns `undefined` unless we wait until the DOM is
