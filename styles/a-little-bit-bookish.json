@@ -22,6 +22,11 @@
 				"shadow": "none",
 				"fadedGradient": "linear-gradient( 225deg, #cdb8a425, transparent 80% ), linear-gradient( 180deg, transparent -40%, var( --wp--preset--color--base ) 100% )"
 			},
+			"elements": {
+				"summary": {
+					"fontWeight": "700"
+				}
+			},
 			"embed": {
 				"fontFamily": "var:preset|font-family|secondary"
 			}

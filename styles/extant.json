@@ -50,6 +50,12 @@
 		},
 		"custom": {
 			"variation": "extant",
+			"elements": {
+				"summary": {
+					"fontSize": "var:preset|font-size|sm",
+					"lineHeight": "var:custom|line-height|sm"
+				}
+			},
 			"global": {
 				"borderColor": "var:preset|color|neutral-100",
 				"borderWidth": "1px",

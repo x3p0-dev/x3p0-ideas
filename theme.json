@@ -584,6 +584,8 @@
 					"color": "var:preset|color|neutral-300"
 				},
 				"summary": {
+					"fontFamily": "var:preset|font-family|primary",
+					"fontWeight": "500",
 					"hoverBackground": "var:preset|color|neutral-100"
 				}
 			},

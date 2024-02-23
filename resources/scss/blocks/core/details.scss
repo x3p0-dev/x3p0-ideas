@@ -33,7 +33,12 @@
 		transition: all 0.5s ease-in-out;
 		box-sizing: border-box;
 		padding: var(--wp--preset--spacing--base) var(--wp--style--block-gap);
-		font-weight: 500;
+
+		font-family: var(--wp--custom--elements--summary--font-family, inherit);
+		font-style:  var(--wp--custom--elements--summary--font-style, inherit);
+		font-weight: var(--wp--custom--elements--summary--font-weight, inherit);
+		line-height: var(--wp--custom--elements--summary--line-height, inherit);
+		font-size:   var(--wp--custom--elements--summary--font-size, inherit);
 	}
 
 	&[open] summary,
@@ -48,13 +53,14 @@
 	}
 
 	summary::after {
-		content: " +";
+		content: var(--wp--custom--elements--summary--marker, "+");
 		float: right;
 		text-align: right;
+		font-style: normal;
 	}
 
 	&[open] summary::after {
-		content: " -"
+		content: var(--wp--custom--elements--summary--marker-open, "-");
 	}
 
 	// The original block had a wrapper element around nested blocks after
