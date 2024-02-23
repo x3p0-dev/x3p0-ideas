@@ -38,3 +38,10 @@
 ul.wp-block-categories-list.is-style-horizontal {
 	@include list.horizontal();
 }
+
+///
+/// The pull style "pulls" the list back to be flush with the text.
+///
+ul.wp-block-categories-list.is-style-pull {
+	padding-left: 1em;
+}

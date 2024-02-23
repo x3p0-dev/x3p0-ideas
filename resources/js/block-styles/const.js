@@ -18,13 +18,15 @@ import { __ } from '@wordpress/i18n';
 export const BLOCK_STYLES = {
 	'core/archives': {
 		'horizontal': __('Horizontal', 'x3p0-ideas'),
+		'pull':       __('Pull', 'x3p0-ideas'),
 		'spread':     __('Spread', 'x3p0-ideas')
 	},
 	'core/button': {
 		'link': __('Link', 'x3p0-ideas')
 	},
 	'core/categories': {
-		'horizontal': __('Horizontal', 'x3p0-ideas')
+		'horizontal': __('Horizontal', 'x3p0-ideas'),
+		'pull':       __('Pull', 'x3p0-ideas')
 	},
 	'core/code': {
 		'highlight': __('Highlight', 'x3p0-ideas')
@@ -82,7 +84,8 @@ export const BLOCK_STYLES = {
 		'tape':         __('Tape',         'x3p0-ideas')
 	},
 	'core/list': {
-		'horizontal':  __('Horizontal', 'x3p0-ideas')
+		'horizontal':  __('Horizontal', 'x3p0-ideas'),
+		'pull':       __('Pull', 'x3p0-ideas')
 	},
 	'core/list-item': {
 		'cancel-circle': __('Cancel Circle', 'x3p0-ideas'),
@@ -93,7 +96,8 @@ export const BLOCK_STYLES = {
 		'icon':   __('Icon',   'x3p0-ideas')
 	},
 	'core/page-list': {
-		'horizontal':  __('Horizontal', 'x3p0-ideas')
+		'horizontal':  __('Horizontal', 'x3p0-ideas'),
+		'pull':       __('Pull', 'x3p0-ideas')
 	},
 	'core/paragraph': {
 		'indent':  __('Indent',  'x3p0-ideas'),

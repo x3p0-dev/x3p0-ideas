@@ -47,6 +47,17 @@ ul.wp-block-archives-list,
 }
 
 ///
+/// The pull style "pulls" the list back to be flush with the text.
+///
+.wp-block-archives.is-style-pull {
+	padding-left: 1em;
+
+	.wp-block-archives {
+		padding-left: 0;
+	}
+}
+
+///
 /// The spread list style adds space between the link and post count.
 ///
 .wp-block-archives.is-style-spread .wp-block-archives-list,
