@@ -26,7 +26,8 @@ export const BLOCK_STYLES = {
 	},
 	'core/categories': {
 		'horizontal': __('Horizontal', 'x3p0-ideas'),
-		'pull':       __('Pull', 'x3p0-ideas')
+		'pull':       __('Pull', 'x3p0-ideas'),
+		'spread':     __('Spread', 'x3p0-ideas')
 	},
 	'core/code': {
 		'highlight': __('Highlight', 'x3p0-ideas')

@@ -45,3 +45,25 @@ ul.wp-block-categories-list.is-style-horizontal {
 ul.wp-block-categories-list.is-style-pull {
 	padding-left: 1em;
 }
+
+///
+/// The spread list style adds space between the link and post count.
+///
+/// Note: only allow this style if the list is not hierarchical.
+///
+ul.wp-block-categories-list.is-style-spread:where(:not(:has(ul))) {
+	list-style: none;
+	padding-left: 0;
+}
+
+ul.wp-block-categories-list.is-style-spread:where(:not(:has(ul))) .cat-item {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: flex-start;
+	justify-content: space-between;
+
+	// Pushes content to the far right and the link to the left.
+	> a {
+		margin-right: auto;
+	}
+}
