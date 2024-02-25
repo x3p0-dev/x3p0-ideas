@@ -16,6 +16,7 @@ namespace X3P0\Ideas;
 use WP_Block_Bindings_Registry;
 use WP_Block_Patterns_Registry;
 use WP_Block_Pattern_Categories_Registry;
+use WP_Block_Styles_Registry;
 use WP_Block_Type_Registry;
 use X3P0\Ideas\Bindings;
 use X3P0\Ideas\Contracts\Bootable;
@@ -44,6 +45,7 @@ function theme(string $component = '')
 		$block_types    = WP_Block_Type_Registry::get_instance();
 		$patterns       = WP_Block_Patterns_Registry::get_instance();
 		$pattern_cats   = WP_Block_Pattern_Categories_Registry::get_instance();
+		$styles         = WP_Block_Styles_Registry::get_instance();
 
 		// Theme dependencies.
 		$block_rules     = new BlockRules();
@@ -65,6 +67,7 @@ function theme(string $component = '')
 			'media'      => new Media(),
 			'parts'      => new Parts(),
 			'patterns'   => new Patterns($patterns, $pattern_cats, $block_types),
+			'styles'     => new Styles($styles),
 			'templates'  => new Templates(),
 			'theme-json' => new ThemeJson(),
 			'variations' => new Variations()

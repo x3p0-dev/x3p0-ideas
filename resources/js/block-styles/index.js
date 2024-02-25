@@ -6,31 +6,13 @@
  * @license   GPL-3.0-or-later
  */
 
-// Internal dependencies.
-import { BLOCK_STYLES } from './const';
-
-// WordPress dependencies.
+import { unregisterBlockStyle } from '@wordpress/blocks';
 import domReady from '@wordpress/dom-ready';
 
-import {
-	registerBlockStyle,
-	unregisterBlockStyle
-} from '@wordpress/blocks';
-
-// Registers the block style variations when the DOM is ready.
+// Unregisters block style variations when the DOM is ready. Note that styles
+// registered via JS must also be unregistered via JS.
 domReady(() => {
 	// Remove core block styles.
 	unregisterBlockStyle('core/separator', 'dots');
 	unregisterBlockStyle('core/social-links', 'pill-shape');
-
-	// Loop through each of the blocks to get its style variations. Then,
-	// loop through the variations and register them.
-	Object.keys(BLOCK_STYLES).forEach((block) =>
-		Object.keys(BLOCK_STYLES[ block ]).forEach((name) =>
-			registerBlockStyle(block, {
-				name,
-				label: BLOCK_STYLES[ block ][ name ]
-			})
-		)
-	);
 });
