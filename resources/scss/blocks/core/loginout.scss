@@ -6,7 +6,6 @@
 ////
 
 @use '../../tools/icon';
-@use '../../tools/inline-button';
 @use '../../tools/inline-icon';
 
 // -----------------------------------------------------------------------------
@@ -47,13 +46,6 @@
 // -----------------------------------------------------------------------------
 // Block style variations.
 // -----------------------------------------------------------------------------
-
-///
-/// Button style applies only when using the link form of this block.
-///
-.wp-block-loginout.is-style-button:not(.has-login-form) a {
-	@include inline-button.medium();
-}
 
 ///
 /// The icon block style adds icons to either the link or the form elements.

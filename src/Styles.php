@@ -131,12 +131,11 @@ class Styles implements Bootable
 				'section' => __('Section', 'x3p0-ideas')
 			],
 			'core/heading' => [
-				'knockout'          => __('Knockout',       'x3p0-ideas'),
+				'knockout'          => __('Knockout',      'x3p0-ideas'),
 				'text-wrap-balance' => __('Wrap: Balance', 'x3p0-ideas')
 			],
 			'core/home-link' => [
-				'button' => __('Button', 'x3p0-ideas'),
-				'icon'   => __('Icon',   'x3p0-ideas')
+				'icon' => __('Icon', 'x3p0-ideas')
 			],
 			'core/image' => [
 				'borderless' => __('Borderless',   'x3p0-ideas'),
@@ -154,8 +153,7 @@ class Styles implements Bootable
 				'check-circle'  => __('Check Circle',  'x3p0-ideas')
 			],
 			'core/loginout' => [
-				'button' => __('Button', 'x3p0-ideas'),
-				'icon'   => __('Icon',   'x3p0-ideas')
+				'icon' => __('Icon',   'x3p0-ideas')
 			],
 			'core/page-list' => [
 				'horizontal' => __('Horizontal', 'x3p0-ideas'),
@@ -188,14 +186,14 @@ class Styles implements Bootable
 				'flex' => __('Flexible', 'x3p0-ideas')
 			],
 			'core/post-terms' => [
-				'button' => __('Button', 'x3p0-ideas'),
-				'icon'   => __('Icon',   'x3p0-ideas')
+				'fill' => __('Fill', 'x3p0-ideas'),
+				'icon' => __('Icon', 'x3p0-ideas')
 			],
 			'core/post-time-to-read' => [
 				'icon' => __('Icon', 'x3p0-ideas')
 			],
 			'core/pullquote' => [
-				'mark-top' => __('Mark=> Top',  'x3p0-ideas')
+				'mark-top' => __('Mark: Top',  'x3p0-ideas')
 			],
 			'core/search' => [
 				'icon' => __('Icon',  'x3p0-ideas'),

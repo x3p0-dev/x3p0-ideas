@@ -6,7 +6,6 @@
 ////
 
 @use '../../tools/icon.scss';
-@use '../../tools/inline-button';
 @use '../../tools/inline-icon';
 
 // -----------------------------------------------------------------------------
@@ -24,13 +23,6 @@
 // -----------------------------------------------------------------------------
 // Block style variations.
 // -----------------------------------------------------------------------------
-
-///
-/// Button style.
-///
-.wp-block-navigation .wp-block-home-link.is-style-button .wp-block-home-link__content {
-	@include inline-button.medium();
-}
 
 ///
 /// Icon style.

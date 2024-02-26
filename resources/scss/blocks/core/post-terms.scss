@@ -6,7 +6,6 @@
 ////
 
 @use '../../tools/icon.scss';
-@use '../../tools/inline-button';
 @use '../../tools/inline-icon';
 
 // -----------------------------------------------------------------------------
@@ -21,14 +20,13 @@
 // This addresses that by making the block a flex layout and adding a gap. This
 // works regardless of whether the space was added or not.
 .wp-block-post-terms {
-	--wp--custom--block-gap--post-terms: var(--wp--preset--spacing--minus-3);
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
-	gap: var(--wp--custom--block-gap--post-terms);
+	gap: var(--wp--custom--gap, var(--wp--preset--spacing--minus-3));
 
 	&__separator {
-		margin-left: calc(-1 * var(--wp--custom--block-gap--post-terms));
+		margin-left: calc(-1 * var(--wp--custom--gap, var(--wp--preset--spacing--minus-3)));
 	}
 }
 
@@ -43,20 +41,40 @@
 // -----------------------------------------------------------------------------
 
 ///
-/// Turns the post term links into a button.
+/// Turns the post term links into a filled button.
 ///
 /// @todo Figure out how this gap should be implemented. Is this flexbox?
 ///
-.wp-block-post-terms.is-style-button {
+.wp-block-post-terms.is-style-fill {
 	--wp--custom--gap: var(--wp--preset--spacing--minus-1);
 
-	font-size: var(--wp--preset--font-size--xs);
-	line-height: var(--wp--custom--line-height--xs);
+	font-family: var(--wp--custom--fill--font-family, inherit);
+	font-size:   var(--wp--custom--fill--font-size, inherit);
+	font-style:  var(--wp--custom--fill--font-style, inherit);
+	font-weight: var(--wp--custom--fill--font-weight, inherit);
 
 	.wp-block-post-terms__separator { display: none; }
 
 	a {
-		@include inline-button.small();
+		display: inline-block;
+		text-decoration: none;
+		padding: var( --wp--preset--spacing--minus-2 ) var( --wp--preset--spacing--base );
+
+		color:         var(--wp--custom--fill--color, inherit) !important;
+		background:    var(--wp--custom--fill--background, transparent);
+		border-width:  var(--wp--custom--fill--border-width, 0);
+		border-style:  var(--wp--custom--fill--border-style, solid);
+		border-color:  var(--wp--custom--fill--border-color, currentColor);
+		border-radius: var(--wp--custom--fill--border-radius, 0);
+		box-shadow:    var(--wp--custom--fill--shadow, none);
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+
+			color:      var(--wp--custom--fill--hover-color, inherit) !important;
+			background: var(--wp--custom--fill--hover-background, transparent);
+		}
 	}
 }
 

@@ -51,6 +51,15 @@
 					}
 				}
 			},
+			"core/post-terms": {
+				"custom": {
+					"fill": {
+						"color": "var:preset|color|primary-950",
+						"background": "var:preset|color|primary-100",
+						"hoverBackground": "var:preset|color|primary-300"
+					}
+				}
+			},
 			"core/social-links": {
 				"custom": {
 					"outline": {
@@ -486,6 +495,11 @@
 							"fontWeight": "300"
 						}
 					}
+				}
+			},
+			"core/query-pagination": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|primary"
 				}
 			},
 			"core/quote": {

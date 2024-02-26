@@ -39,6 +39,14 @@
 					}
 				}
 			},
+			"core/post-terms": {
+				"custom": {
+					"fill": {
+						"hoverColor": "var:preset|color|base",
+						"hoverBackground": "var:preset|color|contrast"
+					}
+				}
+			},
 			"core/social-links": {
 				"custom": {
 					"outline": {

@@ -77,6 +77,19 @@
 					}
 				}
 			},
+			"core/post-terms": {
+				"custom": {
+					"fill": {
+						"fontSize": "var:preset|font-size|xs",
+						"lineHeight": "var:custom|line-height|xs",
+						"color": "var:preset|color|base",
+						"background": "var:preset|color|primary-700",
+						"borderRadius": "var:custom|global|border-radius",
+						"shadow": "var:preset|shadow|md",
+						"hoverBackground": "var:preset|color|primary-950"
+					}
+				}
+			},
 			"core/separator": {
 				"color": {
 					"customGradient": false
