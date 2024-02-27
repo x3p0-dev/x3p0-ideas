@@ -24,6 +24,7 @@
 .has-sm-font-size   { line-height: var(--wp--custom--line-height--sm); }
 .has-xs-font-size   { line-height: var(--wp--custom--line-height--xs); }
 .has-2-xs-font-size { line-height: var(--wp--custom--line-height--2-xs); }
+.has-inherit-font-size { line-height: inherit; }
 
 ///
 /// Line height fixes for core-defined font sizes.

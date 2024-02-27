@@ -127,19 +127,46 @@
 	padding:      var(--wp--custom--section--padding, 0);
 }
 
+// -----------------------------------------------------------------------------
+// Block pattern styles.
+// -----------------------------------------------------------------------------
+
 ///
 /// Site Footer section.
 ///
 /// @link      https://github.com/WordPress/gutenberg/pull/57908
 /// @wordpress 6.5
+/// @todo      Create a pattern-specific enqueue system?
 ///
-.wp-block-group.is-style-site-footer,
-.editor-styles-wrapper .wp-block-group.is-style-site-footer {
-	font-family:  var(--wp--custom--site-footer--font-family, inherit);
-	color:        var(--wp--custom--site-footer--color, inherit);
-	background:   var(--wp--custom--site-footer--background, transparent);
-	border-width: var(--wp--custom--site-footer--border-width, 0);
-	border-style: var(--wp--custom--site-footer--border-style, solid);
-	border-color: var(--wp--custom--site-footer--border-color, transparent);
-	padding:      var(--wp--custom--site-footer--padding, 0);
+.pattern-footer,
+.editor-styles-wrapper .pattern-footer {
+	font-family:  var(--wp--custom--pattern--footer--font-family, inherit);
+	color:        var(--wp--custom--pattern--footer--color, inherit);
+	background:   var(--wp--custom--pattern--footer--background, transparent);
+	border-width: var(--wp--custom--pattern--footer--border-width, 0);
+	border-style: var(--wp--custom--pattern--footer--border-style, solid);
+	border-color: var(--wp--custom--pattern--footer--border-color, transparent);
+	padding:      var(--wp--custom--pattern--footer--padding, 0);
+
+	&-call-to-action {
+		color: var(
+			--wp--custom--pattern--footer-call-to-action--color,
+			var(--wp--custom--pattern--footer--color, inherit)
+		);
+		background: var(
+			--wp--custom--pattern--footer-call-to-action--background,
+			var(--wp--custom--pattern--footer--background, transparent)
+		);
+	}
+
+	&-links {
+		color: var(
+			--wp--custom--pattern--footer-links--color,
+			var(--wp--custom--pattern--footer--color, inherit)
+		);
+		background: var(
+			--wp--custom--pattern--footer-links--background,
+			var(--wp--custom--pattern--footer--background, transparent)
+		);
+	}
 }

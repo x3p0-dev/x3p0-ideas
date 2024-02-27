@@ -29,10 +29,10 @@ defined('ABSPATH') || exit;
 			"blockGap":"var:preset|spacing|plus-5"
 		}
 	},
-	"backgroundColor":"neutral-50",
-	"layout":{"type":"default"}
+	"layout":{"type":"default"},
+	"className":"pattern-footer pattern-footer-call-to-action"
 } -->
-<div class="wp-block-group alignfull has-neutral-50-background-color has-background" style="padding-top:var(--wp--preset--spacing--plus-6);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-6);padding-left:var(--wp--preset--spacing--plus-3)">
+<div class="wp-block-group alignfull pattern-footer pattern-footer-call-to-action" style="padding-top:var(--wp--preset--spacing--plus-6);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-6);padding-left:var(--wp--preset--spacing--plus-3)">
 
 	<!-- wp:group {
 		"metadata":{"name":"<?= esc_attr__('Call To Action', 'x3p0-ideas') ?>"},
@@ -80,7 +80,7 @@ defined('ABSPATH') || exit;
 		"metadata":{"name":"<?= esc_attr__('Footer Content', 'x3p0-ideas') ?>"},
 		"align":"full",
 		"style":{"spacing":{"blockGap":"var:preset|spacing|base"}},
-		"layout":{"type":"constrained"}
+		"layout":{"type":"default"}
 	} -->
 	<div class="wp-block-group alignfull">
 

@@ -28,9 +28,9 @@ defined('ABSPATH') || exit;
 		}
 	},
 	"layout":{"type":"default"},
-	"className":"is-style-site-footer"
+	"className":"pattern-footer pattern-footer--default"
 } -->
-<div class="wp-block-group is-style-site-footer" style="padding-top:var(--wp--preset--spacing--plus-6);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-6);padding-left:var(--wp--preset--spacing--plus-3)">
+<div class="wp-block-group pattern-footer pattern-footer--default" style="padding-top:var(--wp--preset--spacing--plus-6);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-6);padding-left:var(--wp--preset--spacing--plus-3)">
 
 	<!-- wp:social-links {
 		"showLabels":true,

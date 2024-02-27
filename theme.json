@@ -616,6 +616,14 @@
 				"6-xl": "1.03125",
 				"7-xl": "1.015625"
 			},
+			"pattern": {
+				"footerCallToAction": {
+					"background": "var:preset|color|neutral-50"
+				},
+				"footerLinks": {
+					"background": "var:preset|color|neutral-50"
+				}
+			},
 			"siteBlocks": {
 				"gap": "0"
 			},
@@ -893,6 +901,11 @@
 					"name": "7XL - Fluid",
 					"size": "clamp(2.73rem, 12.8cqi + -1.11rem, 7.08rem)",
 					"slug": "7-xl"
+				},
+				{
+					"name": "Inherit",
+					"size": "inherit",
+					"slug": "inherit"
 				}
 			],
 			"fontStyle": true,
@@ -1205,10 +1218,6 @@
 						"left":"0",
 						"right":"0"
 					}
-				},
-				"typography": {
-					"fontSize": {"ref": "styles.typography.fontSize"},
-					"lineHeight": {"ref": "styles.typography.lineHeight"}
 				}
 			},
 			"core/comments": {

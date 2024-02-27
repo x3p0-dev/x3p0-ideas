@@ -70,11 +70,12 @@
 				"borderRadius": "0",
 				"shadow": "var:preset|shadow|xs"
 			},
-			"siteFooter": {
-				"fontFamily": "var:preset|font-family|primary",
-				"background": "var:preset|color|neutral-50",
-				"borderColor": "var:preset|color|neutral-100",
-				"borderWidth": "1px 0 0"
+			"pattern": {
+				"footer": {
+					"background": "var:preset|color|neutral-50",
+					"borderColor": "var:preset|color|neutral-100",
+					"borderWidth": "1px 0 0"
+				}
 			}
 		},
 		"color": {
