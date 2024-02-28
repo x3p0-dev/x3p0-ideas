@@ -158,7 +158,7 @@
 		"typography": {
 			"fontFamilies": [
 				{
-					"fontFamily": "Playfair, Superclarendon, 'Bookman Old Style', 'URW Bookman', 'URW Bookman L', 'Georgia Pro', Georgia, serif",
+					"fontFamily": "Playfair, Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif",
 					"slug": "primary",
 					"name": "Primary (Playfair)",
 					"fontFace": [

@@ -184,7 +184,7 @@
 		"typography": {
 			"fontFamilies": [
 				{
-					"fontFamily": "'Plus Jakarta Sans', sans-serif",
+					"fontFamily": "'Plus Jakarta Sans', Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif",
 					"slug": "primary",
 					"name": "Primary (Plus Jakarta Sans)",
 					"fontFace": [
