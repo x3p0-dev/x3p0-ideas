@@ -13,6 +13,13 @@
 					}
 				}
 			},
+			"core/details": {
+				"custom": {
+					"::marker": {
+						"color": "currentColor"
+					}
+				}
+			},
 			"core/group": {
 				"custom": {
 					"box": {
@@ -592,6 +599,9 @@
 					"padding": "0.125em 0.25em",
 					"color": "var:preset|color|neutral-950",
 					"background": "var:preset|color|neutral-100"
+				},
+				"::marker": {
+					"color": "var:preset|color|neutral-500"
 				},
 				"::placeholder": {
 					"color": "var:preset|color|neutral-300"

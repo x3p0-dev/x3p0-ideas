@@ -53,14 +53,15 @@
 	}
 
 	summary::after {
-		content: var(--wp--custom--elements--summary--marker, "+");
+		content: var(--wp--custom--marker--content, "+");
+		color: var(--wp--custom--marker--color, var(--wp--custom--elements--marker--color));
 		float: right;
 		text-align: right;
 		font-style: normal;
 	}
 
 	&[open] summary::after {
-		content: var(--wp--custom--elements--summary--marker-open, "-");
+		content: var(--wp--custom--marker--content-open, "-");
 	}
 
 	// The original block had a wrapper element around nested blocks after

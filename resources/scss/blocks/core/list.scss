@@ -31,7 +31,7 @@ ol li::marker {
 }
 
 li::marker {
-	color: var(--wp--preset--color--neutral-500);
+	color: var(--wp--custom--marker--color, var(--wp--custom--elements--marker--color));
 }
 
 [class*=has-text-color-] li::marker {
