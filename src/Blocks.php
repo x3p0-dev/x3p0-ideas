@@ -316,13 +316,16 @@ class Blocks implements Bootable
 
 		$processor = new WP_HTML_Tag_Processor($content);
 
-		// Specifically look for the wrapping `<p class="login-submit">`
-		// element and the next input tag.
-		if (
-			$processor->next_tag([ 'class_name'=> 'login-submit' ])
-			&& $processor->next_tag('input')
-		) {
-			$processor->add_class(wp_theme_get_element_class_name('button'));
+		// Specifically look for `<input name="wp-submit"/>` and add the
+		// `.wp-element-button` class to it.
+		while ($processor->next_tag()) {
+			if (
+				'INPUT' === $processor->get_tag()
+				&& 'wp-submit' === $processor->get_attribute('name')
+			) {
+				$processor->add_class(wp_theme_get_element_class_name('button'));
+				break;
+			}
 		}
 
 		return $processor->get_updated_html();
