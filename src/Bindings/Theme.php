@@ -156,13 +156,15 @@ class Theme implements BlockBindingsSource
 	 * Returns a pagination label: "Page 00 / 00". This is intended to be
 	 * used within the Query Pagination block.
 	 *
-	 * @since 1.0.0
+	 * @since  1.0.0
+	 * @return string|null
+	 * @todo   Add union return type with PHP 8.0+ requirement.
 	 */
-	private function boundPaginationLabel(array $args, WP_Block $block): string
+	private function boundPaginationLabel(array $args, WP_Block $block)
 	{
 		// Bail early if there's no query.
 		if (! isset($block->context['query'])) {
-			return '';
+			return null;
 		}
 
 		$query = $block->context['query']['inherit'] ? $GLOBALS['wp_query'] : false;
@@ -186,6 +188,11 @@ class Theme implements BlockBindingsSource
 		// leading zeroes.
 		$max = $query->max_num_pages;
 		$pad = $max !== 0 ? absint(floor(log10($max) + 1)) : 1;
+
+		// Bail if there's no more than one page.
+		if (1 >= $max) {
+			return null;
+		}
 
 		// Get the current page and pad it with leading zeroes to match
 		// the max number of pages.

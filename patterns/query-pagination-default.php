@@ -28,11 +28,13 @@ defined('ABSPATH') || exit;
 						"key":"paginationLabel"
 					}
 				}
-			}
+			},
+			"@ifAttribute":"content"
 		},
+		"placeholder":"<?= esc_attr__('Page 3 / 7:', 'x3p0-ideas') ?>",
 		"className":"pagination-label"
 	} -->
-	<p class="pagination-label"><?= esc_html__('Page 3 / 7:', 'x3p0-ideas') ?></p>
+	<p class="pagination-label"></p>
 	<!-- /wp:paragraph -->
 	<!-- wp:query-pagination-previous /-->
 	<!-- wp:query-pagination-numbers /-->

@@ -29,7 +29,7 @@ export default {
 					}
 				}
 			},
-			content: sprintf(__('Page %1$s / %2$s:', 'x3p0-ideas'), 3, 7),
+			placeholder: sprintf(__('Page %1$s / %2$s:', 'x3p0-ideas'), 3, 7),
 			className: "pagination-label"
 		},
 		isActive: (blockAttributes) =>
