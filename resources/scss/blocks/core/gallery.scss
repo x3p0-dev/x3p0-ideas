@@ -41,6 +41,22 @@
 	margin: 0;
 }
 
+///
+/// WordPress hardcodes the background gradient for captions in galleries,
+/// making it impossible to override via `theme.json`. This allows us to set the
+/// background via `styles.blocks.core/gallery.custom.caption.background`.
+///
+/// @link https://github.com/WordPress/gutenberg/issues/41966
+/// @link https://github.com/WordPress/gutenberg/issues/56587
+/// @link https://github.com/WordPress/gutenberg/issues/8030
+///
+.wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
+	background: var(
+		--wp--custom--caption--background,
+		linear-gradient(0deg, #000000b3, #0000004d 70%, #0000)
+	);
+}
+
 // -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
