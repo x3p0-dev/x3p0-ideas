@@ -4,6 +4,15 @@
 	"title": "Extant",
 	"settings": {
 		"blocks": {
+			"core/comment-template": {
+				"custom": {
+					"comment": {
+						"background": "transparent",
+						"padding": "0",
+						"shadow": "none"
+					}
+				}
+			},
 			"core/group": {
 				"custom": {
 					"card": {
@@ -315,8 +324,7 @@
 						"left": "var:preset|spacing|plus-3",
 						"right": "var:preset|spacing|plus-3"
 					}
-				},
-				"css": "& > li {\nbackground: transparent;\n}"
+				}
 			},
 			"core/comments-title": {
 				"border": {

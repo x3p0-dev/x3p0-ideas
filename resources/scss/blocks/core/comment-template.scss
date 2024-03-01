@@ -23,6 +23,24 @@
 	margin-block-start: var(--wp--custom--gap, var(--wp--style--block-gap));
 }
 
+///
+/// Allow comments to be styled via `theme.json`. Currently, this only supports
+/// styling the top-level comment.
+///
+/// @todo Define a system for `theme.json` style control over nested comments.
+///
+.wp-block-comment-template > li,
+.editor-styles-wrapper .wp-block-comment-template > li {
+	color:         var(--wp--custom--comment--color, inherit);
+	background:    var(--wp--custom--comment--background, transparent);
+	border-width:  var(--wp--custom--comment--border-width, 0);
+	border-style:  var(--wp--custom--comment--border-style, solid);
+	border-color:  var(--wp--custom--comment--border-color, transparent);
+	border-radius: var(--wp--custom--comment--border-radius, 0);
+	padding:       var(--wp--custom--comment--padding, 0);
+	box-shadow:    var(--wp--custom--comment--shadow, none);
+}
+
 // -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------

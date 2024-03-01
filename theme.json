@@ -6,6 +6,16 @@
 			"backgroundImage": true
 		},
 		"blocks": {
+			"core/comment-template": {
+				"custom": {
+					"comment": {
+						"padding": "var:preset|spacing|plus-3",
+						"background": "var:preset|color|neutral-50",
+						"borderRadius": "var:custom|global|border-radius",
+						"shadow": "var:custom|global|shadow"
+					}
+				}
+			},
 			"core/cover": {
 				"custom":{
 					"fadeIn": {
@@ -1243,8 +1253,7 @@
 					"margin": {
 						"top": "var:preset|spacing|base"
 					}
-				},
-				"css": "& > li {\n\tborder-radius: var( --wp--custom--global--border-radius );\n\tbox-shadow: var( --wp--custom--global--shadow );\n\tpadding: var( --wp--preset--spacing--plus-3 );\n\tbackground: var( --wp--preset--color--neutral-50 );\n}"
+				}
 			},
 			"core/comments-title": {
 				"spacing": {
