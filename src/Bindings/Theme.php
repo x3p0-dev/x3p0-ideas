@@ -65,7 +65,7 @@ class Theme implements BlockBindingsSource
 	 * Returns media data based on the bound attribute.
 	 *
 	 * @since  1.0.0
-	 * @return string|false
+	 * @return string|null
 	 * @todo   Add union return type with PHP 8.0+ requirement.
 	 */
 	public function callback(array $args, WP_Block $block, string $name)
@@ -76,7 +76,7 @@ class Theme implements BlockBindingsSource
 			return $this->$method($args, $block);
 		}
 
-		return false;
+		return null;
 	}
 
 	/**
@@ -135,9 +135,11 @@ class Theme implements BlockBindingsSource
 	/**
 	 * Returns a random lyric from the Hello Dolly plugin if available.
 	 *
-	 * @since 1.0.0
+	 * @since  1.0.0
+	 * @return string|null
+	 * @todo   Add union return type with PHP 8.0+ requirement.
 	 */
-	private function boundHelloDolly(): string
+	private function boundHelloDolly()
 	{
 		if (function_exists('hello_dolly_get_lyric')) {
 			return esc_html(sprintf(
@@ -147,7 +149,7 @@ class Theme implements BlockBindingsSource
 			));
 		}
 
-		return '';
+		return null;
 	}
 
 	/**

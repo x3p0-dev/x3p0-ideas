@@ -77,7 +77,7 @@ class Media implements BlockBindingsSource
 	 * Returns media data based on the bound attribute.
 	 *
 	 * @since  1.0.0
-	 * @return string|false
+	 * @return string|null
 	 * @todo   Add union return type with PHP 8.0+ requirement.
 	 */
 	public function callback(array $args, WP_Block $block, string $name)
@@ -100,7 +100,7 @@ class Media implements BlockBindingsSource
 	 * Returns an attachment source URL.
 	 *
 	 * @since  1.0.0
-	 * @return string|false
+	 * @return string|null
 	 * @todo   Add union return type with PHP 8.0+ requirement.
 	 */
 	private function boundUrl(array $args)
@@ -111,47 +111,47 @@ class Media implements BlockBindingsSource
 				$args['size'] ?? 'full'
 			);
 
-			return is_array($image) ? esc_url($image[0]) : false;
+			return is_array($image) ? esc_url($image[0]) : null;
 		}
 
 		$url = wp_get_attachment_url($this->post_id);
 
-		return $url ? esc_url($url) : false;
+		return $url ? esc_url($url) : null;
 	}
 
 	/**
 	 * Returns an image attachment alt text.
 	 *
 	 * @since  1.0.0
-	 * @return string|false
+	 * @return string|null
 	 * @todo   Add union return type with PHP 8.0+ requirement.
 	 */
 	private function boundAlt()
 	{
 		$alt = get_post_meta($this->post_id, '_wp_attachment_image_alt', true);
 
-		return $alt ? esc_attr($alt) : false;
+		return $alt ? esc_attr($alt) : null;
 	}
 
 	/**
 	 * Returns an image attachment alt text.
 	 *
 	 * @since  1.0.0
-	 * @return string|false
+	 * @return string|null
 	 * @todo   Add union return type with PHP 8.0+ requirement.
 	 */
 	private function boundCaption()
 	{
 		$caption = wp_get_attachment_caption($this->post_id);
 
-		return $caption ? esc_html($caption) : false;
+		return $caption ? esc_html($caption) : null;
 	}
 
 	/**
 	 * Returns an attachment's media metadata based on key.
 	 *
 	 * @since  1.0.0
-	 * @return string|false
+	 * @return string|null
 	 * @todo   Add union return type with PHP 8.0+ requirement.
 	 */
 	private function boundMeta(array $args)
@@ -172,6 +172,6 @@ class Media implements BlockBindingsSource
 			);
 		}
 
-		return $data ?: false;
+		return $data ?: null;
 	}
 }

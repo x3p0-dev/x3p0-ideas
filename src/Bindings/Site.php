@@ -58,7 +58,7 @@ class Site implements BlockBindingsSource
 	 * Returns site data based on the bound attribute.
 	 *
 	 * @since  1.0.0
-	 * @return string|false
+	 * @return string|null
 	 * @todo   Add union return type with PHP 8.0+ requirement.
 	 */
 	public function callback(array $args, WP_Block $block, string $name)
@@ -69,7 +69,7 @@ class Site implements BlockBindingsSource
 			return $this->$method($args);
 		}
 
-		return false;
+		return null;
 	}
 
 	/**
