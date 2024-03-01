@@ -346,7 +346,7 @@ class Blocks implements Bootable
 		if ($processor->next_tag('p')) {
 			$processor->add_class(sprintf(
 				'taxonomy-%s',
-				esc_attr($block['attrs']['taxonomy'] ?? 'post_tag')
+				$block['attrs']['taxonomy'] ?? 'post_tag'
 			));
 		}
 
