@@ -57,12 +57,24 @@
 }
 
 ///
-/// Lighten the header fonts a little.
-///
-/// @todo Integrate this into `theme.json` custom properties.
+/// Inherits from `<thead>`. This is necessary to overwrite core's hardcoded
+/// style rule.
 ///
 .wp-block-calendar th {
-	font-weight: 600;
+	font-weight: inherit;
+}
+
+///
+/// Allow styling `thead` from `theme.json`.
+///
+.wp-block-calendar thead {
+	font-family: var(--wp--custom--elements--thead--font-family, inherit);
+	font-style:  var(--wp--custom--elements--thead--font-style, inherit);
+	font-weight: var(--wp--custom--elements--thead--font-weight, 600);
+	line-height: var(--wp--custom--elements--thead--line-height, inherit);
+	font-size:   var(--wp--custom--elements--thead--font-size, inherit);
+	color:       var(--wp--custom--elements--thead--color, currentColor);
+	background:  var(--wp--custom--elements--thead--background, transparent);
 }
 
 ///
