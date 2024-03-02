@@ -138,6 +138,20 @@
 	background: var(--wp--preset--color--base);
 }
 
+
+///
+/// Allow styling `thead` from `theme.json`.
+///
+.wp-calendar-nav {
+	font-family: var(--wp--custom--nav--font-family, inherit);
+	font-style:  var(--wp--custom--nav--font-style, inherit);
+	font-weight: var(--wp--custom--nav--font-weight, 600);
+	line-height: var(--wp--custom--nav--line-height, inherit);
+	font-size:   var(--wp--custom--nav--font-size, inherit);
+	color:       var(--wp--custom--nav--color, currentColor);
+	background:  var(--wp--custom--nav--background, transparent);
+}
+
 ///
 /// Prettier nav elements.
 ///
@@ -146,8 +160,8 @@
 .wp-calendar-nav-prev,
 .wp-calendar-nav-next {
 	padding: var(--wp--preset--spacing--minus-1) var(--wp--preset--spacing--minus-3);
-	font-size: var(--wp--preset--font-size--sm);
-	line-height: var(--wp--custom--line-height--sm);
+	//font-size: var(--wp--preset--font-size--sm);
+	//line-height: var(--wp--custom--line-height--sm);
 }
 
 // -----------------------------------------------------------------------------
