@@ -125,7 +125,7 @@ class CodeBlockHighlight
 		}
 
 		// Update the code block HTML if this is a highlighted
-		if ('' !== $this->language || $processor->has_class('is-style-highlight')) {
+		if ('' !== $this->language && $processor->has_class('is-style-highlight')) {
 			$this->is_highlight = true;
 
 			// Update the block classes.
