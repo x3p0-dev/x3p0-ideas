@@ -1030,9 +1030,6 @@
 				}
 			},
 			"cite": {
-				"color": {
-					"text": "var:preset|color|neutral-700"
-				},
 				"typography": {
 					"fontStyle": "italic"
 				}
@@ -1525,6 +1522,9 @@
 				},
 				"elements": {
 					"cite": {
+						"color": {
+							"text": "var:preset|color|neutral-700"
+						},
 						"spacing": {
 							"margin": {
 								"top": "var:preset|spacing|minus-2"
@@ -1580,6 +1580,9 @@
 				},
 				"elements": {
 					"cite": {
+						"color": {
+							"text": "var:preset|color|neutral-700"
+						},
 						"spacing": {
 							"margin": {
 								"top": "var:preset|spacing|minus-2"
