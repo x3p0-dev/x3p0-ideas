@@ -10,18 +10,6 @@
 // -----------------------------------------------------------------------------
 
 ///
-/// Fix for WP adding left/right padding to Image blocks within Gallery blocks
-/// that are nested within constrained layouts. This happens when
-/// `useRootPaddingAwareAlignments` is enabled in `theme.json`.
-///
-/// @todo Needs more testing.
-///
-.has-global-padding > .wp-block-gallery.alignfull > .wp-block-image {
-	padding-left: 0;
-	padding-right: 0;
-}
-
-///
 /// WordPress hardcodes a 13px font-size for captions. At that size, captions
 /// are so unreadable that they may as well not exist. 🙈
 ///
@@ -55,6 +43,18 @@
 		--wp--custom--caption--background,
 		linear-gradient(0deg, #000000b3, #0000004d 70%, #0000)
 	);
+}
+
+///
+/// Overrule core's hardcoded width for images at smaller screen sizes. This
+/// ensures that galleries break to a single column of images.
+///
+/// @todo This should be orientation-dependent. Needs filter on image render.
+///
+@media (max-width: 30rem) {
+	.wp-block-gallery.has-nested-images figure.wp-block-image:not(#individual-image) {
+		width: 100%;
+	}
 }
 
 // -----------------------------------------------------------------------------
