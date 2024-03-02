@@ -22,9 +22,9 @@ defined('ABSPATH') || exit;
 		}
 	},
 	"layout":{"type":"flex","flexWrap":"wrap"},
-	"fontSize":"sm"
+	"className": "pattern-post-byline"
 } -->
-<div class="wp-block-group has-sm-font-size">
+<div class="wp-block-group pattern-post-byline">
 
 	<!-- wp:group {
 		"metadata":{

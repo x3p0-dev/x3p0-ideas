@@ -642,6 +642,10 @@
 				},
 				"footerLinks": {
 					"background": "var:preset|color|neutral-50"
+				},
+				"postByline": {
+					"fontSize": "var:preset|font-size|sm",
+					"lineHeight": "var:custom|line-height|sm"
 				}
 			},
 			"siteBlocks": {
