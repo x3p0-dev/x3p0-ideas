@@ -32,6 +32,9 @@
 			},
 			"core/group": {
 				"custom": {
+					"archiveHeader": {
+						"padding": "var:preset|spacing|plus-3"
+					},
 					"box": {
 						"background": "var:preset|color|neutral-50",
 						"borderStyle": "var:custom|global|border-style",

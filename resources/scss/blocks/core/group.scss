@@ -39,11 +39,28 @@
 // -----------------------------------------------------------------------------
 
 ///
-/// The boxed style adds some default padding and a background. Move style
-/// rules to `theme.json` with support.
+/// Archive header pattern.
 ///
 /// @link      https://github.com/WordPress/gutenberg/pull/57908
-/// @wordpress 6.5
+/// @wordpress 6.6
+/// @todo      Move to `theme.json`-based style variations in WordPress 6.6.
+///
+.is-style-archive-header,
+.editor-styles-wrapper .is-style-archive-header{
+	color:        var(--wp--custom--archive-header--color, inherit);
+	background:   var(--wp--custom--archive-header--background, transparent);
+	border-width: var(--wp--custom--archive-header--border-width, 0);
+	border-style: var(--wp--custom--archive-header--border-style, solid);
+	border-color: var(--wp--custom--archive-header--border-color, transparent);
+	padding:      var(--wp--custom--archive-header--padding, 0);
+}
+
+///
+/// The boxed style adds some default padding and a background.
+///
+/// @link      https://github.com/WordPress/gutenberg/pull/57908
+/// @wordpress 6.6
+/// @todo      Move to `theme.json`-based style variations in WordPress 6.6.
 ///
 .wp-block-group.is-style-box,
 .editor-styles-wrapper .wp-block-group.is-style-box {
@@ -59,11 +76,11 @@
 }
 
 ///
-/// The card style adds a default border. Move style rules to `theme.json` with
-/// support.
+/// The card style adds a default border.
 ///
 /// @link      https://github.com/WordPress/gutenberg/pull/57908
-/// @wordpress 6.5
+/// @wordpress 6.6
+/// @todo      Move to `theme.json`-based style variations in WordPress 6.6.
 ///
 .wp-block-group.is-style-card,
 .editor-styles-wrapper .wp-block-group.is-style-card {
@@ -88,11 +105,11 @@
 }
 
 ///
-/// The message style is intended for notes, warnings, notices, etc. Move style
-/// rules to `theme.json` with support.
+/// The message style is intended for notes, warnings, notices, etc.
 ///
 /// @link      https://github.com/WordPress/gutenberg/pull/57908
-/// @wordpress 6.5
+/// @wordpress 6.6
+/// @todo      Move to `theme.json`-based style variations in WordPress 6.6.
 ///
 .wp-block-group.is-style-message,
 .editor-styles-wrapper .wp-block-group.is-style-message {
@@ -115,7 +132,8 @@
 /// block level.
 ///
 /// @link      https://github.com/WordPress/gutenberg/pull/57908
-/// @wordpress 6.5
+/// @wordpress 6.6
+/// @todo      Move to `theme.json`-based style variations in WordPress 6.6.
 ///
 .wp-block-group.is-style-section,
 .editor-styles-wrapper .wp-block-group.is-style-section {
@@ -135,8 +153,8 @@
 /// Site Footer pattern.
 ///
 /// @link      https://github.com/WordPress/gutenberg/pull/57908
-/// @wordpress 6.5
-/// @todo      Create a pattern-specific enqueue system?
+/// @wordpress 6.6
+/// @todo      Move to `theme.json`-based style variations in WordPress 6.6.
 ///
 .pattern-footer,
 .editor-styles-wrapper .pattern-footer {

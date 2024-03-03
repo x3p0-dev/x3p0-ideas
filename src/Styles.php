@@ -125,10 +125,11 @@ class Styles implements Bootable
 				'reverse' => __('Reverse', 'x3p0-ideas')
 			],
 			'core/group' => [
-				'box'     => __('Box',     'x3p0-ideas'),
-				'card'    => __('Card',    'x3p0-ideas'),
-				'message' => __('Message', 'x3p0-ideas'),
-				'section' => __('Section', 'x3p0-ideas')
+				'archive-header' => __('Archive Header', 'x3p0-ideas'),
+				'box'            => __('Box',            'x3p0-ideas'),
+				'card'           => __('Card',           'x3p0-ideas'),
+				'message'        => __('Message',        'x3p0-ideas'),
+				'section'        => __('Section',        'x3p0-ideas')
 			],
 			'core/heading' => [
 				'knockout'          => __('Knockout',      'x3p0-ideas'),

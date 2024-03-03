@@ -37,9 +37,10 @@ defined('ABSPATH') || exit;
 				"blockGap":"var:preset|spacing|base"
 			}
 		},
-		"layout":{"type":"constrained"}
+		"layout":{"type":"constrained"},
+		"className":"is-style-archive-header"
 	} -->
-	<div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
+	<div class="wp-block-group alignfull is-style-archive-header">
 		<!-- wp:query-title {"type":"search"} /-->
 	</div>
 	<!-- /wp:group -->
