@@ -56,6 +56,10 @@
 					"cardFooter": {
 						"background": "var:preset|color|neutral-50"
 					},
+					"commentMeta": {
+						"fontSize": "var:preset|font-size|sm",
+						"lineHeight": "var:custom|line-height|sm"
+					},
 					"message": {
 						"color": "var:preset|color|primary-900",
 						"background": "var:preset|color|primary-50",
@@ -65,9 +69,20 @@
 						"shadow": "var:custom|global|shadow",
 						"padding": "var:preset|spacing|plus-3"
 					},
+					"postByline": {
+						"fontSize": "var:preset|font-size|sm",
+						"lineHeight": "var:custom|line-height|sm"
+					},
+					"postMeta": {
+						"fontSize": "var:preset|font-size|sm",
+						"lineHeight": "var:custom|line-height|sm"
+					},
 					"section": {
 						"background": "var:preset|gradient|90-deg-neutral-50-transparent",
 						"padding": "var(--wp--preset--spacing--plus-4) var(--wp--preset--spacing--plus-3)"
+					},
+					"siteFooter": {
+						"padding": "var(--wp--preset--spacing--plus-6) var(--wp--preset--spacing--plus-3)"
 					}
 				}
 			},
@@ -645,10 +660,6 @@
 				},
 				"footerLinks": {
 					"background": "var:preset|color|neutral-50"
-				},
-				"postByline": {
-					"fontSize": "var:preset|font-size|sm",
-					"lineHeight": "var:custom|line-height|sm"
 				}
 			},
 			"siteBlocks": {

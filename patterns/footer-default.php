@@ -17,20 +17,10 @@ defined('ABSPATH') || exit;
 ?>
 <!-- wp:group {
 	"metadata":{"name":"<?= esc_attr__('Footer Container', 'x3p0-ideas') ?>"},
-	"style":{
-		"spacing":{
-			"padding":{
-				"top":"var:preset|spacing|plus-6",
-				"right":"var:preset|spacing|plus-3",
-				"bottom":"var:preset|spacing|plus-6",
-				"left":"var:preset|spacing|plus-3"
-			}
-		}
-	},
 	"layout":{"type":"default"},
-	"className":"pattern-footer pattern-footer--default"
+	"className":"pattern-footer-default is-style-site-footer"
 } -->
-<div class="wp-block-group pattern-footer pattern-footer--default" style="padding-top:var(--wp--preset--spacing--plus-6);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-6);padding-left:var(--wp--preset--spacing--plus-3)">
+<div class="wp-block-group pattern-footer-default is-style-site-footer">
 
 	<!-- wp:social-links {
 		"showLabels":true,

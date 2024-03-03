@@ -40,9 +40,9 @@ defined('ABSPATH') || exit;
 					"metadata":{"name":"<?= esc_attr__('Comment Header', 'x3p0-ideas') ?>"},
 					"style":{"spacing":{"blockGap":"var:preset|spacing|base"}},
 					"layout":{"type":"flex","flexWrap":"nowrap"},
-					"fontSize":"sm"
+					"className":"is-style-comment-meta"
 				} -->
-				<header class="wp-block-group has-sm-font-size">
+				<header class="wp-block-group is-style-comment-meta">
 
 					<!-- wp:avatar {
 						"size":56,

@@ -24,6 +24,11 @@
 						"background": "none",
 						"borderColor": "var:preset|color|neutral-100",
 						"borderWidth": "var(--wp--custom--global--border-width) 0 0"
+					},
+					"siteFooter": {
+						"background": "var:preset|color|neutral-50",
+						"borderColor": "var:preset|color|neutral-100",
+						"borderWidth": "1px 0 0"
 					}
 				}
 			},
@@ -78,13 +83,6 @@
 				"borderWidth": "1px",
 				"borderRadius": "0",
 				"shadow": "var:preset|shadow|xs"
-			},
-			"pattern": {
-				"footer": {
-					"background": "var:preset|color|neutral-50",
-					"borderColor": "var:preset|color|neutral-100",
-					"borderWidth": "1px 0 0"
-				}
 			}
 		},
 		"color": {
