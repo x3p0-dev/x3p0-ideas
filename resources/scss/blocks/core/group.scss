@@ -221,6 +221,13 @@
 ///
 /// Site Footer pattern.
 ///
+/// Note that we're specifically reversing the CSS custom properties here. If a
+/// style variation defines a text/background color to the site footer, it is
+/// used instead of the pattern styles. Yes, this feels a bit backwards, but the
+/// patterns styles are primarily for the theme's default design. Or, rather,
+/// they are specifically for global style variations that do not define a color
+/// set to the footer.
+///
 /// @todo Figure out a better way to handle various footer patterns without the
 /// need to make multiple block styles for each pattern.
 ///
@@ -228,23 +235,23 @@
 .editor-styles-wrapper .pattern-footer {
 	&-call-to-action {
 		color: var(
-			--wp--custom--pattern--footer-call-to-action--color,
-			var(--wp--custom--site-footer--color, inherit)
+			--wp--custom--site-footer--color,
+			var(--wp--custom--pattern--footer-call-to-action--color, inherit)
 		);
 		background: var(
-			--wp--custom--pattern--footer-call-to-action--background,
-			var(--wp--custom--site-footer--background, transparent)
+			--wp--custom--site-footer--background,
+			var(--wp--custom--pattern--footer-call-to-action--background, transparent)
 		);
 	}
 
 	&-links {
 		color: var(
-			--wp--custom--pattern--footer-links--color,
-			var(--wp--custom--site-footer--color, inherit)
+			--wp--custom--site-footer--color,
+			var(--wp--custom--pattern--footer-links--color, inherit)
 		);
 		background: var(
-			--wp--custom--pattern--footer-links--background,
-			var(--wp--custom--site-footer--background, transparent)
+			--wp--custom--site-footer--background,
+			var(--wp--custom--pattern--footer-links--background, transparent)
 		);
 	}
 }
