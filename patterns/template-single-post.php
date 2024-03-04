@@ -39,24 +39,13 @@ defined('ABSPATH') || exit;
 
 		<!-- wp:group {
 			"tagName":"header",
-			"metadata":{"name":"<?= esc_attr__('Post Header', 'x3p0-ideas') ?>"},
-			"style":{"spacing":{"blockGap":"0"}},
+			"metadata":{"name":"Post Header"},
+			"style":{"spacing":{"blockGap":"var:preset|spacing|base"}},
 			"layout":{"type":"constrained"}
 		} -->
 		<header class="wp-block-group">
-
-			<!-- wp:group {
-				"style":{"spacing":{"blockGap":"var:preset|spacing|base"}},
-				"layout":{"type":"flex","flexWrap":"wrap"},
-				"fontSize":"sm"
-			} -->
-			<div class="wp-block-group has-sm-font-size">
-				<!-- wp:post-date /-->
-			</div>
-			<!-- /wp:group -->
-
 			<!-- wp:post-title {"level":1} /-->
-
+			<!-- wp:pattern {"slug":"x3p0-ideas/post-byline"} /-->
 		</header>
 		<!-- /wp:group -->
 

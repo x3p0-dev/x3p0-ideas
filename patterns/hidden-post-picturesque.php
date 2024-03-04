@@ -65,12 +65,21 @@ defined('ABSPATH') || exit;
 		} -->
 		<footer class="wp-block-group has-sm-font-size">
 			<!-- wp:post-author-name {
-				"isLink":true,
-				"className":"is-style-icon"
+				"isLink":true
 			} /-->
-			<!-- wp:post-date {
-				"className":"is-style-icon"
-			} /-->
+
+			<!-- wp:paragraph {
+				"metadata":{
+					"name":"<?= esc_attr('Separator', 'x3p0-ideas') ?>"
+				}
+			} -->
+			<p><?=
+				// Translators: Metadata separator.
+				esc_html__('&middot;', 'x3p0-ideas')
+			?></p>
+			<!-- /wp:paragraph -->
+
+			<!-- wp:post-date /-->
 		</footer>
 		<!-- /wp:group -->
 

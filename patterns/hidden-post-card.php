@@ -135,13 +135,21 @@ defined('ABSPATH') || exit;
 	<footer class="wp-block-group has-sm-font-size" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
 
 		<!-- wp:post-author-name {
-			"isLink":true,
-			"className":"is-style-icon"
+			"isLink":true
 		} /-->
 
-		<!-- wp:post-date {
-			"className":"is-style-icon"
-		} /-->
+		<!-- wp:paragraph {
+			"metadata":{
+				"name":"<?= esc_attr('Separator', 'x3p0-ideas') ?>"
+			}
+		} -->
+		<p><?=
+			// Translators: Metadata separator.
+			esc_html__('&middot;', 'x3p0-ideas')
+		?></p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:post-date /-->
 
 	</footer>
 	<!-- /wp:group -->
