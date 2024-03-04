@@ -6,6 +6,13 @@
 			"backgroundImage": true
 		},
 		"blocks": {
+			"core/columns": {
+				"custom": {
+					"siteFooter": {
+						"padding": "var(--wp--preset--spacing--plus-6) var(--wp--preset--spacing--plus-3)"
+					}
+				}
+			},
 			"core/comment-template": {
 				"custom": {
 					"comment": {

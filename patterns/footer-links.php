@@ -79,9 +79,10 @@ defined('ABSPATH') || exit;
 						"spacing":{
 							"blockGap":"var:preset|spacing|base"
 						}
-					}
+					},
+					"fontSize":"sm"
 				} -->
-				<div class="wp-block-column">
+				<div class="wp-block-column has-sm-font-size">
 
 					<!-- wp:heading {
 						"level":3,
@@ -91,10 +92,9 @@ defined('ABSPATH') || exit;
 								"fontWeight":"600"
 							}
 						},
-						"fontSize":"sm",
-						"fontFamily":"secondary"
+						"fontSize":"sm"
 					} -->
-					<h3 class="wp-block-heading has-secondary-font-family has-sm-font-size" style="font-style:normal;font-weight:600"><?= esc_html__('Site Navigation', 'x3p0-ideas') ?></h3>
+					<h3 class="wp-block-heading has-sm-font-size" style="font-style:normal;font-weight:600"><?= esc_html__('Site Navigation', 'x3p0-ideas') ?></h3>
 					<!-- /wp:heading -->
 
 					<!-- wp:list {

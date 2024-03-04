@@ -4,6 +4,15 @@
 	"title": "Extant",
 	"settings": {
 		"blocks": {
+			"core/columns": {
+				"custom": {
+					"siteFooter": {
+						"background": "var:preset|color|neutral-50",
+						"borderColor": "var:preset|color|neutral-100",
+						"borderWidth": "1px 0 0"
+					}
+				}
+			},
 			"core/comment-template": {
 				"custom": {
 					"comment": {
