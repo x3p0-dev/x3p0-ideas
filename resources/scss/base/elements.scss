@@ -40,6 +40,10 @@ a {
 	&:hover img:where(:not(.avatar)) {
 		box-shadow: var(--wp--preset--shadow--enlarge);
 	}
+
+	.is-style-borderless &:focus {
+		outline: none;
+	}
 }
 
 // Ensure audio/video elements are set to block-level.
