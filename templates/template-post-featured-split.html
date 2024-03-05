@@ -77,12 +77,19 @@
 						<!-- wp:group {
 							"style":{"spacing":{"blockGap":"var:preset|spacing|base"}},
 							"layout":{"type":"flex","flexWrap":"nowrap"},
-							"fontSize":"sm"
+							"className":"is-style-post-byline"
 						} -->
-						<div class="wp-block-group has-sm-font-size">
+						<div class="wp-block-group is-style-post-byline">
 							<!-- wp:avatar {"size":48,"isLink":true} /-->
 							<!-- wp:post-author-name {"isLink":true} /-->
-							<!-- wp:post-date {"className":"is-style-icon"} /-->
+							<!-- wp:paragraph {
+								"metadata":{
+									"name":"<?= esc_attr('Separator', 'x3p0-ideas') ?>"
+								}
+							} -->
+							<p>&middot;</p>
+							<!-- /wp:paragraph -->
+							<!-- wp:post-date /-->
 						</div>
 						<!-- /wp:group -->
 
