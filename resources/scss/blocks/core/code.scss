@@ -22,6 +22,15 @@
 		white-space: revert;
 		display: revert;
 	}
+
+	// Ensures child tags nested inside `<code>` inherit typography styles.
+	// But leave style and weight the same for things like bold and italic.
+	code * {
+		font-family: inherit;
+		font-size: inherit;
+		font-family: inherit;
+		line-height: inherit;
+	}
 }
 
 // -----------------------------------------------------------------------------
@@ -53,6 +62,22 @@
 
 	::selection {
 		color: currentColor;
+		background: #334155;
+	}
+
+	// Ensure nested markup colors inherit from the `<code>` element or are
+	// removed altogether.
+	code *:where(:not(.token)) {
+		color: currentColor;
+		text-decoration-color: currentColor;
+		border-color: currentColor;
+		outline-color: currentColor;
+		background: transparent;
+		box-shadow: none;
+	}
+
+	// Better colors for `<mark>` element, which is used for nice highlights.
+	code mark {
 		background: #334155;
 	}
 }
