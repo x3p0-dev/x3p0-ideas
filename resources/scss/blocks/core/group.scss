@@ -255,3 +255,18 @@
 		);
 	}
 }
+
+// -----------------------------------------------------------------------------
+// Overrides.
+// -----------------------------------------------------------------------------
+
+///
+/// Ensures specific styles inherit their color when used inside of a Cover.
+///
+.wp-block-cover .wp-block-group:is(
+	.is-style-post-byline,
+	.is-style-post-meta
+) {
+	color: inherit;
+	background: transparent;
+}
