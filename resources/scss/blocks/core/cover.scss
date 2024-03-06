@@ -34,6 +34,15 @@
 	z-index: 999999;
 }
 
+///
+/// Add darker background color when the Cover block image has a placeholder,
+/// such as when it's connected to the featured image in the Site Editor.
+/// By default, it's impossible to read light text on top of it.
+///
+.is-dark-theme .wp-block-cover__image--placeholder-image.has-illustration {
+	background-color: var(--wp--preset--color--black, #000);
+}
+
 // -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
