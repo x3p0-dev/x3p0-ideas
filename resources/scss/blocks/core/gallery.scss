@@ -39,6 +39,8 @@
 /// @link https://github.com/WordPress/gutenberg/issues/8030
 ///
 .wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
+	padding: var(--wp--custom--caption--padding, var(--wp--preset--spacing--minus-2));
+	color:   var(--wp--custom--caption--color, var(--wp--preset--color--white));
 	background: var(
 		--wp--custom--caption--background,
 		linear-gradient(0deg, #000000b3, #0000004d 70%, #0000)
@@ -85,15 +87,6 @@
 ///
 .wp-block-gallery.has-background {
 	padding: var(--wp--style--unstable-gallery-gap, 0);
-}
-
-///
-/// Overrides the core hard-coded padding for captions.
-///
-/// Note: the crazy selectors here are necessary to overrule core.
-///
-.wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
-	padding: var(--wp--preset--spacing--minus-2);
 }
 
 // -----------------------------------------------------------------------------
