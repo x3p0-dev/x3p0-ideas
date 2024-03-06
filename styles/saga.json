@@ -1,0 +1,369 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"title": "Saga",
+	"settings": {
+		"blocks": {
+			"core/columns": {
+				"custom": {
+					"siteFooter": {
+						"background": "var:preset|color|neutral-50",
+						"borderColor": "var:preset|color|neutral-100",
+						"borderStyle": "double",
+						"borderWidth": "3px 0 0"
+					}
+				}
+			},
+			"core/details": {
+				"custom": {
+					"elements": {
+						"summary": {
+							"fontFamily": "var:preset|font-family|secondary"
+						}
+					}
+				}
+			},
+			"core/gallery": {
+				"custom": {
+					"caption": {
+						"background": "rgb(0 0 0 / 50%)",
+						"padding": "var:preset|spacing|base"
+					}
+				}
+			},
+			"core/group": {
+				"custom": {
+					"card": {
+						"borderColor": "var:custom|global|border-color",
+						"borderWidth": "var:custom|global|border-width"
+					},
+					"cardFooter": {
+						"background": "none",
+						"borderColor": "var:custom|global|border-color",
+						"borderWidth": "3px 0 0",
+						"borderStyle": "double"
+					},
+					"postByline": {
+						"color": "var:preset|color|neutral-500"
+					},
+					"siteFooter": {
+						"background": "var:preset|color|neutral-50",
+						"borderColor": "var:preset|color|neutral-100",
+						"borderStyle": "double",
+						"borderWidth": "3px 0 0"
+					}
+				}
+			},
+			"core/post-comments-form": {
+				"custom": {
+					"commentNotes": {
+						"fontSize": "var:preset|font-size|sm",
+						"lineHeight": "var:custom|line-height|sm"
+					}
+				}
+			}
+		},
+		"custom": {
+			"variation": "saga",
+			"global": {
+				"borderColor": "var:preset|color|neutral-100",
+				"borderWidth": "1px",
+				"borderRadius": "0"
+			}
+		},
+		"color": {
+			"palette": [
+				{
+					"slug": "base",
+					"color": "#ffffff",
+					"name": "Base"
+				},
+				{
+					"slug": "contrast",
+					"color": "#32373c",
+					"name": "Contrast"
+				},
+				{
+					"slug": "primary-950",
+					"color": "#450a0a",
+					"name": "Primary: 950"
+				},
+				{
+					"slug": "primary-900",
+					"color": "#7f1d1d",
+					"name": "Primary: 900"
+				},
+				{
+					"slug": "primary-700",
+					"color": "#b91c1c",
+					"name": "Primary: 700"
+				},
+				{
+					"slug": "primary-500",
+					"color": "#ef4444",
+					"name": "Primary: 500"
+				},
+				{
+					"slug": "primary-300",
+					"color": "#fca5a5",
+					"name": "Primary: 300"
+				},
+				{
+					"slug": "primary-100",
+					"color": "#fee2e2",
+					"name": "Primary: 100"
+				},
+				{
+					"slug": "primary-50",
+					"color": "#fef2f2",
+					"name": "Primary: 50"
+				},
+				{
+					"slug": "neutral-950",
+					"color": "#232b2e",
+					"name": "Neutral: 950"
+				},
+				{
+					"slug": "neutral-900",
+					"color": "#354045",
+					"name": "Neutral: 900"
+				},
+				{
+					"slug": "neutral-700",
+					"color": "#46585e",
+					"name": "Neutral: 700"
+				},
+				{
+					"slug": "neutral-500",
+					"color": "#6a848d",
+					"name": "Neutral: 500"
+				},
+				{
+					"slug": "neutral-300",
+					"color": "#b2c1c7",
+					"name": "Neutral: 300"
+				},
+				{
+					"slug": "neutral-100",
+					"color": "#edeff1",
+					"name": "Neutral: 100"
+				},
+				{
+					"slug": "neutral-50",
+					"color": "#f4f6f7",
+					"name": "Neutral: 50"
+				},
+				{
+					"slug": "black",
+					"color": "#000000",
+					"name": "Black"
+				}
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "'Playfair Display', Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif",
+					"slug": "primary",
+					"name": "Primary (Playfair Display)",
+					"fontFace": [
+						{
+							"fontFamily": "Playfair Display",
+							"fontWeight": "400 900",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./public/fonts/playfair/playfair-display.woff2" ]
+						},
+						{
+							"fontFamily": "Playfair Display",
+							"fontWeight": "400 900",
+							"fontStyle": "italic",
+							"fontStretch": "normal",
+							"src": [ "file:./public/fonts/playfair/playfair-display-italic.woff2" ]
+						}
+					]
+				},
+				{
+					"fontFamily": "'Source Sans 3', ui-sans-serif, sans-serif",
+					"slug": "secondary",
+					"name": "Secondary (Source Sans 3)",
+					"fontFace": [
+						{
+							"fontFamily": "Source Sans 3",
+							"fontWeight": "200 900",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [
+								"file:./public/fonts/source/source-sans-3.woff2"
+							]
+						},
+						{
+							"fontFamily": "Source Sans 3",
+							"fontWeight": "200 900",
+							"fontStyle": "italic",
+							"fontStretch": "normal",
+							"src": [
+								"file:./public/fonts/source/source-sans-3-italic.woff2"
+							]
+						}
+					]
+				},
+				{
+					"fontFamily": "ui-monospace, 'Fira Code', 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace",
+					"slug": "mono",
+					"name": "Monospace"
+				}
+			]
+		}
+	},
+	"styles": {
+		"elements": {
+			"button": {
+				"color": {
+					"background": "var:preset|color|primary-500"
+				},
+				":focus": {
+					"color": {
+						"background": "var:preset|color|primary-700"
+					}
+				},
+				":hover": {
+					"color": {
+						"background": "var:preset|color|primary-700"
+					}
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontWeight": "700"
+				}
+			}
+		},
+		"blocks": {
+			"core/comments-title": {
+				"typography": {
+					"fontSize": "var:preset|font-size|xl",
+					"lineHeight": "var:preset|line-height|xl"
+				}
+			},
+			"core/navigation-submenu": {
+				"color": {
+					"background": "var:preset|color|neutral-950",
+					"text": "var:preset|color|base"
+				},
+				"border": {
+					"width": "0",
+					"radius": "0"
+				},
+				"css": "--wp--custom--submenu-item--hover-background: var(--wp--preset--color--neutral-900);"
+			},
+			"core/post-author-name": {
+				"elements": {
+					"link": {
+						"color": {
+							"text": "var:preset|color|neutral-900"
+						},
+						"typography": {
+							"fontFamily": "var:preset|font-family|primary",
+							"fontStyle": "italic",
+							"textDecoration": "none"
+						},
+						":focus": {
+							"typography": {
+								"textDecoration": "underline"
+							}
+						},
+						":hover": {
+							"typography": {
+								"textDecoration": "underline"
+							}
+						}
+					}
+				}
+			},
+			"core/post-comments-form": {
+				"elements": {
+					"h3": {
+						"border": {
+							"bottom": {
+								"color": "var:preset|color|neutral-100",
+								"style": "double",
+								"width": "3px"
+							}
+						},
+						"spacing": {
+							"padding": {
+								"bottom": "var:preset|spacing|base"
+							}
+						},
+						"typography": {
+							"fontSize": "var:preset|font-size|xl",
+							"lineHeight": "var:preset|line-height|xl"
+						}
+					}
+				}
+			},
+			"core/pullquote": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|primary",
+					"fontStyle": "italic"
+				},
+				"elements": {
+					"cite": {
+						"typography": {
+							"fontFamily": "var:preset|font-family|secondary",
+							"fontStyle": "normal",
+							"fontWeight": "300"
+						}
+					}
+				}
+			},
+			"core/query-pagination": {
+				"typography": {
+					"fontWeight": "500"
+				},
+				"elements": {
+					"link": {
+						"typography": {
+							"textDecoration": "none"
+						},
+						":focus": {
+							"typography": {
+								"textDecoration": "underline"
+							}
+						},
+						":hover": {
+							"typography": {
+								"textDecoration": "underline"
+							}
+						}
+					}
+				}
+			},
+			"core/quote": {
+				"elements": {
+					"cite": {
+						"typography": {
+							"fontFamily": "var:preset|font-family|primary",
+							"fontStyle": "italic"
+						}
+					}
+				}
+			},
+			"core/site-title": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|secondary",
+					"fontSize": "var:preset|font-size|lg",
+					"fontWeight": "700",
+					"letterSpacing": "-0.05em"
+				}
+			},
+			"core/verse": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|primary",
+					"fontStyle": "italic"
+				}
+			}
+		}
+	}
+}
