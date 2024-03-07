@@ -102,15 +102,6 @@ class CodeBlockHighlight
 		$this->content = $content;
 		$this->block   = $block;
 
-		// Prism.js doesn't do well with valid `<br>` tags. Even though
-		// we're using the Preserve Markup extension, breaks can still
-		// make it miss tokens.
-		$this->content = str_ireplace(
-			[ '<br>', '<br/>', '<br />' ],
-			"\n",
-			$this->content
-		);
-
 		$processor = new WP_HTML_Tag_Processor($this->content);
 
 		// Bail early if we don't have a `<pre>` tag.
@@ -170,7 +161,11 @@ class CodeBlockHighlight
 			'<div class="wp-block-code is-style-highlight%s">%s%s</div>',
 			'' === $this->align ? '' : esc_attr(" {$this->align}"),
 			$this->renderToolbar(),
-			$this->content
+			str_ireplace(
+				[ '<br>', '<br/>', '<br />' ],
+				"\n",
+				$this->content
+			)
 		);
 	}
 
