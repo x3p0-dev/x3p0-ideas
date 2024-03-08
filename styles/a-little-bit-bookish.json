@@ -6,6 +6,10 @@
 		"blocks": {
 			"core/group": {
 				"custom": {
+					"card": {
+						"borderColor": "var:custom|global|border-color",
+						"borderWidth": "var:custom|global|border-width"
+					},
 					"cardFooter": {
 						"background": "transparent",
 						"borderColor": "var:custom|global|border-color",
@@ -230,6 +234,47 @@
 				"typography": {
 					"fontFamily": "var:preset|font-family|tertiary"
 				}
+			},
+			"core/comments-title": {
+				"typography": {
+					"fontSize": "var:preset|font-size|2-xl",
+					"lineHeight": "var:preset|line-height|2-xl"
+				}
+			},
+			"core/post-comments-form": {
+				"color": {
+					"background": "var:preset|color|neutral-50"
+				},
+				"border": {
+					"color": "var:custom|global|border-color",
+					"style": "var:custom|global|border-style",
+					"width": "var:custom|global|border-width",
+					"radius": "var:custom|global|border-radius"
+				},
+				"elements": {
+					"h3": {
+						"border": {
+							"bottom": {
+								"color": "var:custom|global|border-color",
+								"style": "var:custom|global|border-style",
+								"width": "var:custom|global|border-width"
+							}
+						},
+						"spacing": {
+							"padding": {
+								"top": "var:preset|spacing|base",
+								"bottom": "var:preset|spacing|base",
+								"left": "var:preset|spacing|plus-3",
+								"right": "var:preset|spacing|plus-3"
+							}
+						},
+						"typography": {
+							"fontSize": "var:preset|font-size|lg",
+							"lineHeight": "var:custom|line-height|lg"
+						}
+					}
+				},
+				"css": "& > form {\n\tmargin: 0;\n\tpadding: var(--wp--preset--spacing--plus-3);\n}"
 			},
 			"core/pullquote": {
 				"typography": {

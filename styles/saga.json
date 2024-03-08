@@ -53,14 +53,6 @@
 						"borderWidth": "3px 0 0"
 					}
 				}
-			},
-			"core/post-comments-form": {
-				"custom": {
-					"commentNotes": {
-						"fontSize": "var:preset|font-size|sm",
-						"lineHeight": "var:custom|line-height|sm"
-					}
-				}
 			}
 		},
 		"custom": {
@@ -354,8 +346,8 @@
 				"typography": {
 					"fontFamily": "var:preset|font-family|secondary",
 					"fontSize": "var:preset|font-size|lg",
-					"fontWeight": "700",
-					"letterSpacing": "-0.05em"
+					"fontWeight": "800",
+					"letterSpacing": "-0.03em"
 				}
 			},
 			"core/verse": {
