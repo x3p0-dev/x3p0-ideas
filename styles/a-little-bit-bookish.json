@@ -6,6 +6,9 @@
 		"blocks": {
 			"core/group": {
 				"custom": {
+					"box": {
+						"background": "var:preset|color|neutral-100"
+					},
 					"card": {
 						"borderColor": "var:custom|global|border-color",
 						"borderWidth": "var:custom|global|border-width"

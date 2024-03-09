@@ -24,6 +24,9 @@
 			},
 			"core/group": {
 				"custom": {
+					"box": {
+						"shadow": "var:preset|shadow|md"
+					},
 					"card": {
 						"background": "transparent",
 						"borderColor": "var:custom|global|border-color",
