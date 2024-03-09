@@ -30,6 +30,14 @@
 }
 
 ///
+/// Add top margin when the block is nested inside the comment template. This is
+/// the case when replying to a comment.
+///
+.wp-block-comment-template .wp-block-post-comments-form {
+	margin-top: var(--wp--style--block-gap);
+}
+
+///
 /// Fixes misaligned checkbox and label when the label wraps two or more lines.
 /// This is because core uses centered alignment.
 ///
@@ -40,6 +48,21 @@
 // -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
+
+///
+/// Adjust the reply title so that it looks a little when replying to a comment.
+///
+.wp-block-post-comments-form .comment-reply-title {
+	display: flex;
+	align-items: center;
+	gap: var(--wp--preset--spacing--base);
+
+	small {
+		margin: 0;
+		font-size: var(--wp--preset--font-size--sm);
+		font-weight: 400;
+	}
+}
 
 ///
 /// Creates a grid display for the comment form.

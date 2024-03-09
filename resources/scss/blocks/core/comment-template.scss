@@ -24,13 +24,22 @@
 }
 
 ///
+/// Remove spacing from comment list items.
+///
+.wp-block-comment-template .comment {
+	margin-left: 0;
+	margin-right: 0;
+	padding: 0;
+}
+
+///
 /// Allow comments to be styled via `theme.json`. Currently, this only supports
 /// styling the top-level comment.
 ///
 /// @todo Define a system for `theme.json` style control over nested comments.
 ///
-.wp-block-comment-template > li,
-.editor-styles-wrapper .wp-block-comment-template > li {
+.wp-block-comment-template > .comment,
+.editor-styles-wrapper .wp-block-comment-template > .comment {
 	color:         var(--wp--custom--comment--color, inherit);
 	background:    var(--wp--custom--comment--background, transparent);
 	border-width:  var(--wp--custom--comment--border-width, 0);
@@ -39,6 +48,15 @@
 	border-radius: var(--wp--custom--comment--border-radius, 0);
 	padding:       var(--wp--custom--comment--padding, 0);
 	box-shadow:    var(--wp--custom--comment--shadow, none);
+}
+
+///
+/// Override WordPress's hardcoded left padding with our own.
+///
+/// @todo Only indent up to `.depth-2` with the inclusion of a parent link.
+///
+.wp-block-comment-template .comment > ol {
+	padding-left: var(--wp--style--block-gap);
 }
 
 // -----------------------------------------------------------------------------
