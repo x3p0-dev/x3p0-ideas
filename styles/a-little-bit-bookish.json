@@ -7,7 +7,9 @@
 			"core/group": {
 				"custom": {
 					"box": {
-						"background": "var:preset|color|neutral-100"
+						"background": "var:preset|color|neutral-50",
+						"borderColor": "var:custom|global|border-color",
+						"borderWidth": "var:custom|global|border-width"
 					},
 					"card": {
 						"borderColor": "var:custom|global|border-color",
