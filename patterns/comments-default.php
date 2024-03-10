@@ -37,12 +37,49 @@ defined('ABSPATH') || exit;
 
 				<!-- wp:group {
 					"tagName":"header",
-					"metadata":{"name":"<?= esc_attr__('Comment Header', 'x3p0-ideas') ?>"},
-					"style":{"spacing":{"blockGap":"var:preset|spacing|base"}},
-					"layout":{"type":"flex","flexWrap":"nowrap"},
+					"metadata":{
+						"name":"<?= esc_attr__('Comment Header', 'x3p0-ideas') ?>"
+					},
+					"style":{
+						"spacing":{
+							"blockGap":"var:preset|spacing|base"
+						}
+					},
+					"layout":{
+						"type":"flex",
+						"flexWrap":"wrap"
+					},
 					"className":"is-style-comment-meta"
 				} -->
 				<header class="wp-block-group is-style-comment-meta">
+
+					<?php if (get_option('thread_comments')) : ?>
+
+						<!-- wp:paragraph {
+							"placeholder":"<?= esc_attr__('In reply to Comment Author', 'x3p0-ideas') ?>",
+							"metadata":{
+								"bindings":{
+									"content":{
+										"source":"x3p0/theme",
+										"args":{
+											"key":"commentParentLink"
+										}
+									}
+								},
+								"@ifAttribute":"content"
+							},
+							"style":{
+								"layout":{
+									"selfStretch":"fixed",
+									"flexSize":"100%"
+								}
+							},
+							"className":"comment-parent-link"
+						} -->
+						<p class="comment-parent-link"></p>
+						<!-- /wp:paragraph -->
+
+					<?php endif ?>
 
 					<!-- wp:avatar {
 						"size":56,
@@ -106,14 +143,18 @@ defined('ABSPATH') || exit;
 
 		<!-- /wp:comment-template -->
 
-		<!-- wp:comments-pagination {
-			"paginationArrow":"arrow",
-			"layout":{"type":"flex","justifyContent":"space-between"}
-		} -->
-			<!-- wp:comments-pagination-previous /-->
-			<!-- wp:comments-pagination-numbers /-->
-			<!-- wp:comments-pagination-next /-->
-		<!-- /wp:comments-pagination -->
+		<?php if (get_option('page_comments')) : ?>
+
+			<!-- wp:comments-pagination {
+				"paginationArrow":"arrow",
+				"layout":{"type":"flex","justifyContent":"space-between"}
+			} -->
+				<!-- wp:comments-pagination-previous /-->
+				<!-- wp:comments-pagination-numbers /-->
+				<!-- wp:comments-pagination-next /-->
+			<!-- /wp:comments-pagination -->
+
+		<?php endif ?>
 
 		<!-- wp:post-comments-form {"className":"is-style-icons"} /-->
 

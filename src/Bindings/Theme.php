@@ -27,12 +27,13 @@ class Theme implements BlockBindingsSource
 	 * @todo  Type hint with PHP 8.3+ requirement.
 	 */
 	private const KEY_METHODS = [
-		'name'            => 'boundName',
-		'url'             => 'boundUrl',
-		'link'            => 'boundLink',
-		'superpower'      => 'boundSuperpower',
-		'helloDolly'      => 'boundHelloDolly',
-		'paginationLabel' => 'boundPaginationLabel'
+		'name'              => 'boundName',
+		'url'               => 'boundUrl',
+		'link'              => 'boundLink',
+		'superpower'        => 'boundSuperpower',
+		'helloDolly'        => 'boundHelloDolly',
+		'paginationLabel'   => 'boundPaginationLabel',
+		'commentParentLink' => 'boundCommentParentLink',
 	];
 
 	/**
@@ -204,6 +205,37 @@ class Theme implements BlockBindingsSource
 			__('Page %1$s / %2$s:', 'x3p0-ideas'),
 			esc_html($page), // This is a padded string.
 			absint($max)
+		);
+	}
+
+	/**
+	 * Renders a comment's parent link.
+	 *
+	 * @since  1.0.0
+	 * @return string|null
+	 * @todo   Add union return type with PHP 8.0+ requirement.
+	 */
+	private function boundCommentParentLink(array $args, WP_Block $block)
+	{
+		if (
+			! isset($block->context['commentId'])
+			|| ! get_option('thread_comments')
+			|| 3 >= get_option('thread_comments_depth')
+			|| 3 > $GLOBALS['comment_depth']
+		) {
+			return null;
+		}
+
+		$comment_id = absint($block->context['commentId']);
+		$parent_id  = absint(get_comment($comment_id)->comment_parent);
+
+		return sprintf(
+			'<a class="comment-parent-link__anchor" href="%s">%s</a>',
+			esc_url(get_comment_link($parent_id)),
+			esc_html(sprintf(
+				__('In reply to %s', 'x3p0-ideas'),
+				get_comment_author($parent_id)
+			))
 		);
 	}
 }

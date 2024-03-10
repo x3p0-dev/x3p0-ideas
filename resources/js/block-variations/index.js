@@ -7,15 +7,17 @@
  */
 
 // Internal dependencies.
-import grid            from './grid';
-import paginationLabel from './pagination-label';
-import siteCopyright   from './site-copyright';
+import commentParentLink from './comment-parent-link';
+import grid              from './grid';
+import paginationLabel   from './pagination-label';
+import siteCopyright     from './site-copyright';
 
 // WordPress dependencies.
 import domReady from '@wordpress/dom-ready';
 import { getBlockVariations, registerBlockVariation } from '@wordpress/blocks';
 
 // Register each block variation.
+registerBlockVariation(commentParentLink.block, commentParentLink.variation);
 registerBlockVariation(paginationLabel.block, paginationLabel.variation);
 registerBlockVariation(siteCopyright.block, siteCopyright.variation);
 

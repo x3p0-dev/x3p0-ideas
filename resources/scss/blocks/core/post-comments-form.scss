@@ -20,12 +20,18 @@
 ///
 /// Faux `blockGap` support.
 ///
-.wp-block-post-comments-form > * {
+/// Note: In the editor, WordPress wraps the respond title and form in a
+/// separate `<div class="comment-respond">`. On the front end, this class is
+/// output as part of the block class.
+///
+.wp-block-post-comments-form > *,
+.editor-styles-wrapper .comment-respond > * {
 	margin-block-start: 0;
 	margin-block-end: 0;
 }
 
-.wp-block-post-comments-form > * + * {
+.wp-block-post-comments-form > * + *,
+.editor-styles-wrapper .comment-respond > * + * {
 	margin-block-start: var(--wp--custom--gap, var(--wp--preset--spacing--base));
 }
 

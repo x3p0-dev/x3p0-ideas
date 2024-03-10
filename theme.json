@@ -23,6 +23,10 @@
 						"borderWidth": "var:custom|global|border-width",
 						"borderRadius": "var:custom|global|border-radius",
 						"shadow": "var:custom|global|shadow"
+					},
+					"commentParentLink": {
+						"color": "inherit",
+						"hoverColor": "var:preset|color|primary-700"
 					}
 				}
 			},

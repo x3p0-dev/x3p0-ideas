@@ -5,6 +5,9 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
+@use '../../tools/icon';
+@use '../../tools/inline-icon';
+
 // -----------------------------------------------------------------------------
 // Block fixes.
 // -----------------------------------------------------------------------------
@@ -51,19 +54,51 @@
 }
 
 ///
-/// Override WordPress's hardcoded left padding with our own.
+/// Override WordPress's hardcoded left padding with our own. Ideally, we'd
+/// target the `.comment` and `.depth-X` classes here to avoid list styles
+/// leaking into any other potential lists, but WordPress only shows these
+/// classes on the front end and not the editor.
 ///
-/// @todo Only indent up to `.depth-2` with the inclusion of a parent link.
-///
-.wp-block-comment-template .comment > ol {
-	padding-left: var(--wp--style--block-gap);
+.wp-block-comment-template {
+	.editor-styles-wrapper & > li > ol,
+	.depth-1 > ol {
+	       padding-left: var(--wp--style--block-gap);
+	}
+
+	// Customization: zeroes out the left padding for the third level of
+	// nested comments to avoid a broken design. By default, the theme will
+	// show a comment parent link in this scenario.
+	.editor-styles-wrapper & > li > ol > li > ol,
+	.comment:where(:not(.depth-1)) > ol {
+		padding-left: 0;
+	}
 }
 
 // -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-// No customizations...
+///
+/// Prefix with icon.
+///
+.comment-parent-link {
+	@include inline-icon.prefix(icon.get-url('arrow-left'));
+	gap: initial;
+
+	&::before {
+		width: 1.25em;
+		height: 1.25em;
+	}
+
+	a {
+		color: var(--wp--custom--comment-parent-link--color, inherit);
+
+		&:focus,
+		&:hover {
+			color: var(--wp--custom--comment-parent-link--hover-color, inherit);
+		}
+	}
+}
 
 // -----------------------------------------------------------------------------
 // Block style variations.
