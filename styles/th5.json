@@ -68,9 +68,7 @@
 			"core/post-comments-form": {
 				"custom": {
 					"commentNotes": {
-						"color": "var:preset|color|neutral-700",
-						"fontSize": "var:preset|font-size|xs",
-						"lineHeight": "var:preset|line-height|xs"
+						"color": "var:preset|color|neutral-700"
 					}
 				}
 			},

@@ -43,7 +43,13 @@
 						"borderWidth": "3px 0 0",
 						"borderStyle": "double"
 					},
+					"commentMeta": {
+						"color": "var:preset|color|neutral-500"
+					},
 					"postByline": {
+						"color": "var:preset|color|neutral-500"
+					},
+					"postMeta": {
 						"color": "var:preset|color|neutral-500"
 					},
 					"siteFooter": {

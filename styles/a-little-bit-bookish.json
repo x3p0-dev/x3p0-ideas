@@ -19,6 +19,10 @@
 						"background": "transparent",
 						"borderColor": "var:custom|global|border-color",
 						"borderWidth": "1px 0 0"
+					},
+					"siteFooter": {
+						"borderColor": "var:custom|global|border-color",
+						"borderWidth": "var(--wp--custom--global--border-width) 0 0"
 					}
 				}
 			}
