@@ -35,9 +35,9 @@ defined('ABSPATH') || exit;
 		<!-- wp:group {
 			"metadata":{"name":"<?= esc_attr__('Post Meta', 'x3p0-ideas') ?>"},
 			"layout":{"type":"flex","flexWrap":"nowrap"},
-			"fontSize":"sm"
+			"className":"is-style-post-byline"
 		} -->
-		<div class="wp-block-group has-sm-font-size">
+		<div class="wp-block-group is-style-post-byline">
 			<!-- wp:post-date /-->
 		</div>
 		<!-- /wp:group -->

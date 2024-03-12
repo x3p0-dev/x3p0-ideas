@@ -20,7 +20,7 @@ defined('ABSPATH') || exit;
 	"metadata":{"name":"<?= esc_attr__('Posts Query', 'x3p0-ideas') ?>"},
 	"queryId":0,
 	"query":{
-		"perPage":5,
+		"perPage":6,
 		"pages":0,
 		"offset":0,
 		"postType":"post",

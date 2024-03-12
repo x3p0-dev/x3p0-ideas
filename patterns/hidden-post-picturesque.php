@@ -61,9 +61,9 @@ defined('ABSPATH') || exit;
 				}
 			},
 			"layout":{"type":"flex","flexWrap":"nowrap"},
-			"fontSize":"sm"
+			"className":"is-style-post-byline"
 		} -->
-		<footer class="wp-block-group has-sm-font-size">
+		<footer class="wp-block-group is-style-post-byline">
 			<!-- wp:post-author-name {
 				"isLink":true
 			} /-->
