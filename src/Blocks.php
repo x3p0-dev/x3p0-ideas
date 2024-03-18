@@ -200,6 +200,23 @@ class Blocks implements Bootable
 	}
 
 	/**
+	 * Adds spacing support to the Query Loop block.
+	 *
+	 * @hook  register_block_type_args  last
+	 * @since 1.0.0
+	 */
+	public function setCoreQueryArgs(array $args, string $name): array
+	{
+		if ('core/query' === $name) {
+			$args['supports']['spacing']             ??= [];
+			$args['supports']['spacing']['blockGap'] ??= true;
+			$args['supports']['spacing']['padding']  ??= true;
+		}
+
+		return $args;
+	}
+
+	/**
 	 * Adds support for Paragraphs to the Query Pagination block. This is
 	 * specifically needed for binding a pagination label.
 	 *
@@ -210,6 +227,9 @@ class Blocks implements Bootable
 	{
 		if ('core/query-pagination' === $name) {
 			$args['allowed_blocks'][] = 'core/paragraph';
+
+			$args['supports']['spacing']            ??= [];
+			$args['supports']['spacing']['padding'] ??= true;
 		}
 
 		return $args;

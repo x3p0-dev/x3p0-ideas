@@ -22,7 +22,8 @@
 /// Fixes WP's hard coded margin for this in the editor, which breaks the block
 /// gap for any containing block.
 ///
-.editor-styles-wrapper .is-layout-constrained > * + .wp-block-query-pagination.block-editor-block-list__layout {
+//.editor-styles-wrapper .is-layout-constrained > * + .wp-block-query-pagination.block-editor-block-list__layout,
+.editor-styles-wrapper .wp-block-query-pagination.block-editor-block-list__layout {
 	margin-block-start: var(--wp--style--block-gap);
 }
 

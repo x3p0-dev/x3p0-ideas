@@ -1581,13 +1581,6 @@
 					"lineHeight": "var:custom|line-height|sm"
 				}
 			},
-			"core/query-pagination": {
-				"spacing": {
-					"padding": {
-						"bottom": "var:style|block-gap"
-					}
-				}
-			},
 			"core/quote": {
 				"border": {
 					"left": {

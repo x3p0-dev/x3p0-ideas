@@ -32,6 +32,15 @@
 	padding: 0;
 }
 
+///
+/// The editor gives a negative margin here but not on the front end. Just
+/// making sure these match.
+///
+.editor-styles-wrapper .wp-block-query.is-layout-constrained > .wp-block-post-template.alignfull {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 // -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------

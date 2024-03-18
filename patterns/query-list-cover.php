@@ -33,6 +33,7 @@ defined('ABSPATH') || exit;
 		"inherit":true
 	},
 	"align":"full",
+	"style":{"spacing":{"blockGap":"0"}},
 	"layout":{"type":"constrained"}
 } -->
 <div class="wp-block-query alignfull">
@@ -48,6 +49,14 @@ defined('ABSPATH') || exit;
 
 	<!-- wp:query-pagination {
 		"paginationArrow":"arrow",
+		"style":{
+			"spacing":{
+				"padding":{
+					"top":"var:preset|spacing|plus-3",
+					"bottom":"var:preset|spacing|plus-3"
+				}
+			}
+		},
 		"layout":{
 			"type":"flex",
 			"justifyContent":"right"
