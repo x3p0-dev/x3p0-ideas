@@ -46,7 +46,8 @@
 /// @todo      Move to `theme.json`-based style variations in WordPress 6.6.
 ///
 .is-style-archive-header,
-.editor-styles-wrapper .is-style-archive-header{
+.has-global-padding .is-style-archive-header,
+.editor-styles-wrapper .is-style-archive-header {
 	color:        var(--wp--custom--archive-header--color, inherit);
 	background:   var(--wp--custom--archive-header--background, transparent);
 	border-width: var(--wp--custom--archive-header--border-width, 0);
