@@ -4,6 +4,22 @@
 	"title": "Chestnut Rose",
 	"settings": {
 		"blocks": {
+			"core/group": {
+				"custom": {
+					"commentMeta": {
+						"fontSize":"var:preset|font-size|xs",
+						"lineHeight":"var:custom|line-height|xs"
+					},
+					"postByline": {
+						"fontSize":"var:preset|font-size|xs",
+						"lineHeight":"var:custom|line-height|xs"
+					},
+					"postMeta": {
+						"fontSize":"var:preset|font-size|xs",
+						"lineHeight":"var:custom|line-height|xs"
+					}
+				}
+			},
 			"core/navigation": {
 				"custom": {
 					"toggle": {
@@ -293,6 +309,12 @@
 			}
 		},
 		"blocks": {
+			"core/comment-reply-link": {
+				"typography": {
+					"fontSize":"var:preset|font-size|xs",
+					"lineHeight":"var:custom|line-height|xs"
+				}
+			},
 			"core/cover": {
 				"css": "& :where(:is(h1, h2).wp-block-heading) {\n\tfont-weight: 200;\n}"
 			},

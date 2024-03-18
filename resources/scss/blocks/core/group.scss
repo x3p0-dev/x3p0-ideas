@@ -214,6 +214,24 @@
 	padding:      var(--wp--custom--site-footer--padding, 0);
 }
 
+///
+/// Site Footer pattern.
+///
+/// @link      https://github.com/WordPress/gutenberg/pull/57908
+/// @wordpress 6.6
+/// @todo      Move to `theme.json`-based style variations in WordPress 6.6.
+///
+.is-style-site-header,
+.editor-styles-wrapper .is-style-site-header {
+	font-family:  var(--wp--custom--site-header--font-family, inherit);
+	color:        var(--wp--custom--site-header--color, inherit);
+	background:   var(--wp--custom--site-header--background, transparent);
+	border-width: var(--wp--custom--site-header--border-width, 0);
+	border-style: var(--wp--custom--site-header--border-style, solid);
+	border-color: var(--wp--custom--site-header--border-color, transparent);
+	padding:      var(--wp--custom--site-header--padding, 0);
+}
+
 // -----------------------------------------------------------------------------
 // Block pattern styles.
 // -----------------------------------------------------------------------------

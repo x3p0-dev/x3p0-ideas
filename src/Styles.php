@@ -133,6 +133,7 @@ class Styles implements Bootable
 				'post-meta'      => __('Post Meta',      'x3p0-ideas'),
 				'section'        => __('Section',        'x3p0-ideas'),
 				'site-footer'    => __('Site Footer',    'x3p0-ideas'),
+				'site-header'    => __('Site Header',    'x3p0-ideas')
 			],
 			'core/heading' => [
 				'knockout'          => __('Knockout',      'x3p0-ideas'),

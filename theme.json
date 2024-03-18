@@ -1784,6 +1784,11 @@
 			"title": "Header"
 		},
 		{
+			"area": "header",
+			"name": "header-overlay",
+			"title": "Header: Overlay"
+		},
+		{
 			"area": "footer",
 			"name": "footer",
 			"title": "Footer"

@@ -61,12 +61,14 @@
 .wp-block-post-comments-form .comment-reply-title {
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
 	gap: var(--wp--preset--spacing--base);
 
 	small {
 		margin: 0;
 		font-size: var(--wp--preset--font-size--sm);
 		font-weight: 400;
+		text-transform: none;
 	}
 }
 

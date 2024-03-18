@@ -12,6 +12,23 @@
 	background: var(--wp--custom--global--selection-background);
 }
 
+///
+/// WordPress has no method of styling the outer container of the site via
+/// `theme.json`, so we let style variations add custom properties to overrule
+/// this when needed. This is particularly useful when you need to created a
+/// boxed layout that sits inside the overall body.
+///
+.wp-site-blocks {
+	background:    var(--wp--custom--site-blocks--background, transparent);
+	border-width:  var(--wp--custom--site-blocks--border-width, 0);
+	border-style:  var(--wp--custom--site-blocks--border-style, solid);
+	border-color:  var(--wp--custom--site-blocks--border-color, transparent);
+	border-radius: var(--wp--custom--site-blocks--border-radius, 0);
+	margin:        var(--wp--custom--site-blocks--margin, 0);
+	padding:       var(--wp--custom--site-blocks--padding, 0);
+	box-shadow:    var(--wp--custom--site-blocks--shadow, none);
+}
+
 // WordPress has no standard method of controlling the gap between blocks at the
 // top level of the site other than wrapping the site in yet-another-div. This
 // gives us an easy to either wipe out or customize the gap via

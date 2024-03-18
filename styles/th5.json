@@ -505,7 +505,7 @@
 			"x3p0/breadcrumbs": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",
-					"fontWeight": "500"
+					"fontWeight": "400"
 				}
 			}
 		}

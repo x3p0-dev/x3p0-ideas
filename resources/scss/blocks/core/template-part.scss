@@ -20,6 +20,18 @@
 	margin-top: 0;
 }
 
+///
+/// Header overlay template part.
+///
+.wp-block-template-part.header-overlay {
+	.wp-block-x3p0-breadcrumbs {
+		border: none;
+		box-shadow: none;
+		outline: none;
+	}
+}
+
+
 // -----------------------------------------------------------------------------
 // Block style variations.
 // -----------------------------------------------------------------------------
