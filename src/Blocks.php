@@ -218,7 +218,8 @@ class Blocks implements Bootable
 
 	/**
 	 * Adds support for Paragraphs to the Query Pagination block. This is
-	 * specifically needed for binding a pagination label.
+	 * specifically needed for binding a pagination label. Also adds spacing
+	 * support.
 	 *
 	 * @hook  register_block_type_args  last
 	 * @since 1.0.0
