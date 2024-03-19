@@ -81,7 +81,7 @@ class Editor implements Bootable
 	/**
 	 * Customizes the block editor settings.
 	 *
-	 * @hook  block_editor_settings_all
+	 * @hook  block_editor_settings_all last
 	 * @since 1.0.0
 	 */
 	public function registerSettings(array $settings): array
