@@ -54,26 +54,7 @@ defined('ABSPATH') || exit;
 			"className":"is-style-prose"
 		} /-->
 
-		<!-- wp:group {
-			"tagName":"footer",
-			"metadata":{"name":"<?= esc_attr__('Post Footer', 'x3p0-ideas') ?>"},
-			"layout":{"type":"constrained"},
-			"fontSize":"sm"
-		} -->
-		<footer class="wp-block-group has-sm-font-size">
-
-			<!-- wp:group {
-				"style":{"spacing":{"blockGap":"0"}},
-				"layout":{"type":"constrained"}
-			} -->
-			<div class="wp-block-group">
-				<!-- wp:post-terms {"term":"category","className":"is-style-icon"} /-->
-				<!-- wp:post-terms {"term":"post_tag","className":"is-style-icon"} /-->
-			</div>
-			<!-- /wp:group -->
-
-		</footer>
-		<!-- /wp:group -->
+		<!-- wp:pattern {"slug":"x3p0-ideas/post-meta"} /-->
 
 	</article>
 	<!-- /wp:group -->
