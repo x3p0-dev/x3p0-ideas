@@ -352,7 +352,7 @@
 				"typography": {
 					"fontFamily": "var:preset|font-family|secondary",
 					"fontSize": "var:preset|font-size|lg",
-					"fontWeight": "800",
+					"fontWeight": "700",
 					"letterSpacing": "-0.03em"
 				}
 			},

@@ -27,6 +27,18 @@
 }
 
 ///
+/// If the Cover block has explicit left/right padding, disable the global
+/// padding set on the inner container.
+///
+.wp-block-cover:where([style*=padding-left]) .wp-block-cover__inner-container.has-global-padding {
+	padding-left: 0;
+}
+
+.wp-block-cover:where([style*=padding-right]) .wp-block-cover__inner-container.has-global-padding {
+	padding-right: 0;
+}
+
+///
 /// If a cover block has a nav menu in it that is opened, give it a high z-index
 /// to ensure the menu pops over the WordPress toolbar.
 ///

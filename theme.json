@@ -352,6 +352,11 @@
 					"slug": "180-deg-transparent-base"
 				},
 				{
+					"gradient": "linear-gradient( 180deg, var( --wp--preset--color--base ) 0%, transparent 100% )",
+					"name": "Linear: Base ↓ Transparent",
+					"slug": "180-deg-base-transparent"
+				},
+				{
 					"gradient": "linear-gradient( 90deg, var( --wp--preset--color--neutral-50 ) -80%, transparent max( 70vw, 40rem ) )",
 					"name": "Linear: Neutral Base → Transparent",
 					"slug": "90-deg-neutral-50-transparent"
@@ -1751,6 +1756,13 @@
 		{
 			"name": "template-post-faded-cover",
 			"title": "Single Post: Faded Cover",
+			"postTypes": [
+				"post"
+			]
+		},
+		{
+			"name": "template-post-featured-bump",
+			"title": "Single Post: Featured Bump",
 			"postTypes": [
 				"post"
 			]
