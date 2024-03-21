@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Title: Post Byline
- * Slug: x3p0-ideas/post-byline
+ * Title: Post Byline With Avatar
+ * Slug: x3p0-ideas/post-byline-avatar
  * Inserter: no
  */
 
@@ -29,32 +29,9 @@ defined('ABSPATH') || exit;
 } -->
 <div class="wp-block-group is-style-post-byline">
 
-	<!-- wp:group {
-		"metadata":{
-			"name":"<?= esc_attr('Post Author', 'x3p0-ideas') ?>"
-		},
-		"style":{
-			"spacing":{
-				"blockGap":"var:preset|spacing|minus-3"
-			}
-		},
-		"layout":{
-			"type":"flex",
-			"flexWrap":"nowrap"
-		}
-	} -->
-	<div class="wp-block-group">
-		<!-- wp:paragraph {
-			"metadata":{
-				"name":"<?= esc_attr('Prefix', 'x3p0-ideas') ?>"
-			}
-		} -->
-		<p><?= esc_html__('By', 'x3p0-ideas') ?></p>
-		<!-- /wp:paragraph -->
+	<!-- wp:avatar {"size":48,"isLink":true} /-->
 
-		<!-- wp:post-author-name {"isLink":true} /-->
-	</div>
-	<!-- /wp:group -->
+	<!-- wp:post-author-name {"isLink":true} /-->
 
 	<!-- wp:paragraph {
 		"metadata":{
