@@ -31,8 +31,8 @@
 			"dimRatio":0,
 			"overlayColor":"contrast",
 			"isUserOverlayColor":true,
-			"minHeight":80,
-			"minHeightUnit":"vh",
+			"minHeight":36,
+			"minHeightUnit":"rem",
 			"contentPosition":"bottom center",
 			"isDark":false,
 			"tagName":"header",
@@ -49,7 +49,7 @@
 			},
 			"layout":{"type":"constrained"}
 		} -->
-		<header class="wp-block-cover is-light has-custom-content-position is-position-bottom-center" style="padding-top:var(--wp--preset--spacing--plus-8);padding-right:0;padding-bottom:0;padding-left:0;min-height:80vh">
+		<header class="wp-block-cover is-light has-custom-content-position is-position-bottom-center" style="padding-top:var(--wp--preset--spacing--plus-8);padding-right:0;padding-bottom:0;padding-left:0;min-height:36rem">
 
 			<span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim-0 has-background-dim"></span>
 			<div class="wp-block-cover__inner-container">
@@ -59,13 +59,10 @@
 					"style":{
 						"spacing":{
 							"padding":{
-								"top":"var:preset|spacing|plus-5",
+								"top":"var:preset|spacing|plus-3",
 								"left":"var:preset|spacing|plus-3",
 								"right":"var:preset|spacing|plus-3"
 							}
-						},
-						"dimensions":{
-							"minHeight":"40vh"
 						}
 					},
 					"textColor":"contrast",
@@ -77,7 +74,11 @@
 						"verticalAlignment":"bottom"
 					}
 				} -->
-				<div class="wp-block-group alignwide has-contrast-color has-180-deg-transparent-base-gradient-background has-text-color has-background" style="min-height:40vh;padding-top:var(--wp--preset--spacing--plus-5);padding-right:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
+				<div class="wp-block-group alignwide has-contrast-color has-180-deg-transparent-base-gradient-background has-text-color has-background" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
+
+					<!-- wp:spacer {"height":"var:preset|spacing|plus-3"} -->
+					<div style="height:var(--wp--preset--spacing--plus-3)" aria-hidden="true" class="wp-block-spacer"></div>
+					<!-- /wp:spacer -->
 
 					<!-- wp:group {
 						"style":{

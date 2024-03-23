@@ -437,6 +437,15 @@
 				},
 				"css": "& > form {\n\tmargin: 0;\n\tpadding: var(--wp--preset--spacing--plus-3);\n}"
 			},
+			"core/post-featured-image": {
+				"border": {
+					"color": "var:custom|global|border-color",
+					"style": "var:custom|global|border-style",
+					"width": "var:custom|global|border-width",
+					"radius": "var:custom|global|border-radius"
+				},
+				"shadow": "var:custom|global|shadow"
+			},
 			"core/pullquote": {
 				"typography": {
 					"fontStyle": "italic"

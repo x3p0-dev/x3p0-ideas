@@ -1738,6 +1738,62 @@
 	},
 	"customTemplates": [
 		{
+			"name": "template-post-cover",
+			"title": "Post: Cover",
+			"postTypes": [
+				"post"
+			]
+		},
+		{
+			"name": "template-post-cover-full",
+			"title": "Post: Cover Full",
+			"postTypes": [
+				"post"
+			]
+		},
+		{
+			"name": "template-post-faded-cover",
+			"title": "Post: Faded Cover",
+			"postTypes": [
+				"post"
+			]
+		},
+		{
+			"name": "template-post-featured-bump",
+			"title": "Post: Featured Bump",
+			"postTypes": [
+				"post"
+			]
+		},
+		{
+			"name": "template-post-featured-cover",
+			"title": "Post: Featured Cover",
+			"postTypes": [
+				"post"
+			]
+		},
+		{
+			"name": "template-post-featured-full",
+			"title": "Post: Featured Full",
+			"postTypes": [
+				"post"
+			]
+		},
+		{
+			"name": "template-post-featured-split",
+			"title": "Post: Featured Split",
+			"postTypes": [
+				"post"
+			]
+		},
+		{
+			"name": "template-post-featured-wide",
+			"title": "Post: Featured Wide",
+			"postTypes": [
+				"post"
+			]
+		},
+		{
 			"name": "template-blank",
 			"title": "Template: Blank",
 			"postTypes": [
@@ -1750,34 +1806,6 @@
 			"title": "Template: Canvas",
 			"postTypes": [
 				"page",
-				"post"
-			]
-		},
-		{
-			"name": "template-post-faded-cover",
-			"title": "Single Post: Faded Cover",
-			"postTypes": [
-				"post"
-			]
-		},
-		{
-			"name": "template-post-featured-bump",
-			"title": "Single Post: Featured Bump",
-			"postTypes": [
-				"post"
-			]
-		},
-		{
-			"name": "template-post-featured-cover",
-			"title": "Single Post: Featured Cover",
-			"postTypes": [
-				"post"
-			]
-		},
-		{
-			"name": "template-post-featured-split",
-			"title": "Single Post: Featured Split",
-			"postTypes": [
 				"post"
 			]
 		}
