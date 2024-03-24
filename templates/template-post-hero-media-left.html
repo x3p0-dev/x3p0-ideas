@@ -1,0 +1,172 @@
+<!-- wp:template-part {"slug":"header","className":"site-header"} /-->
+
+<!-- wp:group {
+	"tagName":"main",
+	"metadata":{"name":"Content"},
+	"style":{
+		"spacing":{
+			"padding":{
+				"bottom":"var:preset|spacing|plus-3"
+			}
+		}
+	},
+	"layout":{"type":"default"}
+} -->
+<main class="wp-block-group" style="padding-bottom:var(--wp--preset--spacing--plus-3)">
+
+	<!-- wp:group {
+		"tagName":"article",
+		"metadata":{"name":"Post"},
+		"layout":{"type":"default"}
+	} -->
+	<article class="wp-block-group">
+
+		<!-- wp:group {
+			"tagName":"header",
+			"metadata":{"name":"Post Header"},
+			"align":"full",
+			"style":{
+				"spacing":{
+					"margin":{
+						"bottom":"var:preset|spacing|plus-5"
+					}
+				},
+				"elements":{
+					"link":{
+						"color":{
+							"text":"var:preset|color|neutral-950"
+						}
+					}
+				}
+			},
+			"backgroundColor":"neutral-50",
+			"textColor":"neutral-950",
+			"layout":{"type":"default"}
+		} -->
+		<header class="wp-block-group alignfull has-neutral-950-color has-neutral-50-background-color has-text-color has-background has-link-color" style="margin-bottom:var(--wp--preset--spacing--plus-5)">
+
+			<!-- wp:columns {
+				"verticalAlignment":null,
+				"align":"full",
+				"style":{
+					"spacing":{
+						"blockGap":{
+							"top":"0",
+							"left":"0"
+						}
+					}
+				}
+			} -->
+			<div class="wp-block-columns alignfull">
+
+				<!-- wp:column {"verticalAlignment":"stretch"} -->
+				<div class="wp-block-column is-vertically-aligned-stretch">
+
+					<!-- wp:group {
+						"style":{
+							"dimensions":{
+								"minHeight":"100%"
+							}
+						},
+						"layout":{
+							"type":"flex",
+							"orientation":"vertical",
+							"justifyContent":"stretch"
+						}
+					} -->
+					<div class="wp-block-group" style="min-height:100%">
+
+						<!-- wp:cover {
+							"useFeaturedImage":true,
+							"dimRatio":0,
+							"minHeight":24,
+							"minHeightUnit":"rem",
+							"isDark":false,
+							"style":{
+								"layout":{
+									"selfStretch":"fill",
+									"flexSize":null
+								}
+							},
+							"layout":{"type":"default"}
+						} -->
+						<div class="wp-block-cover is-light" style="min-height:24rem">
+							<span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span>
+							<div class="wp-block-cover__inner-container">
+							</div>
+						</div>
+						<!-- /wp:cover -->
+
+					</div>
+					<!-- /wp:group -->
+
+				</div>
+				<!-- /wp:column -->
+
+				<!-- wp:column {
+					"verticalAlignment":"bottom",
+					"width":"55%",
+					"style":{
+						"spacing":{
+							"padding":{
+								"top":"var:preset|spacing|plus-8",
+								"bottom":"var:preset|spacing|plus-3",
+								"left":"var:preset|spacing|plus-3",
+								"right":"var:preset|spacing|plus-3"
+							}
+						}
+					},
+					"layout":{"type":"constrained"}
+				} -->
+				<div class="wp-block-column is-vertically-aligned-bottom" style="padding-top:var(--wp--preset--spacing--plus-8);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3);flex-basis:55%">
+
+					<!-- wp:group {
+						"style":{
+							"dimensions":{
+								"minHeight":"100%"
+							}
+						},
+						"layout":{
+							"type":"flex",
+							"orientation":"vertical",
+							"verticalAlignment":"bottom"
+						}
+					} -->
+					<div class="wp-block-group" style="min-height:100%">
+						<!-- wp:post-title {"level":1,"fontSize":"7-xl"} /-->
+
+						<!-- wp:post-excerpt {
+							"showMoreOnNewLine":false,
+							"excerptLength":25
+						} /-->
+
+						<!-- wp:pattern {"slug":"x3p0-ideas/post-byline-avatar"} /-->
+					</div>
+					<!-- /wp:group -->
+
+				</div>
+				<!-- /wp:column -->
+
+			</div>
+			<!-- /wp:columns -->
+
+		</header>
+		<!-- /wp:group -->
+
+		<!-- wp:post-content {
+			"layout":{"type":"constrained"},
+			"className":"is-style-prose"
+		} /-->
+
+		<!-- wp:pattern {"slug":"x3p0-ideas/post-meta"} /-->
+
+	</article>
+	<!-- /wp:group -->
+
+	<!-- wp:pattern {"slug":"x3p0-ideas/comments-default"} /-->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","className":"site-footer"} /-->
+
