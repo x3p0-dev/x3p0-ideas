@@ -55,6 +55,19 @@
 	background-color: var(--wp--preset--color--black, #000);
 }
 
+///
+/// Resets the background attachment when a Cover block has a parallax
+/// background. This is because the image is never shown correctly in this
+/// context, particularly its position.
+///
+.block-editor-block-preview__content-iframe {
+	.wp-block-cover.has-parallax,
+	// Account for image/video inner elements with class.
+	[class*=wp-block-cover].has-parallax {
+		background-attachment: initial;
+	}
+}
+
 // -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
