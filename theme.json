@@ -1330,7 +1330,7 @@
 						}
 					}
 				},
-				"css": "& :where(:is(h1, h2).wp-block-heading) {\n\tfont-weight: 900;\n}"
+				"css": "& h1.wp-block-heading, h2.wp-block-heading {\n\tfont-weight: 900;\n}"
 			},
 			"core/details": {
 				"border": {
@@ -1761,6 +1761,20 @@
 		{
 			"name": "template-post-cover-full",
 			"title": "Post: Cover (Full)",
+			"postTypes": [
+				"post"
+			]
+		},
+		{
+			"name": "template-post-cover-in-cover",
+			"title": "Post: Cover in Cover",
+			"postTypes": [
+				"post"
+			]
+		},
+		{
+			"name": "template-post-cover-in-cover-full",
+			"title": "Post: Cover in Cover (Full)",
 			"postTypes": [
 				"post"
 			]
