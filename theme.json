@@ -1738,6 +1738,20 @@
 	},
 	"customTemplates": [
 		{
+			"name": "template-post-header-cover",
+			"title": "Post: Header Cover",
+			"postTypes": [
+				"post"
+			]
+		},
+		{
+			"name": "template-post-header-cover-fade-in",
+			"title": "Post: Header Cover (Fade In)",
+			"postTypes": [
+				"post"
+			]
+		},
+		{
 			"name": "template-post-cover",
 			"title": "Post: Cover",
 			"postTypes": [
@@ -1746,49 +1760,49 @@
 		},
 		{
 			"name": "template-post-cover-full",
-			"title": "Post: Cover Full",
+			"title": "Post: Cover (Full)",
 			"postTypes": [
 				"post"
 			]
 		},
 		{
-			"name": "template-post-faded-cover",
-			"title": "Post: Faded Cover",
+			"name": "template-post-cover-overlay",
+			"title": "Post: Cover (Overlay)",
 			"postTypes": [
 				"post"
 			]
 		},
 		{
-			"name": "template-post-featured-bump",
-			"title": "Post: Featured Bump",
+			"name": "template-post-featured-above-full",
+			"title": "Post: Featured Above (Full)",
 			"postTypes": [
 				"post"
 			]
 		},
 		{
-			"name": "template-post-featured-cover",
-			"title": "Post: Featured Cover",
+			"name": "template-post-featured-above-wide",
+			"title": "Post: Featured Above (Wide)",
 			"postTypes": [
 				"post"
 			]
 		},
 		{
-			"name": "template-post-featured-full",
-			"title": "Post: Featured Full",
+			"name": "template-post-featured-below-full",
+			"title": "Post: Featured Below (Full)",
 			"postTypes": [
 				"post"
 			]
 		},
 		{
-			"name": "template-post-featured-split",
-			"title": "Post: Featured Split",
+			"name": "template-post-featured-below-wide",
+			"title": "Post: Featured Below (Wide)",
 			"postTypes": [
 				"post"
 			]
 		},
 		{
-			"name": "template-post-featured-wide",
-			"title": "Post: Featured Wide",
+			"name": "template-post-split-intro",
+			"title": "Post: Split Intro",
 			"postTypes": [
 				"post"
 			]
