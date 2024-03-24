@@ -1773,6 +1773,13 @@
 			]
 		},
 		{
+			"name": "template-post-cover-overlay-fade-in",
+			"title": "Post: Cover (Overlay Fade In)",
+			"postTypes": [
+				"post"
+			]
+		},
+		{
 			"name": "template-post-featured-above-full",
 			"title": "Post: Featured Above (Full)",
 			"postTypes": [
