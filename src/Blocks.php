@@ -129,12 +129,8 @@ class Blocks implements Bootable
 		// Build a relative path and URL string.
 		$relative = "public/css/blocks/{$namespace}/{$slug}";
 
-		// Bail if the block is not registered or if the asset file
-		// doesn't exist.
-		if (
-			! $this->types->is_registered("{$namespace}/{$slug}")
-			|| ! file_exists(get_parent_theme_file_path("{$relative}.asset.php"))
-		) {
+		// Bail if the asset file doesn't exist.
+		if (! file_exists(get_parent_theme_file_path("{$relative}.asset.php"))) {
 			return;
 		}
 
