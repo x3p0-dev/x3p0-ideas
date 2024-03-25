@@ -1738,6 +1738,20 @@
 	},
 	"customTemplates": [
 		{
+			"name": "template-page-header-cover",
+			"title": "Page: Header Cover",
+			"postTypes": [
+				"page"
+			]
+		},
+		{
+			"name": "template-page-header-cover-fade-in",
+			"title": "Page: Header Cover (Fade In)",
+			"postTypes": [
+				"page"
+			]
+		},
+		{
 			"name": "template-post-header-cover",
 			"title": "Post: Header Cover",
 			"postTypes": [
