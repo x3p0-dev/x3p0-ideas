@@ -51,6 +51,7 @@ p {
 		margin: 0;
 		padding-right: var(--wp--preset--spacing--minus-2);
 		font: inherit; // reset.
+		font-variant: normal;
 
 		font-family: var(--wp--custom--drop-cap--font-family, inherit);
 		font-style:  var(--wp--custom--drop-cap--font-style, normal);
