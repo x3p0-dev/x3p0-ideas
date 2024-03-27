@@ -102,7 +102,7 @@ defined('ABSPATH') || exit;
 		<!-- /wp:group -->
 
 		<!-- wp:post-excerpt {
-			"moreText":"<?= esc_attr__(' Continue reading &rarr;', 'x3p0-ideas') ?>",
+			"moreText":"<?= esc_attr__('Continue reading &rarr;', 'x3p0-ideas') ?>",
 			"showMoreOnNewLine":false,
 			"excerptLength":20
 		} /-->
