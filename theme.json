@@ -1540,13 +1540,12 @@
 			},
 			"core/pullquote": {
 				"border": {
+					"color": "currentColor",
 					"top": {
-						"color": "var:preset|color|contrast",
 						"style": "solid",
 						"width": "var:preset|spacing|minus-3"
 					},
 					"bottom": {
-						"color": "var:preset|color|contrast",
 						"style": "solid",
 						"width": "var:preset|spacing|minus-3"
 					}
@@ -1588,8 +1587,10 @@
 			},
 			"core/quote": {
 				"border": {
+					"color": {
+						"color": "var:preset|color|contrast"
+					},
 					"left": {
-						"color": "var:preset|color|contrast",
 						"style": "solid",
 						"width": "var:preset|spacing|minus-3"
 					}
