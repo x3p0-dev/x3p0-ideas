@@ -30,12 +30,14 @@
 
 // Make WP's default borders smaller.
 .wp-block-table thead {
-	border-bottom: 1px solid var(--wp--preset--color--neutral-100);
+	border-bottom: 1px solid;
+	border-color: inherit;
 }
 
 .wp-block-table tfoot,
 .wp-block-table tbody tr:where(:not(:first-child)) {
-	border-top: 1px solid var(--wp--preset--color--neutral-100);
+	border-top: 1px solid;
+	border-color: inherit;
 }
 
 // Less prominent bold for headers.

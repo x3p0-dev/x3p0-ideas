@@ -367,6 +367,16 @@
 					"slug": "270-deg-neutral-50-transparent"
 				},
 				{
+					"gradient": "linear-gradient( 90deg, var( --wp--preset--color--white ) -40%, transparent max( 70vw, 40rem ) )",
+					"name": "Linear: White → Transparent",
+					"slug": "90-deg-white-transparent"
+				},
+				{
+					"gradient": "linear-gradient( 270deg, var( --wp--preset--color--white ) -40%, transparent max( 70vw, 40rem ) )",
+					"name": "Linear: Transparent → White",
+					"slug": "270-deg-white-transparent"
+				},
+				{
 					"gradient": "linear-gradient( 90deg, var( --wp--preset--color--primary-50 ) -80%, transparent max( 70vw, 40rem ) )",
 					"name": "Linear: Primary Base → Transparent",
 					"slug": "90-deg-primary-50-transparent"
@@ -1689,6 +1699,9 @@
 				"css": ".is-style-logos-only .wp-block-social-link {\n\tbox-shadow: none;\n}"
 			},
 			"core/table": {
+				"border": {
+					"color": "var:preset|color|neutral-100"
+				},
 				"typography": {
 					"fontSize": "var:preset|font-size|sm",
 					"lineHeight": "var:custom|line-height|sm"

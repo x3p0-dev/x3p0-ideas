@@ -38,7 +38,7 @@
 /// @link https://github.com/WordPress/gutenberg/issues/56587
 /// @link https://github.com/WordPress/gutenberg/issues/8030
 ///
-.wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
+.wp-block-gallery.has-nested-images:where(:not(.is-style-classic)) figure.wp-block-image figcaption {
 	padding: var(--wp--custom--caption--padding, var(--wp--preset--spacing--minus-2));
 	color:   var(--wp--custom--caption--color, var(--wp--preset--color--white));
 	background: var(
