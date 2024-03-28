@@ -115,22 +115,22 @@
 @media (min-width: 40rem) {
 	.is-style-flex.columns-2 > .wp-block-post {
 		min-width: 24rem;
-		flex-basis: calc(50% - 2rem);
+		flex-basis: calc(50% - var(--wp--style--block-gap));
 	}
 	.is-style-flex.columns-3 > .wp-block-post {
 		min-width: 20rem;
-		flex-basis: calc(33.33% - 2rem);
+		flex-basis: calc(33.33% - var(--wp--style--block-gap));
 	}
 	.is-style-flex.columns-4 > .wp-block-post {
 		min-width: 20rem;
-		flex-basis: calc(25% - 2rem);
+		flex-basis: calc(25% - var(--wp--style--block-gap));
 	}
 	.is-style-flex.columns-5 > .wp-block-post {
 		min-width: 16rem;
-		flex-basis: calc(20% - 2rem);
+		flex-basis: calc(20% - var(--wp--style--block-gap));
 	}
 	.is-style-flex.columns-6 > .wp-block-post {
 		min-width: 13rem;
-		flex-basis: calc(16.77% - 2rem);
+		flex-basis: calc(16.77% - var(--wp--style--block-gap));
 	}
 }

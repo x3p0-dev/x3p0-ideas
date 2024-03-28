@@ -49,7 +49,6 @@ defined('ABSPATH') || exit;
 
 	<!-- wp:post-template {
 		"style":{"spacing":{"blockGap":"var:preset|spacing|plus-3"}},
-		"className":"is-style-flex-grow",
 		"align":"full",
 		"layout":{"type":"grid","columnCount":3}
 	} -->
