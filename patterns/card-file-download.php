@@ -82,22 +82,32 @@ $download = get_theme_file_uri('public/media/images/mountain-road.webp');
 	</div>
 	<!-- /wp:group -->
 
-	<!-- wp:file {
-		"href":"<?= esc_url($download) ?>",
-		"showDownloadButton":false,
-		"style":{
-			"border":{
-				"width":"0px",
-				"style":"none"
-			}
+	<!-- wp:group {
+		"tagName":"footer",
+		"metadata":{
+			"name":"<?= esc_attr__('Card Footer', 'x3p0-ideas') ?>"
 		},
-		"className":"is-style-icon",
-		"fontSize":"sm"
+		"layout":{"type":"default"}
 	} -->
-	<div class="wp-block-file is-style-icon has-sm-font-size" style="border-style:none;border-width:0px">
-		<a href="<?= esc_url($download) ?>"><?= esc_html__('Download', 'x3p0-ideas') ?></a>
-	</div>
-	<!-- /wp:file -->
+	<footer class="wp-block-group">
+		<!-- wp:file {
+			"href":"<?= esc_url($download) ?>",
+			"showDownloadButton":false,
+			"style":{
+				"border":{
+					"width":"0px",
+					"style":"none"
+				}
+			},
+			"className":"is-style-plain",
+			"fontSize":"sm"
+		} -->
+		<div class="wp-block-file is-style-plain has-sm-font-size" style="border-style:none;border-width:0px">
+			<a href="<?= esc_url($download) ?>"><?= esc_html__('Download', 'x3p0-ideas') ?></a>
+		</div>
+		<!-- /wp:file -->
+	</footer>
+	<!-- /wp:group -->
 
 </div>
 <!-- /wp:group -->

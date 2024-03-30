@@ -27,7 +27,6 @@ defined('ABSPATH') || exit;
 			"blockGap":"var:preset|spacing|base"
 		}
 	},
-	"gradient":"180-deg-transparent-base",
 	"className":"is-style-card",
 	"layout":{
 		"type":"flex",
@@ -35,7 +34,7 @@ defined('ABSPATH') || exit;
 	},
 	"fontSize":"sm"
 } -->
-<div class="wp-block-group is-style-card has-180-deg-transparent-base-gradient-background has-background has-sm-font-size" style="padding-top:var(--wp--preset--spacing--base);padding-right:var(--wp--preset--spacing--base);padding-bottom:var(--wp--preset--spacing--base);padding-left:var(--wp--preset--spacing--base)">
+<div class="wp-block-group is-style-card has-sm-font-size" style="padding-top:var(--wp--preset--spacing--base);padding-right:var(--wp--preset--spacing--base);padding-bottom:var(--wp--preset--spacing--base);padding-left:var(--wp--preset--spacing--base)">
 
 	<!-- wp:avatar {
 		"userId":1,
