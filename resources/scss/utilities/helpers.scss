@@ -5,7 +5,9 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
-[class*=wp-block].alignfull {
+[class*=wp-block].alignfull,
+.wp-block-post-featured-image.alignfull img,
+.wp-block-image.alignfull img {
 	border-radius: 0;
 }
 
