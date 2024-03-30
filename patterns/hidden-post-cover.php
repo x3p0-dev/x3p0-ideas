@@ -52,7 +52,8 @@ defined('ABSPATH') || exit;
 			<!-- wp:post-title {"textAlign":"center","isLink":true} /-->
 
 			<!-- wp:group {
-				"metadata":{"name":"<?= esc_attr__('Post Meta', 'x3p0-ideas') ?>"},
+				"metadata":{"name":"<?= esc_attr__('Post Byline', 'x3p0-ideas') ?>"},
+				"className":"is-style-post-byline",
 				"layout":{
 					"type":"flex",
 					"flexWrap":"nowrap",
@@ -60,7 +61,7 @@ defined('ABSPATH') || exit;
 					"justifyContent":"center"
 				}
 			} -->
-			<div class="wp-block-group">
+			<div class="wp-block-group is-style-post-byline">
 				<!-- wp:post-date /-->
 			</div>
 			<!-- /wp:group -->
