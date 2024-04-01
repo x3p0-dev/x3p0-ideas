@@ -165,6 +165,9 @@
 			},
 			"core/tag-cloud": {
 				"custom": {
+					"linkCount": {
+						"color": "var:preset|color|neutral-500"
+					},
 					"outline": {
 						"borderWidth": "2px",
 						"borderRadius": "var:custom|global|border-radius"
@@ -1159,11 +1162,6 @@
 			}
 		},
 		"blocks": {
-			"core/archives": {
-				"color": {
-					"text": "var:preset|color|neutral-500"
-				}
-			},
 			"core/avatar": {
 				"border": {
 					"radius": "9999em"
@@ -1246,11 +1244,6 @@
 							"fontWeight": "700"
 						}
 					}
-				}
-			},
-			"core/categories": {
-				"color": {
-					"text": "var:preset|color|neutral-500"
 				}
 			},
 			"core/code": {

@@ -31,7 +31,7 @@
 	gap: var(--wp--preset--spacing--minus-2) var(--wp--preset--spacing--base);
 
 	.tag-link-count {
-		color: var(--wp--preset--color--neutral-500);
+		color: var(--wp--custom--link-count--color, inherit);
 		font-weight: 400;
 	}
 }
