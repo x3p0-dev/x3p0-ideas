@@ -34,17 +34,6 @@
 	margin: 0;
 }
 
-///
-/// No dimensions or inner blocks layout width support for the block yet.
-///
-/// @link https://github.com/WordPress/gutenberg/issues/44879
-///
-.has-global-padding > .alignfull > .wp-block-query-pagination {
-	box-sizing: content-box;
-	padding-right: var(--wp--style--root--padding-right);
-	padding-left: var(--wp--style--root--padding-left);
-}
-
 // -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------

@@ -9,46 +9,7 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-///
-/// This is really a fix for the Template Part block, but in this case, it's
-/// specific to the use of the Query Loop block within our custom Loop template
-/// part. When a template part is added to the page, it creates an additional
-/// wrapping element. This is problematic because it breaks the expected layout.
-/// This is doubly problematic when trying to keep single post content (which can
-/// have nested Query Loop blocks) and archive content in sync.
-///
-/// There are two solutions to this problem. The first is to add yet-another-div
-/// wrapper in the Loop template part via the Group block. I didn't want to add
-/// to the divitis the theme is already suffering. 🤢 The second solution is what
-/// is presented here: simply add some custom CSS to control how global padding
-/// works in this instance.
-///
-/// Note that wrapping the Query Loop block within a Template Part block also
-/// breaks alignment in the site editor (no align controls for Query Loop).
-///
-/// @link https://github.com/WordPress/gutenberg/issues/51296
-///
-.wp-block-template-part.loop.alignfull .wp-block-query {
-	padding-left: 0;
-	padding-right: 0;
-}
-
-///
-/// This ensures that nested pagination gets the global padding in this
-/// particular instance. There's no way to currently add padding to the
-/// Query block or Query Pagination blocks. And wrapping Query Pagination
-/// in a Group block doesn't work because it is conditionally displayed.
-///
-/// This is important so that the Query Pagination block doesn't butt
-/// against the side of the screen on smaller viewports.
-///
-/// @link https://github.com/WordPress/gutenberg/issues/44879
-///
-.wp-block-template-part.loop.alignfull .wp-block-query > .wp-block-query-pagination {
-	box-sizing: content-box;
-	padding-left: var(--wp--style--block-gap);
-	padding-right: var(--wp--style--block-gap);
-}
+// No fixes...
 
 // -----------------------------------------------------------------------------
 // Block customizations.

@@ -67,7 +67,9 @@ defined('ABSPATH') || exit;
 			"spacing":{
 				"padding":{
 					"top":"var:preset|spacing|plus-3",
-					"bottom":"var:preset|spacing|plus-3"
+					"right":"var:preset|spacing|plus-3",
+					"bottom":"var:preset|spacing|plus-3",
+					"left":"var:preset|spacing|plus-3"
 				}
 			}
 		},
