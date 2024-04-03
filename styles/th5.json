@@ -261,28 +261,27 @@
 					]
 				},
 				{
-					"fontFamily": "Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif",
+					"fontFamily": "'Source Serif', Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif",
 					"slug": "secondary",
-					"name": "Secondary (Charter)"
-				},
-				{
-					"fontFamily": "Playfair, Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif",
-					"slug": "tertiary",
-					"name": "Tertiary (Playfair)",
+					"name": "Secondary (Source Serif)",
 					"fontFace": [
 						{
-							"fontFamily": "Playfair",
-							"fontWeight": "200 700",
+							"fontFamily": "Source Serif",
+							"fontWeight": "200 900",
 							"fontStyle": "normal",
 							"fontStretch": "normal",
-							"src": [ "file:./public/fonts/playfair/playfair.woff2" ]
+							"src": [
+								"file:./public/fonts/source/source-serif.woff2"
+							]
 						},
 						{
-							"fontFamily": "Playfair",
-							"fontWeight": "200 700",
+							"fontFamily": "Source Serif",
+							"fontWeight": "200 900",
 							"fontStyle": "italic",
 							"fontStretch": "normal",
-							"src": [ "file:./public/fonts/playfair/playfair-italic.woff2" ]
+							"src": [
+								"file:./public/fonts/source/source-serif-italic.woff2"
+							]
 						}
 					]
 				},
@@ -324,7 +323,6 @@
 					"text": "var:preset|color|neutral-700"
 				},
 				"typography": {
-					"fontFamily": "var:preset|font-family|tertiary",
 					"fontStyle": "italic"
 				}
 			},
@@ -422,9 +420,7 @@
 					"text": "var:preset|color|neutral-900"
 				},
 				"typography": {
-					"fontFamily": "var:preset|font-family|tertiary",
 					"fontStyle": "italic",
-					"fontWeight": "100",
 					"lineHeight": "var:custom|font-size|lg"
 				}
 			},
@@ -452,8 +448,7 @@
 					"cite": {
 						"typography": {
 							"fontFamily": "var:preset|font-family|primary",
-							"fontStyle": "normal",
-							"fontWeight": "300"
+							"fontStyle": "normal"
 						}
 					}
 				}
@@ -467,15 +462,13 @@
 			},
 			"core/quote": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|tertiary",
 					"fontStyle": "italic"
 				},
 				"elements": {
 					"cite": {
 						"typography": {
 							"fontFamily": "var:preset|font-family|primary",
-							"fontStyle": "normal",
-							"fontWeight": "300"
+							"fontStyle": "normal"
 						}
 					}
 				}
@@ -490,15 +483,12 @@
 					"text": "var:preset|color|neutral-900"
 				},
 				"typography": {
-					"fontFamily": "var:preset|font-family|tertiary",
 					"fontStyle": "italic",
-					"fontWeight": "100",
 					"lineHeight": "var:custom|font-size|lg"
 				}
 			},
 			"core/verse": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|tertiary",
 					"fontStyle": "italic"
 				}
 			},

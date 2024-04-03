@@ -182,26 +182,26 @@
 					]
 				},
 				{
-					"fontFamily": "'Source Sans 3', ui-sans-serif, sans-serif",
+					"fontFamily": "'Source Sans', ui-sans-serif, sans-serif",
 					"slug": "secondary",
-					"name": "Secondary (Source Sans 3)",
+					"name": "Secondary (Source Sans)",
 					"fontFace": [
 						{
-							"fontFamily": "Source Sans 3",
+							"fontFamily": "Source Sans",
 							"fontWeight": "200 900",
 							"fontStyle": "normal",
 							"fontStretch": "normal",
 							"src": [
-								"file:./public/fonts/source/source-sans-3.woff2"
+								"file:./public/fonts/source/source-sans.woff2"
 							]
 						},
 						{
-							"fontFamily": "Source Sans 3",
+							"fontFamily": "Source Sans",
 							"fontWeight": "200 900",
 							"fontStyle": "italic",
 							"fontStretch": "normal",
 							"src": [
-								"file:./public/fonts/source/source-sans-3-italic.woff2"
+								"file:./public/fonts/source/source-sans-italic.woff2"
 							]
 						}
 					]
