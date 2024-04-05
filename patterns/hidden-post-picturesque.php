@@ -55,31 +55,10 @@ defined('ABSPATH') || exit;
 		<!-- wp:group {
 			"tagName":"footer",
 			"metadata":{"name":"<?= esc_attr__('Post Footer', 'x3p0-ideas') ?>"},
-			"style":{
-				"spacing":{
-					"blockGap":"var:preset|spacing|base"
-				}
-			},
-			"layout":{"type":"flex","flexWrap":"nowrap"},
-			"className":"is-style-post-byline"
+			"layout":{"type":"default"},
 		} -->
-		<footer class="wp-block-group is-style-post-byline">
-			<!-- wp:post-author-name {
-				"isLink":true
-			} /-->
-
-			<!-- wp:paragraph {
-				"metadata":{
-					"name":"<?= esc_attr('Separator', 'x3p0-ideas') ?>"
-				}
-			} -->
-			<p><?=
-				// Translators: Metadata separator.
-				esc_html__('&middot;', 'x3p0-ideas')
-			?></p>
-			<!-- /wp:paragraph -->
-
-			<!-- wp:post-date /-->
+		<footer class="wp-block-group">
+			<!-- wp:pattern {"slug":"x3p0-ideas/post-byline-short"} /-->
 		</footer>
 		<!-- /wp:group -->
 

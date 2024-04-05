@@ -102,39 +102,7 @@ $content_size = wp_get_global_settings([ 'layout', 'contentSize' ]);
 				} -->
 				<header class="wp-block-group">
 					<!-- wp:post-title {"isLink":true} /-->
-
-					<!-- wp:group {
-						"metadata":{
-							"name":"<?= esc_attr__('Post Byline', 'x3p0-ideas') ?>"
-						},
-						"style":{
-							"spacing":{
-								"blockGap":"var:preset|spacing|base"
-							}
-						},
-						"layout":{"type":"flex","flexWrap":"nowrap"},
-						"className":"is-style-post-byline"
-					} -->
-					<div class="wp-block-group is-style-post-byline">
-						<!-- wp:post-author-name {
-							"isLink":true
-						} /-->
-
-						<!-- wp:paragraph {
-							"metadata":{
-								"name":"<?= esc_attr('Separator', 'x3p0-ideas') ?>"
-							}
-						} -->
-						<p><?=
-							// Translators: Metadata separator.
-							esc_html__('&middot;', 'x3p0-ideas')
-						?></p>
-						<!-- /wp:paragraph -->
-
-						<!-- wp:post-date /-->
-					</div>
-					<!-- /wp:group -->
-
+					<!-- wp:pattern {"slug":"x3p0-ideas/post-byline-short"} /-->
 				</header>
 				<!-- /wp:group -->
 

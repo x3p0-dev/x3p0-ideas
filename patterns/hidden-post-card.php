@@ -30,7 +30,8 @@ defined('ABSPATH') || exit;
 	"className":"is-style-card",
 	"layout":{
 		"type":"flex",
-		"orientation":"vertical"
+		"orientation":"vertical",
+		"justifyContent":"stretch"
 	}
 } -->
 <article class="wp-block-group is-style-card" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;min-height:100%">
@@ -122,34 +123,14 @@ defined('ABSPATH') || exit;
 					"bottom":"var:preset|spacing|plus-3",
 					"left":"var:preset|spacing|plus-3",
 					"right":"var:preset|spacing|plus-3"
-				},
-				"blockGap":"var:preset|spacing|base"
+				}
 			}
 		},
-		"layout":{
-			"type":"flex",
-			"flexWrap":"wrap"
-		},
-		"className":"is-style-post-byline"
+		"layout":{"type":"default"}
 	} -->
-	<footer class="wp-block-group is-style-post-byline" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
+	<footer class="wp-block-group" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
 
-		<!-- wp:post-author-name {
-			"isLink":true
-		} /-->
-
-		<!-- wp:paragraph {
-			"metadata":{
-				"name":"<?= esc_attr('Separator', 'x3p0-ideas') ?>"
-			}
-		} -->
-		<p><?=
-			// Translators: Metadata separator.
-			esc_html__('&middot;', 'x3p0-ideas')
-		?></p>
-		<!-- /wp:paragraph -->
-
-		<!-- wp:post-date /-->
+		<!-- wp:pattern {"slug":"x3p0-ideas/post-byline-short"} /-->
 
 	</footer>
 	<!-- /wp:group -->
