@@ -27,29 +27,28 @@ defined('ABSPATH') || exit;
 	<!-- wp:group {
 		"tagName":"header",
 		"metadata":{"name":"<?= esc_attr__('Post Header', 'x3p0-ideas') ?>"},
-		"style":{"spacing":{"blockGap":"0"}},
 		"layout":{"type":"default"}
 	} -->
 	<header class="wp-block-group">
-
-		<!-- wp:group {
-			"metadata":{"name":"<?= esc_attr__('Post Meta', 'x3p0-ideas') ?>"},
-			"layout":{"type":"flex","flexWrap":"nowrap"},
-			"className":"is-style-post-byline"
-		} -->
-		<div class="wp-block-group is-style-post-byline">
-			<!-- wp:post-date /-->
-		</div>
-		<!-- /wp:group -->
-
 		<!-- wp:post-title {"isLink":true} /-->
 	</header>
 	<!-- /wp:group -->
 
 	<!-- wp:post-excerpt {
 		"moreText":"<?= esc_attr__('Continue reading &rarr;', 'x3p0-ideas') ?>",
-		"showMoreOnNewLine":false
+		"showMoreOnNewLine":false,
+		"excerptLength":35
 	} /-->
+
+	<!-- wp:group {
+		"tagName":"footer",
+		"metadata":{"name":"<?= esc_attr__('Post Footer', 'x3p0-ideas') ?>"},
+		"layout":{"type":"default"}
+	} -->
+	<footer class="wp-block-group">
+		<!-- wp:pattern {"slug":"x3p0-ideas/post-byline-short"} /-->
+	</footer>
+	<!-- /wp:group -->
 
 </article>
 <!-- /wp:group -->

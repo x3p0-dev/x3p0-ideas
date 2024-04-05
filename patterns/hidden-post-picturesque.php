@@ -37,11 +37,9 @@ defined('ABSPATH') || exit;
 		<!-- wp:group {
 			"tagName":"header",
 			"metadata":{"name":"<?= esc_attr__('Post Header', 'x3p0-ideas') ?>"},
-			"align":"wide",
-			"style":{"spacing":{"blockGap":"var:preset|spacing|minus-3"}},
-			"layout":{"type":"constrained"}
+			"layout":{"type":"default"}
 		} -->
-		<header class="wp-block-group alignwide">
+		<header class="wp-block-group">
 			<!-- wp:post-title {"isLink":true} /-->
 		</header>
 		<!-- /wp:group -->
@@ -55,7 +53,7 @@ defined('ABSPATH') || exit;
 		<!-- wp:group {
 			"tagName":"footer",
 			"metadata":{"name":"<?= esc_attr__('Post Footer', 'x3p0-ideas') ?>"},
-			"layout":{"type":"default"},
+			"layout":{"type":"default"}
 		} -->
 		<footer class="wp-block-group">
 			<!-- wp:pattern {"slug":"x3p0-ideas/post-byline-short"} /-->
