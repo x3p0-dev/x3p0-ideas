@@ -1,9 +1,8 @@
 <?php
 
 /**
- * Title: Post List: Default
- * Slug: x3p0-ideas/query-list-default
- * Description: Displays the queried posts in a list with the title, date, and excerpt.
+ * Title: Post List: Excerpt
+ * Slug: x3p0-ideas/query-list-excerpt
  * Categories: posts
  * Keywords: query, posts
  * Block Types: core/query
