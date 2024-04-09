@@ -38,7 +38,7 @@
 						"padding": "var(--wp--preset--spacing--plus-6) var(--wp--preset--spacing--plus-3)"
 					},
 					"box": {
-						"background": "transparent",
+						"background": "var:preset|color|base",
 						"borderColor": "var:custom|global|border-color",
 						"borderStyle": "var:custom|global|border-style",
 						"borderWidth": "var:custom|global|border-width"
