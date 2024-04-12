@@ -79,8 +79,8 @@ class Styles implements Bootable
 		return [
 			'core/archives' => [
 				'horizontal' => __('Horizontal', 'x3p0-ideas'),
-				'pull'      => __('Pull',        'x3p0-ideas'),
-				'spread'    => __('Spread',      'x3p0-ideas')
+				'pull'       => __('Pull',       'x3p0-ideas'),
+				'spread'     => __('Spread',     'x3p0-ideas')
 			],
 			'core/button' => [
 				'link' => __('Link', 'x3p0-ideas')
@@ -199,7 +199,7 @@ class Styles implements Bootable
 				'icon' => __('Icon', 'x3p0-ideas')
 			],
 			'core/pullquote' => [
-				'mark-top' => __('Mark: Top',  'x3p0-ideas')
+				'mark-top' => __('Mark: Top', 'x3p0-ideas')
 			],
 			'core/search' => [
 				'icon' => __('Icon',  'x3p0-ideas'),
