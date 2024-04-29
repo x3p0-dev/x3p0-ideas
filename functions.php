@@ -18,9 +18,9 @@ namespace X3P0\Ideas;
 defined('ABSPATH') || exit;
 
 # Load the autoloader.
-if (! class_exists(Blocks::class) && is_file(__DIR__ . '/vendor/autoload.php')) {
+if (! class_exists(Theme::class) && is_file(__DIR__ . '/vendor/autoload.php')) {
 	require_once __DIR__ . '/vendor/autoload.php';
 }
 
 # Bootstrap the theme.
-add_action('after_setup_theme', __NAMESPACE__ . '\\theme', PHP_INT_MIN);
+add_action('after_setup_theme', __NAMESPACE__ . '\\boot', PHP_INT_MIN);
