@@ -99,7 +99,6 @@ class Theme implements Bootable
 		$this->instance('media',      new Media());
 		$this->instance('parts',      new Parts());
 		$this->instance('templates',  new Templates());
-		$this->instance('theme-json', new ThemeJson());
 		$this->instance('variations', new Variations());
 	}
 

@@ -869,6 +869,7 @@
 		},
 		"typography": {
 			"customFontSize": false,
+			"defaultFontSizes": false,
 			"dropCap": true,
 			"fluid": false,
 			"fontFamilies": [
