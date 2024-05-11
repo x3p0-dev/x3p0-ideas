@@ -148,6 +148,26 @@ class Blocks implements Bootable
 	}
 
 	/**
+	 * Filters the Avatar block args to set custom selectors via the
+	 * Selectors API. Originally, Core set the border to the wrapping `<div>`
+	 * for around the image. This was fixed by applying the border to the
+	 * image itself. But that has the unfortunate side effect of link
+	 * outlines not being sharing the same radius. So we fix this in CSS.
+	 *
+	 * @hook  register_block_type_args  last
+	 * @since 1.0.0
+	 * @link  https://github.com/WordPress/gutenberg/pull/53007
+	 */
+	public function setCoreAvatarArgs(array $args, string $name): array
+	{
+		if ('core/avatar' === $name) {
+			$args['selectors']['border'] = '.wp-block-avatar';
+		}
+
+		return $args;
+	}
+
+	/**
 	 * Filters the Navigation Submenu block args to set custom selectors via
 	 * the Selectors API. We must do this so that values set in `theme.json`
 	 * for `core/navigation-submenu` are applied only to the submenu

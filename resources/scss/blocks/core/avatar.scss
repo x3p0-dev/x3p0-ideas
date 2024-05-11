@@ -19,6 +19,23 @@
 	display: inline-block;
 }
 
+///
+/// Setting `border.radius` via `theme.json` applies it to the wrapper, so we
+/// need to inherit to ensure the radius works. We intentionally apply it to the
+/// wrapper via the Selectors API in PHP so that links can inherit the radius
+/// from the wrapper.
+///
+.wp-block-avatar > *,
+.wp-block-avatar__image,
+.wp-block-avatar__link {
+	border-radius: inherit;
+}
+
+// Ensures the `border-radius` applies.
+.wp-block-avatar__link {
+	display: inline-block;
+}
+
 // -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
