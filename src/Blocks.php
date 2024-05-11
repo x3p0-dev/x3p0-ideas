@@ -196,6 +196,22 @@ class Blocks implements Bootable
 	}
 
 	/**
+	 * Adds spacing support to the Post Template block.
+	 *
+	 * @hook  register_block_type_args  last
+	 * @since 1.0.0
+	 */
+	public function setCorePostTemplateArgs(array $args, string $name): array
+	{
+		if ('core/post-template' === $name) {
+			$args['supports']['spacing']            ??= [];
+			$args['supports']['spacing']['padding'] ??= true;
+		}
+
+		return $args;
+	}
+
+	/**
 	 * Adds spacing support to the Query Loop block.
 	 *
 	 * @hook  register_block_type_args  last
