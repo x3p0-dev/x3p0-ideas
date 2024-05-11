@@ -28,7 +28,7 @@ label {
 // -----------------------------------------------------------------------------
 
 // Adds form element styles, which aren't yet supported in `theme.json`.
-input:where(:not([type=checkbox]):not([type=radio ])),
+input:where(:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=reset])),
 select,
 textarea {
 	@include form.input();
