@@ -53,6 +53,8 @@
 			},
 			"core/navigation-submenu": {
 				"custom": {
+					"color": "var:preset|color|neutral-50",
+					"background": "var:preset|color|neutral-950",
 					"minWidth": "18rem"
 				}
 			},

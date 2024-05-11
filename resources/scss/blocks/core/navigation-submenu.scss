@@ -9,6 +9,30 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
+///
+/// Gutenberg 18.1 broke `theme.json`-based styles for nav sub-menus by reducing
+/// specificity of global style rules. Therefore, we needed to move some CSS to
+/// custom presets.
+///
+/// @link https://github.com/x3p0-dev/x3p0-ideas/issues/9
+/// @link https://github.com/WordPress/gutenberg/pull/60106
+/// @link https://github.com/WordPress/gutenberg/pull/59457
+///
+.wp-block-navigation-submenu .wp-block-navigation__submenu-container {
+	padding: var(--wp--custom--padding, var(--wp--preset--spacing--base));
+}
+
+nav.wp-block-navigation .wp-block-navigation-submenu .wp-block-navigation__submenu-container,
+nav.wp-block-navigation.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open {
+	color: var(--wp--custom--color, var(--wp--preset--color--contrast));
+	background: var(--wp--custom--background, var(--wp--preset--color--base));
+}
+
+
+// -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
 // Sets the width of the submenu container when hovered.
 .wp-block-navigation .has-child {
 

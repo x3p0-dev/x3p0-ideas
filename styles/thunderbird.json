@@ -55,6 +55,11 @@
 					}
 				}
 			},
+			"core/navigation-submenu": {
+				"custom": {
+					"background": "var:preset|color|white"
+				}
+			},
 			"core/paragraph": {
 				"custom": {
 					"dropCap": {

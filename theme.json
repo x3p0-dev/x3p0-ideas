@@ -120,6 +120,13 @@
 					}
 				}
 			},
+			"core/navigation-submenu": {
+				"custom": {
+					"color": "var:preset|color|contrast",
+					"background": "var:preset|color|base",
+					"padding": "var:wp|preset|spacing|base"
+				}
+			},
 			"core/post-comments-form": {
 				"custom": {
 					"commentNotes": {

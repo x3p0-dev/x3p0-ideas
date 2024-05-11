@@ -59,6 +59,12 @@
 						"borderWidth": "3px 0 0"
 					}
 				}
+			},
+			"core/navigation-submenu": {
+				"custom": {
+					"background": "var:preset|color|neutral-950",
+					"color": "var:preset|color|base"
+				}
 			}
 		},
 		"custom": {

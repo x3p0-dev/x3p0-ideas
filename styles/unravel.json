@@ -44,6 +44,12 @@
 					}
 				}
 			},
+			"core/navigation-submenu": {
+				"custom": {
+					"color": "var:preset|color|neutral-950",
+					"background": "var:preset|color|neutral-50"
+				}
+			},
 			"core/paragraph": {
 				"custom": {
 					"dropCap": {
@@ -441,14 +447,6 @@
 					"background": "var:preset|color|neutral-50"
 				},
 				"shadow": "var:preset|shadow|md",
-				"spacing": {
-					"padding": {
-						"top": "var:preset|spacing|base",
-						"bottom": "var:preset|spacing|base",
-						"left": "var:preset|spacing|base",
-						"right": "var:preset|spacing|base"
-					}
-				},
 				"typography": {
 					"fontSize": "inherit"
 				},

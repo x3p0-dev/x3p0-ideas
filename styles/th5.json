@@ -65,6 +65,12 @@
 					}
 				}
 			},
+			"core/navigation-submenu": {
+				"custom": {
+					"color": "var:preset|color|neutral-950",
+					"background": "var:preset|color|neutral-100"
+				}
+			},
 			"core/post-comments-form": {
 				"custom": {
 					"commentNotes": {
