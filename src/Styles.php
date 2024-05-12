@@ -114,6 +114,9 @@ class Styles implements Bootable
 				'global-border' => __('Global Border', 'x3p0-ideas'),
 				'stretch'       => __('Stretch',       'x3p0-ideas')
 			],
+			'core/details' => [
+				'plain' => __('Plain', 'x3p0-ideas')
+			],
 			'core/file' => [
 				'icon'  => __('Icon',  'x3p0-ideas'),
 				'plain' => __('Plain', 'x3p0-ideas')

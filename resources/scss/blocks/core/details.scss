@@ -100,4 +100,36 @@
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-// No variations...
+///
+/// The plain style removes custom styling from the block.
+///
+.wp-block-details.is-style-plain,
+.editor-styles-wrapper .wp-block-file.is-style-details {
+	color: inherit;
+	border: none;
+	background: none;
+	box-shadow: none;
+	outline: none;
+	padding: 0;
+
+	summary {
+		padding: initial;
+		background: initial;
+		color: initial;
+	}
+
+	> :where(:not(summary)) {
+		margin-left: initial;
+		margin-right: initial;
+	}
+
+	summary::marker {
+		content: initial;
+	}
+
+	summary::after,
+	&[open] summary::after {
+		content: none;
+	}
+}
+
