@@ -10,6 +10,29 @@
 @use '~@wordpress/base-styles/breakpoints' as wp-breakpoints;
 
 // -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+///
+/// Gutenberg 18.1 broke `theme.json` nav link `text-decoration` styles by
+/// reducing their specificity. This re-adds the default via CSS.
+///
+/// @link https://github.com/x3p0-dev/x3p0-ideas/issues/11
+/// @link https://github.com/WordPress/gutenberg/pull/60106
+/// @link https://github.com/WordPress/gutenberg/pull/59457
+///
+.wp-block-navigation:where(:not([class*="has-text-decoration"])) {
+	a {
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
+}
+
+// -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
 
