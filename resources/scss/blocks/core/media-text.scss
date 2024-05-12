@@ -9,7 +9,20 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// No fixes...
+///
+/// Adds a default block gap to the Media & Text block and removes WordPress'
+/// arbitrary, hardcoded padding from the content area, which breaks both
+/// vertical and horizontal rhythm.
+///
+/// @link https://github.com/WordPress/gutenberg/issues/49406
+///
+.wp-block-media-text {
+	gap: var(--wp--preset--spacing--plus-5);
+
+	.wp-block-media-text__content {
+		padding: 0;
+	}
+}
 
 // -----------------------------------------------------------------------------
 // Block customizations.
