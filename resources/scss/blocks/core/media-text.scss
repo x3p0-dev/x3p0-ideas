@@ -5,6 +5,10 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
+// Use the WordPress breakpoints module.
+// @link https://github.com/WordPress/gutenberg/tree/trunk/packages/base-styles
+@use '~@wordpress/base-styles/breakpoints' as wp;
+
 // -----------------------------------------------------------------------------
 // Block fixes.
 // -----------------------------------------------------------------------------
@@ -29,8 +33,27 @@
 // -----------------------------------------------------------------------------
 
 ///
+/// By default, Media & Text uses the Core `$break-small` to stack on mobile.
+/// This is far too late for most scenarios, so we're breaking on medium.
+///
+@media (max-width: wp.$break-medium) {
+	.wp-block-media-text.is-stacked-on-mobile {
+		grid-template-columns: 100% !important;
+		.wp-block-media-text__media {
+			grid-column: 1;
+			grid-row: 1;
+		}
+		.wp-block-media-text__content {
+			grid-column: 1;
+			grid-row: 2;
+		}
+	}
+}
+
+///
 /// Ensures that `cqi` values are based on their container, not the viewport.
 ///
+.wp-block-media-text,
 .wp-block-media-text__content {
 	container-type: inline-size;
 }
