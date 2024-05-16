@@ -21,7 +21,7 @@ defined('ABSPATH') || exit;
 
 	<!-- wp:post-featured-image {
 		"isLink":true,
-		"aspectRatio":"16/9",
+		"aspectRatio":"21/9",
 		"width":"",
 		"height":"",
 		"align":"wide"
