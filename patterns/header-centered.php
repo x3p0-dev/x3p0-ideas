@@ -18,6 +18,7 @@ defined('ABSPATH') || exit;
 ?>
 <!-- wp:group {
 	"metadata":{"name":"<?= esc_attr__('Header Content', 'x3p0-ideas') ?>"},
+	"align":"full",
 	"style":{
 		"spacing":{
 			"padding":{
@@ -35,7 +36,7 @@ defined('ABSPATH') || exit;
 	},
 	"className":"is-style-site-header"
 } -->
-<div class="wp-block-group is-style-site-header" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
+<div class="wp-block-group alignfull is-style-site-header" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
 
 	<!-- wp:group {
 		"metadata":{"name":"<?= esc_attr__('Branding', 'x3p0-ideas') ?>"},
