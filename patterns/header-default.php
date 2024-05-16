@@ -27,8 +27,7 @@ defined('ABSPATH') || exit;
 				"bottom":"var:preset|spacing|plus-3",
 				"left":"var:preset|spacing|plus-3"
 			}
-		},
-		"position":{"type":"sticky","top":"0px"}
+		}
 	},
 	"layout":{"type":"flex","justifyContent":"space-between"},
 	"className":"is-style-site-header"
