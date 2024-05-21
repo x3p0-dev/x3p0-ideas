@@ -37,13 +37,6 @@
 			"code": "<?php require '/wordpress/wp-load.php'; $wpdb->query('delete from wp_posts');"
 		},
 		{
-			"step": "importWxr",
-			"file": {
-				"resource": "url",
-				"url": "https://raw.githubusercontent.com/x3p0-dev/assets/master/x3p0-ideas/site-content.xml"
-			}
-		},
-		{
 			"step": "login",
 			"username": "admin",
 			"password": "password"
