@@ -1,6 +1,5 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
-	"landingPage": "/wp-admin/site-editor.php",
 	"preferredVersions": {
 		"php": "8.3",
 		"wp": "latest"
@@ -23,7 +22,25 @@
 			"step": "installPlugin",
 			"pluginZipFile": {
 				"resource": "wordpress.org/plugins",
+				"slug": "gutenberg"
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginZipFile": {
+				"resource": "wordpress.org/plugins",
 				"slug": "x3p0-breadcrumbs"
+			}
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php require '/wordpress/wp-load.php'; $wpdb->query('delete from wp_posts');"
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/x3p0-dev/assets/master/x3p0-ideas/site-content.xml"
 			}
 		},
 		{
