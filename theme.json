@@ -190,7 +190,7 @@
 			"width": true
 		},
 		"color": {
-			"custom": false,
+			"custom": true,
 			"customDuotone": true,
 			"customGradient": true,
 			"defaultDuotone": false,
@@ -821,7 +821,7 @@
 		},
 		"spacing": {
 			"blockGap": true,
-			"customSpacingSize": false,
+			"customSpacingSize": true,
 			"margin": true,
 			"padding": true,
 			"spacingScale": {
@@ -961,7 +961,7 @@
 			]
 		},
 		"typography": {
-			"customFontSize": false,
+			"customFontSize": true,
 			"defaultFontSizes": false,
 			"dropCap": true,
 			"fluid": false,
