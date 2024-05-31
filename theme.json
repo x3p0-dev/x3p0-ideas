@@ -1767,6 +1767,9 @@
 				},
 				"elements": {
 					"link": {
+						"color": {
+							"text": "inherit"
+						},
 						"typography": {
 							"textDecoration": "none"
 						},
