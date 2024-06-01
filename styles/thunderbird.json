@@ -51,15 +51,6 @@
 					}
 				}
 			},
-			"core/social-links": {
-				"custom": {
-					"outline": {
-						"borderColor": "var:preset|color|neutral-300",
-						"borderWidth": "1px",
-						"borderRadius": "var:custom|global|border-radius"
-					}
-				}
-			},
 			"core/table": {
 				"custom": {
 					"stripes": {
@@ -432,6 +423,20 @@
 					"cite": {
 						"typography": {
 							"fontStyle": "normal"
+						}
+					}
+				}
+			},
+			"core/social-links": {
+				"variations": {
+					"outline": {
+						"blocks": {
+							"core/social-link": {
+								"border": {
+									"color": "var:preset|color|neutral-300",
+									"width": "1px"
+								}
+							}
 						}
 					}
 				}

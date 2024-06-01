@@ -4,13 +4,6 @@
 	"title": "Unravel",
 	"settings": {
 		"blocks": {
-			"core/cover": {
-				"custom":{
-					"fadeIn": {
-						"color": "var:preset|color|neutral-950"
-					}
-				}
-			},
 			"core/group": {
 				"custom": {
 					"cardFooter": {
@@ -48,20 +41,6 @@
 						"color": "var:preset|color|primary-950",
 						"background": "var:preset|color|primary-100",
 						"hoverBackground": "var:preset|color|primary-300"
-					}
-				}
-			},
-			"core/social-links": {
-				"custom": {
-					"outline": {
-						"borderWidth": "3px"
-					}
-				}
-			},
-			"core/tag-cloud": {
-				"custom": {
-					"outline": {
-						"borderWidth": "3px"
 					}
 				}
 			}
@@ -400,6 +379,15 @@
 					}
 				}
 			},
+			"core/cover": {
+				"variations": {
+					"fade-in": {
+						"color": {
+							"text": "var:preset|color|neutral-950"
+						}
+					}
+				}
+			},
 			"core/gallery": {
 				"typography": {
 					"fontSize": "var:preset|font-size|lg",
@@ -528,6 +516,32 @@
 			},
 			"core/social-link": {
 				"shadow": "var:preset|shadow|md"
+			},
+			"core/social-links": {
+				"variations": {
+					"outline": {
+						"blocks": {
+							"core/social-link": {
+								"border": {
+									"width": "3px"
+								}
+							}
+						}
+					}
+				}
+			},
+			"core/tag-cloud": {
+				"variations": {
+					"outline": {
+						"elements": {
+							"link": {
+								"border": {
+									"width": "3px"
+								}
+							}
+						}
+					}
+				}
 			},
 			"core/verse": {
 				"typography": {

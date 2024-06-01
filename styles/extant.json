@@ -53,14 +53,6 @@
 						"hoverBackground": "var:preset|color|contrast"
 					}
 				}
-			},
-			"core/social-links": {
-				"custom": {
-					"outline": {
-						"borderColor": "var:preset|color|neutral-300",
-						"borderWidth": "1px"
-					}
-				}
 			}
 		},
 		"custom": {
@@ -666,6 +658,20 @@
 				"color": {
 					"text": "white",
 					"background": "purple"
+				}
+			},
+			"core/social-links": {
+				"variations": {
+					"outline": {
+						"blocks": {
+							"core/social-link": {
+								"border": {
+									"color": "var:preset|color|neutral-300",
+									"width": "1px"
+								}
+							}
+						}
+					}
 				}
 			},
 			"x3p0/breadcrumbs": {

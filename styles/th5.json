@@ -44,13 +44,6 @@
 						"color": "var:preset|color|neutral-700"
 					}
 				}
-			},
-			"core/social-links": {
-				"custom": {
-					"outline": {
-						"borderWidth": "1px"
-					}
-				}
 			}
 		},
 		"custom": {
@@ -449,6 +442,19 @@
 			"core/social-link": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary"
+				}
+			},
+			"core/social-links": {
+				"variations": {
+					"outline": {
+						"blocks": {
+							"core/social-link": {
+								"border": {
+									"width": "1px"
+								}
+							}
+						}
+					}
 				}
 			},
 			"core/term-description": {

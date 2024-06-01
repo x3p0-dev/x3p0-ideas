@@ -7,13 +7,6 @@
 			"backgroundSize": true
 		},
 		"blocks": {
-			"core/columns": {
-				"custom": {
-					"siteFooter": {
-						"padding": "var(--wp--preset--spacing--plus-6) var(--wp--preset--spacing--plus-3)"
-					}
-				}
-			},
 			"core/comment-template": {
 				"custom": {
 					"comment": {
@@ -28,13 +21,6 @@
 					"commentParentLink": {
 						"color": "inherit",
 						"hoverColor": "var:preset|color|primary-700"
-					}
-				}
-			},
-			"core/cover": {
-				"custom":{
-					"fadeIn": {
-						"color": "var:preset|color|contrast"
 					}
 				}
 			},
@@ -107,14 +93,6 @@
 					"customGradient": false
 				}
 			},
-			"core/social-links": {
-				"custom": {
-					"outline": {
-						"borderWidth": "2px",
-						"borderRadius": "var:custom|global|border-radius"
-					}
-				}
-			},
 			"core/table": {
 				"custom": {
 					"stripes": {
@@ -126,10 +104,6 @@
 				"custom": {
 					"linkCount": {
 						"color": "var:preset|color|neutral-500"
-					},
-					"outline": {
-						"borderWidth": "2px",
-						"borderRadius": "var:custom|global|border-radius"
 					}
 				}
 			}
@@ -1386,7 +1360,23 @@
 						}
 					}
 				},
-				"css": "& h1.wp-block-heading, h2.wp-block-heading {\n\tfont-weight: 900;\n}"
+				"css": "& h1.wp-block-heading, h2.wp-block-heading {\n\tfont-weight: 900;\n}",
+				"variations": {
+					"fade-in": {
+						"color": {
+							"text": "var:preset|color|contrast"
+						}
+					},
+					"global-border": {
+						"border": {
+							"color": "var:custom|global|border-color",
+							"style": "var:custom|global|border-style",
+							"width": "var:custom|global|border-width",
+							"radius": "var:custom|global|border-radius"
+						},
+						"shadow": "var:custom|global|shadow"
+					}
+				}
 			},
 			"core/details": {
 				"border": {
@@ -1745,7 +1735,25 @@
 				"spacing": {
 					"blockGap": "var:preset|spacing|plus-1"
 				},
-				"css": ".is-style-logos-only .wp-block-social-link {\n\tbox-shadow: none;\n}"
+				"css": ".is-style-logos-only .wp-block-social-link {\n\tbox-shadow: none;\n}",
+				"variations": {
+					"outline": {
+						"blocks": {
+							"core/social-link": {
+								"border": {
+									"color": "currentColor",
+									"style": "solid",
+									"width": "2px",
+									"radius": "var:custom|global|border-radius"
+								},
+								"color": {
+									"background": "transparent !important",
+									"text": "inherit !important"
+								}
+							}
+						}
+					}
+				}
 			},
 			"core/table": {
 				"border": {
@@ -1758,6 +1766,68 @@
 			},
 			"core/table-of-contents": {
 				"css": "& ol {\n\tlist-style: initial;\n}"
+			},
+			"core/tag-cloud": {
+				"variations": {
+					"flat": {
+						"elements": {
+							"link": {
+								"typography": {
+									"fontSize": "inherit !important"
+								}
+							}
+						}
+					},
+					"icon": {
+						"elements": {
+							"link": {
+								"typography": {
+									"fontSize": "inherit !important",
+									"fontWeight": "inherit !important"
+								}
+							}
+						}
+					},
+					"outline": {
+						"elements": {
+							"link": {
+								"border": {
+									"color": "currentColor",
+									"style": "solid",
+									"width": "2px",
+									"radius": "var:custom|global|border-radius"
+								},
+								"color": {
+									"text": "inherit",
+									"background": "transparent"
+								},
+								"spacing": {
+									"padding": {
+										"top": "var:preset|spacing|minus-2",
+										"bottom": "var:preset|spacing|minus-2",
+										"left": "var:preset|spacing|plus-1",
+										"right": "var:preset|spacing|plus-1"
+									}
+								},
+								"typography": {
+									"fontSize": "inherit !important",
+									"fontWeight": "inherit !important",
+									"lineHeight": "var:custom|line-height|sm"
+								},
+								":focus": {
+									"typography": {
+										"textDecoration": "underline !important"
+									}
+								},
+								":hover": {
+									"typography": {
+										"textDecoration": "underline !important"
+									}
+								}
+							}
+						}
+					}
+				}
 			},
 			"outermost/icon-block": {
 				"css": "& svg {\n\tfill: currentColor;\n}"

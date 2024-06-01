@@ -36,15 +36,6 @@
 						"hoverBackground": "var:preset|color|primary-500"
 					}
 				}
-			},
-			"core/social-links": {
-				"custom": {
-					"outline": {
-						"color": "var:preset|color|neutral-700",
-						"borderColor": "var:preset|color|neutral-100",
-						"borderWidth": "1px"
-					}
-				}
 			}
 		},
 		"color": {
@@ -398,6 +389,21 @@
 			"core/social-links": {
 				"typography": {
 					"textTransform": "initial"
+				},
+				"variations": {
+					"outline": {
+						"blocks": {
+							"core/social-link": {
+								"color": {
+									"text": "var:preset|color|neutral-700"
+								},
+								"border": {
+									"color": "var:preset|color|neutral-100",
+									"width": "1px"
+								}
+							}
+						}
+					}
 				}
 			},
 			"core/table": {

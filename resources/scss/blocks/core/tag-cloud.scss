@@ -46,7 +46,7 @@
 ///
 .wp-block-tag-cloud.is-style-flat a {
 	// Inherit so that developers/users can customize.
-	font-size: inherit !important;
+	//font-size: inherit !important;
 }
 
 ///
@@ -61,8 +61,8 @@
 
 	a {
 		@include inline-icon.prefix(icon.get-url('tag'));
-		font-size: inherit !important;
-		font-weight: inherit !important;
+//		font-size: inherit !important;
+//		font-weight: inherit !important;
 
 		&:has(.tag-link-count) {
 			text-decoration-line: none;
@@ -83,7 +83,7 @@
 /// theme. Much of this needed to be done via CSS rather than `theme.json`.
 ///
 .wp-block-tag-cloud.is-style-outline {
-
+/*
 	a {
 		color:         var(--wp--custom--outline--color, inherit);
 		background:    var(--wp--custom--outline--background, transparent);
@@ -102,10 +102,11 @@
 			text-decoration: underline !important;
 		}
 	}
+	*/
 }
 
 // Inherit the outline font size from the parent element if assigned a preset.
 [class*=-font-size] .wp-block-tag-cloud.is-style-outline a {
-	font-size: inherit !important;
+//	font-size: inherit !important;
 	line-height: inherit;
 }

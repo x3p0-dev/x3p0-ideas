@@ -28,14 +28,6 @@
 						"borderWidth": "var(--wp--custom--global--border-width) 0 0"
 					}
 				}
-			},
-			"core/social-links": {
-				"custom": {
-					"outline": {
-						"borderColor": "var:custom|global|border-color",
-						"borderWidth": "1px"
-					}
-				}
 			}
 		},
 		"custom": {
@@ -446,6 +438,20 @@
 						},
 						"typography": {
 							"fontStyle": "normal"
+						}
+					}
+				}
+			},
+			"core/social-links": {
+				"variations": {
+					"outline": {
+						"blocks": {
+							"core/social-link": {
+								"border": {
+									"color": "var:custom|global|border-color",
+									"width": "1px"
+								}
+							}
 						}
 					}
 				}
