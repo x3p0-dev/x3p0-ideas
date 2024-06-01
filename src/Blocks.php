@@ -86,12 +86,6 @@ class Blocks implements Bootable
 	public function boot(): void
 	{
 		$this->hookMethods();
-
-		// Temporary fix for Gutenberg 18.1+ bypassing `render_block`
-		// when calling the Pattern block.
-		// @link https://github.com/x3p0-dev/x3p0-ideas/issues/12
-		remove_filter( 'get_block_templates', 'gutenberg_replace_pattern_blocks_get_block_templates' );
-		remove_filter( 'get_block_template', 'gutenberg_replace_pattern_blocks_get_block_template' );
 	}
 
 	/**
