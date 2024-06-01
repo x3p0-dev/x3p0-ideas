@@ -4,16 +4,6 @@
 	"title": "Boundaries",
 	"settings": {
 		"blocks": {
-			"core/columns": {
-				"custom": {
-					"siteFooter": {
-						"background": "transparent",
-						"borderColor": "var:custom|global|border-color",
-						"borderStyle": "var:custom|global|border-style",
-						"borderWidth": "var(--wp--custom--global--border-width) 0 0"
-					}
-				}
-			},
 			"core/comment-template": {
 				"custom": {
 					"comment": {
@@ -31,49 +21,11 @@
 			},
 			"core/group": {
 				"custom": {
-					"archiveHeader": {
-						"borderColor": "var:custom|global|border-color",
-						"borderStyle": "var:custom|global|border-style",
-						"borderWidth": "0 0 var(--wp--custom--global--border-width)",
-						"padding": "var(--wp--preset--spacing--plus-6) var(--wp--preset--spacing--plus-3)"
-					},
-					"box": {
-						"background": "var:preset|color|base",
-						"borderColor": "var:custom|global|border-color",
-						"borderStyle": "var:custom|global|border-style",
-						"borderWidth": "var:custom|global|border-width"
-					},
-					"card": {
-						"borderColor": "var:custom|global|border-color",
-						"borderStyle": "var:custom|global|border-style",
-						"borderWidth": "var:custom|global|border-width"
-					},
 					"cardFooter": {
 						"background": "transparent",
 						"borderColor": "var:custom|global|border-color",
 						"borderStyle": "var:custom|global|border-style",
 						"borderWidth": "var(--wp--custom--global--border-width) 0 0"
-					},
-					"commentMeta": {
-						"color": "var:preset|color|neutral-500"
-					},
-					"postByline": {
-						"color": "var:preset|color|neutral-500"
-					},
-					"postMeta": {
-						"color": "var:preset|color|neutral-500"
-					},
-					"siteFooter": {
-						"background": "transparent",
-						"borderColor": "var:custom|global|border-color",
-						"borderStyle": "var:custom|global|border-style",
-						"borderWidth": "var(--wp--custom--global--border-width) 0 0"
-					},
-					"siteHeader": {
-						"background": "transparent",
-						"borderColor": "var:custom|global|border-color",
-						"borderStyle": "var:custom|global|border-style",
-						"borderWidth": "0 0 var(--wp--custom--global--border-width)"
 					}
 				}
 			},
@@ -514,6 +466,78 @@
 						"color": "var:custom|global|border-color",
 						"style": "var:custom|global|border-style",
 						"width": "var:custom|global|border-width"
+					}
+				}
+			},
+			"variations": {
+				"archive-header": {
+					"blockTypes": [ "core/group" ],
+					"border": {
+						"color": "var:custom|global|border-color",
+						"style": "var:custom|global|border-style",
+						"width": "0 0 var(--wp--custom--global--border-width)"
+					},
+					"spacing": {
+						"padding": {
+							"top": "var:preset|spacing|plus-6",
+							"bottom": "var:preset|spacing|plus-6"
+						}
+					}
+				},
+				"box": {
+					"blockTypes": [ "core/group" ],
+					"border": {
+						"color": "var:custom|global|border-color"
+					},
+					"color": {
+						"background": "var:preset|color|base"
+					}
+				},
+				"comment-meta": {
+					"blockTypes": [ "core/group" ],
+					"color": {
+						"text": "var:preset|color|neutral-500"
+					}
+				},
+				"post-byline": {
+					"blockTypes": [ "core/group" ],
+					"color": {
+						"text": "var:preset|color|neutral-500"
+					}
+				},
+				"post-meta": {
+					"blockTypes": [ "core/group" ],
+					"color": {
+						"text": "var:preset|color|neutral-500"
+					}
+				},
+				"site-footer": {
+					"blockTypes": [
+						"core/columns",
+						"core/group"
+					],
+					"color": {
+						"background": "transparent"
+					},
+					"border": {
+						"top": {
+							"color": "var:custom|global|border-color",
+							"style": "var:custom|global|border-style",
+							"width": "var:custom|global|border-width"
+						}
+					}
+				},
+				"site-header": {
+					"blockTypes": [ "core/group" ],
+					"border": {
+						"bottom": {
+							"color": "var:custom|global|border-color",
+							"style": "var:custom|global|border-style",
+							"width": "var:custom|global|border-width"
+						}
+					},
+					"color": {
+						"background": "transparent"
 					}
 				}
 			}

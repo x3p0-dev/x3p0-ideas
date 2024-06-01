@@ -6,23 +6,10 @@
 		"blocks": {
 			"core/group": {
 				"custom": {
-					"box": {
-						"background": "var:preset|color|neutral-50",
-						"borderColor": "var:custom|global|border-color",
-						"borderWidth": "var:custom|global|border-width"
-					},
-					"card": {
-						"borderColor": "var:custom|global|border-color",
-						"borderWidth": "var:custom|global|border-width"
-					},
 					"cardFooter": {
 						"background": "transparent",
 						"borderColor": "var:custom|global|border-color",
 						"borderWidth": "1px 0 0"
-					},
-					"siteFooter": {
-						"borderColor": "var:custom|global|border-color",
-						"borderWidth": "var(--wp--custom--global--border-width) 0 0"
 					}
 				}
 			}
@@ -339,6 +326,26 @@
 					"fontFamily": "var:preset|font-family|tertiary",
 					"fontSize": "var:preset|font-size|md",
 					"lineHeight": "var:custom|line-height|md"
+				}
+			},
+			"variations": {
+				"box": {
+					"blockTypes": [ "core/group" ],
+					"border": {
+						"color": "var:custom|global|border-color"
+					},
+					"color": {
+						"background": "var:preset|color|neutral-50"
+					}
+				},
+				"site-footer": {
+					"blockTypes": [ "core/group" ],
+					"border": {
+						"top": {
+							"color": "var:custom|global|border-color",
+							"width": "var:custom|global|border-width"
+						}
+					}
 				}
 			}
 		}

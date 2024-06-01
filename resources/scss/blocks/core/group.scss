@@ -39,24 +39,6 @@
 // -----------------------------------------------------------------------------
 
 ///
-/// Archive header pattern.
-///
-/// @link      https://github.com/WordPress/gutenberg/pull/57908
-/// @wordpress 6.6
-/// @todo      Move to `theme.json`-based style variations in WordPress 6.6.
-///
-.is-style-archive-header,
-.has-global-padding .is-style-archive-header,
-.editor-styles-wrapper .is-style-archive-header {
-	color:        var(--wp--custom--archive-header--color, inherit);
-	background:   var(--wp--custom--archive-header--background, transparent);
-	border-width: var(--wp--custom--archive-header--border-width, 0);
-	border-style: var(--wp--custom--archive-header--border-style, solid);
-	border-color: var(--wp--custom--archive-header--border-color, transparent);
-	padding:      var(--wp--custom--archive-header--padding, 0);
-}
-
-///
 /// The boxed style adds some default padding and a background.
 ///
 /// @link      https://github.com/WordPress/gutenberg/pull/57908
@@ -65,35 +47,15 @@
 ///
 .wp-block-group.is-style-box,
 .editor-styles-wrapper .wp-block-group.is-style-box {
-	overflow:      hidden;
-	color:         var(--wp--custom--box--color, inherit);
-	background:    var(--wp--custom--box--background, transparent);
-	border-width:  var(--wp--custom--box--border-width, 0);
-	border-style:  var(--wp--custom--box--border-style, solid);
-	border-color:  var(--wp--custom--box--border-color, transparent);
-	border-radius: var(--wp--custom--box--border-radius, 0);
-	padding:       var(--wp--custom--box--padding, 0);
-	box-shadow:    var(--wp--custom--box--shadow, none);
+	overflow: hidden;
 }
 
 ///
 /// The card style adds a default border.
 ///
-/// @link      https://github.com/WordPress/gutenberg/pull/57908
-/// @wordpress 6.6
-/// @todo      Move to `theme.json`-based style variations in WordPress 6.6.
-///
 .wp-block-group.is-style-card,
 .editor-styles-wrapper .wp-block-group.is-style-card {
-	overflow:      hidden;
-	color:         var(--wp--custom--card--color, inherit);
-	background:    var(--wp--custom--card--background, transparent);
-	border-width:  var(--wp--custom--card--border-width, 0);
-	border-style:  var(--wp--custom--card--border-style, solid);
-	border-color:  var(--wp--custom--card--border-color, transparent);
-	border-radius: var(--wp--custom--card--border-radius, 0);
-	padding:       var(--wp--custom--card--padding, 0);
-	box-shadow:    var(--wp--custom--card--shadow, none);
+	overflow: hidden;
 
 	> footer {
 		color:         var(--wp--custom--card-footer--color, inherit);
@@ -106,131 +68,12 @@
 }
 
 ///
-/// Comment meta pattern.
-///
-/// @link      https://github.com/WordPress/gutenberg/pull/57908
-/// @wordpress 6.6
-/// @todo      Move to `theme.json`-based style variations in WordPress 6.6.
-///
-.is-style-comment-meta,
-.editor-styles-wrapper .is-style-comment-meta {
-	font-family:  var(--wp--custom--comment-meta--font-family, inherit);
-	font-size:    var(--wp--custom--comment-meta--font-size, inherit);
-	font-style:   var(--wp--custom--comment-meta--font-style, inherit);
-	font-weight:  var(--wp--custom--comment-meta--font-weight, inherit);
-	line-height:  var(--wp--custom--comment-meta--line-height, inherit);
-	color:        var(--wp--custom--comment-meta--color, inherit);
-}
-
-///
 /// The message style is intended for notes, warnings, notices, etc.
-///
-/// @link      https://github.com/WordPress/gutenberg/pull/57908
-/// @wordpress 6.6
-/// @todo      Move to `theme.json`-based style variations in WordPress 6.6.
 ///
 .wp-block-group.is-style-message,
 .editor-styles-wrapper .wp-block-group.is-style-message {
-	overflow:      hidden;
-	color:         var(--wp--custom--message--color, inherit);
-	background:    var(--wp--custom--message--background, transparent);
-	border-width:  var(--wp--custom--message--border-width, 0);
-	border-style:  var(--wp--custom--message--border-style, solid);
-	border-color:  var(--wp--custom--message--border-color, transparent);
-	border-radius: var(--wp--custom--message--border-radius, 0);
-	padding:       var(--wp--custom--message--padding, 0);
-	box-shadow:    var(--wp--custom--message--shadow, none);
-
+	overflow: hidden;
 	@include prose.prose();
-}
-
-///
-/// Post byline pattern.
-///
-/// @link      https://github.com/WordPress/gutenberg/pull/57908
-/// @wordpress 6.6
-/// @todo      Move to `theme.json`-based style variations in WordPress 6.6.
-///
-.is-style-post-byline,
-.editor-styles-wrapper .is-style-post-byline {
-	font-family:  var(--wp--custom--post-byline--font-family, inherit);
-	font-size:    var(--wp--custom--post-byline--font-size, inherit);
-	font-style:   var(--wp--custom--post-byline--font-style, inherit);
-	font-weight:  var(--wp--custom--post-byline--font-weight, inherit);
-	line-height:  var(--wp--custom--post-byline--line-height, inherit);
-	color:        var(--wp--custom--post-byline--color, inherit);
-}
-
-///
-/// Post meta pattern.
-///
-/// @link      https://github.com/WordPress/gutenberg/pull/57908
-/// @wordpress 6.6
-/// @todo      Move to `theme.json`-based style variations in WordPress 6.6.
-///
-.is-style-post-meta,
-.editor-styles-wrapper .is-style-post-meta {
-	font-family:  var(--wp--custom--post-meta--font-family, inherit);
-	font-size:    var(--wp--custom--post-meta--font-size, inherit);
-	font-style:   var(--wp--custom--post-meta--font-style, inherit);
-	font-weight:  var(--wp--custom--post-meta--font-weight, inherit);
-	line-height:  var(--wp--custom--post-meta--line-height, inherit);
-	color:        var(--wp--custom--post-meta--color, inherit);
-}
-
-///
-/// The section style is meant for grouping several blocks. It was primarily
-/// built for full-width sections, but the alignment/width is controlled at the
-/// block level.
-///
-/// @link      https://github.com/WordPress/gutenberg/pull/57908
-/// @wordpress 6.6
-/// @todo      Move to `theme.json`-based style variations in WordPress 6.6.
-///
-.wp-block-group.is-style-section,
-.editor-styles-wrapper .wp-block-group.is-style-section {
-	color:        var(--wp--custom--section--color, inherit);
-	background:   var(--wp--custom--section--background, transparent);
-	border-width: var(--wp--custom--section--border-width, 0);
-	border-style: var(--wp--custom--section--border-style, solid);
-	border-color: var(--wp--custom--section--border-color, transparent);
-	padding:      var(--wp--custom--section--padding, 0);
-}
-
-///
-/// Site Footer pattern.
-///
-/// @link      https://github.com/WordPress/gutenberg/pull/57908
-/// @wordpress 6.6
-/// @todo      Move to `theme.json`-based style variations in WordPress 6.6.
-///
-.is-style-site-footer,
-.editor-styles-wrapper .is-style-site-footer {
-	font-family:  var(--wp--custom--site-footer--font-family, inherit);
-	color:        var(--wp--custom--site-footer--color, inherit);
-	background:   var(--wp--custom--site-footer--background, transparent);
-	border-width: var(--wp--custom--site-footer--border-width, 0);
-	border-style: var(--wp--custom--site-footer--border-style, solid);
-	border-color: var(--wp--custom--site-footer--border-color, transparent);
-	padding:      var(--wp--custom--site-footer--padding, 0);
-}
-
-///
-/// Site Footer pattern.
-///
-/// @link      https://github.com/WordPress/gutenberg/pull/57908
-/// @wordpress 6.6
-/// @todo      Move to `theme.json`-based style variations in WordPress 6.6.
-///
-.is-style-site-header,
-.editor-styles-wrapper .is-style-site-header {
-	font-family:  var(--wp--custom--site-header--font-family, inherit);
-	color:        var(--wp--custom--site-header--color, inherit);
-	background:   var(--wp--custom--site-header--background, transparent);
-	border-width: var(--wp--custom--site-header--border-width, 0);
-	border-style: var(--wp--custom--site-header--border-style, solid);
-	border-color: var(--wp--custom--site-header--border-color, transparent);
-	padding:      var(--wp--custom--site-header--padding, 0);
 }
 
 // -----------------------------------------------------------------------------
@@ -253,25 +96,13 @@
 .pattern-footer,
 .editor-styles-wrapper .pattern-footer {
 	&-call-to-action {
-		color: var(
-			--wp--custom--site-footer--color,
-			var(--wp--custom--pattern--footer-call-to-action--color, inherit)
-		);
-		background: var(
-			--wp--custom--site-footer--background,
-			var(--wp--custom--pattern--footer-call-to-action--background, transparent)
-		);
+		color: var(--wp--custom--pattern--footer-call-to-action--color, inherit);
+		background: var(--wp--custom--pattern--footer-call-to-action--background, transparent);
 	}
 
 	&-links {
-		color: var(
-			--wp--custom--site-footer--color,
-			var(--wp--custom--pattern--footer-links--color, inherit)
-		);
-		background: var(
-			--wp--custom--site-footer--background,
-			var(--wp--custom--pattern--footer-links--background, transparent)
-		);
+		color: var(--wp--custom--pattern--footer-links--color, inherit);
+		background: var(--wp--custom--pattern--footer-links--background, transparent);
 	}
 }
 

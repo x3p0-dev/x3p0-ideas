@@ -1,5 +1,5 @@
 {
-	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"$schema": "https://github.com/WordPress/gutenberg/raw/trunk/schemas/json/theme.json",
 	"version": 3,
 	"settings": {
 		"background": {
@@ -47,57 +47,8 @@
 			},
 			"core/group": {
 				"custom": {
-					"archiveHeader": {
-						"padding": "var:preset|spacing|plus-3"
-					},
-					"box": {
-						"background": "var:preset|color|neutral-50",
-						"borderStyle": "var:custom|global|border-style",
-						"borderWidth": "var:custom|global|border-width",
-						"borderRadius": "var:custom|global|border-radius",
-						"shadow": "var:custom|global|shadow",
-						"padding": "var:preset|spacing|plus-3"
-					},
-					"card": {
-						"color": "inherit",
-						"background": "var:preset|gradient|180-deg-transparent-base",
-						"borderColor": "var(--wp--preset--color--primary-700) var(--wp--custom--global--border-color) var(--wp--custom--global--border-color)",
-						"borderStyle": "var:custom|global|border-style",
-						"borderWidth": "4px var(--wp--custom--global--border-width) var(--wp--custom--global--border-width)",
-						"borderRadius": "var:custom|global|border-radius",
-						"shadow": "var:custom|global|shadow",
-						"padding": "var:preset|spacing|plus-3"
-					},
 					"cardFooter": {
 						"background": "var:preset|color|neutral-50"
-					},
-					"commentMeta": {
-						"fontSize": "var:preset|font-size|sm",
-						"lineHeight": "var:custom|line-height|sm"
-					},
-					"message": {
-						"color": "var:preset|color|primary-900",
-						"background": "var:preset|color|primary-50",
-						"borderStyle": "var:custom|global|border-style",
-						"borderWidth": "var:custom|global|border-width",
-						"borderRadius": "var:custom|global|border-radius",
-						"shadow": "var:custom|global|shadow",
-						"padding": "var:preset|spacing|plus-3"
-					},
-					"postByline": {
-						"fontSize": "var:preset|font-size|sm",
-						"lineHeight": "var:custom|line-height|sm"
-					},
-					"postMeta": {
-						"fontSize": "var:preset|font-size|sm",
-						"lineHeight": "var:custom|line-height|sm"
-					},
-					"section": {
-						"background": "var:preset|gradient|90-deg-neutral-50-transparent",
-						"padding": "var(--wp--preset--spacing--plus-4) var(--wp--preset--spacing--plus-3)"
-					},
-					"siteFooter": {
-						"padding": "var(--wp--preset--spacing--plus-6) var(--wp--preset--spacing--plus-3)"
 					}
 				}
 			},
@@ -1844,6 +1795,145 @@
 							}
 						}
 					}
+				}
+			},
+			"variations": {
+				"archive-header": {
+					"title": "Archive Header",
+					"blockTypes": [ "core/group" ],
+					"spacing": {
+						"padding": {
+							"top": "var:preset|spacing|plus-3",
+							"bottom": "var:preset|spacing|plus-3",
+							"left": "var:preset|spacing|plus-3",
+							"right": "var:preset|spacing|plus-3"
+						}
+					}
+				},
+				"box": {
+					"title": "Box",
+					"blockTypes": [ "core/group" ],
+					"border": {
+						"color": "transparent",
+						"style": "var:custom|global|border-style",
+						"width": "var:custom|global|border-width",
+						"radius": "var:custom|global|border-radius"
+					},
+					"color": {
+						"background": "var:preset|color|neutral-50"
+					},
+					"shadow": "var:custom|global|shadow",
+					"spacing": {
+						"padding": {
+							"top": "var:preset|spacing|plus-3",
+							"bottom": "var:preset|spacing|plus-3",
+							"left": "var:preset|spacing|plus-3",
+							"right": "var:preset|spacing|plus-3"
+						}
+					}
+				},
+				"card": {
+					"title": "Card",
+					"blockTypes": [ "core/group" ],
+					"border": {
+						"color": "var:custom|global|border-color",
+						"radius": "var:custom|global|border-radius",
+						"style": "var:custom|global|border-style",
+						"width": "var:custom|global|border-width"
+					},
+					"color": {
+						"background": "var:preset|gradient|180-deg-transparent-base",
+						"text": "inherit"
+					},
+					"shadow": "var:custom|global|shadow",
+					"spacing": {
+						"padding": {
+							"top": "var:preset|spacing|plus-3",
+							"bottom": "var:preset|spacing|plus-3",
+							"left": "var:preset|spacing|plus-3",
+							"right": "var:preset|spacing|plus-3"
+						}
+					}
+				},
+				"comment-meta": {
+					"title": "Comment Meta",
+					"blockTypes": [ "core/group" ],
+					"typography": {
+						"fontSize": "var:preset|font-size|sm",
+						"lineHeight": "var:custom|line-height|sm"
+					}
+				},
+				"message": {
+					"title": "Message",
+					"blockTypes": [ "core/group" ],
+					"border": {
+						"style": "var:custom|global|border-style",
+						"width": "var:custom|global|border-width",
+						"radius": "var:custom|global|border-radius"
+					},
+					"color": {
+						"text": "var:preset|color|primary-900",
+						"background": "var:preset|color|primary-50"
+					},
+					"shadow": "var:custom|global|shadow",
+					"spacing": {
+						"padding": {
+							"top": "var:preset|spacing|plus-3",
+							"bottom": "var:preset|spacing|plus-3",
+							"left": "var:preset|spacing|plus-3",
+							"right": "var:preset|spacing|plus-3"
+						}
+					}
+				},
+				"post-byline": {
+					"title": "Post Byline",
+					"blockTypes": [ "core/group" ],
+					"typography": {
+						"fontSize": "var:preset|font-size|sm",
+						"lineHeight": "var:custom|line-height|sm"
+					}
+				},
+				"post-meta": {
+					"title": "Post Meta",
+					"blockTypes": [ "core/group" ],
+					"typography": {
+						"fontSize": "var:preset|font-size|sm",
+						"lineHeight": "var:custom|line-height|sm"
+					}
+				},
+				"section": {
+					"title": "Section",
+					"blockTypes": [ "core/group" ],
+					"color": {
+						"background": "var:preset|gradient|90-deg-neutral-50-transparent"
+					},
+					"spacing": {
+						"padding": {
+							"top": "var:preset|spacing|plus-4",
+							"bottom": "var:preset|spacing|plus-4",
+							"left": "var:preset|spacing|plus-3",
+							"right": "var:preset|spacing|plus-3"
+						}
+					}
+				},
+				"site-footer": {
+					"title": "Site Footer",
+					"blockTypes": [
+						"core/columns",
+						"core/group"
+					],
+					"spacing": {
+						"padding": {
+							"top": "var:preset|spacing|plus-6",
+							"bottom": "var:preset|spacing|plus-6",
+							"left": "var:preset|spacing|plus-3",
+							"right": "var:preset|spacing|plus-3"
+						}
+					}
+				},
+				"site-header": {
+					"title": "Site Header",
+					"blockTypes": [ "core/group" ]
 				}
 			}
 		}

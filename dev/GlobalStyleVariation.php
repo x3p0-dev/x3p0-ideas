@@ -90,7 +90,7 @@ class GlobalStyleVariation implements Bootable
 	 * database already. We want the front end to use the variation passed
 	 * into the constructor.
 	 *
-	 * @hook  wp_theme_json_data_user
+	 * @hook  wp_theme_json_data_user  first
 	 * @param WP_Theme_JSON_Data  The Gutenberg plugin breaks this.
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/wp_theme_json_data_user/
@@ -106,7 +106,7 @@ class GlobalStyleVariation implements Bootable
 		$data = wp_json_file_decode($filename, [ 'associative' => true ]);
 
 		return ! is_null( $data )
-			? new WP_Theme_JSON_Data($data, 'theme')
+			? new WP_Theme_JSON_Data($data, 'user')
 			: $theme_json;
 	}
 

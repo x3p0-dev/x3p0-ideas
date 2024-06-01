@@ -4,15 +4,6 @@
 	"title": "Extant",
 	"settings": {
 		"blocks": {
-			"core/columns": {
-				"custom": {
-					"siteFooter": {
-						"background": "var:preset|color|neutral-50",
-						"borderColor": "var:preset|color|neutral-100",
-						"borderWidth": "1px 0 0"
-					}
-				}
-			},
 			"core/comment-template": {
 				"custom": {
 					"comment": {
@@ -25,29 +16,10 @@
 			},
 			"core/group": {
 				"custom": {
-					"box": {
-						"shadow": "var:preset|shadow|md"
-					},
-					"card": {
-						"background": "transparent",
-						"borderColor": "var:custom|global|border-color",
-						"borderWidth": "var:custom|global|border-width"
-					},
 					"cardFooter": {
 						"background": "none",
 						"borderColor": "var:preset|color|neutral-100",
 						"borderWidth": "var(--wp--custom--global--border-width) 0 0"
-					},
-					"postByline": {
-						"color": "var:preset|color|neutral-500"
-					},
-					"postMeta": {
-						"color": "var:preset|color|neutral-500"
-					},
-					"siteFooter": {
-						"background": "var:preset|color|neutral-50",
-						"borderColor": "var:preset|color|neutral-100",
-						"borderWidth": "1px 0 0"
 					}
 				}
 			},
@@ -700,6 +672,49 @@
 				"typography": {
 					"fontSize": "var:preset|font-size|xs",
 					"lineHeight": "var:custom|line-height|xs"
+				}
+			},
+			"variations": {
+				"box": {
+					"blockTypes": [ "core/group" ],
+					"border": {
+						"color": "var:custom|global|border-color"
+					},
+					"shadow": "var:preset|shadow|md"
+				},
+				"card": {
+					"blockTypes": [ "core/group" ],
+					"color": {
+						"background": "transparent"
+					},
+					"shadow": "var:preset|shadow|md"
+				},
+				"post-byline": {
+					"blockTypes": [ "core/group" ],
+					"color": {
+						"text": "var:preset|color|neutral-500"
+					}
+				},
+				"post-meta": {
+					"blockTypes": [ "core/group" ],
+					"color": {
+						"text": "var:preset|color|neutral-500"
+					}
+				},
+				"site-footer": {
+					"blockTypes": [
+						"core/columns",
+						"core/group"
+					],
+					"border": {
+						"top": {
+							"color": "var:preset|color|neutral-100",
+							"width": "1px"
+						}
+					},
+					"color": {
+						"background": "var:preset|color|neutral-50"
+					}
 				}
 			}
 		}

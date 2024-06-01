@@ -4,22 +4,6 @@
 	"title": "Chestnut Rose",
 	"settings": {
 		"blocks": {
-			"core/group": {
-				"custom": {
-					"commentMeta": {
-						"fontSize":"var:preset|font-size|xs",
-						"lineHeight":"var:custom|line-height|xs"
-					},
-					"postByline": {
-						"fontSize":"var:preset|font-size|xs",
-						"lineHeight":"var:custom|line-height|xs"
-					},
-					"postMeta": {
-						"fontSize":"var:preset|font-size|xs",
-						"lineHeight":"var:custom|line-height|xs"
-					}
-				}
-			},
 			"core/navigation": {
 				"custom": {
 					"toggle": {
@@ -442,6 +426,29 @@
 					"fontWeight": "300",
 					"fontSize": "var:preset|font-size|xs",
 					"lineHeight": "var:custom|line-height|xs"
+				}
+			},
+			"variations": {
+				"comment-meta": {
+					"blockTypes": [ "core/group" ],
+					"typography": {
+						"fontSize": "var:preset|font-size|xs",
+						"lineHeight": "var:custom|line-height|xs"
+					}
+				},
+				"post-byline": {
+					"blockTypes": [ "core/group" ],
+					"typography": {
+						"fontSize": "var:preset|font-size|xs",
+						"lineHeight": "var:custom|line-height|xs"
+					}
+				},
+				"post-meta": {
+					"blockTypes": [ "core/group" ],
+					"typography": {
+						"fontSize": "var:preset|font-size|xs",
+						"lineHeight": "var:custom|line-height|xs"
+					}
 				}
 			}
 		}

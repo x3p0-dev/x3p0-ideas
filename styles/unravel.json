@@ -13,24 +13,9 @@
 			},
 			"core/group": {
 				"custom": {
-					"box": {
-						"borderColor": "var:preset|color|neutral-100",
-						"borderStyle": "double",
-						"borderWidth": "3px"
-					},
-					"card": {
-						"borderColor": "var:custom|global|border-color",
-						"borderStyle": "var:custom|global|border-style",
-						"borderWidth": "var:custom|global|border-width"
-					},
 					"cardFooter": {
 						"borderColor": "var:custom|global|border-color",
 						"borderWidth": "1px 0 0"
-					},
-					"message": {
-						"borderColor": "var:custom|global|border-color",
-						"borderStyle": "var:custom|global|border-style",
-						"borderWidth": "var:custom|global|border-width"
 					}
 				}
 			},
@@ -548,6 +533,24 @@
 				"typography": {
 					"fontFamily": "var:preset|font-family|tertiary",
 					"fontStyle": "italic"
+				}
+			},
+			"variations": {
+				"box": {
+					"blockTypes": [ "core/group" ],
+					"border": {
+						"color": "var:preset|color|neutral-100",
+						"style": "double",
+						"width": "3px"
+					}
+				},
+				"message": {
+					"blockTypes": [ "core/group" ],
+					"border": {
+						"color": "var:custom|global|border-color",
+						"style": "var:custom|global|border-style",
+						"width": "var:custom|global|border-width"
+					}
 				}
 			}
 		}

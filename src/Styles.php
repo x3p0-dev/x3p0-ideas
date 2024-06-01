@@ -128,17 +128,6 @@ class Styles implements Bootable
 				'classic' => __('Classic', 'x3p0-ideas'),
 				'reverse' => __('Reverse', 'x3p0-ideas')
 			],
-			'core/group' => [
-				'archive-header' => __('Archive Header', 'x3p0-ideas'),
-				'box'            => __('Box',            'x3p0-ideas'),
-				'card'           => __('Card',           'x3p0-ideas'),
-				'message'        => __('Message',        'x3p0-ideas'),
-				'post-byline'    => __('Post Byline',    'x3p0-ideas'),
-				'post-meta'      => __('Post Meta',      'x3p0-ideas'),
-				'section'        => __('Section',        'x3p0-ideas'),
-				'site-footer'    => __('Site Footer',    'x3p0-ideas'),
-				'site-header'    => __('Site Header',    'x3p0-ideas')
-			],
 			'core/heading' => [
 				'knockout'          => __('Knockout',      'x3p0-ideas'),
 				'text-wrap-balance' => __('Wrap: Balance', 'x3p0-ideas')

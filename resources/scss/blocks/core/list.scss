@@ -20,7 +20,7 @@
 ///
 /// Include the base list style.
 ///
-.wp-block-list:is(ul, ol),
+.wp-block-list:where(ul, ol),
 ul,
 ol {
 	@include list.flow();

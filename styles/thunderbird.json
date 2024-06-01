@@ -20,38 +20,8 @@
 			},
 			"core/group": {
 				"custom": {
-					"box": {
-						"background": "var:preset|color|white"
-					},
-					"card": {
-						"background": "var:preset|color|white",
-						"borderColor": "var:preset|color|neutral-300",
-						"borderWidth": "1px"
-					},
 					"cardFooter": {
 						"background": "var:preset|color|neutral-50"
-					},
-					"commentMeta": {
-						"color": "var:preset|color|neutral-500"
-					},
-					"postByline": {
-						"color": "var:preset|color|neutral-500"
-					},
-					"postMeta": {
-						"color": "var:preset|color|neutral-500"
-					},
-					"section": {
-						"background": "var:preset|gradient|270-deg-white-transparent"
-					},
-					"siteHeader": {
-						"background": "var:preset|color|white",
-						"borderColor": "var:preset|color|neutral-100",
-						"borderWidth": "0 0 1px"
-					},
-					"siteFooter": {
-						"background": "var:preset|color|white",
-						"borderColor": "var:preset|color|neutral-100",
-						"borderWidth": "1px 0 0"
 					}
 				}
 			},
@@ -485,6 +455,76 @@
 				},
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary"
+				}
+			},
+			"variations": {
+				"box": {
+					"blockTypes": [ "core/group" ],
+					"color": {
+						"background": "var:preset|color|white"
+					}
+				},
+				"card": {
+					"blockTypes": [ "core/group" ],
+					"border": {
+						"color": "var:preset|color|neutral-300",
+						"width": "1px"
+					},
+					"color": {
+						"background": "var:preset|color|white"
+					}
+				},
+				"comment-meta": {
+					"blockTypes": [ "core/group" ],
+					"color": {
+						"text": "var:preset|color|neutral-500"
+					}
+				},
+				"post-byline": {
+					"blockTypes": [ "core/group" ],
+					"color": {
+						"text": "var:preset|color|neutral-500"
+					}
+				},
+				"post-meta": {
+					"blockTypes": [ "core/group" ],
+					"color": {
+						"text": "var:preset|color|neutral-500"
+					}
+				},
+				"section": {
+					"blockTypes": [ "core/group" ],
+					"color": {
+						"background": "var:preset|gradient|270-deg-white-transparent"
+					}
+				},
+				"site-footer": {
+					"blockTypes": [
+						"core/columns",
+						"core/group"
+					],
+					"border": {
+						"top": {
+							"color": "var:preset|color|neutral-100",
+							"width": "1px"
+						}
+					},
+					"color": {
+						"background": "var:preset|color|white"
+					}
+				},
+				"site-header": {
+					"blockTypes": [ "core/group" ],
+					"border": {
+						"bottom": {
+							"color": "var:preset|color|neutral-100",
+							"style": "solid",
+							"width": "1px"
+						}
+					},
+					"color": {
+						"background": "var:preset|color|white"
+					}
 				}
 			}
 		}

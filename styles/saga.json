@@ -4,16 +4,6 @@
 	"title": "Saga",
 	"settings": {
 		"blocks": {
-			"core/columns": {
-				"custom": {
-					"siteFooter": {
-						"background": "var:preset|color|neutral-50",
-						"borderColor": "var:preset|color|neutral-100",
-						"borderStyle": "double",
-						"borderWidth": "3px 0 0"
-					}
-				}
-			},
 			"core/details": {
 				"custom": {
 					"elements": {
@@ -33,30 +23,11 @@
 			},
 			"core/group": {
 				"custom": {
-					"card": {
-						"borderColor": "var:custom|global|border-color",
-						"borderWidth": "var:custom|global|border-width"
-					},
 					"cardFooter": {
 						"background": "none",
 						"borderColor": "var:custom|global|border-color",
 						"borderWidth": "3px 0 0",
 						"borderStyle": "double"
-					},
-					"commentMeta": {
-						"color": "var:preset|color|neutral-500"
-					},
-					"postByline": {
-						"color": "var:preset|color|neutral-500"
-					},
-					"postMeta": {
-						"color": "var:preset|color|neutral-500"
-					},
-					"siteFooter": {
-						"background": "var:preset|color|neutral-50",
-						"borderColor": "var:preset|color|neutral-100",
-						"borderStyle": "double",
-						"borderWidth": "3px 0 0"
 					}
 				}
 			},
@@ -266,30 +237,6 @@
 				},
 				"css": "--wp--custom--submenu-item--hover-background: var(--wp--preset--color--neutral-900);"
 			},
-			"core/post-author-name": {
-				"elements": {
-					"link": {
-						"color": {
-							"text": "var:preset|color|neutral-900"
-						},
-						"typography": {
-							"fontFamily": "var:preset|font-family|primary",
-							"fontStyle": "italic",
-							"textDecoration": "none"
-						},
-						":focus": {
-							"typography": {
-								"textDecoration": "underline"
-							}
-						},
-						":hover": {
-							"typography": {
-								"textDecoration": "underline"
-							}
-						}
-					}
-				}
-			},
 			"core/post-comments-form": {
 				"elements": {
 					"h3": {
@@ -371,6 +318,68 @@
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",
 					"fontStyle": "italic"
+				}
+			},
+			"variations": {
+				"comment-meta": {
+					"blockTypes": [ "core/group" ],
+					"color": {
+						"text": "var:preset|color|neutral-500"
+					}
+				},
+				"post-byline": {
+					"blockTypes": [ "core/group" ],
+					"color": {
+						"text": "var:preset|color|neutral-500"
+					},
+					"blocks": {
+						"core/post-author-name": {
+							"elements": {
+								"link": {
+									"color": {
+										"text": "var:preset|color|neutral-900"
+									},
+									"typography": {
+										"fontFamily": "var:preset|font-family|primary",
+										"fontStyle": "italic",
+										"textDecoration": "none"
+									},
+									":focus": {
+										"typography": {
+											"textDecoration": "underline"
+										}
+									},
+									":hover": {
+										"typography": {
+											"textDecoration": "underline"
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+				"post-meta": {
+					"blockTypes": [ "core/group" ],
+					"color": {
+						"text": "var:preset|color|neutral-500"
+					}
+				},
+				"site-footer": {
+					"blockTypes": [
+						"core/columns",
+						"core/group"
+					],
+					"border": {
+						"top": {
+							"color": "var:preset|color|neutral-100",
+							"style": "double",
+							"width": "3px"
+						}
+					},
+					"color": {
+						"background": "var:preset|color|neutral-50"
+					}
 				}
 			}
 		}
