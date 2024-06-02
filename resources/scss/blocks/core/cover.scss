@@ -84,14 +84,6 @@
 // -----------------------------------------------------------------------------
 
 ///
-/// Fade-in background gradient style.
-///
-.wp-block-cover.is-style-fade-in,
-.editor-styles-wrapper .wp-block-cover.is-style-fade-in {
-	//color: var(--wp--custom--fade-in--color, var(--wp--preset--color--black));
-}
-
-///
 /// The global border style adds the theme's/variation's global border and
 /// shadow styles to the Cover block.
 ///
@@ -102,11 +94,6 @@
 .wp-block-cover.is-style-global-border,
 .editor-styles-wrapper .wp-block-cover.is-style-global-border {
 	overflow:      hidden;
-//	border-width:  var(--wp--custom--global--border-width, 0);
-//	border-style:  var(--wp--custom--global--border-style, solid);
-//	border-color:  var(--wp--custom--global--border-color, transparent);
-//	border-radius: var(--wp--custom--global--border-radius, 0);
-//	box-shadow:    var(--wp--custom--global--shadow, none);
 }
 
 ///

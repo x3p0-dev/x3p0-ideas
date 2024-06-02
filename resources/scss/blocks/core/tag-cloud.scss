@@ -41,15 +41,6 @@
 // -----------------------------------------------------------------------------
 
 ///
-/// The flat style gives all of the tags the same font-size so that they are no
-/// longer in "cloud" format with weighted sizes.
-///
-.wp-block-tag-cloud.is-style-flat a {
-	// Inherit so that developers/users can customize.
-	//font-size: inherit !important;
-}
-
-///
 /// The icon style prefixes all of the tag links with an icon.
 ///
 /// Note: WordPress wraps the tag cloud in the admin with a `<div>` with the
@@ -61,8 +52,6 @@
 
 	a {
 		@include inline-icon.prefix(icon.get-url('tag'));
-//		font-size: inherit !important;
-//		font-weight: inherit !important;
 
 		&:has(.tag-link-count) {
 			text-decoration-line: none;
@@ -78,35 +67,7 @@
 	}
 }
 
-///
-/// The outline style is a core style. We're overwriting it to better match the
-/// theme. Much of this needed to be done via CSS rather than `theme.json`.
-///
-.wp-block-tag-cloud.is-style-outline {
-/*
-	a {
-		color:         var(--wp--custom--outline--color, inherit);
-		background:    var(--wp--custom--outline--background, transparent);
-		border-width:  var(--wp--custom--outline--border-width, 1px);
-		border-style:  var(--wp--custom--outline--border-style, solid);
-		border-color:  var(--wp--custom--outline--border-color, currentColor);
-		border-radius: var(--wp--custom--outline--border-radius, 0);
-
-		padding: var(--wp--preset--spacing--minus-2) var(--wp--preset--spacing--plus-1);
-		font-size: inherit !important;
-		font-weight: inherit !important;
-		line-height: var(--wp--custom--line-height--sm);
-
-		&:hover,
-		&:focus {
-			text-decoration: underline !important;
-		}
-	}
-	*/
-}
-
 // Inherit the outline font size from the parent element if assigned a preset.
 [class*=-font-size] .wp-block-tag-cloud.is-style-outline a {
-//	font-size: inherit !important;
 	line-height: inherit;
 }
