@@ -23,7 +23,7 @@
 // editor does not yet recognize and output the block style class when its
 // applied in the template.
 
-:where(.wp-block-post-content) {
+.wp-block-post-content {
 	@include prose.prose();
 }
 
