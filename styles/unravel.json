@@ -34,15 +34,6 @@
 						"fontFamily": "var:preset|font-family|primary"
 					}
 				}
-			},
-			"core/post-terms": {
-				"custom": {
-					"fill": {
-						"color": "var:preset|color|primary-950",
-						"background": "var:preset|color|primary-100",
-						"hoverBackground": "var:preset|color|primary-300"
-					}
-				}
 			}
 		},
 		"color": {
@@ -504,6 +495,30 @@
 						"bottom": "var:preset|spacing|plus-3",
 						"right": "var:preset|spacing|plus-3",
 						"left": "var:preset|spacing|plus-3"
+					}
+				}
+			},
+			"core/post-terms": {
+				"variations": {
+					"fill": {
+						"elements": {
+							"link": {
+								"color": {
+									"background": "var:preset|color|primary-100",
+									"text": "var:preset|color|primary-950"
+								},
+								":focus": {
+									"color": {
+										"background": "var:preset|color|primary-300"
+									}
+								},
+								":hover": {
+									"color": {
+										"background": "var:preset|color|primary-300"
+									}
+								}
+							}
+						}
 					}
 				}
 			},

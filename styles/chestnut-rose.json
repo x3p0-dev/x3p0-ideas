@@ -28,14 +28,6 @@
 						"lineHeight": "var:preset|line-height|xs"
 					}
 				}
-			},
-			"core/post-terms": {
-				"custom": {
-					"fill": {
-						"fontWeight": "300",
-						"hoverBackground": "var:preset|color|primary-500"
-					}
-				}
 			}
 		},
 		"color": {
@@ -336,6 +328,29 @@
 					}
 				},
 				"css": "& .wp-block-navigation-item:hover, .wp-block-navigation-item:focus {\n\tcolor: var(--wp--preset--color--700);\n\tbackground: var(--wp--preset--color--neutral-100);\n}"
+			},
+			"core/post-terms": {
+				"variations": {
+					"fill": {
+						"typography": {
+							"fontWeight": "300"
+						},
+						"elements": {
+							"link": {
+								":focus": {
+									"color": {
+										"background": "var:preset|color|primary-500"
+									}
+								},
+								":hover": {
+									"color": {
+										"background": "var:preset|color|primary-500"
+									}
+								}
+							}
+						}
+					}
+				}
 			},
 			"core/separator": {
 				"color": {

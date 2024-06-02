@@ -44,13 +44,6 @@
 					}
 				}
 			},
-			"core/post-terms": {
-				"custom": {
-					"fill": {
-						"hoverBackground": "var:preset|color|neutral-950"
-					}
-				}
-			},
 			"core/table": {
 				"custom": {
 					"stripes": {
@@ -377,6 +370,26 @@
 						"typography": {
 							"fontSize": "var:preset|font-size|lg",
 							"lineHeight": "var:custom|line-height|lg"
+						}
+					}
+				}
+			},
+			"core/post-terms": {
+				"variations": {
+					"fill": {
+						"elements": {
+							"link": {
+								":focus": {
+									"color": {
+										"background": "var:preset|color|neutral-950"
+									}
+								},
+								":hover": {
+									"color": {
+										"background": "var:preset|color|neutral-950"
+									}
+								}
+							}
 						}
 					}
 				}

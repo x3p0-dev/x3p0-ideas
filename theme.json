@@ -75,19 +75,6 @@
 					}
 				}
 			},
-			"core/post-terms": {
-				"custom": {
-					"fill": {
-						"fontSize": "var:preset|font-size|xs",
-						"lineHeight": "var:custom|line-height|xs",
-						"color": "var:preset|color|base",
-						"background": "var:preset|color|primary-700",
-						"borderRadius": "var:custom|global|border-radius",
-						"shadow": "var:preset|shadow|md",
-						"hoverBackground": "var:preset|color|primary-950"
-					}
-				}
-			},
 			"core/separator": {
 				"color": {
 					"customGradient": false
@@ -1485,7 +1472,7 @@
 					"radius": "var:custom|global|border-radius"
 				},
 				"color": {
-					"text": "var:preset|color|contrast",
+					"text": "red",
 					"background": "var:preset|color|base"
 				},
 				"shadow": "var:preset|shadow|md",
@@ -1629,6 +1616,55 @@
 					"fontFamily": "var:preset|font-family|mono",
 					"fontSize": "var:preset|font-size|sm",
 					"lineHeight": "var:custom|line-height|sm"
+				}
+			},
+			"core/post-terms": {
+				"variations": {
+					"fill": {
+						"typography": {
+							"fontSize": "var:preset|font-size|xs",
+							"lineHeight": "var:custom|line-height|xs"
+						},
+						"elements": {
+							"link": {
+								"border": {
+									"radius": "var:custom|global|border-radius"
+								},
+								"color": {
+									"text": "var:preset|color|base",
+									"background": "var:preset|color|primary-700"
+								},
+								"shadow": "var:preset|shadow|md",
+								"spacing": {
+									"padding": {
+										"top": "var:preset|spacing|minus-2",
+										"bottom": "var:preset|spacing|minus-2",
+										"left": "var:preset|spacing|base",
+										"right": "var:preset|spacing|base"
+									}
+								},
+								"typography": {
+									"textDecoration": "none"
+								},
+								":focus": {
+									"color": {
+										"background": "var:preset|color|primary-950"
+									},
+									"typography": {
+										"textDecoration": "underline"
+									}
+								},
+								":hover": {
+									"color": {
+										"background": "var:preset|color|primary-950"
+									},
+									"typography": {
+										"textDecoration": "underline"
+									}
+								}
+							}
+						}
+					}
 				}
 			},
 			"core/quote": {

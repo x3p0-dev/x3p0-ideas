@@ -45,14 +45,6 @@
 						"lineHeight": "var:preset|line-height|xs"
 					}
 				}
-			},
-			"core/post-terms": {
-				"custom": {
-					"fill": {
-						"hoverColor": "var:preset|color|base",
-						"hoverBackground": "var:preset|color|contrast"
-					}
-				}
 			}
 		},
 		"custom": {
@@ -632,6 +624,26 @@
 							},
 							"typography": {
 								"textDecoration": "underline"
+							}
+						}
+					}
+				},
+				"variations": {
+					"fill": {
+						"elements": {
+							"link": {
+								":focus": {
+									"color": {
+										"background": "var:preset|color|contrast",
+										"text": "var:preset|color|base"
+									}
+								},
+								":hover": {
+									"color": {
+										"background": "var:preset|color|contrast",
+										"text": "var:preset|color|base"
+									}
+								}
 							}
 						}
 					}
