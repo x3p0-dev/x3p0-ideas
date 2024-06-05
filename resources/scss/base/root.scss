@@ -18,7 +18,8 @@
 /// this when needed. This is particularly useful when you need to created a
 /// boxed layout that sits inside the overall body.
 ///
-.wp-site-blocks {
+.wp-site-blocks,
+.editor-styles-wrapper .wp-site-blocks {
 	background:    var(--wp--custom--site-blocks--background, transparent);
 	border-width:  var(--wp--custom--site-blocks--border-width, 0);
 	border-style:  var(--wp--custom--site-blocks--border-style, solid);
@@ -33,6 +34,7 @@
 // top level of the site other than wrapping the site in yet-another-div. This
 // gives us an easy to either wipe out or customize the gap via
 // `custom.siteBlocks.gap` in `theme.json`.
-.wp-site-blocks > * {
+.wp-site-blocks > *,
+.editor-styles-wrapper .wp-site-blocks > * {
 	margin-top: var(--wp--custom--site-blocks--gap, var(--wp--style--block-gap));
 }
