@@ -56,21 +56,4 @@
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-///
-/// The link style makes the button look more like a regular link.
-///
-/// @link      https://github.com/WordPress/gutenberg/pull/57908
-/// @wordpress 6.5
-///
-.wp-block-button.is-style-link > .wp-block-button__link.wp-element-button {
-	background: transparent;
-	color: var( --wp--preset--color--primary-700 );
-	border: none;
-	box-shadow: none;
-	outline: none;
-
-	&:where( :not( .has-background ) ) {
-		padding: 0;
-		border-radius: 0;
-	}
-}
+// No variations...
