@@ -733,12 +733,11 @@
 		},
 		"spacing": {
 			"blockGap": true,
-			"customSpacingSize": true,
+			"customSpacingSize": false,
+			"defaultSpacingSizes": false,
 			"margin": true,
 			"padding": true,
-			"spacingScale": {
-				"steps": 0
-			},
+			"spacingScale": {},
 			"spacingSizes": [
 				{
 					"name": "Fluid Scale -3",
@@ -814,51 +813,6 @@
 					"name": "Fixed: 1 Pixel",
 					"size": "1px",
 					"slug": "px"
-				},
-				{
-					"name": "Fixed Scale -3",
-					"size": "0.35rem",
-					"slug": "fixed-minus-3"
-				},
-				{
-					"name": "Fixed Scale -2",
-					"size": "0.53rem",
-					"slug": "fixed-minus-2"
-				},
-				{
-					"name": "Fixed Scale -1",
-					"size": "0.79rem",
-					"slug": "fixed-minus-1"
-				},
-				{
-					"name": "Fixed Scale +/- 0",
-					"size": "1.19rem",
-					"slug": "fixed-base"
-				},
-				{
-					"name": "Fixed Scale +1",
-					"size": "1.48rem",
-					"slug": "fixed-plus-1"
-				},
-				{
-					"name": "Fixed Scale +2",
-					"size": "1.86rem",
-					"slug": "fixed-plus-2"
-				},
-				{
-					"name": "Fixed Scale +3",
-					"size": "2.32rem",
-					"slug": "fixed-plus-3"
-				},
-				{
-					"name": "Fixed Scale +4",
-					"size": "3.62rem",
-					"slug": "fixed-plus-4"
-				},
-				{
-					"name": "Fixed Scale +5",
-					"size": "4.53rem",
-					"slug": "fixed-plus-5"
 				}
 			],
 			"units": [

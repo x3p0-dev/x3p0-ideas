@@ -89,6 +89,10 @@ class Editor implements Bootable
 		$settings['imageDefaultSize']   = 'x3p0-16x9-lg';
 		$settings['fontLibraryEnabled'] = false;
 
+		// Ensures default spacing sizes are disabled.
+		// @link https://github.com/WordPress/gutenberg/pull/62199
+		$settings['__experimentalFeatures']['spacing']['defaultSpacingSizes'] = false;
+
 		return $settings;
 	}
 }
