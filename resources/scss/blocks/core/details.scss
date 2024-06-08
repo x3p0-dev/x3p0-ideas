@@ -22,6 +22,7 @@
 ///
 .wp-block-details {
 	transition: all 0.5s ease-in-out;
+	overflow: hidden; // <summary> background can bleed over rounded corners.
 
 	// Pad the bottom when details element is open.
 	&[open] {
