@@ -46,16 +46,7 @@ hr.wp-block-separator:is(
 	.is-style-dotted,
 	.is-style-double
 ) {
-	border-width: var(--wp--preset--spacing--minus-3) 0 0;
 	background-color: transparent !important;
-}
-
-hr.wp-block-separator.is-style-dashed { border-style: dashed; }
-hr.wp-block-separator.is-style-dotted { border-style: dotted; }
-
-hr.wp-block-separator.is-style-double {
-	border-width: var(--wp--preset--spacing--minus-2) 0 0;
-	border-style: double;
 }
 
 ///

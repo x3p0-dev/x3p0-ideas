@@ -1702,6 +1702,30 @@
 					"text": "var:preset|color|contrast"
 				},
 				"variations": {
+					"dashed": {
+						"border": {
+							"top": {
+								"style": "dashed",
+								"width": "var:preset|spacing|minus-3"
+							}
+						}
+					},
+					"dotted": {
+						"border": {
+							"top": {
+								"style": "dotted",
+								"width": "var:preset|spacing|minus-3"
+							}
+						}
+					},
+					"double": {
+						"border": {
+							"top": {
+								"style": "double",
+								"width": "var:preset|spacing|minus-2"
+							}
+						}
+					},
 					"wide": {
 						"border": {
 							"top": {
