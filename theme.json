@@ -1771,8 +1771,14 @@
 				"spacing": {
 					"blockGap": "var:preset|spacing|plus-1"
 				},
-				"css": ".is-style-logos-only .wp-block-social-link {\n\tbox-shadow: none;\n}",
 				"variations": {
+					"logos-only": {
+						"blocks": {
+							"core/social-link": {
+								"shadow": "none"
+							}
+						}
+					},
 					"outline": {
 						"blocks": {
 							"core/social-link": {
