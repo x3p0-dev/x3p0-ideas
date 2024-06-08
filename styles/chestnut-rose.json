@@ -409,9 +409,6 @@
 					"outline": {
 						"blocks": {
 							"core/social-link": {
-								"color": {
-									"text": "var:preset|color|neutral-700"
-								},
 								"border": {
 									"color": "var:preset|color|neutral-100",
 									"width": "1px"
