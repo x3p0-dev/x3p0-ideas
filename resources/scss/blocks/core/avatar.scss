@@ -25,10 +25,14 @@
 /// wrapper via the Selectors API in PHP so that links can inherit the radius
 /// from the wrapper.
 ///
+/// Gutenberg 18.5 (WP 6.6 cycle) overwrote this with its global styles specificity
+/// changes (addition of `:root`), so we needed to add the `!important`.
+/// @link https://github.com/WordPress/gutenberg/pull/61638
+///
 .wp-block-avatar > *,
 .wp-block-avatar__image,
 .wp-block-avatar__link {
-	border-radius: inherit;
+	border-radius: inherit !important;
 }
 
 // Ensures the `border-radius` applies.
