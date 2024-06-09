@@ -5,16 +5,10 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
-@use './list';
-
 ///
 /// Default `<ul>` or `<ol>` list styles
 ///
 @mixin prose() {
-	// Include the base list style.
-	:where(ul, ol) {
-		@include list.flow();
-	}
 
 	// Loosens the spacing above headings tightens the spacing below.
 	> :is(h1, h2, h3, h4, h5, h6) {

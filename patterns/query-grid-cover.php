@@ -18,7 +18,7 @@ defined('ABSPATH') || exit;
 ?>
 <!-- wp:query {
 	"metadata":{"name":"<?= esc_attr__('Posts Query', 'x3p0-ideas') ?>"},
-	"queryId":0,
+	"queryId":1,
 	"query":{
 		"perPage":6,
 		"pages":0,
@@ -30,21 +30,25 @@ defined('ABSPATH') || exit;
 		"search":"",
 		"exclude":[],
 		"sticky":"",
-		"inherit":true
+		"inherit":true,
+		"taxQuery":null,
+		"parents":[]
 	},
-	"align":"full",
+	"className":"alignfull",
+	"layout":{"type":"constrained"},
 	"style":{
 		"spacing":{
-			"blockGap":"0",
 			"padding":{
+				"right":"0",
+				"left":"0",
 				"top":"var:preset|spacing|px",
 				"bottom":"var:preset|spacing|px"
-			}
+			},
+			"blockGap":"0"
 		}
-	},
-	"layout":{"type":"constrained"}
+	}
 } -->
-<div class="wp-block-query alignfull" style="padding-top:var(--wp--preset--spacing--px);padding-bottom:var(--wp--preset--spacing--px)">
+<div class="wp-block-query alignfull" style="padding-top:var(--wp--preset--spacing--px);padding-right:0;padding-bottom:var(--wp--preset--spacing--px);padding-left:0">
 
 	<!-- wp:post-template {
 		"align":"full",

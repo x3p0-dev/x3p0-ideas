@@ -5,6 +5,7 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
+@use '../../tools/list';
 @use '../../tools/prose';
 
 // -----------------------------------------------------------------------------
@@ -25,6 +26,12 @@
 
 .wp-block-post-content {
 	@include prose.prose();
+}
+
+:where(.wp-block-post-content) {
+	:where(ul, ol) {
+		@include list.flow();
+	}
 }
 
 // -----------------------------------------------------------------------------

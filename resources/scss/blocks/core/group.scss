@@ -5,6 +5,7 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
+@use '../../tools/list';
 @use '../../tools/prose';
 
 // -----------------------------------------------------------------------------
@@ -74,6 +75,13 @@
 .editor-styles-wrapper .wp-block-group.is-style-message {
 	overflow: hidden;
 	@include prose.prose();
+}
+
+:where(.wp-block-group.is-style-message),
+:where(.editor-styles-wrapper .wp-block-group.is-style-message) {
+	:where(ul, ol) {
+		@include list.flow();
+	}
 }
 
 // -----------------------------------------------------------------------------
