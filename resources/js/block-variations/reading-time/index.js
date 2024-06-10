@@ -33,8 +33,9 @@ export default {
 			placeholder: __('Reading Time', 'x3p0-ideas')
 		},
 		example: {},
-		isActive: (blockAttributes) =>
-			'x3p0/post' === blockAttributes?.metadata?.bindings?.content?.source
-			&& 'readingTime' === blockAttributes?.metadata?.bindings?.content?.args?.key
+		isActive: [
+			'metadata.bindings.content.source',
+			'metadata.bindings.content.args.key'
+		]
 	}
 };

@@ -32,8 +32,9 @@ export default {
 			placeholder: sprintf(__('Page %1$s / %2$s:', 'x3p0-ideas'), 3, 7),
 			className: "pagination-label"
 		},
-		isActive: (blockAttributes) =>
-			'x3p0/theme' === blockAttributes?.metadata?.bindings?.content?.source
-			&& 'paginationLabel' === blockAttributes?.metadata?.bindings?.content?.args?.key
+		isActive: [
+			'metadata.bindings.content.source',
+			'metadata.bindings.content.args.key'
+		]
 	}
 };

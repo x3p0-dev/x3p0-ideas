@@ -33,8 +33,9 @@ export default {
 			},
 			placeholder: __('In reply to Comment Author', 'x3p0-ideas')
 		},
-		isActive: (blockAttributes) =>
-			'x3p0/theme' === blockAttributes?.metadata?.bindings?.content?.source
-			&& 'commentParentLink' === blockAttributes?.metadata?.bindings?.content?.args?.key
+		isActive: [
+			'metadata.bindings.content.source',
+			'metadata.bindings.content.args.key'
+		]
 	}
 };

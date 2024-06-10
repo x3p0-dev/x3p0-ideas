@@ -36,8 +36,9 @@ export default {
 				new Date().getFullYear()
 			)
 		},
-		isActive: (blockAttributes) =>
-			'x3p0/site' === blockAttributes?.metadata?.bindings?.content?.source
-			&& 'copyright' === blockAttributes?.metadata?.bindings?.content?.args?.key
+		isActive: [
+			'metadata.bindings.content.source',
+			'metadata.bindings.content.args.key'
+		]
 	}
 };
