@@ -33,10 +33,18 @@ defined('ABSPATH') || exit;
 		"inherit":true
 	},
 	"align":"full",
-	"style":{"spacing":{"blockGap":"0"}},
+	"style":{
+		"spacing":{
+			"blockGap":"0",
+			"padding":{
+				"right":"0",
+				"left":"0"
+			}
+		}
+	},
 	"layout":{"type":"constrained"}
 } -->
-<div class="wp-block-query alignfull">
+<div class="wp-block-query alignfull" style="padding-right:0;padding-left:0">
 
 	<!-- wp:post-template {
 		"align":"full",
