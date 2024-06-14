@@ -1,5 +1,5 @@
 {
-	"$schema": "https://github.com/WordPress/gutenberg/raw/trunk/schemas/json/theme.json",
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
 	"version": 3,
 	"settings": {
 		"background": {
@@ -740,72 +740,72 @@
 			"spacingScale": {},
 			"spacingSizes": [
 				{
-					"name": "Fluid Scale -3",
+					"name": "Fluid: -3",
 					"size": "clamp(0.31rem, 0.11cqi + 0.28rem, 0.35rem)",
 					"slug": "minus-3"
 				},
 				{
-					"name": "Fluid Scale -2",
+					"name": "Fluid: -2",
 					"size": "clamp(0.47rem, 0.16cqi + 0.42rem, 0.53rem)",
 					"slug": "minus-2"
 				},
 				{
-					"name": "Fluid Scale -1",
+					"name": "Fluid: -1",
 					"size": "clamp(0.71rem, 0.25cqi + 0.63rem, 0.79rem)",
 					"slug": "minus-1"
 				},
 				{
-					"name": "Fluid Scale +/- 0 (Base)",
+					"name": "Fluid: Base",
 					"size": "clamp(1.06rem, 0.37cqi + 0.95rem, 1.19rem)",
 					"slug": "base"
 				},
 				{
-					"name": "Fluid Scale +1",
+					"name": "Fluid: +1",
 					"size": "clamp(1.20rem, 0.85cqi + 0.94rem, 1.48rem)",
 					"slug": "plus-1"
 				},
 				{
-					"name": "Fluid Scale +2",
+					"name": "Fluid: +2",
 					"size": "clamp(1.34rem,  1.5cqi + 0.89rem, 1.86rem)",
 					"slug": "plus-2"
 				},
 				{
-					"name": "Fluid Scale +3 (Global)",
+					"name": "Fluid: +3 (Global)",
 					"size": "clamp(1.86rem,  3.7cqi + -0.05rem, 2.32rem)",
 					"slug": "plus-3"
 				},
 				{
-					"name": "Fluid Scale +4",
+					"name": "Fluid: +4",
 					"size": "clamp(1.86rem, 7.53cqi + -1.2rem, 3.62rem)",
 					"slug": "plus-4"
 				},
 				{
-					"name": "Fluid Scale +5",
+					"name": "Fluid: +5",
 					"size": "clamp(1.86rem, 10.2cqi + -2rem, 4.53rem)",
 					"slug": "plus-5"
 				},
 				{
-					"name": "Fluid Scale +6",
+					"name": "Fluid: +6",
 					"size": "clamp(1.86rem, 13.53cqi + -3rem, 5.66rem)",
 					"slug": "plus-6"
 				},
 				{
-					"name": "Fluid Scale +7",
+					"name": "Fluid: +7",
 					"size": "clamp(1.86rem, 17.69cqi + -4.25rem, 7.08rem)",
 					"slug": "plus-7"
 				},
 				{
-					"name": "Fluid Scale +8",
+					"name": "Fluid: +8",
 					"size": "clamp(1.86rem, 22.9cqi + -5.81rem, 8.85rem)",
 					"slug": "plus-8"
 				},
 				{
-					"name": "Fluid Scale +9",
+					"name": "Fluid: +9",
 					"size": "clamp(1.86rem, 29.4cqi + -7.76rem, 11.06rem)",
 					"slug": "plus-9"
 				},
 				{
-					"name": "Fluid Scale +10",
+					"name": "Fluid: +10",
 					"size": "clamp(1.86rem, 37.53cqi + -10.2rem, 13.82rem)",
 					"slug": "plus-10"
 				},
