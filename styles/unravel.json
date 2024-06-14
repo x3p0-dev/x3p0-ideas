@@ -580,6 +580,27 @@
 						"style": "var:custom|global|border-style",
 						"width": "var:custom|global|border-width"
 					}
+				},
+				"section-1": {
+					"blockTypes": [ "core/group" ],
+					"color": {
+						"background": "var:preset|color|primary-50",
+						"text": "var:preset|color|primary-900"
+					},
+					"elements": {
+						"link": {
+							"color": {
+								"text": "var:preset|color|primary-500"
+							}
+						}
+					}
+				},
+				"section-2": {
+					"blockTypes": [ "core/group" ],
+					"color": {
+						"background": "var:preset|color|neutral-50",
+						"text": { "ref": "styles.color.contrast" }
+					}
 				}
 			}
 		}

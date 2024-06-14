@@ -225,3 +225,25 @@ sub {
 		outline: none;
 	}
 }
+
+
+// -----------------------------------------------------------------------------
+// Section styles for elements that WordPress doesn't support styling via
+// `theme.json`. For these, we're mostly inheriting the color styles from the
+// current color.
+// -----------------------------------------------------------------------------
+
+:is(
+	.is-style-section-1,
+	.is-style-section-2,
+	.is-style-section-3
+) {
+	:where(del, s, ins, kbd) {
+		color: currentColor;
+		text-decoration-color: currentColor;
+	}
+	kbd {
+		border-color: currentColor;
+		background: transparent;
+	}
+}

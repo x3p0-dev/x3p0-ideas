@@ -508,9 +508,6 @@
 				},
 				"card": {
 					"blockTypes": [ "core/group" ],
-					"color": {
-						"background": "transparent"
-					},
 					"shadow": "var:preset|shadow|md"
 				},
 				"comment-meta": {
@@ -607,6 +604,12 @@
 								}
 							}
 						}
+					}
+				},
+				"section-1": {
+					"blockTypes": [ "core/group" ],
+					"color": {
+						"background": "var:preset|color|primary-900"
 					}
 				},
 				"site-footer": {

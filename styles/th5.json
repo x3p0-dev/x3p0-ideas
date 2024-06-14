@@ -490,12 +490,6 @@
 						}
 					}
 				},
-				"card": {
-					"blockTypes": [ "core/group" ],
-					"color": {
-						"background": "linear-gradient(0deg, transparent 0%, var(--wp--preset--color--neutral-50) 100%)"
-					}
-				},
 				"comment-meta": {
 					"blockTypes": [ "core/group" ],
 					"typography": {
