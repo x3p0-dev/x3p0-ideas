@@ -1,0 +1,55 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
+	"version": 3,
+	"title": "Section 1",
+	"blockTypes": [ "core/group" ],
+	"styles": {
+		"color": {
+			"background": "var:preset|color|primary-700",
+			"text": "var:preset|color|white"
+		},
+		"spacing": {
+			"padding": {
+				"top": "var:preset|spacing|plus-4",
+				"bottom": "var:preset|spacing|plus-4",
+				"left": "var:preset|spacing|plus-3",
+				"right": "var:preset|spacing|plus-3"
+			}
+		},
+		"elements": {
+			"caption": {
+				"color": {
+					"text": "currentColor"
+				}
+			},
+			"cite": {
+				"color": {
+					"text": "currentColor"
+				}
+			},
+			"link": {
+				"color": {
+					"text": "var:preset|color|primary-50"
+				},
+				":focus": {
+					"color": {
+						"text": "currentColor"
+					}
+				},
+				":hover": {
+					"color": {
+						"text": "currentColor"
+					}
+				}
+			}
+		},
+		"blocks": {
+			"core/button": {
+				"color": {
+					"background": "var:preset|color|white",
+					"text": "var:preset|color|primary-700"
+				}
+			}
+		}
+	}
+}

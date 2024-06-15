@@ -1,0 +1,29 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
+	"version": 3,
+	"title": "Comment Meta",
+	"blockTypes": [ "core/group" ],
+	"styles": {
+		"typography": {
+			"fontSize": "var:preset|font-size|sm",
+			"lineHeight": "var:custom|line-height|sm"
+		},
+		"elements": {
+			"link": {
+				"typography": {
+					"textDecoration": "none"
+				},
+				":focus": {
+					"typography": {
+						"textDecoration": "underline"
+					}
+				},
+				":hover": {
+					"typography": {
+						"textDecoration": "underline"
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
+	"version": 3,
+	"title": "Site Footer",
+	"blockTypes": [
+		"core/columns",
+		"core/group"
+	],
+	"styles": {
+		"spacing": {
+			"padding": {
+				"top": "var:preset|spacing|plus-6",
+				"bottom": "var:preset|spacing|plus-6",
+				"left": "var:preset|spacing|plus-3",
+				"right": "var:preset|spacing|plus-3"
+			}
+		}
+	}
+}

@@ -14,12 +14,12 @@
 *.map
 .DS_Store
 
-/styles/*.json
-!/styles/a-little-bit-bookish.json
-!/styles/boundaries.json
-!/styles/chestnut-rose.json
-!/styles/extant.json
-!/styles/saga.json
-!/styles/th5.json
-!/styles/thunderbird.json
-!/styles/unravel.json
+/styles/global-*.json
+!/styles/global-a-little-bit-bookish.json
+!/styles/global-boundaries.json
+!/styles/global-chestnut-rose.json
+!/styles/global-extant.json
+!/styles/global-saga.json
+!/styles/global-th5.json
+!/styles/global-thunderbird.json
+!/styles/global-unravel.json

@@ -96,7 +96,6 @@ class Styles implements Bootable
 			'core/columns' => [
 				'grid-auto'     => __('Grid: Auto',           'x3p0-ideas'),
 				'reverse-stack' => __('Reverse Mobile Stack', 'x3p0-ideas'),
-				'site-footer'   => __('Site Footer',          'x3p0-ideas'),
 			],
 			'core/comment-author-name' => [
 				'icon' => __('Icon', 'x3p0-ideas')
@@ -128,20 +127,6 @@ class Styles implements Bootable
 			'core/gallery' => [
 				'classic' => __('Classic', 'x3p0-ideas'),
 				'reverse' => __('Reverse', 'x3p0-ideas')
-			],
-			'core/group' => [
-				'archive-header'    => __('Archive Header', 'x3p0-ideas'),
-				'box'               => __('Box',            'x3p0-ideas'),
-				'card'              => __('Card',           'x3p0-ideas'),
-				'comment-meta'      => __('Comment Meta',   'x3p0-ideas'),
-				'message'           => __('Message',        'x3p0-ideas'),
-				'post-byline'       => __('Post Byline',    'x3p0-ideas'),
-				'post-meta'         => __('Post Meta',      'x3p0-ideas'),
-				'section-1'         => __('Section 1',      'x3p0-ideas'),
-				'section-2'         => __('Section 2',      'x3p0-ideas'),
-				'section'           => __('Section 3',      'x3p0-ideas'),
-				'site-footer'       => __('Site Footer',    'x3p0-ideas'),
-				'site-header'       => __('Site Header',    'x3p0-ideas')
 			],
 			'core/heading' => [
 				'knockout'          => __('Knockout',      'x3p0-ideas'),

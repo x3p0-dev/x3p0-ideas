@@ -1,0 +1,16 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
+	"version": 3,
+	"title": "Archive Header",
+	"blockTypes": [ "core/group" ],
+	"styles": {
+		"spacing": {
+			"padding": {
+				"top": "var:preset|spacing|plus-3",
+				"bottom": "var:preset|spacing|plus-3",
+				"left": "var:preset|spacing|plus-3",
+				"right": "var:preset|spacing|plus-3"
+			}
+		}
+	}
+}

@@ -1,0 +1,47 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
+	"version": 3,
+	"title": "Card",
+	"blockTypes": [ "core/group" ],
+	"styles": {
+		"border": {
+			"color": "var:custom|global|border-color",
+			"radius": "var:custom|global|border-radius",
+			"style": "var:custom|global|border-style",
+			"width": "var:custom|global|border-width"
+		},
+		"color": {
+			"background": { "ref": "styles.color.background" },
+			"text": { "ref": "styles.color.text" }
+		},
+		"shadow": "var:custom|global|shadow",
+		"spacing": {
+			"padding": {
+				"top": "var:preset|spacing|plus-3",
+				"bottom": "var:preset|spacing|plus-3",
+				"left": "var:preset|spacing|plus-3",
+				"right": "var:preset|spacing|plus-3"
+			}
+		},
+		"elements": {
+			"button": {
+				"color": {
+					"background": "var:custom|global|fill|background",
+					"text": "var:custom|global|fill|color"
+				},
+				":focus": {
+					"color": {
+						"background": "var:custom|global|fill|hover-background",
+						"text": "var:custom|global|fill|hover-color"
+					}
+				},
+				":hover": {
+					"color": {
+						"background": "var:custom|global|fill|hover-background",
+						"text": "var:custom|global|fill|hover-color"
+					}
+				}
+			}
+		}
+	}
+}
