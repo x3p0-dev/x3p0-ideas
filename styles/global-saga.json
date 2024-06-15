@@ -43,7 +43,11 @@
 			"global": {
 				"borderColor": "var:preset|color|neutral-100",
 				"borderWidth": "1px",
-				"borderRadius": "0"
+				"borderRadius": "0",
+				"fill": {
+					"background": "var:preset|color|primary-500",
+					"hoverBackground": "var:preset|color|primary-700"
+				}
 			}
 		},
 		"color": {
@@ -193,21 +197,6 @@
 	},
 	"styles": {
 		"elements": {
-			"button": {
-				"color": {
-					"background": "var:preset|color|primary-500"
-				},
-				":focus": {
-					"color": {
-						"background": "var:preset|color|primary-700"
-					}
-				},
-				":hover": {
-					"color": {
-						"background": "var:preset|color|primary-700"
-					}
-				}
-			},
 			"heading": {
 				"typography": {
 					"fontWeight": "700"

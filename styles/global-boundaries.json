@@ -36,7 +36,11 @@
 				"borderColor": "var:preset|color|neutral-300",
 				"borderStyle": "double",
 				"borderWidth": "4px",
-				"borderRadius": "0"
+				"borderRadius": "0",
+				"fill": {
+					"hoverBackground": "var:preset|color|contrast",
+					"hoverColor": "var:preset|color|base"
+				}
 			},
 			"elements": {
 				"input": {
@@ -214,20 +218,6 @@
 	},
 	"styles": {
 		"elements": {
-			"button": {
-				":focus": {
-					"color": {
-						"background": "var:preset|color|contrast",
-						"text": "var:preset|color|base"
-					}
-				},
-				":hover": {
-					"color": {
-						"background": "var:preset|color|contrast",
-						"text": "var:preset|color|base"
-					}
-				}
-			},
 			"heading": {
 				"typography": {
 					"fontWeight": "700",

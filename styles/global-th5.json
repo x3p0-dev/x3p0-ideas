@@ -59,7 +59,12 @@
 			"global": {
 				"borderColor": "var:preset|color|neutral-100",
 				"borderWidth": "1px",
-				"borderRadius": "0"
+				"borderRadius": "0",
+				"fill": {
+					"background": "var:preset|color|secondary-500",
+					"color": "var:preset|color|white",
+					"hoverBackground": "var:preset|color|secondary-700"
+				}
 			}
 		},
 		"color": {
@@ -265,23 +270,9 @@
 				"border": {
 					"width": "1px"
 				},
-				"color": {
-					"background": "var:preset|color|secondary-500",
-					"text": "var:preset|color|white"
-				},
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",
 					"fontWeight": "500"
-				},
-				":focus": {
-					"color": {
-						"background": "var:preset|color|secondary-700"
-					}
-				},
-				":hover": {
-					"color": {
-						"background": "var:preset|color|secondary-700"
-					}
 				}
 			},
 			"caption": {
