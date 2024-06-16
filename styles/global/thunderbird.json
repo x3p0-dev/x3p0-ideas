@@ -58,6 +58,9 @@
 				"borderRadius": "8px",
 				"fill": {
 					"hoverBackground": "var:preset|color|neutral-950"
+				},
+				"outline": {
+					"borderWidth": "1px"
 				}
 			},
 			"elements": {
@@ -414,20 +417,6 @@
 					"cite": {
 						"typography": {
 							"fontStyle": "normal"
-						}
-					}
-				}
-			},
-			"core/social-links": {
-				"variations": {
-					"outline": {
-						"blocks": {
-							"core/social-link": {
-								"border": {
-									"color": "var:preset|color|neutral-300",
-									"width": "1px"
-								}
-							}
 						}
 					}
 				}

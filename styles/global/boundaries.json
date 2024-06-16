@@ -40,6 +40,9 @@
 				"fill": {
 					"hoverBackground": "var:preset|color|contrast",
 					"hoverColor": "var:preset|color|base"
+				},
+				"outline": {
+					"borderWidth": "1px"
 				}
 			},
 			"elements": {
@@ -428,20 +431,6 @@
 						},
 						"typography": {
 							"fontStyle": "normal"
-						}
-					}
-				}
-			},
-			"core/social-links": {
-				"variations": {
-					"outline": {
-						"blocks": {
-							"core/social-link": {
-								"border": {
-									"color": "var:custom|global|border-color",
-									"width": "1px"
-								}
-							}
 						}
 					}
 				}

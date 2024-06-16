@@ -64,6 +64,9 @@
 					"background": "var:preset|color|secondary-500",
 					"color": "var:preset|color|white",
 					"hoverBackground": "var:preset|color|secondary-700"
+				},
+				"outline": {
+					"borderWidth": "1px"
 				}
 			}
 		},
@@ -433,19 +436,6 @@
 			"core/social-link": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary"
-				}
-			},
-			"core/social-links": {
-				"variations": {
-					"outline": {
-						"blocks": {
-							"core/social-link": {
-								"border": {
-									"width": "1px"
-								}
-							}
-						}
-					}
 				}
 			},
 			"core/term-description": {

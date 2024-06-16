@@ -191,6 +191,9 @@
 					"color": "var:preset|color|primary-950",
 					"hoverBackground": "var:preset|color|primary-300",
 					"hoverColor": "var:preset|color|primary-950"
+				},
+				"outline": {
+					"borderWidth": "3px"
 				}
 			},
 			"lightbox": {
@@ -351,15 +354,6 @@
 				},
 				"css": "& img {\n\tbox-shadow: none;\n}"
 			},
-			"core/button": {
-				"variations": {
-					"outline": {
-						"border": {
-							"width": "3px"
-						}
-					}
-				}
-			},
 			"core/cover": {
 				"variations": {
 					"fade-in": {
@@ -497,32 +491,6 @@
 			},
 			"core/social-link": {
 				"shadow": "var:preset|shadow|md"
-			},
-			"core/social-links": {
-				"variations": {
-					"outline": {
-						"blocks": {
-							"core/social-link": {
-								"border": {
-									"width": "3px"
-								}
-							}
-						}
-					}
-				}
-			},
-			"core/tag-cloud": {
-				"variations": {
-					"outline": {
-						"elements": {
-							"link": {
-								"border": {
-									"width": "3px"
-								}
-							}
-						}
-					}
-				}
 			},
 			"core/verse": {
 				"typography": {

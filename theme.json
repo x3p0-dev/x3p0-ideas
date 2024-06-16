@@ -543,6 +543,11 @@
 					"color": "var:preset|color|base",
 					"hoverBackground": "var:preset|color|primary-950",
 					"hoverColor": "var:preset|color|base"
+				},
+				"outline": {
+					"borderColor": "currentColor",
+					"borderStyle": "var:custom|global|border-style",
+					"borderWidth": "2px"
 				}
 			},
 			"elements": {
@@ -1174,8 +1179,9 @@
 							"background": "transparent"
 						},
 						"border": {
-							"color": "currentColor",
-							"width": { "ref": "styles.elements.button.border.width" }
+							"color": "var:custom|global|outline|border-color",
+							"style": "var:custom|global|outline|border-style",
+							"width": "var:custom|global|outline|border-width"
 						},
 						"outline": {
 							"color": "currentColor"
@@ -1793,9 +1799,9 @@
 						"blocks": {
 							"core/social-link": {
 								"border": {
-									"color": "currentColor",
-									"style": "solid",
-									"width": "2px",
+									"color": "var:custom|global|outline|border-color",
+									"style": "var:custom|global|outline|border-style",
+									"width": "var:custom|global|outline|border-width",
 									"radius": "var:custom|global|border-radius"
 								},
 								"color": {
@@ -1844,9 +1850,9 @@
 						"elements": {
 							"link": {
 								"border": {
-									"color": "currentColor",
-									"style": "solid",
-									"width": "2px",
+									"color": "var:custom|global|outline|border-color",
+									"style": "var:custom|global|outline|border-style",
+									"width": "var:custom|global|outline|border-width",
 									"radius": "var:custom|global|border-radius"
 								},
 								"color": {

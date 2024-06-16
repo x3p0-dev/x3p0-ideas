@@ -36,8 +36,8 @@
 					"cardFooter": {
 						"background": "none",
 						"borderColor": "var:custom|global|border-color",
-						"borderWidth": "3px 0 0",
-						"borderStyle": "double"
+						"borderWidth": "var(--wp--custom--global--border-width) 0 0",
+						"borderStyle": "var:custom|global|border-style"
 					}
 				}
 			},
@@ -65,6 +65,9 @@
 				"fill": {
 					"background": "var:preset|color|primary-500",
 					"hoverBackground": "var:preset|color|primary-700"
+				},
+				"outline": {
+					"borderWidth": "1px"
 				}
 			}
 		},
