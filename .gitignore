@@ -14,13 +14,16 @@
 *.map
 .DS_Store
 
-/styles/global-*.json
-!/styles/global-a-little-bit-bookish.json
-!/styles/global-boundaries.json
-!/styles/global-chestnut-rose.json
-!/styles/global-extant.json
-!/styles/global-memories.json
-!/styles/global-saga.json
-!/styles/global-th5.json
-!/styles/global-thunderbird.json
-!/styles/global-unravel.json
+/styles/color/*.json
+/styles/typography/*.json
+
+/styles/global/*.json
+!/styles/global/a-little-bit-bookish.json
+!/styles/global/boundaries.json
+!/styles/global/chestnut-rose.json
+!/styles/global/extant.json
+!/styles/global/memories.json
+!/styles/global/saga.json
+!/styles/global/th5.json
+!/styles/global/thunderbird.json
+!/styles/global/unravel.json

@@ -124,7 +124,7 @@ class GlobalStyleVariation implements Bootable
 
 		$file = 'default' === $this->variation
 			? 'theme.json'
-			: "styles/global-{$this->variation}.json";
+			: "styles/global/{$this->variation}.json";
 
 		return get_theme_file_path($file);
 	}
