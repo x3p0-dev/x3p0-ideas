@@ -565,7 +565,7 @@
 				"input": {
 					"color": "var:preset|color|contrast",
 					"background": "var:preset|color|neutral-50",
-					"borderColor": "var:preset|color|neutral-100",
+					"borderColor": "var:custom|global|border-color",
 					"borderRadius": "var:custom|global|border-radius",
 					"shadow": "var:custom|global|shadow",
 					"placeholderColor": "var:preset|color|neutral-500",
