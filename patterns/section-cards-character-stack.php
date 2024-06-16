@@ -26,14 +26,14 @@ defined('ABSPATH') || exit;
 			}
 		}
 	},
-	"className":"is-style-section",
+	"className":"is-style-section-3",
 	"layout":{
 		"type":"constrained",
 		"contentSize":"40rem",
 		"wideSize":"80rem"
 	}
 } -->
-<section class="wp-block-group alignfull is-style-section" style="padding-right:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
+<section class="wp-block-group alignfull is-style-section-3" style="padding-right:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
 
 	<!-- wp:pattern {"slug":"x3p0-ideas/section-header"} /-->
 

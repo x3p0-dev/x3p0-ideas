@@ -488,7 +488,7 @@
 						"text": "var:preset|color|neutral-500"
 					}
 				},
-				"section": {
+				"section-3": {
 					"blockTypes": [ "core/group" ],
 					"color": {
 						"background": "var:preset|gradient|270-deg-white-transparent"

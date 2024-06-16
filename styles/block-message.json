@@ -1,7 +1,7 @@
 {
 	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
 	"version": 3,
-	"title": "Section",
+	"title": "Message",
 	"blockTypes": [ "core/group" ],
 	"styles": {
 		"border": {

@@ -19,10 +19,10 @@ defined('ABSPATH') || exit;
 	"tagName":"section",
 	"metadata":{"name":"<?= esc_attr__('Section', 'x3p0-ideas') ?>"},
 	"align":"full",
-	"className":"is-style-section",
+	"className":"is-style-section-3",
 	"layout":{"type":"constrained"}
 } -->
-<section class="wp-block-group alignfull is-style-section">
+<section class="wp-block-group alignfull is-style-section-3">
 
 	<!-- wp:pattern {"slug":"x3p0-ideas/section-header"} /-->
 

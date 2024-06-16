@@ -499,7 +499,7 @@
 						"fontFamily": "var:preset|font-family|primary"
 					}
 				},
-				"section": {
+				"section-3": {
 					"blockTypes": [ "core/group" ],
 					"color": {
 						"background": "var:preset|color|neutral-100"

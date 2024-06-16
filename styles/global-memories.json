@@ -537,7 +537,7 @@
 						"background": "var:preset|color|primary-700"
 					}
 				},
-				"section": {
+				"section-3": {
 					"blockTypes": [ "core/group" ],
 					"color": {
 						"background": "transparent"
