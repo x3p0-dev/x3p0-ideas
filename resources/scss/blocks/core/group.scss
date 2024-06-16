@@ -68,22 +68,6 @@
 	}
 }
 
-///
-/// The message style is intended for notes, warnings, notices, etc.
-///
-.wp-block-group.is-style-message,
-.editor-styles-wrapper .wp-block-group.is-style-message {
-	overflow: hidden;
-	@include prose.prose();
-}
-
-:where(.wp-block-group.is-style-message),
-:where(.editor-styles-wrapper .wp-block-group.is-style-message) {
-	:where(ul, ol) {
-		@include list.flow();
-	}
-}
-
 // -----------------------------------------------------------------------------
 // Block pattern styles.
 // -----------------------------------------------------------------------------

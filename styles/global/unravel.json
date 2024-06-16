@@ -539,14 +539,6 @@
 						"width": "3px"
 					}
 				},
-				"message": {
-					"blockTypes": [ "core/group" ],
-					"border": {
-						"color": "var:custom|global|border-color",
-						"style": "var:custom|global|border-style",
-						"width": "var:custom|global|border-width"
-					}
-				},
 				"section-1": {
 					"blockTypes": [ "core/group" ],
 					"color": {
