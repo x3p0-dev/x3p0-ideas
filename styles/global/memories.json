@@ -43,8 +43,8 @@
 			},
 			"core/navigation-submenu": {
 				"custom": {
-					"background": "var:preset|color|neutral-950",
-					"color": "var:preset|color|base"
+					"background": "var:preset|color|primary-900",
+					"color": "var:preset|color|primary-50"
 				}
 			},
 			"core/post-comments-form": {
@@ -328,14 +328,14 @@
 			},
 			"core/navigation-submenu": {
 				"color": {
-					"background": "var:preset|color|neutral-950",
-					"text": "var:preset|color|base"
+					"background": "var:preset|color|primary-900",
+					"text": "var:preset|color|primary-50"
 				},
 				"border": {
 					"width": "0",
 					"radius": "0"
 				},
-				"css": "--wp--custom--submenu-item--hover-background: var(--wp--preset--color--neutral-900);"
+				"css": "--wp--custom--submenu-item--hover-background: var(--wp--preset--color--primary-950);"
 			},
 			"core/post-comments-form": {
 				"border": {
