@@ -359,6 +359,24 @@
 					"color": {
 						"background": "var:preset|color|neutral-950",
 						"text": "var:preset|color|white"
+					},
+					"elements": {
+						"button": {
+							"color": {
+								"background": "var:preset|color|primary-700",
+								"text": "var:preset|color|white"
+							},
+							":focus": {
+								"color": {
+									"background": "var:preset|color|primary-900"
+								}
+							},
+							":hover": {
+								"color": {
+									"background": "var:preset|color|primary-900"
+								}
+							}
+						}
 					}
 				},
 				"site-footer": {

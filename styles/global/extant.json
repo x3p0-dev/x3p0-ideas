@@ -556,12 +556,6 @@
 						}
 					}
 				},
-				"section-1": {
-					"blockTypes": [ "core/group" ],
-					"color": {
-						"background": "var:preset|color|primary-900"
-					}
-				},
 				"site-footer": {
 					"blockTypes": [
 						"core/columns",

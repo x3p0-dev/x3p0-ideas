@@ -514,6 +514,24 @@
 						"text": "var:preset|color|primary-900"
 					},
 					"elements": {
+						"button": {
+							"color": {
+								"background": "var:custom|global|fill|background",
+								"text": "var:custom|global|fill|color"
+							},
+							":focus": {
+								"color": {
+									"background": "var:custom|global|fill|hover-background",
+									"text": "var:custom|global|fill|hover-color"
+								}
+							},
+							":hover": {
+								"color": {
+									"background": "var:custom|global|fill|hover-background",
+									"text": "var:custom|global|fill|hover-color"
+								}
+							}
+						},
 						"link": {
 							"color": {
 								"text": "var:preset|color|primary-500"

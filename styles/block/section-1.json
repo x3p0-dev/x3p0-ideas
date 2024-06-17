@@ -17,6 +17,22 @@
 			}
 		},
 		"elements": {
+			"button": {
+				"color": {
+					"background": "var:preset|color|primary-900",
+					"text": "var:custom|global|fill|color"
+				},
+				":focus": {
+					"color": {
+						"background": "var:preset|color|primary-950"
+					}
+				},
+				":hover": {
+					"color": {
+						"background": "var:preset|color|primary-950"
+					}
+				}
+			},
 			"caption": {
 				"color": {
 					"text": "currentColor"
@@ -40,14 +56,6 @@
 					"color": {
 						"text": "currentColor"
 					}
-				}
-			}
-		},
-		"blocks": {
-			"core/button": {
-				"color": {
-					"background": "var:preset|color|white",
-					"text": "var:preset|color|primary-700"
 				}
 			}
 		}

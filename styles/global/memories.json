@@ -53,6 +53,13 @@
 						"color": "var:preset|color|neutral-500"
 					}
 				}
+			},
+			"core/table": {
+				"custom": {
+					"stripes": {
+						"stripeBackground": "var:preset|color|neutral-100"
+					}
+				}
 			}
 		},
 		"custom": {
@@ -383,11 +390,13 @@
 					"cite": {
 						"typography": {
 							"fontFamily": "var:preset|font-family|secondary",
+							"fontSize": "clamp(var(--wp--preset--font-size--xs), 0.8125em, var(--wp--preset--font-size--md))",
 							"fontStyle": "normal",
 							"fontWeight": "300"
 						}
 					}
-				}
+				},
+				"css": "& blockquote {\n\tfont-size: 1.0625em;\n}"
 			},
 			"core/query-pagination": {
 				"typography": {
@@ -418,6 +427,7 @@
 					"cite": {
 						"typography": {
 							"fontFamily": "var:preset|font-family|primary",
+							"fontSize": "1em",
 							"fontStyle": "italic"
 						}
 					}

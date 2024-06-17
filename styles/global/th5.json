@@ -489,6 +489,35 @@
 						"fontFamily": "var:preset|font-family|primary"
 					}
 				},
+				"section-1": {
+					"blockTypes": [ "core/group" ],
+					"elements": {
+						"button": {
+							"color": {
+								"background": "var:custom|global|fill|background",
+								"text": "var:custom|global|fill|color"
+							},
+							":focus": {
+								"color": {
+									"background": "var:custom|global|fill|hover-background",
+									"text": "var:custom|global|fill|hover-color"
+								}
+							},
+							":hover": {
+								"color": {
+									"background": "var:custom|global|fill|hover-background",
+									"text": "var:custom|global|fill|hover-color"
+								}
+							}
+						}
+					}
+				},
+				"section-2": {
+					"blockTypes": [ "core/group" ],
+					"color": {
+						"background": "var:preset|color|neutral-50"
+					}
+				},
 				"section-3": {
 					"blockTypes": [ "core/group" ],
 					"color": {

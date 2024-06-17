@@ -1158,7 +1158,7 @@
 						},
 						"color": {
 							"background": "transparent",
-							"text": "var:preset|color|primary-700"
+							"text": { "ref": "styles.elements.link.color.text" }
 						},
 						"outline": {
 							"width": "0"
@@ -1815,7 +1815,7 @@
 			},
 			"core/table": {
 				"border": {
-					"color": "var:preset|color|neutral-100"
+					"color": "var:custom|global|border-color"
 				},
 				"typography": {
 					"fontSize": "var:preset|font-size|sm",
