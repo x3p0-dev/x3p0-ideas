@@ -54,12 +54,28 @@ class GlobalStyleVariation implements Bootable
 	];
 
 	/**
-	 * Stores the current style variation for testing.
+	 * Stores the current global style variation for testing.
 	 *
 	 * @since 1.0.0
 	 * @todo  Promote via the constructor with PHP 8.0+ requirement.
 	 */
-	protected string $variation = '';
+	protected string $global = '';
+
+	/**
+	 * Stores the current color variation for testing.
+	 *
+	 * @since 1.0.0
+	 * @todo  Promote via the constructor with PHP 8.0+ requirement.
+	 */
+	protected string $color = '';
+
+	/**
+	 * Stores the current typography variation for testing.
+	 *
+	 * @since 1.0.0
+	 * @todo  Promote via the constructor with PHP 8.0+ requirement.
+	 */
+	protected string $typography = '';
 
 	/**
 	 * Set up the object's initial state.
@@ -67,11 +83,17 @@ class GlobalStyleVariation implements Bootable
 	 * @since 1.0.0
 	 * @todo  Promote params to properties with PHP 8.0+ requirement.
 	 */
-	public function __construct(string $variation = '')
-	{
-		$this->variation = isset(self::SHORT_NAMES[$variation])
-			? self::SHORT_NAMES[$variation]
-			: $variation;
+	public function __construct(
+		string $global = '',
+		string $color = '',
+		string $typography = ''
+	) {
+		$this->global = isset(self::SHORT_NAMES[$global])
+			? self::SHORT_NAMES[$global]
+			: $global;
+
+		$this->color      = $color;
+		$this->typography = $typography;
 	}
 
 	/**
@@ -95,9 +117,13 @@ class GlobalStyleVariation implements Bootable
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/wp_theme_json_data_user/
 	 */
-	public function filterUserData(object $theme_json): object
+	public function setGlobalStyle(object $theme_json): object
 	{
-		$filename = $this->getFilename();
+		if ('' === $this->global) {
+			return $theme_json;
+		}
+
+		$filename = $this->getFilename("global/{$this->global}");
 
 		if (! is_readable($filename)) {
 			return $theme_json;
@@ -111,21 +137,71 @@ class GlobalStyleVariation implements Bootable
 	}
 
 	/**
+	 * Filters color variation.
+	 *
+	 * @hook  wp_theme_json_data_user  first
+	 * @param WP_Theme_JSON_Data  The Gutenberg plugin breaks this.
+	 * @since 1.0.0
+	 * @link  https://developer.wordpress.org/reference/hooks/wp_theme_json_data_user/
+	 */
+	public function setColorStyle(object $theme_json): object
+	{
+		if ('' === $this->color) {
+			return $theme_json;
+		}
+
+		$filename = $this->getFilename("color/{$this->color}");
+
+		if (! is_readable($filename)) {
+			return $theme_json;
+		}
+
+		$data = wp_json_file_decode($filename, [ 'associative' => true ]);
+
+		return ! is_null( $data )
+			? $theme_json->update_with($data)
+			: $theme_json;
+	}
+
+	/**
+	 * Filters typography variation.
+	 *
+	 * @hook  wp_theme_json_data_user  first
+	 * @param WP_Theme_JSON_Data  The Gutenberg plugin breaks this.
+	 * @since 1.0.0
+	 * @link  https://developer.wordpress.org/reference/hooks/wp_theme_json_data_user/
+	 */
+	public function setTypographyStyle(object $theme_json): object
+	{
+		if ('' === $this->typography) {
+			return $theme_json;
+		}
+
+		$filename = $this->getFilename("typography/{$this->typography}");
+
+		if (! is_readable($filename)) {
+			return $theme_json;
+		}
+
+		$data = wp_json_file_decode($filename, [ 'associative' => true ]);
+
+		return ! is_null( $data )
+			? $theme_json->update_with($data)
+			: $theme_json;
+	}
+
+	/**
 	 * Returns the variation's JSON filename and path or an empty string if
 	 * not found or unreadable.
 	 *
 	 * @since 1.0.0
 	 */
-	protected function getFilename(): string
+	protected function getFilename(string $variation = ''): string
 	{
-		if ('' === $this->variation) {
+		if ('' === $variation) {
 			return '';
 		}
 
-		$file = 'default' === $this->variation
-			? 'theme.json'
-			: "styles/global/{$this->variation}.json";
-
-		return get_theme_file_path($file);
+		return get_theme_file_path("styles/{$variation}.json");
 	}
 }

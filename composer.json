@@ -4,21 +4,30 @@
 	"license": "GPL-3.0-or-later",
 	"scripts": {
 		"build": [
-			"composer config extra.x3p0.variation \"\"",
+			"composer var-reset",
 			"composer update --no-dev",
 			"composer dump-autoload -o --no-dev"
 		],
+		"color": "composer config extra.x3p0.color",
 		"dev": [
 			"composer update",
 			"composer dump-autoload"
 		],
 		"lint:php": "./vendor/bin/phpcs -s --colors .",
-		"var": "composer config extra.x3p0.variation",
+		"typography": "composer config extra.x3p0.typography",
+		"var": "composer config extra.x3p0.global",
+		"var-reset": [
+			"composer config extra.x3p0.global \"\"",
+			"composer config extra.x3p0.color \"\"",
+			"composer config extra.x3p0.typography \"\""
+		],
 		"zip": "composer archive --file=x3p0-ideas"
 	},
 	"extra": {
 		"x3p0": {
-			"variation": ""
+			"color": "",
+			"global": "",
+			"typography": ""
 		}
 	},
 	"autoload": {

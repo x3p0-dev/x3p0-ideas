@@ -40,7 +40,11 @@ function bootstrap(): void
 	setVarDumper();
 
 	// Test global style variation set via `composer.json`.
-	(new GlobalStyleVariation((string) config('variation')))->boot();
+	(new GlobalStyleVariation(
+		(string) config('global'),
+		(string) config('color'),
+		(string) config('typography')
+	))->boot();
 
 	// Boot the block editor customizations for dev mode.
 	(new Editor())->boot();
