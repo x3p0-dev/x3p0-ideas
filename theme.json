@@ -102,13 +102,18 @@
 			"width": true
 		},
 		"color": {
-			"custom": true,
-			"customDuotone": true,
-			"customGradient": true,
+			"background": true,
+			"button": true,
+			"caption": true,
+			"custom": false,
+			"customDuotone": false,
+			"customGradient": false,
 			"defaultDuotone": false,
 			"defaultGradients": true,
 			"defaultPalette": false,
+			"heading": true,
 			"link": true,
+			"text": true,
 			"duotone": [
 				{
 					"name": "Grayscale",
@@ -692,6 +697,8 @@
 			"minHeight": true
 		},
 		"layout": {
+			"allowCustomContentAndWideSize": true,
+			"allowEditing": true,
 			"contentSize": "40rem",
 			"wideSize": "64rem"
 		},
@@ -699,6 +706,7 @@
 			"sticky": true
 		},
 		"shadow": {
+			"defaultPresets": false,
 			"presets": [
 				{
 					"name": "XS",
@@ -838,7 +846,7 @@
 			]
 		},
 		"typography": {
-			"customFontSize": true,
+			"customFontSize": false,
 			"defaultFontSizes": false,
 			"dropCap": true,
 			"fluid": false,
@@ -963,8 +971,9 @@
 			],
 			"fontStyle": true,
 			"fontWeight": true,
-			"letterSpacing": true,
+			"letterSpacing": false,
 			"lineHeight": true,
+			"textAlign": true,
 			"textColumns": true,
 			"textDecoration": true,
 			"textTransform": true,
