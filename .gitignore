@@ -15,7 +15,6 @@
 .DS_Store
 
 /styles/color/*.json
-/styles/typography/*.json
 
 /styles/global/*.json
 !/styles/global/a-little-bit-bookish.json
@@ -27,3 +26,6 @@
 !/styles/global/th5.json
 !/styles/global/thunderbird.json
 !/styles/global/unravel.json
+
+/styles/typography/*.json
+!/styles/typography/work-and-play.json
