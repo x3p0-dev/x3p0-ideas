@@ -11,8 +11,8 @@
 			"width": "var:custom|global|border-width"
 		},
 		"color": {
-			"background": { "ref": "styles.color.background" },
-			"text": { "ref": "styles.color.text" }
+			"background": "var:preset|color|base",
+			"text": "var:preset|color|contrast"
 		},
 		"shadow": "var:custom|global|shadow",
 		"spacing": {

@@ -12,7 +12,7 @@
 		},
 		"color": {
 			"background": "var:preset|color|neutral-50",
-			"text": { "ref": "styles.color.text" }
+			"text": "var:preset|color|contrast"
 		},
 		"shadow": "var:custom|global|shadow",
 		"spacing": {
