@@ -60,6 +60,13 @@ defined('ABSPATH') || exit;
 
 	<!-- wp:query-pagination {
 		"paginationArrow":"arrow",
+		"style":{
+			"spacing":{
+				"margin":{
+					"top":"var:preset|spacing|plus-6"
+				}
+			}
+		},
 		"layout":{
 			"type":"flex",
 			"justifyContent":"right"

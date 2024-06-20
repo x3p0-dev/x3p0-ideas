@@ -69,6 +69,9 @@ defined('ABSPATH') || exit;
 		"paginationArrow":"arrow",
 		"style":{
 			"spacing":{
+				"margin":{
+					"top":"0"
+				},
 				"padding":{
 					"top":"var:preset|spacing|plus-3",
 					"right":"var:preset|spacing|plus-3",

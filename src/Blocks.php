@@ -262,6 +262,7 @@ class Blocks implements Bootable
 			$args['allowed_blocks'][] = 'core/paragraph';
 
 			$args['supports']['spacing']            ??= [];
+			$args['supports']['spacing']['margin']  ??= [ 'top', 'bottom' ];
 			$args['supports']['spacing']['padding'] ??= true;
 		}
 
