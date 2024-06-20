@@ -22,7 +22,7 @@ defined('ABSPATH') || exit;
 			"minHeight":"100%"
 		}
 	},
-	"className":"is-style-box",
+	"className":"is-style-card",
 	"layout":{
 		"type":"flex",
 		"orientation":"vertical",
@@ -30,7 +30,7 @@ defined('ABSPATH') || exit;
 		"justifyContent":"stretch"
 	}
 } -->
-<article class="wp-block-group is-style-box" style="min-height:100%">
+<article class="wp-block-group is-style-card" style="min-height:100%">
 
 	<!-- wp:group {
 		"metadata":{

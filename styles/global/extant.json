@@ -14,15 +14,6 @@
 					}
 				}
 			},
-			"core/group": {
-				"custom": {
-					"cardFooter": {
-						"background": "none",
-						"borderColor": "var:preset|color|neutral-100",
-						"borderWidth": "var(--wp--custom--global--border-width) 0 0"
-					}
-				}
-			},
 			"core/navigation-submenu": {
 				"custom": {
 					"color": "var:preset|color|neutral-50",
@@ -449,16 +440,30 @@
 				}
 			},
 			"variations": {
-				"box": {
+				"card": {
 					"blockTypes": [ "core/group" ],
 					"border": {
-						"color": "var:custom|global|border-color"
+						"color": "var:custom|global|border-color",
+						"style": "var:custom|global|border-style",
+						"width": "var:custom|global|border-width"
+					},
+					"color": {
+						"background": "var:preset|color|base"
 					},
 					"shadow": "var:preset|shadow|md"
 				},
-				"card": {
+				"card-footer": {
 					"blockTypes": [ "core/group" ],
-					"shadow": "var:preset|shadow|md"
+					"border": {
+						"top": {
+							"color": "var:custom|global|border-color",
+							"style": "var:custom|global|border-style",
+							"width": "var:custom|global|border-width"
+						}
+					},
+					"color": {
+						"background": "transparent"
+					}
 				},
 				"comment-meta": {
 					"blockTypes": [ "core/group" ],

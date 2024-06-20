@@ -18,13 +18,6 @@
 					}
 				}
 			},
-			"core/group": {
-				"custom": {
-					"cardFooter": {
-						"background": "var:preset|color|neutral-50"
-					}
-				}
-			},
 			"core/navigation-submenu": {
 				"custom": {
 					"background": "var:preset|color|white"
@@ -443,20 +436,21 @@
 				}
 			},
 			"variations": {
-				"box": {
-					"blockTypes": [ "core/group" ],
-					"color": {
-						"background": "var:preset|color|white"
-					}
-				},
 				"card": {
 					"blockTypes": [ "core/group" ],
 					"border": {
 						"color": "var:preset|color|neutral-300",
+						"style": "solid",
 						"width": "1px"
 					},
 					"color": {
 						"background": "var:preset|color|white"
+					}
+				},
+				"card-footer": {
+					"blockTypes": [ "core/group" ],
+					"color": {
+						"background": "var:preset|color|neutral-50"
 					}
 				},
 				"comment-meta": {

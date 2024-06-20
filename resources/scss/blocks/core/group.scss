@@ -40,32 +40,11 @@
 // -----------------------------------------------------------------------------
 
 ///
-/// The boxed style adds some default padding and a background.
-///
-/// @link      https://github.com/WordPress/gutenberg/pull/57908
-/// @wordpress 6.6
-/// @todo      Move to `theme.json`-based style variations in WordPress 6.6.
-///
-.wp-block-group.is-style-box,
-.editor-styles-wrapper .wp-block-group.is-style-box {
-	overflow: hidden;
-}
-
-///
-/// The card style adds a default border.
+/// Ensure nothing overflows the Card style.
 ///
 .wp-block-group.is-style-card,
 .editor-styles-wrapper .wp-block-group.is-style-card {
 	overflow: hidden;
-
-	> footer {
-		color:         var(--wp--custom--card-footer--color, inherit);
-		background:    var(--wp--custom--card-footer--background, transparent);
-		border-width:  var(--wp--custom--card-footer--border-width, 0);
-		border-style:  var(--wp--custom--card-footer--border-style, solid);
-		border-color:  var(--wp--custom--card-footer--border-color, transparent);
-		padding:       var(--wp--custom--card-footer--padding);
-	}
 }
 
 // -----------------------------------------------------------------------------

@@ -126,9 +126,10 @@ defined('ABSPATH') || exit;
 				}
 			}
 		},
+		"className":"is-style-card-footer",
 		"layout":{"type":"default"}
 	} -->
-	<footer class="wp-block-group" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
+	<footer class="wp-block-group is-style-card-footer" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
 
 		<!-- wp:pattern {"slug":"x3p0-ideas/post-byline-short"} /-->
 

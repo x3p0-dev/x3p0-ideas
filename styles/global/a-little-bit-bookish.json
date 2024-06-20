@@ -3,20 +3,10 @@
 	"version": 3,
 	"title": "A Little Bit Bookish",
 	"settings": {
-		"blocks": {
-			"core/group": {
-				"custom": {
-					"cardFooter": {
-						"background": "transparent",
-						"borderColor": "var:custom|global|border-color",
-						"borderWidth": "1px 0 0"
-					}
-				}
-			}
-		},
 		"custom": {
 			"variation": "a-little-bit-bookish",
 			"global": {
+				"borderColor": "var:preset|color|neutral-100",
 				"borderWidth": "1px",
 				"borderRadius": "4px",
 				"shadow": "none",
@@ -329,13 +319,28 @@
 				}
 			},
 			"variations": {
-				"box": {
+				"card": {
 					"blockTypes": [ "core/group" ],
 					"border": {
-						"color": "var:custom|global|border-color"
+						"color": "var:custom|global|border-color",
+						"style": "var:custom|global|border-style",
+						"width": "var:custom|global|border-width"
 					},
 					"color": {
 						"background": "var:preset|color|neutral-50"
+					}
+				},
+				"card-footer": {
+					"blockTypes": [ "core/group" ],
+					"border": {
+						"top": {
+							"color": "var:custom|global|border-color",
+							"style": "var:custom|global|border-style",
+							"width": "1px"
+						}
+					},
+					"color": {
+						"background": "transparent"
 					}
 				},
 				"site-footer": {

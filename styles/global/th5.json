@@ -25,13 +25,6 @@
 					}
 				}
 			},
-			"core/group": {
-				"custom": {
-					"cardFooter": {
-						"background": "var:preset|color|neutral-100"
-					}
-				}
-			},
 			"core/navigation-submenu": {
 				"custom": {
 					"color": "var:preset|color|neutral-950",
@@ -475,6 +468,12 @@
 					"blockTypes": [ "core/group" ],
 					"color": {
 						"background": "var:preset|color|neutral-50"
+					}
+				},
+				"card-footer": {
+					"blockTypes": [ "core/group" ],
+					"color": {
+						"background": "var:preset|color|neutral-100"
 					}
 				},
 				"comment-meta": {

@@ -95,9 +95,10 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 		"metadata":{
 			"name":"<?= esc_attr__('Card Footer', 'x3p0-ideas') ?>"
 		},
+		"className":"is-style-card-footer",
 		"layout":{"type":"default"}
 	} -->
-	<footer class="wp-block-group">
+	<footer class="wp-block-group is-style-card-footer">
 		<!-- wp:file {
 			"href":"<?= esc_url($image) ?>",
 			"showDownloadButton":false,

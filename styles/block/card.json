@@ -5,13 +5,10 @@
 	"blockTypes": [ "core/group" ],
 	"styles": {
 		"border": {
-			"color": "var:custom|global|border-color",
-			"radius": "var:custom|global|border-radius",
-			"style": "var:custom|global|border-style",
-			"width": "var:custom|global|border-width"
+			"radius": "var:custom|global|border-radius"
 		},
 		"color": {
-			"background": "var:preset|color|base",
+			"background": "var:preset|color|neutral-50",
 			"text": "var:preset|color|contrast"
 		},
 		"shadow": "var:custom|global|shadow",

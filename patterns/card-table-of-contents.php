@@ -18,7 +18,11 @@ defined('ABSPATH') || exit;
 ?>
 <!-- wp:group {
 	"metadata":{"name":"<?= esc_attr__('Table of Contents Card', 'x3p0-ideas') ?>"},
-	"style":{"spacing":{"blockGap":"var:preset|spacing|base"}},
+	"style":{
+		"spacing":{
+			"blockGap":"var:preset|spacing|base"
+		}
+	},
 	"className":"is-style-card",
 	"layout":{"type":"default"}
 } -->

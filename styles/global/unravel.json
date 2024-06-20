@@ -4,14 +4,6 @@
 	"title": "Unravel",
 	"settings": {
 		"blocks": {
-			"core/group": {
-				"custom": {
-					"cardFooter": {
-						"borderColor": "var:custom|global|border-color",
-						"borderWidth": "1px 0 0"
-					}
-				}
-			},
 			"core/navigation": {
 				"custom": {
 					"toggle": {
@@ -499,12 +491,25 @@
 				}
 			},
 			"variations": {
-				"box": {
+				"card": {
 					"blockTypes": [ "core/group" ],
 					"border": {
-						"color": "var:preset|color|neutral-100",
+						"color": "var:custom|global|border-color",
 						"style": "double",
 						"width": "3px"
+					}
+				},
+				"card-footer": {
+					"blockTypes": [ "core/group" ],
+					"border": {
+						"top": {
+							"color": "var:custom|global|border-color",
+							"style": "solid",
+							"width": "1px"
+						}
+					},
+					"color": {
+						"background": "transparent"
 					}
 				},
 				"section-1": {

@@ -18,16 +18,6 @@
 						"padding": "var:preset|spacing|base"
 					}
 				}
-			},
-			"core/group": {
-				"custom": {
-					"cardFooter": {
-						"background": "transparent",
-						"borderColor": "var:custom|global|border-color",
-						"borderStyle": "var:custom|global|border-style",
-						"borderWidth": "var(--wp--custom--global--border-width) 0 0"
-					}
-				}
 			}
 		},
 		"custom": {
@@ -469,13 +459,28 @@
 						}
 					}
 				},
-				"box": {
+				"card": {
 					"blockTypes": [ "core/group" ],
 					"border": {
-						"color": "var:custom|global|border-color"
+						"color": "var:custom|global|border-color",
+						"style": "var:custom|global|border-style",
+						"width": "var:custom|global|border-width"
 					},
 					"color": {
 						"background": "var:preset|color|base"
+					}
+				},
+				"card-footer": {
+					"blockTypes": [ "core/group" ],
+					"border": {
+						"top": {
+							"color": "var:custom|global|border-color",
+							"style": "var:custom|global|border-style",
+							"width": "var:custom|global|border-width"
+						}
+					},
+					"color": {
+						"background": "transparent"
 					}
 				},
 				"comment-meta": {

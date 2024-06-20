@@ -21,16 +21,6 @@
 					}
 				}
 			},
-			"core/group": {
-				"custom": {
-					"cardFooter": {
-						"background": "none",
-						"borderColor": "var:custom|global|border-color",
-						"borderWidth": "3px 0 0",
-						"borderStyle": "double"
-					}
-				}
-			},
 			"core/navigation-submenu": {
 				"custom": {
 					"background": "var:preset|color|neutral-950",
@@ -310,6 +300,30 @@
 				}
 			},
 			"variations": {
+				"card": {
+					"blockTypes": [ "core/group" ],
+					"border": {
+						"color": "var:custom|global|border-color",
+						"style": "var:custom|global|border-style",
+						"width": "var:custom|global|border-width"
+					},
+					"color": {
+						"background": "var:preset|color|base"
+					}
+				},
+				"card-footer": {
+					"blockTypes": [ "core/group" ],
+					"border": {
+						"top": {
+							"color": "var:custom|global|border-color",
+							"style": "double",
+							"width": "3px"
+						}
+					},
+					"color": {
+						"background": "transparent"
+					}
+				},
 				"comment-meta": {
 					"blockTypes": [ "core/group" ],
 					"color": {
