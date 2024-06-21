@@ -5,20 +5,22 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
-// Defines the `--wp--preset--font-family--tertiary` font-family early. This way
-// we can overrule it via `settings.typography.fontFamilies` in `theme.json`.
-// This family is primarily used for, well...tertiary text. Things such as
-// captions, citations, etc.
-:root {
-//	--wp--preset--font-family--tertiary: inherit;
-}
-
-// We disable WordPress' default font sizes in favor of our own. But because
-// users may have used these sizes in the past, we map them to the theme's
-// custom sizes.
+///
+/// We disable WordPress' default font and spacing in favor of our own. But
+/// because users may have used these sizes in the past, we map them to the
+/// theme's custom sizes.
+///
 body {
 	--wp--preset--font-size--small: var(--wp--preset--font-size--xs);
 	--wp--preset--font-size--medium: var(--wp--preset--font-size--md);
 	--wp--preset--font-size--large: var(--wp--preset--font-size--2-xl);
 	--wp--preset--font-size--x-large: var(--wp--preset--font-size--3-xl);
+
+	--wp--preset--spacing--20: var(--wp--preset--spacing--minus-2);
+	--wp--preset--spacing--30: var(--wp--preset--spacing--minus-1);
+	--wp--preset--spacing--40: var(--wp--preset--spacing--base);
+	--wp--preset--spacing--50: var(--wp--preset--spacing--plus-1);
+	--wp--preset--spacing--60: var(--wp--preset--spacing--plus-3);
+	--wp--preset--spacing--70: var(--wp--preset--spacing--plus-4);
+	--wp--preset--spacing--80: var(--wp--preset--spacing--plus-6);
 }
