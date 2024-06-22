@@ -110,12 +110,12 @@ class Metadata implements Bootable
 	{
 		return [ 'selectors' => [
 			// Target the submenu and the responsive container.
-			'root'       => '.wp-block-navigation-submenu .wp-block-navigation__submenu-container, nav.wp-block-navigation.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open',
-			'color'      => 'nav.wp-block-navigation .wp-block-navigation-submenu .wp-block-navigation__submenu-container, nav.wp-block-navigation.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open',
+			'root'       => '.wp-block-navigation__submenu-container, .wp-block-navigation__responsive-container.is-menu-open',
+			'color'      => '.wp-block-navigation__submenu-container, .wp-block-navigation__responsive-container.is-menu-open',
 			// Only target the submenu.
-			'border'     => 'nav.wp-block-navigation .wp-block-navigation-submenu .wp-block-navigation__submenu-container',
-			'spacing'    => '.wp-block-navigation-submenu .wp-block-navigation__submenu-container',
-			'typography' => '.wp-block-navigation-submenu .wp-block-navigation__submenu-container'
+			'border'     => '.wp-block-navigation__submenu-container',
+			'spacing'    => '.wp-block-navigation__submenu-container',
+			'typography' => '.wp-block-navigation__submenu-container'
 		] ] + $settings;
 	}
 
