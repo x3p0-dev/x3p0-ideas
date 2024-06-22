@@ -17,11 +17,11 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Tools;
+namespace X3P0\Ideas\Block;
 
 use WP_Block;
 
-class BlockRules
+class Rules
 {
 	/**
 	 * List of allowed rules and their callback methods.

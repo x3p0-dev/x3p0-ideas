@@ -21,9 +21,8 @@ use WP_Block_Pattern_Categories_Registry;
 use WP_Block_Styles_Registry;
 use WP_Block_Type_Registry;
 
-use X3P0\Ideas\Bindings;
+use X3P0\Ideas\Block;
 use X3P0\Ideas\Contracts\Bootable;
-use X3P0\Ideas\Tools\BlockRules;
 use X3P0\Ideas\Views\Engine;
 
 class Theme implements Bootable
@@ -67,20 +66,23 @@ class Theme implements Bootable
 	 */
 	private function registerDefaultBindings(): void
 	{
-		$this->instance('bindings', new Bindings\Component(
+		$this->instance('block.bindings', new Block\Bindings\Component(
 			WP_Block_Bindings_Registry::get_instance(),
 			[
-				Bindings\Media::class,
-				Bindings\Post::class,
-				Bindings\Site::class,
-				Bindings\Theme::class
+				Block\Bindings\Media::class,
+				Block\Bindings\Post::class,
+				Block\Bindings\Site::class,
+				Block\Bindings\Theme::class
 			]
 		));
 
-		$this->instance('blocks', new Blocks(
-			WP_Block_Type_Registry::get_instance(),
-			new BlockRules(),
+		$this->instance('block.render', new Block\Render(
+			new Block\Rules(),
 			new Engine()
+		));
+
+		$this->instance('block.style.variations', new Block\StyleVariations(
+			WP_Block_Styles_Registry::get_instance()
 		));
 
 		$this->instance('patterns', new Patterns(
@@ -89,17 +91,15 @@ class Theme implements Bootable
 			WP_Block_Type_Registry::get_instance()
 		));
 
-		$this->instance('styles', new Styles(
-			WP_Block_Styles_Registry::get_instance()
-		));
-
-		$this->instance('editor',     new Editor());
-		$this->instance('embeds',     new Embeds());
-		$this->instance('frontend',   new Frontend());
-		$this->instance('media',      new Media());
-		$this->instance('parts',      new Parts());
-		$this->instance('templates',  new Templates());
-		$this->instance('variations', new Variations());
+		$this->instance('block.assets',     new Block\Assets());
+		$this->instance('block.metadata',   new Block\Metadata());
+		$this->instance('block.variations', new Block\Variations());
+		$this->instance('editor',           new Editor());
+		$this->instance('embeds',           new Embeds());
+		$this->instance('frontend',         new Frontend());
+		$this->instance('media',            new Media());
+		$this->instance('parts',            new Parts());
+		$this->instance('templates',        new Templates());
 	}
 
 	/**

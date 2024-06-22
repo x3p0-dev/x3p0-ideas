@@ -15,11 +15,11 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Tools;
+namespace X3P0\Ideas\Block\Helpers;
 
 use WP_HTML_Tag_Processor;
 
-class CodeBlockHighlight
+class CodeHighlight
 {
 	/**
 	 * Prefix and suffix strings to be used to wrap the language label in

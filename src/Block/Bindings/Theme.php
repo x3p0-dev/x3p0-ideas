@@ -11,14 +11,14 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Bindings;
+namespace X3P0\Ideas\Block\Bindings;
 
 use WP_Block;
 use WP_Query;
-use X3P0\Ideas\Contracts\BlockBindingsSource;
+use X3P0\Ideas\Contracts\BlockBindingSource;
 use X3P0\Ideas\Tools\Superpower;
 
-class Theme implements BlockBindingsSource
+class Theme implements BlockBindingSource
 {
 	/**
 	 * Map of keys to their associated methods.

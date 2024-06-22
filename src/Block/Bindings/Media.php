@@ -11,13 +11,13 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Bindings;
+namespace X3P0\Ideas\Block\Bindings;
 
 use WP_Block;
-use X3P0\Ideas\Contracts\BlockBindingsSource;
+use X3P0\Ideas\Contracts\BlockBindingSource;
 use X3P0\Ideas\Tools\MediaMeta;
 
-class Media implements BlockBindingsSource
+class Media implements BlockBindingSource
 {
 	/**
 	 * Map of keys to their associated methods.

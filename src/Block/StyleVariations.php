@@ -1,7 +1,7 @@
 <?php
 
 /**
- * The Styles class is used for registering block style variations via PHP.
+ * The Style Variations class registers block style variations via PHP.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
@@ -11,13 +11,13 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas;
+namespace X3P0\Ideas\Block;
 
 use WP_Block_Styles_Registry;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\HookAnnotation;
 
-class Styles implements Bootable
+class StyleVariations implements Bootable
 {
 	use HookAnnotation;
 

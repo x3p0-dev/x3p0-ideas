@@ -11,12 +11,12 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Bindings;
+namespace X3P0\Ideas\Block\Bindings;
 
 use WP_Block;
-use X3P0\Ideas\Contracts\BlockBindingsSource;
+use X3P0\Ideas\Contracts\BlockBindingSource;
 
-class Site implements BlockBindingsSource
+class Site implements BlockBindingSource
 {
 	/**
 	 * Map of keys to their associated methods.

@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas;
+namespace X3P0\Ideas\Block;
 
 use WP_Block_Type;
 use X3P0\Ideas\Contracts\Bootable;
