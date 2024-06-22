@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace X3P0\Ideas\Block\Bindings;
 
 use WP_Block;
+use WP_Block_Bindings_Registry;
 use WP_Query;
 use X3P0\Ideas\Contracts\BlockBindingSource;
 use X3P0\Ideas\Tools\Superpower;
@@ -37,29 +38,17 @@ class Theme implements BlockBindingSource
 	];
 
 	/**
-	 * Returns the name of the bindings source.
+	 * Registers the block binding source.
 	 *
 	 * @since 1.0.0
 	 */
-	#[\Override]
-	public function name(): string
+	public function register(WP_Block_Bindings_Registry $bindings): void
 	{
-		return 'x3p0/theme';
-	}
-
-	/**
-	 * Returns the bindings source registration arguments.
-	 *
-	 * @since 1.0.0
-	 */
-	#[\Override]
-	public function options(): array
-	{
-		return [
+		$bindings->register('x3p0/theme', [
 			'label'              => __('Theme Data', 'x3p0-ideas'),
 			'get_value_callback' => [ $this, 'callback' ],
 			'uses_context'       => [ 'queryId', 'query' ]
-		];
+		]);
 	}
 
 	/**

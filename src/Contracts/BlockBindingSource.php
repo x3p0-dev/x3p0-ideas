@@ -13,19 +13,14 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas\Contracts;
 
+use WP_Block_Bindings_Registry;
+
 interface BlockBindingSource
 {
 	/**
-	 * Returns the name of the bindings source.
+	 * Registers the block bindings source.
 	 *
 	 * @since 1.0.0
 	 */
-	public function name(): string;
-
-	/**
-	 * Returns the bindings source registration arguments.
-	 *
-	 * @since 1.0.0
-	 */
-	public function options(): array;
+	public function register(WP_Block_Bindings_Registry $bindings): void;
 }

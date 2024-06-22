@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace X3P0\Ideas\Block\Bindings;
 
 use WP_Block;
+use WP_Block_Bindings_Registry;
 use X3P0\Ideas\Contracts\BlockBindingSource;
 use X3P0\Ideas\Tools\MediaMeta;
 
@@ -48,29 +49,17 @@ class Media implements BlockBindingSource
 	private array $meta = [];
 
 	/**
-	 * Returns the name of the bindings source.
+	 * Registers the block binding source.
 	 *
 	 * @since 1.0.0
 	 */
-	#[\Override]
-	public function name(): string
+	public function register(WP_Block_Bindings_Registry $bindings): void
 	{
-		return 'x3p0/media';
-	}
-
-	/**
-	 * Returns the bindings source registration arguments.
-	 *
-	 * @since 1.0.0
-	 */
-	#[\Override]
-	public function options(): array
-	{
-		return [
+		$bindings->register('x3p0/media', [
 			'label'              => __('Media Data', 'x3p0-ideas'),
 			'uses_context'       => [ 'postType', 'postId'],
 			'get_value_callback' => [ $this, 'callback' ]
-		];
+		]);
 	}
 
 	/**

@@ -73,17 +73,10 @@ class Component implements Bootable
 	 */
 	public function register(): void
 	{
-		foreach ($this->sources as $binding_source) {
-			if (! is_subclass_of($binding_source, BlockBindingSource::class)) {
-				continue;
+		foreach ($this->sources as $source) {
+			if (is_subclass_of($source, BlockBindingSource::class)) {
+				(new $source())->register($this->bindings);
 			}
-
-			$source = new $binding_source();
-
-			$this->bindings->register(
-				$source->name(),
-				$source->options()
-			);
 		}
 	}
 }
