@@ -40,7 +40,11 @@ defined('ABSPATH') || exit;
 		<!-- wp:group {
 			"tagName":"header",
 			"metadata":{"name":"<?= esc_attr__('Post Header', 'x3p0-ideas') ?>"},
-			"style":{"spacing":{"blockGap":"0"}},
+			"style":{
+				"spacing":{
+					"blockGap":"var:preset|spacing|base"
+				}
+			},
 			"layout":{"type":"constrained"}
 		} -->
 		<header class="wp-block-group">

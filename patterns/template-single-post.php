@@ -31,16 +31,20 @@ defined('ABSPATH') || exit;
 <main class="wp-block-group" style="padding-top:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3)">
 
 	<!-- wp:group {
-		"metadata":{"name":"<?= esc_attr__('Post', 'x3p0-ideas') ?>"},
 		"tagName":"article",
+		"metadata":{"name":"<?= esc_attr__('Post', 'x3p0-ideas') ?>"},
 		"layout":{"type":"default"}
 	} -->
 	<article class="wp-block-group">
 
 		<!-- wp:group {
 			"tagName":"header",
-			"metadata":{"name":"Post Header"},
-			"style":{"spacing":{"blockGap":"var:preset|spacing|base"}},
+			"metadata":{"name":"<?= esc_attr__('Post Header', 'x3p0-ideas') ?>"},
+			"style":{
+				"spacing":{
+					"blockGap":"var:preset|spacing|base"
+				}
+			},
 			"layout":{"type":"constrained"}
 		} -->
 		<header class="wp-block-group">
