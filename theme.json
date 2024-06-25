@@ -531,8 +531,8 @@
 		"custom": {
 			"variation": "ideas-experiments-and-things",
 			"color": {
-				"dark": "var:preset|color|black",
-				"light": "var:preset|color|white"
+				"dark": "var:preset|color|contrast",
+				"light": "var:preset|color|base"
 			},
 			"global": {
 				"::selectionColor": "var:preset|color|primary-50",
