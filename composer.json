@@ -14,11 +14,12 @@
 			"composer dump-autoload"
 		],
 		"lint:php": "./vendor/bin/phpcs -s --colors .",
+		"theme": "composer config extra.x3p0.theme",
 		"typography": "composer config extra.x3p0.typography",
-		"var": "composer config extra.x3p0.global",
+		"var": "composer config extra.x3p0.theme",
 		"var-reset": [
-			"composer config extra.x3p0.global \"\"",
 			"composer config extra.x3p0.color \"\"",
+			"composer config extra.x3p0.theme \"\"",
 			"composer config extra.x3p0.typography \"\""
 		],
 		"zip": "composer archive --file=x3p0-ideas"
@@ -26,7 +27,7 @@
 	"extra": {
 		"x3p0": {
 			"color": "",
-			"global": "",
+			"theme": "",
 			"typography": ""
 		}
 	},

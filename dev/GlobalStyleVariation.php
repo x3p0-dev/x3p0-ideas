@@ -54,12 +54,12 @@ class GlobalStyleVariation implements Bootable
 	];
 
 	/**
-	 * Stores the current global style variation for testing.
+	 * Stores the current theme style variation for testing.
 	 *
 	 * @since 1.0.0
 	 * @todo  Promote via the constructor with PHP 8.0+ requirement.
 	 */
-	protected string $global = '';
+	protected string $theme = '';
 
 	/**
 	 * Stores the current color variation for testing.
@@ -84,13 +84,13 @@ class GlobalStyleVariation implements Bootable
 	 * @todo  Promote params to properties with PHP 8.0+ requirement.
 	 */
 	public function __construct(
-		string $global = '',
+		string $theme = '',
 		string $color = '',
 		string $typography = ''
 	) {
-		$this->global = isset(self::SHORT_NAMES[$global])
-			? self::SHORT_NAMES[$global]
-			: $global;
+		$this->theme = isset(self::SHORT_NAMES[$theme])
+			? self::SHORT_NAMES[$theme]
+			: $theme;
 
 		$this->color      = $color;
 		$this->typography = $typography;
@@ -119,11 +119,11 @@ class GlobalStyleVariation implements Bootable
 	 */
 	public function setGlobalStyle(object $theme_json): object
 	{
-		if ('' === $this->global) {
+		if ('' === $this->theme) {
 			return $theme_json;
 		}
 
-		$filename = $this->getFilename("global/{$this->global}");
+		$filename = $this->getFilename("theme/{$this->theme}");
 
 		if (! is_readable($filename)) {
 			return $theme_json;

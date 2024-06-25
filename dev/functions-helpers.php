@@ -41,7 +41,7 @@ function bootstrap(): void
 
 	// Test global style variation set via `composer.json`.
 	(new GlobalStyleVariation(
-		(string) config('global'),
+		(string) config('theme'),
 		(string) config('color'),
 		(string) config('typography')
 	))->boot();
