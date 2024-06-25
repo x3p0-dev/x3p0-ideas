@@ -443,92 +443,81 @@
 						"width": "var:custom|global|border-width"
 					}
 				}
-			},
-			"variations": {
-				"archive-header": {
-					"blockTypes": [ "core/group" ],
-					"border": {
-						"color": "var:custom|global|border-color",
-						"style": "var:custom|global|border-style",
-						"width": "0 0 var(--wp--custom--global--border-width)"
-					},
-					"spacing": {
-						"padding": {
-							"top": "var:preset|spacing|plus-6",
-							"bottom": "var:preset|spacing|plus-6"
-						}
-					}
+			}
+		},
+		"variations": {
+			"archive-header": {
+				"border": {
+					"color": "var:custom|global|border-color",
+					"style": "var:custom|global|border-style",
+					"width": "0 0 var(--wp--custom--global--border-width)"
 				},
-				"card": {
-					"blockTypes": [ "core/group" ],
-					"border": {
+				"spacing": {
+					"padding": {
+						"top": "var:preset|spacing|plus-6",
+						"bottom": "var:preset|spacing|plus-6"
+					}
+				}
+			},
+			"card": {
+				"border": {
+					"color": "var:custom|global|border-color",
+					"style": "var:custom|global|border-style",
+					"width": "var:custom|global|border-width"
+				},
+				"color": {
+					"background": "var:preset|color|base"
+				}
+			},
+			"card-footer": {
+				"border": {
+					"top": {
 						"color": "var:custom|global|border-color",
 						"style": "var:custom|global|border-style",
 						"width": "var:custom|global|border-width"
-					},
-					"color": {
-						"background": "var:preset|color|base"
 					}
 				},
-				"card-footer": {
-					"blockTypes": [ "core/group" ],
-					"border": {
-						"top": {
-							"color": "var:custom|global|border-color",
-							"style": "var:custom|global|border-style",
-							"width": "var:custom|global|border-width"
-						}
-					},
-					"color": {
-						"background": "transparent"
+				"color": {
+					"background": "transparent"
+				}
+			},
+			"comment-meta": {
+				"color": {
+					"text": "var:preset|color|neutral-500"
+				}
+			},
+			"post-byline": {
+				"color": {
+					"text": "var:preset|color|neutral-500"
+				}
+			},
+			"post-meta": {
+				"color": {
+					"text": "var:preset|color|neutral-500"
+				}
+			},
+			"site-footer": {
+				"color": {
+					"background": "transparent"
+				},
+				"border": {
+					"top": {
+						"color": "var:custom|global|border-color",
+						"style": "var:custom|global|border-style",
+						"width": "var:custom|global|border-width"
+					}
+				}
+			},
+			"site-header": {
+				"border": {
+					"bottom": {
+						"color": "var:custom|global|border-color",
+						"style": "var:custom|global|border-style",
+						"width": "var:custom|global|border-width"
 					}
 				},
-				"comment-meta": {
-					"blockTypes": [ "core/group" ],
-					"color": {
-						"text": "var:preset|color|neutral-500"
-					}
-				},
-				"post-byline": {
-					"blockTypes": [ "core/group" ],
-					"color": {
-						"text": "var:preset|color|neutral-500"
-					}
-				},
-				"post-meta": {
-					"blockTypes": [ "core/group" ],
-					"color": {
-						"text": "var:preset|color|neutral-500"
-					}
-				},
-				"site-footer": {
-					"blockTypes": [
-						"core/columns",
-						"core/group"
-					],
-					"color": {
-						"background": "transparent"
-					},
-					"border": {
-						"top": {
-							"color": "var:custom|global|border-color",
-							"style": "var:custom|global|border-style",
-							"width": "var:custom|global|border-width"
-						}
-					}
-				},
-				"site-header": {
-					"blockTypes": [ "core/group" ],
-					"border": {
-						"bottom": {
-							"color": "var:custom|global|border-color",
-							"style": "var:custom|global|border-style",
-							"width": "var:custom|global|border-width"
-						}
-					},
-					"color": {
-						"background": "transparent"
-					}
+				"color": {
+					"background": "transparent"
 				}
 			}
 		}

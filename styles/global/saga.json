@@ -298,116 +298,106 @@
 					"fontFamily": "var:preset|font-family|primary",
 					"fontStyle": "italic"
 				}
+			}
+		},
+		"variations": {
+			"card": {
+				"border": {
+					"color": "var:custom|global|border-color",
+					"style": "var:custom|global|border-style",
+					"width": "var:custom|global|border-width"
+				},
+				"color": {
+					"background": "var:preset|color|base"
+				}
 			},
-			"variations": {
-				"card": {
-					"blockTypes": [ "core/group" ],
-					"border": {
+			"card-footer": {
+				"border": {
+					"top": {
 						"color": "var:custom|global|border-color",
-						"style": "var:custom|global|border-style",
-						"width": "var:custom|global|border-width"
-					},
-					"color": {
-						"background": "var:preset|color|base"
+						"style": "double",
+						"width": "3px"
 					}
 				},
-				"card-footer": {
-					"blockTypes": [ "core/group" ],
-					"border": {
-						"top": {
-							"color": "var:custom|global|border-color",
-							"style": "double",
-							"width": "3px"
-						}
-					},
-					"color": {
-						"background": "transparent"
-					}
+				"color": {
+					"background": "transparent"
+				}
+			},
+			"comment-meta": {
+				"color": {
+					"text": "var:preset|color|neutral-500"
+				}
+			},
+			"post-byline": {
+				"color": {
+					"text": "var:preset|color|neutral-500"
 				},
-				"comment-meta": {
-					"blockTypes": [ "core/group" ],
-					"color": {
-						"text": "var:preset|color|neutral-500"
-					}
-				},
-				"post-byline": {
-					"blockTypes": [ "core/group" ],
-					"color": {
-						"text": "var:preset|color|neutral-500"
-					},
-					"blocks": {
-						"core/post-author-name": {
-							"elements": {
-								"link": {
-									"color": {
-										"text": "var:preset|color|neutral-900"
-									},
+				"blocks": {
+					"core/post-author-name": {
+						"elements": {
+							"link": {
+								"color": {
+									"text": "var:preset|color|neutral-900"
+								},
+								"typography": {
+									"fontFamily": "var:preset|font-family|primary",
+									"fontStyle": "italic",
+									"textDecoration": "none"
+								},
+								":focus": {
 									"typography": {
-										"fontFamily": "var:preset|font-family|primary",
-										"fontStyle": "italic",
-										"textDecoration": "none"
-									},
-									":focus": {
-										"typography": {
-											"textDecoration": "underline"
-										}
-									},
-									":hover": {
-										"typography": {
-											"textDecoration": "underline"
-										}
+										"textDecoration": "underline"
+									}
+								},
+								":hover": {
+									"typography": {
+										"textDecoration": "underline"
 									}
 								}
 							}
 						}
 					}
+				}
+			},
+			"post-meta": {
+				"color": {
+					"text": "var:preset|color|neutral-500"
+				}
+			},
+			"section-1": {
+				"color": {
+					"background": "var:preset|color|neutral-950",
+					"text": "var:preset|color|white"
 				},
-				"post-meta": {
-					"blockTypes": [ "core/group" ],
-					"color": {
-						"text": "var:preset|color|neutral-500"
-					}
-				},
-				"section-1": {
-					"blockTypes": [ "core/group" ],
-					"color": {
-						"background": "var:preset|color|neutral-950",
-						"text": "var:preset|color|white"
-					},
-					"elements": {
-						"button": {
+				"elements": {
+					"button": {
+						"color": {
+							"background": "var:preset|color|primary-700",
+							"text": "var:preset|color|white"
+						},
+						":focus": {
 							"color": {
-								"background": "var:preset|color|primary-700",
-								"text": "var:preset|color|white"
-							},
-							":focus": {
-								"color": {
-									"background": "var:preset|color|primary-900"
-								}
-							},
-							":hover": {
-								"color": {
-									"background": "var:preset|color|primary-900"
-								}
+								"background": "var:preset|color|primary-900"
+							}
+						},
+						":hover": {
+							"color": {
+								"background": "var:preset|color|primary-900"
 							}
 						}
 					}
-				},
-				"site-footer": {
-					"blockTypes": [
-						"core/columns",
-						"core/group"
-					],
-					"border": {
-						"top": {
-							"color": "var:preset|color|neutral-100",
-							"style": "double",
-							"width": "3px"
-						}
-					},
-					"color": {
-						"background": "var:preset|color|neutral-50"
+				}
+			},
+			"site-footer": {
+				"border": {
+					"top": {
+						"color": "var:preset|color|neutral-100",
+						"style": "double",
+						"width": "3px"
 					}
+				},
+				"color": {
+					"background": "var:preset|color|neutral-50"
 				}
 			}
 		}

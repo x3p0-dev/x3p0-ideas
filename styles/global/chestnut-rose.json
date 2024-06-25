@@ -429,36 +429,32 @@
 					"fontSize": "var:preset|font-size|xs",
 					"lineHeight": "var:custom|line-height|xs"
 				}
+			}
+		},
+		"variations": {
+			"comment-meta": {
+				"typography": {
+					"fontSize": "var:preset|font-size|xs",
+					"lineHeight": "var:custom|line-height|xs"
+				}
 			},
-			"variations": {
-				"comment-meta": {
-					"blockTypes": [ "core/group" ],
-					"typography": {
-						"fontSize": "var:preset|font-size|xs",
-						"lineHeight": "var:custom|line-height|xs"
-					}
-				},
-				"post-byline": {
-					"blockTypes": [ "core/group" ],
-					"typography": {
-						"fontSize": "var:preset|font-size|xs",
-						"lineHeight": "var:custom|line-height|xs"
-					}
-				},
-				"post-meta": {
-					"blockTypes": [ "core/group" ],
-					"typography": {
-						"fontSize": "var:preset|font-size|xs",
-						"lineHeight": "var:custom|line-height|xs"
-					}
-				},
-				"section-1": {
-					"blockTypes": [ "core/group" ],
-					"elements": {
-						"heading": {
-							"color": {
-								"text": "currentColor"
-							}
+			"post-byline": {
+				"typography": {
+					"fontSize": "var:preset|font-size|xs",
+					"lineHeight": "var:custom|line-height|xs"
+				}
+			},
+			"post-meta": {
+				"typography": {
+					"fontSize": "var:preset|font-size|xs",
+					"lineHeight": "var:custom|line-height|xs"
+				}
+			},
+			"section-1": {
+				"elements": {
+					"heading": {
+						"color": {
+							"text": "currentColor"
 						}
 					}
 				}

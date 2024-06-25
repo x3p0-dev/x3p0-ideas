@@ -489,67 +489,63 @@
 					"fontFamily": "var:preset|font-family|tertiary",
 					"fontStyle": "italic"
 				}
+			}
+		},
+		"variations": {
+			"card": {
+				"border": {
+					"color": "var:custom|global|border-color",
+					"style": "double",
+					"width": "3px"
+				}
 			},
-			"variations": {
-				"card": {
-					"blockTypes": [ "core/group" ],
-					"border": {
+			"card-footer": {
+				"border": {
+					"top": {
 						"color": "var:custom|global|border-color",
-						"style": "double",
-						"width": "3px"
+						"style": "solid",
+						"width": "1px"
 					}
 				},
-				"card-footer": {
-					"blockTypes": [ "core/group" ],
-					"border": {
-						"top": {
-							"color": "var:custom|global|border-color",
-							"style": "solid",
-							"width": "1px"
-						}
-					},
-					"color": {
-						"background": "transparent"
-					}
+				"color": {
+					"background": "transparent"
+				}
+			},
+			"section-1": {
+				"color": {
+					"background": "var:preset|color|primary-50",
+					"text": "var:preset|color|primary-900"
 				},
-				"section-1": {
-					"blockTypes": [ "core/group" ],
-					"color": {
-						"background": "var:preset|color|primary-50",
-						"text": "var:preset|color|primary-900"
-					},
-					"elements": {
-						"button": {
+				"elements": {
+					"button": {
+						"color": {
+							"background": "var:custom|global|fill|background",
+							"text": "var:custom|global|fill|color"
+						},
+						":focus": {
 							"color": {
-								"background": "var:custom|global|fill|background",
-								"text": "var:custom|global|fill|color"
-							},
-							":focus": {
-								"color": {
-									"background": "var:custom|global|fill|hover-background",
-									"text": "var:custom|global|fill|hover-color"
-								}
-							},
-							":hover": {
-								"color": {
-									"background": "var:custom|global|fill|hover-background",
-									"text": "var:custom|global|fill|hover-color"
-								}
+								"background": "var:custom|global|fill|hover-background",
+								"text": "var:custom|global|fill|hover-color"
 							}
 						},
-						"link": {
+						":hover": {
 							"color": {
-								"text": "var:preset|color|primary-500"
+								"background": "var:custom|global|fill|hover-background",
+								"text": "var:custom|global|fill|hover-color"
 							}
 						}
+					},
+					"link": {
+						"color": {
+							"text": "var:preset|color|primary-500"
+						}
 					}
-				},
-				"section-2": {
-					"blockTypes": [ "core/group" ],
-					"color": {
-						"background": "var:preset|color|neutral-50",
-						"text": { "ref": "styles.color.contrast" }
-					}
+				}
+			},
+			"section-2": {
+				"color": {
+					"background": "var:preset|color|neutral-50",
+					"text": { "ref": "styles.color.contrast" }
 				}
 			}
 		}

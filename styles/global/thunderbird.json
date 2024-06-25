@@ -434,76 +434,65 @@
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary"
 				}
+			}
+		},
+		"variations": {
+			"card": {
+				"border": {
+					"color": "var:preset|color|neutral-300",
+					"style": "solid",
+					"width": "1px"
+				},
+				"color": {
+					"background": "var:preset|color|white"
+				}
 			},
-			"variations": {
-				"card": {
-					"blockTypes": [ "core/group" ],
-					"border": {
-						"color": "var:preset|color|neutral-300",
+			"card-footer": {
+				"color": {
+					"background": "var:preset|color|neutral-50"
+				}
+			},
+			"comment-meta": {
+				"color": {
+					"text": "var:preset|color|neutral-500"
+				}
+			},
+			"post-byline": {
+				"color": {
+					"text": "var:preset|color|neutral-500"
+				}
+			},
+			"post-meta": {
+				"color": {
+					"text": "var:preset|color|neutral-500"
+				}
+			},
+			"section-3": {
+				"color": {
+					"background": "var:preset|gradient|270-deg-white-transparent"
+				}
+			},
+			"site-footer": {
+				"border": {
+					"top": {
+						"color": "var:preset|color|neutral-100",
+						"width": "1px"
+					}
+				},
+				"color": {
+					"background": "var:preset|color|white"
+				}
+			},
+			"site-header": {
+				"border": {
+					"bottom": {
+						"color": "var:preset|color|neutral-100",
 						"style": "solid",
 						"width": "1px"
-					},
-					"color": {
-						"background": "var:preset|color|white"
 					}
 				},
-				"card-footer": {
-					"blockTypes": [ "core/group" ],
-					"color": {
-						"background": "var:preset|color|neutral-50"
-					}
-				},
-				"comment-meta": {
-					"blockTypes": [ "core/group" ],
-					"color": {
-						"text": "var:preset|color|neutral-500"
-					}
-				},
-				"post-byline": {
-					"blockTypes": [ "core/group" ],
-					"color": {
-						"text": "var:preset|color|neutral-500"
-					}
-				},
-				"post-meta": {
-					"blockTypes": [ "core/group" ],
-					"color": {
-						"text": "var:preset|color|neutral-500"
-					}
-				},
-				"section-3": {
-					"blockTypes": [ "core/group" ],
-					"color": {
-						"background": "var:preset|gradient|270-deg-white-transparent"
-					}
-				},
-				"site-footer": {
-					"blockTypes": [
-						"core/columns",
-						"core/group"
-					],
-					"border": {
-						"top": {
-							"color": "var:preset|color|neutral-100",
-							"width": "1px"
-						}
-					},
-					"color": {
-						"background": "var:preset|color|white"
-					}
-				},
-				"site-header": {
-					"blockTypes": [ "core/group" ],
-					"border": {
-						"bottom": {
-							"color": "var:preset|color|neutral-100",
-							"style": "solid",
-							"width": "1px"
-						}
-					},
-					"color": {
-						"background": "var:preset|color|white"
-					}
+				"color": {
+					"background": "var:preset|color|white"
 				}
 			}
 		}
