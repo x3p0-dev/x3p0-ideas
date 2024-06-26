@@ -6,7 +6,7 @@
 	"blockTypes": [ "core/group" ],
 	"styles": {
 		"color": {
-			"background": "var:preset|gradient|90-deg-neutral-50-transparent"
+			"background": "var:preset|color|neutral-50"
 		},
 		"spacing": {
 			"padding": {

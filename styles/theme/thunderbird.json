@@ -467,11 +467,6 @@
 					"text": "var:preset|color|neutral-500"
 				}
 			},
-			"section-3": {
-				"color": {
-					"background": "var:preset|gradient|270-deg-white-transparent"
-				}
-			},
 			"site-footer": {
 				"border": {
 					"top": {

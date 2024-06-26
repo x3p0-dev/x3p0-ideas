@@ -541,23 +541,6 @@
 					"background": "var:preset|color|primary-700"
 				}
 			},
-			"section-3": {
-				"color": {
-					"background": "transparent"
-				},
-				"border": {
-					"top": {
-						"color": "var:preset|color|neutral-300",
-						"style": "solid",
-						"width": "1px"
-					},
-					"bottom": {
-						"color": "var:preset|color|neutral-300",
-						"style": "solid",
-						"width": "1px"
-					}
-				}
-			},
 			"site-footer": {
 				"border": {
 					"top": {

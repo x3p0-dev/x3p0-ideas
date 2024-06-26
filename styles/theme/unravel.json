@@ -547,6 +547,11 @@
 					"background": "var:preset|color|neutral-50",
 					"text": { "ref": "styles.color.contrast" }
 				}
+			},
+			"section-3": {
+				"color": {
+					"background": "transparent"
+				}
 			}
 		}
 	}
