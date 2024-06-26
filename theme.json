@@ -31,13 +31,6 @@
 					}
 				}
 			},
-			"core/group": {
-				"custom": {
-					"cardFooter": {
-						"background": "var:preset|color|neutral-100"
-					}
-				}
-			},
 			"core/image": {
 				"lightbox": {
 					"allowEditing": true,
