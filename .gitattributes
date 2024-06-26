@@ -37,6 +37,12 @@ tests/ export-ignore
 /resources/fonts export-ignore
 /resources/media export-ignore
 
+# Don't export experimental features.
+/experimental export-ignore
+
+# Don't export experimental style variations.
+/styles/theme/unravel.json export-ignore
+
 # Note that we're retaining the `resources/js` and `resources/scss` folders,
 # despite them containing dev-only files. They are required for themes submitted
 # to WordPress.org. You may uncomment the following attribute lines if you don't
