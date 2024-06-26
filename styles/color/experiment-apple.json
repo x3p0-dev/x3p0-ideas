@@ -1,0 +1,96 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Apple",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "base",
+					"color": "#ffffff",
+					"name": "Base"
+				},
+				{
+					"slug": "contrast",
+					"color": "#1f2937",
+					"name": "Contrast"
+				},
+				{
+					"slug": "primary-950",
+					"color": "#0b2b08",
+					"name": "Primary: 950"
+				},
+				{
+					"slug": "primary-900",
+					"color": "#1d4f18",
+					"name": "Primary: 900"
+				},
+				{
+					"slug": "primary-700",
+					"color": "#26791c",
+					"name": "Primary: 700"
+				},
+				{
+					"slug": "primary-500",
+					"color": "#3eba2d",
+					"name": "Primary: 500"
+				},
+				{
+					"slug": "primary-300",
+					"color": "#98e88d",
+					"name": "Primary: 300"
+				},
+				{
+					"slug": "primary-100",
+					"color": "#e2fade",
+					"name": "Primary: 100"
+				},
+				{
+					"slug": "primary-50",
+					"color": "#f3fcf1",
+					"name": "Primary: 50"
+				},
+				{
+					"slug": "neutral-950",
+					"color": "#030712",
+					"name": "Neutral: 950"
+				},
+				{
+					"slug": "neutral-900",
+					"color": "#111827",
+					"name": "Neutral: 900"
+				},
+				{
+					"slug": "neutral-700",
+					"color": "#374151",
+					"name": "Neutral: 700"
+				},
+				{
+					"slug": "neutral-500",
+					"color": "#6b7280",
+					"name": "Neutral: 500"
+				},
+				{
+					"slug": "neutral-300",
+					"color": "#d1d5db",
+					"name": "Neutral: 300"
+				},
+				{
+					"slug": "neutral-100",
+					"color": "#f3f4f6",
+					"name": "Neutral: 100"
+				},
+				{
+					"slug": "neutral-50",
+					"color": "#f9fafb",
+					"name": "Neutral: 50"
+				},
+				{
+					"slug": "black",
+					"color": "#ffffff",
+					"name": "Black"
+				}
+			]
+		}
+	}
+}

@@ -41,7 +41,7 @@ tests/ export-ignore
 /experiments export-ignore
 
 # Don't export experimental style variations.
-/styles/theme/unravel.json export-ignore
+/styles/*/experiment-*.json export-ignore
 
 # Note that we're retaining the `resources/js` and `resources/scss` folders,
 # despite them containing dev-only files. They are required for themes submitted

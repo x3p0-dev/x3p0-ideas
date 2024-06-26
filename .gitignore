@@ -14,18 +14,3 @@
 *.map
 .DS_Store
 
-/styles/color/*.json
-
-/styles/theme/*.json
-!/styles/theme/a-little-bit-bookish.json
-!/styles/theme/boundaries.json
-!/styles/theme/chestnut-rose.json
-!/styles/theme/extant.json
-!/styles/theme/memories.json
-!/styles/theme/saga.json
-!/styles/theme/th5.json
-!/styles/theme/thunderbird.json
-!/styles/theme/unravel.json
-
-/styles/typography/*.json
-!/styles/typography/work-and-play.json

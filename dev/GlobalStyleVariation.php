@@ -123,7 +123,7 @@ class GlobalStyleVariation implements Bootable
 			return $theme_json;
 		}
 
-		$filename = $this->getFilename("theme/{$this->theme}");
+		$filename = $this->getFilename('theme', $this->theme);
 
 		if (! is_readable($filename)) {
 			return $theme_json;
@@ -150,7 +150,7 @@ class GlobalStyleVariation implements Bootable
 			return $theme_json;
 		}
 
-		$filename = $this->getFilename("color/{$this->color}");
+		$filename = $this->getFilename('color', $this->color);
 
 		if (! is_readable($filename)) {
 			return $theme_json;
@@ -177,7 +177,7 @@ class GlobalStyleVariation implements Bootable
 			return $theme_json;
 		}
 
-		$filename = $this->getFilename("typography/{$this->typography}");
+		$filename = $this->getFilename('typography', $this->typography);
 
 		if (! is_readable($filename)) {
 			return $theme_json;
@@ -196,12 +196,16 @@ class GlobalStyleVariation implements Bootable
 	 *
 	 * @since 1.0.0
 	 */
-	protected function getFilename(string $variation = ''): string
+	protected function getFilename(string $path, string $variation = ''): string
 	{
 		if ('' === $variation) {
 			return '';
 		}
 
-		return get_theme_file_path("styles/{$variation}.json");
+		if (file_exists(get_theme_file_path("styles/{$path}/{$variation}.json"))) {
+			return get_theme_file_path("styles/{$path}/{$variation}.json");
+		}
+
+		return get_theme_file_path("styles/{$path}/experiment-{$variation}.json");
 	}
 }
