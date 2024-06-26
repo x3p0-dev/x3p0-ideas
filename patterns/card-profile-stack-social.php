@@ -107,10 +107,10 @@ defined('ABSPATH') || exit;
 				}
 			}
 		},
-		"className":"is-style-card-footer",
+		"className":"is-style-card-offset",
 		"layout":{"type":"default"}
 	} -->
-	<footer class="wp-block-group is-style-card-footer" style="padding-top:var(--wp--preset--spacing--base);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--base);padding-left:var(--wp--preset--spacing--plus-3);font-style:normal;font-weight:600">
+	<footer class="wp-block-group is-style-card-offset" style="padding-top:var(--wp--preset--spacing--base);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--base);padding-left:var(--wp--preset--spacing--plus-3);font-style:normal;font-weight:600">
 
 		<!-- wp:social-links {
 			"templateLock":"all",

@@ -548,8 +548,13 @@
 					"text": "var:preset|color|contrast"
 				}
 			},
-			"card-footer": {
+			"card-offset": {
 				"border": {
+					"bottom": {
+						"color": "var:custom|global|border-color",
+						"style": "solid",
+						"width": "1px"
+					},
 					"top": {
 						"color": "var:custom|global|border-color",
 						"style": "solid",

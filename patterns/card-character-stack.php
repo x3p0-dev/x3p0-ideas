@@ -151,13 +151,13 @@ $image = get_theme_file_uri('public/media/images/default-16x9.webp');
 				}
 			}
 		},
-		"className":"is-style-card-footer",
+		"className":"is-style-card-offset",
 		"layout":{
 			"type":"grid",
 			"minimumColumnWidth":"30%"
 		}
 	} -->
-	<footer class="wp-block-group alignfull is-style-card-footer" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
+	<footer class="wp-block-group alignfull is-style-card-offset" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 
 		<?php foreach (range(1, 3) as $skill) : ?>
 

@@ -83,13 +83,13 @@ $icon = get_theme_file_uri('public/media/svg/earthquake.svg');
 				"blockGap":"var:preset|spacing|minus-3"
 			}
 		},
-		"backgroundColor":"neutral-50",
+		"className": "is-style-card-offset",
 		"layout":{
 			"type":"flex",
 			"flexWrap":"nowrap"
 		}
 	} -->
-	<div class="wp-block-group has-neutral-50-background-color has-background" style="padding-top:var(--wp--preset--spacing--base);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--base);padding-left:var(--wp--preset--spacing--plus-3)">
+	<div class="wp-block-group is-style-card-offset" style="padding-top:var(--wp--preset--spacing--base);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--base);padding-left:var(--wp--preset--spacing--plus-3)">
 
 		<!-- wp:paragraph {
 			"style":{
@@ -103,14 +103,8 @@ $icon = get_theme_file_uri('public/media/svg/earthquake.svg');
 		<p class="has-7-xl-font-size" style="font-style:normal;font-weight:900"><?= esc_html__('$95', 'x3p0-ideas') ?></p>
 		<!-- /wp:paragraph -->
 
-		<!-- wp:paragraph {
-			"style":{
-				"elements":{"link":{"color":{"text":"var:preset|color|neutral-700"}}}
-			},
-			"textColor":"neutral-700",
-			"fontSize":"xs"
-		} -->
-		<p class="has-neutral-700-color has-text-color has-link-color has-xs-font-size"><?= esc_html__('/ year', 'x3p0-ideas') ?></p>
+		<!-- wp:paragraph {"fontSize":"xs"} -->
+		<p class="has-xs-font-size"><?= esc_html__('/ year', 'x3p0-ideas') ?></p>
 		<!-- /wp:paragraph -->
 
 	</div>

@@ -452,8 +452,13 @@
 				},
 				"shadow": "var:preset|shadow|md"
 			},
-			"card-footer": {
+			"card-offset": {
 				"border": {
+					"bottom": {
+						"color": "var:custom|global|border-color",
+						"style": "var:custom|global|border-style",
+						"width": "var:custom|global|border-width"
+					},
 					"top": {
 						"color": "var:custom|global|border-color",
 						"style": "var:custom|global|border-style",

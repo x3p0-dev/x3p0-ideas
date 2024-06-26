@@ -447,7 +447,7 @@
 					"background": "var:preset|color|white"
 				}
 			},
-			"card-footer": {
+			"card-offset": {
 				"color": {
 					"background": "var:preset|color|neutral-50"
 				}

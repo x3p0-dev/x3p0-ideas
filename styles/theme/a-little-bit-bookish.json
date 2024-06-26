@@ -330,8 +330,13 @@
 					"background": "var:preset|color|neutral-50"
 				}
 			},
-			"card-footer": {
+			"card-offset": {
 				"border": {
+					"bottom": {
+						"color": "var:custom|global|border-color",
+						"style": "var:custom|global|border-style",
+						"width": "1px"
+					},
 					"top": {
 						"color": "var:custom|global|border-color",
 						"style": "var:custom|global|border-style",
