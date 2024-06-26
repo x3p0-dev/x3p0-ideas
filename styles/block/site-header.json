@@ -4,5 +4,9 @@
 	"title": "Site Header",
 	"slug": "site-header",
 	"blockTypes": [ "core/group" ],
-	"styles": {}
+	"styles": {
+		"color": {
+			"background": "transparent"
+		}
+	}
 }
