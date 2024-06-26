@@ -285,7 +285,7 @@
 							"fontStyle": "normal",
 							"fontStretch": "normal",
 							"src": [
-								"file:./experimental/fonts/pacifico/pacifico.woff2"
+								"file:./experiments/fonts/pacifico/pacifico.woff2"
 							]
 						},
 						{
@@ -294,7 +294,7 @@
 							"fontStyle": "normal",
 							"fontStretch": "normal",
 							"src": [
-								"file:./experimental/fonts/pacifico/pacifico-light.woff2"
+								"file:./experiments/fonts/pacifico/pacifico-light.woff2"
 							]
 						}
 					]

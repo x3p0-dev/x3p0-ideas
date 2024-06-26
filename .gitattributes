@@ -38,7 +38,7 @@ tests/ export-ignore
 /resources/media export-ignore
 
 # Don't export experimental features.
-/experimental export-ignore
+/experiments export-ignore
 
 # Don't export experimental style variations.
 /styles/theme/unravel.json export-ignore
