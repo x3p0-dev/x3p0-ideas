@@ -118,6 +118,14 @@ defined('ABSPATH') || exit;
 			"iconColor":"contrast",
 			"iconColorValue":"#000000",
 			"size":"has-large-icon-size",
+			"style":{
+				"spacing":{
+					"blockGap":{
+						"top":"var:preset|spacing|minus-3",
+						"left":"var:preset|spacing|minus-3"
+					}
+				}
+			},
 			"className":"is-style-logos-only",
 			"layout":{
 				"type":"flex",
