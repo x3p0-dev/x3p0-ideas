@@ -61,11 +61,12 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 		<div class="wp-block-group">
 
 			<!-- wp:heading {
+				"level":1,
 				"align":"wide",
 				"className":"has-text-shadow-sm",
 				"fontSize":"5-xl"
 			} -->
-			<h2 class="wp-block-heading alignwide has-text-shadow-sm has-5-xl-font-size"><?php esc_html_e("Hello. I'm Jordan Doe.", 'x3p0-ideas') ?></h2>
+			<h1 class="wp-block-heading alignwide has-text-shadow-sm has-5-xl-font-size"><?php esc_html_e("Hello. I'm Jordan Doe.", 'x3p0-ideas') ?></h1>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"className":"has-text-shadow-sm","fontSize":"xl"} -->
