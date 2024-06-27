@@ -140,4 +140,19 @@ class Frontend implements Bootable
 
 		return $classes;
 	}
+
+	/**
+	 * Replaces the space before the required field indicator with a
+	 * non-breaking space. This ensures that the indicator doesn't end up on
+	 * a line by itself in the comment form. 😢
+	 *
+	 * @hook  wp_required_field_message
+	 * @since 1.0.0
+	 */
+	public function filterRequiredFieldMessage(string $message): string
+	{
+		$indicator = wp_required_field_indicator();
+
+		return str_replace( " {$indicator}", "&nbsp;{$indicator}", $message);
+	}
 }
