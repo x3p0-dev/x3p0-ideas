@@ -37,7 +37,7 @@
 							"fontStyle": "normal",
 							"fontStretch": "100%",
 							"src": [
-								"file:./experimental/fonts/roboto/roboto-serif.woff2"
+								"file:./experiments/fonts/roboto/roboto-serif.woff2"
 							]
 						},
 						{
@@ -46,7 +46,7 @@
 							"fontStyle": "italic",
 							"fontStretch": "100%",
 							"src": [
-								"file:./experimental/fonts/roboto/roboto-serif-italic.woff2"
+								"file:./experiments/fonts/roboto/roboto-serif-italic.woff2"
 							]
 						}
 					]
