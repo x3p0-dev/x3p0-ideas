@@ -247,6 +247,18 @@
 		}
 	},
 	"styles": {
+		"border": {
+			"top": {
+				"color": "var:preset|color|primary-500",
+				"style": "solid",
+				"width": "6px"
+			},
+			"bottom": {
+				"color": "var:preset|color|primary-500",
+				"style": "solid",
+				"width": "6px"
+			}
+		},
 		"elements": {
 			"caption": {
 				"typography": {
@@ -552,11 +564,6 @@
 						"color": "var:preset|color|neutral-300",
 						"style": "solid",
 						"width": "1px"
-					},
-					"bottom": {
-						"color": "var:preset|color|primary-500",
-						"style": "solid",
-						"width": "6px"
 					}
 				},
 				"color": {
@@ -565,11 +572,6 @@
 			},
 			"site-header": {
 				"border": {
-					"top": {
-						"color": "var:preset|color|primary-500",
-						"style": "solid",
-						"width": "6px"
-					},
 					"bottom": {
 						"color": "var:preset|color|neutral-100",
 						"style": "solid",
