@@ -284,9 +284,6 @@
 					"lineHeight":"var:custom|line-height|xs"
 				}
 			},
-			"core/cover": {
-				"css": "& :where(:is(h1, h2).wp-block-heading) {\n\tfont-weight: 200;\n}"
-			},
 			"core/gallery": {
 				"typography": {
 					"fontStyle": "italic",

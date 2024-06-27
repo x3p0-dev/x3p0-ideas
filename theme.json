@@ -1339,7 +1339,6 @@
 						}
 					}
 				},
-				"css": "& h1.wp-block-heading, h2.wp-block-heading {\n\tfont-weight: 900;\n}",
 				"variations": {
 					"fade-in": {
 						"color": {
