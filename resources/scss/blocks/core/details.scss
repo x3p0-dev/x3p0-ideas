@@ -24,6 +24,9 @@
 	transition: all 0.5s ease-in-out;
 	overflow: hidden; // <summary> background can bleed over rounded corners.
 
+	// Ensures that `cqi` values are based on their container, not the viewport.
+	container-type: inline-size;
+
 	// Pad the bottom when details element is open.
 	&[open] {
 		padding-bottom: var(--wp--style--block-gap);
