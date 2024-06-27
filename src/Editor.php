@@ -143,6 +143,8 @@ class Editor implements Bootable
 		@font-face{font-family:Raleway;font-style:italic;font-weight:100 900;font-display:fallback;src:url('{$path}/public/fonts/raleway/raleway-italic.woff2') format('woff2');font-stretch:normal;}
 		@font-face{font-family:'Work Sans';font-style:normal;font-weight:100 900;font-display:fallback;src:url('{$path}/public/fonts/work-sans/work-sans.woff2') format('woff2');font-stretch:normal;}
 		@font-face{font-family:'Work Sans';font-style:italic;font-weight:100 900;font-display:fallback;src:url('{$path}/public/fonts/work-sans/work-sans-italic.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:'Roboto Serif';font-style:normal;font-weight:100 900;font-display:fallback;src:url('{$path}/experimental/fonts/roboto/roboto-serif.woff2') format('woff2');font-stretch:100%;}
+		@font-face{font-family:'Roboto Serif';font-style:italic;font-weight:100 900;font-display:fallback;src:url('{$path}/experimental/fonts/roboto/roboto-serif-italic.woff2') format('woff2');font-stretch:100%;}
 		";
 	}
 }
