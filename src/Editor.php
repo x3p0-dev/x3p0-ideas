@@ -15,6 +15,7 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas;
 
+use WP_Block_Editor_Context;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\HookAnnotation;
 
@@ -84,8 +85,17 @@ class Editor implements Bootable
 	 * @hook  block_editor_settings_all last
 	 * @since 1.0.0
 	 */
-	public function registerSettings(array $settings): array
-	{
+	public function registerSettings(
+		array $settings,
+		WP_Block_Editor_Context $context
+	): array {
+		// Load all theme fonts on the Site Editor screen.
+		if ('core/edit-site' === $context->name) {
+			$settings['styles'][] = [
+				'css' => $this->getFontCss()
+			];
+		}
+
 		$settings['imageDefaultSize']   = 'x3p0-16x9-lg';
 		$settings['fontLibraryEnabled'] = false;
 
@@ -94,5 +104,45 @@ class Editor implements Bootable
 		$settings['__experimentalFeatures']['spacing']['defaultSpacingSizes'] = false;
 
 		return $settings;
+	}
+
+	/**
+	 * Quick and hacky method of loading all fonts.
+	 *
+	 * @since  1.0.0
+	 * @todo   Create a more functional method of loading these.
+	 */
+	private function getFontCss(): string
+	{
+		$path = get_parent_theme_file_uri();
+		return "
+		@font-face{font-family:Jost;font-style:normal;font-weight:100 900;font-display:fallback;src:url('{$path}/public/fonts/jost/jost.woff2') format('woff2');font-feature-settings:'tnum', 'ss01' 1;font-stretch:normal;}
+		@font-face{font-family:Jost;font-style:italic;font-weight:100 900;font-display:fallback;src:url('{$path}/public/fonts/jost/jost-italic.woff2') format('woff2');font-feature-settings:'tnum', 'ss01' 1;font-stretch:normal;}
+		@font-face{font-family:'Roboto Flex';font-style:normal;font-weight:100 1000;font-display:fallback;src:url('{$path}/public/fonts/roboto/roboto-flex.woff2') format('woff2');font-stretch:25% 151%;}
+		@font-face{font-family:'Roboto Slab';font-style:normal;font-weight:100 900;font-display:fallback;src:url('{$path}/public/fonts/roboto/roboto-slab.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:Playfair;font-style:normal;font-weight:200 700;font-display:fallback;src:url('{$path}/public/fonts/playfair/playfair.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:Playfair;font-style:italic;font-weight:200 700;font-display:fallback;src:url('{$path}/public/fonts/playfair/playfair-italic.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:'Dancing Script';font-style:normal;font-weight:400 700;font-display:fallback;src:url('{$path}/public/fonts/dancing-script/dancing-script.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:Cabin;font-style:normal;font-weight:400 700;font-display:fallback;src:url('{$path}/public/fonts/cabin/cabin.woff2') format('woff2');font-stretch:75% 100%;}
+		@font-face{font-family:Cabin;font-style:italic;font-weight:400 700;font-display:fallback;src:url('{$path}/public/fonts/cabin/cabin-italic.woff2') format('woff2');font-stretch:75% 100%;}
+		@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:200 800;font-display:fallback;src:url('{$path}/public/fonts/plus-jakarta-sans/plus-jakarta-sans.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:'Plus Jakarta Sans';font-style:italic;font-weight:200 800;font-display:fallback;src:url('{$path}/public/fonts/plus-jakarta-sans/plus-jakarta-sans-italic.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:100 800;font-display:fallback;src:url('{$path}/public/fonts/jetbrains-mono/jetbrains-mono.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:'JetBrains Mono';font-style:italic;font-weight:100 800;font-display:fallback;src:url('{$path}/public/fonts/jetbrains-mono/jetbrains-mono-italic.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:'Source Serif';font-style:normal;font-weight:200 900;font-display:fallback;src:url('{$path}/public/fonts/source/source-serif.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:'Source Serif';font-style:italic;font-weight:200 900;font-display:fallback;src:url('{$path}/public/fonts/source/source-serif-italic.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:'Playfair Display';font-style:normal;font-weight:400 900;font-display:fallback;src:url('{$path}/public/fonts/playfair/playfair-display.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:'Playfair Display';font-style:italic;font-weight:400 900;font-display:fallback;src:url('{$path}/public/fonts/playfair/playfair-display-italic.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:'Source Sans';font-style:normal;font-weight:200 900;font-display:fallback;src:url('{$path}/public/fonts/source/source-sans.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:'Source Sans';font-style:italic;font-weight:200 900;font-display:fallback;src:url('{$path}/public/fonts/source/source-sans-italic.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:Satisfy;font-style:normal;font-weight:400;font-display:fallback;src:url('{$path}/experiments/fonts/satisfy/satisfy.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:Montserrat;font-style:normal;font-weight:100 900;font-display:fallback;src:url('{$path}/experiments/fonts/montserrat/montserrat.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:Montserrat;font-style:italic;font-weight:100 900;font-display:fallback;src:url('{$path}/experiments/fonts/montserrat/montserrat-italic.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:Caveat;font-style:normal;font-weight:400 700;font-display:fallback;src:url('{$path}/public/fonts/caveat/caveat.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:Raleway;font-style:normal;font-weight:100 900;font-display:fallback;src:url('{$path}/public/fonts/raleway/raleway.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:Raleway;font-style:italic;font-weight:100 900;font-display:fallback;src:url('{$path}/public/fonts/raleway/raleway-italic.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:'Work Sans';font-style:normal;font-weight:100 900;font-display:fallback;src:url('{$path}/public/fonts/work-sans/work-sans.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:'Work Sans';font-style:italic;font-weight:100 900;font-display:fallback;src:url('{$path}/public/fonts/work-sans/work-sans-italic.woff2') format('woff2');font-stretch:normal;}
+		";
 	}
 }
