@@ -112,7 +112,7 @@
 			"core/navigation": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|secondary",
-					"fontSize": "var:preset|font-size|sm"
+					"fontSize": "var:preset|font-size|xs"
 				}
 			},
 			"core/post-comments-form": {
@@ -179,7 +179,8 @@
 			},
 			"x3p0/breadcrumbs": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|secondary"
+					"fontFamily": "var:preset|font-family|secondary",
+					"fontSize": "var:preset|font-size|xs"
 				}
 			}
 		}
