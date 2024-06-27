@@ -1,0 +1,206 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Statement",
+	"settings": {
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "Oswald, ui-sans-serif, sans-serif",
+					"slug": "primary",
+					"name": "Primary (Oswald)",
+					"fontFace": [
+						{
+							"fontFamily": "Oswald",
+							"fontWeight": "200 700",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./experiments/fonts/oswald/oswald.woff2" ]
+						}
+					]
+				},
+				{
+					"fontFamily": "Cabin, ui-sans-serif, sans-serif",
+					"slug": "secondary",
+					"name": "Secondary (Cabin)",
+					"fontFace": [
+						{
+							"fontFamily": "Cabin",
+							"fontWeight": "400 700",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./public/fonts/cabin/cabin.woff2" ]
+						},
+						{
+							"fontFamily": "Cabin",
+							"fontWeight": "400 700",
+							"fontStyle": "italic",
+							"fontStretch": "normal",
+							"src": [ "file:./public/fonts/cabin/cabin-italic.woff2" ]
+						}
+					]
+				},
+				{
+					"fontFamily": "'Permanent Marker', cursive",
+					"slug": "tertiary",
+					"name": "Tertiary (Permanent Marker)",
+					"fontFace": [
+						{
+							"fontFamily": "Permanent Marker",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./experiments/fonts/permanent-marker/permanent-marker.woff2" ]
+						}
+					]
+				},
+				{
+					"fontFamily": "ui-monospace, 'Fira Code', 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace",
+					"slug": "mono",
+					"name": "Monospace"
+				}
+			]
+		}
+	},
+	"styles": {
+		"elements": {
+			"button": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|secondary"
+				}
+			},
+			"caption": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|tertiary",
+					"fontSize": "var:preset|font-size|md",
+					"fontStyle": "italic",
+					"fontWeight": "400",
+					"textTransform": "none"
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontWeight": "700",
+					"textTransform": "none"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontWeight": "700"
+				}
+			}
+		},
+		"blocks": {
+			"core/calendar": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|tertiary"
+				}
+			},
+			"core/comments-title": {
+				"typography": {
+					"fontSize": "var:preset|font-size|xl",
+					"lineHeight": "var:preset|line-height|xl"
+				}
+			},
+			"core/gallery": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|primary",
+					"fontSize": "var:preset|font-size|sm",
+					"fontStyle": "italic",
+					"textTransform": "none"
+				}
+			},
+			"core/image": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|primary",
+					"fontSize": "var:preset|font-size|sm",
+					"fontStyle": "italic",
+					"textTransform": "none"
+				}
+			},
+			"core/navigation": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|secondary",
+					"fontSize": "var:preset|font-size|xs"
+				}
+			},
+			"core/nextpage": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|tertiary",
+					"fontStyle": "normal",
+					"fontWeight": "400"
+				}
+			},
+			"core/post-comments-form": {
+				"elements": {
+					"h3": {
+						"typography": {
+							"fontSize": "var:preset|font-size|xl",
+							"lineHeight": "var:preset|line-height|xl"
+						}
+					}
+				}
+			},
+			"core/pullquote": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|tertiary",
+					"fontStyle": "normal",
+					"fontWeight": "400"
+				},
+				"elements": {
+					"cite": {
+						"typography": {
+							"fontFamily": "var:preset|font-family|secondary",
+							"fontStyle": "normal",
+							"fontWeight": "300"
+						}
+					}
+				}
+			},
+			"core/query-pagination": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|tertiary",
+					"fontSize": "var:preset|font-size|sm",
+					"fontWeight": "400"
+				}
+			},
+			"core/quote": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|secondary"
+				},
+				"elements": {
+					"cite": {
+						"typography": {
+							"fontFamily": "var:preset|font-family|secondary",
+							"fontSize": "1em",
+							"fontStyle": "italic"
+						}
+					}
+				}
+			},
+			"core/site-title": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|primary",
+					"fontSize": "var:preset|font-size|lg",
+					"fontStyle": "normal",
+					"fontWeight": "700",
+					"letterSpacing": "0",
+					"textTransform": "none"
+				}
+			},
+			"core/verse": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|secondary",
+					"fontSize": "inherit",
+					"fontStyle": "italic"
+				}
+			},
+			"x3p0/breadcrumbs": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|secondary",
+					"fontSize": "var:preset|font-size|sm"
+				}
+			}
+		}
+	}
+}

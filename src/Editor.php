@@ -145,6 +145,10 @@ class Editor implements Bootable
 		@font-face{font-family:'Work Sans';font-style:italic;font-weight:100 900;font-display:fallback;src:url('{$path}/public/fonts/work-sans/work-sans-italic.woff2') format('woff2');font-stretch:normal;}
 		@font-face{font-family:'Roboto Serif';font-style:normal;font-weight:100 900;font-display:fallback;src:url('{$path}/experimental/fonts/roboto/roboto-serif.woff2') format('woff2');font-stretch:100%;}
 		@font-face{font-family:'Roboto Serif';font-style:italic;font-weight:100 900;font-display:fallback;src:url('{$path}/experimental/fonts/roboto/roboto-serif-italic.woff2') format('woff2');font-stretch:100%;}
+		@font-face{font-family:Oswald;font-style:normal;font-weight:200 700;font-display:fallback;src:url('{$path}/experiments/fonts/oswald/oswald.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:'Permanent Marker';font-style:normal;font-weight:400;font-display:fallback;src:url('{$path}/experiments/fonts/permanent-marker/permanent-marker.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:'Send Flowers';font-style:normal;font-weight:400;font-display:fallback;src:url('{$path}/experiments/fonts/send-flowers/send-flowers.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:Quicksand;font-style:normal;font-weight:300 700;font-display:fallback;src:url('{$path}/experiments/fonts/quicksand/quicksand.woff2') format('woff2');font-stretch:normal;}
 		";
 	}
 }
