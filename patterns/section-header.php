@@ -14,27 +14,38 @@ defined('ABSPATH') || exit;
 
 ?>
 <!-- wp:group {
-	"allowedBlocks":["core/heading","core/paragraph","core/buttons"],
-	"lock":{"move":true,"remove":true},
+	"allowedBlocks":[
+		"core/heading",
+		"core/paragraph",
+		"core/buttons"
+	],
+	"lock":{
+		"move":true,
+		"remove":true
+	},
 	"tagName":"header",
 	"metadata":{"name":"<?= esc_attr__('Section Header', 'x3p0-ideas') ?>"},
-	"style":{"spacing":{"blockGap":"var:preset|spacing|base"}},
+	"style":{
+		"spacing":{
+			"blockGap":"var:preset|spacing|base"
+		}
+	},
+	"typography":{"textAlign":"center"},
 	"layout":{"type":"constrained"}
 } -->
-<header class="wp-block-group">
+<header class="wp-block-group has-text-align-center">
 
 	<!-- wp:heading {
 		"lock":{
 			"move":false,
 			"remove":true
-		},
-		"textAlign":"center"
+		}
 	} -->
-	<h2 class="wp-block-heading has-text-align-center"><?= esc_html__('Placeholder Heading', 'x3p0-ideas') ?></h2>
+	<h2 class="wp-block-heading"><?= esc_html__('Placeholder Heading', 'x3p0-ideas') ?></h2>
 	<!-- /wp:heading -->
 
-	<!-- wp:paragraph {"align":"center"} -->
-	<p class="has-text-align-center"><?= esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum turpis quis metus aliquam, id pharetra arcu dignissim. Sed in sollicitudin mi.', 'x3p0-ideas') ?></p>
+	<!-- wp:paragraph -->
+	<p><?= esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum turpis quis metus aliquam, id pharetra arcu dignissim. Sed in sollicitudin mi.', 'x3p0-ideas') ?></p>
 	<!-- /wp:paragraph -->
 
 </header>
