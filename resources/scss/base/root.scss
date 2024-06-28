@@ -8,8 +8,8 @@
 // Custom colors for selecting text in the browser. Can be set in `theme.json`
 // via `custom.global.::selectionColor` and `custom.global.::selectionBackground`.
 ::selection {
-	color: var(--wp--custom--global--selection-color);
-	background: var(--wp--custom--global--selection-background);
+	color: var(--wp--custom--elements--selection--color);
+	background: var(--wp--custom--elements--selection--background);
 }
 
 ///
