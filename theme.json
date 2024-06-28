@@ -619,14 +619,6 @@
 				"6-xl": "1.03125",
 				"7-xl": "1.015625"
 			},
-			"pattern": {
-				"footerCallToAction": {
-					"background": "var:preset|color|neutral-50"
-				},
-				"footerLinks": {
-					"background": "var:preset|color|neutral-50"
-				}
-			},
 			"siteBlocks": {
 				"gap": "0"
 			},

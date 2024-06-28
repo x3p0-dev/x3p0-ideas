@@ -426,7 +426,7 @@
 					}
 				}
 			},
-			"core/social-link": {
+			"core/social-links": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary"
 				}
@@ -525,9 +525,6 @@
 			"site-footer": {
 				"color": {
 					"background": "var:preset|color|neutral-100"
-				},
-				"typography": {
-					"fontFamily": "var:preset|font-family|primary"
 				}
 			}
 		}

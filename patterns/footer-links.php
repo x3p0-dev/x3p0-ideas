@@ -18,28 +18,23 @@ defined('ABSPATH') || exit;
 <!-- wp:columns {
 	"metadata":{"name":"<?= esc_attr__('Footer Columns', 'x3p0-ideas') ?>"},
 	"align":"full",
-	"fontSize":"sm",
-	"className":"pattern-footer-links is-style-site-footer"
+	"className":"is-style-site-footer"
 } -->
-<div class="wp-block-columns alignfull has-sm-font-size pattern-footer-links is-style-site-footer">
+<div class="wp-block-columns alignfull is-style-site-footer">
 
 	<!-- wp:column {
 		"metadata":{"name":"<?= esc_attr__('About Column', 'x3p0-ideas') ?>"},
-		"style":{"spacing":{"blockGap":"var:preset|spacing|base"}}
+		"style":{
+			"spacing":{
+				"blockGap":"var:preset|spacing|base"
+			}
+		}
 	} -->
 	<div class="wp-block-column">
 
 		<!-- wp:site-title {
 			"level":0,
-			"isLink":false,
-			"style":{
-				"typography":{
-					"fontStyle":"normal",
-					"fontWeight":"700"
-				}
-			},
-			"className":"is-style-normalize",
-			"fontSize":"lg"
+			"isLink":false
 		} /-->
 
 		<!-- wp:paragraph -->
@@ -47,12 +42,9 @@ defined('ABSPATH') || exit;
 		<!-- /wp:paragraph -->
 
 		<!-- wp:social-links {
-			"iconColor":"neutral-900",
-			"iconColorValue":"#000000",
-			"size":"has-large-icon-size",
-			"className":"is-style-logos-only"
+			"size":"has-large-icon-size"
 		} -->
-		<ul class="wp-block-social-links has-large-icon-size has-icon-color is-style-logos-only">
+		<ul class="wp-block-social-links has-large-icon-size">
 			<!-- wp:social-link {"url":"https://wordpress.org","service":"wordpress"} /-->
 			<!-- wp:social-link {"url":"https://github.com","service":"github"} /-->
 			<!-- wp:social-link {"url":"https://facebook.com","service":"facebook"} /-->

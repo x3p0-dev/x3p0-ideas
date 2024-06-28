@@ -145,6 +145,11 @@
 					}
 				}
 			},
+			"core/social-links": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|secondary"
+				}
+			},
 			"core/site-title": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",

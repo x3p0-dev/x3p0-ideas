@@ -105,7 +105,8 @@
 			"core/navigation": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|secondary",
-					"fontSize": "var:preset|font-size|sm"
+					"fontSize": "var:preset|font-size|sm",
+					"textTransform": "none"
 				}
 			},
 			"core/post-comments-form": {

@@ -23,14 +23,18 @@ defined('ABSPATH') || exit;
 			"blockGap":"var:preset|spacing|plus-5"
 		}
 	},
-	"layout":{"type":"default"},
-	"className":"pattern-footer-call-to-action is-style-site-footer"
+	"className":"is-style-site-footer",
+	"layout":{"type":"default"}
 } -->
-<div class="wp-block-group alignfull pattern-footer-call-to-action is-style-site-footer">
+<div class="wp-block-group alignfull is-style-site-footer">
 
 	<!-- wp:group {
 		"metadata":{"name":"<?= esc_attr__('Call To Action', 'x3p0-ideas') ?>"},
-		"style":{"spacing":{"blockGap":"var:preset|spacing|base"}},
+		"style":{
+			"spacing":{
+				"blockGap":"var:preset|spacing|base"
+			}
+		},
 		"layout":{"type":"constrained"}
 	} -->
 	<div class="wp-block-group">
@@ -73,38 +77,21 @@ defined('ABSPATH') || exit;
 	<!-- wp:group {
 		"metadata":{"name":"<?= esc_attr__('Footer Content', 'x3p0-ideas') ?>"},
 		"align":"full",
-		"style":{"spacing":{"blockGap":"var:preset|spacing|base"}},
+		"style":{
+			"spacing":{
+				"blockGap":"var:preset|spacing|base"
+			}
+		},
 		"layout":{"type":"default"}
 	} -->
 	<div class="wp-block-group alignfull">
 
-		<!-- wp:social-links {
-			"showLabels":true,
-			"size":"has-small-icon-size",
-			"className":"is-style-outline",
-			"layout":{"type":"flex","justifyContent":"center"}
-		} -->
-		<ul class="wp-block-social-links has-small-icon-size has-visible-labels is-style-outline">
-			<!-- wp:social-link {"url":"https://wordpress.org","service":"wordpress"} /-->
-			<!-- wp:social-link {"url":"https://github.com","service":"github"} /-->
-			<!-- wp:social-link {"url":"https://facebook.com","service":"facebook"} /-->
-			<!-- wp:social-link {"url":"https://twitter.com","service":"twitter"} /-->
-			<!-- wp:social-link {"url":"https://twitch.tv","service":"twitch"} /-->
-		</ul>
-		<!-- /wp:social-links -->
+		<!-- wp:pattern {"slug":"x3p0-ideas/social-menu-outline"} /-->
 
 		<!-- wp:site-title {
 			"textAlign":"center",
 			"isLink":false,
-			"style":{
-				"typography":{
-					"textTransform":"uppercase",
-					"fontStyle":"normal",
-					"fontWeight":"600"
-				}
-			},
-			"className":"is-style-normalize",
-			"fontSize":"md"
+			"className":"is-style-normalize"
 		} /-->
 
 	</div>

@@ -606,6 +606,11 @@
 				"color": {
 					"background": "transparent"
 				}
+			},
+			"site-footer": {
+				"color": {
+					"background": "var:preset|color|neutral-950"
+				}
 			}
 		}
 	}

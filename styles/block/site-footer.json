@@ -8,6 +8,9 @@
 		"core/group"
 	],
 	"styles": {
+		"color": {
+			"background": "var:preset|color|neutral-50"
+		},
 		"spacing": {
 			"padding": {
 				"top": "var:preset|spacing|plus-6",
