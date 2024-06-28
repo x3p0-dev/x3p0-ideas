@@ -28,6 +28,7 @@ class Metadata implements Bootable
 	 */
 	private const SETTINGS_METHODS = [
 		'core/avatar'             => 'coreAvatar',
+		'core/group'              => 'coreGroup',
 		'core/heading'            => 'coreHeading',
 		'core/navigation-submenu' => 'coreNavigationSubmenu',
 		'core/query'              => 'coreQuery',
@@ -76,6 +77,21 @@ class Metadata implements Bootable
 	private function coreAvatar(array $settings): array
 	{
 		$settings['selectors']['border'] = '.wp-block-avatar';
+
+		return $settings;
+	}
+
+	/**
+	 * Adds `textAlign` support for the Group block. This is needed to align
+	 * sub-blocks (e.g., Heading, Paragraph) in one swoop rather than
+	 * aligning them individually.
+	 *
+	 * @since 1.0.0
+	 */
+	private function coreGroup(array $settings): array
+	{
+		$settings['supports']['typography']              ??= [];
+		$settings['supports']['typography']['textAlign'] ??= true;
 
 		return $settings;
 	}
