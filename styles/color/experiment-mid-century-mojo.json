@@ -1,0 +1,126 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Mid-Century Mojo",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "base",
+					"color": "#ffffff",
+					"name": "Base"
+				},
+				{
+					"slug": "contrast",
+					"color": "#000000",
+					"name": "Contrast"
+				},
+				{
+					"slug": "primary-950",
+					"color": "#3f1a10",
+					"name": "Primary: 950"
+				},
+				{
+					"slug": "primary-900",
+					"color": "#753727",
+					"name": "Primary: 900"
+				},
+				{
+					"slug": "primary-700",
+					"color": "#a9462c",
+					"name": "Primary: 700"
+				},
+				{
+					"slug": "primary-500",
+					"color": "#e07a5f",
+					"name": "Primary: 500"
+				},
+				{
+					"slug": "primary-300",
+					"color": "#f3bcae",
+					"name": "Primary: 300"
+				},
+				{
+					"slug": "primary-100",
+					"color": "#fbeae5",
+					"name": "Primary: 100"
+				},
+				{
+					"slug": "primary-50",
+					"color": "#fdf5f3",
+					"name": "Primary: 50"
+				},
+				{
+					"slug": "secondary-950",
+					"color": "#13201c",
+					"name": "Secondary: 950"
+				},
+				{
+					"slug": "secondary-900",
+					"color": "#273a33",
+					"name": "Secondary: 900"
+				},
+				{
+					"slug": "secondary-700",
+					"color": "#325345",
+					"name": "Secondary: 700"
+				},
+				{
+					"slug": "secondary-500",
+					"color": "#4c8069",
+					"name": "Secondary: 500"
+				},
+				{
+					"slug": "secondary-300",
+					"color": "#81b29a",
+					"name": "Secondary: 300"
+				},
+				{
+					"slug": "secondary-100",
+					"color": "#dcebe3",
+					"name": "Secondary: 100"
+				},
+				{
+					"slug": "secondary-50",
+					"color": "#f4f9f6",
+					"name": "Secondary: 50"
+				},
+				{
+					"slug": "neutral-950",
+					"color": "#2c2d3f",
+					"name": "Neutral: 950"
+				},
+				{
+					"slug": "neutral-900",
+					"color": "#3d405b",
+					"name": "Neutral: 900"
+				},
+				{
+					"slug": "neutral-700",
+					"color": "#5e6497",
+					"name": "Neutral: 700"
+				},
+				{
+					"slug": "neutral-500",
+					"color": "#7c89b5",
+					"name": "Neutral: 500"
+				},
+				{
+					"slug": "neutral-300",
+					"color": "#b8c2d8",
+					"name": "Neutral: 300"
+				},
+				{
+					"slug": "neutral-100",
+					"color": "#e7eaf2",
+					"name": "Neutral: 100"
+				},
+				{
+					"slug": "neutral-50",
+					"color": "#f5f6f9",
+					"name": "Neutral: 50"
+				}
+			]
+		}
+	}
+}
