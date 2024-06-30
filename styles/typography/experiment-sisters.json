@@ -163,7 +163,9 @@
 			"core/verse": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",
-					"fontStyle": "italic"
+					"fontSize": "var:preset|font-size|md",
+					"fontStyle": "normal",
+					"lineHeight": "var:custom|line-height|md"
 				}
 			},
 			"x3p0/breadcrumbs": {
