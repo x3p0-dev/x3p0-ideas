@@ -1289,12 +1289,6 @@
 				},
 				"css": "--wp--custom--block-gap--comments: var( --wp--preset--spacing--plus-4 );"
 			},
-			"core/comment-reply-link": {
-				"typography": {
-					"fontSize": "var:preset|font-size|sm",
-					"lineHeight": "var:custom|line-height|sm"
-				}
-			},
 			"core/comment-template": {
 				"spacing": {
 					"margin": {
