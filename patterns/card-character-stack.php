@@ -77,13 +77,16 @@ $image = get_theme_file_uri('public/media/images/default-16x9.webp');
 			"layout":{
 				"selfStretch":"fill",
 				"flexSize":null
+			},
+			"typography":{
+				"textAlign":"center"
 			}
 		},
 		"layout":{
 			"type":"default"
 		}
 	} -->
-	<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
+	<div class="wp-block-group has-text-align-center" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
 
 		<!-- wp:group {
 			"tagName":"header",
@@ -102,32 +105,21 @@ $image = get_theme_file_uri('public/media/images/default-16x9.webp');
 		<header class="wp-block-group">
 
 			<!-- wp:paragraph {
-				"align":"center",
-				"style":{
-					"typography":{
-						"textTransform":"uppercase",
-						"fontStyle":"normal",
-						"fontWeight":"600"
-					}
-				},
-				"textColor":"primary-700",
-				"fontSize":"xs"
+				"className":"is-style-kicker",
+				"textColor":"primary-700"
 			} -->
-			<p class="has-text-align-center has-primary-700-color has-text-color has-xs-font-size" style="font-style:normal;font-weight:600;text-transform:uppercase"><?= esc_html__('Level 99', 'x3p0-ideas') ?></p>
+			<p class="is-style-kicker has-primary-700-color has-text-color"><?= esc_html__('Level 99', 'x3p0-ideas') ?></p>
 			<!-- /wp:paragraph -->
 
-			<!-- wp:heading {
-				"textAlign":"center",
-				"level":3
-			} -->
-			<h3 class="wp-block-heading has-text-align-center has-xl-font-size"><?= esc_html__('User Name', 'x3p0-ideas') ?></h3>
+			<!-- wp:heading {"level":3} -->
+			<h3 class="wp-block-heading"><?= esc_html__('User Name', 'x3p0-ideas') ?></h3>
 			<!-- /wp:heading -->
 
 		</header>
 		<!-- /wp:group -->
 
-		<!-- wp:paragraph {"align":"center"} -->
-		<p class="has-text-align-center"><?= esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum turpis quis metus aliquam, id pharetra arcu dignissim.', 'x3p0-ideas') ?></p>
+		<!-- wp:paragraph -->
+		<p><?= esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum turpis quis metus aliquam, id pharetra arcu dignissim.', 'x3p0-ideas') ?></p>
 		<!-- /wp:paragraph -->
 
 	</div>

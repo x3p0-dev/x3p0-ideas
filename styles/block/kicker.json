@@ -1,0 +1,16 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
+	"version": 3,
+	"title": "Kicker",
+	"slug": "kicker",
+	"blockTypes": [ "core/heading", "core/paragraph" ],
+	"styles": {
+		"typography": {
+			"fontFamily": "var:preset|font-family|secondary",
+			"fontSize": "var:preset|font-size|xs",
+			"fontWeight": "600",
+			"lineHeight": "var:custom|line-height|xs",
+			"textTransform": "uppercase"
+		}
+	}
+}
