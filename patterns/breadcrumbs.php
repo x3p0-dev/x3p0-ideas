@@ -17,6 +17,5 @@ defined('ABSPATH') || exit;
 ?>
 <!-- wp:x3p0/breadcrumbs {
 	"metadata":{"name":"<?= esc_attr__('Breadcrumbs', 'x3p0-ideas') ?>"},
-	"itemsJustification":"left",
 	"align":"full"
 } /-->
