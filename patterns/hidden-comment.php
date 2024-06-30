@@ -33,9 +33,9 @@ defined('ABSPATH') || exit;
 			"type":"flex",
 			"flexWrap":"wrap"
 		},
-		"className":"is-style-comment-meta"
+		"className":"is-style-meta"
 	} -->
-	<header class="wp-block-group is-style-comment-meta">
+	<header class="wp-block-group is-style-meta">
 
 		<?php if (get_option('thread_comments')) : ?>
 
@@ -117,13 +117,14 @@ defined('ABSPATH') || exit;
 				"blockGap":"var:preset|spacing|minus-2"
 			}
 		},
+		"className":"is-style-meta",
 		"layout":{
 			"type":"flex",
 			"flexWrap":"nowrap",
 			"justifyContent":"right"
 		}
 	} -->
-	<footer class="wp-block-group">
+	<footer class="wp-block-group is-style-meta">
 		<!-- wp:comment-reply-link /-->
 	</footer>
 	<!-- /wp:group -->

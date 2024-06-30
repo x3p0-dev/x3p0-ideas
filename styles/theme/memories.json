@@ -529,23 +529,7 @@
 					"background": "transparent"
 				}
 			},
-			"comment-meta": {
-				"color": {
-					"text": "var:preset|color|neutral-500"
-				},
-				"typography": {
-					"fontWeight": "500"
-				}
-			},
-			"post-byline": {
-				"color": {
-					"text": "var:preset|color|neutral-500"
-				},
-				"typography": {
-					"fontWeight": "500"
-				}
-			},
-			"post-meta": {
+			"meta": {
 				"color": {
 					"text": "var:preset|color|neutral-500"
 				},

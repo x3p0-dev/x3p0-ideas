@@ -1,8 +1,8 @@
 {
 	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
 	"version": 3,
-	"title": "Post Byline",
-	"slug": "post-byline",
+	"title": "Meta",
+	"slug": "meta",
 	"blockTypes": [ "core/group" ],
 	"styles": {
 		"typography": {

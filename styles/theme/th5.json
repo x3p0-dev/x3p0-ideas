@@ -474,17 +474,7 @@
 					"background": "var:preset|color|neutral-100"
 				}
 			},
-			"comment-meta": {
-				"typography": {
-					"fontFamily": "var:preset|font-family|primary"
-				}
-			},
-			"post-byline": {
-				"typography": {
-					"fontFamily": "var:preset|font-family|primary"
-				}
-			},
-			"post-meta": {
+			"meta": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary"
 				}

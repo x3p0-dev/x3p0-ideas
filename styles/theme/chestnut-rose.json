@@ -429,19 +429,7 @@
 			}
 		},
 		"variations": {
-			"comment-meta": {
-				"typography": {
-					"fontSize": "var:preset|font-size|xs",
-					"lineHeight": "var:custom|line-height|xs"
-				}
-			},
-			"post-byline": {
-				"typography": {
-					"fontSize": "var:preset|font-size|xs",
-					"lineHeight": "var:custom|line-height|xs"
-				}
-			},
-			"post-meta": {
+			"meta": {
 				"typography": {
 					"fontSize": "var:preset|font-size|xs",
 					"lineHeight": "var:custom|line-height|xs"

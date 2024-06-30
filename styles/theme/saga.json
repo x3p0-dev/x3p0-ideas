@@ -328,12 +328,7 @@
 					"background": "transparent"
 				}
 			},
-			"comment-meta": {
-				"color": {
-					"text": "var:preset|color|neutral-500"
-				}
-			},
-			"post-byline": {
+			"meta": {
 				"color": {
 					"text": "var:preset|color|neutral-500"
 				},
@@ -362,11 +357,6 @@
 							}
 						}
 					}
-				}
-			},
-			"post-meta": {
-				"color": {
-					"text": "var:preset|color|neutral-500"
 				}
 			},
 			"section-1": {

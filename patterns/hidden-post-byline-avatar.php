@@ -25,9 +25,9 @@ defined('ABSPATH') || exit;
 		"type":"flex",
 		"flexWrap":"wrap"
 	},
-	"className": "is-style-post-byline"
+	"className": "is-style-meta"
 } -->
-<div class="wp-block-group is-style-post-byline">
+<div class="wp-block-group is-style-meta">
 
 	<!-- wp:avatar {"size":48,"isLink":true} /-->
 

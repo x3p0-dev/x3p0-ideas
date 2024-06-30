@@ -202,7 +202,7 @@ defined('ABSPATH') || exit;
 
 											<!-- wp:group {
 												"metadata":{"name":"<?= esc_attr__('Post Byline', 'x3p0-ideas') ?>"},
-												"className":"is-style-post-byline",
+												"className":"is-style-meta",
 												"style":{
 													"spacing":{
 														"blockGap":"var:preset|spacing|base"
@@ -213,7 +213,7 @@ defined('ABSPATH') || exit;
 													"flexWrap":"wrap"
 												}
 											} -->
-											<div class="wp-block-group is-style-post-byline">
+											<div class="wp-block-group is-style-meta">
 												<!-- wp:post-date /-->
 											</div>
 											<!-- /wp:group -->

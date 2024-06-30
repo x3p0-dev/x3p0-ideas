@@ -25,9 +25,9 @@ defined('ABSPATH') || exit;
 	"layout":{
 		"type":"constrained"
 	},
-	"className":"is-style-post-meta"
+	"className":"is-style-meta"
 } -->
-<footer class="wp-block-group is-style-post-meta">
+<footer class="wp-block-group is-style-meta">
 	<!-- wp:post-terms {"term":"category","className":"is-style-icon"} /-->
 	<!-- wp:post-terms {"term":"post_tag","className":"is-style-icon"} /-->
 </footer>
