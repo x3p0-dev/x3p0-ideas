@@ -87,10 +87,20 @@ $download = get_theme_file_uri('public/media/images/mountain-road.webp');
 		"metadata":{
 			"name":"<?= esc_attr__('Card Footer', 'x3p0-ideas') ?>"
 		},
+		"style":{
+			"spacing":{
+				"padding":{
+					"top":"0",
+					"bottom":"0",
+					"left":"0",
+					"right":"0"
+				}
+			}
+		},
 		"className":"is-style-card-offset",
 		"layout":{"type":"default"}
 	} -->
-	<footer class="wp-block-group is-style-card-offset">
+	<footer class="wp-block-group is-style-card-offset" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 		<!-- wp:file {
 			"href":"<?= esc_url($download) ?>",
 			"showDownloadButton":false,

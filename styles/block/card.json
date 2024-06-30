@@ -21,6 +21,10 @@
 				"right": "var:preset|spacing|plus-3"
 			}
 		},
+		"typography": {
+			"fontSize": "var:preset|font-size|sm",
+			"lineHeight": "var:custom|line-height|sm"
+		},
 		"elements": {
 			"button": {
 				"color": {

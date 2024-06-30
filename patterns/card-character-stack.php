@@ -41,10 +41,9 @@ $image = get_theme_file_uri('public/media/images/default-16x9.webp');
 		"justifyContent":"stretch",
 		"flexWrap":"nowrap",
 		"verticalAlignment":"space-between"
-	},
-	"fontSize":"sm"
+	}
 } -->
-<div class="wp-block-group is-style-card has-sm-font-size" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;min-height:100%">
+<div class="wp-block-group is-style-card" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;min-height:100%">
 
 	<!-- wp:image {
 		"aspectRatio":"4/3",
@@ -119,9 +118,9 @@ $image = get_theme_file_uri('public/media/images/default-16x9.webp');
 
 			<!-- wp:heading {
 				"textAlign":"center",
-				"fontSize":"xl"
+				"level":3
 			} -->
-			<h2 class="wp-block-heading has-text-align-center has-xl-font-size"><?= esc_html__('User Name', 'x3p0-ideas') ?></h2>
+			<h3 class="wp-block-heading has-text-align-center has-xl-font-size"><?= esc_html__('User Name', 'x3p0-ideas') ?></h3>
 			<!-- /wp:heading -->
 
 		</header>

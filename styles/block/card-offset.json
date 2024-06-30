@@ -9,6 +9,14 @@
 			"background": "var:preset|color|neutral-100",
 			"text": "currentColor"
 		},
+		"spacing":{
+			"padding":{
+				"right":"var:preset|spacing|plus-3",
+				"left":"var:preset|spacing|plus-3",
+				"top":"var:preset|spacing|plus-3",
+				"bottom":"var:preset|spacing|plus-3"
+			}
+		},
 		"css": "&:where(header) {\n\tborder-top: none;\n}\n&:where(footer) {\n\tborder-bottom: none;\n}"
 	}
 }

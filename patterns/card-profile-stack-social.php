@@ -101,20 +101,21 @@ defined('ABSPATH') || exit;
 			"spacing":{
 				"padding":{
 					"top":"var:preset|spacing|base",
-					"bottom":"var:preset|spacing|base",
-					"left":"var:preset|spacing|plus-3",
-					"right":"var:preset|spacing|plus-3"
+					"bottom":"var:preset|spacing|base"
 				}
 			}
 		},
 		"className":"is-style-card-offset",
 		"layout":{"type":"default"}
 	} -->
-	<footer class="wp-block-group is-style-card-offset" style="padding-top:var(--wp--preset--spacing--base);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--base);padding-left:var(--wp--preset--spacing--plus-3);font-style:normal;font-weight:600">
+	<footer class="wp-block-group is-style-card-offset" style="padding-top:var(--wp--preset--spacing--base);padding-bottom:var(--wp--preset--spacing--base);font-style:normal;font-weight:600">
 
 		<!-- wp:social-links {
 			"templateLock":"all",
-			"lock":{"move":true,"remove":true},
+			"lock":{
+				"move":true,
+				"remove":true
+			},
 			"iconColor":"contrast",
 			"iconColorValue":"#000000",
 			"size":"has-large-icon-size",

@@ -75,8 +75,6 @@ $icon = get_theme_file_uri('public/media/svg/earthquake.svg');
 		"style":{
 			"spacing":{
 				"padding":{
-					"right":"var:preset|spacing|plus-3",
-					"left":"var:preset|spacing|plus-3",
 					"top":"var:preset|spacing|base",
 					"bottom":"var:preset|spacing|base"
 				},
@@ -89,7 +87,7 @@ $icon = get_theme_file_uri('public/media/svg/earthquake.svg');
 			"flexWrap":"nowrap"
 		}
 	} -->
-	<div class="wp-block-group is-style-card-offset" style="padding-top:var(--wp--preset--spacing--base);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--base);padding-left:var(--wp--preset--spacing--plus-3)">
+	<div class="wp-block-group is-style-card-offset" style="padding-top:var(--wp--preset--spacing--base);padding-bottom:var(--wp--preset--spacing--base)">
 
 		<!-- wp:paragraph {
 			"style":{
