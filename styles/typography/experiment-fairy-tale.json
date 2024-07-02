@@ -6,31 +6,47 @@
 		"typography": {
 			"fontFamilies": [
 				{
-					"fontFamily": "'Henny Penny', system-ui",
+					"fontFamily": "'Elsie Swash Caps', system-ui",
 					"slug": "primary",
-					"name": "Primary (Send Flowers)",
+					"name": "Primary (Elsie Swash Caps)",
 					"fontFace": [
 						{
-							"fontFamily": "Henny Penny",
+							"fontFamily": "Elsie Swash Caps",
 							"fontWeight": "400",
 							"fontStyle": "normal",
 							"fontStretch": "normal",
-							"src": [ "file:./experiments/fonts/henny-penny/henny-penny.woff2" ]
+							"src": [ "file:./experiments/fonts/elsie/elsie-swash-caps.woff2" ]
+						},
+						{
+							"fontFamily": "Elsie Swash Caps",
+							"fontWeight": "900",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./experiments/fonts/elsie/elsie-swash-caps-900.woff2" ]
 						}
 					]
 				},
 				{
-					"fontFamily": "'Hepta Slab', Rockwell, 'Rockwell Nova', 'Roboto Slab', 'DejaVu Serif', 'Sitka Small', serif",
+					"fontFamily": "Lora, Rockwell, 'Rockwell Nova', 'Roboto Slab', 'DejaVu Serif', 'Sitka Small', serif",
 					"slug": "secondary",
-					"name": "Secondary (Hepta Slab)",
+					"name": "Secondary (Roboto Slab)",
 					"fontFace": [
 						{
-							"fontFamily": "Hepta Slab",
-							"fontWeight": "100 900",
+							"fontFamily": "Lora",
+							"fontWeight": "400 700",
 							"fontStyle": "normal",
 							"fontStretch": "normal",
 							"src": [
-								"file:./experiments/fonts/hepta-slab/hepta-slab.woff2"
+								"file:./experiments/fonts/lora/lora.woff2"
+							]
+						},
+						{
+							"fontFamily": "Lora",
+							"fontWeight": "400 700",
+							"fontStyle": "italic",
+							"fontStretch": "normal",
+							"src": [
+								"file:./experiments/fonts/lora/lora.woff2"
 							]
 						}
 					]
@@ -54,7 +70,7 @@
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",
 					"fontSize": "var:preset|font-size|sm",
-					"fontStyle": "italic",
+					"fontStyle": "normal",
 					"textTransform": "none"
 				}
 			},
@@ -112,7 +128,7 @@
 			"core/pullquote": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",
-					"fontStyle": "italic"
+					"fontStyle": "normal"
 				},
 				"elements": {
 					"cite": {
@@ -149,8 +165,8 @@
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",
 					"fontSize": "var:preset|font-size|lg",
-					"fontStyle": "italic",
-					"fontWeight": "600",
+					"fontStyle": "normal",
+					"fontWeight": "900",
 					"letterSpacing": "0",
 					"textTransform": "none"
 				}

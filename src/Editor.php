@@ -149,6 +149,10 @@ class Editor implements Bootable
 		@font-face{font-family:'Permanent Marker';font-style:normal;font-weight:400;font-display:fallback;src:url('{$path}/experiments/fonts/permanent-marker/permanent-marker.woff2') format('woff2');font-stretch:normal;}
 		@font-face{font-family:'Send Flowers';font-style:normal;font-weight:400;font-display:fallback;src:url('{$path}/experiments/fonts/send-flowers/send-flowers.woff2') format('woff2');font-stretch:normal;}
 		@font-face{font-family:Quicksand;font-style:normal;font-weight:300 700;font-display:fallback;src:url('{$path}/experiments/fonts/quicksand/quicksand.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:'Elsie Swash Caps';font-style:normal;font-weight:400;font-display:fallback;src:url('{$path}/experiments/fonts/elsie/elsie-swash-caps.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:'Elsie Swash Caps';font-style:normal;font-weight:900;font-display:fallback;src:url('{$path}/experiments/fonts/elsie/elsie-swash-caps-900.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:Lora;font-style:normal;font-weight:400 700;font-display:fallback;src:url('{$path}/x3p0-ideas/experiments/fonts/lora/lora.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:Lora;font-style:italic;font-weight:400 700;font-display:fallback;src:url('{$path}/x3p0-ideas/experiments/fonts/lora/lora.woff2') format('woff2');font-stretch:normal;}
 		";
 	}
 }
