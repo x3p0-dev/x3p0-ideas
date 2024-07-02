@@ -27,14 +27,14 @@ defined('ABSPATH') || exit;
 		},
 		"dimensions":{"minHeight":"100%"}
 	},
-	"className":"is-style-card",
+	"className":"has-global-border is-style-section-3",
 	"layout":{
 		"type":"flex",
 		"orientation":"vertical",
 		"justifyContent":"stretch"
 	}
 } -->
-<article class="wp-block-group is-style-card" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;min-height:100%">
+<article class="wp-block-group has-global-border is-style-section-3" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;min-height:100%">
 
 	<!-- wp:post-featured-image {
 		"isLink":true,
@@ -116,10 +116,10 @@ defined('ABSPATH') || exit;
 		"metadata":{
 			"name":"<?= esc_attr__('Post Footer', 'x3p0-ideas') ?>"
 		},
-		"className":"is-style-card-offset",
+		"className":"is-style-section-2",
 		"layout":{"type":"default"}
 	} -->
-	<footer class="wp-block-group is-style-card-offset">
+	<footer class="wp-block-group is-style-section-2">
 
 		<!-- wp:pattern {"slug":"x3p0-ideas/post-byline-short"} /-->
 

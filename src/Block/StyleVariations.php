@@ -110,9 +110,8 @@ class StyleVariations implements Bootable
 				'icon' => __('Icon', 'x3p0-ideas')
 			],
 			'core/cover' => [
-				'fade-in'       => __('Fade In',       'x3p0-ideas'),
-				'global-border' => __('Global Border', 'x3p0-ideas'),
-				'stretch'       => __('Stretch',       'x3p0-ideas')
+				'fade-in' => __('Fade In', 'x3p0-ideas'),
+				'stretch' => __('Stretch', 'x3p0-ideas')
 			],
 			'core/details' => [
 				'plain' => __('Plain', 'x3p0-ideas')

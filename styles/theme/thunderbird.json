@@ -437,21 +437,6 @@
 			}
 		},
 		"variations": {
-			"card": {
-				"border": {
-					"color": "var:preset|color|neutral-300",
-					"style": "solid",
-					"width": "1px"
-				},
-				"color": {
-					"background": "var:preset|color|white"
-				}
-			},
-			"card-offset": {
-				"color": {
-					"background": "var:preset|color|neutral-50"
-				}
-			},
 			"meta": {
 				"color": {
 					"text": "var:preset|color|neutral-500"

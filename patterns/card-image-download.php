@@ -29,7 +29,7 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 			"blockGap":"0"
 		}
 	},
-	"className":"is-style-card",
+	"className":"has-global-border is-style-section-3",
 	"layout":{
 		"type":"flex",
 		"orientation":"vertical",
@@ -38,7 +38,7 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 	},
 	"fontSize":"sm"
 } -->
-<div class="wp-block-group is-style-card has-sm-font-size" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
+<div class="wp-block-group has-global-border is-style-section-3 has-sm-font-size" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 
 	<!-- wp:image {
 		"lightbox":{"enabled":false},
@@ -105,10 +105,10 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 				}
 			}
 		},
-		"className":"is-style-card-offset",
+		"className":"is-style-section-2",
 		"layout":{"type":"default"}
 	} -->
-	<footer class="wp-block-group is-style-card-offset" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
+	<footer class="wp-block-group is-style-section-2" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 		<!-- wp:file {
 			"href":"<?= esc_url($image) ?>",
 			"showDownloadButton":false,

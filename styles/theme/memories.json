@@ -452,15 +452,9 @@
 				}
 			},
 			"x3p0/breadcrumbs": {
-				"border": {
-					"bottom": {
-						"color": "var:preset|color|neutral-100",
-						"style": "solid",
-						"width": "1px"
-					}
-				},
 				"color": {
-					"gradient": "linear-gradient(90deg, var(--wp--preset--color--neutral-100) -50%, transparent max(70vw, 40rem))",
+					"background": "var:preset|color|neutral-100",
+					"gradient": "none",
 					"text": "var:preset|color|neutral-500"
 				},
 				"typography": {

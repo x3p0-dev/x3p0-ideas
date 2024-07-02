@@ -537,34 +537,6 @@
 			}
 		},
 		"variations": {
-			"card": {
-				"border": {
-					"color": "var:custom|global|border-color",
-					"style": "double",
-					"width": "3px"
-				},
-				"color": {
-					"background": "var:preset|color|neutral-950",
-					"text": "var:preset|color|contrast"
-				}
-			},
-			"card-offset": {
-				"border": {
-					"bottom": {
-						"color": "var:custom|global|border-color",
-						"style": "solid",
-						"width": "1px"
-					},
-					"top": {
-						"color": "var:custom|global|border-color",
-						"style": "solid",
-						"width": "1px"
-					}
-				},
-				"color": {
-					"background": "transparent"
-				}
-			},
 			"section-1": {
 				"color": {
 					"background": "var:preset|color|primary-950",

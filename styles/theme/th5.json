@@ -464,16 +464,6 @@
 					}
 				}
 			},
-			"card": {
-				"color": {
-					"background": "var:preset|color|neutral-50"
-				}
-			},
-			"card-offset": {
-				"color": {
-					"background": "var:preset|color|neutral-100"
-				}
-			},
 			"meta": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary"

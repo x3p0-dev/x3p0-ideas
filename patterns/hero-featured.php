@@ -66,7 +66,7 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 				"className":"has-text-shadow-sm",
 				"fontSize":"5-xl"
 			} -->
-			<h1 class="wp-block-heading alignwide has-text-shadow-sm has-5-xl-font-size"><?php esc_html_e("Hello. I'm Jordan Doe.", 'x3p0-ideas') ?></h1>
+			<h1 class="wp-block-heading alignwide has-text-shadow-sm has-5-xl-font-size"><?php esc_html_e("Hello. I&#8217;m Jordan Doe.", 'x3p0-ideas') ?></h1>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"className":"has-text-shadow-sm","fontSize":"xl"} -->
@@ -74,7 +74,7 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph {"className":"has-text-shadow-sm"} -->
-			<p class="has-text-shadow-sm"><?php esc_html_e("I've walked miles upon miles of desert, climbed mountains, and soared through the skies. Yet, there is so much more to do—a thousand more lifetimes to live, loves to love, and journeys to trek.", 'x3p0-ideas') ?></p>
+			<p class="has-text-shadow-sm"><?php esc_html_e("I&#8217;ve walked miles upon miles of desert, climbed mountains, and soared through the skies. Yet, there is so much more to do—a thousand more lifetimes to live, loves to love, and journeys to trek.", 'x3p0-ideas') ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:spacer {"height":"var:preset|spacing|px"} -->

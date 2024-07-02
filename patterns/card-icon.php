@@ -23,10 +23,10 @@ $icon = get_theme_file_uri('public/media/svg/earthquake.svg');
 			"blockGap":"var:preset|spacing|base"
 		}
 	},
-	"className":"is-style-card",
+	"className":"has-global-border is-style-section-3",
 	"layout":{"type":"default"}
 } -->
-<div class="wp-block-group is-style-card">
+<div class="wp-block-group has-global-border is-style-section-3">
 
 	<!-- wp:image {
 		"lightbox":{"enabled":false},

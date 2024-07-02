@@ -5,10 +5,26 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
+///
+/// A custom class for handling blocks that should have the global border by
+/// default in the design. Currently, WordPress doesn't support border presets,
+/// so there's no way to add these on generic sections.
+///
+:root :where(.has-global-border) {
+	border-color: var(--wp--custom--global--border-color, transparent);
+	border-style: var(--wp--custom--global--border-style, solid);
+	border-width: var(--wp--custom--global--border-width, 0);
+	border-radius: var(--wp--custom--global--border-radius, 0);
+	box-shadow: var(--wp--custom--global--shadow, none);
+}
+
 [class*=wp-block].alignfull,
+.has-global-border.alignfull,
 .wp-block-post-featured-image.alignfull img,
 .wp-block-image.alignfull img {
 	border-radius: 0;
+	border-left: none;
+	border-right: none;
 }
 
 svg.wp-smiley {

@@ -1,0 +1,16 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
+	"version": 3,
+	"title": "Global Border",
+	"slug": "global-border",
+	"blockTypes": [ "core/cover" ],
+	"styles": {
+		"border": {
+			"color": "var:custom|global|border-color",
+			"style": "var:custom|global|border-style",
+			"width": "var:custom|global|border-width",
+			"radius": "var:custom|global|border-radius"
+		},
+		"shadow": "var:custom|global|shadow"
+	}
+}

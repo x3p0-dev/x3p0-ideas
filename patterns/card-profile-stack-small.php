@@ -19,7 +19,7 @@ defined('ABSPATH') || exit;
 	"style":{
 		"spacing":{"blockGap":"var:preset|spacing|base"}
 	},
-	"className":"is-style-card",
+	"className":"has-global-border is-style-section-3",
 	"layout":{
 		"type":"flex",
 		"orientation":"vertical",
@@ -27,7 +27,7 @@ defined('ABSPATH') || exit;
 	},
 	"fontSize":"sm"
 } -->
-<div class="wp-block-group is-style-card has-sm-font-size">
+<div class="wp-block-group has-global-border is-style-section-3 has-sm-font-size">
 
 	<!-- wp:avatar {
 		"userId":1,

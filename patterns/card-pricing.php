@@ -32,7 +32,7 @@ $icon = get_theme_file_uri('public/media/svg/earthquake.svg');
 			"minHeight":"0px"
 		}
 	},
-	"className":"is-style-card",
+	"className":"has-global-border is-style-section-3",
 	"layout":{
 		"type":"flex",
 		"orientation":"vertical",
@@ -41,7 +41,7 @@ $icon = get_theme_file_uri('public/media/svg/earthquake.svg');
 	},
 	"fontSize":"xs"
 } -->
-<div class="wp-block-group is-style-card has-xs-font-size" style="min-height:0px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
+<div class="wp-block-group has-global-border is-style-section-3 has-xs-font-size" style="min-height:0px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 
 	<!-- wp:group {
 		"tagName":"header",
@@ -81,13 +81,13 @@ $icon = get_theme_file_uri('public/media/svg/earthquake.svg');
 				"blockGap":"var:preset|spacing|minus-3"
 			}
 		},
-		"className": "is-style-card-offset",
+		"className": "is-style-section-2",
 		"layout":{
 			"type":"flex",
 			"flexWrap":"nowrap"
 		}
 	} -->
-	<div class="wp-block-group is-style-card-offset" style="padding-top:var(--wp--preset--spacing--base);padding-bottom:var(--wp--preset--spacing--base)">
+	<div class="wp-block-group is-style-section-2" style="padding-top:var(--wp--preset--spacing--base);padding-bottom:var(--wp--preset--spacing--base)">
 
 		<!-- wp:paragraph {
 			"style":{

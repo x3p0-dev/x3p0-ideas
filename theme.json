@@ -1154,7 +1154,7 @@
 						},
 						"color": {
 							"background": "transparent",
-							"text": { "ref": "styles.elements.link.color.text" }
+							"text": "currentColor"
 						},
 						"outline": {
 							"width": "0"
@@ -1338,15 +1338,6 @@
 						"color": {
 							"text": "var:preset|color|contrast"
 						}
-					},
-					"global-border": {
-						"border": {
-							"color": "var:custom|global|border-color",
-							"style": "var:custom|global|border-style",
-							"width": "var:custom|global|border-width",
-							"radius": "var:custom|global|border-radius"
-						},
-						"shadow": "var:custom|global|shadow"
 					}
 				}
 			},

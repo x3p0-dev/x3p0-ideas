@@ -40,18 +40,6 @@
 // -----------------------------------------------------------------------------
 
 ///
-/// Ensure nothing overflows the Card style.
-///
-.wp-block-group.is-style-card,
-.editor-styles-wrapper .wp-block-group.is-style-card {
-	overflow: hidden;
-}
-
-// -----------------------------------------------------------------------------
-// Overrides.
-// -----------------------------------------------------------------------------
-
-///
 /// Ensures specific styles inherit their color when used inside of a Cover.
 ///
 .wp-block-cover .is-style-meta {

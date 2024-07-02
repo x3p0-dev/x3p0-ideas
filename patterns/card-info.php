@@ -22,11 +22,11 @@ $url = home_url();
 			"blockGap":"var:preset|spacing|minus-3"
 		}
 	},
-	"className":"is-style-card",
+	"className":"has-global-border is-style-section-3",
 	"layout":{"type":"default"},
 	"fontSize":"xs"
 } -->
-<div class="wp-block-group is-style-card has-xs-font-size">
+<div class="wp-block-group has-global-border is-style-section-3 has-xs-font-size">
 
 	<!-- wp:heading {"level":3,"fontSize":"md"} -->
 	<h3 class="wp-block-heading has-md-font-size" id="browse-the-resources"><a href="<?= esc_url($url) ?>"><?= esc_html__('Placeholder Text', 'x3p0-ideas') ?></a></h3>

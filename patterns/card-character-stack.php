@@ -34,7 +34,7 @@ $image = get_theme_file_uri('public/media/images/default-16x9.webp');
 			"minHeight":"100%"
 		}
 	},
-	"className":"is-style-card",
+	"className":"has-global-border is-style-section-3",
 	"layout":{
 		"type":"flex",
 		"orientation":"vertical",
@@ -43,7 +43,7 @@ $image = get_theme_file_uri('public/media/images/default-16x9.webp');
 		"verticalAlignment":"space-between"
 	}
 } -->
-<div class="wp-block-group is-style-card" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;min-height:100%">
+<div class="wp-block-group has-global-border is-style-section-3" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;min-height:100%">
 
 	<!-- wp:image {
 		"aspectRatio":"4/3",
@@ -142,13 +142,13 @@ $image = get_theme_file_uri('public/media/images/default-16x9.webp');
 				}
 			}
 		},
-		"className":"is-style-card-offset",
+		"className":"is-style-section-2",
 		"layout":{
 			"type":"grid",
 			"minimumColumnWidth":"30%"
 		}
 	} -->
-	<footer class="wp-block-group alignfull is-style-card-offset" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
+	<footer class="wp-block-group alignfull is-style-section-2" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 
 		<?php foreach (range(1, 3) as $skill) : ?>
 

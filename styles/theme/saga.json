@@ -301,33 +301,6 @@
 			}
 		},
 		"variations": {
-			"card": {
-				"border": {
-					"color": "var:custom|global|border-color",
-					"style": "var:custom|global|border-style",
-					"width": "var:custom|global|border-width"
-				},
-				"color": {
-					"background": "var:preset|color|base"
-				}
-			},
-			"card-offset": {
-				"border": {
-					"bottom": {
-						"color": "var:custom|global|border-color",
-						"style": "double",
-						"width": "3px"
-					},
-					"top": {
-						"color": "var:custom|global|border-color",
-						"style": "double",
-						"width": "3px"
-					}
-				},
-				"color": {
-					"background": "transparent"
-				}
-			},
 			"meta": {
 				"color": {
 					"text": "var:preset|color|neutral-500"
