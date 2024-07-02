@@ -15,6 +15,7 @@
 		],
 		"lint:php": "./vendor/bin/phpcs -s --colors .",
 		"theme": "composer config extra.x3p0.theme",
+		"type": "composer config extra.x3p0.typography",
 		"typography": "composer config extra.x3p0.typography",
 		"var": "composer config extra.x3p0.theme",
 		"var-reset": [
