@@ -28,8 +28,8 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 	"style":{
 		"spacing":{
 			"padding":{
-				"top":"var:preset|spacing|plus-4",
-				"bottom":"var:preset|spacing|plus-4"
+				"top":"var:preset|spacing|plus-5",
+				"bottom":"var:preset|spacing|plus-5"
 			}
 		}
 	},
@@ -44,7 +44,8 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 		"style":{
 			"spacing":{
 				"blockGap":{
-					"left":"var:preset|spacing|plus-5"
+					"top":"0",
+					"left":"var:preset|spacing|plus-3"
 				}
 			}
 		},
@@ -82,12 +83,22 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 		<!-- wp:column {
 			"verticalAlignment":"center",
 			"width":"",
+			"style":{
+				"spacing":{
+					"padding":{
+						"top":"var:preset|spacing|plus-3",
+						"bottom":"var:preset|spacing|plus-3",
+						"left":"var:preset|spacing|plus-3",
+						"right":"var:preset|spacing|plus-3"
+					}
+				}
+			},
 			"layout":{
 				"type":"constrained",
 				"justifyContent":"left"
 			}
 		} -->
-		<div class="wp-block-column is-vertically-aligned-center">
+		<div class="wp-block-column is-vertically-aligned-center" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
 
 			<!-- wp:heading {"fontSize":"6-xl"} -->
 			<h2 class="wp-block-heading has-6-xl-font-size"><?= esc_html__('Jump start your next project with our open-source engine', 'x3p0-ideas') ?></h2>
