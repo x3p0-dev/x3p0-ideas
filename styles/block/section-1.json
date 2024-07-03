@@ -3,7 +3,12 @@
 	"version": 3,
 	"title": "Style 1",
 	"slug": "section-1",
-	"blockTypes": [ "core/group", "core/query" ],
+	"blockTypes": [
+		"core/column",
+		"core/columns",
+		"core/group",
+		"core/query"
+	],
 	"styles": {
 		"css": "& .is-style-meta, .is-style-meta a { color: inherit !important; }",
 		"color": {
