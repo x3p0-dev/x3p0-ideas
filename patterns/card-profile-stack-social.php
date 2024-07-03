@@ -29,6 +29,7 @@ use X3P0\Ideas\Tools\Language;
 		}
 	},
 	"className":"has-global-border is-style-section-3",
+	"fontSize":"sm",
 	"layout":{
 		"type":"flex",
 		"orientation":"vertical",
@@ -36,7 +37,7 @@ use X3P0\Ideas\Tools\Language;
 		"verticalAlignment":"space-between"
 	}
 } -->
-<div class="wp-block-group has-global-border is-style-section-3" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:0;padding-bottom:0;padding-left:0">
+<div class="wp-block-group has-global-border is-style-section-3 has-sm-font-size" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:0;padding-bottom:0;padding-left:0">
 
 	<!-- wp:group {
 		"style":{

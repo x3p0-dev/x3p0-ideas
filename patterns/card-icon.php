@@ -26,9 +26,10 @@ $icon = get_theme_file_uri('public/media/svg/earthquake.svg');
 		}
 	},
 	"className":"has-global-border is-style-section-3",
+	"fontSize":"sm",
 	"layout":{"type":"default"}
 } -->
-<div class="wp-block-group has-global-border is-style-section-3">
+<div class="wp-block-group has-global-border is-style-section-3 has-sm-font-size">
 
 	<!-- wp:image {
 		"lightbox":{"enabled":false},
