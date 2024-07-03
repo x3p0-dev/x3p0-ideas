@@ -67,6 +67,20 @@ export const overlineIcon = (
 	</svg>
 );
 
+// https://fonts.google.com/icons?icon.query=decrease&selected=Material+Symbols+Outlined:text_decrease:FILL@0;wght@300;GRAD@-25;opsz@24&icon.size=24&icon.color=%235f6368
+export const textDecreaseIcon = (
+	<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+		<path d="m56.35-214.04 208.34-530.31h62.77l208.35 530.31H468.5l-53.96-143.04H176.27l-54.96 143.04H56.35Zm139.49-198.34h198.12l-95.88-252.01h-4.77l-97.47 252.01Zm412.35-39.74v-55.96h295.96v55.96H608.19Z"/>
+	</svg>
+);
+
+// https://fonts.google.com/icons?icon.query=increase&selected=Material+Symbols+Outlined:text_increase:FILL@0;wght@300;GRAD@-25;opsz@24&icon.size=24&icon.color=%235f6368
+export const textIncreaseIcon = (
+	<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+		<path d="M57.15-214.04 265.5-744.35h62.77l208.34 530.31h-67.3l-54.22-143.04H177.08l-54.97 143.04H57.15Zm139.5-198.34h198.12L298.8-664.39h-4.68l-97.47 252.01ZM729-333.73v-118.39H610.62v-55.96H729v-118.38h55.96v118.38h118.39v55.96H784.96v118.39H729Z"/>
+	</svg>
+);
+
 // https://fonts.google.com/icons?icon.query=time&selected=Material+Symbols+Outlined:timer:FILL@0;wght@300;GRAD@-25;opsz@24
 export const timerIcon = (
 	<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
