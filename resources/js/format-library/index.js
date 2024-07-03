@@ -17,7 +17,8 @@ import overlineFormat     from "./overline";
 import smallFormat        from "./small";
 
 // WordPress dependencies.
-import { registerFormatType } from '@wordpress/rich-text';
+import domReady from '@wordpress/dom-ready';
+import { registerFormatType, unregisterFormatType } from '@wordpress/rich-text';
 
 // Register each `RichText` format type.
 registerFormatType(abbreviationFormat.name, abbreviationFormat);
@@ -28,3 +29,12 @@ registerFormatType(insertFormat.name, insertFormat);
 registerFormatType(markFormat.name, markFormat);
 registerFormatType(overlineFormat.name, overlineFormat);
 registerFormatType(smallFormat.name, smallFormat);
+
+// Unregisters the Core highlight format type. It doesn't use a semantic
+// background color and, therefore, doesn't translate between style variations.
+// Instead, use the Mark format type (labeled Highlight) registered separately.
+// It uses the semantic `<mark>` tag but leave the styling in control of the
+// theme or style variation.
+domReady(() => {
+	unregisterFormatType('core/text-color');
+});
