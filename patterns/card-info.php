@@ -13,6 +13,8 @@ declare(strict_types=1);
 # Prevent direct access.
 defined('ABSPATH') || exit;
 
+use X3P0\Ideas\Tools\Language;
+
 $url = home_url();
 
 ?>
@@ -33,7 +35,7 @@ $url = home_url();
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph -->
-	<p><?= esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in sollicitudin mi.', 'x3p0-ideas') ?></p>
+	<p><?= esc_html(Language::loremIpsum(12)) ?></p>
 	<!-- /wp:paragraph -->
 
 </div>

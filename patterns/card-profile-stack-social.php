@@ -13,6 +13,8 @@ declare(strict_types=1);
 # Prevent direct access.
 defined('ABSPATH') || exit;
 
+use X3P0\Ideas\Tools\Language;
+
 ?>
 <!-- wp:group {
 	"metadata":{"name":"Card"},
@@ -81,7 +83,7 @@ defined('ABSPATH') || exit;
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"center"} -->
-			<p class="has-text-align-center"><?= esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'x3p0-ideas') ?></p>
+			<p><?= esc_html(Language::loremIpsum(8)) ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>

@@ -12,6 +12,8 @@ declare(strict_types=1);
 # Prevent direct access.
 defined('ABSPATH') || exit;
 
+use X3P0\Ideas\Tools\Language;
+
 ?>
 <!-- wp:group {
 	"align":"wide",
@@ -32,7 +34,7 @@ defined('ABSPATH') || exit;
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph -->
-	<p><?= esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum turpis quis metus aliquam, id pharetra arcu dignissim. Sed in sollicitudin mi.', 'x3p0-ideas') ?></p>
+	<p><?= esc_html(Language::loremIpsum()) ?></p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:buttons {

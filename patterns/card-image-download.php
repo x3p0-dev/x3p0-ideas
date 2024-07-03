@@ -13,6 +13,8 @@ declare(strict_types=1);
 # Prevent direct access.
 defined('ABSPATH') || exit;
 
+use X3P0\Ideas\Tools\Language;
+
 $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 
 ?>
@@ -84,7 +86,7 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 		<!-- /wp:heading -->
 
 		<!-- wp:paragraph -->
-		<p><?= esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'x3p0-ideas') ?></p>
+		<p><?= esc_html(Language::loremIpsum(8)) ?></p>
 		<!-- /wp:paragraph -->
 
 	</div>
