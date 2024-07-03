@@ -42,7 +42,8 @@
 /// @todo Define a system for `theme.json` style control over nested comments.
 ///
 .wp-block-comment-template > .comment,
-.editor-styles-wrapper .wp-block-comment-template > .comment {
+.editor-styles-wrapper .wp-block-comment-template > .comment,
+.editor-styles-wrapper .wp-block-comment-template > li {
 	color:         var(--wp--custom--comment--color, inherit);
 	background:    var(--wp--custom--comment--background, transparent);
 	border-width:  var(--wp--custom--comment--border-width, 0);
