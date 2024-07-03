@@ -26,6 +26,9 @@ use X3P0\Ideas\Tools\Language;
 				"left":"0",
 				"right":"0"
 			}
+		},
+		"typography":{
+			"textAlign":"center"
 		}
 	},
 	"className":"has-global-border is-style-section-3",
@@ -37,7 +40,7 @@ use X3P0\Ideas\Tools\Language;
 		"verticalAlignment":"space-between"
 	}
 } -->
-<div class="wp-block-group has-global-border is-style-section-3 has-sm-font-size" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:0;padding-bottom:0;padding-left:0">
+<div class="wp-block-group has-text-align-center has-global-border is-style-section-3 has-sm-font-size" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:0;padding-bottom:0;padding-left:0">
 
 	<!-- wp:group {
 		"style":{
@@ -75,15 +78,14 @@ use X3P0\Ideas\Tools\Language;
 		<div class="wp-block-group" style="padding-right:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
 
 			<!-- wp:heading {
-				"textAlign":"center",
 				"level":3,
 				"textColor":"contrast",
 				"fontSize":"lg"
 			} -->
-			<h3 class="wp-block-heading has-text-align-center has-contrast-color has-text-color has-lg-font-size"><?= esc_html__('User Name', 'x3p0-ideas') ?></h3>
+			<h3 class="wp-block-heading has-contrast-color has-text-color has-lg-font-size"><?= esc_html__('User Name', 'x3p0-ideas') ?></h3>
 			<!-- /wp:heading -->
 
-			<!-- wp:paragraph {"align":"center"} -->
+			<!-- wp:paragraph -->
 			<p><?= esc_html(Language::loremIpsum(8)) ?></p>
 			<!-- /wp:paragraph -->
 
