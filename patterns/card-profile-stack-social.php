@@ -17,21 +17,24 @@ use X3P0\Ideas\Tools\Language;
 
 ?>
 <!-- wp:group {
-	"metadata":{"name":"Card"},
+	"metadata":{
+		"name":"<?= esc_attr__('Card', 'x3p0-ideas') ?>"
+	},
+	"className":"has-global-border is-style-section-3",
 	"style":{
 		"spacing":{
 			"padding":{
-				"top":"var:preset|spacing|plus-3",
 				"bottom":"0",
 				"left":"0",
-				"right":"0"
-			}
+				"right":"0",
+				"top":"0"
+			},
+			"blockGap":"0"
 		},
 		"typography":{
 			"textAlign":"center"
 		}
 	},
-	"className":"has-global-border is-style-section-3",
 	"fontSize":"sm",
 	"layout":{
 		"type":"flex",
@@ -40,12 +43,22 @@ use X3P0\Ideas\Tools\Language;
 		"verticalAlignment":"space-between"
 	}
 } -->
-<div class="wp-block-group has-text-align-center has-global-border is-style-section-3 has-sm-font-size" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:0;padding-bottom:0;padding-left:0">
+<div class="wp-block-group has-text-align-center has-global-border is-style-section-3 has-sm-font-size" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 
 	<!-- wp:group {
 		"style":{
 			"spacing":{
-				"blockGap":"var:preset|spacing|base"
+				"blockGap":"var:preset|spacing|base",
+				"padding":{
+					"top":"var:preset|spacing|plus-3",
+					"bottom":"var:preset|spacing|plus-3",
+					"left":"var:preset|spacing|plus-3",
+					"right":"var:preset|spacing|plus-3"
+				}
+			},
+			"layout":{
+				"selfStretch":"fill",
+				"flexSize":null
 			}
 		},
 		"layout":{
@@ -54,35 +67,34 @@ use X3P0\Ideas\Tools\Language;
 			"justifyContent":"center"
 		}
 	} -->
-	<div class="wp-block-group">
+	<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
 
 		<!-- wp:avatar {
-			"userId":1,
+			"userId":null,
 			"isLink":true,
 			"className":""
 		} /-->
 
 		<!-- wp:group {
-			"metadata":{"name":"<?= esc_attr__('Card Content', 'x3p0-ideas') ?>"},
+			"metadata":{
+				"name":"<?= esc_attr__('Card Content', 'x3p0-ideas') ?>"
+			},
 			"style":{
 				"spacing":{
-					"blockGap":"0",
-					"padding":{
-						"right":"var:preset|spacing|plus-3",
-						"left":"var:preset|spacing|plus-3"
-					}
+					"blockGap":"0"
 				}
 			},
-			"layout":{"type":"default"}
+			"layout":{
+				"type":"default"
+			}
 		} -->
-		<div class="wp-block-group" style="padding-right:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
+		<div class="wp-block-group">
 
 			<!-- wp:heading {
 				"level":3,
-				"textColor":"contrast",
 				"fontSize":"lg"
 			} -->
-			<h3 class="wp-block-heading has-contrast-color has-text-color has-lg-font-size"><?= esc_html__('User Name', 'x3p0-ideas') ?></h3>
+			<h3 class="wp-block-heading has-lg-font-size"><?= esc_html__('User Name', 'x3p0-ideas') ?></h3>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph -->
@@ -97,12 +109,11 @@ use X3P0\Ideas\Tools\Language;
 
 	<!-- wp:group {
 		"tagName":"footer",
-		"metadata":{"name":"<?= esc_attr__('Card Footer', 'x3p0-ideas') ?>"},
+		"metadata":{
+			"name":"<?= esc_attr__('Card Footer', 'x3p0-ideas') ?>"
+		},
+		"className":"is-style-section-2",
 		"style":{
-			"typography":{
-				"fontStyle":"normal",
-				"fontWeight":"600"
-			},
 			"spacing":{
 				"padding":{
 					"top":"var:preset|spacing|base",
@@ -110,18 +121,19 @@ use X3P0\Ideas\Tools\Language;
 				}
 			}
 		},
-		"className":"is-style-section-2",
-		"layout":{"type":"default"}
+		"layout":{
+			"type":"default"
+		}
 	} -->
-	<footer class="wp-block-group is-style-section-2" style="padding-top:var(--wp--preset--spacing--base);padding-bottom:var(--wp--preset--spacing--base);font-style:normal;font-weight:600">
+	<footer class="wp-block-group is-style-section-2" style="padding-top:var(--wp--preset--spacing--base);padding-bottom:var(--wp--preset--spacing--base)">
 
 		<!-- wp:social-links {
-			"templateLock":"all",
+			"size":"has-huge-icon-size",
 			"lock":{
 				"move":true,
 				"remove":true
 			},
-			"size":"has-huge-icon-size",
+			"className":"is-style-monotone",
 			"style":{
 				"spacing":{
 					"blockGap":{
@@ -130,7 +142,6 @@ use X3P0\Ideas\Tools\Language;
 					}
 				}
 			},
-			"className":"is-style-monotone",
 			"layout":{
 				"type":"flex",
 				"justifyContent":"center"
