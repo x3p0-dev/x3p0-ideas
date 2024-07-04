@@ -69,6 +69,7 @@ class Theme implements Bootable
 		$this->instance('block.bindings', new Block\Bindings\Component(
 			WP_Block_Bindings_Registry::get_instance(),
 			[
+				Block\Bindings\Comment::class,
 				Block\Bindings\Media::class,
 				Block\Bindings\Post::class,
 				Block\Bindings\Site::class,

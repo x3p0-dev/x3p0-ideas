@@ -24,9 +24,9 @@ export default {
 			metadata: {
 				bindings: {
 					content: {
-						source: 'x3p0/theme',
+						source: 'x3p0/comment',
 						args: {
-							key: 'commentParentLink'
+							key: 'parentLink'
 						}
 					}
 				}
