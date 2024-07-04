@@ -52,10 +52,9 @@ defined('ABSPATH') || exit;
 
 		<!-- wp:heading {
 			"level":3,
-			"textColor":"contrast",
 			"fontSize":"lg"
 		} -->
-		<h3 class="wp-block-heading has-contrast-color has-text-color has-lg-font-size"><?= esc_html__('User Name', 'x3p0-ideas') ?></h3>
+		<h3 class="wp-block-heading has-lg-font-size"><?= esc_html__('User Name', 'x3p0-ideas') ?></h3>
 		<!-- /wp:heading -->
 
 		<!-- wp:paragraph -->
