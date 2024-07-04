@@ -9,7 +9,15 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// No fixes...
+///
+/// WordPress hardcodes a `1.25em` width and height for the SVG when using the
+/// "logos only" block style variation. This makes the icon size inconsistent
+/// with other instances of the block.
+///
+.wp-block-social-links.is-style-logos-only .wp-social-link svg {
+	width: 1em;
+	height: 1em;
+}
 
 // -----------------------------------------------------------------------------
 // Block customizations.
@@ -63,4 +71,11 @@
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-// No variations...
+///
+/// Monotone block style. Note that we must define the colors via CSS to prevent
+/// WordPress's hardcoded CSS from overwriting them.
+///
+.wp-block-social-links.is-style-monotone .wp-social-link {
+	background: transparent;
+	color: currentColor;
+}

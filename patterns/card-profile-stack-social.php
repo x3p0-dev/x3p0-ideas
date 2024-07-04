@@ -121,9 +121,7 @@ use X3P0\Ideas\Tools\Language;
 				"move":true,
 				"remove":true
 			},
-			"iconColor":"contrast",
-			"iconColorValue":"#000000",
-			"size":"has-large-icon-size",
+			"size":"has-huge-icon-size",
 			"style":{
 				"spacing":{
 					"blockGap":{
@@ -132,13 +130,13 @@ use X3P0\Ideas\Tools\Language;
 					}
 				}
 			},
-			"className":"is-style-logos-only",
+			"className":"is-style-monotone",
 			"layout":{
 				"type":"flex",
 				"justifyContent":"center"
 			}
 		} -->
-		<ul class="wp-block-social-links has-large-icon-size has-icon-color is-style-logos-only">
+		<ul class="wp-block-social-links has-huge-icon-size is-style-monotone">
 			<!-- wp:social-link {"url":"https://wordpress.org","service":"wordpress"} /-->
 			<!-- wp:social-link {"url":"https://github.com","service":"github"} /-->
 			<!-- wp:social-link {"url":"https://facebook.com","service":"facebook"} /-->

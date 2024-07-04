@@ -204,7 +204,8 @@ class StyleVariations implements Bootable
 				'hand-drawn' => __('Hand Drawn', 'x3p0-ideas')
 			],
 			'core/social-links' => [
-				'outline' => __('Outline', 'x3p0-ideas')
+				'monotone' => __('Monotone', 'x3p0-ideas'),
+				'outline'  => __('Outline', 'x3p0-ideas')
 			],
 			'core/site-title' => [
 				'normalize' => __('Normalize', 'x3p0-ideas')

@@ -1820,6 +1820,19 @@
 							}
 						}
 					},
+					"monotone": {
+						"color": {
+							"text": "currentColor"
+						},
+						"blocks": {
+							"core/social-link": {
+								"border": {
+									"width": "0"
+								},
+								"shadow": "none"
+							}
+						}
+					},
 					"outline": {
 						"blocks": {
 							"core/social-link": {
