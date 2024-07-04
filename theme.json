@@ -1809,6 +1809,16 @@
 				"css": "& ol {\n\tlist-style: initial;\n}"
 			},
 			"core/tag-cloud": {
+				"elements": {
+					"link": {
+						"spacing": {
+							"margin": {
+								"left": "0 !important",
+								"right": "0 !important"
+							}
+						}
+					}
+				},
 				"variations": {
 					"flat": {
 						"elements": {
