@@ -1,0 +1,16 @@
+////
+/// Editor stylesheet for the span format.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+// Use the WordPress variables module.
+// @link https://github.com/WordPress/gutenberg/tree/trunk/packages/base-styles
+@use '~@wordpress/base-styles/variables' as wp;
+
+.x3p0-format-span-popover .components-popover__content {
+	padding: wp.$grid-unit-20;
+	width: auto;
+	max-width: 360px;
+}

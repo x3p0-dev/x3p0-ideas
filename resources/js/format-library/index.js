@@ -15,6 +15,7 @@ import insertFormat       from "./insert";
 import markFormat         from "./mark";
 import overlineFormat     from "./overline";
 import smallFormat        from "./small";
+import spanFormat         from "./span";
 
 // WordPress dependencies.
 import domReady from '@wordpress/dom-ready';
@@ -29,6 +30,7 @@ registerFormatType(insertFormat.name, insertFormat);
 registerFormatType(markFormat.name, markFormat);
 registerFormatType(overlineFormat.name, overlineFormat);
 registerFormatType(smallFormat.name, smallFormat);
+registerFormatType(spanFormat.name, spanFormat);
 
 // Unregisters the Core highlight format type. It doesn't use a semantic
 // background color and, therefore, doesn't translate between style variations.
