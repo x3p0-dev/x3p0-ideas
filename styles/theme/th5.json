@@ -50,9 +50,12 @@
 				}
 			},
 			"global": {
-				"borderColor": "var:preset|color|neutral-100",
-				"borderWidth": "1px",
-				"borderRadius": "0",
+				"border": {
+					"color": "var:preset|color|neutral-100",
+					"style": "solid",
+					"width": "1px",
+					"radius": "0"
+				},
 				"fill": {
 					"background": "var:preset|color|secondary-500",
 					"color": "var:preset|color|white",
@@ -337,9 +340,9 @@
 					"background": "var:preset|color|neutral-100"
 				},
 				"border": {
-					"color": "var:custom|global|border-color",
-					"style": "var:custom|global|border-style",
-					"width": "var:custom|global|border-width"
+					"color": "var:custom|global|border|color",
+					"style": "var:custom|global|border|style",
+					"width": "var:custom|global|border|width"
 				},
 				"spacing": {
 					"padding": {

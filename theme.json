@@ -12,10 +12,10 @@
 					"comment": {
 						"padding": "var:preset|spacing|plus-3",
 						"background": "var:preset|color|neutral-50",
-						"borderColor": "var:custom|global|border-color",
-						"borderStyle": "var:custom|global|border-style",
-						"borderWidth": "var:custom|global|border-width",
-						"borderRadius": "var:custom|global|border-radius",
+						"borderColor": "var:custom|global|border|color",
+						"borderStyle": "var:custom|global|border|style",
+						"borderWidth": "var:custom|global|border|width",
+						"borderRadius": "var:custom|global|border|radius",
 						"shadow": "var:custom|global|shadow"
 					},
 					"commentParentLink": {
@@ -528,10 +528,12 @@
 				"light": "var:preset|color|base"
 			},
 			"global": {
-				"borderColor": "var:preset|color|neutral-100",
-				"borderStyle": "solid",
-				"borderWidth": "0",
-				"borderRadius": "6px",
+				"border": {
+					"color": "var:preset|color|neutral-100",
+					"style": "solid",
+					"width": "0",
+					"radius": "6px"
+				},
 				"shadow": "var:preset|shadow|lg",
 				"fadedGradient": "linear-gradient( 180deg, transparent -40%, var( --wp--preset--color--base ) 100% )",
 				"fill": {
@@ -542,7 +544,7 @@
 				},
 				"outline": {
 					"borderColor": "currentColor",
-					"borderStyle": "var:custom|global|border-style",
+					"borderStyle": "var:custom|global|border|style",
 					"borderWidth": "2px"
 				}
 			},
@@ -561,8 +563,8 @@
 				"input": {
 					"color": "var:preset|color|contrast",
 					"background": "var:preset|color|neutral-50",
-					"borderColor": "var:custom|global|border-color",
-					"borderRadius": "var:custom|global|border-radius",
+					"borderColor": "var:custom|global|border|color",
+					"borderRadius": "var:custom|global|border|radius",
 					"shadow": "var:custom|global|shadow",
 					"placeholderColor": "var:preset|color|neutral-500",
 					"accentColor": "var:preset|color|primary-700"
@@ -991,7 +993,7 @@
 			"button": {
 				"border": {
 					"color": "transparent",
-					"radius": "var:custom|global|border-radius",
+					"radius": "var:custom|global|border|radius",
 					"style": "solid",
 					"width": "2px"
 				},
@@ -1109,7 +1111,7 @@
 			},
 			"link": {
 				"border": {
-					"radius": "var:custom|global|border-radius"
+					"radius": "var:custom|global|border|radius"
 				},
 				"color": {
 					"text": "var:preset|color|primary-700"
@@ -1200,10 +1202,10 @@
 			},
 			"core/calendar": {
 				"border": {
-					"color": "var:custom|global|border-color",
-					"style": "var:custom|global|border-style",
-					"width": "var:custom|global|border-width",
-					"radius": "var:custom|global|border-radius"
+					"color": "var:custom|global|border|color",
+					"style": "var:custom|global|border|style",
+					"width": "var:custom|global|border|width",
+					"radius": "var:custom|global|border|radius"
 				},
 				"color": {
 					"background": "var:preset|color|neutral-50"
@@ -1248,10 +1250,10 @@
 			},
 			"core/code": {
 				"border": {
-					"color": "var:custom|global|border-color",
-					"style": "var:custom|global|border-style",
-					"width": "var:custom|global|border-width",
-					"radius": "var:custom|global|border-radius"
+					"color": "var:custom|global|border|color",
+					"style": "var:custom|global|border|style",
+					"width": "var:custom|global|border|width",
+					"radius": "var:custom|global|border|radius"
 				},
 				"color": {
 					"background": "var:preset|color|neutral-50"
@@ -1343,10 +1345,10 @@
 			},
 			"core/details": {
 				"border": {
-					"color": "var:custom|global|border-color",
-					"style": "var:custom|global|border-style",
-					"width": "var:custom|global|border-width",
-					"radius": "var:custom|global|border-radius"
+					"color": "var:custom|global|border|color",
+					"style": "var:custom|global|border|style",
+					"width": "var:custom|global|border|width",
+					"radius": "var:custom|global|border|radius"
 				},
 				"color": {
 					"text": "var:preset|color|contrast",
@@ -1356,10 +1358,10 @@
 			},
 			"core/file": {
 				"border": {
-					"color": "var:custom|global|border-color",
-					"style": "var:custom|global|border-style",
-					"width": "var:custom|global|border-width",
-					"radius": "var:custom|global|border-radius"
+					"color": "var:custom|global|border|color",
+					"style": "var:custom|global|border|style",
+					"width": "var:custom|global|border|width",
+					"radius": "var:custom|global|border|radius"
 				},
 				"color": {
 					"background": "var:preset|color|neutral-50"
@@ -1384,9 +1386,9 @@
 			},
 			"core/image": {
 				"border": {
-					"radius": "var:custom|global|border-radius"
+					"radius": "var:custom|global|border|radius"
 				},
-				"css": "{\n\tborder-radius: var( --wp--custom--global--border-radius ); }\n\n& img {\n\tbox-shadow: var( --wp--custom--global--shadow );\n}",
+				"css": "{\n\tborder-radius: var( --wp--custom--global--border--radius ); }\n\n& img {\n\tbox-shadow: var( --wp--custom--global--shadow );\n}",
 				"variations": {
 					"rounded": {
 						"border": {
@@ -1445,7 +1447,7 @@
 					"width": "1px",
 					"style": "solid",
 					"color": "var:preset|color|neutral-100",
-					"radius": "var:custom|global|border-radius"
+					"radius": "var:custom|global|border|radius"
 				},
 				"color": {
 					"text": "red",
@@ -1521,7 +1523,7 @@
 			},
 			"core/post-featured-image": {
 				"border": {
-					"radius": "var:custom|global|border-radius"
+					"radius": "var:custom|global|border|radius"
 				},
 				"css": "& img {\n\tbox-shadow: var( --wp--custom--global--shadow );\n}"
 			},
@@ -1535,7 +1537,7 @@
 						"elements": {
 							"link": {
 								"border": {
-									"radius": "var:custom|global|border-radius"
+									"radius": "var:custom|global|border|radius"
 								},
 								"color": {
 									"background": "var:custom|global|fill|background",
@@ -1767,7 +1769,7 @@
 			},
 			"core/social-link": {
 				"shadow": "var:preset|shadow|sm",
-				"css": "border-radius: var( --wp--custom--global--border-radius );"
+				"css": "border-radius: var( --wp--custom--global--border--radius );"
 			},
 			"core/social-links": {
 				"spacing": {
@@ -1788,7 +1790,7 @@
 									"color": "var:custom|global|outline|border-color",
 									"style": "var:custom|global|outline|border-style",
 									"width": "var:custom|global|outline|border-width",
-									"radius": "var:custom|global|border-radius"
+									"radius": "var:custom|global|border|radius"
 								},
 								"color": {
 									"background": "transparent !important",
@@ -1801,7 +1803,7 @@
 			},
 			"core/table": {
 				"border": {
-					"color": "var:custom|global|border-color"
+					"color": "var:custom|global|border|color"
 				},
 				"typography": {
 					"fontSize": "var:preset|font-size|sm",
@@ -1839,7 +1841,7 @@
 									"color": "var:custom|global|outline|border-color",
 									"style": "var:custom|global|outline|border-style",
 									"width": "var:custom|global|outline|border-width",
-									"radius": "var:custom|global|border-radius"
+									"radius": "var:custom|global|border|radius"
 								},
 								"color": {
 									"text": "inherit",

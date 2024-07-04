@@ -31,9 +31,12 @@
 		"custom": {
 			"variation": "saga",
 			"global": {
-				"borderColor": "var:preset|color|neutral-100",
-				"borderWidth": "1px",
-				"borderRadius": "0",
+				"border": {
+					"color": "var:preset|color|neutral-100",
+					"style": "solid",
+					"width": "1px",
+					"radius": "0"
+				},
 				"fill": {
 					"background": "var:preset|color|primary-500",
 					"hoverBackground": "var:preset|color|primary-700"

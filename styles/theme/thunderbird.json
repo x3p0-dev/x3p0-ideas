@@ -48,7 +48,9 @@
 		"custom": {
 			"variation": "thunderbird",
 			"global": {
-				"borderRadius": "8px",
+				"border": {
+					"radius": "8px"
+				},
 				"fill": {
 					"hoverBackground": "var:preset|color|neutral-950"
 				},
@@ -345,10 +347,10 @@
 					"background": "var:preset|color|white"
 				},
 				"border": {
-					"color": "var:custom|global|border-color",
-					"style": "var:custom|global|border-style",
-					"width": "var:custom|global|border-width",
-					"radius": "var:custom|global|border-radius"
+					"color": "var:custom|global|border|color",
+					"style": "var:custom|global|border|style",
+					"width": "var:custom|global|border|width",
+					"radius": "var:custom|global|border|radius"
 				},
 				"shadow": "var:custom|global|shadow",
 				"spacing": {

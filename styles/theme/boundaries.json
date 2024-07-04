@@ -23,10 +23,12 @@
 		"custom": {
 			"variation": "boundaries",
 			"global": {
-				"borderColor": "var:preset|color|neutral-300",
-				"borderStyle": "double",
-				"borderWidth": "4px",
-				"borderRadius": "0",
+				"border": {
+					"color": "var:preset|color|neutral-300",
+					"style": "double",
+					"width": "4px",
+					"radius": "0"
+				},
 				"fill": {
 					"hoverBackground": "var:preset|color|contrast",
 					"hoverColor": "var:preset|color|base"
@@ -38,7 +40,7 @@
 			"elements": {
 				"input": {
 					"background": "var:preset|color|base",
-					"borderColor": "var:custom|global|border-color",
+					"borderColor": "var:custom|global|border|color",
 					"borderStyle": "solid",
 					"borderWidth": "1px"
 				},
@@ -55,9 +57,9 @@
 				}
 			},
 			"siteBlocks": {
-				"borderColor": "var:custom|global|border-color",
-				"borderStyle": "var:custom|global|border-style",
-				"borderWidth": "var:custom|global|border-width",
+				"borderColor": "var:custom|global|border|color",
+				"borderStyle": "var:custom|global|border|style",
+				"borderWidth": "var:custom|global|border|width",
 				"margin": "var:preset|spacing|plus-3"
 			}
 		},
@@ -325,25 +327,25 @@
 			},
 			"core/navigation-submenu": {
 				"border": {
-					"color": "var:custom|global|border-color",
-					"style": "var:custom|global|border-style",
-					"width": "var:custom|global|border-width",
+					"color": "var:custom|global|border|color",
+					"style": "var:custom|global|border|style",
+					"width": "var:custom|global|border|width",
 					"radius": "0"
 				}
 			},
 			"core/post-comments-form": {
 				"border": {
-					"color": "var:custom|global|border-color",
-					"style": "var:custom|global|border-style",
-					"width": "var:custom|global|border-width"
+					"color": "var:custom|global|border|color",
+					"style": "var:custom|global|border|style",
+					"width": "var:custom|global|border|width"
 				},
 				"elements": {
 					"heading": {
 						"border": {
 							"bottom": {
-								"color": "var:custom|global|border-color",
-								"style": "var:custom|global|border-style",
-								"width": "var:custom|global|border-width"
+								"color": "var:custom|global|border|color",
+								"style": "var:custom|global|border|style",
+								"width": "var:custom|global|border|width"
 							}
 						},
 						"spacing": {
@@ -366,10 +368,10 @@
 			},
 			"core/post-featured-image": {
 				"border": {
-					"color": "var:custom|global|border-color",
-					"style": "var:custom|global|border-style",
-					"width": "var:custom|global|border-width",
-					"radius": "var:custom|global|border-radius"
+					"color": "var:custom|global|border|color",
+					"style": "var:custom|global|border|style",
+					"width": "var:custom|global|border|width",
+					"radius": "var:custom|global|border|radius"
 				},
 				"shadow": "var:custom|global|shadow"
 			},
@@ -438,9 +440,9 @@
 			"x3p0/breadcrumbs": {
 				"border": {
 					"bottom": {
-						"color": "var:custom|global|border-color",
-						"style": "var:custom|global|border-style",
-						"width": "var:custom|global|border-width"
+						"color": "var:custom|global|border|color",
+						"style": "var:custom|global|border|style",
+						"width": "var:custom|global|border|width"
 					}
 				}
 			}
@@ -448,9 +450,11 @@
 		"variations": {
 			"archive-header": {
 				"border": {
-					"color": "var:custom|global|border-color",
-					"style": "var:custom|global|border-style",
-					"width": "0 0 var(--wp--custom--global--border-width)"
+					"bottom": {
+						"color": "var:custom|global|border|color",
+						"style": "var:custom|global|border|style",
+						"width": "var:custom|global|border|width"
+					}
 				},
 				"spacing": {
 					"padding": {
@@ -470,18 +474,18 @@
 				},
 				"border": {
 					"top": {
-						"color": "var:custom|global|border-color",
-						"style": "var:custom|global|border-style",
-						"width": "var:custom|global|border-width"
+						"color": "var:custom|global|border|color",
+						"style": "var:custom|global|border|style",
+						"width": "var:custom|global|border|width"
 					}
 				}
 			},
 			"site-header": {
 				"border": {
 					"bottom": {
-						"color": "var:custom|global|border-color",
-						"style": "var:custom|global|border-style",
-						"width": "var:custom|global|border-width"
+						"color": "var:custom|global|border|color",
+						"style": "var:custom|global|border|style",
+						"width": "var:custom|global|border|width"
 					}
 				},
 				"color": {

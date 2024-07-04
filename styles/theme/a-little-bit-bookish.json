@@ -6,9 +6,12 @@
 		"custom": {
 			"variation": "a-little-bit-bookish",
 			"global": {
-				"borderColor": "var:preset|color|neutral-100",
-				"borderWidth": "1px",
-				"borderRadius": "4px",
+				"border": {
+					"color": "var:preset|color|neutral-100",
+					"style": "solid",
+					"width": "1px",
+					"radius": "4px"
+				},
 				"shadow": "none",
 				"fadedGradient": "linear-gradient( 225deg, #cdb8a425, transparent 80% ), linear-gradient( 180deg, transparent -40%, var( --wp--preset--color--base ) 100% )"
 			},
@@ -232,18 +235,18 @@
 					"background": "var:preset|color|neutral-50"
 				},
 				"border": {
-					"color": "var:custom|global|border-color",
-					"style": "var:custom|global|border-style",
-					"width": "var:custom|global|border-width",
-					"radius": "var:custom|global|border-radius"
+					"color": "var:custom|global|border|color",
+					"style": "var:custom|global|border|style",
+					"width": "var:custom|global|border|width",
+					"radius": "var:custom|global|border|radius"
 				},
 				"elements": {
 					"h3": {
 						"border": {
 							"bottom": {
-								"color": "var:custom|global|border-color",
-								"style": "var:custom|global|border-style",
-								"width": "var:custom|global|border-width"
+								"color": "var:custom|global|border|color",
+								"style": "var:custom|global|border|style",
+								"width": "var:custom|global|border|width"
 							}
 						},
 						"spacing": {
@@ -323,9 +326,9 @@
 			"site-footer": {
 				"border": {
 					"top": {
-						"color": "var:custom|global|border-color",
-						"style": "var:custom|global|border-style",
-						"width": "var:custom|global|border-width"
+						"color": "var:custom|global|border|color",
+						"style": "var:custom|global|border|style",
+						"width": "var:custom|global|border|width"
 					}
 				}
 			}

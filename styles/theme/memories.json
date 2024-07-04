@@ -55,10 +55,12 @@
 		"custom": {
 			"variation": "memories",
 			"global": {
-				"borderColor": "var:preset|color|neutral-300",
-				"borderStyle": "solid",
-				"borderWidth": "1px",
-				"borderRadius": "0",
+				"border": {
+					"color": "var:preset|color|neutral-300",
+					"style": "solid",
+					"width": "1px",
+					"radius": "0"
+				},
 				"fill": {
 					"background": "var:preset|color|primary-500",
 					"hoverBackground": "var:preset|color|primary-700"
@@ -509,14 +511,14 @@
 			"card-offset": {
 				"border": {
 					"bottom": {
-						"color": "var:custom|global|border-color",
-						"style": "var:custom|global|border-style",
-						"width": "var:custom|global|border-width"
+						"color": "var:custom|global|border|color",
+						"style": "var:custom|global|border|style",
+						"width": "var:custom|global|border|width"
 					},
 					"top": {
-						"color": "var:custom|global|border-color",
-						"style": "var:custom|global|border-style",
-						"width": "var:custom|global|border-width"
+						"color": "var:custom|global|border|color",
+						"style": "var:custom|global|border|style",
+						"width": "var:custom|global|border|width"
 					}
 				},
 				"color": {

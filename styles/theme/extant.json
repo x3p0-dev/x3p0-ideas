@@ -47,9 +47,12 @@
 				}
 			},
 			"global": {
-				"borderColor": "var:preset|color|neutral-100",
-				"borderWidth": "1px",
-				"borderRadius": "0",
+				"border": {
+					"color": "var:preset|color|neutral-100",
+					"style": "solid",
+					"width": "1px",
+					"radius": "0"
+				},
 				"shadow": "var:preset|shadow|xs",
 				"fill": {
 					"hoverBackground": "var:preset|color|contrast",
@@ -253,8 +256,8 @@
 		"blocks": {
 			"core/avatar": {
 				"border": {
-					"color": "var:custom|global|border-color",
-					"style": "var:custom|global|border-style",
+					"color": "var:custom|global|border|color",
+					"style": "var:custom|global|border|style",
 					"width": "1px"
 				},
 				"css": "& img {\n\tpadding: 2px;\n}"
@@ -289,10 +292,10 @@
 			},
 			"core/comment-template": {
 				"border": {
-					"color": "var:custom|global|border-color",
-					"style": "var:custom|global|border-style",
-					"width": "var:custom|global|border-width",
-					"radius": "var:custom|global|border-radius"
+					"color": "var:custom|global|border|color",
+					"style": "var:custom|global|border|style",
+					"width": "var:custom|global|border|width",
+					"radius": "var:custom|global|border|radius"
 				},
 				"spacing": {
 					"margin": {
@@ -308,10 +311,10 @@
 			},
 			"core/comments-title": {
 				"border": {
-					"color": "var:custom|global|border-color",
-					"style": "var:custom|global|border-style",
-					"width": "var:custom|global|border-width",
-					"radius": "var:custom|global|border-radius",
+					"color": "var:custom|global|border|color",
+					"style": "var:custom|global|border|style",
+					"width": "var:custom|global|border|width",
+					"radius": "var:custom|global|border|radius",
 					"bottom": {
 						"width": "0"
 					}
@@ -335,7 +338,7 @@
 			"core/navigation-submenu": {
 				"border": {
 					"width": "0",
-					"radius": "var:custom|global|border-radius"
+					"radius": "var:custom|global|border|radius"
 				},
 				"color": {
 					"text": "var:preset|color|neutral-50",
@@ -379,17 +382,17 @@
 			},
 			"core/post-comments-form": {
 				"border": {
-					"color": "var:custom|global|border-color",
-					"style": "var:custom|global|border-style",
-					"width": "var:custom|global|border-width"
+					"color": "var:custom|global|border|color",
+					"style": "var:custom|global|border|style",
+					"width": "var:custom|global|border|width"
 				},
 				"elements": {
 					"heading": {
 						"border": {
 							"bottom": {
-								"color": "var:custom|global|border-color",
-								"style": "var:custom|global|border-style",
-								"width": "var:custom|global|border-width"
+								"color": "var:custom|global|border|color",
+								"style": "var:custom|global|border|style",
+								"width": "var:custom|global|border|width"
 							}
 						},
 						"spacing": {

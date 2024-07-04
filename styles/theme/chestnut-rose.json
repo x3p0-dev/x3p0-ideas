@@ -162,8 +162,10 @@
 		"custom": {
 			"variation": "chestnut-rose",
 			"global": {
-				"borderWidth": "0",
-				"borderRadius": "8px",
+				"border": {
+					"width": "0",
+					"radius": "8px"
+				},
 				"shadow": "var:preset|shadow|lg",
 				"fill": {
 					"hoverBackground": "var:preset|color|primary-500"
@@ -296,7 +298,7 @@
 					"width": "1px",
 					"style": "solid",
 					"color": "var:preset|color|neutral-50",
-					"radius": "var:custom|global|border-radius"
+					"radius": "var:custom|global|border|radius"
 				},
 				"color": {
 					"text": "var:preset|color|contrast",

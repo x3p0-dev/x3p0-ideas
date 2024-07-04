@@ -68,8 +68,8 @@
 /// to keep the caption background from overflowing the image when its rounded.
 ///
 .wp-block-gallery .wp-block-image figcaption {
-	border-bottom-left-radius: var(--wp--custom--global--border-radius);
-	border-bottom-right-radius: var(--wp--custom--global--border-radius);
+	border-bottom-left-radius: var(--wp--custom--global--border--radius);
+	border-bottom-right-radius: var(--wp--custom--global--border--radius);
 }
 
 ///

@@ -51,10 +51,10 @@
 	overflow: hidden;
 	box-sizing: border-box;
 	padding: 0;
-	border-color:  var(--wp--custom--global--border-color);
-	border-style:  var(--wp--custom--global--border-style);
-	border-width:  var(--wp--custom--global--border-width);
-	border-radius: var(--wp--custom--global--border-radius);
+	border-color:  var(--wp--custom--global--border--color);
+	border-style:  var(--wp--custom--global--border--style);
+	border-width:  var(--wp--custom--global--border--width);
+	border-radius: var(--wp--custom--global--border--radius);
 	box-shadow:    var(--wp--custom--global--shadow);
 
 	// Reset what would've normally been a `<pre>` tag styling.

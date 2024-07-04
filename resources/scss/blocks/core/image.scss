@@ -44,7 +44,7 @@
 // outline style. However, it can't inherit the image's radius, so it needs to
 // use the set default.
 .wp-block-image a:has(img) {
-	border-radius: var(--wp--custom--global--border-radius);
+	border-radius: var(--wp--custom--global--border--radius);
 }
 
 // Match hover background with that defined by `a img:hover`.
@@ -317,6 +317,6 @@ figure.wp-block-image.is-style-polaroid {
 .wp-lightbox-overlay .wp-block-image img {
 	padding: 0 !important;
 	border: none !important;
-	border-radius: var(--wp--custom--global--border-radius) !important;
+	border-radius: var(--wp--custom--global--border--radius) !important;
 	box-shadow: var(--wp--custom--global--shadow) !important;
 }

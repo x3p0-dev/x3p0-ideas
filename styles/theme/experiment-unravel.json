@@ -202,9 +202,12 @@
 				}
 			},
 			"global": {
-				"borderColor": "var:preset|color|neutral-900",
-				"borderWidth": "1px",
-				"borderRadius": "0px",
+				"border": {
+					"color": "var:preset|color|neutral-900",
+					"style": "solid",
+					"width": "1px",
+					"radius": "0"
+				},
 				"shadow": "var:preset|shadow|lg",
 				"fadeInGradient": "linear-gradient(180deg, transparent, #2b303d)",
 				"fill": {
@@ -420,7 +423,7 @@
 					"width": "1px",
 					"style": "solid",
 					"color": "var:preset|color|neutral-900",
-					"radius": "var:custom|global|border-radius"
+					"radius": "var:custom|global|border|radius"
 				},
 				"color": {
 					"text": "var:preset|color|neutral-50",

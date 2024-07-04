@@ -11,10 +11,10 @@
 /// so there's no way to add these on generic sections.
 ///
 :root :where(.has-global-border) {
-	border-color: var(--wp--custom--global--border-color, transparent);
-	border-style: var(--wp--custom--global--border-style, solid);
-	border-width: var(--wp--custom--global--border-width, 0);
-	border-radius: var(--wp--custom--global--border-radius, 0);
+	border-color: var(--wp--custom--global--border--color, transparent);
+	border-style: var(--wp--custom--global--border--style, solid);
+	border-width: var(--wp--custom--global--border--width, 0);
+	border-radius: var(--wp--custom--global--border--radius, 0);
 	box-shadow: var(--wp--custom--global--shadow, none);
 }
 
