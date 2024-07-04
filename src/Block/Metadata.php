@@ -27,12 +27,15 @@ class Metadata implements Bootable
 	 * @todo  Type hint with PHP 8.3+ requirement.
 	 */
 	private const SETTINGS_METHODS = [
+		'core/archives'           => 'coreArchives',
 		'core/avatar'             => 'coreAvatar',
+		'core/categories'         => 'coreCategories',
 		'core/group'              => 'coreGroup',
 		'core/heading'            => 'coreHeading',
 		'core/navigation-submenu' => 'coreNavigationSubmenu',
 		'core/query'              => 'coreQuery',
-		'core/query-pagination'   => 'coreQueryPagination'
+		'core/query-pagination'   => 'coreQueryPagination',
+		'core/tag-cloud'          => 'coreTagCloud'
 	];
 
 	/**
@@ -65,6 +68,20 @@ class Metadata implements Bootable
 	}
 
 	/**
+	 * Adds color support to the Archives block.
+	 *
+	 * @since 1.0.0
+	 */
+	private function coreArchives(array $settings): array
+	{
+		$settings['supports']['color']              ??= [];
+		$settings['supports']['color']['gradients'] ??= true;
+		$settings['supports']['color']['link']      ??= true;
+
+		return $settings;
+	}
+
+	/**
 	 * Filters the Avatar block args to set custom selectors via the
 	 * Selectors API. Originally, Core set the border to the wrapping `<div>`
 	 * for around the image. This was fixed by applying the border to the
@@ -77,6 +94,20 @@ class Metadata implements Bootable
 	private function coreAvatar(array $settings): array
 	{
 		$settings['selectors']['border'] = '.wp-block-avatar';
+
+		return $settings;
+	}
+
+	/**
+	 * Adds color support to the Categories block.
+	 *
+	 * @since 1.0.0
+	 */
+	private function coreCategories(array $settings): array
+	{
+		$settings['supports']['color']              ??= [];
+		$settings['supports']['color']['gradients'] ??= true;
+		$settings['supports']['color']['link']      ??= true;
 
 		return $settings;
 	}
@@ -176,6 +207,20 @@ class Metadata implements Bootable
 		$settings['supports']['spacing']            ??= [];
 		$settings['supports']['spacing']['margin']  ??= [ 'top', 'bottom' ];
 		$settings['supports']['spacing']['padding'] ??= true;
+
+		return $settings;
+	}
+
+	/**
+	 * Adds color support to the Tag Cloud block.
+	 *
+	 * @since 1.0.0
+	 */
+	private function coreTagCloud(array $settings): array
+	{
+		$settings['supports']['color']              ??= [];
+		$settings['supports']['color']['gradients'] ??= true;
+		$settings['supports']['color']['link']      ??= true;
 
 		return $settings;
 	}

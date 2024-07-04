@@ -79,13 +79,6 @@
 						"stripeBackground": "var:preset|color|neutral-50"
 					}
 				}
-			},
-			"core/tag-cloud": {
-				"custom": {
-					"linkCount": {
-						"color": "var:preset|color|neutral-500"
-					}
-				}
 			}
 		},
 		"border": {
