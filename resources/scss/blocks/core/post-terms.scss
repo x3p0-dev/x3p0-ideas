@@ -41,11 +41,14 @@
 // -----------------------------------------------------------------------------
 
 ///
-/// Turns the post term links into a filled button.
+/// Shared fill and outline block styles.
 ///
 /// @todo Figure out how this gap should be implemented. Is this flexbox?
 ///
-.wp-block-post-terms.is-style-fill {
+.wp-block-post-terms:is(
+	.is-style-fill,
+	.is-style-outline
+ ) {
 	--wp--custom--gap: var(--wp--preset--spacing--minus-1);
 
 	.wp-block-post-terms__separator { display: none; }

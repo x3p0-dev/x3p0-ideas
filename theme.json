@@ -1570,6 +1570,48 @@
 								}
 							}
 						}
+					},
+					"outline": {
+						"typography": {
+							"fontSize": "var:preset|font-size|sm",
+							"lineHeight": "var:custom|line-height|sm"
+						},
+						"elements": {
+							"link": {
+								"border": {
+									"color": "var:custom|global|outline|border-color",
+									"style": "var:custom|global|outline|border-style",
+									"width": "var:custom|global|outline|border-width",
+									"radius": "var:custom|global|border|radius"
+								},
+								"color": {
+									"text": "inherit",
+									"background": "transparent"
+								},
+								"spacing": {
+									"padding": {
+										"top": "var:preset|spacing|minus-2",
+										"bottom": "var:preset|spacing|minus-2",
+										"left": "var:preset|spacing|plus-1",
+										"right": "var:preset|spacing|plus-1"
+									}
+								},
+								"typography": {
+									"lineHeight": "var:custom|line-height|sm",
+									"textDecoration": "none"
+								},
+								":focus": {
+									"typography": {
+										"textDecoration": "underline"
+									}
+								},
+								":hover": {
+									"typography": {
+										"textDecoration": "underline"
+									}
+								}
+							}
+						}
 					}
 				}
 			},
@@ -1820,6 +1862,55 @@
 					}
 				},
 				"variations": {
+					"fill": {
+						"typography": {
+							"fontSize": "var:preset|font-size|sm",
+							"lineHeight": "var:custom|line-height|sm"
+						},
+						"elements": {
+							"link": {
+								"border": {
+									"radius": "var:custom|global|border|radius"
+								},
+								"color": {
+									"background": "var:custom|global|fill|background",
+									"text": "var:custom|global|fill|color"
+								},
+								"shadow": "var:preset|shadow|md",
+								"spacing": {
+									"padding": {
+										"top": "var:preset|spacing|minus-2",
+										"bottom": "var:preset|spacing|minus-2",
+										"left": "var:preset|spacing|base",
+										"right": "var:preset|spacing|base"
+									}
+								},
+								"typography": {
+									"fontSize": "inherit !important",
+									"fontWeight": "inherit !important",
+									"textDecoration": "none"
+								},
+								":focus": {
+									"color": {
+										"background": "var:custom|global|fill|hover-background",
+										"text": "var:custom|global|fill|hover-color"
+									},
+									"typography": {
+										"textDecoration": "underline"
+									}
+								},
+								":hover": {
+									"color": {
+										"background": "var:custom|global|fill|hover-background",
+										"text": "var:custom|global|fill|hover-color"
+									},
+									"typography": {
+										"textDecoration": "underline"
+									}
+								}
+							}
+						}
+					},
 					"flat": {
 						"elements": {
 							"link": {
@@ -1840,6 +1931,10 @@
 						}
 					},
 					"outline": {
+						"typography": {
+							"fontSize": "var:preset|font-size|sm",
+							"lineHeight": "var:custom|line-height|sm"
+						},
 						"elements": {
 							"link": {
 								"border": {
