@@ -1813,6 +1813,20 @@
 					"blockGap": "var:preset|spacing|plus-1"
 				},
 				"variations": {
+					"fill": {
+						"blocks": {
+							"core/social-link": {
+								"border": {
+									"radius": "var:custom|global|border|radius"
+								},
+								"color": {
+									"background": "var:custom|global|fill|background",
+									"text": "var:custom|global|fill|color"
+								},
+								"shadow": "var:preset|shadow|md"
+							}
+						}
+					},
 					"logos-only": {
 						"blocks": {
 							"core/social-link": {

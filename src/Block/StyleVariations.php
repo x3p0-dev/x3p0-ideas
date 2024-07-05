@@ -150,7 +150,7 @@ class StyleVariations implements Bootable
 				'check-circle'  => __('Check Circle',  'x3p0-ideas')
 			],
 			'core/loginout' => [
-				'icon' => __('Icon',   'x3p0-ideas')
+				'icon' => __('Icon', 'x3p0-ideas')
 			],
 			'core/page-list' => [
 				'horizontal' => __('Horizontal', 'x3p0-ideas'),
@@ -204,8 +204,9 @@ class StyleVariations implements Bootable
 				'hand-drawn' => __('Hand Drawn', 'x3p0-ideas')
 			],
 			'core/social-links' => [
+				'fill'     => __('Fill',     'x3p0-ideas'),
 				'monotone' => __('Monotone', 'x3p0-ideas'),
-				'outline'  => __('Outline', 'x3p0-ideas')
+				'outline'  => __('Outline',  'x3p0-ideas')
 			],
 			'core/site-title' => [
 				'normalize' => __('Normalize', 'x3p0-ideas')
