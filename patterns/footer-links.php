@@ -42,9 +42,10 @@ defined('ABSPATH') || exit;
 		<!-- /wp:paragraph -->
 
 		<!-- wp:social-links {
-			"size":"has-large-icon-size"
+			"size":"has-large-icon-size",
+			"className":"is-style-fill"
 		} -->
-		<ul class="wp-block-social-links has-large-icon-size">
+		<ul class="wp-block-social-links has-large-icon-size is-style-fill">
 			<!-- wp:social-link {"url":"https://wordpress.org","service":"wordpress"} /-->
 			<!-- wp:social-link {"url":"https://github.com","service":"github"} /-->
 			<!-- wp:social-link {"url":"https://facebook.com","service":"facebook"} /-->
