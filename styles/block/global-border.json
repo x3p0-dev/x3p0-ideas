@@ -3,7 +3,10 @@
 	"version": 3,
 	"title": "Global Border",
 	"slug": "global-border",
-	"blockTypes": [ "core/cover" ],
+	"blockTypes": [
+		"core/cover",
+		"core/group"
+	],
 	"styles": {
 		"border": {
 			"color": "var:custom|global|border|color",
