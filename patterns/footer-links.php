@@ -37,9 +37,7 @@ defined('ABSPATH') || exit;
 			"isLink":false
 		} /-->
 
-		<!-- wp:paragraph -->
-		<p><?= esc_html__('Find me on any of these platforms. Please get in touch.', 'x3p0-ideas') ?></p>
-		<!-- /wp:paragraph -->
+		<!-- wp:site-tagline /-->
 
 		<!-- wp:social-links {
 			"size":"has-large-icon-size",
