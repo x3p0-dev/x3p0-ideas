@@ -11,6 +11,7 @@
 /// so there's no way to add these on generic sections.
 ///
 :root :where(.has-global-border) {
+	overflow: hidden;
 	border-color: var(--wp--custom--global--border--color, transparent);
 	border-style: var(--wp--custom--global--border--style, solid);
 	border-width: var(--wp--custom--global--border--width, 0);
