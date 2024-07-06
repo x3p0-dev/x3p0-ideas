@@ -418,9 +418,19 @@
 					"name": "Primary: 900"
 				},
 				{
+					"slug": "primary-800",
+					"color": "#265ba7",
+					"name": "Primary: 800"
+				},
+				{
 					"slug": "primary-700",
 					"color": "#2770ce",
 					"name": "Primary: 700"
+				},
+				{
+					"slug": "primary-600",
+					"color": "#3086e0",
+					"name": "Primary: 600"
 				},
 				{
 					"slug": "primary-500",
@@ -428,9 +438,19 @@
 					"name": "Primary: 500"
 				},
 				{
+					"slug": "primary-400",
+					"color": "#68bef2",
+					"name": "Primary: 400"
+				},
+				{
 					"slug": "primary-300",
 					"color": "#99d5f7",
 					"name": "Primary: 300"
+				},
+				{
+					"slug": "primary-200",
+					"color": "#c2e5fb",
+					"name": "Primary: 200"
 				},
 				{
 					"slug": "primary-100",
@@ -453,9 +473,19 @@
 					"name": "Secondary: 900"
 				},
 				{
+					"slug": "secondary-800",
+					"color": "#7615b4",
+					"name": "Secondary: 800"
+				},
+				{
 					"slug": "secondary-700",
 					"color": "#8c13dd",
 					"name": "Secondary: 700"
+				},
+				{
+					"slug": "secondary-600",
+					"color": "#a223fa",
+					"name": "Secondary: 600"
 				},
 				{
 					"slug": "secondary-500",
@@ -463,9 +493,19 @@
 					"name": "Secondary: 500"
 				},
 				{
+					"slug": "secondary-400",
+					"color": "#c97aff",
+					"name": "Secondary: 400"
+				},
+				{
 					"slug": "secondary-300",
 					"color": "#ddaeff",
 					"name": "Secondary: 300"
+				},
+				{
+					"slug": "secondary-200",
+					"color": "#ecd1ff",
+					"name": "Secondary: 200"
 				},
 				{
 					"slug": "secondary-100",
@@ -488,9 +528,19 @@
 					"name": "Neutral: 900"
 				},
 				{
+					"slug": "neutral-800",
+					"color": "#2c4260",
+					"name": "Neutral: 800"
+				},
+				{
 					"slug": "neutral-700",
 					"color": "#324d72",
 					"name": "Neutral: 700"
+				},
+				{
+					"slug": "neutral-600",
+					"color": "#3d5f8c",
+					"name": "Neutral: 600"
 				},
 				{
 					"slug": "neutral-500",
@@ -498,9 +548,19 @@
 					"name": "Neutral: 500"
 				},
 				{
+					"slug": "neutral-400",
+					"color": "#7196bf",
+					"name": "Neutral: 400"
+				},
+				{
 					"slug": "neutral-300",
 					"color": "#a3bbd6",
 					"name": "Neutral: 300"
+				},
+				{
+					"slug": "neutral-200",
+					"color": "#cedae9",
+					"name": "Neutral: 200"
 				},
 				{
 					"slug": "neutral-100",
@@ -524,7 +584,7 @@
 				"border": {
 					"color": "var:preset|color|neutral-100",
 					"style": "solid",
-					"width": "0",
+					"width": "1px",
 					"radius": "6px"
 				},
 				"shadow": "var:preset|shadow|lg",

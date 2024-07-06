@@ -56,7 +56,7 @@
 			"variation": "memories",
 			"global": {
 				"border": {
-					"color": "var:preset|color|neutral-300",
+					"color": "var:preset|color|neutral-200",
 					"style": "solid",
 					"width": "1px",
 					"radius": "0"
@@ -93,9 +93,19 @@
 					"name": "Primary: 900"
 				},
 				{
+					"slug": "primary-800",
+					"color": "#245e66",
+					"name": "Primary: 800"
+				},
+				{
 					"slug": "primary-700",
 					"color": "#22737c",
 					"name": "Primary: 700"
+				},
+				{
+					"slug": "primary-600",
+					"color": "#228f98",
+					"name": "Primary: 600"
 				},
 				{
 					"slug": "primary-500",
@@ -103,9 +113,19 @@
 					"name": "Primary: 500"
 				},
 				{
+					"slug": "primary-400",
+					"color": "#41cccf",
+					"name": "Primary: 400"
+				},
+				{
 					"slug": "primary-300",
 					"color": "#7ee2e2",
 					"name": "Primary: 300"
+				},
+				{
+					"slug": "primary-200",
+					"color": "#b2efef",
+					"name": "Primary: 200"
 				},
 				{
 					"slug": "primary-100",
@@ -124,23 +144,43 @@
 				},
 				{
 					"slug": "secondary-900",
-					"color": "#094b40",
+					"color": "#0a4a3e",
 					"name": "Secondary: 900"
 				},
 				{
+					"slug": "secondary-800",
+					"color": "#0a5b4a",
+					"name": "Secondary: 800"
+				},
+				{
 					"slug": "secondary-700",
-					"color": "#08745e",
+					"color": "#0a725d",
 					"name": "Secondary: 700"
 				},
 				{
+					"slug": "secondary-600",
+					"color": "#0c8f70",
+					"name": "Secondary: 600"
+				},
+				{
 					"slug": "secondary-500",
-					"color": "#16b38c",
+					"color": "#18b18a",
 					"name": "Secondary: 500"
 				},
 				{
+					"slug": "secondary-400",
+					"color": "#3ccba2",
+					"name": "Secondary: 400"
+				},
+				{
 					"slug": "secondary-300",
-					"color": "#73e2bf",
+					"color": "#74e1bf",
 					"name": "Secondary: 300"
+				},
+				{
+					"slug": "secondary-200",
+					"color": "#abefd5",
+					"name": "Secondary: 200"
 				},
 				{
 					"slug": "secondary-100",
@@ -154,37 +194,57 @@
 				},
 				{
 					"slug": "neutral-950",
-					"color": "#020617",
+					"color": "#1f2532",
 					"name": "Neutral: 950"
 				},
 				{
 					"slug": "neutral-900",
-					"color": "#0f172a",
+					"color": "#2f3a4b",
 					"name": "Neutral: 900"
 				},
 				{
-					"slug": "neutral-700",
+					"slug": "neutral-800",
 					"color": "#334155",
+					"name": "Neutral: 800"
+				},
+				{
+					"slug": "neutral-700",
+					"color": "#3c4d68",
 					"name": "Neutral: 700"
 				},
 				{
+					"slug": "neutral-600",
+					"color": "#496080",
+					"name": "Neutral: 600"
+				},
+				{
 					"slug": "neutral-500",
-					"color": "#64748b",
+					"color": "#5d789a",
 					"name": "Neutral: 500"
 				},
 				{
+					"slug": "neutral-400",
+					"color": "#7d95b3",
+					"name": "Neutral: 400"
+				},
+				{
 					"slug": "neutral-300",
-					"color": "#cbd5e1",
+					"color": "#abbbce",
 					"name": "Neutral: 300"
 				},
 				{
+					"slug": "neutral-200",
+					"color": "#d2d9e5",
+					"name": "Neutral: 200"
+				},
+				{
 					"slug": "neutral-100",
-					"color": "#f1f5f9",
+					"color": "#ebeef3",
 					"name": "Neutral: 100"
 				},
 				{
 					"slug": "neutral-50",
-					"color": "#f8fafc",
+					"color": "#f5f7fa",
 					"name": "Neutral: 50"
 				},
 				{
@@ -541,7 +601,7 @@
 			"site-footer": {
 				"border": {
 					"top": {
-						"color": "var:preset|color|neutral-300",
+						"color": "var:preset|color|neutral-200",
 						"style": "solid",
 						"width": "1px"
 					}

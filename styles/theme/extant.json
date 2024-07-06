@@ -86,9 +86,19 @@
 					"name": "Primary: 900"
 				},
 				{
+					"slug": "primary-800",
+					"color": "#941d38",
+					"name": "Primary: 800"
+				},
+				{
 					"slug": "primary-700",
 					"color": "#b0203b",
 					"name": "Primary: 700"
+				},
+				{
+					"slug": "primary-600",
+					"color": "#c02942",
+					"name": "Primary: 600"
 				},
 				{
 					"slug": "primary-500",
@@ -96,9 +106,19 @@
 					"name": "Primary: 500"
 				},
 				{
+					"slug": "primary-400",
+					"color": "#f07c87",
+					"name": "Primary: 400"
+				},
+				{
 					"slug": "primary-300",
 					"color": "#f6abb0",
 					"name": "Primary: 300"
+				},
+				{
+					"slug": "primary-200",
+					"color": "#fad1d4",
+					"name": "Primary: 200"
 				},
 				{
 					"slug": "primary-100",
@@ -121,9 +141,19 @@
 					"name": "Neutral: 900"
 				},
 				{
+					"slug": "neutral-800",
+					"color": "#464646",
+					"name": "Neutral: 800"
+				},
+				{
 					"slug": "neutral-700",
 					"color": "#525252",
 					"name": "Neutral: 700"
+				},
+				{
+					"slug": "neutral-600",
+					"color": "#656565",
+					"name": "Neutral: 600"
 				},
 				{
 					"slug": "neutral-500",
@@ -131,9 +161,19 @@
 					"name": "Neutral: 500"
 				},
 				{
+					"slug": "neutral-400",
+					"color": "#989898",
+					"name": "Neutral: 400"
+				},
+				{
 					"slug": "neutral-300",
 					"color": "#bdbdbd",
 					"name": "Neutral: 300"
+				},
+				{
+					"slug": "neutral-200",
+					"color": "#dcdcdc",
+					"name": "Neutral: 200"
 				},
 				{
 					"slug": "neutral-100",
