@@ -107,11 +107,8 @@ $image = get_theme_file_uri('public/media/images/default-16x9.webp');
 		} -->
 		<header class="wp-block-group">
 
-			<!-- wp:paragraph {
-				"className":"is-style-kicker",
-				"textColor":"primary-700"
-			} -->
-			<p class="is-style-kicker has-primary-700-color has-text-color"><?= esc_html__('Level 99', 'x3p0-ideas') ?></p>
+			<!-- wp:paragraph {"className":"is-style-kicker"} -->
+			<p class="is-style-kicker"><?= esc_html__('Level 99', 'x3p0-ideas') ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:heading {"level":3} -->
