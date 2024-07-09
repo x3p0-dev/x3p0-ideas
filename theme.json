@@ -1055,7 +1055,7 @@
 					"text": "var:custom|global|fill|color"
 				},
 				"outline": {
-					"color": "var:preset|color|primary-950",
+					"color": "currentColor",
 					"offset": "2px",
 					"style": "solid",
 					"width": "0"
