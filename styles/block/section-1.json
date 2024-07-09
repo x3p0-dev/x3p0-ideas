@@ -10,7 +10,7 @@
 		"core/query"
 	],
 	"styles": {
-		"css": "& .is-style-meta, .is-style-meta a { color: inherit !important; }",
+		"css": "--wp--custom--global--fill--background: var(--wp--preset--color--primary-900);\n--wp--custom--global--fill--hover-background: var(--wp--preset--color--primary-950);",
 		"color": {
 			"background": "var:preset|color|primary-700",
 			"text": "var:preset|color|white"
@@ -24,28 +24,17 @@
 			}
 		},
 		"elements": {
-			"button": {
-				"color": {
-					"background": "var:preset|color|primary-900",
-					"text": "var:custom|global|fill|color"
-				},
-				":focus": {
-					"color": {
-						"background": "var:preset|color|primary-950"
-					}
-				},
-				":hover": {
-					"color": {
-						"background": "var:preset|color|primary-950"
-					}
-				}
-			},
 			"caption": {
 				"color": {
 					"text": "currentColor"
 				}
 			},
 			"cite": {
+				"color": {
+					"text": "currentColor"
+				}
+			},
+			"heading": {
 				"color": {
 					"text": "currentColor"
 				}

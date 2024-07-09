@@ -496,15 +496,6 @@
 					"fontSize": "var:preset|font-size|xs",
 					"lineHeight": "var:custom|line-height|xs"
 				}
-			},
-			"section-1": {
-				"elements": {
-					"heading": {
-						"color": {
-							"text": "currentColor"
-						}
-					}
-				}
 			}
 		}
 	}
