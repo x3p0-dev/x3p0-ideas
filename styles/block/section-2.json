@@ -10,9 +10,10 @@
 		"core/query"
 	],
 	"styles": {
+		"css": "--wp--custom--global--fill--background: var(--wp--preset--color--secondary-900);\n--wp--custom--global--fill--hover-background: var(--wp--preset--color--secondary-950);",
 		"color": {
-			"background": "var:preset|color|neutral-100",
-			"text": "var:preset|color|contrast"
+			"background": "var:preset|color|secondary-700",
+			"text": "var:preset|color|white"
 		},
 		"spacing": {
 			"padding": {
@@ -23,27 +24,34 @@
 			}
 		},
 		"elements": {
-			"button": {
+			"caption": {
 				"color": {
-					"background": "var:custom|global|fill|background",
-					"text": "var:custom|global|fill|color"
-				},
-				":focus": {
-					"color": {
-						"background": "var:custom|global|fill|hover-background",
-						"text": "var:custom|global|fill|hover-color"
-					}
-				},
-				":hover": {
-					"color": {
-						"background": "var:custom|global|fill|hover-background",
-						"text": "var:custom|global|fill|hover-color"
-					}
+					"text": "currentColor"
+				}
+			},
+			"cite": {
+				"color": {
+					"text": "currentColor"
+				}
+			},
+			"heading": {
+				"color": {
+					"text": "currentColor"
 				}
 			},
 			"link": {
 				"color": {
-					"text": "var:preset|color|primary-700"
+					"text": "var:preset|color|secondary-50"
+				},
+				":focus": {
+					"color": {
+						"text": "currentColor"
+					}
+				},
+				":hover": {
+					"color": {
+						"text": "currentColor"
+					}
 				}
 			}
 		},

@@ -20,10 +20,10 @@ defined('ABSPATH') || exit;
 			"blockGap":"var:preset|spacing|base"
 		}
 	},
-	"className":"has-global-border is-style-section-3",
+	"className":"has-global-border is-style-section-4",
 	"layout":{"type":"default"}
 } -->
-<div class="wp-block-group has-global-border is-style-section-3">
+<div class="wp-block-group has-global-border is-style-section-4">
 
 	<!-- wp:group {
 		"layout":{

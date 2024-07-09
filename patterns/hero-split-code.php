@@ -32,10 +32,10 @@ $image = get_theme_file_uri('public/media/svg/code.svg');
 			}
 		}
 	},
-	"className":"is-style-section-3",
+	"className":"is-style-section-4",
 	"layout":{"type":"constrained","contentSize":"80rem"}
 } -->
-<section class="wp-block-group alignfull is-style-section-3" style="padding-top:var(--wp--preset--spacing--plus-4);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-4);padding-left:var(--wp--preset--spacing--plus-3)">
+<section class="wp-block-group alignfull is-style-section-4" style="padding-top:var(--wp--preset--spacing--plus-4);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-4);padding-left:var(--wp--preset--spacing--plus-3)">
 
 	<!-- wp:group {
 		"style":{

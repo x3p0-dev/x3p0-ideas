@@ -1,8 +1,8 @@
 {
 	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
 	"version": 3,
-	"title": "Style 3",
-	"slug": "section-3",
+	"title": "Style 4",
+	"slug": "section-4",
 	"blockTypes": [
 		"core/column",
 		"core/columns",
@@ -11,7 +11,7 @@
 	],
 	"styles": {
 		"color": {
-			"background": "var:preset|color|neutral-100",
+			"background": "var:preset|color|neutral-50",
 			"text": "var:preset|color|contrast"
 		},
 		"spacing": {

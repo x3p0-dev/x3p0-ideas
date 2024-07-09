@@ -22,7 +22,7 @@ defined('ABSPATH') || exit;
 			"minHeight":"100%"
 		}
 	},
-	"className":"has-global-border is-style-section-3",
+	"className":"has-global-border is-style-section-4",
 	"layout":{
 		"type":"flex",
 		"orientation":"vertical",
@@ -30,7 +30,7 @@ defined('ABSPATH') || exit;
 		"justifyContent":"stretch"
 	}
 } -->
-<article class="wp-block-group has-global-border is-style-section-3" style="min-height:100%">
+<article class="wp-block-group has-global-border is-style-section-4" style="min-height:100%">
 
 	<!-- wp:group {
 		"metadata":{
