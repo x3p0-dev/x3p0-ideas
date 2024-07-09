@@ -554,12 +554,12 @@
 					}
 				}
 			},
-			"section-2": {
+			"section-3": {
 				"color": {
 					"background": "var:preset|color|neutral-100"
 				}
 			},
-			"section-3": {
+			"section-4": {
 				"color": {
 					"background": "var:preset|color|neutral-100",
 					"gradient": "var:preset|gradient|90-deg-neutral-50-transparent"
