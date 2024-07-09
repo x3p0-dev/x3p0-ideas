@@ -233,11 +233,7 @@ sub {
 // current color.
 // -----------------------------------------------------------------------------
 
-:is(
-	.is-style-section-1,
-	.is-style-section-2,
-	.is-style-section-3
-) {
+:is([class*=is-style-section-]) {
 	:where(del, s, ins, kbd) {
 		color: currentColor;
 		text-decoration-color: currentColor;

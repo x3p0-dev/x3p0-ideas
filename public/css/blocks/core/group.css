@@ -1,1 +1,1 @@
-.wp-block-group-is-layout-flex.is-vertical>:where(.wp-block-group-is-layout-flex:not(.is-vertical)){width:100%}.wp-block-group-is-layout-grid>*{container-type:inline-size}.wp-block-cover .is-style-meta{background:transparent;color:inherit}
+.wp-block-group-is-layout-flex.is-vertical>:where(.wp-block-group-is-layout-flex:not(.is-vertical)){width:100%}.wp-block-group-is-layout-grid>*{container-type:inline-size}.wp-block-cover .is-style-meta,:is(.is-style-section-1) .is-style-meta,:is(.is-style-section-1) .is-style-meta a{background:transparent;color:inherit}
