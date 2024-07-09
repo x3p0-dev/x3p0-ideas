@@ -1,7 +1,7 @@
 {
 	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
 	"version": 3,
-	"title": "Style 2",
+	"title": "Secondary",
 	"slug": "section-2",
 	"blockTypes": [
 		"core/column",
