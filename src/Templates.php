@@ -104,6 +104,12 @@ class Templates implements Bootable
 				'description' => sprintf(__('Displays single %s posts on your website unless a custom template has been applied to that post.', 'x3p0-ideas'), $label)
 			];
 
+			$types["taxonomy-post-format-{$format}"] ??= [
+				'title'       => sprintf(_x('Post Format Archive: %s', 'Template Name', 'x3p0-ideas'), $label),
+				'description' => sprintf(__('Displays an archive of %s posts.', 'x3p0-ideas'), $label)
+			];
+
+			// Original core templates in case taxonomy template filter is removed.
 			$types["taxonomy-post_format-post-format-{$format}"] ??= [
 				'title'       => sprintf(_x('Post Format Archive: %s', 'Template Name', 'x3p0-ideas'), $label),
 				'description' => sprintf(__('Displays an archive of %s posts.', 'x3p0-ideas'), $label)
@@ -154,6 +160,34 @@ class Templates implements Bootable
 
 		$templates[] = "single-{$post->post_type}.php";
 		$templates[] = 'single.php';
+
+		return $templates;
+	}
+
+	/**
+	 * Cleans up post format term archive template names.
+	 *
+	 * @hook  taxonomy_template_hierarchy  last
+	 * @since 1.0.0
+	 */
+	public function taxonomyTemplateHierarchy(array $templates): array
+	{
+		$term = get_queried_object();
+
+		if (empty($term->slug) || 'post_format' !== $term->taxonomy) {
+			return $templates;
+		}
+
+		$slug = str_replace('post-format-', '', $term->slug);
+
+		if (in_array($slug, get_post_format_slugs(), true)) {
+			$templates = [
+				"taxonomy-post-format-{$slug}.php",
+				"taxonomy-{$term->taxonomy}-{$term->slug}.php", // Old formatting.
+				'taxonomy-post-format.php',
+				'taxonomy.php'
+			];
+		}
 
 		return $templates;
 	}
