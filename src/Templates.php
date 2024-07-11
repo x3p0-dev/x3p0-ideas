@@ -93,6 +93,18 @@ class Templates implements Bootable
 			'description' => __('Displays single posts on your website unless a custom template has been applied to that post or a more specific template exists.', 'x3p0-ideas'),
 		];
 
+		$types['taxonomy-post_format'] ??= [
+			'title'       => _x('Post Format Archive', 'Template Name', 'x3p0-ideas'),
+			'description' => __('Displays a post format archive. This template will serve as a fallback when a more specific template (e.g. Post Format: Image) cannot be found.', 'x3p0-ideas')
+		];
+
+		foreach (get_post_format_strings() as $format => $label) {
+			$types["taxonomy-post_format-post-format-{$format}"] ??= [
+				'title'       => sprintf(_x('Post Format Archive: %s', 'Template Name', 'x3p0-ideas'), $label),
+				'description' => sprintf(__('Displays an archive of %s posts.', 'x3p0-ideas'), $label)
+			];
+		}
+
 		$types['video'] ??= [
 			'title'       => _x('Media: Video', 'Template name', 'x3p0-ideas'),
 			'description' => __('Displays when a visitor views the dedicated page that exists for a video attachment.', 'x3p0-ideas'),
