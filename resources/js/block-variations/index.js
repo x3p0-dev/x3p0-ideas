@@ -10,6 +10,7 @@
 import commentParentLink from './comment-parent-link';
 import grid              from './grid';
 import paginationLabel   from './pagination-label';
+import postFormat        from './post-format';
 import readingTime       from './reading-time';
 import siteCopyright     from './site-copyright';
 
@@ -20,6 +21,7 @@ import { getBlockVariations, registerBlockVariation } from '@wordpress/blocks';
 // Register each block variation.
 registerBlockVariation(commentParentLink.block, commentParentLink.variation);
 registerBlockVariation(paginationLabel.block, paginationLabel.variation);
+registerBlockVariation(postFormat.block, postFormat.variation);
 registerBlockVariation(readingTime.block, readingTime.variation);
 registerBlockVariation(siteCopyright.block, siteCopyright.variation);
 
