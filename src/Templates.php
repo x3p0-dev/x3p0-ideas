@@ -93,6 +93,21 @@ class Templates implements Bootable
 			'description' => __('Displays single posts on your website unless a custom template has been applied to that post or a more specific template exists.', 'x3p0-ideas'),
 		];
 
+		$types['video'] ??= [
+			'title'       => _x('Media: Video', 'Template name', 'x3p0-ideas'),
+			'description' => __('Displays when a visitor views the dedicated page that exists for a video attachment.', 'x3p0-ideas'),
+		];
+
+		// The below adds post format support for taxonomy term archive
+		// and single post templates. It maintains support for the Core
+		// WP naming for term archives but adds a cleaner version as
+		// well. The single templates are not supported by WP by default
+		// without a filter.
+		$types['taxonomy-post-format'] ??= [
+			'title'       => _x('Post Format Archive', 'Template Name', 'x3p0-ideas'),
+			'description' => __('Displays a post format archive. This template will serve as a fallback when a more specific template (e.g. Post Format: Image) cannot be found.', 'x3p0-ideas')
+		];
+
 		$types['taxonomy-post_format'] ??= [
 			'title'       => _x('Post Format Archive', 'Template Name', 'x3p0-ideas'),
 			'description' => __('Displays a post format archive. This template will serve as a fallback when a more specific template (e.g. Post Format: Image) cannot be found.', 'x3p0-ideas')
@@ -115,11 +130,6 @@ class Templates implements Bootable
 				'description' => sprintf(__('Displays an archive of %s posts.', 'x3p0-ideas'), $label)
 			];
 		}
-
-		$types['video'] ??= [
-			'title'       => _x('Media: Video', 'Template name', 'x3p0-ideas'),
-			'description' => __('Displays when a visitor views the dedicated page that exists for a video attachment.', 'x3p0-ideas'),
-		];
 
 		return $types;
 	}
@@ -185,6 +195,7 @@ class Templates implements Bootable
 				"taxonomy-post-format-{$slug}.php",
 				"taxonomy-{$term->taxonomy}-{$term->slug}.php", // Old formatting.
 				'taxonomy-post-format.php',
+				"taxonomy-{$term->taxonomy}.php", // Old formatting.
 				'taxonomy.php'
 			];
 		}
