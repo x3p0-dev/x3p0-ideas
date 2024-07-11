@@ -99,6 +99,11 @@ class Templates implements Bootable
 		];
 
 		foreach (get_post_format_strings() as $format => $label) {
+			$types["single-post-format-{$format}"] ??= [
+				'title'       => sprintf(_x('Single Post: %s', 'Template name', 'x3p0-ideas'), $label),
+				'description' => sprintf(__('Displays single %s posts on your website unless a custom template has been applied to that post.', 'x3p0-ideas'), $label)
+			];
+
 			$types["taxonomy-post_format-post-format-{$format}"] ??= [
 				'title'       => sprintf(_x('Post Format Archive: %s', 'Template Name', 'x3p0-ideas'), $label),
 				'description' => sprintf(__('Displays an archive of %s posts.', 'x3p0-ideas'), $label)
@@ -111,5 +116,45 @@ class Templates implements Bootable
 		];
 
 		return $types;
+	}
+
+	/**
+	 * Adds post format support for single post templates.
+	 *
+	 * @hook  single_template_hierarchy  last
+	 * @since 1.0.0
+	 */
+	public function singleTemplateHierarchy(array $templates): array
+	{
+		$post = get_queried_object();
+
+		if (! post_type_supports($post->post_type, 'post-formats')) {
+			return $templates;
+		}
+
+		$templates    = [];
+		$custom       = get_page_template_slug($post);
+		$name_decoded = urldecode($post->post_name);
+		$post_format  = get_post_format($post);
+
+		if ($custom && 0 === validate_file($custom)) {
+			$templates[] = $custom;
+		}
+
+		if ( $name_decoded !== $post->post_name ) {
+			$templates[] = "single-{$post->post_type}-{$name_decoded}.php";
+		}
+
+		$templates[] = "single-{$post->post_type}-{$post->post_name}.php";
+
+		// @todo - Do we want to allow for format templates based on type?
+		if ($post_format) {
+			$templates[] = "single-post-format-{$post_format}.php";
+		}
+
+		$templates[] = "single-{$post->post_type}.php";
+		$templates[] = 'single.php';
+
+		return $templates;
 	}
 }
