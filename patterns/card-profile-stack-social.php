@@ -20,7 +20,7 @@ use X3P0\Ideas\Tools\Language;
 	"metadata":{
 		"name":"<?= esc_attr__('Card', 'x3p0-ideas') ?>"
 	},
-	"className":"has-global-border is-style-section-4",
+	"className":"has-global-border is-style-section-3",
 	"style":{
 		"spacing":{
 			"padding":{
@@ -43,7 +43,7 @@ use X3P0\Ideas\Tools\Language;
 		"verticalAlignment":"space-between"
 	}
 } -->
-<div class="wp-block-group has-text-align-center has-global-border is-style-section-4 has-sm-font-size" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
+<div class="wp-block-group has-text-align-center has-global-border is-style-section-3 has-sm-font-size" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 
 	<!-- wp:group {
 		"style":{
@@ -112,7 +112,7 @@ use X3P0\Ideas\Tools\Language;
 		"metadata":{
 			"name":"<?= esc_attr__('Card Footer', 'x3p0-ideas') ?>"
 		},
-		"className":"is-style-section-3",
+		"className":"is-style-section-2",
 		"style":{
 			"spacing":{
 				"padding":{
@@ -125,7 +125,7 @@ use X3P0\Ideas\Tools\Language;
 			"type":"default"
 		}
 	} -->
-	<footer class="wp-block-group is-style-section-3" style="padding-top:var(--wp--preset--spacing--base);padding-bottom:var(--wp--preset--spacing--base)">
+	<footer class="wp-block-group is-style-section-2" style="padding-top:var(--wp--preset--spacing--base);padding-bottom:var(--wp--preset--spacing--base)">
 
 		<!-- wp:social-links {
 			"size":"has-huge-icon-size",

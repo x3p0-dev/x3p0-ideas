@@ -1,7 +1,7 @@
 {
 	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
 	"version": 3,
-	"title": "Secondary",
+	"title": "Style 2",
 	"slug": "section-2",
 	"blockTypes": [
 		"core/column",
@@ -10,10 +10,9 @@
 		"core/query"
 	],
 	"styles": {
-		"css": "--wp--custom--global--fill--background: var(--wp--preset--color--secondary-900);\n--wp--custom--global--fill--hover-background: var(--wp--preset--color--secondary-950);",
 		"color": {
-			"background": "var:preset|color|secondary-700",
-			"text": "var:preset|color|white"
+			"background": "var:preset|color|neutral-100",
+			"text": "var:preset|color|contrast"
 		},
 		"spacing": {
 			"padding": {
@@ -24,34 +23,27 @@
 			}
 		},
 		"elements": {
-			"caption": {
+			"button": {
 				"color": {
-					"text": "currentColor"
-				}
-			},
-			"cite": {
-				"color": {
-					"text": "currentColor"
-				}
-			},
-			"heading": {
-				"color": {
-					"text": "currentColor"
-				}
-			},
-			"link": {
-				"color": {
-					"text": "var:preset|color|secondary-50"
+					"background": "var:custom|global|fill|background",
+					"text": "var:custom|global|fill|color"
 				},
 				":focus": {
 					"color": {
-						"text": "currentColor"
+						"background": "var:custom|global|fill|hover-background",
+						"text": "var:custom|global|fill|hover-color"
 					}
 				},
 				":hover": {
 					"color": {
-						"text": "currentColor"
+						"background": "var:custom|global|fill|hover-background",
+						"text": "var:custom|global|fill|hover-color"
 					}
+				}
+			},
+			"link": {
+				"color": {
+					"text": "var:preset|color|primary-700"
 				}
 			}
 		},
