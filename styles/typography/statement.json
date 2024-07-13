@@ -1,53 +1,56 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
-	"title": "Storybook",
+	"title": "Statement",
 	"settings": {
 		"typography": {
 			"fontFamilies": [
 				{
-					"fontFamily": "'Playfair Display', Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif",
+					"fontFamily": "Oswald, ui-sans-serif, sans-serif",
 					"slug": "primary",
-					"name": "Primary (Playfair Display)",
+					"name": "Primary (Oswald)",
 					"fontFace": [
 						{
-							"fontFamily": "Playfair Display",
-							"fontWeight": "400 900",
+							"fontFamily": "Oswald",
+							"fontWeight": "200 700",
 							"fontStyle": "normal",
 							"fontStretch": "normal",
-							"src": [ "file:./public/fonts/playfair/playfair-display.woff2" ]
-						},
-						{
-							"fontFamily": "Playfair Display",
-							"fontWeight": "400 900",
-							"fontStyle": "italic",
-							"fontStretch": "normal",
-							"src": [ "file:./public/fonts/playfair/playfair-display-italic.woff2" ]
+							"src": [ "file:./public/fonts/oswald/oswald.woff2" ]
 						}
 					]
 				},
 				{
-					"fontFamily": "'Roboto Serif', Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif",
+					"fontFamily": "Cabin, ui-sans-serif, sans-serif",
 					"slug": "secondary",
-					"name": "Secondary (Roboto Serif)",
+					"name": "Secondary (Cabin)",
 					"fontFace": [
 						{
-							"fontFamily": "Roboto Serif",
-							"fontWeight": "100 900",
+							"fontFamily": "Cabin",
+							"fontWeight": "400 700",
 							"fontStyle": "normal",
-							"fontStretch": "100%",
-							"src": [
-								"file:./experiments/fonts/roboto/roboto-serif.woff2"
-							]
+							"fontStretch": "normal",
+							"src": [ "file:./public/fonts/cabin/cabin.woff2" ]
 						},
 						{
-							"fontFamily": "Roboto Serif",
-							"fontWeight": "100 900",
+							"fontFamily": "Cabin",
+							"fontWeight": "400 700",
 							"fontStyle": "italic",
-							"fontStretch": "100%",
-							"src": [
-								"file:./experiments/fonts/roboto/roboto-serif-italic.woff2"
-							]
+							"fontStretch": "normal",
+							"src": [ "file:./public/fonts/cabin/cabin-italic.woff2" ]
+						}
+					]
+				},
+				{
+					"fontFamily": "'Permanent Marker', cursive",
+					"slug": "tertiary",
+					"name": "Tertiary (Permanent Marker)",
+					"fontFace": [
+						{
+							"fontFamily": "Permanent Marker",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./public/fonts/permanent-marker/permanent-marker.woff2" ]
 						}
 					]
 				},
@@ -68,25 +71,31 @@
 			},
 			"caption": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|primary",
-					"fontSize": "var:preset|font-size|sm",
-					"fontStyle": "italic",
+					"fontFamily": "var:preset|font-family|tertiary",
+					"fontSize": "var:preset|font-size|md",
+					"fontStyle": "normal",
+					"fontWeight": "400",
 					"textTransform": "none"
 				}
 			},
 			"heading": {
 				"typography": {
-					"fontWeight": "400",
+					"fontWeight": "700",
 					"textTransform": "none"
 				}
 			},
 			"h1": {
 				"typography": {
-					"fontWeight": "400"
+					"fontWeight": "700"
 				}
 			}
 		},
 		"blocks": {
+			"core/calendar": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|tertiary"
+				}
+			},
 			"core/comments-title": {
 				"typography": {
 					"fontSize": "var:preset|font-size|xl",
@@ -97,7 +106,7 @@
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",
 					"fontSize": "var:preset|font-size|sm",
-					"fontStyle": "italic",
+					"fontStyle": "normal",
 					"textTransform": "none"
 				}
 			},
@@ -105,7 +114,7 @@
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",
 					"fontSize": "var:preset|font-size|sm",
-					"fontStyle": "italic",
+					"fontStyle": "normal",
 					"textTransform": "none"
 				}
 			},
@@ -113,6 +122,13 @@
 				"typography": {
 					"fontFamily": "var:preset|font-family|secondary",
 					"fontSize": "var:preset|font-size|xs"
+				}
+			},
+			"core/nextpage": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|tertiary",
+					"fontStyle": "normal",
+					"fontWeight": "400"
 				}
 			},
 			"core/post-comments-form": {
@@ -127,8 +143,9 @@
 			},
 			"core/pullquote": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|primary",
-					"fontStyle": "italic"
+					"fontFamily": "var:preset|font-family|tertiary",
+					"fontStyle": "normal",
+					"fontWeight": "400"
 				},
 				"elements": {
 					"cite": {
@@ -142,9 +159,9 @@
 			},
 			"core/query-pagination": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|secondary",
+					"fontFamily": "var:preset|font-family|tertiary",
 					"fontSize": "var:preset|font-size|sm",
-					"fontWeight": "500"
+					"fontWeight": "400"
 				}
 			},
 			"core/quote": {
@@ -154,7 +171,7 @@
 				"elements": {
 					"cite": {
 						"typography": {
-							"fontFamily": "var:preset|font-family|primary",
+							"fontFamily": "var:preset|font-family|secondary",
 							"fontSize": "1em",
 							"fontStyle": "italic"
 						}
@@ -165,22 +182,23 @@
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",
 					"fontSize": "var:preset|font-size|lg",
-					"fontStyle": "italic",
-					"fontWeight": "600",
+					"fontStyle": "normal",
+					"fontWeight": "700",
 					"letterSpacing": "0",
 					"textTransform": "none"
 				}
 			},
 			"core/verse": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|primary",
+					"fontFamily": "var:preset|font-family|secondary",
+					"fontSize": "inherit",
 					"fontStyle": "italic"
 				}
 			},
 			"x3p0/breadcrumbs": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|secondary",
-					"fontSize": "var:preset|font-size|xs"
+					"fontSize": "var:preset|font-size|sm"
 				}
 			}
 		}

@@ -135,9 +135,9 @@ class Editor implements Bootable
 		@font-face{font-family:'Playfair Display';font-style:italic;font-weight:400 900;font-display:fallback;src:url('{$path}/public/fonts/playfair/playfair-display-italic.woff2') format('woff2');font-stretch:normal;}
 		@font-face{font-family:'Source Sans';font-style:normal;font-weight:200 900;font-display:fallback;src:url('{$path}/public/fonts/source/source-sans.woff2') format('woff2');font-stretch:normal;}
 		@font-face{font-family:'Source Sans';font-style:italic;font-weight:200 900;font-display:fallback;src:url('{$path}/public/fonts/source/source-sans-italic.woff2') format('woff2');font-stretch:normal;}
-		@font-face{font-family:Satisfy;font-style:normal;font-weight:400;font-display:fallback;src:url('{$path}/experiments/fonts/satisfy/satisfy.woff2') format('woff2');font-stretch:normal;}
-		@font-face{font-family:Montserrat;font-style:normal;font-weight:100 900;font-display:fallback;src:url('{$path}/experiments/fonts/montserrat/montserrat.woff2') format('woff2');font-stretch:normal;}
-		@font-face{font-family:Montserrat;font-style:italic;font-weight:100 900;font-display:fallback;src:url('{$path}/experiments/fonts/montserrat/montserrat-italic.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:Satisfy;font-style:normal;font-weight:400;font-display:fallback;src:url('{$path}/public/fonts/satisfy/satisfy.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:Montserrat;font-style:normal;font-weight:100 900;font-display:fallback;src:url('{$path}/public/fonts/montserrat/montserrat.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:Montserrat;font-style:italic;font-weight:100 900;font-display:fallback;src:url('{$path}/public/fonts/montserrat/montserrat-italic.woff2') format('woff2');font-stretch:normal;}
 		@font-face{font-family:Caveat;font-style:normal;font-weight:400 700;font-display:fallback;src:url('{$path}/public/fonts/caveat/caveat.woff2') format('woff2');font-stretch:normal;}
 		@font-face{font-family:Raleway;font-style:normal;font-weight:100 900;font-display:fallback;src:url('{$path}/public/fonts/raleway/raleway.woff2') format('woff2');font-stretch:normal;}
 		@font-face{font-family:Raleway;font-style:italic;font-weight:100 900;font-display:fallback;src:url('{$path}/public/fonts/raleway/raleway-italic.woff2') format('woff2');font-stretch:normal;}
@@ -145,14 +145,14 @@ class Editor implements Bootable
 		@font-face{font-family:'Work Sans';font-style:italic;font-weight:100 900;font-display:fallback;src:url('{$path}/public/fonts/work-sans/work-sans-italic.woff2') format('woff2');font-stretch:normal;}
 		@font-face{font-family:'Roboto Serif';font-style:normal;font-weight:100 900;font-display:fallback;src:url('{$path}/experimental/fonts/roboto/roboto-serif.woff2') format('woff2');font-stretch:100%;}
 		@font-face{font-family:'Roboto Serif';font-style:italic;font-weight:100 900;font-display:fallback;src:url('{$path}/experimental/fonts/roboto/roboto-serif-italic.woff2') format('woff2');font-stretch:100%;}
-		@font-face{font-family:Oswald;font-style:normal;font-weight:200 700;font-display:fallback;src:url('{$path}/experiments/fonts/oswald/oswald.woff2') format('woff2');font-stretch:normal;}
-		@font-face{font-family:'Permanent Marker';font-style:normal;font-weight:400;font-display:fallback;src:url('{$path}/experiments/fonts/permanent-marker/permanent-marker.woff2') format('woff2');font-stretch:normal;}
-		@font-face{font-family:'Send Flowers';font-style:normal;font-weight:400;font-display:fallback;src:url('{$path}/experiments/fonts/send-flowers/send-flowers.woff2') format('woff2');font-stretch:normal;}
-		@font-face{font-family:Quicksand;font-style:normal;font-weight:300 700;font-display:fallback;src:url('{$path}/experiments/fonts/quicksand/quicksand.woff2') format('woff2');font-stretch:normal;}
-		@font-face{font-family:'Elsie Swash Caps';font-style:normal;font-weight:400;font-display:fallback;src:url('{$path}/experiments/fonts/elsie/elsie-swash-caps.woff2') format('woff2');font-stretch:normal;}
-		@font-face{font-family:'Elsie Swash Caps';font-style:normal;font-weight:900;font-display:fallback;src:url('{$path}/experiments/fonts/elsie/elsie-swash-caps-900.woff2') format('woff2');font-stretch:normal;}
-		@font-face{font-family:Lora;font-style:normal;font-weight:400 700;font-display:fallback;src:url('{$path}/x3p0-ideas/experiments/fonts/lora/lora.woff2') format('woff2');font-stretch:normal;}
-		@font-face{font-family:Lora;font-style:italic;font-weight:400 700;font-display:fallback;src:url('{$path}/x3p0-ideas/experiments/fonts/lora/lora.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:Oswald;font-style:normal;font-weight:200 700;font-display:fallback;src:url('{$path}/public/fonts/oswald/oswald.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:'Permanent Marker';font-style:normal;font-weight:400;font-display:fallback;src:url('{$path}/public/fonts/permanent-marker/permanent-marker.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:'Send Flowers';font-style:normal;font-weight:400;font-display:fallback;src:url('{$path}/public/fonts/send-flowers/send-flowers.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:Quicksand;font-style:normal;font-weight:300 700;font-display:fallback;src:url('{$path}/public/fonts/quicksand/quicksand.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:'Elsie Swash Caps';font-style:normal;font-weight:400;font-display:fallback;src:url('{$path}/public/fonts/elsie/elsie-swash-caps.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:'Elsie Swash Caps';font-style:normal;font-weight:900;font-display:fallback;src:url('{$path}/public/fonts/elsie/elsie-swash-caps-900.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:Lora;font-style:normal;font-weight:400 700;font-display:fallback;src:url('{$path}/x3p0-ideas/public/fonts/lora/lora.woff2') format('woff2');font-stretch:normal;}
+		@font-face{font-family:Lora;font-style:italic;font-weight:400 700;font-display:fallback;src:url('{$path}/x3p0-ideas/public/fonts/lora/lora.woff2') format('woff2');font-stretch:normal;}
 		";
 	}
 }

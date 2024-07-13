@@ -1,21 +1,21 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
-	"title": "Crush",
+	"title": "Sisters",
 	"settings": {
 		"typography": {
 			"fontFamilies": [
 				{
-					"fontFamily": "'Send Flowers', system-ui",
+					"fontFamily": "'Love Ya Like A Sister', system-ui",
 					"slug": "primary",
-					"name": "Primary (Send Flowers)",
+					"name": "Primary (Love Ya Like A Sister)",
 					"fontFace": [
 						{
-							"fontFamily": "Send Flowers",
+							"fontFamily": "Love Ya Like A Sister",
 							"fontWeight": "400",
 							"fontStyle": "normal",
 							"fontStretch": "normal",
-							"src": [ "file:./experiments/fonts/send-flowers/send-flowers.woff2" ]
+							"src": [ "file:./public/fonts/love-ya-like-a-sister/love-ya-like-a-sister.woff2" ]
 						}
 					]
 				},
@@ -30,7 +30,7 @@
 							"fontStyle": "normal",
 							"fontStretch": "normal",
 							"src": [
-								"file:./experiments/fonts/quicksand/quicksand.woff2"
+								"file:./public/fonts/quicksand/quicksand.woff2"
 							]
 						}
 					]
@@ -112,7 +112,7 @@
 			"core/pullquote": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",
-					"fontStyle": "italic"
+					"fontStyle": "normal"
 				},
 				"elements": {
 					"cite": {
@@ -140,7 +140,7 @@
 						"typography": {
 							"fontFamily": "var:preset|font-family|primary",
 							"fontSize": "1em",
-							"fontStyle": "italic"
+							"fontStyle": "normal"
 						}
 					}
 				}
@@ -154,7 +154,7 @@
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",
 					"fontSize": "var:preset|font-size|xl",
-					"fontStyle": "italic",
+					"fontStyle": "normal",
 					"fontWeight": "400",
 					"letterSpacing": "0",
 					"textTransform": "none"
@@ -163,7 +163,9 @@
 			"core/verse": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",
-					"fontStyle": "italic"
+					"fontSize": "var:preset|font-size|md",
+					"fontStyle": "normal",
+					"lineHeight": "var:custom|line-height|md"
 				}
 			},
 			"x3p0/breadcrumbs": {

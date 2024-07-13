@@ -1,21 +1,21 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
-	"title": "Sisters",
+	"title": "Crush",
 	"settings": {
 		"typography": {
 			"fontFamilies": [
 				{
-					"fontFamily": "'Love Ya Like A Sister', system-ui",
+					"fontFamily": "'Send Flowers', system-ui",
 					"slug": "primary",
-					"name": "Primary (Love Ya Like A Sister)",
+					"name": "Primary (Send Flowers)",
 					"fontFace": [
 						{
-							"fontFamily": "Love Ya Like A Sister",
+							"fontFamily": "Send Flowers",
 							"fontWeight": "400",
 							"fontStyle": "normal",
 							"fontStretch": "normal",
-							"src": [ "file:./experiments/fonts/love-ya-like-a-sister/love-ya-like-a-sister.woff2" ]
+							"src": [ "file:./public/fonts/send-flowers/send-flowers.woff2" ]
 						}
 					]
 				},
@@ -30,7 +30,7 @@
 							"fontStyle": "normal",
 							"fontStretch": "normal",
 							"src": [
-								"file:./experiments/fonts/quicksand/quicksand.woff2"
+								"file:./public/fonts/quicksand/quicksand.woff2"
 							]
 						}
 					]
@@ -112,7 +112,7 @@
 			"core/pullquote": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",
-					"fontStyle": "italic"
+					"fontStyle": "normal"
 				},
 				"elements": {
 					"cite": {
@@ -140,7 +140,7 @@
 						"typography": {
 							"fontFamily": "var:preset|font-family|primary",
 							"fontSize": "1em",
-							"fontStyle": "italic"
+							"fontStyle": "normal"
 						}
 					}
 				}
@@ -163,9 +163,7 @@
 			"core/verse": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",
-					"fontSize": "var:preset|font-size|md",
-					"fontStyle": "normal",
-					"lineHeight": "var:custom|line-height|md"
+					"fontStyle": "normal"
 				}
 			},
 			"x3p0/breadcrumbs": {

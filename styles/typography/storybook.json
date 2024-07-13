@@ -1,45 +1,52 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
-	"title": "Diary",
+	"title": "Storybook",
 	"settings": {
 		"typography": {
 			"fontFamilies": [
 				{
-					"fontFamily": "Satisfy, system-ui",
+					"fontFamily": "'Playfair Display', Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif",
 					"slug": "primary",
-					"name": "Primary (Satisfy)",
+					"name": "Primary (Playfair Display)",
 					"fontFace": [
 						{
-							"fontFamily": "Satisfy",
-							"fontWeight": "400",
+							"fontFamily": "Playfair Display",
+							"fontWeight": "400 900",
 							"fontStyle": "normal",
 							"fontStretch": "normal",
-							"src": [ "file:./experiments/fonts/satisfy/satisfy.woff2" ]
+							"src": [ "file:./public/fonts/playfair/playfair-display.woff2" ]
+						},
+						{
+							"fontFamily": "Playfair Display",
+							"fontWeight": "400 900",
+							"fontStyle": "italic",
+							"fontStretch": "normal",
+							"src": [ "file:./public/fonts/playfair/playfair-display-italic.woff2" ]
 						}
 					]
 				},
 				{
-					"fontFamily": "Montserrat, ui-sans-serif, sans-serif",
+					"fontFamily": "'Roboto Serif', Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif",
 					"slug": "secondary",
-					"name": "Secondary (Montserrat)",
+					"name": "Secondary (Roboto Serif)",
 					"fontFace": [
 						{
-							"fontFamily": "Montserrat",
+							"fontFamily": "Roboto Serif",
 							"fontWeight": "100 900",
 							"fontStyle": "normal",
-							"fontStretch": "normal",
+							"fontStretch": "100%",
 							"src": [
-								"file:./experiments/fonts/montserrat/montserrat.woff2"
+								"file:./public/fonts/roboto/roboto-serif.woff2"
 							]
 						},
 						{
-							"fontFamily": "Montserrat",
+							"fontFamily": "Roboto Serif",
 							"fontWeight": "100 900",
 							"fontStyle": "italic",
-							"fontStretch": "normal",
+							"fontStretch": "100%",
 							"src": [
-								"file:./experiments/fonts/montserrat/montserrat-italic.woff2"
+								"file:./public/fonts/roboto/roboto-serif-italic.woff2"
 							]
 						}
 					]
@@ -63,7 +70,7 @@
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",
 					"fontSize": "var:preset|font-size|sm",
-					"fontStyle": "normal",
+					"fontStyle": "italic",
 					"textTransform": "none"
 				}
 			},
@@ -90,7 +97,7 @@
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",
 					"fontSize": "var:preset|font-size|sm",
-					"fontStyle": "normal",
+					"fontStyle": "italic",
 					"textTransform": "none"
 				}
 			},
@@ -98,15 +105,14 @@
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",
 					"fontSize": "var:preset|font-size|sm",
-					"fontStyle": "normal",
+					"fontStyle": "italic",
 					"textTransform": "none"
 				}
 			},
 			"core/navigation": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|secondary",
-					"fontSize": "var:preset|font-size|sm",
-					"textTransform": "none"
+					"fontSize": "var:preset|font-size|xs"
 				}
 			},
 			"core/post-comments-form": {
@@ -122,7 +128,7 @@
 			"core/pullquote": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",
-					"fontStyle": "normal"
+					"fontStyle": "italic"
 				},
 				"elements": {
 					"cite": {
@@ -150,7 +156,7 @@
 						"typography": {
 							"fontFamily": "var:preset|font-family|primary",
 							"fontSize": "1em",
-							"fontStyle": "normal"
+							"fontStyle": "italic"
 						}
 					}
 				}
@@ -159,8 +165,8 @@
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",
 					"fontSize": "var:preset|font-size|lg",
-					"fontStyle": "normal",
-					"fontWeight": "400",
+					"fontStyle": "italic",
+					"fontWeight": "600",
 					"letterSpacing": "0",
 					"textTransform": "none"
 				}
@@ -168,12 +174,13 @@
 			"core/verse": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",
-					"fontStyle": "normal"
+					"fontStyle": "italic"
 				}
 			},
 			"x3p0/breadcrumbs": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|primary"
+					"fontFamily": "var:preset|font-family|secondary",
+					"fontSize": "var:preset|font-size|xs"
 				}
 			}
 		}

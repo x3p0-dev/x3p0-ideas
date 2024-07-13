@@ -1,52 +1,45 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
-	"title": "Fairy Tale",
+	"title": "Diary",
 	"settings": {
 		"typography": {
 			"fontFamilies": [
 				{
-					"fontFamily": "'Elsie Swash Caps', system-ui",
+					"fontFamily": "Satisfy, system-ui",
 					"slug": "primary",
-					"name": "Primary (Elsie Swash Caps)",
+					"name": "Primary (Satisfy)",
 					"fontFace": [
 						{
-							"fontFamily": "Elsie Swash Caps",
+							"fontFamily": "Satisfy",
 							"fontWeight": "400",
 							"fontStyle": "normal",
 							"fontStretch": "normal",
-							"src": [ "file:./experiments/fonts/elsie/elsie-swash-caps.woff2" ]
-						},
-						{
-							"fontFamily": "Elsie Swash Caps",
-							"fontWeight": "900",
-							"fontStyle": "normal",
-							"fontStretch": "normal",
-							"src": [ "file:./experiments/fonts/elsie/elsie-swash-caps-900.woff2" ]
+							"src": [ "file:./public/fonts/satisfy/satisfy.woff2" ]
 						}
 					]
 				},
 				{
-					"fontFamily": "Lora, Rockwell, 'Rockwell Nova', 'Roboto Slab', 'DejaVu Serif', 'Sitka Small', serif",
+					"fontFamily": "Montserrat, ui-sans-serif, sans-serif",
 					"slug": "secondary",
-					"name": "Secondary (Roboto Slab)",
+					"name": "Secondary (Montserrat)",
 					"fontFace": [
 						{
-							"fontFamily": "Lora",
-							"fontWeight": "400 700",
+							"fontFamily": "Montserrat",
+							"fontWeight": "100 900",
 							"fontStyle": "normal",
 							"fontStretch": "normal",
 							"src": [
-								"file:./experiments/fonts/lora/lora.woff2"
+								"file:./public/fonts/montserrat/montserrat.woff2"
 							]
 						},
 						{
-							"fontFamily": "Lora",
-							"fontWeight": "400 700",
+							"fontFamily": "Montserrat",
+							"fontWeight": "100 900",
 							"fontStyle": "italic",
 							"fontStretch": "normal",
 							"src": [
-								"file:./experiments/fonts/lora/lora.woff2"
+								"file:./public/fonts/montserrat/montserrat-italic.woff2"
 							]
 						}
 					]
@@ -97,7 +90,7 @@
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",
 					"fontSize": "var:preset|font-size|sm",
-					"fontStyle": "italic",
+					"fontStyle": "normal",
 					"textTransform": "none"
 				}
 			},
@@ -105,14 +98,15 @@
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",
 					"fontSize": "var:preset|font-size|sm",
-					"fontStyle": "italic",
+					"fontStyle": "normal",
 					"textTransform": "none"
 				}
 			},
 			"core/navigation": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|secondary",
-					"fontSize": "var:preset|font-size|xs"
+					"fontSize": "var:preset|font-size|sm",
+					"textTransform": "none"
 				}
 			},
 			"core/post-comments-form": {
@@ -154,8 +148,8 @@
 				"elements": {
 					"cite": {
 						"typography": {
-							"fontFamily": "var:preset|font-family|secondary",
-							"fontSize": "0.9375em",
+							"fontFamily": "var:preset|font-family|primary",
+							"fontSize": "1em",
 							"fontStyle": "normal"
 						}
 					}
@@ -166,22 +160,20 @@
 					"fontFamily": "var:preset|font-family|primary",
 					"fontSize": "var:preset|font-size|lg",
 					"fontStyle": "normal",
-					"fontWeight": "900",
+					"fontWeight": "400",
 					"letterSpacing": "0",
 					"textTransform": "none"
 				}
 			},
 			"core/verse": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|secondary",
-					"fontSize": "inherit",
-					"fontStyle": "italic"
+					"fontFamily": "var:preset|font-family|primary",
+					"fontStyle": "normal"
 				}
 			},
 			"x3p0/breadcrumbs": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|secondary",
-					"fontSize": "var:preset|font-size|xs"
+					"fontFamily": "var:preset|font-family|primary"
 				}
 			}
 		}
