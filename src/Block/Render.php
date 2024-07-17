@@ -67,6 +67,32 @@ class Render implements Bootable
 	}
 
 	/**
+	 * Before rendering the Post Excerpt block, add a custom filter to
+	 * `wp_trim_words` so that we can handle the output of custom excerpts.
+	 *
+	 * @hook  pre_render_block
+	 * @since 1.0.0
+	 * @link  https://github.com/WordPress/gutenberg/issues/49449
+	 */
+	public function preRenderCorePostExcerpt(
+		?string $pre_render,
+		array $block,
+		?WP_Block $parent_block
+	): ?string {
+		if (
+			'core/post-excerpt' === $block['blockName']
+			&& is_null($pre_render)
+			&& ! is_null($parent_block)
+			&& isset($parent_block->context['postId'])
+			&& has_excerpt($parent_block->context['postId'])
+		) {
+			add_filter('wp_trim_words', [$this, 'formatManualExcerpt'], 10, 4);
+		}
+
+		return $pre_render;
+	}
+
+	/**
 	 * Disables the enhanced pagination feature for the Query Loop block.
 	 * There is currently no `theme.json`-supported method of disabling it,
 	 * so the only method is to filter the block data itself before render.
@@ -169,6 +195,24 @@ class Render implements Bootable
 		}
 
 		return $processor->get_updated_html();
+	}
+
+	/**
+	 * Removes the filter on `wp_trim_words` if it was added on the earlier
+	 * `pre_render_block` hook.
+	 *
+	 * @hook  render_block_core/post-excerpt first
+	 * @since 1.0.0
+	 * @link  https://github.com/WordPress/gutenberg/issues/49449
+	 * @see   Render::preRenderCorePostExcerpt()
+	 */
+	public function renderCorePostExcerpt(string $content): string
+	{
+		if ($priority = has_filter('wp_trim_words', [$this, 'formatManualExcerpt'])) {
+			remove_filter('wp_trim_words', [$this, 'formatManualExcerpt'], $priority);
+		}
+
+		return $content;
 	}
 
 	/**
@@ -280,5 +324,35 @@ class Render implements Bootable
 		$args['after']  = $after . '</div>';
 
 		return $args;
+	}
+
+	/**
+	 * Filters `wp_trim_words` to allow the original text but removes
+	 * unwanted tags. This is meant to be used only when the user has
+	 * written a custom excerpt.
+	 *
+	 * @since 1.0.0
+	 * @link  https://github.com/WordPress/gutenberg/issues/49449
+	 * @see   Render::preRenderCorePostExcerpt()
+	 */
+	public function formatManualExcerpt(
+		string $text,
+		int $num_words,
+		string $more,
+		string $original_text
+	): string {
+		return wp_kses($original_text, [
+			'a'       => [ 'href' => true, 'title' => true, 'class' => true ],
+			'abbr'    => [ 'title' => true ],
+			'acronym' => [ 'title' => true ],
+			'bold'    => [ 'class' => true ],
+			'code'    => [ 'class' => true ],
+			'em'      => [ 'class' => true ],
+			'i'       => [ 'class' => true ],
+			'mark'    => [ 'class' => true ],
+			'small'   => [ 'class' => true ],
+			'span'    => [ 'class' => true ],
+			'strong'  => [ 'class' => true ]
+		]);
 	}
 }
