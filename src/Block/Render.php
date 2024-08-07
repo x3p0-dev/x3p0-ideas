@@ -164,6 +164,37 @@ class Render implements Bootable
 	}
 
 	/**
+	 * Adds poster support for the Cover block by using the attachment's
+	 * featured image if it exists.
+	 *
+	 * @hook  render_block_core/cover
+	 * @since 1.0.0
+	 * @link  https://github.com/WordPress/gutenberg/issues/18962
+	 */
+	public function renderCoreCover(string $content, array $block): string
+	{
+		if (
+			! isset($block['attrs']['backgroundType'])
+			|| 'video' !== $block['attrs']['backgroundType']
+			|| ! isset($block['attrs']['id'])
+			|| ! $poster_image = get_the_post_thumbnail_url($block['attrs']['id'], 'full')
+		) {
+			return $content;
+		}
+
+		$processor = new WP_HTML_Tag_Processor($content);
+
+		if (
+			$processor->next_tag('video')
+			&& null === $processor->get_attribute('poster')
+		) {
+			$processor->set_attribute('poster', $poster_image);
+		}
+
+		return $processor->get_updated_html();
+	}
+
+	/**
 	 * Adds the `.wp-element-button` class to the login form's submit button.
 	 * This is currently missing from core WP.
 	 *
