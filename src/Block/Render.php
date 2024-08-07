@@ -177,7 +177,7 @@ class Render implements Bootable
 			! isset($block['attrs']['backgroundType'])
 			|| 'video' !== $block['attrs']['backgroundType']
 			|| ! isset($block['attrs']['id'])
-			|| ! $poster_image = get_the_post_thumbnail_url($block['attrs']['id'], 'full')
+			|| ! $poster = get_the_post_thumbnail_url($block['attrs']['id'], 'full')
 		) {
 			return $content;
 		}
@@ -188,7 +188,7 @@ class Render implements Bootable
 			$processor->next_tag('video')
 			&& null === $processor->get_attribute('poster')
 		) {
-			$processor->set_attribute('poster', $poster_image);
+			$processor->set_attribute('poster', $poster);
 		}
 
 		return $processor->get_updated_html();
