@@ -532,39 +532,6 @@
 					"fontFamily": "var:preset|font-family|primary"
 				}
 			},
-			"section-1": {
-				"elements": {
-					"button": {
-						"color": {
-							"background": "var:custom|global|fill|background",
-							"text": "var:custom|global|fill|color"
-						},
-						":focus": {
-							"color": {
-								"background": "var:custom|global|fill|hover-background",
-								"text": "var:custom|global|fill|hover-color"
-							}
-						},
-						":hover": {
-							"color": {
-								"background": "var:custom|global|fill|hover-background",
-								"text": "var:custom|global|fill|hover-color"
-							}
-						}
-					}
-				}
-			},
-			"section-3": {
-				"color": {
-					"background": "var:preset|color|neutral-100"
-				}
-			},
-			"section-4": {
-				"color": {
-					"background": "var:preset|color|neutral-100",
-					"gradient": "var:preset|gradient|90-deg-neutral-50-transparent"
-				}
-			},
 			"site-footer": {
 				"color": {
 					"background": "var:preset|color|neutral-100"
