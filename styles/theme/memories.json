@@ -536,12 +536,12 @@
 			"archive-header": {
 				"border": {
 					"top": {
-						"color": "var:preset|color|neutral-300",
+						"color": "var:preset|color|neutral-200",
 						"style": "solid",
 						"width": "1px"
 					},
 					"bottom": {
-						"color": "var:preset|color|neutral-300",
+						"color": "var:preset|color|neutral-200",
 						"style": "solid",
 						"width": "1px"
 					}
@@ -591,11 +591,6 @@
 				},
 				"typography": {
 					"fontWeight": "500"
-				}
-			},
-			"section-1": {
-				"color": {
-					"background": "var:preset|color|primary-700"
 				}
 			},
 			"site-footer": {
