@@ -484,6 +484,11 @@
 					"text": "var:preset|color|neutral-500"
 				}
 			},
+			"section-3": {
+				"color": {
+					"background": "var:preset|color|white"
+				}
+			},
 			"site-footer": {
 				"border": {
 					"top": {
