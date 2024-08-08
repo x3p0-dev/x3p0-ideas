@@ -24,13 +24,3 @@ registerBlockVariation(paginationLabel.block, paginationLabel.variation);
 registerBlockVariation(postFormat.block, postFormat.variation);
 registerBlockVariation(readingTime.block, readingTime.variation);
 registerBlockVariation(siteCopyright.block, siteCopyright.variation);
-
-// `getBlockVariations()` returns `undefined` unless we wait until the DOM is
-// ready. We need this to conditionally register variations.
-domReady(() => {
-	const variations = getBlockVariations('core/group');
-
-	if (! variations.some(variation => 'group-grid' === variation.name)) {
-		registerBlockVariation(grid.block, grid.variation);
-	}
-});
