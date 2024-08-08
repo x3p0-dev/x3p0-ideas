@@ -21,24 +21,6 @@ class Metadata implements Bootable
 	use HookAnnotation;
 
 	/**
-	 * Map of block type names to their associated settings methods.
-	 *
-	 * @since 1.0.0
-	 * @todo  Type hint with PHP 8.3+ requirement.
-	 */
-	private const SETTINGS_METHODS = [
-		'core/archives'           => 'coreArchives',
-		'core/avatar'             => 'coreAvatar',
-		'core/categories'         => 'coreCategories',
-		'core/group'              => 'coreGroup',
-		'core/heading'            => 'coreHeading',
-		'core/navigation-submenu' => 'coreNavigationSubmenu',
-		'core/query'              => 'coreQuery',
-		'core/query-pagination'   => 'coreQueryPagination',
-		'core/tag-cloud'          => 'coreTagCloud'
-	];
-
-	/**
 	 * Boots the component, running its actions/filters.
 	 *
 	 * @since 1.0.0
@@ -58,13 +40,15 @@ class Metadata implements Bootable
 	 */
 	public function filterSettings(array $settings): array
 	{
-		if (isset(self::SETTINGS_METHODS[ $settings['name'] ])) {
-			$method = self::SETTINGS_METHODS[ $settings['name'] ];
+		// Create a camel-cased version of the block name. We use this
+		// to check if a method exists matching it.
+		$method = lcfirst(str_replace(' ', '', ucwords(
+			preg_replace("/[^A-Za-z0-9 ]/", ' ', $settings['name'])
+		)));
 
-			return $this->$method($settings);
-		}
-
-		return $settings;
+		return method_exists($this, $method)
+		       ? $this->$method($settings)
+		       : $settings;
 	}
 
 	/**
