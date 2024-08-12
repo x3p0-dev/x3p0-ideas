@@ -37,16 +37,16 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 		<!-- wp:gallery {
 			"columns":2,
 			"linkTo":"none",
-			"sizeSlug":"x3p0-1x1-md",
+			"sizeSlug":"x3p0-square",
 			"style":{"layout":{"selfStretch":"fill","flexSize":null}}
 		} -->
 		<figure class="wp-block-gallery has-nested-images columns-2 is-cropped">
 
 			<!-- wp:image {
-				"sizeSlug":"x3p0-1x1-md",
+				"sizeSlug":"x3p0-square",
 				"linkDestination":"none"
 			} -->
-			<figure class="wp-block-image size-x3p0-1x1-md">
+			<figure class="wp-block-image size-x3p0-square">
 				<img src="<?= esc_url($image) ?>" alt="" />
 			</figure>
 			<!-- /wp:image -->
@@ -79,7 +79,7 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 		<!-- wp:gallery {
 			"columns":2,
 			"linkTo":"none",
-			"sizeSlug":"x3p0-1x1-md",
+			"sizeSlug":"x3p0-square",
 			"style":{"layout":{"selfStretch":"fill","flexSize":null}}
 		} -->
 		<figure class="wp-block-gallery has-nested-images columns-2 is-cropped">
@@ -87,10 +87,10 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 			<?php foreach (range(1, 2) as $col): ?>
 
 				<!-- wp:image {
-					"sizeSlug":"x3p0-1x1-md",
+					"sizeSlug":"x3p0-square",
 					"linkDestination":"none"
 				} -->
-				<figure class="wp-block-image size-x3p0-1x1-md">
+				<figure class="wp-block-image size-x3p0-square">
 					<img src="<?= esc_url($image) ?>" alt="" />
 				</figure>
 				<!-- /wp:image -->

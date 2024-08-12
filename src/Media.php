@@ -47,27 +47,26 @@ class Media implements Bootable
 	 */
 	public function registerImageSizes(): void
 	{
-		add_image_size('x3p0-16x9-lg', 2048, 1152, true);
-		add_image_size('x3p0-21x9-lg', 2048, 864, true);
-		add_image_size('x3p0-9x16-md', 1024, 1820, true);
-		add_image_size('x3p0-3x4-md', 1024, 1365, true);
-		add_image_size('x3p0-1x1-md', 1024, 1024, true);
+		add_image_size('x3p0-square',   1024, 1024, true);
+		add_image_size('x3p0-wide',     2048, 1152, true);
+		add_image_size('x3p0-portrait', 1024, 1365, true);
 	}
 
 	/**
 	 * Filters the image size dropdown in the editor so our custom sizes
 	 * appear for selection.
 	 *
+	 * Note that we must use the `×` character directly instead of the HTML
+	 * `&times;` character entity so that it works in the editor.
+	 *
 	 * @hook  image_size_names_choose
 	 * @since 1.0.0
 	 */
 	public function registerImageSizeNames(array $sizes): array
 	{
-		$sizes['x3p0-16x9-lg'] = __('16:9 (Landscape)', 'x3p0-ideas');
-		$sizes['x3p0-21x9-lg'] = __('21:9 (Landscape)', 'x3p0-ideas');
-		$sizes['x3p0-9x16-md'] = __('9:16 (Portrait)', 'x3p0-ideas');
-		$sizes['x3p0-3x4-md']  = __('3:4 (Portrait)', 'x3p0-ideas');
-		$sizes['x3p0-1x1-md']  = __('1:1 (Square)', 'x3p0-ideas');
+		$sizes['x3p0-square']   = __('Square (1024 × 1024)',   'x3p0-ideas');
+		$sizes['x3p0-wide']     = __('Wide (2048 × 1152)',     'x3p0-ideas');
+		$sizes['x3p0-portrait'] = __('Portrait (1024 × 1365)', 'x3p0-ideas');
 
 		return $sizes;
 	}

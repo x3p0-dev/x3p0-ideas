@@ -46,7 +46,7 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 		"lightbox":{"enabled":false},
 		"aspectRatio":"16/9",
 		"scale":"cover",
-		"sizeSlug":"x3p0-16x9-lg",
+		"sizeSlug":"x3p0-wide",
 		"linkDestination":"none",
 		"style":{
 			"border":{
@@ -55,7 +55,7 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 		},
 		"className":"is-style-borderless"
 	} -->
-	<figure class="wp-block-image size-x3p0-16x9-lg has-custom-border is-style-borderless">
+	<figure class="wp-block-image size-x3p0-wide has-custom-border is-style-borderless">
 		<img src="<?= esc_url($image) ?>" alt="" style="border-radius:0px;aspect-ratio:16/9;object-fit:cover"/>
 	</figure>
 	<!-- /wp:image -->

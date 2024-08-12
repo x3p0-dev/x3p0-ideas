@@ -21,7 +21,7 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 <!-- wp:gallery {
 	"columns":3,
 	"linkTo":"none",
-	"sizeSlug":"x3p0-16x9-lg",
+	"sizeSlug":"x3p0-wide",
 	"align":"wide",
 	"className":"is-style-reverse"
 } -->
@@ -30,10 +30,10 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 	<?php foreach (range(1, 5) as $number) : ?>
 
 		<!-- wp:image {
-			"sizeSlug":"x3p0-16x9-lg",
+			"sizeSlug":"x3p0-wide",
 			"linkDestination":"none"
 		} -->
-		<figure class="wp-block-image size-x3p0-16x9-lg">
+		<figure class="wp-block-image size-x3p0-wide">
 			<img src="<?= esc_url($image) ?>" alt=""/>
 		</figure>
 		<!-- /wp:image -->

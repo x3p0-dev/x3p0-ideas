@@ -17,7 +17,7 @@ defined('ABSPATH') || exit;
 
 	<!-- wp:image {
 		"align":"wide",
-		"sizeSlug":"x3p0-16x9-lg",
+		"sizeSlug":"x3p0-wide",
 		"linkDestination":"none",
 		"metadata":{
 			"bindings":{
@@ -25,7 +25,7 @@ defined('ABSPATH') || exit;
 					"source":"x3p0/media",
 					"args":{
 						"type":"image",
-						"size":"x3p0-16x9-lg"
+						"size":"x3p0-wide"
 					}
 				},
 				"alt":{
@@ -35,7 +35,7 @@ defined('ABSPATH') || exit;
 			"@ifAttribute":"url"
 		}
 	} -->
-	<figure class="wp-block-image alignwide size-x3p0-16x9-lg">
+	<figure class="wp-block-image alignwide size-x3p0-wide">
 		<img src="" alt="" />
 	</figure>
 	<!-- /wp:image -->
