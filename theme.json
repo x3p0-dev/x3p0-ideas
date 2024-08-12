@@ -710,7 +710,7 @@
 					"ratio": "16/9"
 				},
 				{
-					"name": "Extra Wide (Univisium) - 2:1",
+					"name": "Extra Wide - 2:1",
 					"slug": "2-1",
 					"ratio": "2/1"
 				},
@@ -720,12 +720,12 @@
 					"ratio": "21/9"
 				},
 				{
-					"name": "Portrait - 3:4",
+					"name": "Portrait (Modern) - 3:4",
 					"slug": "3-4",
 					"ratio": "3/4"
 				},
 				{
-					"name": "Classic Portrait - 2:3",
+					"name": "Portrait (Classic) - 2:3",
 					"slug": "2-3",
 					"ratio": "2/3"
 				},
