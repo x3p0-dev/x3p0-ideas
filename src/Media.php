@@ -92,7 +92,7 @@ class Media implements Bootable
 	 */
 	public function filterPostThumbnailSize(string $size): string
 	{
-		return 'post-thumbnail' === $size ? 'x3p0-16x9-lg' : $size;
+		return 'post-thumbnail' === $size ? 'x3p0-wide' : $size;
 	}
 
 	/**

@@ -96,7 +96,7 @@ class Editor implements Bootable
 			];
 		}
 
-		$settings['imageDefaultSize']   = 'x3p0-16x9-lg';
+		$settings['imageDefaultSize']   = 'x3p0-wide';
 		$settings['fontLibraryEnabled'] = false;
 
 		// Ensures default spacing sizes are disabled.

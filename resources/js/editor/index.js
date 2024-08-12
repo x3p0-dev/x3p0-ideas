@@ -14,7 +14,7 @@ import { addFilter } from '@wordpress/hooks';
  *
  * @returns {string}
  */
-const withImageSize = () => 'x3p0-16x9-lg';
+const withImageSize = () => 'x3p0-wide';
 
 addFilter(
 	'editor.PostFeaturedImage.imageSize',
