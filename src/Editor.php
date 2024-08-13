@@ -98,10 +98,8 @@ class Editor implements Bootable
 	 */
 	public function enqueueFonts(): void
 	{
-		$fonts = FontFaceResolver::getFonts();
-
 		ob_start();
-		wp_print_font_faces($fonts);
+		wp_print_font_faces(FontFaceResolver::getFonts());
 		$content = ob_get_clean();
 
 		wp_register_style('x3p0-ideas-fonts', false);
@@ -115,7 +113,7 @@ class Editor implements Bootable
 	 * @hook  block_editor_settings_all last
 	 * @since 1.0.0
 	 */
-	public function registerSettings(array $settings ): array {
+	public function registerSettings(array $settings): array {
 		$settings['imageDefaultSize']   = 'x3p0-wide';
 		$settings['fontLibraryEnabled'] = false;
 

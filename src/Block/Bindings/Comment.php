@@ -88,7 +88,7 @@ class Comment implements BlockBindingSource
 			return null;
 		}
 
-		$parent_id  = absint(get_comment($this->comment_id)->comment_parent);
+		$parent_id = absint(get_comment($this->comment_id)->comment_parent);
 
 		return sprintf(
 			'<a class="comment-parent-link__anchor" href="%s">%s</a>',

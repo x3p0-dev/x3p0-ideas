@@ -42,9 +42,8 @@ class Metadata implements Bootable
 	{
 		// Create a camel-cased version of the block name. We use this
 		// to check if a method exists matching it.
-		$method = lcfirst(str_replace(' ', '', ucwords(
-			preg_replace("/[^A-Za-z0-9 ]/", ' ', $settings['name'])
-		)));
+		$method = preg_replace("/[^A-Za-z0-9 ]/", ' ', $settings['name']);
+		$method = lcfirst(str_replace(' ', '', ucwords($method)));
 
 		return method_exists($this, $method)
 		       ? $this->$method($settings)

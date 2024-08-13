@@ -26,7 +26,7 @@ class Embeds implements Bootable
 	 * @since 1.0.0
 	 * @todo  Type hint with PHP 8.3+ requirement.
 	 */
-	protected const IMAGE_SIZE = 'x3p0-21x9-lg';
+	protected const IMAGE_SIZE = 'x3p0-wide';
 
 	/**
 	 * Image shape to use for featured images (`rectangular` or `square`).

@@ -575,7 +575,7 @@
 			]
 		},
 		"custom": {
-			"variation": "ideas-experiments-and-things",
+			"variation": "default",
 			"color": {
 				"dark": "var:preset|color|contrast",
 				"light": "var:preset|color|base"
