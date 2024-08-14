@@ -117,7 +117,7 @@ class GlobalStyleVariation implements Bootable
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/wp_theme_json_data_user/
 	 */
-	public function setGlobalStyle(object $theme_json): object
+	public function setThemeStyle(object $theme_json): object
 	{
 		if ('' === $this->theme) {
 			return $theme_json;
