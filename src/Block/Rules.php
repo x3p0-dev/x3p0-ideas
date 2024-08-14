@@ -74,8 +74,9 @@ class Rules
 	 */
 	protected function checkIf($condition, array $block, WP_Block $instance): bool
 	{
-		$callable = is_callable($condition, false, $callback);
-		return $callable ? boolval($callback()) : true;
+		return is_callable($condition, false)
+		       ? boolval(call_user_func($condition))
+		       : true;
 	}
 
 	/**
@@ -97,8 +98,9 @@ class Rules
 	 */
 	protected function checkUnless($condition, array $block, WP_Block $instance): bool
 	{
-		$callable = is_callable($condition, false, $callback);
-		return $callable ? ! boolval($callback()) : true;
+		return is_callable($condition, false)
+		       ? ! boolval(call_user_func($condition))
+		       : true;
 	}
 
 	/**
