@@ -77,7 +77,7 @@ class Post implements BlockBindingSource
 	 * @return string|null
 	 * @todo   Add union return type with PHP 8.0+ requirement.
 	 */
-	private function renderReadingTime()
+	private function renderReadingTime(array $args)
 	{
 		if (! $str = get_the_content(null, false, $this->post_id)) {
 			return null;
