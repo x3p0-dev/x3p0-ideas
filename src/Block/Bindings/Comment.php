@@ -26,7 +26,7 @@ class Comment implements BlockBindingSource
 	 * @todo  Type hint with PHP 8.3+ requirement.
 	 */
 	private const KEY_METHODS = [
-		'parentLink' => 'boundParentLink'
+		'parentLink' => 'renderParentLink'
 	];
 
 	/**
@@ -77,7 +77,7 @@ class Comment implements BlockBindingSource
 	 * @return string|null
 	 * @todo   Add union return type with PHP 8.0+ requirement.
 	 */
-	private function boundParentLink(array $args, WP_Block $block)
+	private function renderParentLink(array $args, WP_Block $block)
 	{
 		if (
 			0 >= $this->comment_id

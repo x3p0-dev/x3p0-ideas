@@ -26,8 +26,8 @@ class Site implements BlockBindingSource
 	 * @todo  Type hint with PHP 8.3+ requirement.
 	 */
 	private const KEY_METHODS = [
-		'copyright' => 'boundCopyright',
-		'year'      => 'boundYear'
+		'copyright' => 'renderCopyright',
+		'year'      => 'renderYear'
 	];
 
 	/**
@@ -66,12 +66,12 @@ class Site implements BlockBindingSource
 	 *
 	 * @since 1.0.0
 	 */
-	private function boundCopyright(): string
+	private function renderCopyright(): string
 	{
 		return esc_html(sprintf(
 			// Translators: %s is the current year.
 			__('Copyright &copy; %s', 'x3p0-ideas'),
-			$this->boundYear()
+			$this->renderYear()
 		));
 	}
 
@@ -80,7 +80,7 @@ class Site implements BlockBindingSource
 	 *
 	 * @since 1.0.0
 	 */
-	private function boundYear(): string
+	private function renderYear(): string
 	{
 		return esc_html(date_i18n('Y'));
 	}

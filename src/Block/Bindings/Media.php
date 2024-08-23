@@ -27,10 +27,10 @@ class Media implements BlockBindingSource
 	 * @todo  Type hint with PHP 8.3+ requirement.
 	 */
 	private const KEY_METHODS = [
-		'alt'     => 'boundAlt',
-		'caption' => 'boundCaption',
-		'src'     => 'boundUrl', // alias for `url`
-		'url'     => 'boundUrl'
+		'alt'     => 'renderAlt',
+		'caption' => 'renderCaption',
+		'src'     => 'renderUrl', // alias for `url`
+		'url'     => 'renderUrl'
 	];
 
 	/**
@@ -82,7 +82,7 @@ class Media implements BlockBindingSource
 			return $this->$method($args);
 		}
 
-		return $this->boundMeta($args);
+		return $this->renderMeta($args);
 	}
 
 	/**
@@ -92,7 +92,7 @@ class Media implements BlockBindingSource
 	 * @return string|null
 	 * @todo   Add union return type with PHP 8.0+ requirement.
 	 */
-	private function boundUrl(array $args)
+	private function renderUrl(array $args)
 	{
 		if (isset($args['type']) && 'image' === $args['type']) {
 			$image = wp_get_attachment_image_src(
@@ -115,7 +115,7 @@ class Media implements BlockBindingSource
 	 * @return string|null
 	 * @todo   Add union return type with PHP 8.0+ requirement.
 	 */
-	private function boundAlt()
+	private function renderAlt()
 	{
 		$alt = get_post_meta($this->post_id, '_wp_attachment_image_alt', true);
 
@@ -129,7 +129,7 @@ class Media implements BlockBindingSource
 	 * @return string|null
 	 * @todo   Add union return type with PHP 8.0+ requirement.
 	 */
-	private function boundCaption()
+	private function renderCaption()
 	{
 		$caption = wp_get_attachment_caption($this->post_id);
 
@@ -143,7 +143,7 @@ class Media implements BlockBindingSource
 	 * @return string|null
 	 * @todo   Add union return type with PHP 8.0+ requirement.
 	 */
-	private function boundMeta(array $args)
+	private function renderMeta(array $args)
 	{
 		$this->meta[ $this->post_id ] ??= new MediaMeta(get_post($this->post_id));
 

@@ -28,12 +28,12 @@ class Theme implements BlockBindingSource
 	 * @todo  Type hint with PHP 8.3+ requirement.
 	 */
 	private const KEY_METHODS = [
-		'name'              => 'boundName',
-		'url'               => 'boundUrl',
-		'link'              => 'boundLink',
-		'superpower'        => 'boundSuperpower',
-		'helloDolly'        => 'boundHelloDolly',
-		'paginationLabel'   => 'boundPaginationLabel'
+		'name'              => 'renderName',
+		'url'               => 'renderUrl',
+		'link'              => 'renderLink',
+		'superpower'        => 'renderSuperpower',
+		'helloDolly'        => 'renderHelloDolly',
+		'paginationLabel'   => 'renderPaginationLabel'
 	];
 
 	/**
@@ -73,7 +73,7 @@ class Theme implements BlockBindingSource
 	 *
 	 * @since 1.0.0
 	 */
-	private function boundName(): string
+	private function renderName(): string
 	{
 		return esc_html(wp_get_theme(get_template())->display('Name'));
 	}
@@ -83,7 +83,7 @@ class Theme implements BlockBindingSource
 	 *
 	 * @since 1.0.0
 	 */
-	private function boundUrl(): string
+	private function renderUrl(): string
 	{
 		$url = wp_get_theme(get_template())->display('ThemeURI');
 
@@ -95,19 +95,19 @@ class Theme implements BlockBindingSource
 	 *
 	 * @since 1.0.0
 	 */
-	private function boundLink(): string
+	private function renderLink(): string
 	{
-		if ($url = $this->boundUrl()) {
+		if ($url = $this->renderUrl()) {
 			return sprintf(
 				'<a href="%s" class="theme-name theme-name--link">%s</a>',
 				esc_url($url),
-				esc_html($this->boundName())
+				esc_html($this->renderName())
 			);
 		}
 
 		return sprintf(
 			'<span class="theme-name">%s</span>',
-			esc_html($this->boundName())
+			esc_html($this->renderName())
 		);
 	}
 
@@ -116,7 +116,7 @@ class Theme implements BlockBindingSource
 	 *
 	 * @since 1.0.0
 	 */
-	private function boundSuperpower(array $args): string
+	private function renderSuperpower(array $args): string
 	{
 		return esc_html((new Superpower())->text($args['type'] ?? ''));
 	}
@@ -128,7 +128,7 @@ class Theme implements BlockBindingSource
 	 * @return string|null
 	 * @todo   Add union return type with PHP 8.0+ requirement.
 	 */
-	private function boundHelloDolly()
+	private function renderHelloDolly()
 	{
 		if (function_exists('hello_dolly_get_lyric')) {
 			return esc_html(sprintf(
@@ -149,7 +149,7 @@ class Theme implements BlockBindingSource
 	 * @return string|null
 	 * @todo   Add union return type with PHP 8.0+ requirement.
 	 */
-	private function boundPaginationLabel(array $args, WP_Block $block)
+	private function renderPaginationLabel(array $args, WP_Block $block)
 	{
 		// Bail early if there's no query.
 		if (! isset($block->context['query'])) {

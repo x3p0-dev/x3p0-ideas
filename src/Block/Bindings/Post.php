@@ -26,7 +26,7 @@ class Post implements BlockBindingSource
 	 * @todo  Type hint with PHP 8.3+ requirement.
 	 */
 	private const KEY_METHODS = [
-		'readingTime' => 'boundReadingTime'
+		'readingTime' => 'renderReadingTime'
 	];
 
 	/**
@@ -77,7 +77,7 @@ class Post implements BlockBindingSource
 	 * @return string|null
 	 * @todo   Add union return type with PHP 8.0+ requirement.
 	 */
-	private function boundReadingTime()
+	private function renderReadingTime()
 	{
 		if (! $str = get_the_content(null, false, $this->post_id)) {
 			return null;
