@@ -56,9 +56,6 @@ class Media implements Bootable
 	 * Filters the image size dropdown in the editor so our custom sizes
 	 * appear for selection.
 	 *
-	 * Note that we must use the `×` character directly instead of the HTML
-	 * `&times;` character entity so that it works in the editor.
-	 *
 	 * @hook  image_size_names_choose
 	 * @since 1.0.0
 	 * @todo  Use array unpacking (string keys) with PHP 8.1+ requirement.
