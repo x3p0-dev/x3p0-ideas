@@ -90,7 +90,7 @@ class FontFaceResolver
 		$faces = [];
 
 		foreach ($families as $family) {
-			if (! isset($family['fontFace']) || ! isset($family['fontFamily'])) {
+			if (! isset($family['fontFace'], $family['fontFamily'])) {
 				continue;
 			}
 
