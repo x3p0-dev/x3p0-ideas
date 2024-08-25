@@ -36,47 +36,52 @@ class FontFaceResolver
 	 */
 	public static function getFonts(): array
 	{
-		$families   = [];
-		$settings   = wp_get_global_settings();
-		$variations = WP_Theme_JSON_Resolver::get_style_variations();
+		// Get variations and reduce to only those with font families.
+		$variations = array_filter(
+			WP_Theme_JSON_Resolver::get_style_variations(),
+			fn($variation) => ! empty($variation['settings']['typography']['fontFamilies'])
+		);
 
-		// Loop through and store each variation's font families.
-		foreach ($variations as $variation) {
-			if (empty($variation['settings']['typography']['fontFamilies'])) {
-				continue;
-			}
+		// Get font families from all variations.
+		$families = array_merge(...array_map(
+			fn($variation) => static::getFamilies($variation['settings']),
+			$variations
+		));
 
-			foreach ($variation['settings']['typography']['fontFamilies'] as $group) {
-				$families = array_merge($families, $group);
-			}
+		return static::removeGlobalFonts(static::parseFamilies($families));
+	}
+
+	/**
+	 * Because Core could be potentially loading a font that's already
+	 * defined in our variations, let's remove those to avoid loading them a
+	 * second time.
+	 *
+	 * @since 1.0.0
+	 */
+	private static function removeGlobalFonts(array $fonts): array
+	{
+		$settings = wp_get_global_settings();
+
+		if (empty($settings['typography']['fontFamilies'])) {
+			return $fonts;
 		}
 
-		// Bail early if there are no defined font families.
-		if ([] === $families) {
-			return [];
-		}
+		return array_diff_key(
+			$fonts,
+			static::parseFamilies(static::getFamilies($settings))
+		);
+	}
 
-		$fonts = static::parseFamilies($families);
-
-		// Because Core could be potentially loading a font that's
-		// already defined in our variations, let's remove those to
-		// avoid loading them a second time.
-		if (! empty($settings['typography']['fontFamilies'])) {
-			$global_families = [];
-
-			foreach ($settings['typography']['fontFamilies'] as $group) {
-				$global_families = array_merge($global_families, $group);
-			}
-
-			if ([] !== $global_families) {
-				$fonts = array_diff_key(
-					$fonts,
-					static::parseFamilies($global_families)
-				);
-			}
-		}
-
-		return $fonts;
+	/**
+	 * `fontFamilies` are stored by group (`default`, `theme`, etc.). This
+	 * method gets all of the families from a `theme.json`-like settings
+	 * array and flattens them into a single array.
+	 *
+	 * @since 1.0.0
+	 */
+	private static function getFamilies(array $settings): array
+	{
+		return array_merge(...array_values($settings['typography']['fontFamilies']));
 	}
 
 	/**
@@ -130,11 +135,11 @@ class FontFaceResolver
 	 *
 	 * @since 1.0.0
 	 */
-	private static function convertProperties(array $definitions, string $name): array
+	private static function convertProperties(array $face, string $name): array
 	{
 		$converted = [];
 
-		foreach ($definitions as $properties) {
+		foreach ($face as $properties) {
 			$properties['font-family'] = $name;
 
 			if (! empty($properties['src'])) {
@@ -158,15 +163,12 @@ class FontFaceResolver
 	{
 		$placeholder = 'file:./';
 
-		foreach ($src as $key => $url) {
-			if (str_starts_with($url, $placeholder)) {
-				$src[ $key ] = get_theme_file_uri(
-					str_replace($placeholder, '', $url)
-				);
-			}
-		}
-
-		return $src;
+		return array_map(
+			fn($url) => str_starts_with($url, $placeholder)
+				? get_theme_file_uri(str_replace($placeholder, '', $url))
+				: $url,
+			$src
+		);
 	}
 
 	/**
