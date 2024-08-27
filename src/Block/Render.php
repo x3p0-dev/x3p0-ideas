@@ -186,7 +186,7 @@ class Render implements Bootable
 
 		if (
 			$processor->next_tag('video')
-			&& null === $processor->get_attribute('poster')
+			&& is_null($processor->get_attribute('poster'))
 		) {
 			$processor->set_attribute('poster', $poster);
 		}
