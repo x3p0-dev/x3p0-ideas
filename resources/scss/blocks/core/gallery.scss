@@ -10,6 +10,18 @@
 // -----------------------------------------------------------------------------
 
 ///
+/// Gutenberg 19.1 (WordPress 6.7) changed the behavior of the background for
+/// captions to move the blurred background, prepending it to the `<figure>`
+/// element. This breaks expectations for theme authors and existing solutions.
+/// Still just fighting for control here. 😔
+///
+/// @link https://github.com/WordPress/gutenberg/pull/63471
+///
+.wp-block-gallery.has-nested-images figure.wp-block-image:has(figcaption):before {
+	display: none;
+}
+
+///
 /// WordPress hardcodes a 13px font-size for captions. At that size, captions
 /// are so unreadable that they may as well not exist. 🙈
 ///
@@ -39,11 +51,14 @@
 /// @link https://github.com/WordPress/gutenberg/issues/8030
 ///
 .wp-block-gallery.has-nested-images:where(:not(.is-style-classic)) figure.wp-block-image figcaption {
-	padding: var(--wp--custom--caption--padding, var(--wp--preset--spacing--minus-2));
+	padding: var(
+		--wp--custom--caption--padding,
+		var(--wp--preset--spacing--plus-3) var(--wp--preset--spacing--minus-2) var(--wp--preset--spacing--base)
+	);
 	color:   var(--wp--custom--caption--color, var(--wp--preset--color--white));
 	background: var(
 		--wp--custom--caption--background,
-		linear-gradient(0deg, #000000b3, #0000004d 70%, #0000)
+		linear-gradient(0deg, #000000b3, #0000004d 50%, #0000)
 	);
 }
 
@@ -126,6 +141,16 @@
 		padding: var(--wp--preset--spacing--minus-2);
 		color: inherit;
 		background: unset;
+	}
+
+	// Gutenberg 19.1 (WordPress 6.7) added a text-shadow to captions,
+	// making captions for this style look horrendous. 😱
+	//
+	// Note that the extra selectors here are required to overrule Core.
+	//
+	// @link https://github.com/WordPress/gutenberg/pull/63471
+	figure.wp-block-image figcaption {
+		text-shadow: none;
 	}
 }
 
