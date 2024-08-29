@@ -82,6 +82,6 @@ class Site implements BlockBindingSource
 	 */
 	private function renderYear(): string
 	{
-		return esc_html(date_i18n('Y'));
+		return esc_html(wp_date('Y'));
 	}
 }

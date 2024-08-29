@@ -192,7 +192,7 @@ class MediaMeta
 			return '';
 		}
 
-		return esc_html(date_i18n(
+		return esc_html(wp_date(
 			get_option('date_format'),
 			intval($timestamp)
 		));
