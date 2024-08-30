@@ -68,8 +68,8 @@ $content_size = wp_get_global_settings([ 'layout', 'contentSize' ]);
 		<!-- wp:columns -->
 		<div class="wp-block-columns">
 
-			<!-- wp:column -->
-			<div class="wp-block-column">
+			<!-- wp:column {"width":"60%"} -->
+			<div class="wp-block-column" style="flex-basis:60%">
 				<!-- wp:post-featured-image {
 					"isLink":true,
 					"aspectRatio":"16/9",
@@ -82,6 +82,7 @@ $content_size = wp_get_global_settings([ 'layout', 'contentSize' ]);
 
 			<!-- wp:column {
 				"verticalAlignment":"center",
+				"width":"40%",
 				"style":{
 					"spacing":{
 						"blockGap":"var:preset|spacing|base"
@@ -89,7 +90,7 @@ $content_size = wp_get_global_settings([ 'layout', 'contentSize' ]);
 				},
 				"layout":{"type":"constrained"}
 			} -->
-			<div class="wp-block-column is-vertically-aligned-center">
+			<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:40%">
 
 				<!-- wp:group {
 					"tagName":"header",
