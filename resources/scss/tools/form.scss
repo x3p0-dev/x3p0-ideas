@@ -113,6 +113,8 @@
 ///
 @mixin select() {
 	cursor: pointer;
+	padding-right: var(--wp--preset--spacing--plus-2);
+
 	// Recreate the arrow with a linear-gradient.
 	// https://codepen.io/vkjgr/pen/VYMeXp
 	background-image:
