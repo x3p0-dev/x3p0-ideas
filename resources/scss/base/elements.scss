@@ -116,6 +116,15 @@ s {
 }
 
 // -----------------------------------------------------------------------------
+// `<figure>` - WordPress Core zeroes out the browser defaults and adds a
+// default bottom margin to figures.
+// -----------------------------------------------------------------------------
+
+:where(figure) {
+	margin: 0;
+}
+
+// -----------------------------------------------------------------------------
 // `<img>` - WordPress has several image-type blocks, but it doesn't support
 // the image element itself via `theme.json`.
 // -----------------------------------------------------------------------------
