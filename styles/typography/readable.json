@@ -177,6 +177,13 @@
 					"fontStyle": "normal"
 				}
 			}
+		},
+		"variations": {
+			"meta": {
+				"typography": {
+					"fontWeight": "300"
+				}
+			}
 		}
 	}
 }
