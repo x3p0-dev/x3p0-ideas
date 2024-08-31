@@ -96,6 +96,20 @@ class Metadata implements Bootable
 	}
 
 	/**
+	 * Adds more color support to the Cover block.
+	 *
+	 * @since 1.0.0
+	 */
+	private function coreCover(array $settings): array
+	{
+		$settings['supports']['color']           ??= [];
+		$settings['supports']['color']['button'] ??= true;
+		$settings['supports']['color']['link']   ??= true;
+
+		return $settings;
+	}
+
+	/**
 	 * Adds `textAlign` support for the Group block. This is needed to align
 	 * sub-blocks (e.g., Heading, Paragraph) in one swoop rather than
 	 * aligning them individually.
