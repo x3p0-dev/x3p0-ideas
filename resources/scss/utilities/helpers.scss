@@ -19,7 +19,7 @@
 	box-shadow: var(--wp--custom--global--shadow, none);
 }
 
-[class*=wp-block].alignfull,
+:where(:not(.has-global-padding)) > [class*=wp-block].alignfull,
 .has-global-border.alignfull,
 .wp-block-post-featured-image.alignfull img,
 .wp-block-image.alignfull img {
