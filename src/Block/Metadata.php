@@ -164,12 +164,18 @@ class Metadata implements Bootable
 	}
 
 	/**
-	 * Adds spacing support to the Post Template block.
+	 * Adds border and spacing support to the Post Template block.
 	 *
 	 * @since 1.0.0
 	 */
 	private function corePostTemplate(array $settings): array
 	{
+		$settings['supports']['__experimentalBorder']           ??= [];
+		$settings['supports']['__experimentalBorder']['color']  ??= true;
+		$settings['supports']['__experimentalBorder']['radius'] ??= true;
+		$settings['supports']['__experimentalBorder']['style']  ??= true;
+		$settings['supports']['__experimentalBorder']['width']  ??= true;
+
 		$settings['supports']['spacing']            ??= [];
 		$settings['supports']['spacing']['padding'] ??= true;
 
