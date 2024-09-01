@@ -1,28 +1,44 @@
 ////
-/// Prose styling.
+/// Prose styling is to be used for sections that are meant for long-form text,
+/// such as post content. The goal is to give more breathing room between
+/// sub-sections of the text so that it is more comfortable to read.
 ///
 /// @author Justin Tadlock <justintadlock@gmail.com>
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
 ///
-/// Default `<ul>` or `<ol>` list styles
+/// The prose mixin adjusts spacing for headings and sibling elements.
 ///
 @mixin prose() {
 
-	// Loosens the spacing above headings tightens the spacing below.
+	// Tightens the spacing below all headings.
 	:is(h1, h2, h3, h4, h5, h6) {
 		margin-block-end: 0.35em;
 	}
 
+	// If a heading follows any element and is not the first element, then
+	// loosen the spacing above it.
+	//
+	// In general, we want headings to have `1.5em` spacing above. However,
+	// for smaller headings, this will making the spacing too small, so we
+	// use `2.32rem` (which is the default vertical spacing for the theme)
+	// if it is larger. We also don't want the spacing to go above `3rem`,
+	// as that would be too large, so we use the minimum size compared
+	// between it and the previous calculation.
+	> * + :is(h1, h2, h3, h4, h5, h6)  {
+		margin-block-start: min(max(1.5em, 2.32rem), 3rem);
+	}
+
+	// Removes the top spacing from elements that immediately follow a
+	// heading. Note that this includes headings that also follow headings,
+	// so this rule must come *after* the above rule to win out.
 	:is(h1, h2, h3, h4, h5, h6) + * {
 		margin-block-start: 0;
 	}
 
-	> * + :is(h1, h2, h3, h4, h5, h6)  {
-		margin-block-start: min(1.5em, 3rem);
-	}
-
+	// Special blocks and elements where we want to return to the normal
+	// block spacing.
 	> :where(hr, .wp-block-spacer) + :is(h1, h2, h3, h4, h5, h6),
 	> :is(h1, h2, h3, h4, h5, h6) + :where(hr, .wp-block-spacer) {
 		margin-block-start: var(--wp--style--block-gap);
