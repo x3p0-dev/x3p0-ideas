@@ -12,7 +12,21 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// No fixes...
+///
+/// Paginated post links via `wp_link_pages()` and the `core/nextpage` block.
+/// There is no way to style this via `theme.json`.
+///
+/// This is technically a fix for the `core/nextpage` block, but its block
+/// stylesheet doesn't get enqueued via `wp_enqueue_block_style()`, so it's
+/// easiest to simply drop it in here since it's only shown alongside the Post
+/// Content block.
+///
+.post-nav-links {
+	gap: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
 
 // -----------------------------------------------------------------------------
 // Block style customizations.
