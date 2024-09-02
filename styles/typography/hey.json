@@ -1,0 +1,226 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Hey",
+	"settings": {
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "Satisfy, system-ui",
+					"slug": "primary",
+					"name": "Primary (Satisfy)",
+					"fontFace": [
+						{
+							"fontFamily": "Satisfy",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./public/fonts/satisfy/satisfy.woff2" ]
+						}
+					]
+				},
+				{
+					"fontFamily": "'Roboto Serif', Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif",
+					"slug": "secondary",
+					"name": "Secondary (Roboto Serif)",
+					"fontFace": [
+						{
+							"fontFamily": "Roboto Serif",
+							"fontWeight": "100 900",
+							"fontStyle": "normal",
+							"fontStretch": "100%",
+							"src": [
+								"file:./public/fonts/roboto/roboto-serif.woff2"
+							]
+						},
+						{
+							"fontFamily": "Roboto Serif",
+							"fontWeight": "100 900",
+							"fontStyle": "italic",
+							"fontStretch": "100%",
+							"src": [
+								"file:./public/fonts/roboto/roboto-serif-italic.woff2"
+							]
+						}
+					]
+				},
+				{
+					"fontFamily": "Montserrat, ui-sans-serif, sans-serif",
+					"slug": "tertiary",
+					"name": "Tertiary (Montserrat)",
+					"fontFace": [
+						{
+							"fontFamily": "Montserrat",
+							"fontWeight": "100 900",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [
+								"file:./public/fonts/montserrat/montserrat.woff2"
+							]
+						},
+						{
+							"fontFamily": "Montserrat",
+							"fontWeight": "100 900",
+							"fontStyle": "italic",
+							"fontStretch": "normal",
+							"src": [
+								"file:./public/fonts/montserrat/montserrat-italic.woff2"
+							]
+						}
+					]
+				},
+				{
+					"fontFamily": "ui-monospace, 'Fira Code', 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace",
+					"slug": "mono",
+					"name": "Monospace"
+				}
+			]
+		}
+	},
+	"styles": {
+		"elements": {
+			"button": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|tertiary"
+				}
+			},
+			"caption": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|tertiary",
+					"fontSize": "var:preset|font-size|sm",
+					"fontStyle": "normal",
+					"textTransform": "none"
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontWeight": "400",
+					"textTransform": "none"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontWeight": "400"
+				}
+			}
+		},
+		"blocks": {
+			"core/comments-title": {
+				"typography": {
+					"fontSize": "var:preset|font-size|xl",
+					"lineHeight": "var:preset|line-height|xl"
+				}
+			},
+			"core/gallery": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|tertiary",
+					"fontSize": "var:preset|font-size|sm",
+					"fontStyle": "normal",
+					"textTransform": "none"
+				}
+			},
+			"core/image": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|tertiary",
+					"fontSize": "var:preset|font-size|sm",
+					"fontStyle": "normal",
+					"textTransform": "none"
+				}
+			},
+			"core/navigation": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|tertiary",
+					"fontSize": "var:preset|font-size|sm",
+					"textTransform": "none"
+				}
+			},
+			"core/post-comments-form": {
+				"elements": {
+					"h3": {
+						"typography": {
+							"fontSize": "var:preset|font-size|xl",
+							"lineHeight": "var:preset|line-height|xl"
+						}
+					}
+				}
+			},
+			"core/pullquote": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|primary",
+					"fontStyle": "normal"
+				},
+				"elements": {
+					"cite": {
+						"typography": {
+							"fontFamily": "var:preset|font-family|tertiary",
+							"fontStyle": "normal",
+							"fontWeight": "300"
+						}
+					}
+				}
+			},
+			"core/query-pagination": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|tertiary",
+					"fontSize": "var:preset|font-size|sm",
+					"fontWeight": "500",
+					"lineHeight": "var:custom|line-height|sm"
+				}
+			},
+			"core/quote": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|secondary",
+					"fontStyle": "italic"
+				},
+				"elements": {
+					"cite": {
+						"typography": {
+							"fontFamily": "var:preset|font-family|tertiary",
+							"fontSize": "1em",
+							"fontStyle": "normal"
+						}
+					}
+				}
+			},
+			"core/social-links": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|tertiary"
+				}
+			},
+			"core/site-title": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|primary",
+					"fontSize": "var:preset|font-size|lg",
+					"fontStyle": "normal",
+					"fontWeight": "400",
+					"letterSpacing": "0",
+					"textTransform": "none"
+				}
+			},
+			"core/tag-cloud": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|tertiary"
+				}
+			},
+			"core/verse": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|primary",
+					"fontStyle": "normal"
+				}
+			},
+			"x3p0/breadcrumbs": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|tertiary",
+					"fontSize": "var:preset|font-size|xs"
+				}
+			}
+		},
+		"variations": {
+			"meta": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|tertiary"
+				}
+			}
+		}
+	}
+}
