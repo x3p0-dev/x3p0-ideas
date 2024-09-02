@@ -426,6 +426,18 @@
 					"style": "var:custom|global|border|style",
 					"width": "var:custom|global|border|width"
 				},
+				"color": {
+					"background": "var:preset|color|base",
+					"text": "var:preset|color|contrast"
+				},
+				"spacing": {
+					"padding": {
+						"top": "0",
+						"bottom": "0",
+						"left": "0",
+						"right": "0"
+					}
+				},
 				"elements": {
 					"heading": {
 						"border": {

@@ -415,9 +415,18 @@
 					"width": "1px"
 				},
 				"color": {
-					"background": "var:preset|color|neutral-100"
+					"background": "var:preset|color|neutral-100",
+					"text": "var:preset|color|contrast"
 				},
 				"shadow": "var:custom|global|shadow",
+				"spacing": {
+					"padding": {
+						"top": "0",
+						"bottom": "0",
+						"left": "0",
+						"right": "0"
+					}
+				},
 				"elements": {
 					"heading": {
 						"border": {
