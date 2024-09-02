@@ -112,7 +112,8 @@
 			"core/pullquote": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",
-					"fontStyle": "normal"
+					"fontStyle": "normal",
+					"fontWeight": "400"
 				},
 				"elements": {
 					"cite": {
@@ -128,7 +129,8 @@
 				"typography": {
 					"fontFamily": "var:preset|font-family|secondary",
 					"fontSize": "var:preset|font-size|sm",
-					"fontWeight": "500"
+					"fontWeight": "500",
+					"lineHeight": "var:custom|line-height|sm"
 				}
 			},
 			"core/quote": {
@@ -138,7 +140,7 @@
 				"elements": {
 					"cite": {
 						"typography": {
-							"fontFamily": "var:preset|font-family|primary",
+							"fontFamily": "var:preset|font-family|secondary",
 							"fontSize": "1em",
 							"fontStyle": "normal"
 						}
@@ -171,7 +173,8 @@
 			"x3p0/breadcrumbs": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|secondary",
-					"fontSize": "var:preset|font-size|sm"
+					"fontSize": "var:preset|font-size|xs",
+					"lineHeight": "var:custom|line-height|xs"
 				}
 			}
 		}

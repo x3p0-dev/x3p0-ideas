@@ -144,7 +144,8 @@
 				"typography": {
 					"fontFamily": "var:preset|font-family|secondary",
 					"fontSize": "var:preset|font-size|sm",
-					"fontWeight": "500"
+					"fontWeight": "500",
+					"lineHeight": "var:custom|line-height|sm"
 				}
 			},
 			"core/quote": {
@@ -164,9 +165,9 @@
 			"core/site-title": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",
-					"fontSize": "var:preset|font-size|lg",
+					"fontSize": "var:preset|font-size|md",
 					"fontStyle": "italic",
-					"fontWeight": "600",
+					"fontWeight": "700",
 					"letterSpacing": "0",
 					"textTransform": "none"
 				}

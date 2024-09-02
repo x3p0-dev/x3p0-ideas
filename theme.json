@@ -1931,6 +1931,30 @@
 					"lineHeight": "var:custom|line-height|sm"
 				}
 			},
+			"core/query-pagination": {
+				"typography": {
+					"fontSize": "var:preset|font-size|sm",
+					"fontWeight": "500",
+					"lineHeight": "var:custom|line-height|sm"
+				},
+				"elements": {
+					"link": {
+						"typography": {
+							"textDecoration": "none"
+						},
+						":focus": {
+							"typography": {
+								"textDecoration": "underline"
+							}
+						},
+						":hover": {
+							"typography": {
+								"textDecoration": "underline"
+							}
+						}
+					}
+				}
+			},
 			"core/quote": {
 				"border": {
 					"color": {

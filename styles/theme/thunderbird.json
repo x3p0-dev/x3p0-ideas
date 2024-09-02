@@ -427,7 +427,8 @@
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",
 					"fontSize": "var:preset|font-size|sm",
-					"fontWeight": "500"
+					"fontWeight": "500",
+					"lineHeight": "var:custom|line-height|sm"
 				},
 				"elements": {
 					"link": {

@@ -150,7 +150,8 @@
 				"typography": {
 					"fontFamily": "var:preset|font-family|secondary",
 					"fontSize": "var:preset|font-size|sm",
-					"fontWeight": "500"
+					"fontWeight": "500",
+					"lineHeight": "var:custom|line-height|sm"
 				}
 			},
 			"core/quote": {
@@ -161,7 +162,7 @@
 					"cite": {
 						"typography": {
 							"fontFamily": "var:preset|font-family|primary",
-							"fontSize": "1em",
+							"fontSize": "0.875em",
 							"fontStyle": "italic"
 						}
 					}

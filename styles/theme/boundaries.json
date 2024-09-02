@@ -432,7 +432,9 @@
 			},
 			"core/query-pagination": {
 				"typography": {
-					"fontWeight": "500"
+					"fontSize": "var:preset|font-size|md",
+					"fontWeight": "500",
+					"lineHeight": "var:custom|line-height|md"
 				},
 				"elements": {
 					"link": {

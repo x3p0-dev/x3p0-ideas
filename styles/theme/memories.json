@@ -475,7 +475,8 @@
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",
 					"fontSize": "var:preset|font-size|lg",
-					"fontWeight": "500"
+					"fontWeight": "500",
+					"lineHeight": "var:custom|line-height|lg"
 				},
 				"elements": {
 					"link": {
