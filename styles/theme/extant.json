@@ -477,6 +477,9 @@
 				}
 			},
 			"x3p0/breadcrumbs": {
+				"color": {
+					"gradient": "var:preset|gradient|90-deg-neutral-50-transparent"
+				},
 				"typography": {
 					"fontSize": "var:preset|font-size|xs",
 					"lineHeight": "var:custom|line-height|xs"

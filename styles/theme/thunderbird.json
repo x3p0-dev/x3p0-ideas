@@ -474,7 +474,9 @@
 					"gradient": "var:preset|gradient|90-deg-white-transparent"
 				},
 				"typography": {
-					"fontFamily": "var:preset|font-family|primary"
+					"fontFamily": "var:preset|font-family|primary",
+					"fontSize": "var:preset|font-size|sm",
+					"lineHeight": "var:custom|line-height|sm"
 				}
 			}
 		},

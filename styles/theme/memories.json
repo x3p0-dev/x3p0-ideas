@@ -520,7 +520,9 @@
 					"text": "var:preset|color|neutral-500"
 				},
 				"typography": {
-					"fontStyle": "italic"
+					"fontStyle": "italic",
+					"fontSize": "var:preset|font-size|xs",
+					"lineHeight": "var:custom|line-height|xs"
 				},
 				"elements": {
 					"link": {

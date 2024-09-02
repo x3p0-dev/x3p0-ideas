@@ -484,6 +484,13 @@
 						"style": "var:custom|global|border|style",
 						"width": "var:custom|global|border|width"
 					}
+				},
+				"color": {
+					"gradient": "var:preset|gradient|90-deg-neutral-50-transparent"
+				},
+				"typography": {
+					"fontSize": "var:preset|font-size|sm",
+					"lineHeight": "var:custom|line-height|sm"
 				}
 			}
 		},

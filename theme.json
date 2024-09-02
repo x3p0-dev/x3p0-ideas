@@ -2230,7 +2230,7 @@
 			},
 			"x3p0/breadcrumbs": {
 				"color": {
-					"gradient": "var:preset|gradient|90-deg-neutral-50-transparent"
+					"gradient": "var:preset|color|neutral-50"
 				},
 				"spacing": {
 					"padding":{
@@ -2241,8 +2241,8 @@
 					}
 				},
 				"typography": {
-					"fontSize": "var:preset|font-size|sm",
-					"lineHeight": "var:custom|line-height|sm"
+					"fontSize": "var:preset|font-size|xs",
+					"lineHeight": "var:custom|line-height|xs"
 				},
 				"elements": {
 					"link": {
