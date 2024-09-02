@@ -544,8 +544,8 @@
 				},
 				{
 					"gradient": "linear-gradient( 120deg, #a1c4fd, #c2e9fb )",
-					"name": "Winter Neva",
-					"slug": "winter-neva"
+					"name": "Inter Neva",
+					"slug": "inter-neva"
 				}
 			],
 			"palette": [
@@ -1077,17 +1077,26 @@
 					]
 				},
 				{
-					"fontFamily": "'Roboto Flex', ui-sans-serif, sans-serif",
+					"fontFamily": "Wix Madefor Text, ui-sans-serif, sans-serif",
 					"slug": "secondary",
-					"name": "Secondary (Roboto Flex)",
+					"name": "Secondary (Wix Madefor Text)",
 					"fontFace": [
 						{
-							"fontFamily": "Roboto Flex",
-							"fontWeight": "100 1000",
+							"fontFamily": "Wix Madefor Text",
+							"fontWeight": "400 800",
 							"fontStyle": "normal",
-							"fontStretch": "25% 151%",
+							"fontStretch": "normal",
 							"src": [
-								"file:./public/fonts/roboto/roboto-flex.woff2"
+								"file:./public/fonts/wix-madefor/wix-madefor-text.woff2"
+							]
+						},
+						{
+							"fontFamily": "Wix Madefor Text",
+							"fontWeight": "400 800",
+							"fontStyle": "italic",
+							"fontStretch": "normal",
+							"src": [
+								"file:./public/fonts/wix-madefor/wix-madefor-text-italic.woff2"
 							]
 						}
 					]
