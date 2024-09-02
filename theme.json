@@ -671,57 +671,57 @@
 				},
 				{
 					"slug": "neutral-950",
-					"color": "#1e293b",
+					"color": "#020617",
 					"name": "Neutral: 950"
 				},
 				{
 					"slug": "neutral-900",
-					"color": "#293951",
+					"color": "#0f172a",
 					"name": "Neutral: 900"
 				},
 				{
 					"slug": "neutral-800",
-					"color": "#2c4260",
+					"color": "#1e293b",
 					"name": "Neutral: 800"
 				},
 				{
 					"slug": "neutral-700",
-					"color": "#324d72",
+					"color": "#334155",
 					"name": "Neutral: 700"
 				},
 				{
 					"slug": "neutral-600",
-					"color": "#3d5f8c",
+					"color": "#475569",
 					"name": "Neutral: 600"
 				},
 				{
 					"slug": "neutral-500",
-					"color": "#4f78a8",
+					"color": "#64748b",
 					"name": "Neutral: 500"
 				},
 				{
 					"slug": "neutral-400",
-					"color": "#7196bf",
+					"color": "#94a3b8",
 					"name": "Neutral: 400"
 				},
 				{
 					"slug": "neutral-300",
-					"color": "#a3bbd6",
+					"color": "#cbd5e1",
 					"name": "Neutral: 300"
 				},
 				{
 					"slug": "neutral-200",
-					"color": "#cedae9",
+					"color": "#e2e8f0",
 					"name": "Neutral: 200"
 				},
 				{
 					"slug": "neutral-100",
-					"color": "#e9edf5",
+					"color": "#f1f5f9",
 					"name": "Neutral: 100"
 				},
 				{
 					"slug": "neutral-50",
-					"color": "#f4f6fb",
+					"color": "#f8fafc",
 					"name": "Neutral: 50"
 				}
 			]
