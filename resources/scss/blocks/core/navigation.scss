@@ -104,12 +104,11 @@
 		width: 100%;
 	}
 
-	// Zeroes out WP's inherited gap between items in the mobile menu. Note
-	// that our links have padding on them, which takes care of the spacing.
+	// Overrides Core's spacing to match the theme.
 	.wp-block-navigation-item,
 	.wp-block-navigation__responsive-container-content,
 	.wp-block-navigation__responsive-container-content .wp-block-navigation__container {
-		gap: 0;
+		gap: var(--wp--preset--spacing--base);
 	}
 
 	.wp-block-navigation__responsive-close {
