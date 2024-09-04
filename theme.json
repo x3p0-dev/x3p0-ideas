@@ -61,6 +61,20 @@
 				}
 			},
 			"core/comment-template": {
+				"border": {
+					"color": true,
+					"radius": true,
+					"style": true,
+					"width": true
+				},
+				"color": {
+					"background": true,
+					"button": true,
+					"caption": true,
+					"heading": true,
+					"link": true,
+					"text": true
+				},
 				"custom": {
 					"comment": {
 						"padding": "var:preset|spacing|plus-3",
@@ -75,6 +89,30 @@
 						"color": "inherit",
 						"hoverColor": "var:preset|color|primary-700"
 					}
+				},
+				"spacing": {
+					"margin": true,
+					"padding": true
+				}
+			},
+			"core/comments": {
+				"border": {
+					"color": true,
+					"radius": true,
+					"style": true,
+					"width": true
+				},
+				"color": {
+					"background": true,
+					"button": true,
+					"caption": true,
+					"heading": true,
+					"link": true,
+					"text": true
+				},
+				"spacing": {
+					"margin": true,
+					"padding": true
 				}
 			},
 			"core/cover": {
@@ -1499,6 +1537,11 @@
 						"left":"0",
 						"right":"0"
 					}
+				}
+			},
+			"core/comment": {
+				"color": {
+					"background": "red"
 				}
 			},
 			"core/comments": {
