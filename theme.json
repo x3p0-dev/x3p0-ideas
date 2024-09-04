@@ -1539,11 +1539,6 @@
 					}
 				}
 			},
-			"core/comment": {
-				"color": {
-					"background": "red"
-				}
-			},
 			"core/comments": {
 				"spacing": {
 					"padding": {
