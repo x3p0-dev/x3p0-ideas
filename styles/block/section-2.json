@@ -10,6 +10,7 @@
 		"core/comments",
 		"core/group",
 		"core/media-text",
+		"core/post-comments-form",
 		"core/query"
 	],
 	"styles": {
