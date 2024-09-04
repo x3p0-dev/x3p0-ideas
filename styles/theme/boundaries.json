@@ -4,13 +4,6 @@
 	"title": "Boundaries",
 	"settings": {
 		"blocks": {
-			"core/comment-template": {
-				"custom": {
-					"comment": {
-						"background": "transparent"
-					}
-				}
-			},
 			"core/gallery": {
 				"custom": {
 					"caption": {
@@ -374,37 +367,14 @@
 				}
 			},
 			"core/post-comments-form": {
-				"border": {
-					"color": "var:custom|global|border|color",
-					"style": "var:custom|global|border|style",
-					"width": "var:custom|global|border|width"
-				},
 				"elements": {
-					"heading": {
-						"border": {
-							"bottom": {
-								"color": "var:custom|global|border|color",
-								"style": "var:custom|global|border|style",
-								"width": "var:custom|global|border|width"
-							}
-						},
-						"spacing": {
-							"padding": {
-								"top": "var:preset|spacing|base",
-								"bottom": "var:preset|spacing|base",
-								"left": "var:preset|spacing|plus-3",
-								"right": "var:preset|spacing|plus-3"
-							}
-						}
-					},
 					"h3": {
 						"typography": {
 							"fontSize": "var:preset|font-size|lg",
 							"lineHeight": "var:custom|line-height|lg"
 						}
 					}
-				},
-				"css": "& > form {\n\tmargin: 0;\n\tpadding: var(--wp--preset--spacing--plus-3);\n}"
+				}
 			},
 			"core/post-featured-image": {
 				"border": {

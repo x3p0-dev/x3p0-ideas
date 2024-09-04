@@ -45,7 +45,14 @@
 ///
 .wp-block-cover .is-style-meta,
 :is(.is-style-section-1) .is-style-meta,
-:is(.is-style-section-1) .is-style-meta a {
+:is(.is-style-section-1) .is-style-meta a,
+.wp-block-post-comments-form.is-style-section-1 label,
+.wp-block-post-comments-form.is-style-section-1 .required {
 	color: inherit;
 	background: transparent;
+}
+
+
+.wp-block-post-comments-form.is-style-section-1 label {
+	color: inherit !important;
 }

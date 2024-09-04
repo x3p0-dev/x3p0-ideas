@@ -96,6 +96,18 @@ class Metadata implements Bootable
 	}
 
 	/**
+	 * Adds layout support to the Comments block.
+	 *
+	 * @since 1.0.0
+	 */
+	private function coreComments(array $settings): array
+	{
+		$settings['supports']['layout'] ??= true;
+
+		return $settings;
+	}
+
+	/**
 	 * Adds more color support to the Cover block.
 	 *
 	 * @since 1.0.0

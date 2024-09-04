@@ -11,13 +11,6 @@
 					}
 				}
 			},
-			"core/comment-template": {
-				"custom": {
-					"comment": {
-						"background": "var:preset|color|neutral-100"
-					}
-				}
-			},
 			"core/gallery": {
 				"custom": {
 					"caption": {
@@ -396,22 +389,6 @@
 				}
 			},
 			"core/post-comments-form": {
-				"color": {
-					"background": "var:preset|color|neutral-100"
-				},
-				"border": {
-					"color": "var:custom|global|border|color",
-					"style": "var:custom|global|border|style",
-					"width": "var:custom|global|border|width"
-				},
-				"spacing": {
-					"padding": {
-						"top": "var:preset|spacing|plus-3",
-						"bottom": "var:preset|spacing|plus-3",
-						"left": "var:preset|spacing|plus-3",
-						"right": "var:preset|spacing|plus-3"
-					}
-				},
 				"elements": {
 					"h3": {
 						"typography": {

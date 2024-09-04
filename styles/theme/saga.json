@@ -262,21 +262,9 @@
 			"core/post-comments-form": {
 				"elements": {
 					"h3": {
-						"border": {
-							"bottom": {
-								"color": "var:preset|color|neutral-100",
-								"style": "double",
-								"width": "3px"
-							}
-						},
-						"spacing": {
-							"padding": {
-								"bottom": "var:preset|spacing|base"
-							}
-						},
 						"typography": {
-							"fontSize": "var:preset|font-size|xl",
-							"lineHeight": "var:preset|line-height|xl"
+							"fontSize": "var:preset|font-size|lg",
+							"lineHeight": "var:preset|line-height|lg"
 						}
 					}
 				}

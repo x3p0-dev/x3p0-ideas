@@ -22,7 +22,8 @@
 
 .wp-block-comment-template > * + *,
 .wp-block-comment-template > li > ol,
-.wp-block-comment-template > li > ol + ol {
+.wp-block-comment-template > li > ol + ol,
+.wp-block-comment-template :where(:not(.wp-block-comment-content)) li > ol {
 	margin-block-start: var(--wp--custom--gap, var(--wp--style--block-gap));
 }
 
