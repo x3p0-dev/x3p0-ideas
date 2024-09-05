@@ -6,6 +6,7 @@
 	"blockTypes": [
 		"core/column",
 		"core/columns",
+		"core/comment-content",
 		"core/comment-template",
 		"core/comments",
 		"core/group",
