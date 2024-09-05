@@ -5,21 +5,27 @@
 	"metadata":{"name":"Content"},
 	"style":{
 		"spacing":{
-			"padding":{
-				"bottom":"var:preset|spacing|plus-3"
-			}
+			"blockGap":"0"
 		}
 	},
 	"layout":{"type":"default"}
 } -->
-<main class="wp-block-group" style="padding-bottom:var(--wp--preset--spacing--plus-3)">
+<main class="wp-block-group">
 
 	<!-- wp:group {
 		"tagName":"article",
 		"metadata":{"name":"Post"},
+		"style":{
+			"spacing":{
+				"padding":{
+					"top":"0px",
+					"bottom":"var:preset|spacing|plus-3"
+				}
+			}
+		},
 		"layout":{"type":"default"}
 	} -->
-	<article class="wp-block-group">
+	<article class="wp-block-group" style="padding-top:0px;padding-bottom:var(--wp--preset--spacing--plus-3)">
 
 		<!-- wp:post-featured-image {
 			"aspectRatio":"21/9",

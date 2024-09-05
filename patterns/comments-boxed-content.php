@@ -18,13 +18,14 @@ defined('ABSPATH') || exit;
 	"style":{
 		"spacing":{
 			"padding":{
-				"top":"var:preset|spacing|plus-3"
+				"top":"var:preset|spacing|plus-3",
+				"bottom":"var:preset|spacing|plus-3"
 			}
 		}
 	},
 	"layout":{"type":"constrained"}
 } -->
-<div class="wp-block-comments">
+<div class="wp-block-comments" style="padding-top:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3)">
 
 	<!-- wp:group {
 		"metadata":{

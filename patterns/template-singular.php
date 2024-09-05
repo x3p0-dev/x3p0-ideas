@@ -20,22 +20,27 @@ defined('ABSPATH') || exit;
 	"metadata":{"name":"<?= esc_attr__('Content', 'x3p0-ideas') ?>"},
 	"style":{
 		"spacing":{
-			"padding":{
-				"top":"var:preset|spacing|plus-3",
-				"bottom":"var:preset|spacing|plus-3"
-			}
+			"blockGap":"0"
 		}
 	},
 	"layout":{"type":"default"}
 } -->
-<main class="wp-block-group" style="padding-top:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3)">
+<main class="wp-block-group">
 
 	<!-- wp:group {
 		"tagName":"article",
+		"style":{
+			"spacing":{
+				"padding":{
+					"top":"var:preset|spacing|plus-3",
+					"bottom":"var:preset|spacing|plus-3"
+				}
+			}
+		},
 		"metadata":{"name":"<?= esc_attr__('Post', 'x3p0-ideas') ?>"},
 		"layout":{"type":"default"}
 	} -->
-	<article class="wp-block-group">
+	<article class="wp-block-group" style="padding-top:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3)">
 
 		<!-- wp:group {
 			"tagName":"header",
