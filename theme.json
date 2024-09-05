@@ -1530,11 +1530,6 @@
 				}
 			},
 			"core/comments": {
-				"spacing": {
-					"padding": {
-						"top": "var:preset|spacing|plus-3"
-					}
-				},
 				"css": "--wp--custom--block-gap--comments: var( --wp--preset--spacing--plus-4 );"
 			},
 			"core/comments-title": {

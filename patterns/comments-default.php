@@ -14,8 +14,17 @@ declare(strict_types=1);
 defined('ABSPATH') || exit;
 
 ?>
-<!-- wp:comments {"layout":{"type":"constrained"}} -->
-<div class="wp-block-comments">
+<!-- wp:comments {
+	"style":{
+		"spacing":{
+			"padding":{
+				"top":"var:preset|spacing|plus-3"
+			}
+		}
+	},
+	"layout":{"type":"constrained"}
+} -->
+<div class="wp-block-comments" style="padding-top:var(--wp--preset--spacing--plus-3)">
 
 	<!-- wp:group {
 		"metadata":{
