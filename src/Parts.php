@@ -49,7 +49,7 @@ class Parts implements Bootable
 	{
 		$areas[] = [
 			'area'        => 'comments',
-			'area_tag'    => 'div',
+			'area_tag'    => 'section',
 			'label'       => __('Comments', 'x3p0-ideas'),
 			'description' => __('The Comments template part defines an area that contains the comments list and form.', 'x3p0-ideas'),
 			'icon'        => 'layout'

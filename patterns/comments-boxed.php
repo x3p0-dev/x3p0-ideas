@@ -14,11 +14,8 @@ declare(strict_types=1);
 defined('ABSPATH') || exit;
 
 ?>
-<!-- wp:comments {
-	"tagName":"section",
-	"layout":{"type":"constrained"}
-} -->
-<section class="wp-block-comments">
+<!-- wp:comments {"layout":{"type":"constrained"}} -->
+<div class="wp-block-comments">
 
 	<!-- wp:group {
 		"metadata":{"name":"<?= esc_attr__('Comments Container', 'x3p0-ideas') ?>"},
@@ -41,5 +38,5 @@ defined('ABSPATH') || exit;
 	</div>
 	<!-- /wp:group -->
 
-</section>
+</div>
 <!-- /wp:comments -->

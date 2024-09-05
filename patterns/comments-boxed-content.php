@@ -14,11 +14,8 @@ declare(strict_types=1);
 defined('ABSPATH') || exit;
 
 ?>
-<!-- wp:comments {
-	"tagName":"section",
-	"layout":{"type":"constrained"}
-} -->
-<section class="wp-block-comments">
+<!-- wp:comments {"layout":{"type":"constrained"}} -->
+<div class="wp-block-comments">
 
 	<!-- wp:group {
 		"metadata":{
@@ -43,5 +40,5 @@ defined('ABSPATH') || exit;
 		"className":"is-style-section-3 has-global-border has-icons"
 	} /-->
 
-</section>
+</div>
 <!-- /wp:comments -->
