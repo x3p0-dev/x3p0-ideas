@@ -1542,6 +1542,9 @@
 					"margin": {
 						"bottom": "0.5em"
 					}
+				},
+				"typography": {
+					"textTransform": "capitalize"
 				}
 			},
 			"core/cover": {
