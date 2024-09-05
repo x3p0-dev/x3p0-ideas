@@ -214,7 +214,9 @@ class Metadata implements Bootable
 	}
 
 	/**
-	 * Adds spacing support to the Query Loop block.
+	 * Adds spacing support to the Query Loop block and disables
+	 * interactivity. Disabling interactivity will ensure that the user
+	 * cannot select it in the admin.
 	 *
 	 * @since 1.0.0
 	 */
@@ -223,6 +225,8 @@ class Metadata implements Bootable
 		$settings['supports']['spacing']             ??= [];
 		$settings['supports']['spacing']['blockGap'] ??= true;
 		$settings['supports']['spacing']['padding']  ??= true;
+
+		$settings['supports']['interactivity'] = false;
 
 		return $settings;
 	}
