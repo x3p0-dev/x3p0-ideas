@@ -4,7 +4,7 @@
  * Title: Comments: Boxed
  * Slug: x3p0-ideas/comments-boxed
  * Keywords: comments, discussion
- * Block Types: core/comments
+ * Block Types: core/comments, core/template-part/comments
  * Viewport Width: 1376
  */
 
