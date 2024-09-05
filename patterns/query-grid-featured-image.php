@@ -65,6 +65,11 @@ defined('ABSPATH') || exit;
 		<!-- wp:post-featured-image {
 			"isLink":true,
 			"aspectRatio":"1",
+			"style":{
+				"border":{
+					"radius":"0px"
+				}
+			},
 			"className":"is-style-borderless"
 		} /-->
 	<!-- /wp:post-template -->
