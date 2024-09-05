@@ -96,12 +96,31 @@ class Metadata implements Bootable
 	}
 
 	/**
+	 * Adds layout and block gap support to the Comment Content block.
+	 *
+	 * @since 1.0.0
+	 */
+	private function coreCommentContent(array $settings): array
+	{
+		$settings['supports']['layout'] ??= true;
+
+		$settings['supports']['spacing']             ??= [];
+		$settings['supports']['spacing']['blockGap'] ??= true;
+
+		return $settings;
+	}
+
+	/**
 	 * Adds layout support to the Comments block.
 	 *
 	 * @since 1.0.0
 	 */
 	private function coreComments(array $settings): array
 	{
+		$settings['supports']['align']   ??= [];
+		$settings['supports']['align'][]   = 'wide';
+		$settings['supports']['align'][]   = 'full';
+
 		$settings['supports']['layout'] ??= true;
 
 		return $settings;
