@@ -269,6 +269,27 @@ class Render implements Bootable
 	}
 
 	/**
+	 * Disables the Comments template part when there are no comments and
+	 * commenting is disabled.
+	 *
+	 * @hook  render_block_core/template-part
+	 * @since 1.0.0
+	 */
+	public function renderCoreTemplatePart(string $content, array $block): string
+	{
+		if (
+			isset($block['attrs']['slug'])
+			&& 'comments' === $block['attrs']['slug']
+			&& ! comments_open()
+			&& 0 === absint(get_comments_number())
+		) {
+			return '';
+		}
+
+		return $content;
+	}
+
+	/**
 	 * Filters the post content block when viewing single attachment views
 	 * and returns block-based media content.
 	 *

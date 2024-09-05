@@ -63,7 +63,7 @@ defined('ABSPATH') || exit;
 	</article>
 	<!-- /wp:group -->
 
-	<!-- wp:pattern {"slug":"x3p0-ideas/comments-default"} /-->
+	<!-- wp:template-part {"slug":"comments"} /-->
 
 </main>
 <!-- /wp:group -->

@@ -2462,6 +2462,11 @@
 			"title": "Footer"
 		},
 		{
+			"area": "comments",
+			"name": "comments",
+			"title": "Comments"
+		},
+		{
 			"area": "loop",
 			"name": "loop",
 			"title": "Posts"

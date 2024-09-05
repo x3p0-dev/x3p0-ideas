@@ -48,6 +48,14 @@ class Parts implements Bootable
 	public function registerAreas(array $areas): array
 	{
 		$areas[] = [
+			'area'        => 'comments',
+			'area_tag'    => 'div',
+			'label'       => __('Comments', 'x3p0-ideas'),
+			'description' => __('The Comments template part defines an area that contains the comments list and form.', 'x3p0-ideas'),
+			'icon'        => 'layout'
+		];
+
+		$areas[] = [
 			'area'        => 'loop',
 			'area_tag'    => 'div',
 			'label'       => __('Loop', 'x3p0-ideas'),
