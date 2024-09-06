@@ -212,9 +212,6 @@
 					"commentNotes": {
 						"fontSize": "var:preset|font-size|sm",
 						"lineHeight": "var:custom|line-height|sm"
-					},
-					"required": {
-						"color": "var:preset|color|primary-700"
 					}
 				}
 			},
@@ -757,8 +754,10 @@
 		"custom": {
 			"variation": "default",
 			"color": {
+				"action": "var:preset|color|primary-700",
 				"dark": "var:preset|color|contrast",
-				"light": "var:preset|color|base"
+				"light": "var:preset|color|base",
+				"muted": "var:preset|color|neutral-500"
 			},
 			"global": {
 				"border": {
@@ -778,7 +777,7 @@
 				"outline": {
 					"borderColor": "currentColor",
 					"borderStyle": "var:custom|global|border|style",
-					"borderWidth": "2px"
+					"borderWidth": "1px"
 				}
 			},
 			"elements": {
@@ -795,12 +794,11 @@
 				},
 				"input": {
 					"color": "var:preset|color|contrast",
-					"background": "var:preset|color|neutral-50",
+					"background": "var:preset|color|base",
 					"borderColor": "var:custom|global|border|color",
 					"borderRadius": "var:custom|global|border|radius",
 					"shadow": "var:custom|global|shadow",
-					"placeholderColor": "var:preset|color|neutral-500",
-					"accentColor": "var:preset|color|primary-700"
+					"placeholderColor": "var:preset|color|neutral-500"
 				},
 				"ins": {
 					"textDecoration": "var(--wp--preset--color--neutral-700) underline solid clamp(2px, 0.125em, 0.125em)"
@@ -816,9 +814,7 @@
 					"shadow": "var:preset|shadow|sm"
 				},
 				"label": {
-					"color": "var:preset|color|neutral-500",
 					"fontSize": "var:preset|font-size|sm",
-					"focusColor": "var:preset|color|primary-700",
 					"checkFontSize": "var:preset|font-size|sm"
 				},
 				"mark": {

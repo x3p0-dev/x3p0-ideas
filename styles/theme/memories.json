@@ -27,13 +27,6 @@
 					"color": "var:preset|color|primary-50"
 				}
 			},
-			"core/post-comments-form": {
-				"custom": {
-					"commentNotes": {
-						"color": "var:preset|color|neutral-500"
-					}
-				}
-			},
 			"core/table": {
 				"custom": {
 					"stripes": {
