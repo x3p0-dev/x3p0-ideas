@@ -53,11 +53,9 @@ class Post implements BlockBindingSource
 	/**
 	 * Returns media data based on the bound attribute.
 	 *
-	 * @since  1.0.0
-	 * @return string|null
-	 * @todo   Add union return type with PHP 8.0+ requirement.
+	 * @since 1.0.0
 	 */
-	public function callback(array $args, WP_Block $block, string $name)
+	public function callback(array $args, WP_Block $block, string $name): ?string
 	{
 		$this->post_id = $block->context['postId'] ?? get_the_ID();
 
@@ -73,11 +71,9 @@ class Post implements BlockBindingSource
 	/**
 	 * Returns a post's reading time.
 	 *
-	 * @since  1.0.0
-	 * @return string|null
-	 * @todo   Add union return type with PHP 8.0+ requirement.
+	 * @since 1.0.0
 	 */
-	private function renderReadingTime(array $args)
+	private function renderReadingTime(array $args): ?string
 	{
 		if (! $str = get_the_content(null, false, $this->post_id)) {
 			return null;

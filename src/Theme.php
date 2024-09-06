@@ -109,10 +109,8 @@ class Theme implements Bootable
 	 * internally only.
 	 *
 	 * @since 1.0.0
-	 * @param mixed $instance
- 	 * @todo  Add `mixed` param type declaration with PHP 8-only support.
 	 */
-	private function instance(string $abstract, $instance): void
+	private function instance(string $abstract, mixed $instance): void
 	{
 		$this->instances[ $abstract ] = $instance;
 	}
@@ -120,11 +118,9 @@ class Theme implements Bootable
 	/**
 	 * Returns a binding or `null`.
 	 *
-	 * @since  1.0.0
-	 * @return mixed
-	 * @todo   Add `mixed` return type declaration with PHP 8-only support.
+	 * @since 1.0.0
 	 */
-	public function get(string $abstract)
+	public function get(string $abstract): mixed
 	{
 		return $this->has($abstract) ? $this->instances[ $abstract ] : null;
 	}

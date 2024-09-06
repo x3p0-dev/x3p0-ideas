@@ -22,22 +22,6 @@ use Stringable;
 class View implements Stringable
 {
 	/**
-	 * The view name, used to create the filename.
-	 *
-	 * @since 1.0.0
-	 * @todo  Promote via the constructor with PHP 8.0+ requirement.
-	 */
-	protected string $name;
-
-	/**
-	 * A collection of data that is passed into the view template.
-	 *
-	 * @since 1.0.0
-	 * @todo  Promote via the constructor with PHP 8.0+ requirement.
-	 */
-	protected array $data;
-
-	/**
 	 * The template filename.
 	 *
 	 * @since 1.0.0
@@ -48,12 +32,10 @@ class View implements Stringable
 	 * Sets up the view properties.
 	 *
 	 * @since 1.0.0
-	 * @todo  Promote params to properties with PHP 8.0+ requirement.
 	 */
-	public function __construct(string $name, array $data = [])
+	public function __construct(protected string $name, protected array $data = [])
 	{
-		$this->name = str_replace('/', '.', $name);
-		$this->data = $data;
+		$this->name = str_replace('/', '.', $this->name);
 	}
 
 	/**

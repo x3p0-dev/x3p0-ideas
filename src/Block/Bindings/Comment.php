@@ -53,11 +53,9 @@ class Comment implements BlockBindingSource
 	/**
 	 * Returns media data based on the bound attribute.
 	 *
-	 * @since  1.0.0
-	 * @return string|null
-	 * @todo   Add union return type with PHP 8.0+ requirement.
+	 * @since 1.0.0
 	 */
-	public function callback(array $args, WP_Block $block, string $name)
+	public function callback(array $args, WP_Block $block, string $name): ?string
 	{
 		$this->comment_id = absint($block->context['commentId'] ?? get_comment_ID());
 
@@ -73,11 +71,9 @@ class Comment implements BlockBindingSource
 	/**
 	 * Renders a comment's parent link.
 	 *
-	 * @since  1.0.0
-	 * @return string|null
-	 * @todo   Add union return type with PHP 8.0+ requirement.
+	 * @since 1.0.0
 	 */
-	private function renderParentLink(array $args, WP_Block $block)
+	private function renderParentLink(array $args, WP_Block $block): ?string
 	{
 		if (
 			0 >= $this->comment_id

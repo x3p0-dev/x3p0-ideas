@@ -22,23 +22,11 @@ class StyleVariations implements Bootable
 	use HookAnnotation;
 
 	/**
-	 * Stores the instance of the block styles registry.
-	 *
-	 * @since 1.0.0
-	 * @todo  Promote via the constructor with PHP 8.0+ requirement.
-	 */
-	protected WP_Block_Styles_Registry $styles;
-
-	/**
 	 * Sets up the object state.
 	 *
 	 * @since 1.0.0
-	 * @todo  Promote params to properties with PHP 8.0+ requirement.
 	 */
-	public function __construct(WP_Block_Styles_Registry $styles)
-	{
-		$this->styles = $styles;
-	}
+	public function __construct(protected WP_Block_Styles_Registry $styles) {}
 
 	/**
 	 * Boots the component, running its actions/filters.

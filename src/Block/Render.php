@@ -25,35 +25,14 @@ class Render implements Bootable
 	use HookAnnotation;
 
 	/**
-	 * Instance of block rules, which is used to determine whether to show
-	 * a block.
-	 *
-	 * @since 1.0.0
-	 * @todo  Promote via the constructor with PHP 8.0+ requirement.
-	 */
-	protected Rules $rules;
-
-	/**
-	 * Instance of the view engine.
-	 *
-	 * @since 1.0.0
-	 * @todo  Promote via the constructor with PHP 8.0+ requirement.
-	 */
-	protected Engine $views;
-
-	/**
 	 * Sets up the object state.
 	 *
 	 * @since 1.0.0
-	 * @todo  Promote params to properties with PHP 8.0+ requirement.
 	 */
 	public function __construct(
-		Rules $rules,
-		Engine $views
-	) {
-		$this->rules = $rules;
-		$this->views = $views;
-	}
+		protected Rules $rules,
+		protected Engine $views
+	) {}
 
 	/**
 	 * Boots the component, running its actions/filters.

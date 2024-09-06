@@ -53,11 +53,9 @@ class Theme implements BlockBindingSource
 	/**
 	 * Returns media data based on the bound attribute.
 	 *
-	 * @since  1.0.0
-	 * @return string|null
-	 * @todo   Add union return type with PHP 8.0+ requirement.
+	 * @since 1.0.0
 	 */
-	public function callback(array $args, WP_Block $block, string $name)
+	public function callback(array $args, WP_Block $block, string $name): ?string
 	{
 		if (isset($args['key']) && isset(self::KEY_METHODS[ $args['key'] ])) {
 			$method = self::KEY_METHODS[ $args['key'] ];
@@ -124,11 +122,9 @@ class Theme implements BlockBindingSource
 	/**
 	 * Returns a random lyric from the Hello Dolly plugin if available.
 	 *
-	 * @since  1.0.0
-	 * @return string|null
-	 * @todo   Add union return type with PHP 8.0+ requirement.
+	 * @since 1.0.0
 	 */
-	private function renderHelloDolly()
+	private function renderHelloDolly(): ?string
 	{
 		if (function_exists('hello_dolly_get_lyric')) {
 			return esc_html(sprintf(
@@ -145,11 +141,9 @@ class Theme implements BlockBindingSource
 	 * Returns a pagination label: "Page 00 / 00". This is intended to be
 	 * used within the Query Pagination block.
 	 *
-	 * @since  1.0.0
-	 * @return string|null
-	 * @todo   Add union return type with PHP 8.0+ requirement.
+	 * @since 1.0.0
 	 */
-	private function renderPaginationLabel(array $args, WP_Block $block)
+	private function renderPaginationLabel(array $args, WP_Block $block): ?string
 	{
 		// Bail early if there's no query.
 		if (! isset($block->context['query'])) {

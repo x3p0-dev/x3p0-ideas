@@ -23,36 +23,15 @@ class Component implements Bootable
 	use HookAnnotation;
 
 	/**
-	 * Stores the instance of the core block bindings
-	 *
-	 * @since 1.0.0
-	 * @todo  Promote via the constructor with PHP 8.0+ requirement.
-	 */
-	protected WP_Block_Bindings_Registry $bindings;
-
-	/**
-	 * An array of `BlockBindings` classes to register the bindings sources.
-	 *
-	 * @since 1.0.0
-	 * @var   BlockBindingSource[]
-	 * @todo  Promote via the constructor with PHP 8.0+ requirement.
-	 */
-	protected array $sources = [];
-
-	/**
 	 * Sets up the initial object state.
 	 *
 	 * @since 1.0.0
 	 * @param BlockBindingSource[]  $sources
-	 * @todo  Promote params to properties with PHP 8.0+ requirement.
 	 */
 	public function __construct(
-		WP_Block_Bindings_Registry $bindings,
-		array $sources
-	) {
-		$this->bindings = $bindings;
-		$this->sources  = $sources;
-	}
+		protected WP_Block_Bindings_Registry $bindings,
+		protected array $sources
+	) {}
 
 	/**
 	 * Boots the component, running its actions/filters.

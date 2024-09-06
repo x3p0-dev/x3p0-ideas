@@ -29,12 +29,9 @@ class Engine
 	/**
 	 * Returns the first found view or `false`.
 	 *
-	 * @since  1.0.0
-	 * @param  array|string  $views
-	 * @return View|false
-	 * @todo   Type hint params and return with PHP 8.0+ requirement.
+	 * @since 1.0.0
 	 */
-	public function any($views, array $data = [])
+	public function any(array|string $views, array $data = []): View|false
 	{
 		foreach ((array) $views as $view) {
 			if ($this->exists($view)) {
@@ -48,11 +45,9 @@ class Engine
 	/**
 	 * Renders a view only if it exists.
 	 *
-	 * @since  1.0.0
-	 * @param  array|string  $views
-	 * @todo   Type hint params with PHP 8.0+ requirement.
+	 * @since 1.0.0
 	 */
-	public function renderIf($views, array $data = []): string
+	public function renderIf(array|string $views, array $data = []): string
 	{
 		$view = $this->any((array) $views, $data);
 
@@ -62,26 +57,26 @@ class Engine
 	/**
 	 * Renders a view when `$when` is `true`.
 	 *
-	 * @since  1.0.0
-	 * @param  mixed         $when
-	 * @param  array|string  $views
-	 * @todo   Type hint params with PHP 8.0+ requirement.
+	 * @since 1.0.0
 	 */
-	public function renderWhen($when, $views, array $data = []): string
-	{
+	public function renderWhen(
+		mixed $when,
+		array|string $views,
+		array $data = []
+	): string {
 		return $when ? $this->renderIf($views, $data) : '';
 	}
 
 	/**
 	 * Renders a view unless `$unless` is `true`.
 	 *
-	 * @since  1.0.0
-	 * @param  mixed         $unless
-	 * @param  array|string  $views
-	 * @todo   Type hint params with PHP 8.0+ requirement.
+	 * @since 1.0.0
 	 */
-	public function renderUnless($unless, $views, array $data = []): string
-	{
+	public function renderUnless(
+		mixed $unless,
+		array|string $views,
+		array $data = []
+	): string {
 		return ! $unless ? $this->renderIf($views, $data) : '';
 	}
 

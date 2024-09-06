@@ -28,11 +28,9 @@ function boot(): void
  * can access any class/component by passing in its reference via the `$component`
  * parameter (useful for accessing hooks within classes).
  *
- * @since  1.0.0
- * @return mixed
- * @todo   Add `mixed` return type declaration with PHP 8-only support.
+ * @since 1.0.0
  */
-function theme(string $component = '')
+function theme(string $component = ''): mixed
 {
 	static $theme;
 

@@ -46,11 +46,9 @@ class Site implements BlockBindingSource
 	/**
 	 * Returns site data based on the bound attribute.
 	 *
-	 * @since  1.0.0
-	 * @return string|null
-	 * @todo   Add union return type with PHP 8.0+ requirement.
+	 * @since 1.0.0
 	 */
-	public function callback(array $args, WP_Block $block, string $name)
+	public function callback(array $args, WP_Block $block, string $name): ?string
 	{
 		if (isset($args['key']) && isset(self::KEY_METHODS[ $args['key'] ])) {
 			$method = self::KEY_METHODS[ $args['key'] ];

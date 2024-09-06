@@ -38,44 +38,15 @@ class Patterns implements Bootable
 	];
 
 	/**
-	 * Stores the instance of the patterns registry.
-	 *
-	 * @since 1.0.0
-	 * @todo  Promote via the constructor with PHP 8.0+ requirement.
-	 */
-	protected WP_Block_Patterns_Registry $patterns;
-
-	/**
-	 * Stores the instance of the pattern categories registry.
-	 *
-	 * @since 1.0.0
-	 * @todo  Promote via the constructor with PHP 8.0+ requirement.
-	 */
-	protected WP_Block_Pattern_Categories_Registry $categories;
-
-	/**
-	 * Stores the instance of the block type registry.
-	 *
-	 * @since 1.0.0
-	 * @todo  Promote via the constructor with PHP 8.0+ requirement.
-	 */
-	protected WP_Block_Type_Registry $block_types;
-
-	/**
 	 * Sets up the object state.
 	 *
 	 * @since 1.0.0
-	 * @todo  Promote params to properties with PHP 8.0+ requirement.
 	 */
 	public function __construct(
-		WP_Block_Patterns_Registry $patterns,
-		WP_Block_Pattern_Categories_Registry $categories,
-		WP_Block_Type_Registry $block_types
-	) {
-		$this->patterns    = $patterns;
-		$this->categories  = $categories;
-		$this->block_types = $block_types;
-	}
+		protected WP_Block_Patterns_Registry $patterns,
+		protected WP_Block_Pattern_Categories_Registry $categories,
+		protected WP_Block_Type_Registry $block_types
+	) {}
 
 	/**
 	 * Boots the component, running its actions/filters.

@@ -52,22 +52,6 @@ class CodeHighlight
 	];
 
 	/**
-	 * Stores the block content.
-	 *
-	 * @since 1.0.0
-	 * @todo  Promote via the constructor with PHP 8.0+ requirement.
-	 */
-	protected string $content = '';
-
-	/**
-	 * Stores the parsed block array.
-	 *
-	 * @since 1.0.0
-	 * @todo  Promote via the constructor with PHP 8.0+ requirement.
-	 */
-	protected array $block = [];
-
-	/**
 	 * The code's language, if provided.
 	 *
 	 * @since 1.0.0
@@ -97,11 +81,10 @@ class CodeHighlight
 	 *
 	 * @since 1.0.0
 	 */
-	public function __construct(string $content, array $block)
-	{
-		$this->content = $content;
-		$this->block   = $block;
-
+	public function __construct(
+		protected string $content,
+		protected array $block
+	) {
 		$processor = new WP_HTML_Tag_Processor($this->content);
 
 		// Bail early if we don't have a `<pre>` tag.

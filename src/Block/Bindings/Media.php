@@ -65,11 +65,9 @@ class Media implements BlockBindingSource
 	/**
 	 * Returns media data based on the bound attribute.
 	 *
-	 * @since  1.0.0
-	 * @return string|null
-	 * @todo   Add union return type with PHP 8.0+ requirement.
+	 * @since 1.0.0
 	 */
-	public function callback(array $args, WP_Block $block, string $name)
+	public function callback(array $args, WP_Block $block, string $name): ?string
 	{
 		$this->post_id = $block->context['postId'] ?? get_the_ID();
 
@@ -88,11 +86,9 @@ class Media implements BlockBindingSource
 	/**
 	 * Returns an attachment source URL.
 	 *
-	 * @since  1.0.0
-	 * @return string|null
-	 * @todo   Add union return type with PHP 8.0+ requirement.
+	 * @since 1.0.0
 	 */
-	private function renderUrl(array $args)
+	private function renderUrl(array $args): ?string
 	{
 		if (isset($args['type']) && 'image' === $args['type']) {
 			$image = wp_get_attachment_image_src(
@@ -111,11 +107,9 @@ class Media implements BlockBindingSource
 	/**
 	 * Returns an image attachment alt text.
 	 *
-	 * @since  1.0.0
-	 * @return string|null
-	 * @todo   Add union return type with PHP 8.0+ requirement.
+	 * @since 1.0.0
 	 */
-	private function renderAlt()
+	private function renderAlt(): ?string
 	{
 		$alt = get_post_meta($this->post_id, '_wp_attachment_image_alt', true);
 
@@ -125,11 +119,9 @@ class Media implements BlockBindingSource
 	/**
 	 * Returns an image attachment alt text.
 	 *
-	 * @since  1.0.0
-	 * @return string|null
-	 * @todo   Add union return type with PHP 8.0+ requirement.
+	 * @since 1.0.0
 	 */
-	private function renderCaption()
+	private function renderCaption(): ?string
 	{
 		$caption = wp_get_attachment_caption($this->post_id);
 
@@ -139,11 +131,9 @@ class Media implements BlockBindingSource
 	/**
 	 * Returns an attachment's media metadata based on key.
 	 *
-	 * @since  1.0.0
-	 * @return string|null
-	 * @todo   Add union return type with PHP 8.0+ requirement.
+	 * @since 1.0.0
 	 */
-	private function renderMeta(array $args)
+	private function renderMeta(array $args): ?string
 	{
 		$this->meta[ $this->post_id ] ??= new MediaMeta(get_post($this->post_id));
 

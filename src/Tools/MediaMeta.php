@@ -40,14 +40,6 @@ class MediaMeta
 	];
 
 	/**
-	 * The attachment post object.
-	 *
-	 * @since 1.0.0
-	 * @todo  Promote via the constructor with PHP 8.0+ requirement.
-	 */
-	protected ?WP_Post $post;
-
-	/**
 	 * Stores the raw attachment metadata.
 	 *
 	 * @since 1.0.0
@@ -66,12 +58,9 @@ class MediaMeta
 	 * Sets up the new media meta object.
 	 *
 	 * @since 1.0.0
-	 * @todo  Promote params to properties with PHP 8.0+ requirement.
 	 */
-	public function __construct(?WP_Post $post)
+	public function __construct(protected ?WP_Post $post)
 	{
-		$this->post = $post;
-
 		// If we have a valid attachment post object, get the metadata.
 		if (
 			$this->post instanceof WP_Post
