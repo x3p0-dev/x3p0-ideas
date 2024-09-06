@@ -16,11 +16,11 @@ namespace X3P0\Ideas;
 
 use WP;
 use X3P0\Ideas\Contracts\Bootable;
-use X3P0\Ideas\Tools\HookAnnotation;
+use X3P0\Ideas\Tools\HookAttributes\{Action, Filter, Hookable};
 
 class Frontend implements Bootable
 {
-	use HookAnnotation;
+	use Hookable;
 
 	/**
 	 * Inline CSS limit.
@@ -47,9 +47,9 @@ class Frontend implements Bootable
 	/**
 	 * Enqueue scripts/styles for the front end.
 	 *
-	 * @hook  wp_enqueue_scripts
 	 * @since 1.0.0
 	 */
+	#[Action('wp_enqueue_scripts')]
 	public function enqueueAssets(): void
 	{
 		$asset = include get_parent_theme_file_path('public/css/screen.asset.php');
@@ -69,9 +69,9 @@ class Frontend implements Bootable
 	 * these types of paginated views, and the `paged` body class is missing.
 	 * This action checks for that case and sets sets the `paged` query var.
 	 *
-	 * @hook  parse_request
 	 * @since 1.0.0
 	 */
+	#[Action('parse_request')]
 	public function parseRequest(WP $wp): void
 	{
 		$page = $this->getQueryBlockPage();
@@ -114,9 +114,9 @@ class Frontend implements Bootable
 	/**
 	 * Custom inline CSS size limit.
 	 *
-	 * @hook styles_inline_size_limit
 	 * @since 1.0.0
 	 */
+	#[Filter('styles_inline_size_limit')]
 	public function filterInlineStylesLimit(int $total_inline_limit): int
 	{
 		return self::INLINE_CSS_LIMIT > $total_inline_limit
@@ -127,9 +127,9 @@ class Frontend implements Bootable
 	/**
 	 * Adds the style variation to the body class.
 	 *
-	 * @hook  body_class
 	 * @since 1.0.0
 	 */
+	#[Filter('body_class')]
 	public function filterBodyClass(array $classes): array
 	{
 		$variation = wp_get_global_settings([ 'custom', 'variation' ]);
@@ -146,9 +146,9 @@ class Frontend implements Bootable
 	 * non-breaking space. This ensures that the indicator doesn't end up on
 	 * a line by itself in the comment form. 😢
 	 *
-	 * @hook  wp_required_field_message
 	 * @since 1.0.0
 	 */
+	#[Filter('wp_required_field_message')]
 	public function filterRequiredFieldMessage(string $message): string
 	{
 		$indicator = wp_required_field_indicator();

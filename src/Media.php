@@ -14,11 +14,11 @@ declare(strict_types=1);
 namespace X3P0\Ideas;
 
 use X3P0\Ideas\Contracts\Bootable;
-use X3P0\Ideas\Tools\HookAnnotation;
+use X3P0\Ideas\Tools\HookAttributes\{Action, Filter, Hookable};
 
 class Media implements Bootable
 {
-	use HookAnnotation;
+	use Hookable;
 
 	/**
 	 * Width size to scale large images down to.
@@ -42,9 +42,9 @@ class Media implements Bootable
 	/**
 	 * Registers custom image sizes.
 	 *
-	 * @hook  init
 	 * @since 1.0.0
 	 */
+	#[Action('init')]
 	public function registerImageSizes(): void
 	{
 		add_image_size('x3p0-square',   1024, 1024, true);
@@ -56,10 +56,10 @@ class Media implements Bootable
 	 * Filters the image size dropdown in the editor so our custom sizes
 	 * appear for selection.
 	 *
-	 * @hook  image_size_names_choose
 	 * @since 1.0.0
 	 * @todo  Use array unpacking (string keys) with PHP 8.1+ requirement.
 	 */
+	#[Filter('image_size_names_choose')]
 	public function registerImageSizeNames(array $sizes): array
 	{
 		return array_merge($sizes, [
@@ -72,9 +72,9 @@ class Media implements Bootable
 	/**
 	 * Limit the big image threshold to our largest image.
 	 *
-	 * @hook  big_image_size_threshold 5
 	 * @since 1.0.0
 	 */
+	#[Filter('big_image_size_threshold', 5)]
 	public function filterBigImageThreshold(int $threshold): int
 	{
 		return self::THRESHOLD_WIDTH > $threshold
@@ -85,9 +85,9 @@ class Media implements Bootable
 	/**
 	 * Sets the default `post-thumbnail` size to a theme-specific size.
 	 *
-	 * @hook  post_thumbnail_size 5
 	 * @since 1.0.0
 	 */
+	#[Filter('post_thumbnail_size', 5)]
 	public function filterPostThumbnailSize(string $size): string
 	{
 		return 'post-thumbnail' === $size ? 'x3p0-wide' : $size;
@@ -98,11 +98,11 @@ class Media implements Bootable
 	 * emoji in WordPress. So all this filter does is replace `:mrgreen`
 	 * with the original SVG version instead of the default PNG.
 	 *
-	 * @hook  smilies
 	 * @since 1.0.0
 	 * @link  https://core.trac.wordpress.org/attachment/ticket/31709/mrgreen.svg
 	 * @todo  Use array unpacking (string keys) with PHP 8.1+ requirement.
 	 */
+	#[Filter('smilies')]
 	public function registerEmoticons(array $smilies): array
 	{
 		return array_merge($smilies, [

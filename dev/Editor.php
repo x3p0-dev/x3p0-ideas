@@ -14,11 +14,11 @@ declare(strict_types=1);
 namespace X3P0\Ideas\Dev;
 
 use X3P0\Ideas\Contracts\Bootable;
-use X3P0\Ideas\Tools\HookAnnotation;
+use X3P0\Ideas\Tools\HookAttributes\{Filter, Hookable};
 
 class Editor implements Bootable
 {
-	use HookAnnotation;
+	use Hookable;
 
 	/**
 	 * Boots the component, running its actions/filters.
@@ -34,9 +34,9 @@ class Editor implements Bootable
 	/**
 	 * Enables features that are disabled for production installs.
 	 *
-	 * @hook  block_editor_settings_all  last
 	 * @since 1.0.0
 	 */
+	#[Filter('block_editor_settings_all', 'last')]
 	public function registerSettings(array $settings): array
 	{
 		$settings['fontLibraryEnabled'] = true;

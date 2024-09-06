@@ -15,11 +15,11 @@ namespace X3P0\Ideas\Block;
 
 use WP_Block_Type;
 use X3P0\Ideas\Contracts\Bootable;
-use X3P0\Ideas\Tools\HookAnnotation;
+use X3P0\Ideas\Tools\HookAttributes\{Filter, Hookable};
 
 class Variations implements Bootable
 {
-	use HookAnnotation;
+	use Hookable;
 
 	/**
 	 * Boots the component, running its actions/filters.
@@ -35,9 +35,9 @@ class Variations implements Bootable
 	/**
 	 * Register custom block variations.
 	 *
-	 * @hook  get_block_type_variations
 	 * @since 1.0.0
 	 */
+	#[Filter('get_block_type_variations')]
 	public function register(array $variations, WP_Block_Type $block): array
 	{
 		if ('core/spacer' === $block->name) {

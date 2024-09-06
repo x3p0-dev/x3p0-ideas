@@ -15,11 +15,11 @@ declare(strict_types=1);
 namespace X3P0\Ideas;
 
 use X3P0\Ideas\Contracts\Bootable;
-use X3P0\Ideas\Tools\HookAnnotation;
+use X3P0\Ideas\Tools\HookAttributes\{Action, Filter, Hookable};
 
 class Templates implements Bootable
 {
-	use HookAnnotation;
+	use Hookable;
 
 	/**
 	 * Boots the component, running its actions/filters.
@@ -35,10 +35,10 @@ class Templates implements Bootable
 	/**
 	 * Customizes the titles of the default template types.
 	 *
-	 * @hook  default_template_types
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/default_template_types/
 	 */
+	#[Filter('default_template_types')]
 	public function filterTitles(array $types): array
 	{
 		// Defines custom template titles for the core templates.
@@ -72,10 +72,10 @@ class Templates implements Bootable
 	/**
 	 * Adds templates if WordPress hasn't defined them by default.
 	 *
-	 * @hook  default_template_types
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/default_template_types/
 	 */
+	#[Filter('default_template_types')]
 	public function registerTypes(array $types): array
 	{
 		$types['audio'] ??= [
@@ -137,9 +137,9 @@ class Templates implements Bootable
 	/**
 	 * Adds post format support for single post templates.
 	 *
-	 * @hook  single_template_hierarchy  last
 	 * @since 1.0.0
 	 */
+	#[Filter('single_template_hierarchy', 'last')]
 	public function singleTemplateHierarchy(array $templates): array
 	{
 		$post = get_queried_object();
@@ -177,9 +177,9 @@ class Templates implements Bootable
 	/**
 	 * Cleans up post format term archive template names.
 	 *
-	 * @hook  taxonomy_template_hierarchy  last
 	 * @since 1.0.0
 	 */
+	#[Filter('taxonomy_template_hierarchy', 'last')]
 	public function taxonomyTemplateHierarchy(array $templates): array
 	{
 		$term = get_queried_object();

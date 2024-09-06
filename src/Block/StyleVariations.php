@@ -15,11 +15,11 @@ namespace X3P0\Ideas\Block;
 
 use WP_Block_Styles_Registry;
 use X3P0\Ideas\Contracts\Bootable;
-use X3P0\Ideas\Tools\HookAnnotation;
+use X3P0\Ideas\Tools\HookAttributes\{Action, Hookable};
 
 class StyleVariations implements Bootable
 {
-	use HookAnnotation;
+	use Hookable;
 
 	/**
 	 * Sets up the object state.
@@ -42,9 +42,9 @@ class StyleVariations implements Bootable
 	/**
 	 * Register custom block styles.
 	 *
-	 * @hook  init
 	 * @since 1.0.0
 	 */
+	#[Action('init')]
 	public function register(): void
 	{
 		foreach ($this->getCustomStyles() as $block => $styles) {

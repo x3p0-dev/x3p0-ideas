@@ -16,11 +16,11 @@ namespace X3P0\Ideas\Block\Bindings;
 
 use WP_Block_Bindings_Registry;
 use X3P0\Ideas\Contracts\{BlockBindingSource, Bootable};
-use X3P0\Ideas\Tools\HookAnnotation;
+use X3P0\Ideas\Tools\HookAttributes\{Action, Hookable};
 
 class Component implements Bootable
 {
-	use HookAnnotation;
+	use Hookable;
 
 	/**
 	 * Sets up the initial object state.
@@ -47,9 +47,9 @@ class Component implements Bootable
 	/**
 	 * Register custom block bindings sources.
 	 *
-	 * @hook  init
 	 * @since 1.0.0
 	 */
+	#[Action('init')]
 	public function register(): void
 	{
 		foreach ($this->sources as $source) {

@@ -14,11 +14,11 @@ declare(strict_types=1);
 namespace X3P0\Ideas;
 
 use X3P0\Ideas\Contracts\Bootable;
-use X3P0\Ideas\Tools\HookAnnotation;
+use X3P0\Ideas\Tools\HookAttributes\{Action, Filter, Hookable};
 
 class Embeds implements Bootable
 {
-	use HookAnnotation;
+	use Hookable;
 
 	/**
 	 * Image size to use for featured images.
@@ -58,10 +58,10 @@ class Embeds implements Bootable
 	/**
 	 * Loads assets needed for the embed.
 	 *
-	 * @hook  enqueue_embed_scripts
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/enqueue_embed_scripts/
 	 */
+	#[Action('enqueue_embed_scripts')]
 	public function enqueueAssets(): void
 	{
 		$embed_styles = file_get_contents(get_parent_theme_file_path('public/css/embed.css'));
@@ -91,10 +91,10 @@ class Embeds implements Bootable
 	/**
 	 * Replaces the default size with our custom image size.
 	 *
-	 * @hook  embed_thumbnail_image_size
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/embed_thumbnail_image_size/
 	 */
+	#[Filter('embed_thumbnail_image_size')]
 	public function filterImageSize(): string
 	{
 		return self::IMAGE_SIZE;
@@ -104,10 +104,10 @@ class Embeds implements Bootable
 	 * Ensures that the featured image shape is set to match our size. This
 	 * also affects how the embed is laid out.
 	 *
-	 * @hook  embed_thumbnail_image_shape
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/embed_thumbnail_image_shape/
 	 */
+	#[Filter('embed_thumbnail_image_shape')]
 	public function filterImageShape(): string
 	{
 		return self::IMAGE_SHAPE;
@@ -116,10 +116,10 @@ class Embeds implements Bootable
 	/**
 	 * Adds a custom excerpt length.
 	 *
-	 * @hook excerpt_length
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/excerpt_length/
 	 */
+	#[Filter('excerpt_length')]
 	public function filterExcerptLength(int $number): int
 	{
 		return is_embed() ? self::EXCERPT_LENGTH : $number;
@@ -128,10 +128,10 @@ class Embeds implements Bootable
 	/**
 	 * Adds a custom excerpt more string.
 	 *
-	 * @hook  excerpt_more last
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/excerpt_more/
 	 */
+	#[Filter('excerpt_more', 'last')]
 	public function filterExcerptMore(string $more_string): string
 	{
 		return is_embed() ? '&thinsp;&hellip;' : $more_string;
@@ -142,10 +142,10 @@ class Embeds implements Bootable
 	 * icon. We do this to replace the WordPress logo with an SVG version
 	 * that is more customizable via CSS.
 	 *
-	 * @hook  embed_site_title_html
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/embed_site_title_html/
 	 */
+	#[Filter('embed_site_title_html')]
 	public function filterSiteTitleHtml(string $site_title): string
 	{
 		// Bail if the site has an icon.

@@ -36,11 +36,11 @@ namespace X3P0\Ideas\Dev;
 
 use WP_Theme_JSON_Data;
 use X3P0\Ideas\Contracts\Bootable;
-use X3P0\Ideas\Tools\HookAnnotation;
+use X3P0\Ideas\Tools\HookAttributes\{Filter, Hookable};
 
 class GlobalStyleVariation implements Bootable
 {
-	use HookAnnotation;
+	use Hookable;
 
 	/**
 	 * Mappings for short variation names.
@@ -112,11 +112,11 @@ class GlobalStyleVariation implements Bootable
 	 * database already. We want the front end to use the variation passed
 	 * into the constructor.
 	 *
-	 * @hook  wp_theme_json_data_user  first
 	 * @param WP_Theme_JSON_Data  The Gutenberg plugin breaks this.
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/wp_theme_json_data_user/
 	 */
+	#[Filter('wp_theme_json_data_user', 'first')]
 	public function setThemeStyle(object $theme_json): object
 	{
 		if ('' === $this->theme) {
@@ -139,11 +139,11 @@ class GlobalStyleVariation implements Bootable
 	/**
 	 * Filters color variation.
 	 *
-	 * @hook  wp_theme_json_data_user  first
 	 * @param WP_Theme_JSON_Data  The Gutenberg plugin breaks this.
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/wp_theme_json_data_user/
 	 */
+	#[Filter('wp_theme_json_data_user', 'first')]
 	public function setColorStyle(object $theme_json): object
 	{
 		if ('' === $this->color) {
@@ -166,11 +166,11 @@ class GlobalStyleVariation implements Bootable
 	/**
 	 * Filters typography variation.
 	 *
-	 * @hook  wp_theme_json_data_user  first
 	 * @param WP_Theme_JSON_Data  The Gutenberg plugin breaks this.
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/wp_theme_json_data_user/
 	 */
+	#[Filter('wp_theme_json_data_user', 'first')]
 	public function setTypographyStyle(object $theme_json): object
 	{
 		if ('' === $this->typography) {

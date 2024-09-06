@@ -16,11 +16,12 @@ declare(strict_types=1);
 namespace X3P0\Ideas;
 
 use X3P0\Ideas\Contracts\Bootable;
-use X3P0\Ideas\Tools\{FontFaceResolver, HookAnnotation};
+use X3P0\Ideas\Tools\FontFaceResolver;
+use X3P0\Ideas\Tools\HookAttributes\{Action, Filter, Hookable};
 
 class Editor implements Bootable
 {
-	use HookAnnotation;
+	use Hookable;
 
 	/**
 	 * Boots the component, running its actions/filters.
@@ -36,9 +37,9 @@ class Editor implements Bootable
 	/**
 	 * Runs actions only when viewing the Site Editor screen.
 	 *
-	 * @hook  load-site-editor.php
 	 * @since 1.0.0
 	 */
+	#[Action('load-site-editor.php')]
 	public function loadSiteEditor(): void
 	{
 		add_action('enqueue_block_assets', [$this, 'enqueueFonts']);
@@ -47,10 +48,10 @@ class Editor implements Bootable
 	/**
 	 * Add editor stylesheets.
 	 *
-	 * @hook  after_setup_theme
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/functions/add_editor_style/
 	 */
+	#[Action('after_setup_theme')]
 	public function addEditorStyles(): void
 	{
 		add_editor_style([
@@ -61,9 +62,9 @@ class Editor implements Bootable
 	/**
 	 * Loads editor assets.
 	 *
-	 * @hook  enqueue_block_editor_assets
 	 * @since 1.0.0
 	 */
+	#[Action('enqueue_block_editor_assets')]
 	public function enqueueAssets(): void
 	{
 		$script_asset = include get_parent_theme_file_path('public/js/editor.asset.php');
@@ -110,10 +111,11 @@ class Editor implements Bootable
 	/**
 	 * Customizes the block editor settings.
 	 *
-	 * @hook  block_editor_settings_all last
 	 * @since 1.0.0
 	 */
-	public function registerSettings(array $settings): array {
+	#[Filter('block_editor_settings_all', 'last')]
+	public function registerSettings(array $settings): array
+	{
 		$settings['imageDefaultSize']   = 'x3p0-wide';
 		$settings['fontLibraryEnabled'] = false;
 

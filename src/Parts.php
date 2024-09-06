@@ -15,11 +15,11 @@ declare(strict_types=1);
 namespace X3P0\Ideas;
 
 use X3P0\Ideas\Contracts\Bootable;
-use X3P0\Ideas\Tools\HookAnnotation;
+use X3P0\Ideas\Tools\HookAttributes\{Filter, Hookable};
 
 class Parts implements Bootable
 {
-	use HookAnnotation;
+	use Hookable;
 
 	/**
 	 * Boots the component, running its actions/filters.
@@ -41,10 +41,10 @@ class Parts implements Bootable
 	 * an error.
 	 * @link https://github.com/WordPress/gutenberg/issues/36814
 	 *
-	 * @hook  default_wp_template_part_areas
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/default_wp_template_part_areas/
 	 */
+	#[Filter('default_wp_template_part_areas')]
 	public function registerAreas(array $areas): array
 	{
 		$areas[] = [

@@ -17,12 +17,12 @@ use WP_Block;
 use WP_HTML_Tag_Processor;
 use X3P0\Ideas\Block\Helpers\CodeHighlight;
 use X3P0\Ideas\Contracts\Bootable;
-use X3P0\Ideas\Tools\HookAnnotation;
+use X3P0\Ideas\Tools\HookAttributes\{Filter, Hookable};
 use X3P0\Ideas\Views\Engine;
 
 class Render implements Bootable
 {
-	use HookAnnotation;
+	use Hookable;
 
 	/**
 	 * Sets up the object state.
@@ -49,10 +49,10 @@ class Render implements Bootable
 	 * Before rendering the Post Excerpt block, add a custom filter to
 	 * `wp_trim_words` so that we can handle the output of custom excerpts.
 	 *
-	 * @hook  pre_render_block
 	 * @since 1.0.0
 	 * @link  https://github.com/WordPress/gutenberg/issues/49449
 	 */
+	#[Filter('pre_render_block')]
 	public function preRenderCorePostExcerpt(
 		?string $pre_render,
 		array $block,
@@ -77,10 +77,10 @@ class Render implements Bootable
 	 * so the only method is to filter the block data itself before render.
 	 * @link  https://github.com/WordPress/gutenberg/issues/57623
 	 *
-	 * @hook  render_block_data
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/render_block_data/
 	 */
+	#[Filter('render_block_data')]
 	public function renderCoreQueryData(array $parsed_block): array
 	{
 		if ('core/query' === $parsed_block['blockName']) {
@@ -94,9 +94,9 @@ class Render implements Bootable
 	 * Filters block content, determining if it should be shown according to
 	 * any rules passed in via attributes.
 	 *
-	 * @hook  render_block  last
 	 * @since 1.0.0
 	 */
+	#[Filter('render_block', 'last')]
 	public function renderByRule(
 		string $content,
 		array $block,
@@ -108,9 +108,9 @@ class Render implements Bootable
 	/**
 	 * Adds a caption class and replaces nav arrows.
 	 *
-	 * @hook  render_block_core/calendar
 	 * @since 1.0.0
 	 */
+	#[Filter('render_block_core/calendar')]
 	public function renderCoreCalendar(string $content): string
 	{
 		$processor = new WP_HTML_Tag_Processor($content);
@@ -134,9 +134,9 @@ class Render implements Bootable
 	/**
 	 * Adds Code block highlight functionality and fixes `<br>` tags.
 	 *
-	 * @hook  render_block_core/code
 	 * @since 1.0.0
 	 */
+	#[Filter('render_block_core/code')]
 	public function renderCoreCode(string $content, array $block): string
 	{
 		return (new CodeHighlight($content, $block))->render();
@@ -146,10 +146,10 @@ class Render implements Bootable
 	 * Adds poster support for the Cover block by using the attachment's
 	 * featured image if it exists.
 	 *
-	 * @hook  render_block_core/cover
 	 * @since 1.0.0
 	 * @link  https://github.com/WordPress/gutenberg/issues/18962
 	 */
+	#[Filter('render_block_core/cover')]
 	public function renderCoreCover(string $content, array $block): string
 	{
 		if (
@@ -177,10 +177,10 @@ class Render implements Bootable
 	 * Adds the `.wp-element-button` class to the login form's submit button.
 	 * This is currently missing from core WP.
 	 *
-	 * @hook  render_block_core/loginout
 	 * @since 1.0.0
 	 * @link  https://github.com/WordPress/gutenberg/issues/50466
 	 */
+	#[Filter('render_block_core/loginout')]
 	public function renderCoreLoginout(string $content, array $block): string
 	{
 		if (
@@ -211,11 +211,11 @@ class Render implements Bootable
 	 * Removes the filter on `wp_trim_words` if it was added on the earlier
 	 * `pre_render_block` hook.
 	 *
-	 * @hook  render_block_core/post-excerpt first
 	 * @since 1.0.0
 	 * @link  https://github.com/WordPress/gutenberg/issues/49449
 	 * @see   Render::preRenderCorePostExcerpt()
 	 */
+	#[Filter('render_block_core/post-excerpt', 'first')]
 	public function renderCorePostExcerpt(string $content): string
 	{
 		if ($priority = has_filter('wp_trim_words', [$this, 'formatManualExcerpt'])) {
@@ -230,9 +230,9 @@ class Render implements Bootable
 	 * order for taxonomy-based block styles to work, the theme is adding
 	 * a `.taxonomy-{taxonomy}` class to the wrapper.
 	 *
-	 * @hook  render_block_core/tag-cloud
 	 * @since 1.0.0
 	 */
+	#[Filter('render_block_core/tag-cloud')]
 	public function renderCoreTagCloud(string $content, array $block): string
 	{
 		$processor = new WP_HTML_Tag_Processor($content);
@@ -251,9 +251,9 @@ class Render implements Bootable
 	 * Disables the Comments template part when there are no comments and
 	 * commenting is disabled.
 	 *
-	 * @hook  render_block_core/template-part
 	 * @since 1.0.0
 	 */
+	#[Filter('render_block_core/template-part')]
 	public function renderCoreTemplatePart(string $content, array $block): string
 	{
 		if (
@@ -272,9 +272,9 @@ class Render implements Bootable
 	 * Filters the post content block when viewing single attachment views
 	 * and returns block-based media content.
 	 *
-	 * @hook  render_block_core/post-content
 	 * @since 1.0.0
 	 */
+	#[Filter('render_block_core/post-content')]
 	public function renderCorePostContent(
 		string $content,
 		array $block,
@@ -327,10 +327,10 @@ class Render implements Bootable
 	 * Adds missing wrapping `<li>` to the Loginout block when used in a
 	 * navigation menu.
 	 *
-	 * @hook  block_core_navigation_listable_blocks
 	 * @since 1.0.0
 	 * @link  https://github.com/WordPress/gutenberg/pull/55551
 	 */
+	#[Filter('block_core_navigation_listable_blocks')]
 	public function setListItemWrapper(array $blocks): array
 	{
 		return [ 'core/loginout' ] + $blocks;
@@ -343,9 +343,9 @@ class Render implements Bootable
 	 * list items. This provides a bit more design flexibility with custom
 	 * block styles.
 	 *
-	 * @hook  widget_archives_args last
 	 * @since 1.0.0
 	 */
+	#[Filter('widget_archives_args', 'last')]
 	public function setWidgetArchivesArgs(array $args): array
 	{
 		$before = $args['before'] ?? '';

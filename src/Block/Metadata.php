@@ -14,11 +14,11 @@ declare(strict_types=1);
 namespace X3P0\Ideas\Block;
 
 use X3P0\Ideas\Contracts\Bootable;
-use X3P0\Ideas\Tools\HookAnnotation;
+use X3P0\Ideas\Tools\HookAttributes\{Filter, Hookable};
 
 class Metadata implements Bootable
 {
-	use HookAnnotation;
+	use Hookable;
 
 	/**
 	 * Boots the component, running its actions/filters.
@@ -35,9 +35,9 @@ class Metadata implements Bootable
 	 * Filters block metadata settings by returning the block-specific
 	 * settings if a method exists for it.
 	 *
-	 * @hook  block_type_metadata_settings  last
 	 * @since 1.0.0
 	 */
+	#[Filter('block_type_metadata_settings', 'last')]
 	public function filterSettings(array $settings): array
 	{
 		// Create a camel-cased version of the block name. We use this

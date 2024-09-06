@@ -19,11 +19,11 @@ use WP_Block_Patterns_Registry;
 use WP_Block_Pattern_Categories_Registry;
 use WP_Block_Type_Registry;
 use X3P0\Ideas\Contracts\Bootable;
-use X3P0\Ideas\Tools\HookAnnotation;
+use X3P0\Ideas\Tools\HookAttributes\{Action, Filter, Hookable};
 
 class Patterns implements Bootable
 {
-	use HookAnnotation;
+	use Hookable;
 
 	/**
 	 * Patterns that should be conditionally removed if the block is not
@@ -62,9 +62,9 @@ class Patterns implements Bootable
 	/**
 	 * Removes theme support for core patterns.
 	 *
-	 * @hook  after_setup_theme
 	 * @since 1.0.0
 	 */
+	#[Action('after_setup_theme')]
 	public function themeSupport(): void
 	{
 		remove_theme_support('core-block-patterns');
@@ -75,10 +75,10 @@ class Patterns implements Bootable
 	 * patterns by adding them as individual pattern files in the `/patterns`
 	 * folder.
 	 *
-	 * @hook  init  first
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/functions/register_block_pattern_category/
 	 */
+	#[Action('init', 'first')]
 	public function registerCategories(): void
 	{
 		$this->categories->register('x3p0-card', [
@@ -106,10 +106,10 @@ class Patterns implements Bootable
 	 * Unregister block patterns, specifically those that use block types
 	 * that are not in use on the site.
 	 *
-	 * @hook  init  last
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/functions/unregister_block_pattern/
 	 */
+	#[Action('init', 'last')]
 	public function unregisterPatterns(): void
 	{
 		foreach (self::CONDITIONAL_PATTERNS as $block => $patterns) {

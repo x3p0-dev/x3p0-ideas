@@ -15,11 +15,11 @@ namespace X3P0\Ideas\Block;
 
 use FilesystemIterator;
 use X3P0\Ideas\Contracts\Bootable;
-use X3P0\Ideas\Tools\HookAnnotation;
+use X3P0\Ideas\Tools\HookAttributes\{Action, Hookable};
 
 class Assets implements Bootable
 {
-	use HookAnnotation;
+	use Hookable;
 
 	/**
 	 * Stores the supported block namespaces that we use for block stylesheets.
@@ -49,10 +49,10 @@ class Assets implements Bootable
 	 * automatically enqueued. Each file should be named
 	 * `{$block_namespace}/{$block_slug}.css`.
 	 *
-	 * @hook  init  last
 	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/functions/wp_enqueue_block_style/
 	 */
+	#[Action('init', 'last')]
 	public function enqueueStyles(): void
 	{
 		// Loop through each of the block namespace paths, get their
