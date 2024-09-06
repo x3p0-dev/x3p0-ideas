@@ -762,7 +762,7 @@
 			},
 			"global": {
 				"border": {
-					"color": "var:preset|color|neutral-100",
+					"color": "var:preset|color|neutral-200",
 					"style": "solid",
 					"width": "1px",
 					"radius": "6px"
