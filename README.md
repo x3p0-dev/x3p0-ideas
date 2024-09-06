@@ -48,5 +48,5 @@ The following third-party resources were used in creating the theme:
 <p>
 <img alt="WordPress badge" height="24px" src="https://img.shields.io/badge/WordPress%206.6+-white?style=flat-square&logo=wordpress&logoColor=0073AA&labelColor=white&color=0073AA">
 <img alt="Gutenberg badge" height="24px" src="https://img.shields.io/badge/Gutenberg%2018.6+-white?style=flat-square&logo=gutenberg&logoColor=000000&color=000000&labelColor=white">
-<img alt="PHP badge" height="24px" src="https://img.shields.io/badge/PHP%207.4+-white?style=flat-square&logo=php&logoColor=777bb4&labelColor=white&color=777bb4">
+<img alt="PHP badge" height="24px" src="https://img.shields.io/badge/PHP%208.0+-white?style=flat-square&logo=php&logoColor=777bb4&labelColor=white&color=777bb4">
 </p>
