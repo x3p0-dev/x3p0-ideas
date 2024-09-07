@@ -13,11 +13,11 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas\Tools\Hooks;
 
+use ReflectionAttribute;
 use ReflectionClass;
 use ReflectionClassConstant;
 use ReflectionMethod;
 use ReflectionProperty;
-use ReflectionAttribute;
 use X3P0\Ideas\Contracts\Hook;
 
 class Hooks
