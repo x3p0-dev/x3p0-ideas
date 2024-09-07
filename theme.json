@@ -896,6 +896,11 @@
 					"ratio": "21/9"
 				},
 				{
+					"name": "Ultra Wide - 18:5",
+					"slug": "18-5",
+					"ratio": "18/5"
+				},
+				{
 					"name": "Portrait (Modern) - 3:4",
 					"slug": "3-4",
 					"ratio": "3/4"
