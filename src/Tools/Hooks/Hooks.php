@@ -20,7 +20,7 @@ use ReflectionProperty;
 use ReflectionAttribute;
 use X3P0\Ideas\Contracts\Hook;
 
-class HookResolver
+class Hooks
 {
 	/**
 	 * Stores and array of reflection classes.
@@ -51,7 +51,7 @@ class HookResolver
 	 *
 	 * @since 1.0.0
 	 */
-	public static function registerConstants(object $hookable): void
+	public static function addConstants(object $hookable): void
 	{
 		$ref = static::getReflectedInstance($hookable);
 
@@ -70,7 +70,7 @@ class HookResolver
 	 *
 	 * @since 1.0.0
 	 */
-	public static function registerMethods(object $hookable): void
+	public static function addMethods(object $hookable): void
 	{
 		$ref = static::getReflectedInstance($hookable);
 
@@ -98,7 +98,7 @@ class HookResolver
 	 * @todo  Remove `setAccessible()` call with PHP 8.1-only support.
 	 * @link  https://www.php.net/manual/en/reflectionmethod.setaccessible.php
 	 */
-	public static function registerProperties(object $hookable): void
+	public static function addProperties(object $hookable): void
 	{
 		$ref = static::getReflectedInstance($hookable);
 

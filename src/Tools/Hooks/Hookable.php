@@ -16,8 +16,8 @@ namespace X3P0\Ideas\Tools\Hooks;
 trait Hookable
 {
 	/**
-	 * Registers all class members with attributes that have the `Hook`
-	 * contract as actions or filters.
+	 * Adds all class members with attributes that have the `Hook` contract
+	 * as actions or filters.
 	 *
 	 * @since 1.0.0
 	 */
@@ -29,35 +29,35 @@ trait Hookable
 	}
 
 	/**
-	 * Registers constants with attributes that have the `Hook` contract as
+	 * Adds constants with attributes that have the `Hook` contract as
 	 * anonymous actions or filters.
 	 *
 	 * @since 1.0.0
 	 */
 	protected function hookConstants(): void
 	{
-		HookResolver::registerConstants($this);
+		Hooks::addConstants($this);
 	}
 
 	/**
-	 * Registers methods with attributes that have the `Hook` contract as
-	 * actions or filters.
+	 * Adds methods with attributes that have the `Hook` contract as actions
+	 * or filters.
 	 *
 	 * @since 1.0.0
 	 */
 	protected function hookMethods(): void
 	{
-		HookResolver::registerMethods($this);
+		Hooks::addMethods($this);
 	}
 
 	/**
-	 * Registers properties with attributes that have the `Hook` contract as
+	 * Adds properties with attributes that have the `Hook` contract as
 	 * anonymous actions or filters.
 	 *
 	 * @since 1.0.0
 	 */
 	protected function hookProperties(): void
 	{
-		HookResolver::registerProperties($this);
+		Hooks::addProperties($this);
 	}
 }
