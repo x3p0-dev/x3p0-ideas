@@ -16,7 +16,12 @@ namespace X3P0\Ideas\Tools\Hooks;
 use Attribute;
 use X3P0\Ideas\Contracts\Hook;
 
-#[Attribute(Attribute::TARGET_METHOD | Attribute::IS_REPEATABLE)]
+#[Attribute(
+	Attribute::IS_REPEATABLE
+	| Attribute::TARGET_CLASS_CONSTANT
+	| Attribute::TARGET_METHOD
+	| Attribute::TARGET_PROPERTY
+)]
 class Filter implements Hook
 {
 	/**
