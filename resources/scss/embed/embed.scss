@@ -9,6 +9,15 @@
 @use '../tools/icon';
 @use '../tools/inline-icon';
 
+body {
+	margin: 0 !important;
+	padding: 0 !important;
+	background: none !important;
+	border: none !important;
+	box-shadow: none !important;
+	outline: none !important;
+}
+
 .wp-embed {
 	color: var( --color );
 	background: var( --background );
