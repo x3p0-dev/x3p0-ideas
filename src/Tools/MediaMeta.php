@@ -125,14 +125,11 @@ class MediaMeta
 	 */
 	protected function exists(string $key, string $type = ''): bool
 	{
-		switch ($type) {
-			case 'image':
-				return isset($this->raw['image_meta'][ $key ]);
-			case 'audio':
-				return isset($this->raw['audio'][ $key ]);
-			default:
-				return isset($this->raw[ $key ]);
-		}
+		return match($type) {
+			'image' => isset($this->raw['image_meta'][ $key ]),
+			'audio' => isset($this->raw['audio'][ $key ]),
+			default => isset($this->raw[ $key ])
+		};
 	}
 
 	/**

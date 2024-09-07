@@ -28,17 +28,11 @@ class Filter implements Hook
 		protected string $hook,
 		protected int|string $priority = 10
 	) {
-		switch ($this->priority) {
-			case 'first':
-				$this->priority = PHP_INT_MIN;
-				break;
-			case 'last':
-				$this->priority = PHP_INT_MAX;
-				break;
-			default:
-				$this->priority = intval($this->priority);
-				break;
-		}
+		$this->priority = match($this->priority) {
+			'first' => PHP_INT_MIN,
+			'last'  => PHP_INT_MAX,
+			default => intval($this->priority)
+		};
 	}
 
 	/**

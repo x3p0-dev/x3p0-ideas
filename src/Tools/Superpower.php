@@ -75,20 +75,14 @@ class Superpower
 	 */
 	public function text(string $type = ''): string
 	{
-		switch ($type) {
-			case 'text':
-				$collection = $this->messages['text'];
-				break;
-			case 'emoji':
-				$collection = $this->messages['emoji'];
-				break;
-			default:
-				$collection = [
-					...$this->messages['text'],
-					...$this->messages['emoji']
-				];
-				break;
-		}
+		$collection = match($type) {
+			'text'  => $this->messages['text'],
+			'emoji' => $this->messages['emoji'],
+			default => [
+				...$this->messages['text'],
+				...$this->messages['emoji']
+			]
+		};
 
 		return $collection[ array_rand($collection, 1) ];
 	}
