@@ -14,7 +14,7 @@ declare(strict_types=1);
 namespace X3P0\Ideas\Dev;
 
 use X3P0\Ideas\Contracts\Bootable;
-use X3P0\Ideas\Tools\HookAttributes\{Filter, Hookable};
+use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
 
 class Editor implements Bootable
 {

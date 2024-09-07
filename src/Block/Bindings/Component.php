@@ -16,7 +16,7 @@ namespace X3P0\Ideas\Block\Bindings;
 
 use WP_Block_Bindings_Registry;
 use X3P0\Ideas\Contracts\{BlockBindingSource, Bootable};
-use X3P0\Ideas\Tools\HookAttributes\{Action, Hookable};
+use X3P0\Ideas\Tools\Hooks\{Action, Hookable};
 
 class Component implements Bootable
 {

@@ -15,7 +15,7 @@ namespace X3P0\Ideas\Block;
 
 use FilesystemIterator;
 use X3P0\Ideas\Contracts\Bootable;
-use X3P0\Ideas\Tools\HookAttributes\{Action, Hookable};
+use X3P0\Ideas\Tools\Hooks\{Action, Hookable};
 
 class Assets implements Bootable
 {

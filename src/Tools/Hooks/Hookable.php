@@ -11,16 +11,18 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Tools\HookAttributes;
+namespace X3P0\Ideas\Tools\Hooks;
 
 use ReflectionClass;
 use ReflectionMethod;
+use ReflectionAttribute;
+use X3P0\Ideas\Contracts\Hook;
 
 trait Hookable
 {
 	/**
-	 * Registers any methods with the `Action` and `Filter` attributes as
-	 * action and filter hooks.
+	 * Registers any methods with the attributes with the `Hook` contract as
+	 * actions or filters.
 	 *
 	 * @since 1.0.0
 	 */
@@ -32,21 +34,19 @@ trait Hookable
 			ReflectionMethod::IS_PUBLIC
 		);
 
-		// Loops through each method and gets any with the `Action` and
-		// `Filter` attributes. It then loops through each of those
-		// attributes and registers the action/filter.
+		// Filter out constructor methods.
+		$methods = array_filter($methods, fn($method) => ! $method->isConstructor());
+
+		// Loops through each method and gets attributes that match the
+		// `Hook` contract. It then loops through each of those
+		// attributes, registering them as actions or filters.
 		foreach ($methods as $method) {
+			$attributes = $method->getAttributes(
+				Hook::class,
+				ReflectionAttribute::IS_INSTANCEOF
+			);
 
-			// Register actions.
-			foreach ($method->getAttributes(Action::class) as $attribute) {
-				$attribute->newInstance()->register(
-					[$this, $method->name],
-					$method->getNumberOfParameters()
-				);
-			}
-
-			// Register filters.
-			foreach ($method->getAttributes(Filter::class) as $attribute) {
+			foreach ($attributes as $attribute) {
 				$attribute->newInstance()->register(
 					[$this, $method->name],
 					$method->getNumberOfParameters()

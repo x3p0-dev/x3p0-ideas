@@ -19,7 +19,7 @@ use WP_Block_Patterns_Registry;
 use WP_Block_Pattern_Categories_Registry;
 use WP_Block_Type_Registry;
 use X3P0\Ideas\Contracts\Bootable;
-use X3P0\Ideas\Tools\HookAttributes\{Action, Filter, Hookable};
+use X3P0\Ideas\Tools\Hooks\{Action, Hookable};
 
 class Patterns implements Bootable
 {

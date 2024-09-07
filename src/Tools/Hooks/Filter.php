@@ -11,12 +11,13 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Tools\HookAttributes;
+namespace X3P0\Ideas\Tools\Hooks;
 
 use Attribute;
+use X3P0\Ideas\Contracts\Hook;
 
 #[Attribute(Attribute::TARGET_METHOD | Attribute::IS_REPEATABLE)]
-class Filter
+class Filter implements Hook
 {
 	/**
 	 * Sets up the object state.
@@ -24,8 +25,8 @@ class Filter
 	 * @since 1.0.0
 	 */
 	public function __construct(
-		public string $hook,
-		public int|string $priority = 10
+		protected string $hook,
+		protected int|string $priority = 10
 	) {
 		switch ($this->priority) {
 			case 'first':
@@ -47,6 +48,6 @@ class Filter
 	 */
 	public function register(callable $method, int $arguments = 1): void
 	{
-		add_filter($this->hook, $method, $this->priority, $arguments);
+		add_filter($this->hook, $method, intval($this->priority), $arguments);
 	}
 }

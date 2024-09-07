@@ -15,7 +15,7 @@ namespace X3P0\Ideas\Block;
 
 use WP_Block_Styles_Registry;
 use X3P0\Ideas\Contracts\Bootable;
-use X3P0\Ideas\Tools\HookAttributes\{Action, Hookable};
+use X3P0\Ideas\Tools\Hooks\{Action, Hookable};
 
 class StyleVariations implements Bootable
 {

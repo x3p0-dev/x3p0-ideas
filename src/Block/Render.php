@@ -17,7 +17,7 @@ use WP_Block;
 use WP_HTML_Tag_Processor;
 use X3P0\Ideas\Block\Helpers\CodeHighlight;
 use X3P0\Ideas\Contracts\Bootable;
-use X3P0\Ideas\Tools\HookAttributes\{Filter, Hookable};
+use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
 use X3P0\Ideas\Views\Engine;
 
 class Render implements Bootable

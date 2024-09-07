@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Tools\HookAttributes;
+namespace X3P0\Ideas\Tools\Hooks;
 
 use Attribute;
 
@@ -25,6 +25,6 @@ class Action extends Filter
 	 */
 	public function register(callable $method, int $arguments = 1): void
 	{
-		add_action($this->hook, $method, $this->priority, $arguments);
+		add_action($this->hook, $method, intval($this->priority), $arguments);
 	}
 }

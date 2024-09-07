@@ -14,7 +14,7 @@ declare(strict_types=1);
 namespace X3P0\Ideas;
 
 use X3P0\Ideas\Contracts\Bootable;
-use X3P0\Ideas\Tools\HookAttributes\{Action, Filter, Hookable};
+use X3P0\Ideas\Tools\Hooks\{Action, Filter, Hookable};
 
 class Media implements Bootable
 {

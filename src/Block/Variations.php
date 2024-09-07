@@ -15,7 +15,7 @@ namespace X3P0\Ideas\Block;
 
 use WP_Block_Type;
 use X3P0\Ideas\Contracts\Bootable;
-use X3P0\Ideas\Tools\HookAttributes\{Filter, Hookable};
+use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
 
 class Variations implements Bootable
 {

@@ -16,7 +16,7 @@ namespace X3P0\Ideas;
 
 use WP;
 use X3P0\Ideas\Contracts\Bootable;
-use X3P0\Ideas\Tools\HookAttributes\{Action, Filter, Hookable};
+use X3P0\Ideas\Tools\Hooks\{Action, Filter, Hookable};
 
 class Frontend implements Bootable
 {
