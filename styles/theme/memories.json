@@ -316,11 +316,6 @@
 				"typography": {
 					"fontWeight": "700"
 				}
-			},
-			"h1": {
-				"typography": {
-					"fontWeight": "900"
-				}
 			}
 		},
 		"blocks": {
