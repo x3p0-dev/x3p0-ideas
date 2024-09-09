@@ -40,8 +40,11 @@ tests/ export-ignore
 # Don't export experimental features.
 /experiments export-ignore
 
-# Don't export experimental style variations.
+# Don't export experimental parts, patterns, styles, or templates.
+/parts/experiment-*.html export-ignore
+/patterns/experiment-*.php export-ignore
 /styles/*/experiment-*.json export-ignore
+/templates/experiment-*.json export-ignore
 
 # Note that we're retaining the `resources/js` and `resources/scss` folders,
 # despite them containing dev-only files. They are required for themes submitted
