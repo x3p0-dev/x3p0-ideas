@@ -18,7 +18,7 @@
 		"css": "--wp--custom--color--action: var(--wp--preset--color--primary-100);\n--wp--custom--color--muted: var(--wp--preset--color--primary-200);\n--wp--custom--global--fill--background: var(--wp--preset--color--primary-900);\n--wp--custom--global--fill--hover-background: var(--wp--preset--color--primary-950);",
 		"color": {
 			"background": "var:preset|color|primary-700",
-			"text": "var:preset|color|white"
+			"text": "var:preset|color|base"
 		},
 		"spacing": {
 			"padding": {

@@ -21,3 +21,7 @@
 // Format library styles.
 @use '../js/format-library/abbreviation/editor' as abbreviation;
 @use '../js/format-library/span/editor' as span;
+
+.components-circular-option-picker__option {
+	color-scheme: light dark;
+}
