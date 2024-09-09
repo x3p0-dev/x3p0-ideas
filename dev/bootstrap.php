@@ -15,7 +15,7 @@ namespace X3P0\Ideas\Dev;
 
 # Prevent direct execution.
 if (! defined('ABSPATH')) {
-	exit;
+	return;
 }
 
 # Bootstrap dev.
