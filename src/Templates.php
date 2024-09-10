@@ -115,18 +115,24 @@ class Templates implements Bootable
 
 		foreach (get_post_format_strings() as $format => $label) {
 			$types["single-post-format-{$format}"] ??= [
+				// Translators: %s is the post format name.
 				'title'       => sprintf(_x('Single Post: %s', 'Template name', 'x3p0-ideas'), $label),
+				// Translators: %s is the post format name.
 				'description' => sprintf(__('Displays single %s posts on your website unless a custom template has been applied to that post.', 'x3p0-ideas'), $label)
 			];
 
 			$types["taxonomy-post-format-{$format}"] ??= [
+				// Translators: %s is the post format name.
 				'title'       => sprintf(_x('Post Format Archive: %s', 'Template Name', 'x3p0-ideas'), $label),
+				// Translators: %s is the post format name.
 				'description' => sprintf(__('Displays an archive of %s posts.', 'x3p0-ideas'), $label)
 			];
 
 			// Original core templates in case taxonomy template filter is removed.
 			$types["taxonomy-post_format-post-format-{$format}"] ??= [
+				// Translators: %s is the post format name.
 				'title'       => sprintf(_x('Post Format Archive: %s', 'Template Name', 'x3p0-ideas'), $label),
+				// Translators: %s is the post format name.
 				'description' => sprintf(__('Displays an archive of %s posts.', 'x3p0-ideas'), $label)
 			];
 		}
@@ -157,7 +163,7 @@ class Templates implements Bootable
 			$templates[] = $custom;
 		}
 
-		if ( $name_decoded !== $post->post_name ) {
+		if ($name_decoded !== $post->post_name) {
 			$templates[] = "single-{$post->post_type}-{$name_decoded}.php";
 		}
 

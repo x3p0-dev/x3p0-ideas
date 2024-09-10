@@ -70,7 +70,7 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 
 		<!-- wp:pullquote {"className":"is-style-mark-top","fontSize":"lg"} -->
 		<figure class="wp-block-pullquote is-style-mark-top has-lg-font-size">
-			<blockquote><p><?= esc_html__( "I've walked miles upon miles of desert, climbed mountains, and soared through the skies. Yet, there is so much more to do—a thousand more lifetimes to live, loves to love, and journeys to trek.", 'x3p0-ideas') ?></p>
+			<blockquote><p><?= esc_html__("I've walked miles upon miles of desert, climbed mountains, and soared through the skies. Yet, there is so much more to do—a thousand more lifetimes to live, loves to love, and journeys to trek.", 'x3p0-ideas') ?></p>
 				<cite>Justin Tadlock</cite>
 			</blockquote>
 		</figure>
@@ -84,7 +84,7 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 		} -->
 		<figure class="wp-block-gallery has-nested-images columns-2 is-cropped">
 
-			<?php foreach (range(1, 2) as $col): ?>
+			<?php foreach (range(1, 2) as $col) : ?>
 
 				<!-- wp:image {
 					"sizeSlug":"x3p0-square",

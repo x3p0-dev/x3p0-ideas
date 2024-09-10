@@ -62,7 +62,7 @@ $fields = [
 					},
 					"@ifAttribute":"content"
 				},
-				"placeholder":"<?= esc_attr('Connected to a custom field', 'x3p0-ideas') ?>",
+				"placeholder":"<?= esc_attr__('Connected to a custom field', 'x3p0-ideas') ?>",
 				"fontSize":"sm",
 				"className":"media-data"
 			} -->

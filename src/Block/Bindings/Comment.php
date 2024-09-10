@@ -90,6 +90,7 @@ class Comment implements BlockBindingSource
 			'<a class="comment-parent-link__anchor" href="%s">%s</a>',
 			esc_url(get_comment_link($parent_id)),
 			esc_html(sprintf(
+				// Translators: %s of the author of the parent comment.
 				__('In reply to %s', 'x3p0-ideas'),
 				get_comment_author($parent_id)
 			))

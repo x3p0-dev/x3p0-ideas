@@ -75,8 +75,8 @@ class Rules
 	protected function checkIf($condition, array $block, WP_Block $instance): bool
 	{
 		return is_callable($condition, false)
-		       ? boolval(call_user_func($condition))
-		       : true;
+			? boolval(call_user_func($condition))
+			: true;
 	}
 
 	/**
@@ -99,8 +99,8 @@ class Rules
 	protected function checkUnless($condition, array $block, WP_Block $instance): bool
 	{
 		return is_callable($condition, false)
-		       ? ! boolval(call_user_func($condition))
-		       : true;
+			? ! boolval(call_user_func($condition))
+			: true;
 	}
 
 	/**

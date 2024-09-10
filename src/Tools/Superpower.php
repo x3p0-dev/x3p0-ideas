@@ -27,8 +27,8 @@ class Superpower
 	 *
 	 * @since 1.0.0
 	 */
-	public function __construct() {
-
+	public function __construct()
+	{
 		$this->messages['text'] = [
 			__('Powered by heart and soul.', 'x3p0-ideas'),
 			__('Powered by crazy ideas and passion.', 'x3p0-ideas'),
@@ -75,7 +75,7 @@ class Superpower
 	 */
 	public function text(string $type = ''): string
 	{
-		$collection = match($type) {
+		$collection = match ($type) {
 			'text'  => $this->messages['text'],
 			'emoji' => $this->messages['emoji'],
 			default => [

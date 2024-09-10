@@ -131,7 +131,7 @@ class GlobalStyleVariation implements Bootable
 
 		$data = wp_json_file_decode($filename, [ 'associative' => true ]);
 
-		return ! is_null( $data )
+		return ! is_null($data)
 			? new WP_Theme_JSON_Data($data, 'user')
 			: $theme_json;
 	}
@@ -158,7 +158,7 @@ class GlobalStyleVariation implements Bootable
 
 		$data = wp_json_file_decode($filename, [ 'associative' => true ]);
 
-		return ! is_null( $data )
+		return ! is_null($data)
 			? $theme_json->update_with($data)
 			: $theme_json;
 	}
@@ -185,7 +185,7 @@ class GlobalStyleVariation implements Bootable
 
 		$data = wp_json_file_decode($filename, [ 'associative' => true ]);
 
-		return ! is_null( $data )
+		return ! is_null($data)
 			? $theme_json->update_with($data)
 			: $theme_json;
 	}

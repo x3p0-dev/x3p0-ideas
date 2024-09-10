@@ -27,8 +27,8 @@ function bootstrap(): void
 	// Only run when in development mode.
 	if (
 		! wp_is_development_mode('theme')
-		|| false === apply_filters('x3p0/ideas/dev', true))
-	{
+		|| false === apply_filters('x3p0/ideas/dev', true)
+	) {
 		return;
 	}
 
@@ -76,7 +76,7 @@ function config(string $key = '', $default = '')
 	}
 
 	// If the key is set, return its data or the default;
-	if ('' !== $key ) {
+	if ('' !== $key) {
 		return $config[$key] ?? $default;
 	}
 
@@ -85,7 +85,7 @@ function config(string $key = '', $default = '')
 
 function setVarDumper(): void
 {
-	VarDumper::setHandler(function($var) {
+	VarDumper::setHandler(function ($var) {
 		$cloner      = new VarCloner();
 		$html_dumper = new HtmlDumper();
 

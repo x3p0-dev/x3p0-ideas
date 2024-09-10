@@ -26,7 +26,8 @@ class StyleVariations implements Bootable
 	 *
 	 * @since 1.0.0
 	 */
-	public function __construct(protected WP_Block_Styles_Registry $styles) {}
+	public function __construct(protected WP_Block_Styles_Registry $styles)
+	{}
 
 	/**
 	 * Boots the component, running its actions/filters.
@@ -64,6 +65,7 @@ class StyleVariations implements Bootable
 	 */
 	private function getCustomStyles(): array
 	{
+		// phpcs:disable Generic.Functions.FunctionCallArgumentSpacing.TooMuchSpaceAfterComma
 		return [
 			'core/archives' => [
 				'horizontal' => __('Horizontal', 'x3p0-ideas'),
@@ -209,5 +211,6 @@ class StyleVariations implements Bootable
 				'icon' => __('Icon', 'x3p0-ideas')
 			]
 		];
+		// phpcs:enable
 	}
 }

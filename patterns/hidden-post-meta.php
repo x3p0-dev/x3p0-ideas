@@ -15,7 +15,7 @@ defined('ABSPATH') || exit;
 <!-- wp:group {
 	"tagName":"footer",
 	"metadata":{
-		"name":"<?= esc_attr('Post Footer', 'x3p0-ideas') ?>"
+		"name":"<?= esc_attr__('Post Footer', 'x3p0-ideas') ?>"
 	},
 	"style":{
 		"spacing":{

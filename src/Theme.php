@@ -20,7 +20,6 @@ use WP_Block_Patterns_Registry;
 use WP_Block_Pattern_Categories_Registry;
 use WP_Block_Styles_Registry;
 use WP_Block_Type_Registry;
-
 use X3P0\Ideas\Block;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Views\Engine;
@@ -92,6 +91,7 @@ class Theme implements Bootable
 			WP_Block_Type_Registry::get_instance()
 		));
 
+		// phpcs:disable Generic.Functions.FunctionCallArgumentSpacing.TooMuchSpaceAfterComma
 		$this->instance('block.assets',     new Block\Assets());
 		$this->instance('block.metadata',   new Block\Metadata());
 		$this->instance('block.variations', new Block\Variations());
@@ -101,6 +101,7 @@ class Theme implements Bootable
 		$this->instance('media',            new Media());
 		$this->instance('parts',            new Parts());
 		$this->instance('templates',        new Templates());
+		// phpcs:enable
 	}
 
 	/**

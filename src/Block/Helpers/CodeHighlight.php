@@ -97,7 +97,7 @@ class CodeHighlight
 		// Note that the `sanitize_key` function ensures the string is
 		// lowercase and strips everything else that isn't a number,
 		// hyphen, or underscore.
-		foreach($processor->class_list() as $class) {
+		foreach ($processor->class_list() as $class) {
 			if (str_contains($class, 'language-')) {
 				$this->language = sanitize_key(str_replace(
 					'language-',

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The filter attribute class is for registering class methods as a filter on a
  * WordPress hook using a PHP attribute.
@@ -33,7 +34,7 @@ class Filter implements Hook
 		protected string $hook,
 		protected int|string $priority = 10
 	) {
-		$this->priority = match($this->priority) {
+		$this->priority = match ($this->priority) {
 			'first' => PHP_INT_MIN,
 			'last'  => PHP_INT_MAX,
 			default => intval($this->priority)

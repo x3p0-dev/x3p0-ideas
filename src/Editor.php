@@ -103,8 +103,16 @@ class Editor implements Bootable
 		wp_print_font_faces(FontFaceResolver::getFonts());
 		$content = ob_get_clean();
 
+		// phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
 		wp_register_style('x3p0-ideas-fonts', false);
+
+		// In this case, we specifically want to use `strip_tags()`.
+		// `wp_strip_all_tags()` will remove all the inner content from
+		// the `<style>` tag.
+		//
+		// phpcs:ignore WordPress.WP.AlternativeFunctions.strip_tags_strip_tags
 		wp_add_inline_style('x3p0-ideas-fonts', trim(strip_tags($content)));
+
 		wp_enqueue_style('x3p0-ideas-fonts');
 	}
 

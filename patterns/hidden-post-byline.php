@@ -14,7 +14,7 @@ defined('ABSPATH') || exit;
 ?>
 <!-- wp:group {
 	"metadata":{
-		"name":"<?= esc_attr('Post Byline', 'x3p0-ideas') ?>"
+		"name":"<?= esc_attr__('Post Byline', 'x3p0-ideas') ?>"
 	},
 	"style":{
 		"spacing":{
@@ -31,7 +31,7 @@ defined('ABSPATH') || exit;
 
 	<!-- wp:group {
 		"metadata":{
-			"name":"<?= esc_attr('Post Author', 'x3p0-ideas') ?>"
+			"name":"<?= esc_attr__('Post Author', 'x3p0-ideas') ?>"
 		},
 		"style":{
 			"spacing":{
@@ -46,7 +46,7 @@ defined('ABSPATH') || exit;
 	<div class="wp-block-group">
 		<!-- wp:paragraph {
 			"metadata":{
-				"name":"<?= esc_attr('Prefix', 'x3p0-ideas') ?>"
+				"name":"<?= esc_attr__('Prefix', 'x3p0-ideas') ?>"
 			}
 		} -->
 		<p><?= esc_html__('By', 'x3p0-ideas') ?></p>
@@ -58,7 +58,7 @@ defined('ABSPATH') || exit;
 
 	<!-- wp:paragraph {
 		"metadata":{
-			"name":"<?= esc_attr('Separator', 'x3p0-ideas') ?>"
+			"name":"<?= esc_attr__('Separator', 'x3p0-ideas') ?>"
 		}
 	} -->
 	<p><?=

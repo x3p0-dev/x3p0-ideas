@@ -89,7 +89,7 @@ $image = get_theme_file_uri('public/media/svg/code.svg');
 			<!-- wp:buttons -->
 			<div class="wp-block-buttons">
 				<!-- wp:button {"className":"is-style-fill"} -->
-				<div class="wp-block-button is-style-fill"><a class="wp-block-button__link wp-element-button"><?= esc_html('Download', 'x3p0-ideas') ?></a></div>
+				<div class="wp-block-button is-style-fill"><a class="wp-block-button__link wp-element-button"><?= esc_html__('Download', 'x3p0-ideas') ?></a></div>
 				<!-- /wp:button -->
 
 				<!-- wp:button {"className":"is-style-link"} -->

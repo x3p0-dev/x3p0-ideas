@@ -7,7 +7,7 @@
 	<arg name="extensions" value="php"/>
 
 	<!-- Exclude files and folders. -->
-	<exclude-pattern>*/(.notes|node_modules|public|vendor)/*</exclude-pattern>
+	<exclude-pattern>*/(.ideas|.notes|node_modules|public|vendor)/*</exclude-pattern>
 
 	<!--
 	########################################################################
@@ -31,6 +31,11 @@
 		<exclude-pattern>*/(patterns|views)/*</exclude-pattern>
 	</rule>
 
+	<!-- Quite a few false-positives for block markup mixed with PHP. -->
+	<rule ref="Generic.WhiteSpace.ScopeIndent.Incorrect">
+		<exclude-pattern>*/(patterns)/*</exclude-pattern>
+	</rule>
+
 	<!--
 	########################################################################
 	Check PHP compatibility.
@@ -51,6 +56,9 @@
 
 		<!-- Disabling line length checks for long strings. -->
 		<exclude name="Generic.Files.LineLength"/>
+
+		<!-- This is excluded because it catches empty constructors. -->
+		<exclude name="Squiz.WhiteSpace.ScopeClosingBrace.ContentBefore"/>
 	</rule>
 
 	<!-- Enforce tabbed indentation. -->

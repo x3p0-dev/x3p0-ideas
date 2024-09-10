@@ -46,8 +46,8 @@ class Metadata implements Bootable
 		$method = lcfirst(str_replace(' ', '', ucwords($method)));
 
 		return method_exists($this, $method)
-		       ? $this->$method($settings)
-		       : $settings;
+			? $this->$method($settings)
+			: $settings;
 	}
 
 	/**

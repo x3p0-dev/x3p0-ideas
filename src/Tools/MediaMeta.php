@@ -125,7 +125,7 @@ class MediaMeta
 	 */
 	protected function exists(string $key, string $type = ''): bool
 	{
-		return match($type) {
+		return match ($type) {
 			'image' => isset($this->raw['image_meta'][ $key ]),
 			'audio' => isset($this->raw['audio'][ $key ]),
 			default => isset($this->raw[ $key ])

@@ -85,7 +85,7 @@ class Post implements BlockBindingSource
 			: 200;
 
 		// Strip tags and get the word count from the content.
-		$count = str_word_count(strip_tags($str));
+		$count = str_word_count(wp_strip_all_tags($str));
 
 		// Get the ceiling for minutes.
 		$time_mins  = intval(ceil($count / $words_per_min));
@@ -99,12 +99,14 @@ class Post implements BlockBindingSource
 
 		// Set up text for hours.
 		$text_hours = sprintf(
+			// Translators: %d is the number of hours.
 			_n('%d Hour', '%d Hours', $time_hours, 'x3p0-ideas'),
 			number_format_i18n($time_hours)
 		);
 
 		// Set up text for minutes.
 		$text_mins = sprintf(
+			// Translators: %d is the number of minutes.
 			_n('%d Minute', '%d Minutes', $time_mins, 'x3p0-ideas'),
 			number_format_i18n($time_mins)
 		);

@@ -153,6 +153,6 @@ class Frontend implements Bootable
 	{
 		$indicator = wp_required_field_indicator();
 
-		return str_replace( " {$indicator}", "&nbsp;{$indicator}", $message);
+		return str_replace(" {$indicator}", "&nbsp;{$indicator}", $message);
 	}
 }

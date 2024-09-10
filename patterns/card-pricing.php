@@ -140,7 +140,7 @@ $icon = get_theme_file_uri('public/media/svg/earthquake.svg');
 		<!-- wp:list {"className":"has-marker-none"} -->
 		<ul class="has-marker-none">
 
-			<?php foreach (range(1,5) as $item) : ?>
+			<?php foreach (range(1, 5) as $item) : ?>
 
 				<?php $style = 4 > $item ? 'is-style-check-circle' : 'is-style-cancel-circle' ?>
 

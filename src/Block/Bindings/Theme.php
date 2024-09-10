@@ -155,10 +155,23 @@ class Theme implements BlockBindingSource
 		// If this is a custom query.
 		if (! $query) {
 			$key = isset($block->context['queryId'])
-				? "query-{$block->context['queryId']}-page"
-				: 'query-page';
+				? "query-{$block->context['queryId']}-page="
+				: 'query-page=';
 
-			$page  = absint($_GET[ $key ] ?? 1);
+			// False
+			// Get the URL query for the requested URI.
+			$request = isset($_SERVER['REQUEST_URI'])
+				? esc_url_raw(wp_unslash($_SERVER['REQUEST_URI']))
+				: '';
+
+			$query = wp_parse_url($request, PHP_URL_QUERY);
+
+			// Get the page number.
+			$page = $query && str_contains($query, $key)
+				? absint(str_replace($key, '', $query))
+				: 1;
+
+			// Build query variables from the block.
 			$query = new WP_Query(
 				build_query_vars_from_query_block($block, $page)
 			);
@@ -170,9 +183,9 @@ class Theme implements BlockBindingSource
 		// Get the max number of pages and digit count for padding with
 		// leading zeroes.
 		$max = $query->max_num_pages;
-		$pad = $max !== 0 ? absint(floor(log10($max) + 1)) : 1;
+		$pad = 0 !== $max ? absint(floor(log10($max) + 1)) : 1;
 
-		// Bail if there's no more than one page.
+		// Bail if there's not more than one page.
 		if (1 >= $max) {
 			return null;
 		}

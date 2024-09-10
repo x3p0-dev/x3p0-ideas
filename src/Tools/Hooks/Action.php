@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The action attribute class is for registering class methods as an action on a
  * WordPress hook using a PHP attribute.

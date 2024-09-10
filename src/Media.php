@@ -47,9 +47,11 @@ class Media implements Bootable
 	#[Action('init')]
 	public function registerImageSizes(): void
 	{
+		// phpcs:disable Generic.Functions.FunctionCallArgumentSpacing.TooMuchSpaceAfterComma
 		add_image_size('x3p0-square',   1024, 1024, true);
 		add_image_size('x3p0-wide',     2048, 1152, true);
 		add_image_size('x3p0-portrait', 1024, 1365, true);
+		// phpcs:enable
 	}
 
 	/**
@@ -62,11 +64,13 @@ class Media implements Bootable
 	#[Filter('image_size_names_choose')]
 	public function registerImageSizeNames(array $sizes): array
 	{
+		// phpcs:disable Generic.Functions.FunctionCallArgumentSpacing.TooMuchSpaceAfterComma
 		return array_merge($sizes, [
 			'x3p0-square'   => __('Square',   'x3p0-ideas'),
 			'x3p0-wide'     => __('Wide',     'x3p0-ideas'),
 			'x3p0-portrait' => __('Portrait', 'x3p0-ideas')
 		]);
+		// phpcs:enable
 	}
 
 	/**
