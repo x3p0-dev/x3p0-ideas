@@ -1,0 +1,60 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
+	"version": 3,
+	"title": "Buttons: Secondary",
+	"slug": "buttons-secondary",
+	"blockTypes": [
+		"core/post-terms",
+		"core/tag-cloud"
+	],
+	"styles": {
+		"typography": {
+			"fontSize": "var:preset|font-size|sm",
+			"lineHeight": "var:custom|line-height|sm"
+		},
+		"elements": {
+			"link": {
+				"border": {
+					"color": "var:custom|color|border-button-secondary",
+					"style": "var:custom|global|outline|border-style",
+					"width": "var:custom|global|outline|border-width",
+					"radius": "var:custom|global|border|radius"
+				},
+				"color": {
+					"background": "var:custom|color|surface-button-secondary",
+					"text": "var:custom|color|text-button-secondary"
+				},
+				"spacing": {
+					"padding": {
+						"top": { "ref": "styles.elements.button.spacing.padding.top" },
+						"bottom": { "ref": "styles.elements.button.spacing.padding.bottom" },
+						"left": { "ref": "styles.elements.button.spacing.padding.left" },
+						"right": { "ref": "styles.elements.button.spacing.padding.right" }
+					}
+				},
+				"typography": {
+					"fontSize": "inherit !important",
+					"fontWeight": "inherit !important",
+					"lineHeight": "var:custom|line-height|sm",
+					"textDecoration": "none"
+				},
+				":focus": {
+					"color": {
+						"background": "var:custom|color|surface-button-secondary-hover"
+					},
+					"typography": {
+						"textDecoration": "underline !important"
+					}
+				},
+				":hover": {
+					"color": {
+						"background": "var:custom|color|surface-button-secondary-hover"
+					},
+					"typography": {
+						"textDecoration": "underline !important"
+					}
+				}
+			}
+		}
+	}
+}

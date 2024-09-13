@@ -24,7 +24,7 @@
 /// @todo Integrate this into `theme.json` custom properties.
 ///
 .wp-block-calendar table:where(:not(.has-text-color)) :is(td, th) {
-	border-color: var(--wp--preset--color--neutral-100);
+	border-color: var(--wp--custom--color--border);
 }
 
 ///
@@ -33,7 +33,7 @@
 /// @todo Integrate this into `theme.json` custom properties.
 ///
 .wp-block-calendar table:where(:not(.has-text-color)) {
-	color: var(--wp--preset--color--contrast);
+	color: inherit;
 }
 
 // -----------------------------------------------------------------------------
@@ -73,7 +73,8 @@
 	font-weight: var(--wp--custom--elements--thead--font-weight, 600);
 	line-height: var(--wp--custom--elements--thead--line-height, inherit);
 	font-size:   var(--wp--custom--elements--thead--font-size, inherit);
-	color:       var(--wp--custom--elements--thead--color, currentColor);
+	// color:       var(--wp--custom--elements--thead--color, currentColor);
+	color:       inherit;
 	background:  var(--wp--custom--elements--thead--background, transparent);
 }
 
@@ -89,6 +90,8 @@
 ///
 .wp-block-calendar table {
 	overflow: hidden;
+	border-spacing: 2px;
+	border-collapse: separate;
 }
 
 ///
@@ -126,7 +129,7 @@
 /// @todo Integrate this into `theme.json` custom properties.
 ///
 .wp-block-calendar table tbody {
-	border: 1px solid var(--wp--preset--color--neutral-100);
+	border: none;
 }
 
 ///
@@ -135,7 +138,9 @@
 /// @todo Integrate this into `theme.json` custom properties.
 ///
 .wp-block-calendar table td:where(:not(.pad)) {
-	background: var(--wp--preset--color--base);
+	//background: var(--wp--preset--color--base);
+	background: var(--wp--custom--color--surface-contrast, transparent);
+	border: none;
 }
 
 

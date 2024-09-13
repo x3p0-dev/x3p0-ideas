@@ -15,10 +15,10 @@
 		"core/query"
 	],
 	"styles": {
-		"css": "--wp--custom--color--action: var(--wp--preset--color--primary-700);\n--wp--custom--color--muted: var(--wp--preset--color--neutral-500);\n--wp--custom--global--fill--background: var(--wp--preset--color--primary-700);\n--wp--custom--global--fill--hover-background: var(--wp--preset--color--primary-950);",
+		"css": "--wp--custom--global--fill--background: var(--wp--preset--color--primary-700);\n--wp--custom--global--fill--hover-background: var(--wp--preset--color--primary-950);",
 		"color": {
-			"background": "var:preset|color|neutral-100",
-			"text": "var:preset|color|contrast"
+			"background": "var:custom|color|surface",
+			"text": "var:custom|color|text"
 		},
 		"spacing": {
 			"padding": {
@@ -31,7 +31,17 @@
 		"elements": {
 			"link": {
 				"color": {
-					"text": "var:preset|color|primary-700"
+					"text": "var:custom|color|text-link"
+				},
+				":focus": {
+					"color": {
+						"text": "var:custom|color|text-link-hover"
+					}
+				},
+				":hover": {
+					"color": {
+						"text": "var:custom|color|text-link-hover"
+					}
 				}
 			}
 		},

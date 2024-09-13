@@ -30,10 +30,6 @@ ol li::marker {
 	font-size: 0.875em;
 }
 
-li::marker {
-	color: var(--wp--custom--marker--color, var(--wp--custom--elements--marker--color));
-}
-
 [class*=has-text-color-] li::marker {
 	color: inherit;
 }

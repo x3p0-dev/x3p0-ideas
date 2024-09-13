@@ -28,8 +28,8 @@
 	"extra": {
 		"x3p0": {
 			"color": "",
-			"theme": "memories",
-			"typography": "elegant"
+			"theme": "",
+			"typography": ""
 		}
 	},
 	"autoload": {

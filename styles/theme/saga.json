@@ -30,16 +30,49 @@
 		},
 		"custom": {
 			"variation": "saga",
+			"custom": {
+				"color": {
+					"surface-button-primary": "var:preset|color|primary-600",
+					"surface-button-primary-hover": "var:preset|color|contrast",
+					"border": "var:preset|color|neutral-100"
+				}
+			},
+			"section-1": {
+				"color": {
+					"surface": "var:preset|color|neutral-950",
+					"surface-emphasis": "var:preset|color|neutral-900",
+					"surface-contrast": "var:preset|color|neutral-800",
+					"surface-highlight": "var:preset|color|primary-700",
+					"surface-button-primary": "var:preset|color|primary-600",
+					"surface-button-primary-hover": "var:preset|color|primary-800",
+					"text": "var:preset|color|white",
+					"text-muted": "var:preset|color|neutral-400",
+					"text-emphasis": "var:preset|color|neutral-50",
+					"text-highlight": "var:preset|color|primary-200",
+					"text-link": "inherit",
+					"text-link-hover": "var:preset|color|primary-200",
+					"border": "var:preset|color|neutral-800"
+				}
+			},
+			"section-2": {
+				"color": {
+					"surface-button-primary": "var:preset|color|primary-600",
+					"surface-button-primary-hover": "var:preset|color|contrast",
+					"border": "var:preset|color|neutral-300"
+				}
+			},
+			"section-3": {
+				"color": {
+					"surface-button-primary": "var:preset|color|primary-600",
+					"surface-button-primary-hover": "var:preset|color|contrast",
+					"border": "var:preset|color|neutral-200"
+				}
+			},
 			"global": {
 				"border": {
-					"color": "var:preset|color|neutral-100",
 					"style": "solid",
 					"width": "1px",
 					"radius": "0"
-				},
-				"fill": {
-					"background": "var:preset|color|primary-500",
-					"hoverBackground": "var:preset|color|primary-700"
 				}
 			}
 		},
@@ -336,14 +369,14 @@
 		"variations": {
 			"meta": {
 				"color": {
-					"text": "var:preset|color|neutral-500"
+					"text": "var:custom|color|muted"
 				},
 				"blocks": {
 					"core/post-author-name": {
 						"elements": {
 							"link": {
 								"color": {
-									"text": "var:preset|color|neutral-900"
+									"text": "var:custom|color|text-emphasis"
 								},
 								"typography": {
 									"fontFamily": "var:preset|font-family|primary",
@@ -363,13 +396,6 @@
 							}
 						}
 					}
-				}
-			},
-			"section-1": {
-				"css": "--wp--custom--global--fill--background: var(--wp--preset--color--primary-700);\n--wp--custom--global--fill--hover-background: var(--wp--preset--color--primary-900);",
-				"color": {
-					"background": "var:preset|color|neutral-950",
-					"text": "var:preset|color|white"
 				}
 			},
 			"site-footer": {

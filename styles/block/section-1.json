@@ -15,10 +15,10 @@
 		"core/query"
 	],
 	"styles": {
-		"css": "--wp--custom--color--action: var(--wp--preset--color--primary-100);\n--wp--custom--color--muted: var(--wp--preset--color--primary-200);\n--wp--custom--global--fill--background: var(--wp--preset--color--primary-900);\n--wp--custom--global--fill--hover-background: var(--wp--preset--color--primary-950);",
+		"css": "--wp--custom--global--fill--background: var(--wp--preset--color--primary-900);\n--wp--custom--global--fill--hover-background: var(--wp--preset--color--primary-950);",
 		"color": {
-			"background": "var:preset|color|primary-700",
-			"text": "var:preset|color|base"
+			"background": "var:custom|section-1|color|surface",
+			"text": "var:custom|section-1|color|text"
 		},
 		"spacing": {
 			"padding": {
@@ -31,7 +31,7 @@
 		"elements": {
 			"caption": {
 				"color": {
-					"text": "currentColor"
+					"text": "var:custom|section-1|color|text-muted"
 				}
 			},
 			"cite": {
@@ -46,16 +46,16 @@
 			},
 			"link": {
 				"color": {
-					"text": "var:preset|color|primary-50"
+					"text": "var:custom|color|text-link"
 				},
 				":focus": {
 					"color": {
-						"text": "currentColor"
+						"text": "var:custom|color|text-link-hover"
 					}
 				},
 				":hover": {
 					"color": {
-						"text": "currentColor"
+						"text": "var:custom|color|text-link-hover"
 					}
 				}
 			}

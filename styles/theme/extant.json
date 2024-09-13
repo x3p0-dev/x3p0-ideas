@@ -29,6 +29,31 @@
 		},
 		"custom": {
 			"variation": "extant",
+			"color": {
+				"surface-button-primary-hover": "var:preset|color|contrast",
+				"text-button-primary-hover": "var:preset|color|base",
+				"border": "var:preset|color|neutral-100"
+			},
+			"section-1": {
+				"color": {
+					"surface-button-primary-hover": "var:preset|color|contrast",
+					"text-button-primary-hover": "var:preset|color|base"
+				}
+			},
+			"section-2": {
+				"color": {
+					"surface-button-primary-hover": "var:preset|color|contrast",
+					"text-button-primary-hover": "var:preset|color|base",
+					"border": "var:preset|color|neutral-100"
+				}
+			},
+			"section-3": {
+				"color": {
+					"surface-button-primary-hover": "var:preset|color|contrast",
+					"text-button-primary-hover": "var:preset|color|base",
+					"border": "var:preset|color|neutral-200"
+				}
+			},
 			"elements": {
 				"summary": {
 					"fontSize": "var:preset|font-size|sm",
@@ -37,19 +62,11 @@
 			},
 			"global": {
 				"border": {
-					"color": "var:preset|color|neutral-100",
 					"style": "solid",
 					"width": "1px",
 					"radius": "0"
 				},
-				"shadow": "var:preset|shadow|xs",
-				"fill": {
-					"hoverBackground": "var:preset|color|contrast",
-					"hoverColor": "var:preset|color|base"
-				},
-				"outline": {
-					"borderWidth": "1px"
-				}
+				"shadow": "var:preset|shadow|xs"
 			}
 		},
 		"color": {
@@ -221,9 +238,6 @@
 	"styles": {
 		"elements": {
 			"button": {
-				"border": {
-					"radius": "0"
-				},
 				"typography": {
 					"fontWeight": "400"
 				}
@@ -397,12 +411,6 @@
 					"fontFamily": "var:preset|font-family|primary"
 				}
 			},
-			"core/social-link": {
-				"color": {
-					"text": "white",
-					"background": "purple"
-				}
-			},
 			"x3p0/breadcrumbs": {
 				"color": {
 					"gradient": "var:preset|gradient|90-deg-neutral-50-transparent"
@@ -416,7 +424,7 @@
 		"variations": {
 			"meta": {
 				"color": {
-					"text": "var:preset|color|neutral-500"
+					"text": "var:custom|color|text-muted"
 				},
 				"elements": {
 					"link": {

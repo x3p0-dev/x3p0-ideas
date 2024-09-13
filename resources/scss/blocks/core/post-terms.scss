@@ -46,6 +46,8 @@
 /// @todo Figure out how this gap should be implemented. Is this flexbox?
 ///
 .wp-block-post-terms:is(
+	.is-style-buttons-primary,
+	.is-style-buttons-secondary,
 	.is-style-fill,
 	.is-style-outline
  ) {

@@ -82,6 +82,21 @@ class Metadata implements Bootable
 	}
 
 	/**
+	 * Filters the Calendar block args to set custom selectors via the
+	 * Selectors API. This ensures that styles are applied to the correct
+	 * elements within the block and nested table.
+	 *
+	 * @since 1.0.0
+	 * @link  https://developer.wordpress.org/block-editor/reference-guides/block-api/block-selectors/
+	 */
+	private function coreCalendar(array $settings): array
+	{
+		return [ 'selectors' => [
+			'color' => '.wp-block-calendar, .wp-block-calendar table, .wp-block-calendar th'
+		] ] + $settings;
+	}
+
+	/**
 	 * Adds color support to the Categories block.
 	 *
 	 * @since 1.0.0

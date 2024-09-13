@@ -29,6 +29,10 @@
 ///
 li.is-style-check-circle {
 	@include inline-icon.prefix(icon.get-url('check-circle'));
+
+	&::before {
+		background-color: var(--wp--custom--color--text-highlight);
+	}
 }
 
 ///
@@ -36,6 +40,10 @@ li.is-style-check-circle {
 ///
 li.is-style-cancel-circle {
 	@include inline-icon.prefix(icon.get-url('cancel-circle'));
+
+	&::before {
+		background-color: var(--wp--custom--color--text-muted);
+	}
 }
 
 ///

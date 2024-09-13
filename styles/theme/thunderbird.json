@@ -33,25 +33,100 @@
 		},
 		"custom": {
 			"variation": "thunderbird",
+			"color": {
+				"dark": "var:preset|color|contrast",
+				"surface": "var:preset|color|base",
+				"surface-emphasis": "var:preset|color|white",
+				"surface-contrast": "var:preset|color|neutral-50",
+				"surface-highlight": "var:preset|color|primary-100",
+				"surface-button-primary": "var:preset|color|primary-500",
+				"surface-button-primary-hover": "var:preset|color|neutral-950",
+				"surface-button-secondary": "transparent",
+				"surface-button-secondary-hover": "transparent",
+				"text": "var:preset|color|contrast",
+				"text-muted": "var:preset|color|neutral-500",
+				"text-emphasis": "var:preset|color|neutral-950",
+				"text-highlight": "var:preset|color|primary-700",
+				"text-link": "var:preset|color|primary-700",
+				"text-link-hover": "inherit",
+				"text-button-primary": "var:preset|color|base",
+				"text-button-secondary": "currentColor",
+				"border": "var:preset|color|neutral-300",
+				"border-button-primary": "transparent",
+				"border-button-secondary": "currentColor"
+			},
+			"section-1": {
+				"color": {
+					"surface": "var:preset|color|primary-700",
+					"surface-emphasis": "var:preset|color|primary-800",
+					"surface-contrast": "var:preset|color|primary-900",
+					"surface-highlight": "var:preset|color|primary-800",
+					"surface-button-primary": "var:preset|color|primary-900",
+					"surface-button-primary-hover": "var:preset|color|primary-950",
+					"surface-button-secondary": "transparent",
+					"surface-button-secondary-hover": "transparent",
+					"text": "var:preset|color|base",
+					"text-muted": "var:preset|color|primary-100",
+					"text-emphasis": "var:preset|color|primary-200",
+					"text-highlight": "var:preset|color|primary-300",
+					"text-link": "currentColor",
+					"text-link-hover": "var:preset|color|primary-200",
+					"text-button-primary": "var:preset|color|base",
+					"text-button-secondary": "currentColor",
+					"border": "var:preset|color|primary-900",
+					"border-button-primary": "transparent",
+					"border-button-secondary": "currentColor"
+				}
+			},
+			"section-2": {
+				"color": {
+					"surface": "var:preset|color|neutral-100",
+					"surface-emphasis": "var:preset|color|neutral-200",
+					"surface-contrast": "var:preset|color|neutral-300",
+					"surface-highlight": "var:preset|color|primary-100",
+					"surface-button-primary": "var:preset|color|primary-500",
+					"surface-button-primary-hover": "var:preset|color|primary-700",
+					"surface-button-secondary": "transparent",
+					"surface-button-secondary-hover": "transparent",
+					"text": "var:preset|color|contrast",
+					"text-muted": "var:preset|color|neutral-700",
+					"text-emphasis": "var:preset|color|neutral-950",
+					"text-highlight": "var:preset|color|primary-700",
+					"text-link": "var:preset|color|primary-700",
+					"text-link-hover": "inherit",
+					"text-button-primary": "var:preset|color|base",
+					"text-button-secondary": "currentColor",
+					"border": "var:preset|color|neutral-400",
+					"border-button-primary": "transparent",
+					"border-button-secondary": "currentColor"
+				}
+			},
+			"section-3": {
+				"color": {
+					"surface": "var:preset|color|white",
+					"surface-emphasis": "var:preset|color|neutral-100",
+					"surface-contrast": "var:preset|color|neutral-200",
+					"surface-highlight": "var:preset|color|primary-100",
+					"surface-button-primary": "var:preset|color|primary-500",
+					"surface-button-primary-hover": "var:preset|color|primary-700",
+					"surface-button-secondary": "transparent",
+					"surface-button-secondary-hover": "transparent",
+					"text": "var:preset|color|contrast",
+					"text-muted": "var:preset|color|neutral-600",
+					"text-emphasis": "var:preset|color|neutral-950",
+					"text-highlight": "var:preset|color|primary-700",
+					"text-link": "var:preset|color|primary-700",
+					"text-link-hover": "inherit",
+					"text-button-primary": "var:preset|color|base",
+					"text-button-secondary": "currentColor",
+					"border": "var:preset|color|neutral-300",
+					"border-button-primary": "transparent",
+					"border-button-secondary": "currentColor"
+				}
+			},
 			"global": {
 				"border": {
 					"radius": "8px"
-				},
-				"fill": {
-					"hoverBackground": "var:preset|color|neutral-950"
-				},
-				"outline": {
-					"borderWidth": "1px"
-				}
-			},
-			"elements": {
-				"input": {
-					"background": "var:preset|color|white",
-					"borderColor": "var:preset|color|neutral-300",
-					"shadow": "var:preset|shadow|sm"
-				},
-				"summary": {
-					"hoverBackground": "var:preset|color|neutral-50"
 				}
 			},
 			"pattern": {
@@ -312,7 +387,6 @@
 		"typography": {
 			"fontWeight": "425"
 		},
-		"css": ".wp-block-cover .wp-block-x3p0-breadcrumbs { color: inherit; }",
 		"elements": {
 			"button": {
 				"typography": {
@@ -331,31 +405,10 @@
 			}
 		},
 		"blocks": {
-			"core/calendar": {
-				"color": {
-					"background": "var:preset|color|white"
-				},
-				"css": "background: var(--wp--preset--color--white);"
-			},
-			"core/code": {
-				"color": {
-					"background": "var:preset|color|white"
-				}
-			},
 			"core/comments-title": {
 				"typography": {
 					"fontSize": "var:preset|font-size|xl",
 					"lineHeight": "var:preset|line-height|xl"
-				}
-			},
-			"core/details": {
-				"color": {
-					"background": "var:preset|color|white"
-				}
-			},
-			"core/file": {
-				"color": {
-					"background": "var:preset|color|white"
 				}
 			},
 			"core/navigation": {
@@ -439,7 +492,7 @@
 			},
 			"x3p0/breadcrumbs": {
 				"color": {
-					"text": "var:preset|color|neutral-500",
+					"text": "var:custom|color|text-muted",
 					"gradient": "var:preset|gradient|90-deg-white-transparent"
 				},
 				"typography": {
@@ -453,11 +506,6 @@
 			"meta": {
 				"color": {
 					"text": "var:preset|color|neutral-500"
-				}
-			},
-			"section-3": {
-				"color": {
-					"background": "var:preset|color|white"
 				}
 			},
 			"site-footer": {
