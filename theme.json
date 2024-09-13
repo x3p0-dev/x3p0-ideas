@@ -763,18 +763,19 @@
 				"surface-emphasis": "var:preset|color|neutral-50",
 				"surface-contrast": "var:preset|color|neutral-100",
 				"surface-highlight": "var:preset|color|primary-100",
-				"surface-button-primary": "var:preset|color|primary-500",
-				"surface-button-primary-hover": "var:preset|color|primary-700",
-				"surface-button-secondary": "transparent",
-				"surface-button-secondary-hover": "transparent",
+				"surface-primary": "var:preset|color|primary-500",
+				"surface-primary-emphasis": "var:preset|color|primary-700",
 				"text": "var:preset|color|contrast",
 				"text-muted": "var:preset|color|neutral-500",
 				"text-emphasis": "var:preset|color|neutral-950",
 				"text-primary": "var:preset|color|primary-700",
+				"text-on-primary": "var:preset|color|base",
 				"text-hover": "inherit",
-				"text-button-primary": "var:preset|color|base",
-				"text-button-secondary": "currentColor",
 				"border": "var:preset|color|neutral-200",
+
+				"surface-button-secondary": "transparent",
+				"surface-button-secondary-hover": "transparent",
+				"text-button-secondary": "currentColor",
 				"border-button-primary": "transparent",
 				"border-button-secondary": "currentColor"
 			},
@@ -876,20 +877,21 @@
 					"surface-emphasis": "var:preset|color|primary-800",
 					"surface-contrast": "var:preset|color|primary-900",
 					"surface-highlight": "var:preset|color|primary-800",
-					"surface-button-primary": "var:preset|color|primary-900",
-					"surface-button-primary-hover": "var:preset|color|primary-950",
-					"surface-button-secondary": "transparent",
-					"surface-button-secondary-hover": "transparent",
+					"surface-primary": "var:preset|color|primary-900",
+					"surface-primary-emphasis": "var:preset|color|primary-950",
 					"text-default": "var:preset|color|base",
 					"text-muted": "var:preset|color|primary-100",
 					"text-emphasis": "var:preset|color|primary-200",
 					"text-primary": "var:preset|color|primary-200",
 					"text-hover": "currentColor",
-					"text-button-primary": "var:preset|color|base",
-					"text-button-secondary": "currentColor",
+					"text-on-primary": "var:preset|color|base",
 					"border": "var:preset|color|primary-900",
+
 					"border-button-primary": "transparent",
-					"border-button-secondary": "currentColor"
+					"border-button-secondary": "currentColor",
+					"surface-button-secondary": "transparent",
+					"surface-button-secondary-hover": "transparent",
+					"text-button-secondary": "currentColor"
 				}
 			},
 			"section-2": {
@@ -898,20 +900,21 @@
 					"surface-emphasis": "var:preset|color|neutral-200",
 					"surface-contrast": "var:preset|color|neutral-300",
 					"surface-highlight": "var:preset|color|primary-100",
-					"surface-button-primary": "var:preset|color|primary-500",
-					"surface-button-primary-hover": "var:preset|color|primary-700",
-					"surface-button-secondary": "transparent",
-					"surface-button-secondary-hover": "transparent",
+					"surface-primary": "var:preset|color|primary-500",
+					"surface-primary-emphasis": "var:preset|color|primary-700",
 					"text-default": "var:preset|color|contrast",
 					"text-muted": "var:preset|color|neutral-700",
 					"text-emphasis": "var:preset|color|neutral-950",
 					"text-primary": "var:preset|color|primary-700",
 					"text-hover": "inherit",
-					"text-button-primary": "var:preset|color|base",
-					"text-button-secondary": "currentColor",
+					"text-on-primary": "var:preset|color|base",
 					"border": "var:preset|color|neutral-400",
+
 					"border-button-primary": "transparent",
-					"border-button-secondary": "currentColor"
+					"border-button-secondary": "currentColor",
+					"surface-button-secondary": "transparent",
+					"surface-button-secondary-hover": "transparent",
+					"text-button-secondary": "currentColor"
 				}
 			},
 			"section-3": {
@@ -920,20 +923,21 @@
 					"surface-emphasis": "var:preset|color|neutral-100",
 					"surface-contrast": "var:preset|color|neutral-200",
 					"surface-highlight": "var:preset|color|primary-100",
-					"surface-button-primary": "var:preset|color|primary-500",
-					"surface-button-primary-hover": "var:preset|color|primary-700",
-					"surface-button-secondary": "transparent",
-					"surface-button-secondary-hover": "transparent",
+					"surface-primary": "var:preset|color|primary-500",
+					"surface-primary-emphasis": "var:preset|color|primary-700",
 					"text-default": "var:preset|color|contrast",
 					"text-muted": "var:preset|color|neutral-600",
 					"text-emphasis": "var:preset|color|neutral-950",
 					"text-primary": "var:preset|color|primary-700",
 					"text-hover": "inherit",
-					"text-button-primary": "var:preset|color|base",
-					"text-button-secondary": "currentColor",
+					"text-on-primary": "var:preset|color|white",
 					"border": "var:preset|color|neutral-300",
+
 					"border-button-primary": "transparent",
-					"border-button-secondary": "currentColor"
+					"border-button-secondary": "currentColor",
+					"surface-button-secondary": "transparent",
+					"surface-button-secondary-hover": "transparent",
+					"text-button-secondary": "currentColor"
 				}
 			},
 			"siteBlocks": {
@@ -1327,8 +1331,8 @@
 					"width": "1px"
 				},
 				"color": {
-					"background": "var:custom|color|surface-button-primary",
-					"text": "var:custom|color|text-button-primary"
+					"background": "var:custom|color|surface-primary",
+					"text": "var:custom|color|text-on-primary"
 				},
 				"outline": {
 					"color": "currentColor",
@@ -1357,8 +1361,8 @@
 				},
 				":focus": {
 					"color": {
-						"background": "var:custom|color|surface-button-primary-hover",
-						"text": "var:custom|color|text-button-primary"
+						"background": "var:custom|color|surface-primary-emphasis",
+						"text": "var:custom|color|text-on-primary"
 					},
 					"outline": {
 						"width": "2px"
@@ -1366,8 +1370,8 @@
 				},
 				":hover": {
 					"color": {
-						"background": "var:custom|color|surface-button-primary-hover",
-						"text": "var:custom|color|text-button-primary"
+						"background": "var:custom|color|surface-primary-emphasis",
+						"text": "var:custom|color|text-on-primary"
 					},
 					"typography": {
 						"textDecoration": "underline"

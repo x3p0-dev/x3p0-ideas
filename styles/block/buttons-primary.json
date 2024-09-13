@@ -18,8 +18,8 @@
 					"radius": "var:custom|global|border|radius"
 				},
 				"color": {
-					"background": "var:custom|color|surface-button-primary",
-					"text": "var:custom|color|text-button-primary"
+					"background": "var:custom|color|surface-primary",
+					"text": "var:custom|color|text-on-primary"
 				},
 				"shadow": "var:preset|shadow|md",
 				"spacing": {
@@ -38,8 +38,8 @@
 				},
 				":focus": {
 					"color": {
-						"background": "var:custom|color|surface-button-primary-hover",
-						"text": "var:custom|color|text-button-primary"
+						"background": "var:custom|color|surface-primary-emphasis",
+						"text": "var:custom|color|text-on-primary"
 					},
 					"typography": {
 						"textDecoration": "underline"
@@ -47,8 +47,8 @@
 				},
 				":hover": {
 					"color": {
-						"background": "var:custom|color|surface-button-primary-hover",
-						"text": "var:custom|color|text-button-primary"
+						"background": "var:custom|color|surface-primary-emphasis",
+						"text": "var:custom|color|text-on-primary"
 					},
 					"typography": {
 						"textDecoration": "underline"
