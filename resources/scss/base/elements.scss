@@ -116,7 +116,7 @@ s {
 	color: var(--wp--custom--color--text-muted, var(--wp--custom--elements--del--color, inherit));
 	text-decoration: var(
 		--wp--custom--elements--del--text-decoration,
-		var(--wp--custom--color--text-highlight, currentColor) line-through solid clamp(2px, 0.125em, 0.125em)
+		var(--wp--custom--color--text-primary, currentColor) line-through solid clamp(2px, 0.125em, 0.125em)
 	);
 }
 
@@ -217,7 +217,7 @@ mark:where(:not(.has-inline-color):not([style])) {
 	font-size:   var(--wp--custom--elements--mark--font-size, inherit);
 
 	// Color.
-	color:      var(--wp--custom--color--text-highlight, var(--wp--custom--elements--mark--color, currentColor));
+	color:      var(--wp--custom--color--text-primary, var(--wp--custom--elements--mark--color, currentColor));
 	background: var(--wp--custom--color--surface-highlight, var(--wp--custom--elements--mark--background, transparent));
 
 	// Border.
@@ -228,11 +228,6 @@ mark:where(:not(.has-inline-color):not([style])) {
 
 	// Box shadow.
 	box-shadow: var(--wp--custom--elements--mark--shadow, none);
-}
-
-.is-style-section-1 mark:where(:not(.has-inline-color):not([style])) {
-	color:      var(--wp--custom--section-1--color--text-highlight, currentColor);
-	background: var(--wp--custom--section-1--color--surface-highlight, transparent);
 }
 
 // Bump the line-height when used in a heading and remove padding.

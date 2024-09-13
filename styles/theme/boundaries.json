@@ -16,21 +16,21 @@
 		"custom": {
 			"variation": "boundaries",
 			"color": {
-				"text-link": "currentColor",
-				"text-link-hover": "var:preset|color|primary-700",
+				"text-primary": "currentColor",
+				"text-hover": "var:preset|color|primary-700",
 				"border": "var:preset|color|neutral-300"
 			},
 			"section-2": {
 				"color": {
-					"text-link": "currentColor",
-					"text-link-hover": "var:preset|color|primary-700",
+					"text-primary": "currentColor",
+					"text-hover": "var:preset|color|primary-700",
 					"border": "var:preset|color|neutral-400"
 				}
 			},
 			"section-3": {
 				"color": {
-					"text-link": "currentColor",
-					"text-link-hover": "var:preset|color|primary-700",
+					"text-primary": "currentColor",
+					"text-hover": "var:preset|color|primary-700",
 					"border": "var:preset|color|neutral-300"
 				}
 			},

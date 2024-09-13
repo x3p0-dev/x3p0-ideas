@@ -33,7 +33,7 @@
 		textarea:focus,
 		select:focus
 	) {
-		color: var(--wp--custom--color--text-highlight, var(--wp--custom--elements--label--focus-color, var(--wp--custom--color--action, inherit)));
+		color: var(--wp--custom--color--text-primary, var(--wp--custom--elements--label--focus-color, var(--wp--custom--color--action, inherit)));
 	}
 
 	// When the label is next to or wraps a checkbox or radio, use a
@@ -84,7 +84,7 @@
 	&:focus {
 		outline: 2px solid var(
 			--wp--custom--elements--input-accent-color,
-			var(--wp--custom--color--action, var(--wp--preset--color--primary-700))
+			var(--wp--custom--color--text-primary, var(--wp--preset--color--primary-700))
 		);
 		outline-offset: 2px;
 	}

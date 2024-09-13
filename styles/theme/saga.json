@@ -45,12 +45,11 @@
 					"surface-highlight": "var:preset|color|primary-700",
 					"surface-button-primary": "var:preset|color|primary-600",
 					"surface-button-primary-hover": "var:preset|color|primary-800",
-					"text": "var:preset|color|white",
+					"text-default": "var:preset|color|white",
 					"text-muted": "var:preset|color|neutral-400",
 					"text-emphasis": "var:preset|color|neutral-50",
-					"text-highlight": "var:preset|color|primary-200",
-					"text-link": "inherit",
-					"text-link-hover": "var:preset|color|primary-200",
+					"text-primary": "var:preset|color|primary-200",
+					"text-hover": "var:preset|color|primary-200",
 					"border": "var:preset|color|neutral-800"
 				}
 			},
@@ -394,6 +393,15 @@
 									}
 								}
 							}
+						}
+					}
+				}
+			},
+			"section-1": {
+				"elements": {
+					"link": {
+						"color": {
+							"text": "var:custom|color|text-default"
 						}
 					}
 				}

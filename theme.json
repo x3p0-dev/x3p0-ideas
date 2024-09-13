@@ -215,7 +215,7 @@
 						"lineHeight": "var:custom|line-height|sm"
 					},
 					"required": {
-						"color": "var:custom|color|text-highlight"
+						"color": "var:custom|color|text-primary"
 					}
 				}
 			},
@@ -770,9 +770,8 @@
 				"text": "var:preset|color|contrast",
 				"text-muted": "var:preset|color|neutral-500",
 				"text-emphasis": "var:preset|color|neutral-950",
-				"text-highlight": "var:preset|color|primary-700",
-				"text-link": "var:preset|color|primary-700",
-				"text-link-hover": "inherit",
+				"text-primary": "var:preset|color|primary-700",
+				"text-hover": "inherit",
 				"text-button-primary": "var:preset|color|base",
 				"text-button-secondary": "currentColor",
 				"border": "var:preset|color|neutral-200",
@@ -881,12 +880,11 @@
 					"surface-button-primary-hover": "var:preset|color|primary-950",
 					"surface-button-secondary": "transparent",
 					"surface-button-secondary-hover": "transparent",
-					"text": "var:preset|color|base",
+					"text-default": "var:preset|color|base",
 					"text-muted": "var:preset|color|primary-100",
 					"text-emphasis": "var:preset|color|primary-200",
-					"text-highlight": "var:preset|color|primary-300",
-					"text-link": "var:preset|color|primary-200",
-					"text-link-hover": "currentColor",
+					"text-primary": "var:preset|color|primary-200",
+					"text-hover": "currentColor",
 					"text-button-primary": "var:preset|color|base",
 					"text-button-secondary": "currentColor",
 					"border": "var:preset|color|primary-900",
@@ -904,12 +902,11 @@
 					"surface-button-primary-hover": "var:preset|color|primary-700",
 					"surface-button-secondary": "transparent",
 					"surface-button-secondary-hover": "transparent",
-					"text": "var:preset|color|contrast",
+					"text-default": "var:preset|color|contrast",
 					"text-muted": "var:preset|color|neutral-700",
 					"text-emphasis": "var:preset|color|neutral-950",
-					"text-highlight": "var:preset|color|primary-700",
-					"text-link": "var:preset|color|primary-700",
-					"text-link-hover": "inherit",
+					"text-primary": "var:preset|color|primary-700",
+					"text-hover": "inherit",
 					"text-button-primary": "var:preset|color|base",
 					"text-button-secondary": "currentColor",
 					"border": "var:preset|color|neutral-400",
@@ -927,12 +924,11 @@
 					"surface-button-primary-hover": "var:preset|color|primary-700",
 					"surface-button-secondary": "transparent",
 					"surface-button-secondary-hover": "transparent",
-					"text": "var:preset|color|contrast",
+					"text-default": "var:preset|color|contrast",
 					"text-muted": "var:preset|color|neutral-600",
 					"text-emphasis": "var:preset|color|neutral-950",
-					"text-highlight": "var:preset|color|primary-700",
-					"text-link": "var:preset|color|primary-700",
-					"text-link-hover": "inherit",
+					"text-primary": "var:preset|color|primary-700",
+					"text-hover": "inherit",
 					"text-button-primary": "var:preset|color|base",
 					"text-button-secondary": "currentColor",
 					"border": "var:preset|color|neutral-300",
@@ -1306,7 +1302,7 @@
 	"styles": {
 		"color": {
 			"background": "var:custom|color|surface",
-			"text": "var:custom|color|text"
+			"text": "var:custom|color|text-default"
 		},
 		"spacing": {
 			"blockGap": "var:preset|spacing|plus-3",
@@ -1447,14 +1443,14 @@
 					"radius": "var:custom|global|border|radius"
 				},
 				"color": {
-					"text": "var:custom|color|text-link"
+					"text": "var:custom|color|text-primary"
 				},
 				"typography": {
 					"textDecoration": "underline"
 				},
 				":focus": {
 					"color": {
-						"text": "var:custom|color|text-link-hover"
+						"text": "var:custom|color|text-hover"
 					},
 					"outline": {
 						"color": "var:preset|color|primary-700",
@@ -1468,7 +1464,7 @@
 				},
 				":hover": {
 					"color": {
-						"text": "var:custom|color|text-link-hover"
+						"text": "var:custom|color|text-hover"
 					},
 					"typography": {
 						"textDecoration": "underline"
@@ -1545,7 +1541,7 @@
 				},
 				"color": {
 					"background": "var:custom|color|surface-emphasis",
-					"text": "var:custom|color|text"
+					"text": "var:custom|color|text-default"
 				},
 				"shadow": "var:custom|global|shadow",
 				"spacing": {
@@ -1593,7 +1589,7 @@
 				},
 				"color": {
 					"background": "var:custom|color|surface-emphasis",
-					"text": "var:custom|color|text"
+					"text": "var:custom|color|text-default"
 				},
 				"spacing": {
 					"padding": {
@@ -1681,7 +1677,7 @@
 				},
 				"color": {
 					"background": "var:custom|color|surface-emphasis",
-					"text": "var:custom|color|text"
+					"text": "var:custom|color|text-default"
 				},
 				"css": "--wp--custom--elements--summary--hover-background: var(--wp--custom--color--surface-contrast);",
 				"shadow": "var:custom|global|shadow"

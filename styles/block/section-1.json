@@ -18,7 +18,7 @@
 		"css": "--wp--custom--global--fill--background: var(--wp--preset--color--primary-900);\n--wp--custom--global--fill--hover-background: var(--wp--preset--color--primary-950);",
 		"color": {
 			"background": "var:custom|section-1|color|surface",
-			"text": "var:custom|section-1|color|text"
+			"text": "var:custom|section-1|color|text-default"
 		},
 		"spacing": {
 			"padding": {
@@ -46,16 +46,16 @@
 			},
 			"link": {
 				"color": {
-					"text": "var:custom|color|text-link"
+					"text": "var:custom|color|text-primary"
 				},
 				":focus": {
 					"color": {
-						"text": "var:custom|color|text-link-hover"
+						"text": "var:custom|color|text-hover"
 					}
 				},
 				":hover": {
 					"color": {
-						"text": "var:custom|color|text-link-hover"
+						"text": "var:custom|color|text-hover"
 					}
 				}
 			}
