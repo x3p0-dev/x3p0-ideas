@@ -56,21 +56,19 @@
 	transition-property: color, background-color, border-color, outline-color;
 
 	// `theme.json`-supported styles.
-	color:         var(--wp--custom--toggle--color) !important;
-	background:    var(--wp--custom--toggle--background);
-	border-width:  var(--wp--custom--toggle--border-width);
-	border-style:  var(--wp--custom--toggle--border-style);
-	border-color:  var(--wp--custom--toggle--border-color);
-	border-radius: var(--wp--custom--toggle--border-radius);
-	box-shadow:    var(--wp--custom--toggle--shadow);
+	color:         var(--wp--custom--color--text-on-primary) !important;
+	background:    var(--wp--custom--color--surface-primary);
+	border-radius: var(--wp--custom--global--border--radius);
+	box-shadow:    var(--wp--custom--preset--shadow--sm);
 
 	padding: var(--wp--preset--spacing--minus-2) var(--wp--preset--spacing--minus-1) !important;
 
 	&:hover,
 	&:focus {
-		color:      var(--wp--custom--toggle--hover-color, var(--wp--custom--toggle--color)) !important;
-		background: var(--wp--custom--toggle--hover-background, var(--wp--custom--toggle--background));
+		color:      var(--wp--custom--color--text-on-primary) !important;
+		background: var(--wp--custom--color--surface-primary-emphasis);
 	}
+
 	svg {
 		width: 20px;
 		height: 20px;

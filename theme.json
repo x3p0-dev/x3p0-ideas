@@ -182,23 +182,10 @@
 					"padding": true
 				}
 			},
-			"core/navigation": {
-				"custom": {
-					"toggle": {
-						"color": "var:preset|color|base",
-						"background": "var:preset|color|contrast",
-						"borderWidth": "0",
-						"borderStyle": "solid",
-						"borderColor": "transparent",
-						"borderRadius": "4px",
-						"shadow": "var:preset|shadow|md"
-					}
-				}
-			},
 			"core/navigation-submenu": {
 				"custom": {
-					"color": "var:preset|color|contrast",
-					"background": "var:preset|color|base",
+					"background": "var:preset|color|surface-default",
+					"color": "var:preset|color|text-default",
 					"padding": "var:wp|preset|spacing|base"
 				}
 			},
@@ -1751,7 +1738,8 @@
 					"radius": "var:custom|global|border|radius"
 				},
 				"color": {
-					"background": "var:preset|color|base"
+					"background": "var:preset|color|surface-default",
+					"text": "var:preset|color|text-default"
 				},
 				"shadow": "var:preset|shadow|md",
 				"spacing": {
