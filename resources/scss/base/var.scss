@@ -32,7 +32,7 @@ body {
 // Section-based variables.
 
 .is-style-section-1 {
-	--wp--custom--color--surface: var(--wp--custom--section-1--color--surface-default);
+	--wp--custom--color--surface-default: var(--wp--custom--section-1--color--surface-default);
 	--wp--custom--color--surface-emphasis: var(--wp--custom--section-1--color--surface-emphasis);
 	--wp--custom--color--surface-contrast: var(--wp--custom--section-1--color--surface-contrast);
 	--wp--custom--color--surface-primary: var(--wp--custom--section-1--color--surface-primary);
@@ -51,7 +51,7 @@ body {
 }
 
 .is-style-section-2 {
-	--wp--custom--color--surface: var(--wp--custom--section-2--color--surface-default);
+	--wp--custom--color--surface-default: var(--wp--custom--section-2--color--surface-default);
 	--wp--custom--color--surface-emphasis: var(--wp--custom--section-2--color--surface-emphasis);
 	--wp--custom--color--surface-contrast: var(--wp--custom--section-2--color--surface-contrast);
 	--wp--custom--color--surface-primary: var(--wp--custom--section-2--color--surface-primary);
@@ -70,7 +70,7 @@ body {
 }
 
 .is-style-section-3 {
-	--wp--custom--color--surface: var(--wp--custom--section-3--color--surface-default);
+	--wp--custom--color--surface-default: var(--wp--custom--section-3--color--surface-default);
 	--wp--custom--color--surface-emphasis: var(--wp--custom--section-3--color--surface-emphasis);
 	--wp--custom--color--surface-contrast: var(--wp--custom--section-3--color--surface-contrast);
 	--wp--custom--color--surface-primary: var(--wp--custom--section-3--color--surface-primary);
