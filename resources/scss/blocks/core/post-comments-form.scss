@@ -111,7 +111,8 @@
 /// Comment form "required" color.
 ///
 .wp-block-post-comments-form .required {
-	color: var(--wp--custom--required--color, var(--wp--custom--color--muted, inherit));
+	color: var(--wp--custom--color--icon--primary, inherit);
+	font-weight: 900;
 }
 
 ///
