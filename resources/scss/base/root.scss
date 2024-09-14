@@ -19,8 +19,8 @@
 /// via `custom.global.::selectionColor` and `custom.global.::selectionBackground`.
 ///
 ::selection {
-	background: var(--wp--custom--color--surface--primary-emphasis, var(--wp--custom--elements--selection--background));
-	color: var(--wp--custom--color--text--on-primary, var(--wp--custom--elements--selection--color));
+	background: var(--wp--custom--color--surface--primary-emphasis);
+	color: var(--wp--custom--color--text--on-primary);
 }
 
 ///

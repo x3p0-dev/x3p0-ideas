@@ -78,27 +78,24 @@ abbr[title] {
 
 :where(:not(pre) > code) {
 	// Spacing.
-	padding: var(--wp--custom--elements--code--padding, 0);
+	padding: 0.125em 0.25em;
 
 	// Typography.
-	font-family: var(--wp--custom--elements--code--font-family, monospace);
-	font-style:  var(--wp--custom--elements--code--font-style, normal);
-	font-weight: var(--wp--custom--elements--code--font-weight, inherit);
-	line-height: var(--wp--custom--elements--code--line-height, inherit);
-	font-size:   var(--wp--custom--elements--code--font-size, inherit);
+	font-family: var(--wp--preset--font-family--mono, monospace);
+	font-size:   clamp(var(--wp--preset--font-size--xs), 0.8125em, 0.8125em);
+	font-style:  normal;
+	font-weight: 600;
+	line-height: inherit;
 
 	// Color.
-	color:      var(--wp--custom--color--text--default, var(--wp--custom--elements--code--color, inherit));
-	background: var(--wp--custom--color--surface--emphasis, var(--wp--custom--elements--code--background, transparent));
+	color:      var(--wp--custom--color--text--default, inherit);
+	background: var(--wp--custom--color--surface--emphasis, transparent);
 
 	// Border.
-	border-color:  var(--wp--custom--elements--code--border-color, transparent);
-	border-style:  var(--wp--custom--elements--code--border-style, solid);
-	border-width:  var(--wp--custom--elements--code--border-width, 0);
-	border-radius: var(--wp--custom--elements--code--border-radius, 0);
+	border: none;
 
 	// Box shadow.
-	box-shadow: var(--wp--custom--elements--code--shadow, none);
+	box-shadow: none;
 }
 
 // -----------------------------------------------------------------------------
@@ -108,16 +105,12 @@ abbr[title] {
 
 del,
 s {
-	color: var(--wp--custom--color--text--muted, var(--wp--custom--elements--del--color, inherit));
-	text-decoration: var(
-		--wp--custom--elements--del--text-decoration,
-		var(--wp--custom--color--text--primary, currentColor) line-through solid clamp(2px, 0.125em, 0.125em)
-	);
-}
-
-.is-style-section-1 :where(del, s) {
-	color: var(--wp--custom--section-1--color--text--muted, inherit);
-	text-decoration-color: var(--wp--custom--section-1--color--text--muted, inherit);
+	color: var(--wp--custom--color--text--muted, inherit);
+	text-decoration:
+		var(--wp--custom--color--text--default, currentColor)
+		line-through
+		solid
+		min(0.078125em, 3px);
 }
 
 // -----------------------------------------------------------------------------
@@ -146,11 +139,8 @@ img:where(:not(.avatar)) {
 // -----------------------------------------------------------------------------
 
 ins {
-	color: var(--wp--custom--elements--ins--color, inherit);
-	text-decoration: var(
-		--wp--custom--elements--ins--text-decoration,
-		currentColor underline solid max(1px, 0.0625em)
-	);
+	color: inherit;
+	text-decoration: currentColor underline solid clamp(2px, 0.125em, 0.125em);
 	text-underline-offset: 4px;
 }
 
@@ -162,27 +152,27 @@ kbd {
 	white-space: nowrap;
 
 	// Spacing.
-	padding: var(--wp--custom--elements--kbd--padding, 0);
+	padding: 0.125em 0.375em;
 
 	// Typography.
-	font-family: var(--wp--custom--elements--kbd--font-family, monospace);
-	font-style:  var(--wp--custom--elements--kbd--font-style, normal);
-	font-weight: var(--wp--custom--elements--kbd--font-weight, inherit);
-	line-height: var(--wp--custom--elements--kbd--line-height, inherit);
-	font-size:   var(--wp--custom--elements--kbd--font-size, inherit);
+	font-family: var(--wp--preset--font-family--mono, monospace);
+	font-size: clamp(var(--wp--preset--font-size--xs), 0.8125em, 0.8125em);
+	font-style:  normal;
+	font-weight: 500;
+	line-height: inherit;
 
 	// Color.
-	color:      var(--wp--custom--elements--kbd--color, inherit);
-	background: var(--wp--custom--elements--kbd--background, transparent);
+	color:      inherit;
+	background: transparent;
 
 	// Border.
-	border-color:  var(--wp--custom--elements--kbd--border-color, transparent);
-	border-style:  var(--wp--custom--elements--kbd--border-style, solid);
-	border-width:  var(--wp--custom--elements--kbd--border-width, 0);
-	border-radius: var(--wp--custom--elements--kbd--border-radius, 0);
+	border-color:  var(--wp--custom--color--border--default);
+	border-style:  solid;
+	border-width:  1px;
+	border-radius: 0.25rem;
 
 	// Box shadow.
-	box-shadow: var(--wp--custom--elements--kbd--shadow, none);
+	box-shadow: var(--wp--preset--shadow--sm, none);
 }
 
 // -----------------------------------------------------------------------------
@@ -190,7 +180,7 @@ kbd {
 // -----------------------------------------------------------------------------
 
 li::marker {
-	color: var(--wp--custom--color--text--muted, var(--wp--custom--marker--color, var(--wp--custom--elements--marker--color)));
+	color: var(--wp--custom--color--text--muted, currentColor);
 }
 
 // -----------------------------------------------------------------------------
@@ -199,30 +189,13 @@ li::marker {
 
 // Spacing for all `<mark>` elements, including WP's "highlight".
 mark {
-	padding: var(--wp--custom--elements--mark--padding, 0);
+	padding: 0.125em 0.25em;
 }
 
 // Style <mark> elements but avoid WP's "highlight" rich text element.
 mark:where(:not(.has-inline-color):not([style])) {
-	// Typography.
-	font-family: var(--wp--custom--elements--mark--font-family, inherit);
-	font-style:  var(--wp--custom--elements--mark--font-style, inherit);
-	font-weight: var(--wp--custom--elements--mark--font-weight, inherit);
-	line-height: var(--wp--custom--elements--mark--line-height, inherit);
-	font-size:   var(--wp--custom--elements--mark--font-size, inherit);
-
-	// Color.
-	color:      var(--wp--custom--color--text--on-primary, var(--wp--custom--elements--mark--color, currentColor));
-	background: var(--wp--custom--color--surface--primary, var(--wp--custom--elements--mark--background, transparent));
-
-	// Border.
-	border-color:  var(--wp--custom--elements--mark--border-color, transparent);
-	border-style:  var(--wp--custom--elements--mark--border-style, solid);
-	border-width:  var(--wp--custom--elements--mark--border-width, 0);
-	border-radius: var(--wp--custom--elements--mark--border-radius, 0);
-
-	// Box shadow.
-	box-shadow: var(--wp--custom--elements--mark--shadow, none);
+	color:      var(--wp--custom--color--text--on-primary, currentColor);
+	background: var(--wp--custom--color--surface--primary, transparent);
 }
 
 // Bump the line-height when used in a heading and remove padding.
@@ -245,23 +218,5 @@ sub {
 	a {
 		text-decoration: none;
 		outline: none;
-	}
-}
-
-
-// -----------------------------------------------------------------------------
-// Section styles for elements that WordPress doesn't support styling via
-// `theme.json`. For these, we're mostly inheriting the color styles from the
-// current color.
-// -----------------------------------------------------------------------------
-
-:is([class*=is-style-section-]) {
-	:where(ins, kbd) {
-		color: currentColor;
-		text-decoration-color: currentColor;
-	}
-	kbd {
-		border-color: currentColor;
-		background: transparent;
 	}
 }

@@ -784,61 +784,13 @@
 				}
 			},
 			"elements": {
-				"code": {
-					"padding": "0.125em 0.25em",
-					"color": "var:preset|color|neutral-950",
-					"background": "var:preset|color|neutral-50",
-					"fontFamily": "var:preset|font-family|mono",
-					"fontSize": "clamp(var(--wp--preset--font-size--xs), 0.8125em, 0.8125em)",
-					"fontWeight": "600"
-				},
-				"del": {
-					"color": "var:preset|color|neutral-500"
-				},
-				"input": {
-					"color": "var:preset|color|contrast",
-					"background": "var:preset|color|base",
-					"borderColor": "var:custom|global|border|color",
-					"borderRadius": "var:custom|global|border|radius",
-					"shadow": "var:custom|global|shadow",
-					"placeholderColor": "var:preset|color|neutral-500"
-				},
-				"ins": {
-					"textDecoration": "var(--wp--preset--color--neutral-700) underline solid clamp(2px, 0.125em, 0.125em)"
-				},
-				"kbd": {
-					"padding": "0.125em 0.25em",
-					"color": "var:preset|color|contrast",
-					"fontFamily": "var:preset|font-family|mono",
-					"fontSize": "clamp(var(--wp--preset--font-size--xs), 0.8125em, 0.8125em)",
-					"borderColor": "var:preset|color|neutral-500",
-					"borderWidth": "1px",
-					"borderRadius": "0.25rem",
-					"shadow": "var:preset|shadow|sm"
-				},
 				"label": {
 					"fontSize": "var:preset|font-size|sm",
 					"checkFontSize": "var:preset|font-size|sm"
 				},
-				"mark": {
-					"padding": "0.125em 0.25em",
-					"color": "var:preset|color|neutral-950",
-					"background": "var:preset|color|neutral-100"
-				},
-				"::marker": {
-					"color": "var:preset|color|neutral-500"
-				},
-				"::placeholder": {
-					"color": "var:preset|color|neutral-300"
-				},
-				"::selection": {
-					"color": "var:preset|color|primary-50",
-					"background": "var:preset|color|primary-700"
-				},
 				"summary": {
 					"fontFamily": "var:preset|font-family|primary",
-					"fontWeight": "500",
-					"hoverBackground": "var:preset|color|neutral-100"
+					"fontWeight": "500"
 				}
 			},
 			"lineHeight": {
@@ -1451,6 +1403,11 @@
 				},
 				"typography": {
 					"textDecoration": "underline"
+				},
+				":active": {
+					"outline": {
+						"width": "0"
+					}
 				},
 				":focus": {
 					"color": {

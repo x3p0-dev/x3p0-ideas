@@ -39,7 +39,7 @@
 	&__label:has(
 		+ .wp-block-search__inside-wrapper .wp-block-search__input:focus
 	) {
-		color: var(--wp--custom--elements--label--focus-color, inherit);
+		color: var(--wp--custom--color--text--primary, inherit);
 	}
 
 	// Input styling, which includes styling the inside wrapper to appear as

@@ -9,7 +9,7 @@
 /// Default label styles.
 ///
 @mixin label() {
-	color:       var(--wp--custom--color--text--muted, var(--wp--custom--elements--label--color, var(--wp--custom--color--muted, inherit)));
+	color:       var(--wp--custom--color--text--muted, inherit);
 	font-family: var(--wp--custom--elements--label--font-family, inherit);
 	font-size:   var(--wp--custom--elements--label--font-size, inherit);
 	font-style:  var(--wp--custom--elements--label--font-style, inherit);
@@ -33,7 +33,7 @@
 		textarea:focus,
 		select:focus
 	) {
-		color: var(--wp--custom--color--text--primary, var(--wp--custom--elements--label--focus-color, var(--wp--custom--color--action, inherit)));
+		color: var(--wp--custom--color--text--primary, inherit);
 	}
 
 	// When the label is next to or wraps a checkbox or radio, use a
@@ -44,11 +44,11 @@
 		input[type="checkbox"],
 		input[type="radio"]
 	) {
-		color:       var(--wp--custom--elements--label--check-color, inherit);
-		font-family: var(--wp--custom--elements--label--check-font-family, inherit);
-		font-size:   var(--wp--custom--elements--label--check-font-size, inherit);
-		font-style:  var(--wp--custom--elements--label--check-font-style, inherit);
-		font-weight: var(--wp--custom--elements--label--check-font-weight, inherit);
+		color:       inherit;
+		font-family: inherit;
+		font-size:   inherit;
+		font-style:  inherit;
+		font-weight: inherit;
 	}
 }
 
@@ -56,7 +56,7 @@
 /// Default placeholder styles.
 ///
 @mixin placeholder() {
-	color: var(--wp--custom--color--text--muted, var(--wp--custom--elements--placeholder--color, inherit));
+	color: var(--wp--custom--color--text--muted, inherit);
 }
 
 ///
@@ -66,26 +66,23 @@
 	appearance:  none;
 	padding:     var(--wp--preset--spacing--minus-3) var(--wp--preset--spacing--minus-1);
 
-	color:       var(--wp--custom--color--text--default, var(--wp--custom--elements--input--color, inherit));
-	background:  var(--wp--custom--color--surface--emphasis, var(--wp--custom--elements--input--background, transparent));
+	color:       var(--wp--custom--color--text--default, inherit);
+	background:  var(--wp--custom--color--surface--emphasis, transparent);
 
-	font-family: var(--wp--custom--elements--input--font-family, inherit);
-	font-size:   var(--wp--custom--elements--input--font-size, inherit);
-	font-style:  var(--wp--custom--elements--input--font-style, inherit);
-	font-weight: var(--wp--custom--elements--input--font-weight, inherit);
-	line-height: var(--wp--custom--elements--input--line-height, inherit);
+	font-family: inherit;
+	font-size:   inherit;
+	font-style:  inherit;
+	font-weight: inherit;
+	line-height: inherit;
 
-	border-color:  var(--wp--custom--color--border--default, var(--wp--custom--elements--input--border-color, none));
-	border-style:  var(--wp--custom--elements--input--border-style, solid);
-	border-width:  var(--wp--custom--elements--input--border-width, 1px);
-	border-radius: var(--wp--custom--elements--input--border-radius, none);
-	box-shadow:    var(--wp--custom--elements--input--shadow, none);
+	border-color:  var(--wp--custom--global--border--color, none);
+	border-style:  var(--wp--custom--global--border--style, solid);
+	border-width:  var(--wp--custom--global--border--width, 1px);
+	border-radius: var(--wp--custom--global--border--radius, none);
+	box-shadow:    var(--wp--custom--global--shadow, none);
 
 	&:focus {
-		outline: 2px solid var(
-			--wp--custom--elements--input-accent-color,
-			var(--wp--custom--color--text--primary, var(--wp--preset--color--primary-700))
-		);
+		outline: 2px solid var(--wp--custom--color--text--primary, inherit);
 		outline-offset: 2px;
 	}
 }
@@ -94,10 +91,7 @@
 /// Default checkbox and radio styles.
 ///
 @mixin checkable() {
-	accent-color: var(
-		--wp--custom--elements--input-accent-color,
-		var(--wp--custom--color--action, var(--wp--preset--color--primary-700))
-	);
+	accent-color: var(--wp--custom--color--icon--primary, inherit);
 
 	padding: 0;
 	border: none;
