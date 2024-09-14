@@ -39,7 +39,7 @@
 			},
 			"section-1": {
 				"color": {
-					"surface": "var:preset|color|neutral-950",
+					"surface-default": "var:preset|color|neutral-950",
 					"surface-emphasis": "var:preset|color|neutral-900",
 					"surface-contrast": "var:preset|color|neutral-800",
 					"surface-highlight": "var:preset|color|primary-700",

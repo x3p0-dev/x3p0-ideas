@@ -35,7 +35,7 @@
 			"variation": "thunderbird",
 			"color": {
 				"dark": "var:preset|color|contrast",
-				"surface": "var:preset|color|base",
+				"surface-default": "var:preset|color|base",
 				"surface-emphasis": "var:preset|color|white",
 				"surface-contrast": "var:preset|color|neutral-50",
 				"surface-highlight": "var:preset|color|primary-100",
@@ -51,7 +51,7 @@
 			},
 			"section-1": {
 				"color": {
-					"surface": "var:preset|color|primary-700",
+					"surface-default": "var:preset|color|primary-700",
 					"surface-emphasis": "var:preset|color|primary-800",
 					"surface-contrast": "var:preset|color|primary-900",
 					"surface-highlight": "var:preset|color|primary-800",
@@ -68,7 +68,7 @@
 			},
 			"section-2": {
 				"color": {
-					"surface": "var:preset|color|neutral-100",
+					"surface-default": "var:preset|color|neutral-100",
 					"surface-emphasis": "var:preset|color|neutral-200",
 					"surface-contrast": "var:preset|color|neutral-300",
 					"surface-highlight": "var:preset|color|primary-100",
@@ -85,7 +85,7 @@
 			},
 			"section-3": {
 				"color": {
-					"surface": "var:preset|color|white",
+					"surface-default": "var:preset|color|white",
 					"surface-emphasis": "var:preset|color|neutral-100",
 					"surface-contrast": "var:preset|color|neutral-200",
 					"surface-highlight": "var:preset|color|primary-100",
