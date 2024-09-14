@@ -196,7 +196,7 @@ figure.wp-block-image[class*=-gradient-background] {
 ///
 figure.wp-block-image.is-style-polaroid {
 	padding:          var(--wp--preset--spacing--base);
-	background-color: var(--wp--preset--color--base);
+	background-color: var(--wp--custom--color--surface--default);
 	transition: all 0.5s ease-in-out;
 	overflow: visible;
 	background-size: auto !important;

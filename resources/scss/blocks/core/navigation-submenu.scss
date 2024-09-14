@@ -24,10 +24,9 @@
 
 nav.wp-block-navigation .wp-block-navigation-submenu .wp-block-navigation__submenu-container,
 nav.wp-block-navigation.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open {
-	color: var(--wp--custom--color, var(--wp--preset--color--contrast));
-	background: var(--wp--custom--background, var(--wp--preset--color--base));
+	background: var(--wp--custom--background, var(--wp--custom--color--surface--default));
+	color: var(--wp--custom--color, var(--wp--custom--color--text--default));
 }
-
 
 // -----------------------------------------------------------------------------
 // Block customizations.

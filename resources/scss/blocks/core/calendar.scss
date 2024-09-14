@@ -138,7 +138,6 @@
 /// @todo Integrate this into `theme.json` custom properties.
 ///
 .wp-block-calendar table td:where(:not(.pad)) {
-	//background: var(--wp--preset--color--base);
 	background: var(--wp--custom--color--surface--contrast, transparent);
 	border: none;
 }

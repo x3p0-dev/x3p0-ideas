@@ -746,6 +746,7 @@
 			"variation": "default",
 			"color": {
 				"dark": "var:preset|color|contrast",
+				"light": "var:preset|color|base",
 				"surface": {
 					"default": "var:preset|color|base",
 					"emphasis": "var:preset|color|neutral-50",
