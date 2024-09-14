@@ -230,10 +230,7 @@
 					"width": "0",
 					"radius": "8px"
 				},
-				"shadow": "var:preset|shadow|lg",
-				"outline": {
-					"borderWidth": "1px"
-				}
+				"shadow": "var:preset|shadow|lg"
 			},
 			"elements": {
 				"label": {

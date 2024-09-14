@@ -56,9 +56,6 @@
 					"style": "solid",
 					"width": "1px",
 					"radius": "0"
-				},
-				"outline": {
-					"borderWidth": "1px"
 				}
 			}
 		},

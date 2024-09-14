@@ -51,9 +51,6 @@
 					"style": "double",
 					"width": "4px",
 					"radius": "0"
-				},
-				"outline": {
-					"borderWidth": "1px"
 				}
 			},
 			"pattern": {

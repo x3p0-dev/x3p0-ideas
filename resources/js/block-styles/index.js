@@ -15,4 +15,5 @@ domReady(() => {
 	// Remove core block styles.
 	unregisterBlockStyle('core/separator', 'dots');
 	unregisterBlockStyle('core/social-links', 'pill-shape');
+	unregisterBlockStyle('core/tag-cloud', 'outline');
 });
