@@ -1,10 +1,11 @@
 {
 	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
 	"version": 3,
-	"title": "Buttons: Primary",
+	"title": "Fill: Primary",
 	"slug": "buttons-primary",
 	"blockTypes": [
 		"core/post-terms",
+		"core/social-links",
 		"core/tag-cloud"
 	],
 	"styles": {
@@ -15,13 +16,13 @@
 		"elements": {
 			"link": {
 				"border": {
-					"radius": "var:custom|global|border|radius"
+					"radius": { "ref": "styles.elements.button.border.radius" }
 				},
 				"color": {
 					"background": { "ref": "styles.elements.button.color.background" },
 					"text": { "ref": "styles.elements.button.color.text" }
 				},
-				"shadow": "var:preset|shadow|md",
+				"shadow": { "ref": "styles.elements.button.shadow" },
 				"spacing": {
 					"padding": {
 						"top": { "ref": "styles.elements.button.spacing.padding.top" },
@@ -36,13 +37,18 @@
 					"lineHeight": { "ref": "styles.elements.button.typography.lineHeight" },
 					"textDecoration": "none"
 				},
+				":active": {
+					"typography": {
+						"textDecoration": { "ref": "styles.elements.button.:focus.typography.textDecoration" }
+					}
+				},
 				":focus": {
 					"color": {
 						"background": { "ref": "styles.elements.button.:focus.color.background" },
 						"text": { "ref": "styles.elements.button.:focus.color.text" }
 					},
 					"typography": {
-						"textDecoration": "underline"
+						"textDecoration": { "ref": "styles.elements.button.:focus.typography.textDecoration" }
 					}
 				},
 				":hover": {
@@ -51,7 +57,41 @@
 						"text": { "ref": "styles.elements.button.:hover.color.text" }
 					},
 					"typography": {
-						"textDecoration": "underline"
+						"textDecoration": { "ref": "styles.elements.button.:hover.typography.textDecoration" }
+					}
+				}
+			}
+		},
+		"blocks": {
+			"core/social-link": {
+				"color": {
+					"background": { "ref": "styles.elements.button.color.background" },
+					"text": { "ref": "styles.elements.button.color.text" }
+				},
+				"elements": {
+					"link": {
+						"border": {
+							"radius": { "ref": "styles.elements.button.border.radius" }
+						},
+						"shadow": { "ref": "styles.elements.button.shadow" },
+						":focus": {
+							"color": {
+								"background": { "ref": "styles.elements.button.:focus.color.background" },
+								"text": { "ref": "styles.elements.button.:focus.color.text" }
+							},
+							"typography": {
+								"textDecoration": { "ref": "styles.elements.button.:focus.typography.textDecoration" }
+							}
+						},
+						":hover": {
+							"color": {
+								"background": { "ref": "styles.elements.button.:hover.color.background" },
+								"text": { "ref": "styles.elements.button.:hover.color.text" }
+							},
+							"typography": {
+								"textDecoration": { "ref": "styles.elements.button.:hover.typography.textDecoration" }
+							}
+						}
 					}
 				}
 			}

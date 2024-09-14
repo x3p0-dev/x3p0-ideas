@@ -1,10 +1,11 @@
 {
 	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
 	"version": 3,
-	"title": "Buttons: Outline",
+	"title": "Outline",
 	"slug": "buttons-outline",
 	"blockTypes": [
 		"core/post-terms",
+		"core/social-links",
 		"core/tag-cloud"
 	],
 	"styles": {
@@ -52,6 +53,38 @@
 					},
 					"typography": {
 						"textDecoration": "underline !important"
+					}
+				}
+			}
+		},
+		"blocks": {
+			"core/social-link": {
+				"border": {
+					"color": "currentColor",
+					"style": "var:custom|global|outline|border-style",
+					"width": "var:custom|global|outline|border-width",
+					"radius": "var:custom|global|border|radius"
+				},
+				"color": {
+					"background": "transparent",
+					"text": "currentColor"
+				},
+				"elements": {
+					"link": {
+						"border": {
+							"width": "0"
+						},
+						"shadow": { "ref": "styles.elements.button.shadow" },
+						":focus": {
+							"typography": {
+								"textDecoration": { "ref": "styles.elements.button.:focus.typography.textDecoration" }
+							}
+						},
+						":hover": {
+							"typography": {
+								"textDecoration": { "ref": "styles.elements.button.:hover.typography.textDecoration" }
+							}
+						}
 					}
 				}
 			}

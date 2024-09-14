@@ -137,7 +137,7 @@ defined('ABSPATH') || exit;
 
 			<!-- wp:social-links {
 				"size":"has-small-icon-size",
-				"className":"is-style-fill",
+				"className":"is-style-buttons-primary",
 				"style":{
 					"spacing":{
 						"blockGap":{
@@ -151,7 +151,7 @@ defined('ABSPATH') || exit;
 					"justifyContent":"right"
 				}
 			} -->
-			<ul class="wp-block-social-links has-small-icon-size is-style-fill">
+			<ul class="wp-block-social-links has-small-icon-size is-style-buttons-primary">
 				<!-- wp:social-link {"url":"https://wordpress.org","service":"wordpress"} /-->
 				<!-- wp:social-link {"url":"https://github.com","service":"github"} /-->
 				<!-- wp:social-link {"url":"https://twitter.com","service":"twitter"} /-->

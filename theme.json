@@ -780,11 +780,6 @@
 				},
 				"shadow": "var:preset|shadow|lg",
 				"fadedGradient": "linear-gradient( 180deg, transparent -40%, var( --wp--preset--color--base ) 100% )",
-				"fill": {
-					"background": "var:preset|color|primary-500",
-					"hoverBackground": "var:preset|color|primary-700",
-					"color": "var:preset|color|base"
-				},
 				"outline": {
 					"borderColor": "currentColor",
 					"borderStyle": "var:custom|global|border|style",
@@ -1320,11 +1315,15 @@
 				"typography": {
 					"fontSize": "var:preset|font-size|sm",
 					"fontWeight": "500",
-					"lineHeight": "var:custom|line-height|sm"
+					"lineHeight": "var:custom|line-height|sm",
+					"textDecoration": "none"
 				},
 				":active": {
 					"outline": {
 						"width": "2px"
+					},
+					"typography": {
+						"textDecoration": "underline"
 					}
 				},
 				":focus": {
@@ -1334,6 +1333,9 @@
 					},
 					"outline": {
 						"width": "2px"
+					},
+					"typography": {
+						"textDecoration": "underline"
 					}
 				},
 				":hover": {
@@ -2047,20 +2049,6 @@
 					"blockGap": "var:preset|spacing|plus-1"
 				},
 				"variations": {
-					"fill": {
-						"blocks": {
-							"core/social-link": {
-								"border": {
-									"radius": "var:custom|global|border|radius"
-								},
-								"color": {
-									"background": "var:custom|global|fill|background",
-									"text": "var:custom|global|fill|color"
-								},
-								"shadow": "var:preset|shadow|md"
-							}
-						}
-					},
 					"logos-only": {
 						"blocks": {
 							"core/social-link": {
@@ -2078,22 +2066,6 @@
 									"width": "0"
 								},
 								"shadow": "none"
-							}
-						}
-					},
-					"outline": {
-						"blocks": {
-							"core/social-link": {
-								"border": {
-									"color": "var:custom|global|outline|border-color",
-									"style": "var:custom|global|outline|border-style",
-									"width": "var:custom|global|outline|border-width",
-									"radius": "var:custom|global|border|radius"
-								},
-								"color": {
-									"background": "transparent !important",
-									"text": "inherit !important"
-								}
 							}
 						}
 					}

@@ -229,9 +229,6 @@
 					"radius": "8px"
 				},
 				"shadow": "var:preset|shadow|lg",
-				"fill": {
-					"hoverBackground": "var:preset|color|primary-500"
-				},
 				"outline": {
 					"borderWidth": "1px"
 				}

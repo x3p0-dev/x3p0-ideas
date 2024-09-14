@@ -40,10 +40,6 @@
 					"width": "4px",
 					"radius": "0"
 				},
-				"fill": {
-					"hoverBackground": "var:preset|color|contrast",
-					"hoverColor": "var:preset|color|base"
-				},
 				"outline": {
 					"borderWidth": "1px"
 				}

@@ -15,7 +15,6 @@
 		"core/query"
 	],
 	"styles": {
-		"css": "--wp--custom--global--fill--background: var(--wp--preset--color--primary-700);\n--wp--custom--global--fill--hover-background: var(--wp--preset--color--primary-950);",
 		"color": {
 			"background": "var:custom|color|surface-default",
 			"text": "var:custom|color|text-default"
