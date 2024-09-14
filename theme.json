@@ -872,7 +872,7 @@
 					"text-primary": "var:preset|color|primary-700",
 					"text-hover": "inherit",
 					"text-on-primary": "var:preset|color|base",
-					"border": "var:preset|color|neutral-400"
+					"border": "var:preset|color|neutral-300"
 				}
 			},
 			"section-3": {
@@ -887,7 +887,7 @@
 					"text-primary": "var:preset|color|primary-700",
 					"text-hover": "inherit",
 					"text-on-primary": "var:preset|color|white",
-					"border": "var:preset|color|neutral-300"
+					"border": "var:preset|color|neutral-200"
 				}
 			},
 			"siteBlocks": {
