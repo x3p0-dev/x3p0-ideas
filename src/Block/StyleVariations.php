@@ -173,9 +173,7 @@ class StyleVariations implements Bootable
 				'flex' => __('Flexible', 'x3p0-ideas')
 			],
 			'core/post-terms' => [
-				'fill'    => __('Fill', 'x3p0-ideas'),
-				'icon'    => __('Icon', 'x3p0-ideas'),
-				'outline' => __('Outline', 'x3p0-ideas')
+				'icon' => __('Icon', 'x3p0-ideas')
 			],
 			'core/post-time-to-read' => [
 				'icon' => __('Icon', 'x3p0-ideas')
@@ -206,7 +204,6 @@ class StyleVariations implements Bootable
 				'pull'     => __('Pull',     'x3p0-ideas')
 			],
 			'core/tag-cloud' => [
-				'fill' => __('Fill', 'x3p0-ideas'),
 				'flat' => __('Flat', 'x3p0-ideas'),
 				'icon' => __('Icon', 'x3p0-ideas')
 			]

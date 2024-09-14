@@ -9,8 +9,8 @@
 	],
 	"styles": {
 		"typography": {
-			"fontSize": "var:preset|font-size|sm",
-			"lineHeight": "var:custom|line-height|sm"
+			"fontSize": { "ref": "styles.elements.button.typography.fontSize" },
+			"fontWeight": { "ref": "styles.elements.button.typography.fontWeight" }
 		},
 		"elements": {
 			"link": {
@@ -18,8 +18,8 @@
 					"radius": "var:custom|global|border|radius"
 				},
 				"color": {
-					"background": "var:custom|color|surface-primary",
-					"text": "var:custom|color|text-on-primary"
+					"background": { "ref": "styles.elements.button.color.background" },
+					"text": { "ref": "styles.elements.button.color.text" }
 				},
 				"shadow": "var:preset|shadow|md",
 				"spacing": {
@@ -33,13 +33,13 @@
 				"typography": {
 					"fontSize": "inherit !important",
 					"fontWeight": "inherit !important",
-					"lineHeight": "var:custom|line-height|sm",
+					"lineHeight": { "ref": "styles.elements.button.typography.lineHeight" },
 					"textDecoration": "none"
 				},
 				":focus": {
 					"color": {
-						"background": "var:custom|color|surface-primary-emphasis",
-						"text": "var:custom|color|text-on-primary"
+						"background": { "ref": "styles.elements.button.:focus.color.background" },
+						"text": { "ref": "styles.elements.button.:focus.color.text" }
 					},
 					"typography": {
 						"textDecoration": "underline"
@@ -47,8 +47,8 @@
 				},
 				":hover": {
 					"color": {
-						"background": "var:custom|color|surface-primary-emphasis",
-						"text": "var:custom|color|text-on-primary"
+						"background": { "ref": "styles.elements.button.:hover.color.background" },
+						"text": { "ref": "styles.elements.button.:hover.color.text" }
 					},
 					"typography": {
 						"textDecoration": "underline"

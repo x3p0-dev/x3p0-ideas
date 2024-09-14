@@ -1,28 +1,28 @@
 {
 	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
 	"version": 3,
-	"title": "Buttons: Secondary",
-	"slug": "buttons-secondary",
+	"title": "Buttons: Outline",
+	"slug": "buttons-outline",
 	"blockTypes": [
 		"core/post-terms",
 		"core/tag-cloud"
 	],
 	"styles": {
 		"typography": {
-			"fontSize": "var:preset|font-size|sm",
-			"lineHeight": "var:custom|line-height|sm"
+			"fontSize": { "ref": "styles.elements.button.typography.fontSize" },
+			"fontWeight": { "ref": "styles.elements.button.typography.fontWeight" }
 		},
 		"elements": {
 			"link": {
 				"border": {
-					"color": "var:custom|color|border-button-secondary",
+					"color": "currentColor",
 					"style": "var:custom|global|outline|border-style",
 					"width": "var:custom|global|outline|border-width",
 					"radius": "var:custom|global|border|radius"
 				},
 				"color": {
-					"background": "var:custom|color|surface-button-secondary",
-					"text": "var:custom|color|text-button-secondary"
+					"background": "transparent",
+					"text": "currentColor !important"
 				},
 				"spacing": {
 					"padding": {
@@ -35,12 +35,12 @@
 				"typography": {
 					"fontSize": "inherit !important",
 					"fontWeight": "inherit !important",
-					"lineHeight": "var:custom|line-height|sm",
+					"lineHeight": { "ref": "styles.elements.button.typography.lineHeight" },
 					"textDecoration": "none"
 				},
 				":focus": {
 					"color": {
-						"background": "var:custom|color|surface-button-secondary-hover"
+						"background": "transparent"
 					},
 					"typography": {
 						"textDecoration": "underline !important"
@@ -48,7 +48,7 @@
 				},
 				":hover": {
 					"color": {
-						"background": "var:custom|color|surface-button-secondary-hover"
+						"background": "transparent"
 					},
 					"typography": {
 						"textDecoration": "underline !important"

@@ -57,32 +57,11 @@
 // -----------------------------------------------------------------------------
 
 ///
-/// Secondary button style. The default styles are in `theme.json`, so this just
-/// includes the focus/hover styles, which cannot be set in `theme.json` for
-/// blocks.
-///
-/// @todo Rename to `.is-style-secondary`.
-/// @todo Provide fallback for Core `.is-style-outline`.
+/// Ensure underline on outline style buttons.
 ///
 .wp-block-button.is-style-outline .wp-element-button:where(
 	:focus,
 	:hover
 ) {
-	background-color: var(
-		--wp--custom--base--color--surface-button-secondary-hover,
-		transparent
-	);
-}
-
-.is-style-section-1 .wp-block-button.is-style-outline .wp-element-button {
-	background-color: var(--wp--custom--section-1--color--surface-button-secondary, transparent);
-	color: var(--wp--custom--section-1--color--text-button-secondary, inherit);
-	border-color: var(--wp--custom--section-1--color--border-button-secondary, transparent);
-}
-
-.is-style-section-1 .wp-block-button.is-style-outline .wp-element-button:where(
-	:focus,
-	:hover
-) {
-	background-color: var(--wp--custom--section-1--color--surface-button-secondary-hover, transparent);
+	text-decoration: underline;
 }

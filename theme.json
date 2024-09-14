@@ -771,13 +771,7 @@
 				"text-primary": "var:preset|color|primary-700",
 				"text-on-primary": "var:preset|color|base",
 				"text-hover": "inherit",
-				"border": "var:preset|color|neutral-200",
-
-				"surface-button-secondary": "transparent",
-				"surface-button-secondary-hover": "transparent",
-				"text-button-secondary": "currentColor",
-				"border-button-primary": "transparent",
-				"border-button-secondary": "currentColor"
+				"border": "var:preset|color|neutral-200"
 			},
 			"global": {
 				"border": {
@@ -885,13 +879,7 @@
 					"text-primary": "var:preset|color|primary-200",
 					"text-hover": "currentColor",
 					"text-on-primary": "var:preset|color|base",
-					"border": "var:preset|color|primary-900",
-
-					"border-button-primary": "transparent",
-					"border-button-secondary": "currentColor",
-					"surface-button-secondary": "transparent",
-					"surface-button-secondary-hover": "transparent",
-					"text-button-secondary": "currentColor"
+					"border": "var:preset|color|primary-900"
 				}
 			},
 			"section-2": {
@@ -908,13 +896,7 @@
 					"text-primary": "var:preset|color|primary-700",
 					"text-hover": "inherit",
 					"text-on-primary": "var:preset|color|base",
-					"border": "var:preset|color|neutral-400",
-
-					"border-button-primary": "transparent",
-					"border-button-secondary": "currentColor",
-					"surface-button-secondary": "transparent",
-					"surface-button-secondary-hover": "transparent",
-					"text-button-secondary": "currentColor"
+					"border": "var:preset|color|neutral-400"
 				}
 			},
 			"section-3": {
@@ -931,13 +913,7 @@
 					"text-primary": "var:preset|color|primary-700",
 					"text-hover": "inherit",
 					"text-on-primary": "var:preset|color|white",
-					"border": "var:preset|color|neutral-300",
-
-					"border-button-primary": "transparent",
-					"border-button-secondary": "currentColor",
-					"surface-button-secondary": "transparent",
-					"surface-button-secondary-hover": "transparent",
-					"text-button-secondary": "currentColor"
+					"border": "var:preset|color|neutral-300"
 				}
 			},
 			"siteBlocks": {
@@ -1325,7 +1301,7 @@
 		"elements": {
 			"button": {
 				"border": {
-					"color": "var:custom|color|border-button-primary",
+					"color": "transparent",
 					"radius": "var:custom|global|border|radius",
 					"style": "solid",
 					"width": "1px"
@@ -1509,13 +1485,13 @@
 					},
 					"outline": {
 						"border": {
-							"color": "var:custom|color|border-button-secondary",
+							"color": "currentColor",
 							"style": "var:custom|global|outline|border-style",
 							"width": "var:custom|global|outline|border-width"
 						},
 						"color": {
-							"background": "var:custom|color|surface-button-secondary",
-							"text": "var:custom|color|text-button-secondary"
+							"background": "transparent",
+							"text": "currentColor"
 						},
 						"outline": {
 							"color": "currentColor"
