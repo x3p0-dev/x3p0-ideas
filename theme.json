@@ -756,6 +756,9 @@
 				"text-primary": "var:preset|color|primary-700",
 				"text-on-primary": "var:preset|color|base",
 				"text-hover": "currentColor",
+				"icon-default": "currentColor",
+				"icon-muted": "var:preset|color|neutral-400",
+				"icon-primary": "var:preset|color|primary-700",
 				"border": "var:preset|color|neutral-200"
 			},
 			"global": {
@@ -857,6 +860,9 @@
 					"text-primary": "var:preset|color|primary-200",
 					"text-hover": "currentColor",
 					"text-on-primary": "var:preset|color|base",
+					"icon-default": "currentColor",
+					"icon-muted": "var:preset|color|primary-500",
+					"icon-primary": "var:preset|color|primary-50",
 					"border": "var:preset|color|primary-900"
 				}
 			},
@@ -872,6 +878,9 @@
 					"text-primary": "var:preset|color|primary-700",
 					"text-hover": "inherit",
 					"text-on-primary": "var:preset|color|base",
+					"icon-default": "currentColor",
+					"icon-muted": "var:preset|color|neutral-400",
+					"icon-primary": "var:preset|color|primary-700",
 					"border": "var:preset|color|neutral-300"
 				}
 			},
@@ -887,6 +896,9 @@
 					"text-primary": "var:preset|color|primary-700",
 					"text-hover": "inherit",
 					"text-on-primary": "var:preset|color|white",
+					"icon-default": "currentColor",
+					"icon-muted": "var:preset|color|neutral-400",
+					"icon-primary": "var:preset|color|primary-700",
 					"border": "var:preset|color|neutral-200"
 				}
 			},

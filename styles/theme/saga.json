@@ -34,6 +34,9 @@
 				"color": {
 					"surface-primary": "var:preset|color|primary-600",
 					"surface-primary-emphasis": "var:preset|color|contrast",
+					"icon-default": "currentColor",
+					"icon-muted": "var:preset|color|neutral-400",
+					"icon-primary": "var:preset|color|primary-600",
 					"border": "var:preset|color|neutral-100"
 				}
 			},
@@ -48,6 +51,9 @@
 					"text-muted": "var:preset|color|neutral-400",
 					"text-primary": "var:preset|color|primary-200",
 					"text-hover": "var:preset|color|primary-200",
+					"icon-default": "currentColor",
+					"icon-muted": "var:preset|color|neutral-500",
+					"icon-primary": "var:preset|color|primary-600",
 					"border": "var:preset|color|neutral-800"
 				}
 			},
@@ -55,6 +61,9 @@
 				"color": {
 					"surface-primary": "var:preset|color|primary-600",
 					"surface-primary-emphasis": "var:preset|color|contrast",
+					"icon-default": "currentColor",
+					"icon-muted": "var:preset|color|neutral-400",
+					"icon-primary": "var:preset|color|primary-600",
 					"border": "var:preset|color|neutral-300"
 				}
 			},
@@ -62,6 +71,9 @@
 				"color": {
 					"surface-primary": "var:preset|color|primary-600",
 					"surface-primary-emphasis": "var:preset|color|contrast",
+					"icon-default": "currentColor",
+					"icon-muted": "var:preset|color|neutral-400",
+					"icon-primary": "var:preset|color|primary-600",
 					"border": "var:preset|color|neutral-200"
 				}
 			},
