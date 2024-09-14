@@ -777,12 +777,7 @@
 					"radius": "6px"
 				},
 				"shadow": "var:preset|shadow|lg",
-				"fadedGradient": "linear-gradient( 180deg, transparent -40%, var( --wp--preset--color--base ) 100% )",
-				"outline": {
-					"borderColor": "currentColor",
-					"borderStyle": "var:custom|global|border|style",
-					"borderWidth": "1px"
-				}
+				"fadedGradient": "linear-gradient( 180deg, transparent -40%, var( --wp--preset--color--base ) 100% )"
 			},
 			"elements": {
 				"label": {
@@ -1468,8 +1463,8 @@
 					"outline": {
 						"border": {
 							"color": "currentColor",
-							"style": "var:custom|global|outline|border-style",
-							"width": "var:custom|global|outline|border-width"
+							"style": "var:custom|global|border|style",
+							"width": "1px"
 						},
 						"color": {
 							"background": "transparent",

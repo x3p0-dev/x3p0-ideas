@@ -16,14 +16,17 @@
 		"elements": {
 			"link": {
 				"border": {
-					"color": "currentColor",
-					"style": "var:custom|global|outline|border-style",
-					"width": "var:custom|global|outline|border-width",
-					"radius": "var:custom|global|border|radius"
+					"color": { "ref": "styles.blocks.core/button.variations.outline.border.color" },
+					"style": { "ref": "styles.blocks.core/button.variations.outline.border.style" },
+					"width": { "ref": "styles.blocks.core/button.variations.outline.border.width" },
+					"radius": { "ref": "styles.blocks.core/button.variations.outline.border.radius" }
 				},
 				"color": {
-					"background": "transparent",
-					"text": "currentColor !important"
+					"background": { "ref": "styles.blocks.core/button.variations.outline.color.background" },
+					"text": { "ref": "styles.blocks.core/button.variations.outline.color.text" }
+				},
+				"outline": {
+					"color": { "ref": "styles.blocks.core/button.variations.outline.outline.color" }
 				},
 				"spacing": {
 					"padding": {
@@ -60,14 +63,14 @@
 		"blocks": {
 			"core/social-link": {
 				"border": {
-					"color": "currentColor",
-					"style": "var:custom|global|outline|border-style",
-					"width": "var:custom|global|outline|border-width",
-					"radius": "var:custom|global|border|radius"
+					"color": { "ref": "styles.blocks.core/button.variations.outline.border.color" },
+					"style": { "ref": "styles.blocks.core/button.variations.outline.border.style" },
+					"width": { "ref": "styles.blocks.core/button.variations.outline.border.width" },
+					"radius": { "ref": "styles.blocks.core/button.variations.outline.border.radius" }
 				},
 				"color": {
-					"background": "transparent",
-					"text": "currentColor"
+					"background": { "ref": "styles.blocks.core/button.variations.outline.color.background" },
+					"text": { "ref": "styles.blocks.core/button.variations.outline.color.text" }
 				},
 				"elements": {
 					"link": {
