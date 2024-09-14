@@ -10,19 +10,19 @@
 @use '../tools/inline-icon';
 
 .wp-embed-share-dialog {
-	color: var( --color );
-	background: var( --background );
+	color: var(--color);
+	background: var(--background);
 }
 
 .wp-embed-share-dialog-text {
-	padding: var( --wp--style--block-gap );
-	margin: var( --wp--style--block-gap ) 0 0;
+	padding: var(--wp--style--block-gap);
+	margin: var(--wp--style--block-gap) 0 0;
 }
 
 .wp-embed-share-tabs {
 	display: flex;
 	align-items: center;
-	gap: var( --wp--preset--spacing--plus-3 );
+	gap: var(--wp--preset--spacing--plus-3);
 	margin: 0;
 }
 
@@ -54,54 +54,54 @@
 }
 
 .wp-embed-share-tab {
-	margin: var( --wp--preset--spacing--minus-1 ) 0 0;
+	margin: var(--wp--preset--spacing--minus-1) 0 0;
 }
 
 .wp-embed-share-input {
 	display: block;
 	margin: 0;
 	appearance: none;
-	padding: var( --wp--preset--spacing--minus-1 );
+	padding: var(--wp--preset--spacing--minus-1);
 	height: revert;
 	font-family: var(
 		--wp--preset--font-family--mono,
 		ui-monospace, 'Fira Code', 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace
 	);
-	font-size: var( --wp--preset--font-size--sm );
+	font-size: var(--wp--preset--font-size--sm);
 	font-style: normal;
 	font-weight: 400;
-	line-height: var( --wp--custom--line-height--sm );
+	line-height: var(--wp--custom--line-height--sm);
 
 	// Note that we're flipping the color and background colors.
-	color: var( --background );
-	background: var( --color );
-	border: 1px solid var( --background );
-	border-radius: var( --border-radius );
+	color: var(--background);
+	background: var(--color);
+	border: 1px solid var(--background);
+	border-radius: var(--border-radius);
 
 	&textarea {
-		height: var( --wp--preset--spacing--plus-10 );
+		height: var(--wp--preset--spacing--plus-10);
 	}
 
 	&:focus {
-		outline: 2px solid var( --color );
+		outline: 2px solid var(--color);
 		outline-offset: 2px;
 	}
 }
 
 .wp-embed-share-tab .wp-embed-share-description {
-	margin: var( --wp--preset--spacing--minus-1 ) 0 0;
-	font-size: var( --wp--preset--font-size--sm );
-	line-height: var( --wp--custom--line-height--sm );
+	margin: var(--wp--preset--spacing--minus-1) 0 0;
+	font-size: var(--wp--preset--font-size--sm);
+	line-height: var(--wp--custom--line-height--sm);
 	font-style: normal;
 	color: inherit;
 }
 
 .wp-embed-share-dialog-close {
-	top: var( --wp--style--block-gap );
-	right: var( --wp--style--block-gap );
+	top: var(--wp--style--block-gap);
+	right: var(--wp--style--block-gap);
 	font-size: inherit;
-	color: var( --wp--preset--color--base );
-	@include inline-icon.prefix( icon.get-url( 'close' ) );
+	color: var(--wp--preset--color--base);
+	@include inline-icon.prefix(icon.get-url('close'));
 
 	.dashicons {
 		display: none !important;
