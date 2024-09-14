@@ -28,17 +28,25 @@
 		"custom": {
 			"variation": "th5",
 			"color": {
-				"text-muted": "var:preset|color|neutral-700",
-				"border": "var:preset|color|neutral-100"
+				"text": {
+					"muted": "var:preset|color|neutral-700"
+				},
+				"border": {
+					"default": "var:preset|color|neutral-100"
+				}
 			},
 			"section-2": {
 				"color": {
-					"border": "var:preset|color|neutral-200"
+					"border": {
+						"default": "var:preset|color|neutral-200"
+					}
 				}
 			},
 			"section-3": {
 				"color": {
-					"border": "var:preset|color|neutral-200"
+					"border": {
+						"default": "var:preset|color|neutral-200"
+					}
 				}
 			},
 			"elements": {
@@ -453,7 +461,7 @@
 		"variations": {
 			"archive-header": {
 				"color": {
-					"background": "var:custom|color|surface-contrast"
+					"background": "var:custom|color|surface|contrast"
 				},
 				"spacing": {
 					"padding": {
@@ -469,7 +477,7 @@
 			},
 			"site-footer": {
 				"color": {
-					"background": "var:custom|color|surface-contrast"
+					"background": "var:custom|color|surface|contrast"
 				}
 			}
 		}

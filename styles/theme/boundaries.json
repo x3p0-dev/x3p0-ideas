@@ -16,22 +16,34 @@
 		"custom": {
 			"variation": "boundaries",
 			"color": {
-				"text-primary": "currentColor",
-				"text-hover": "var:preset|color|primary-700",
-				"border": "var:preset|color|neutral-300"
+				"text": {
+					"primary": "currentColor",
+					"hover": "var:preset|color|primary-700"
+				},
+				"border": {
+					"default": "var:preset|color|neutral-300"
+				}
 			},
 			"section-2": {
 				"color": {
-					"text-primary": "currentColor",
-					"text-hover": "var:preset|color|primary-700",
-					"border": "var:preset|color|neutral-400"
+					"text": {
+						"primary": "currentColor",
+						"hover": "var:preset|color|primary-700"
+					},
+					"border": {
+						"default": "var:preset|color|neutral-400"
+					}
 				}
 			},
 			"section-3": {
 				"color": {
-					"text-primary": "currentColor",
-					"text-hover": "var:preset|color|primary-700",
-					"border": "var:preset|color|neutral-300"
+					"text": {
+						"primary": "currentColor",
+						"hover": "var:preset|color|primary-700"
+					},
+					"border": {
+						"default": "var:preset|color|neutral-300"
+					}
 				}
 			},
 			"global": {
@@ -362,7 +374,7 @@
 				"elements": {
 					"cite": {
 						"color": {
-							"text": "var:custom|color|text-muted"
+							"text": "var:custom|color|text|muted"
 						},
 						"typography": {
 							"fontStyle": "normal"
@@ -401,7 +413,7 @@
 				"elements": {
 					"cite": {
 						"color": {
-							"text": "var:custom|color|text-muted"
+							"text": "var:custom|color|text|muted"
 						},
 						"typography": {
 							"fontStyle": "normal"
@@ -454,7 +466,7 @@
 			},
 			"meta": {
 				"color": {
-					"text": "var:custom|color|text-muted"
+					"text": "var:custom|color|text|muted"
 				}
 			},
 			"site-footer": {

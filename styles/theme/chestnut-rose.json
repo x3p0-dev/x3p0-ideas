@@ -221,7 +221,9 @@
 		"custom": {
 			"variation": "chestnut-rose",
 			"color": {
-				"border": "var:preset|color|neutral-50"
+				"border": {
+					"default": "var:preset|color|neutral-50"
+				}
 			},
 			"global": {
 				"border": {

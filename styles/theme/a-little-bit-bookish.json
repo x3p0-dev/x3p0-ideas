@@ -6,7 +6,9 @@
 		"custom": {
 			"variation": "a-little-bit-bookish",
 			"color": {
-				"border": "var:preset|color|neutral-100"
+				"border": {
+					"default": "var:preset|color|neutral-100"
+				}
 			},
 			"global": {
 				"border": {

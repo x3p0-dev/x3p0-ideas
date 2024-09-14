@@ -32,70 +32,70 @@ body {
 // Section-based variables.
 
 .is-style-section-1 {
-	--wp--custom--color--surface-default: var(--wp--custom--section-1--color--surface-default);
-	--wp--custom--color--surface-emphasis: var(--wp--custom--section-1--color--surface-emphasis);
-	--wp--custom--color--surface-contrast: var(--wp--custom--section-1--color--surface-contrast);
-	--wp--custom--color--surface-primary: var(--wp--custom--section-1--color--surface-primary);
-	--wp--custom--color--surface-primary-emphasis: var(--wp--custom--section-1--color--surface-primary-emphasis);
+	--wp--custom--color--surface--default: var(--wp--custom--section-1--color--surface--default);
+	--wp--custom--color--surface--emphasis: var(--wp--custom--section-1--color--surface--emphasis);
+	--wp--custom--color--surface--contrast: var(--wp--custom--section-1--color--surface--contrast);
+	--wp--custom--color--surface--primary: var(--wp--custom--section-1--color--surface--primary);
+	--wp--custom--color--surface--primary-emphasis: var(--wp--custom--section-1--color--surface--primary-emphasis);
 
-	--wp--custom--color--text-default: var(--wp--custom--section-1--color--text-default);
-	--wp--custom--color--text-muted: var(--wp--custom--section-1--color--text-muted);
-	--wp--custom--color--text-primary: var(--wp--custom--section-1--color--text-primary);
-	--wp--custom--color--text-hover: var(--wp--custom--section-1--color--text-hover);
-	--wp--custom--color--text-on-primary: var(--wp--custom--section-1--color--text-on-primary);
+	--wp--custom--color--text--default: var(--wp--custom--section-1--color--text--default);
+	--wp--custom--color--text--muted: var(--wp--custom--section-1--color--text--muted);
+	--wp--custom--color--text--primary: var(--wp--custom--section-1--color--text--primary);
+	--wp--custom--color--text--hover: var(--wp--custom--section-1--color--text--hover);
+	--wp--custom--color--text--on-primary: var(--wp--custom--section-1--color--text--on-primary);
 
-	--wp--custom--color--icon-default: var(--wp--custom--section-1--color--icon-default);
-	--wp--custom--color--icon-muted: var(--wp--custom--section-1--color--icon-muted);
-	--wp--custom--color--icon-primary: var(--wp--custom--section-1--color--icon-primary);
+	--wp--custom--color--icon--default: var(--wp--custom--section-1--color--icon--default);
+	--wp--custom--color--icon--muted: var(--wp--custom--section-1--color--icon--muted);
+	--wp--custom--color--icon--primary: var(--wp--custom--section-1--color--icon--primary);
 }
 
 .is-style-section-1 > * {
-	--wp--custom--color--border: var(--wp--custom--section-1--color--border, currentColor);
-	--wp--custom--global--border--color: var(--wp--custom--section-1--color--border, currentColor);
+	--wp--custom--color--border--default: var(--wp--custom--section-1--color--border--default, currentColor);
+	--wp--custom--global--border--color: var(--wp--custom--section-1--color--border--default, currentColor);
 }
 
 .is-style-section-2 {
-	--wp--custom--color--surface-default: var(--wp--custom--section-2--color--surface-default);
-	--wp--custom--color--surface-emphasis: var(--wp--custom--section-2--color--surface-emphasis);
-	--wp--custom--color--surface-contrast: var(--wp--custom--section-2--color--surface-contrast);
-	--wp--custom--color--surface-primary: var(--wp--custom--section-2--color--surface-primary);
-	--wp--custom--color--surface-primary-emphasis: var(--wp--custom--section-2--color--surface-primary-emphasis);
+	--wp--custom--color--surface--default: var(--wp--custom--section-2--color--surface--default);
+	--wp--custom--color--surface--emphasis: var(--wp--custom--section-2--color--surface--emphasis);
+	--wp--custom--color--surface--contrast: var(--wp--custom--section-2--color--surface--contrast);
+	--wp--custom--color--surface--primary: var(--wp--custom--section-2--color--surface--primary);
+	--wp--custom--color--surface--primary-emphasis: var(--wp--custom--section-2--color--surface--primary-emphasis);
 
-	--wp--custom--color--text-default: var(--wp--custom--section-2--color--text-default);
-	--wp--custom--color--text-muted: var(--wp--custom--section-2--color--text-muted);
-	--wp--custom--color--text-primary: var(--wp--custom--section-2--color--text-primary);
-	--wp--custom--color--text-hover: var(--wp--custom--section-2--color--text-hover);
-	--wp--custom--color--text-on-primary: var(--wp--custom--section-2--color--text-on-primary);
+	--wp--custom--color--text--default: var(--wp--custom--section-2--color--text--default);
+	--wp--custom--color--text--muted: var(--wp--custom--section-2--color--text--muted);
+	--wp--custom--color--text--primary: var(--wp--custom--section-2--color--text--primary);
+	--wp--custom--color--text--hover: var(--wp--custom--section-2--color--text--hover);
+	--wp--custom--color--text--on-primary: var(--wp--custom--section-2--color--text--on-primary);
 
-	--wp--custom--color--icon-default: var(--wp--custom--section-2--color--icon-default);
-	--wp--custom--color--icon-muted: var(--wp--custom--section-2--color--icon-muted);
-	--wp--custom--color--icon-primary: var(--wp--custom--section-2--color--icon-primary);
+	--wp--custom--color--icon--default: var(--wp--custom--section-2--color--icon--default);
+	--wp--custom--color--icon--muted: var(--wp--custom--section-2--color--icon--muted);
+	--wp--custom--color--icon--primary: var(--wp--custom--section-2--color--icon--primary);
 }
 
 .is-style-section-2 > * {
-	--wp--custom--color--border: var(--wp--custom--section-2--color--border, currentColor);
-	--wp--custom--global--border--color: var(--wp--custom--section-2--color--border, currentColor);
+	--wp--custom--color--border--default: var(--wp--custom--section-2--color--border--default, currentColor);
+	--wp--custom--global--border--color: var(--wp--custom--section-2--color--border--default, currentColor);
 }
 
 .is-style-section-3 {
-	--wp--custom--color--surface-default: var(--wp--custom--section-3--color--surface-default);
-	--wp--custom--color--surface-emphasis: var(--wp--custom--section-3--color--surface-emphasis);
-	--wp--custom--color--surface-contrast: var(--wp--custom--section-3--color--surface-contrast);
-	--wp--custom--color--surface-primary: var(--wp--custom--section-3--color--surface-primary);
-	--wp--custom--color--surface-primary-emphasis: var(--wp--custom--section-3--color--surface-primary-emphasis);
+	--wp--custom--color--surface--default: var(--wp--custom--section-3--color--surface--default);
+	--wp--custom--color--surface--emphasis: var(--wp--custom--section-3--color--surface--emphasis);
+	--wp--custom--color--surface--contrast: var(--wp--custom--section-3--color--surface--contrast);
+	--wp--custom--color--surface--primary: var(--wp--custom--section-3--color--surface--primary);
+	--wp--custom--color--surface--primary-emphasis: var(--wp--custom--section-3--color--surface--primary-emphasis);
 
-	--wp--custom--color--text-default: var(--wp--custom--section-3--color--text-default);
-	--wp--custom--color--text-muted: var(--wp--custom--section-3--color--text-muted);
-	--wp--custom--color--text-primary: var(--wp--custom--section-3--color--text-primary);
-	--wp--custom--color--text-hover: var(--wp--custom--section-3--color--text-hover);
-	--wp--custom--color--text-on-primary: var(--wp--custom--section-3--color--text-on-primary);
+	--wp--custom--color--text--default: var(--wp--custom--section-3--color--text--default);
+	--wp--custom--color--text--muted: var(--wp--custom--section-3--color--text--muted);
+	--wp--custom--color--text--primary: var(--wp--custom--section-3--color--text--primary);
+	--wp--custom--color--text--hover: var(--wp--custom--section-3--color--text--hover);
+	--wp--custom--color--text--on-primary: var(--wp--custom--section-3--color--text--on-primary);
 
-	--wp--custom--color--icon-default: var(--wp--custom--section-3--color--icon-default);
-	--wp--custom--color--icon-muted: var(--wp--custom--section-3--color--icon-muted);
-	--wp--custom--color--icon-primary: var(--wp--custom--section-3--color--icon-primary);
+	--wp--custom--color--icon--default: var(--wp--custom--section-3--color--icon--default);
+	--wp--custom--color--icon--muted: var(--wp--custom--section-3--color--icon--muted);
+	--wp--custom--color--icon--primary: var(--wp--custom--section-3--color--icon--primary);
 }
 
 .is-style-section-3 > * {
-	--wp--custom--color--border: var(--wp--custom--section-3--color--border, currentColor);
-	--wp--custom--global--border--color: var(--wp--custom--section-3--color--border, currentColor);
+	--wp--custom--color--border--default: var(--wp--custom--section-3--color--border--default, currentColor);
+	--wp--custom--global--border--color: var(--wp--custom--section-3--color--border--default, currentColor);
 }

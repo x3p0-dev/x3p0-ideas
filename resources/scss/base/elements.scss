@@ -88,8 +88,8 @@ abbr[title] {
 	font-size:   var(--wp--custom--elements--code--font-size, inherit);
 
 	// Color.
-	color:      var(--wp--custom--color--text-default, var(--wp--custom--elements--code--color, inherit));
-	background: var(--wp--custom--color--surface-emphasis, var(--wp--custom--elements--code--background, transparent));
+	color:      var(--wp--custom--color--text--default, var(--wp--custom--elements--code--color, inherit));
+	background: var(--wp--custom--color--surface--emphasis, var(--wp--custom--elements--code--background, transparent));
 
 	// Border.
 	border-color:  var(--wp--custom--elements--code--border-color, transparent);
@@ -108,16 +108,16 @@ abbr[title] {
 
 del,
 s {
-	color: var(--wp--custom--color--text-muted, var(--wp--custom--elements--del--color, inherit));
+	color: var(--wp--custom--color--text--muted, var(--wp--custom--elements--del--color, inherit));
 	text-decoration: var(
 		--wp--custom--elements--del--text-decoration,
-		var(--wp--custom--color--text-primary, currentColor) line-through solid clamp(2px, 0.125em, 0.125em)
+		var(--wp--custom--color--text--primary, currentColor) line-through solid clamp(2px, 0.125em, 0.125em)
 	);
 }
 
 .is-style-section-1 :where(del, s) {
-	color: var(--wp--custom--section-1--color--text-muted, inherit);
-	text-decoration-color: var(--wp--custom--section-1--color--text-muted, inherit);
+	color: var(--wp--custom--section-1--color--text--muted, inherit);
+	text-decoration-color: var(--wp--custom--section-1--color--text--muted, inherit);
 }
 
 // -----------------------------------------------------------------------------
@@ -190,7 +190,7 @@ kbd {
 // -----------------------------------------------------------------------------
 
 li::marker {
-	color: var(--wp--custom--color--text-muted, var(--wp--custom--marker--color, var(--wp--custom--elements--marker--color)));
+	color: var(--wp--custom--color--text--muted, var(--wp--custom--marker--color, var(--wp--custom--elements--marker--color)));
 }
 
 // -----------------------------------------------------------------------------
@@ -212,8 +212,8 @@ mark:where(:not(.has-inline-color):not([style])) {
 	font-size:   var(--wp--custom--elements--mark--font-size, inherit);
 
 	// Color.
-	color:      var(--wp--custom--color--text-on-primary, var(--wp--custom--elements--mark--color, currentColor));
-	background: var(--wp--custom--color--surface-primary, var(--wp--custom--elements--mark--background, transparent));
+	color:      var(--wp--custom--color--text--on-primary, var(--wp--custom--elements--mark--color, currentColor));
+	background: var(--wp--custom--color--surface--primary, var(--wp--custom--elements--mark--background, transparent));
 
 	// Border.
 	border-color:  var(--wp--custom--elements--mark--border-color, transparent);

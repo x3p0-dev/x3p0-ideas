@@ -16,8 +16,8 @@
 	],
 	"styles": {
 		"color": {
-			"background": "var:custom|color|surface-default",
-			"text": "var:custom|color|text-default"
+			"background": "var:custom|color|surface|default",
+			"text": "var:custom|color|text|default"
 		},
 		"spacing": {
 			"padding": {
@@ -30,16 +30,16 @@
 		"elements": {
 			"link": {
 				"color": {
-					"text": "var:custom|color|text-primary"
+					"text": "var:custom|color|text|primary"
 				},
 				":focus": {
 					"color": {
-						"text": "var:custom|color|text-hover"
+						"text": "var:custom|color|text|hover"
 					}
 				},
 				":hover": {
 					"color": {
-						"text": "var:custom|color|text-hover"
+						"text": "var:custom|color|text|hover"
 					}
 				}
 			}

@@ -16,8 +16,8 @@
 	],
 	"styles": {
 		"color": {
-			"background": "var:custom|section-1|color|surface-default",
-			"text": "var:custom|section-1|color|text-default"
+			"background": "var:custom|section-1|color|surface|default",
+			"text": "var:custom|section-1|color|text|default"
 		},
 		"spacing": {
 			"padding": {
@@ -30,7 +30,7 @@
 		"elements": {
 			"caption": {
 				"color": {
-					"text": "var:custom|section-1|color|text-muted"
+					"text": "var:custom|section-1|color|text|muted"
 				}
 			},
 			"cite": {
@@ -45,16 +45,16 @@
 			},
 			"link": {
 				"color": {
-					"text": "var:custom|color|text-primary"
+					"text": "var:custom|color|text|primary"
 				},
 				":focus": {
 					"color": {
-						"text": "var:custom|color|text-hover"
+						"text": "var:custom|color|text|hover"
 					}
 				},
 				":hover": {
 					"color": {
-						"text": "var:custom|color|text-hover"
+						"text": "var:custom|color|text|hover"
 					}
 				}
 			}

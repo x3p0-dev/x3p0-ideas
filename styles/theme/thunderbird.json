@@ -34,62 +34,85 @@
 		"custom": {
 			"variation": "thunderbird",
 			"color": {
-				"dark": "var:preset|color|contrast",
-				"surface-default": "var:preset|color|base",
-				"surface-emphasis": "var:preset|color|white",
-				"surface-contrast": "var:preset|color|neutral-50",
-				"surface-primary": "var:preset|color|primary-500",
-				"surface-primary-emphasis": "var:preset|color|neutral-950",
-				"text-default": "var:preset|color|contrast",
-				"text-muted": "var:preset|color|neutral-500",
-				"text-primary": "var:preset|color|primary-700",
-				"text-hover": "inherit",
-				"text-on-primary": "var:preset|color|base",
-				"border": "var:preset|color|neutral-300"
+				"surface": {
+					"default": "var:preset|color|base",
+					"emphasis": "var:preset|color|white",
+					"contrast": "var:preset|color|neutral-50",
+					"primary": "var:preset|color|primary-500",
+					"primary-emphasis": "var:preset|color|neutral-950"
+				},
+				"text": {
+					"default": "var:preset|color|contrast",
+					"muted": "var:preset|color|neutral-500",
+					"primary": "var:preset|color|primary-700",
+					"hover": "inherit",
+					"on-primary": "var:preset|color|base"
+				},
+				"border": {
+					"default": "var:preset|color|neutral-300"
+				}
 			},
 			"section-1": {
 				"color": {
-					"surface-default": "var:preset|color|primary-700",
-					"surface-emphasis": "var:preset|color|primary-800",
-					"surface-contrast": "var:preset|color|primary-900",
-					"surface-primary": "var:preset|color|primary-500",
-					"surface-primary-emphasis": "var:preset|color|primary-900",
-					"text-default": "var:preset|color|white",
-					"text-muted": "var:preset|color|primary-100",
-					"text-primary": "var:preset|color|primary-300",
-					"text-hover": "var:preset|color|primary-200",
-					"text-on-primary": "var:preset|color|base",
-					"border": "var:preset|color|primary-900"
+					"surface": {
+						"default": "var:preset|color|primary-700",
+						"emphasis": "var:preset|color|primary-800",
+						"contrast": "var:preset|color|primary-900",
+						"primary": "var:preset|color|primary-500",
+						"primary-emphasis": "var:preset|color|primary-900"
+					},
+					"text": {
+						"default": "var:preset|color|white",
+						"muted": "var:preset|color|primary-100",
+						"primary": "var:preset|color|primary-300",
+						"hover": "var:preset|color|primary-200",
+						"on-primary": "var:preset|color|base"
+					},
+					"border": {
+						"default": "var:preset|color|primary-900"
+					}
 				}
 			},
 			"section-2": {
 				"color": {
-					"surface-default": "var:preset|color|neutral-100",
-					"surface-emphasis": "var:preset|color|neutral-200",
-					"surface-contrast": "var:preset|color|neutral-300",
-					"surface-primary": "var:preset|color|primary-500",
-					"surface-primary-emphasis": "var:preset|color|primary-700",
-					"text-default": "var:preset|color|contrast",
-					"text-muted": "var:preset|color|neutral-700",
-					"text-primary": "var:preset|color|primary-700",
-					"text-hover": "inherit",
-					"text-on-primary": "var:preset|color|base",
-					"border": "var:preset|color|neutral-400"
+					"surface": {
+						"default": "var:preset|color|neutral-100",
+						"emphasis": "var:preset|color|neutral-200",
+						"contrast": "var:preset|color|neutral-300",
+						"primary": "var:preset|color|primary-500",
+						"primary-emphasis": "var:preset|color|primary-700"
+					},
+					"text": {
+						"default": "var:preset|color|contrast",
+						"muted": "var:preset|color|neutral-700",
+						"primary": "var:preset|color|primary-700",
+						"hover": "inherit",
+						"on-primary": "var:preset|color|base"
+					},
+					"border": {
+						"default": "var:preset|color|neutral-400"
+					}
 				}
 			},
 			"section-3": {
 				"color": {
-					"surface-default": "var:preset|color|white",
-					"surface-emphasis": "var:preset|color|neutral-100",
-					"surface-contrast": "var:preset|color|neutral-200",
-					"surface-primary": "var:preset|color|primary-500",
-					"surface-primary-emphasis": "var:preset|color|primary-700",
-					"text-default": "var:preset|color|contrast",
-					"text-muted": "var:preset|color|neutral-600",
-					"text-primary": "var:preset|color|primary-700",
-					"text-hover": "inherit",
-					"text-on-primary": "var:preset|color|base",
-					"border": "var:preset|color|neutral-300"
+					"surface": {
+						"default": "var:preset|color|white",
+						"emphasis": "var:preset|color|neutral-100",
+						"contrast": "var:preset|color|neutral-200",
+						"primary": "var:preset|color|primary-500",
+						"primary-emphasis": "var:preset|color|primary-700"
+					},
+					"text": {
+						"default": "var:preset|color|contrast",
+						"muted": "var:preset|color|neutral-600",
+						"primary": "var:preset|color|primary-700",
+						"hover": "inherit",
+						"on-primary": "var:preset|color|base"
+					},
+					"border": {
+						"default": "var:preset|color|neutral-300"
+					}
 				}
 			},
 			"global": {
@@ -460,7 +483,7 @@
 			},
 			"x3p0/breadcrumbs": {
 				"color": {
-					"text": "var:custom|color|text-muted",
+					"text": "var:custom|color|text|muted",
 					"gradient": "var:preset|gradient|90-deg-white-transparent"
 				},
 				"typography": {
@@ -491,7 +514,7 @@
 				"elements": {
 					"link": {
 						"color": {
-							"text": "var:custom|color|text-default"
+							"text": "var:custom|color|text|default"
 						}
 					}
 				}

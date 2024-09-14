@@ -31,7 +31,7 @@ li.is-style-check-circle {
 	@include inline-icon.prefix(icon.get-url('check-circle'));
 
 	&::before {
-		background-color: var(--wp--custom--color--icon-primary);
+		background-color: var(--wp--custom--color--icon--primary);
 	}
 }
 
@@ -42,7 +42,7 @@ li.is-style-cancel-circle {
 	@include inline-icon.prefix(icon.get-url('cancel-circle'));
 
 	&::before {
-		background-color: var(--wp--custom--color--icon-muted);
+		background-color: var(--wp--custom--color--icon--muted);
 	}
 }
 

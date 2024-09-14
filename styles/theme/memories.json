@@ -39,12 +39,16 @@
 			"variation": "memories",
 			"section-2": {
 				"color": {
-					"border": "var:preset|color|neutral-200"
+					"border": {
+						"default": "var:preset|color|neutral-200"
+					}
 				}
 			},
 			"section-3": {
 				"color": {
-					"border": "var:preset|color|neutral-200"
+					"border": {
+						"default": "var:preset|color|neutral-200"
+					}
 				}
 			},
 			"global": {
@@ -476,7 +480,7 @@
 			},
 			"meta": {
 				"color": {
-					"text": "var:custom|color|text-muted"
+					"text": "var:custom|color|text|muted"
 				},
 				"typography": {
 					"fontWeight": "500"

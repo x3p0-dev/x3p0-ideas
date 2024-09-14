@@ -30,28 +30,50 @@
 		"custom": {
 			"variation": "extant",
 			"color": {
-				"surface-primary-emphasis": "var:preset|color|contrast",
-				"text-on-primary-hover": "var:preset|color|base",
-				"border": "var:preset|color|neutral-100"
+				"surface": {
+					"primary-emphasis": "var:preset|color|contrast"
+				},
+				"text": {
+					"on-primary-hover": "var:preset|color|base"
+				},
+				"border": {
+					"default": "var:preset|color|neutral-100"
+				}
 			},
 			"section-1": {
 				"color": {
-					"surface-primary-emphasis": "var:preset|color|contrast",
-					"text-on-primary-hover": "var:preset|color|base"
+					"surface": {
+						"primary-emphasis": "var:preset|color|contrast"
+					},
+					"text": {
+						"on-primary-hover": "var:preset|color|base"
+					}
 				}
 			},
 			"section-2": {
 				"color": {
-					"surface-primary-emphasis": "var:preset|color|contrast",
-					"text-on-primary-hover": "var:preset|color|base",
-					"border": "var:preset|color|neutral-100"
+					"surface": {
+						"primary-emphasis": "var:preset|color|contrast"
+					},
+					"text": {
+						"on-primary-hover": "var:preset|color|base"
+					},
+					"border": {
+						"default": "var:preset|color|neutral-100"
+					}
 				}
 			},
 			"section-3": {
 				"color": {
-					"surface-primary-emphasis": "var:preset|color|contrast",
-					"text-on-primary-hover": "var:preset|color|base",
-					"border": "var:preset|color|neutral-200"
+					"surface": {
+						"primary-emphasis": "var:preset|color|contrast"
+					},
+					"text": {
+						"on-primary-hover": "var:preset|color|base"
+					},
+					"border": {
+						"default": "var:preset|color|neutral-200"
+					}
 				}
 			},
 			"elements": {
@@ -424,7 +446,7 @@
 		"variations": {
 			"meta": {
 				"color": {
-					"text": "var:custom|color|text-muted"
+					"text": "var:custom|color|text|muted"
 				},
 				"elements": {
 					"link": {
