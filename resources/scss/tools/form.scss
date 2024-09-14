@@ -66,7 +66,7 @@
 	appearance:  none;
 	padding:     var(--wp--preset--spacing--minus-3) var(--wp--preset--spacing--minus-1);
 
-	color:       var(--wp--custom--color--text-emphasis, var(--wp--custom--elements--input--color, inherit));
+	color:       var(--wp--custom--color--text-default, var(--wp--custom--elements--input--color, inherit));
 	background:  var(--wp--custom--color--surface-emphasis, var(--wp--custom--elements--input--background, transparent));
 
 	font-family: var(--wp--custom--elements--input--font-family, inherit);

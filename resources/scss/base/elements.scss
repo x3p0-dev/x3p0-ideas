@@ -88,7 +88,7 @@ abbr[title] {
 	font-size:   var(--wp--custom--elements--code--font-size, inherit);
 
 	// Color.
-	color:      var(--wp--custom--color--text-emphasis, var(--wp--custom--elements--code--color, inherit));
+	color:      var(--wp--custom--color--text-default, var(--wp--custom--elements--code--color, inherit));
 	background: var(--wp--custom--color--surface-emphasis, var(--wp--custom--elements--code--background, transparent));
 
 	// Border.
@@ -99,11 +99,6 @@ abbr[title] {
 
 	// Box shadow.
 	box-shadow: var(--wp--custom--elements--code--shadow, none);
-}
-
-.is-style-section-1 :where(:not(pre) > code) {
-	color:      var(--wp--custom--section-1--color--text-emphasis, inherit);
-	background: var(--wp--custom--section-1--color--surface-emphasis, transparent);
 }
 
 // -----------------------------------------------------------------------------
@@ -217,8 +212,8 @@ mark:where(:not(.has-inline-color):not([style])) {
 	font-size:   var(--wp--custom--elements--mark--font-size, inherit);
 
 	// Color.
-	color:      var(--wp--custom--color--text-primary, var(--wp--custom--elements--mark--color, currentColor));
-	background: var(--wp--custom--color--surface-highlight, var(--wp--custom--elements--mark--background, transparent));
+	color:      var(--wp--custom--color--text-on-primary, var(--wp--custom--elements--mark--color, currentColor));
+	background: var(--wp--custom--color--surface-primary, var(--wp--custom--elements--mark--background, transparent));
 
 	// Border.
 	border-color:  var(--wp--custom--elements--mark--border-color, transparent);

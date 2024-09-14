@@ -42,12 +42,10 @@
 					"surface-default": "var:preset|color|neutral-950",
 					"surface-emphasis": "var:preset|color|neutral-900",
 					"surface-contrast": "var:preset|color|neutral-800",
-					"surface-highlight": "var:preset|color|primary-700",
 					"surface-primary": "var:preset|color|primary-600",
 					"surface-primary-emphasis": "var:preset|color|primary-800",
 					"text-default": "var:preset|color|white",
 					"text-muted": "var:preset|color|neutral-400",
-					"text-emphasis": "var:preset|color|neutral-50",
 					"text-primary": "var:preset|color|primary-200",
 					"text-hover": "var:preset|color|primary-200",
 					"border": "var:preset|color|neutral-800"
@@ -375,7 +373,7 @@
 						"elements": {
 							"link": {
 								"color": {
-									"text": "var:custom|color|text-emphasis"
+									"text": "var:custom|color|text-default"
 								},
 								"typography": {
 									"fontFamily": "var:preset|font-family|primary",
