@@ -67,7 +67,7 @@ class Parts implements Bootable
 			'area'        => 'author-header',
 			'area_tag'    => 'header',
 			'label'       => __('Author Header', 'x3p0-ideas'),
-			'description' => __('The Archive Header template part defines an area that contains the archive title and description for archive-type pages.', 'x3p0-ideas'),
+			'description' => __('The Author Header template part defines an area that contains the author name and biography for author archives.', 'x3p0-ideas'),
 			'icon'        => 'layout'
 		];
 
@@ -75,7 +75,7 @@ class Parts implements Bootable
 			'area'        => 'search-header',
 			'area_tag'    => 'header',
 			'label'       => __('Search Header', 'x3p0-ideas'),
-			'description' => __('The Archive Header template part defines an area that contains the archive title and description for archive-type pages.', 'x3p0-ideas'),
+			'description' => __('The Search Header template part defines an area that contains the search title and description for search results.', 'x3p0-ideas'),
 			'icon'        => 'layout'
 		];
 

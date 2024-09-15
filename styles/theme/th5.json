@@ -432,15 +432,6 @@
 					"fontFamily": "var:preset|font-family|primary"
 				}
 			},
-			"core/term-description": {
-				"color": {
-					"text": "var:preset|color|neutral-900"
-				},
-				"typography": {
-					"fontStyle": "italic",
-					"lineHeight": "var:custom|font-size|lg"
-				}
-			},
 			"core/verse": {
 				"typography": {
 					"fontStyle": "italic"

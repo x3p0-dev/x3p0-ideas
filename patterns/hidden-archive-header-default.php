@@ -6,7 +6,7 @@
  * Inserter: no
  * Categories: x3p0-layout
  * Viewport Width: 1376
- * Block Types: core/template-part/taxonomy-header
+ * Block Types: core/template-part/archive-header
  */
 
 declare(strict_types=1);

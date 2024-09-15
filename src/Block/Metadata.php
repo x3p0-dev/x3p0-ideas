@@ -148,9 +148,10 @@ class Metadata implements Bootable
 	 */
 	private function coreCover(array $settings): array
 	{
-		$settings['supports']['color']           ??= [];
-		$settings['supports']['color']['button'] ??= true;
-		$settings['supports']['color']['link']   ??= true;
+		$settings['supports']['color']               ??= [];
+		$settings['supports']['color']['background'] = true;
+		$settings['supports']['color']['button']     = true;
+		$settings['supports']['color']['link']       = true;
 
 		return $settings;
 	}
