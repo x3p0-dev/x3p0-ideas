@@ -30,20 +30,18 @@
 		},
 		"custom": {
 			"variation": "saga",
-			"custom": {
-				"color": {
-					"surface": {
-						"primary": "var:preset|color|primary-600",
-						"primary-emphasis": "var:preset|color|contrast"
-					},
-					"icon": {
-						"default": "currentColor",
-						"muted": "var:preset|color|neutral-400",
-						"primary": "var:preset|color|primary-600"
-					},
-					"border": {
-						"default": "var:preset|color|neutral-100"
-					}
+			"color": {
+				"surface": {
+					"primary": "var:preset|color|primary-600",
+					"primary-emphasis": "var:preset|color|contrast"
+				},
+				"icon": {
+					"default": "currentColor",
+					"muted": "var:preset|color|neutral-400",
+					"primary": "var:preset|color|primary-600"
+				},
+				"border": {
+					"default": "var:preset|color|neutral-100"
 				}
 			},
 			"section-1": {
@@ -404,7 +402,7 @@
 		"variations": {
 			"meta": {
 				"color": {
-					"text": "var:custom|color|muted"
+					"text": "var:custom|color|text|muted"
 				},
 				"blocks": {
 					"core/post-author-name": {
