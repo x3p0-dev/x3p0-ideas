@@ -100,7 +100,7 @@
 	top: var(--wp--style--block-gap);
 	right: var(--wp--style--block-gap);
 	font-size: inherit;
-	color: var(--wp--preset--color--base);
+	color: inherit;
 	@include inline-icon.prefix(icon.get-url('close'));
 
 	.dashicons {
