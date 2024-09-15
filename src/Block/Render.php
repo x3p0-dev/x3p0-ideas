@@ -248,8 +248,10 @@ class Render implements Bootable
 	}
 
 	/**
-	 * Disables the Comments template part when there are no comments and
-	 * commenting is disabled.
+	 * This filter first disables the Comments template part when there are
+	 * no comments and commenting is disabled. Then, it adds a contextual
+	 * class to the wrapping template part markup with the slug name (e.g.,
+	 * `.wp-block-template-part-{slug}`).
 	 *
 	 * @since 1.0.0
 	 */
@@ -265,7 +267,16 @@ class Render implements Bootable
 			return '';
 		}
 
-		return $content;
+		$processor = new WP_HTML_Tag_Processor($content);
+
+		if ($processor->next_tag(['class_name' => 'wp-block-template-part'])) {
+			$processor->add_class(sprintf(
+				'wp-block-template-part-%s',
+				$block['attrs']['slug'] ?? 'unknown'
+			));
+		}
+
+		return $processor->get_updated_html();
 	}
 
 	/**
