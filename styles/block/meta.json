@@ -15,7 +15,7 @@
 		"elements": {
 			"link": {
 				"color": {
-					"text": "var:custom|color|text|muted"
+					"text": "inherit"
 				},
 				"typography": {
 					"textDecoration": "none"

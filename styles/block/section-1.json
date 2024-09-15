@@ -69,14 +69,6 @@
 					}
 				}
 			}
-		},
-		"variations": {
-			"is-style-meta": {
-				"color": {
-					"text": "inherit",
-					"background": "transparent"
-				}
-			}
 		}
 	}
 }
