@@ -5,21 +5,33 @@
 	"slug": "meta",
 	"blockTypes": [ "core/group" ],
 	"styles": {
+		"color": {
+			"text": "var:custom|color|text|muted"
+		},
 		"typography": {
 			"fontSize": "var:preset|font-size|sm",
 			"lineHeight": "var:custom|line-height|sm"
 		},
 		"elements": {
 			"link": {
+				"color": {
+					"text": "var:custom|color|text|muted"
+				},
 				"typography": {
 					"textDecoration": "none"
 				},
 				":focus": {
+					"color": {
+						"text": "var:custom|color|text|primary"
+					},
 					"typography": {
 						"textDecoration": "underline"
 					}
 				},
 				":hover": {
+					"color": {
+						"text": "var:custom|color|text|primary"
+					},
 					"typography": {
 						"textDecoration": "underline"
 					}
