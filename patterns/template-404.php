@@ -13,7 +13,7 @@ declare(strict_types=1);
 defined('ABSPATH') || exit;
 
 ?>
-<!-- wp:template-part {"slug":"header","className":"site-header"} /-->
+<!-- wp:template-part {"slug":"header","className":"is-style-site-header"} /-->
 
 <!-- wp:group {
 	"tagName":"main",
@@ -81,4 +81,4 @@ defined('ABSPATH') || exit;
 </main>
 <!-- /wp:group -->
 
-<!-- wp:template-part {"slug":"footer","className":"site-footer"} /-->
+<!-- wp:template-part {"slug":"footer","className":"is-style-site-footer"} /-->

@@ -20,13 +20,18 @@ defined('ABSPATH') || exit;
 	"align":"full",
 	"style":{
 		"spacing":{
-			"blockGap":"var:preset|spacing|plus-5"
+			"blockGap":"var:preset|spacing|plus-5",
+			"padding":{
+				"top":"var:preset|spacing|plus-6",
+				"bottom":"var:preset|spacing|plus-6",
+				"left":"var:preset|spacing|plus-3",
+				"right":"var:preset|spacing|plus-3"
+			}
 		}
 	},
-	"className":"is-style-site-footer",
 	"layout":{"type":"default"}
 } -->
-<div class="wp-block-group alignfull is-style-site-footer">
+<div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--plus-6);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-6);padding-left:var(--wp--preset--spacing--plus-3)">
 
 	<!-- wp:group {
 		"metadata":{"name":"<?= esc_attr__('Call To Action', 'x3p0-ideas') ?>"},

@@ -2106,9 +2106,6 @@
 				"css": "& svg {\n\tfill: currentColor;\n}"
 			},
 			"x3p0/breadcrumbs": {
-				"color": {
-					"background": "var:custom|color|surface|emphasis"
-				},
 				"spacing": {
 					"padding":{
 						"top": "var:preset|spacing|base",

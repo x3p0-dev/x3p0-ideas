@@ -3,10 +3,17 @@
 	"version": 3,
 	"title": "Site Header",
 	"slug": "site-header",
-	"blockTypes": [ "core/group" ],
+	"blockTypes": [ "core/template-part" ],
 	"styles": {
 		"color": {
 			"background": "transparent"
+		},
+		"blocks": {
+			"x3p0/breadcrumbs": {
+				"color": {
+					"background": "var:custom|color|surface|emphasis"
+				}
+			}
 		}
 	}
 }

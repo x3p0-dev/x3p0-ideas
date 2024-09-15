@@ -482,10 +482,6 @@
 				}
 			},
 			"x3p0/breadcrumbs": {
-				"color": {
-					"text": "var:custom|color|text|muted",
-					"gradient": "var:preset|gradient|90-deg-white-transparent"
-				},
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",
 					"fontSize": "var:preset|font-size|sm",
@@ -499,6 +495,15 @@
 					"text": "var:preset|color|neutral-500"
 				}
 			},
+			"section-1": {
+				"elements": {
+					"link": {
+						"color": {
+							"text": "var:custom|color|text|default"
+						}
+					}
+				}
+			},
 			"site-footer": {
 				"border": {
 					"top": {
@@ -508,15 +513,6 @@
 				},
 				"color": {
 					"background": "var:preset|color|white"
-				}
-			},
-			"section-1": {
-				"elements": {
-					"link": {
-						"color": {
-							"text": "var:custom|color|text|default"
-						}
-					}
 				}
 			},
 			"site-header": {
@@ -529,6 +525,21 @@
 				},
 				"color": {
 					"background": "var:preset|color|white"
+				},
+				"blocks": {
+					"x3p0/breadcrumbs": {
+						"border": {
+							"top": {
+								"color": "var:preset|color|neutral-100",
+								"style": "solid",
+								"width": "1px"
+							}
+						},
+						"color": {
+							"text": "var:custom|color|text|muted",
+							"gradient": "var:preset|gradient|90-deg-white-transparent"
+						}
+					}
 				}
 			}
 		}
