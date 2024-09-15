@@ -23,28 +23,7 @@ defined('ABSPATH') || exit;
 } -->
 <main class="wp-block-group">
 
-	<!-- wp:group {
-		"metadata":{"name":"<?= esc_attr__('Search Header', 'x3p0-ideas') ?>"},
-		"align":"full",
-		"style":{
-			"spacing":{
-				"padding":{
-					"top":"var:preset|spacing|plus-3",
-					"right":"var:preset|spacing|plus-3",
-					"bottom":"var:preset|spacing|plus-3",
-					"left":"var:preset|spacing|plus-3"
-				},
-				"blockGap":"var:preset|spacing|base"
-			}
-		},
-		"layout":{"type":"constrained"},
-		"className":"is-style-archive-header"
-	} -->
-	<div class="wp-block-group alignfull is-style-archive-header">
-		<!-- wp:query-title {"type":"search"} /-->
-	</div>
-	<!-- /wp:group -->
-
+	<!-- wp:template-part {"slug":"search-header","align":"full","className":"archive-header"} /-->
 	<!-- wp:template-part {"slug":"loop","align":"full","className":"loop"} /-->
 
 </main>

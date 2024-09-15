@@ -23,23 +23,7 @@ defined('ABSPATH') || exit;
 } -->
 <main class="wp-block-group">
 
-	<!-- wp:group {
-		"metadata":{"name":"<?= esc_attr__('Archive Header', 'x3p0-ideas') ?>"},
-		"align":"full",
-		"style":{
-			"spacing":{
-				"blockGap":"var:preset|spacing|base"
-			}
-		},
-		"layout":{"type":"constrained"},
-		"className":"is-style-archive-header"
-	} -->
-	<div class="wp-block-group alignfull is-style-archive-header">
-		<!-- wp:query-title {"type":"archive","showPrefix":false} /-->
-		<!-- wp:term-description /-->
-	</div>
-	<!-- /wp:group -->
-
+	<!-- wp:template-part {"slug":"archive-header","align":"full","className":"archive-header"} /-->
 	<!-- wp:template-part {"slug":"loop","align":"full","className":"loop"} /-->
 
 </main>

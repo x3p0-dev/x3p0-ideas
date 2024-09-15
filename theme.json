@@ -2287,6 +2287,16 @@
 			"title": "Footer"
 		},
 		{
+			"area": "archive-header",
+			"name": "archive-header",
+			"title": "Archive Header"
+		},
+		{
+			"area": "author-header",
+			"name": "author-header",
+			"title": "Author Header"
+		},
+		{
 			"area": "comments",
 			"name": "comments",
 			"title": "Comments Area"
@@ -2295,6 +2305,11 @@
 			"area": "loop",
 			"name": "loop",
 			"title": "Posts"
+		},
+		{
+			"area": "search-header",
+			"name": "search-header",
+			"title": "Search Header"
 		}
 	]
 }

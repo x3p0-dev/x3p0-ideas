@@ -56,6 +56,30 @@ class Parts implements Bootable
 		];
 
 		$areas[] = [
+			'area'        => 'archive-header',
+			'area_tag'    => 'header',
+			'label'       => __('Archive Header', 'x3p0-ideas'),
+			'description' => __('The Archive Header template part defines an area that contains the archive title and description for archive-type pages.', 'x3p0-ideas'),
+			'icon'        => 'layout'
+		];
+
+		$areas[] = [
+			'area'        => 'author-header',
+			'area_tag'    => 'header',
+			'label'       => __('Author Header', 'x3p0-ideas'),
+			'description' => __('The Archive Header template part defines an area that contains the archive title and description for archive-type pages.', 'x3p0-ideas'),
+			'icon'        => 'layout'
+		];
+
+		$areas[] = [
+			'area'        => 'search-header',
+			'area_tag'    => 'header',
+			'label'       => __('Search Header', 'x3p0-ideas'),
+			'description' => __('The Archive Header template part defines an area that contains the archive title and description for archive-type pages.', 'x3p0-ideas'),
+			'icon'        => 'layout'
+		];
+
+		$areas[] = [
 			'area'        => 'loop',
 			'area_tag'    => 'div',
 			'label'       => __('Loop', 'x3p0-ideas'),
