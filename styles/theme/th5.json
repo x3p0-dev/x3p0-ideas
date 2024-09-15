@@ -450,17 +450,6 @@
 			}
 		},
 		"variations": {
-			"archive-header": {
-				"color": {
-					"background": "var:custom|color|surface|contrast"
-				},
-				"spacing": {
-					"padding": {
-						"top": "var:preset|spacing|plus-6",
-						"bottom": "var:preset|spacing|plus-6"
-					}
-				}
-			},
 			"meta": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary"

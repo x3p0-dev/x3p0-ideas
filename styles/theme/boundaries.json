@@ -423,6 +423,9 @@
 					"fontWeight": "700"
 				}
 			},
+			"core/template-part": {
+				"css": "&.archive-header {\n\tborder-bottom: var(--wp--custom--global--border--rules);\n}"
+			},
 			"core/verse": {
 				"typography": {
 					"fontStyle": "italic"
@@ -446,21 +449,6 @@
 			}
 		},
 		"variations": {
-			"archive-header": {
-				"border": {
-					"bottom": {
-						"color": "var:custom|global|border|color",
-						"style": "var:custom|global|border|style",
-						"width": "var:custom|global|border|width"
-					}
-				},
-				"spacing": {
-					"padding": {
-						"top": "var:preset|spacing|plus-6",
-						"bottom": "var:preset|spacing|plus-6"
-					}
-				}
-			},
 			"meta": {
 				"color": {
 					"text": "var:custom|color|text|muted"

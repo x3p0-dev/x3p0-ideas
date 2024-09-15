@@ -775,7 +775,8 @@
 					"color": "var:custom|color|border|default",
 					"style": "solid",
 					"width": "1px",
-					"radius": "6px"
+					"radius": "6px",
+					"rules": "var(--wp--custom--global--border--width) var(--wp--custom--global--border--style) var(--wp--custom--global--border--color)"
 				},
 				"shadow": "var:preset|shadow|lg",
 				"fadedGradient": "linear-gradient( 180deg, transparent -40%, var( --wp--preset--color--base ) 100% )"
