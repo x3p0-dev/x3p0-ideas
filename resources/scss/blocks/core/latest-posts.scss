@@ -147,7 +147,9 @@
 	)) {
 		@include list.flow();
 
-		list-style: initial;
+		& {
+			list-style: initial;
+		}
 
 		// We need to reset the overflow to allow the markers to show up.
 		// WP sets this to `hidden` by default.

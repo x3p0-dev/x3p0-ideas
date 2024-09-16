@@ -126,7 +126,10 @@ body {
 
 .wp-embed-share-dialog-open {
 	@include inline-icon.prefix(icon.get-url('share'));
-	color: var(--link-color);
+
+	& {
+		color: var(--link-color);
+	}
 
 	&:hover,
 	&:focus {

@@ -66,7 +66,10 @@
 ///
 .comment-parent-link {
 	@include inline-icon.prefix(icon.get-url('arrow-left'));
-	gap: initial;
+
+	& {
+		gap: initial;
+	}
 
 	&::before {
 		width: 1.25em;

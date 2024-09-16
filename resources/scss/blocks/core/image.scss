@@ -182,8 +182,11 @@ figure.wp-block-image[class*=-gradient-background] {
 ///
 .wp-block-image.is-style-icon .wp-element-caption {
 	@include inline-icon.prefix(icon.get-url('photo-camera'));
-	justify-content: center;
-	gap: 0.5rem;
+
+	& {
+		justify-content: center;
+		gap: 0.5rem;
+	}
 }
 
 ///

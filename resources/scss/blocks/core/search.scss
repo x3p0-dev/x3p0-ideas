@@ -30,7 +30,9 @@
 
 		// Because of the structure, this label doesn't pick up the
 		// mixin's bottom margin.
-		margin-bottom: var(--wp--preset--spacing--minus-3);
+		& {
+			margin-bottom: var(--wp--preset--spacing--minus-3);
+		}
 	}
 
 	// The label for the search form is placed before the inside wrapper.

@@ -90,7 +90,9 @@
 	}
 
 	// Fixes mobile padding.
-	padding: var(--wp--style--block-gap);
+	& {
+		padding: var(--wp--style--block-gap);
+	}
 
 	// Fix justification when menu is initially aligned right.
 	:is(.wp-block-navigation-item, .wp-block-navigation__container, .wp-block-page-list) {
