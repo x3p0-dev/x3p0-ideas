@@ -47,46 +47,43 @@ class Parts implements Bootable
 	#[Filter('default_wp_template_part_areas')]
 	public function registerAreas(array $areas): array
 	{
-		$areas[] = [
-			'area'        => 'comments',
-			'area_tag'    => 'section',
-			'label'       => __('Comments', 'x3p0-ideas'),
-			'description' => __('The Comments template part defines an area that contains the comments list and form.', 'x3p0-ideas'),
-			'icon'        => 'layout'
+		return [
+			...$areas,
+			[
+				'area'        => 'archive-header',
+				'area_tag'    => 'header',
+				'label'       => __('Archive Header', 'x3p0-ideas'),
+				'description' => __('The Archive Header template part defines an area that contains the archive title and description for archive-type pages.', 'x3p0-ideas'),
+				'icon'        => 'layout'
+			],
+			[
+				'area'        => 'author-header',
+				'area_tag'    => 'header',
+				'label'       => __('Author Header', 'x3p0-ideas'),
+				'description' => __('The Author Header template part defines an area that contains the author name and biography for author archives.', 'x3p0-ideas'),
+				'icon'        => 'layout'
+			],
+			[
+				'area'        => 'comments',
+				'area_tag'    => 'section',
+				'label'       => __('Comments', 'x3p0-ideas'),
+				'description' => __('The Comments template part defines an area that contains the comments list and form.', 'x3p0-ideas'),
+				'icon'        => 'layout'
+			],
+			[
+				'area'        => 'loop',
+				'area_tag'    => 'div',
+				'label'       => __('Loop', 'x3p0-ideas'),
+				'description' => __('The Loop template part defines an area that contains the post list on blog, search results, and other archive-type pages.', 'x3p0-ideas'),
+				'icon'        => 'layout'
+			],
+			[
+				'area'        => 'search-header',
+				'area_tag'    => 'header',
+				'label'       => __('Search Header', 'x3p0-ideas'),
+				'description' => __('The Search Header template part defines an area that contains the search title and description for search results.', 'x3p0-ideas'),
+				'icon'        => 'layout'
+			]
 		];
-
-		$areas[] = [
-			'area'        => 'archive-header',
-			'area_tag'    => 'header',
-			'label'       => __('Archive Header', 'x3p0-ideas'),
-			'description' => __('The Archive Header template part defines an area that contains the archive title and description for archive-type pages.', 'x3p0-ideas'),
-			'icon'        => 'layout'
-		];
-
-		$areas[] = [
-			'area'        => 'author-header',
-			'area_tag'    => 'header',
-			'label'       => __('Author Header', 'x3p0-ideas'),
-			'description' => __('The Author Header template part defines an area that contains the author name and biography for author archives.', 'x3p0-ideas'),
-			'icon'        => 'layout'
-		];
-
-		$areas[] = [
-			'area'        => 'search-header',
-			'area_tag'    => 'header',
-			'label'       => __('Search Header', 'x3p0-ideas'),
-			'description' => __('The Search Header template part defines an area that contains the search title and description for search results.', 'x3p0-ideas'),
-			'icon'        => 'layout'
-		];
-
-		$areas[] = [
-			'area'        => 'loop',
-			'area_tag'    => 'div',
-			'label'       => __('Loop', 'x3p0-ideas'),
-			'description' => __('The Loop template part defines an area that contains the post list on blog, search results, and other archive-type pages.', 'x3p0-ideas'),
-			'icon'        => 'layout'
-		];
-
-		return $areas;
 	}
 }
