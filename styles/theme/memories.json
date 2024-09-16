@@ -23,8 +23,14 @@
 			},
 			"core/navigation-submenu": {
 				"custom": {
-					"background": "var:preset|color|primary-900",
-					"color": "var:preset|color|primary-50"
+					"block": {
+						"navigation-submenu": {
+							"color": "var:custom|color|text|on-primary",
+							"background": "var:custom|color|surface|primary-emphasis",
+							"background-hover": "var:custom|color|surface|primary",
+							"min-width": "18rem"
+						}
+					}
 				}
 			},
 			"core/table": {
@@ -61,16 +67,6 @@
 		},
 		"color": {
 			"palette": [
-				{
-					"slug": "base",
-					"color": "#F7FBFC",
-					"name": "Base"
-				},
-				{
-					"slug": "contrast",
-					"color": "#1e293b",
-					"name": "Contrast"
-				},
 				{
 					"slug": "primary-950",
 					"color": "#11343b",
@@ -182,6 +178,11 @@
 					"name": "Secondary: 50"
 				},
 				{
+					"slug": "black",
+					"color": "#000000",
+					"name": "Black"
+				},
+				{
 					"slug": "neutral-950",
 					"color": "#1f2532",
 					"name": "Neutral: 950"
@@ -235,11 +236,6 @@
 					"slug": "neutral-50",
 					"color": "#f5f7fa",
 					"name": "Neutral: 50"
-				},
-				{
-					"slug": "black",
-					"color": "#000000",
-					"name": "Black"
 				},
 				{
 					"slug": "white",
@@ -337,17 +333,6 @@
 					"fontSize": "var:preset|font-size|md",
 					"lineHeight": "var:custom|line-height|md"
 				}
-			},
-			"core/navigation-submenu": {
-				"color": {
-					"background": "var:preset|color|primary-900",
-					"text": "var:preset|color|primary-50"
-				},
-				"border": {
-					"width": "0",
-					"radius": "0"
-				},
-				"css": "--wp--custom--submenu-item--hover-background: var(--wp--preset--color--primary-950);"
 			},
 			"core/post-comments-form": {
 				"elements": {

@@ -6,16 +6,6 @@
 		"color": {
 			"palette": [
 				{
-					"slug": "base",
-					"color": "#fdfdfc",
-					"name": "Base"
-				},
-				{
-					"slug": "contrast",
-					"color": "#000000",
-					"name": "Contrast"
-				},
-				{
 					"slug": "primary-950",
 					"color": "#321f24",
 					"name": "Primary: 950"
@@ -124,6 +114,11 @@
 					"slug": "secondary-50",
 					"color": "#fbf4ff",
 					"name": "Secondary: 50"
+				},
+				{
+					"slug": "black",
+					"color": "#000000",
+					"name": "Black"
 				},
 				{
 					"slug": "neutral-950",

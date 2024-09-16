@@ -6,20 +6,26 @@
 ////
 
 ///
-/// We disable WordPress' default font and spacing in favor of our own. But
-/// because users may have used these sizes in the past, we map them to the
-/// theme's custom sizes.
+/// Maps specific presets (CSS Custom Properties) that are default to WordPress
+/// or the Core TT* themes to the theme's design tokens where possible or
+/// provide a reasonable fallback.
 ///
 body {
 	// Ensure that black and white colors are always defined.
-	--wp--preset--color--black: #000000;
-	--wp--preset--color--white: #ffffff;
+	--wp--preset--color--black: #000;
+	--wp--preset--color--white: #fff;
 
-	--wp--preset--font-size--small: var(--wp--preset--font-size--xs);
-	--wp--preset--font-size--medium: var(--wp--preset--font-size--md);
-	--wp--preset--font-size--large: var(--wp--preset--font-size--2-xl);
+	// Map TT4 standard color names to semantic theme colors.
+	--wp--preset--color--base:     var(--wp--custom--color--surface--default, #fff);
+	--wp--preset--color--contrast: var(--wp--custom--color--text--default, #000);
+
+	/// Map default WordPress font sizes to the theme's sizes.
+	--wp--preset--font-size--small:   var(--wp--preset--font-size--xs);
+	--wp--preset--font-size--medium:  var(--wp--preset--font-size--md);
+	--wp--preset--font-size--large:   var(--wp--preset--font-size--2-xl);
 	--wp--preset--font-size--x-large: var(--wp--preset--font-size--3-xl);
 
+	/// Map default WordPress spacing sizes to the theme's sizes.
 	--wp--preset--spacing--20: var(--wp--preset--spacing--minus-2);
 	--wp--preset--spacing--30: var(--wp--preset--spacing--minus-1);
 	--wp--preset--spacing--40: var(--wp--preset--spacing--base);
@@ -29,73 +35,49 @@ body {
 	--wp--preset--spacing--80: var(--wp--preset--spacing--plus-6);
 }
 
-// Section-based variables.
+///
+/// When a section style is in use, map its colors defined in `theme.json` to
+/// the semantic color tokens for the theme.
+///
+$surface: '--wp--custom--color--surface';
+$text:    '--wp--custom--color--text';
+$icon:    '--wp--custom--color--icon';
+$border:  '--wp--custom--color--border';
 
-.is-style-section-1 {
-	--wp--custom--color--surface--default: var(--wp--custom--section-1--color--surface--default);
-	--wp--custom--color--surface--emphasis: var(--wp--custom--section-1--color--surface--emphasis);
-	--wp--custom--color--surface--contrast: var(--wp--custom--section-1--color--surface--contrast);
-	--wp--custom--color--surface--primary: var(--wp--custom--section-1--color--surface--primary);
-	--wp--custom--color--surface--primary-emphasis: var(--wp--custom--section-1--color--surface--primary-emphasis);
+@for $id from 1 through 3 {
+	$section: '--wp--custom--section-#{$id}';
 
-	--wp--custom--color--text--default: var(--wp--custom--section-1--color--text--default);
-	--wp--custom--color--text--muted: var(--wp--custom--section-1--color--text--muted);
-	--wp--custom--color--text--primary: var(--wp--custom--section-1--color--text--primary);
-	--wp--custom--color--text--hover: var(--wp--custom--section-1--color--text--hover);
-	--wp--custom--color--text--on-primary: var(--wp--custom--section-1--color--text--on-primary);
+	:root :where(.is-style-section-#{$id}) {
 
-	--wp--custom--color--icon--default: var(--wp--custom--section-1--color--icon--default);
-	--wp--custom--color--icon--muted: var(--wp--custom--section-1--color--icon--muted);
-	--wp--custom--color--icon--primary: var(--wp--custom--section-1--color--icon--primary);
-}
+		// Surface/background colors.
+		#{$surface}--default:          var(#{$section}--color--surface--default);
+		#{$surface}--emphasis:         var(#{$section}--color--surface--emphasis);
+		#{$surface}--contrast:         var(#{$section}--color--surface--contrast);
+		#{$surface}--primary:          var(#{$section}--color--surface--primary);
+		#{$surface}--primary-emphasis: var(#{$section}--color--surface--primary-emphasis);
 
-.is-style-section-1 > * {
-	--wp--custom--color--border--default: var(--wp--custom--section-1--color--border--default, currentColor);
-	--wp--custom--global--border--color: var(--wp--custom--section-1--color--border--default, currentColor);
-}
+		// Text colors.
+		#{$text}--default:    var(#{$section}--color--text--default);
+		#{$text}--muted:      var(#{$section}--color--text--muted);
+		#{$text}--primary:    var(#{$section}--color--text--primary);
+		#{$text}--hover:      var(#{$section}--color--text--hover);
+		#{$text}--on-primary: var(#{$section}--color--text--on-primary);
 
-.is-style-section-2 {
-	--wp--custom--color--surface--default: var(--wp--custom--section-2--color--surface--default);
-	--wp--custom--color--surface--emphasis: var(--wp--custom--section-2--color--surface--emphasis);
-	--wp--custom--color--surface--contrast: var(--wp--custom--section-2--color--surface--contrast);
-	--wp--custom--color--surface--primary: var(--wp--custom--section-2--color--surface--primary);
-	--wp--custom--color--surface--primary-emphasis: var(--wp--custom--section-2--color--surface--primary-emphasis);
+		// Icon colors.
+		#{$icon}--default: var(#{$section}--color--icon--default);
+		#{$icon}--muted:   var(#{$section}--color--icon--muted);
+		#{$icon}--primary: var(#{$section}--color--icon--primary);
 
-	--wp--custom--color--text--default: var(--wp--custom--section-2--color--text--default);
-	--wp--custom--color--text--muted: var(--wp--custom--section-2--color--text--muted);
-	--wp--custom--color--text--primary: var(--wp--custom--section-2--color--text--primary);
-	--wp--custom--color--text--hover: var(--wp--custom--section-2--color--text--hover);
-	--wp--custom--color--text--on-primary: var(--wp--custom--section-2--color--text--on-primary);
+		// Border colors. Note that these are defined for child elements
+		// only. This is because the border color for the parent sits on
+		// sections with other backgrounds and should inherit their
+		// borders.
+		> * {
+			#{$icon}--default: var(#{$section}--color--border--default, currentColor);
 
-	--wp--custom--color--icon--default: var(--wp--custom--section-2--color--icon--default);
-	--wp--custom--color--icon--muted: var(--wp--custom--section-2--color--icon--muted);
-	--wp--custom--color--icon--primary: var(--wp--custom--section-2--color--icon--primary);
-}
-
-.is-style-section-2 > * {
-	--wp--custom--color--border--default: var(--wp--custom--section-2--color--border--default, currentColor);
-	--wp--custom--global--border--color: var(--wp--custom--section-2--color--border--default, currentColor);
-}
-
-.is-style-section-3 {
-	--wp--custom--color--surface--default: var(--wp--custom--section-3--color--surface--default);
-	--wp--custom--color--surface--emphasis: var(--wp--custom--section-3--color--surface--emphasis);
-	--wp--custom--color--surface--contrast: var(--wp--custom--section-3--color--surface--contrast);
-	--wp--custom--color--surface--primary: var(--wp--custom--section-3--color--surface--primary);
-	--wp--custom--color--surface--primary-emphasis: var(--wp--custom--section-3--color--surface--primary-emphasis);
-
-	--wp--custom--color--text--default: var(--wp--custom--section-3--color--text--default);
-	--wp--custom--color--text--muted: var(--wp--custom--section-3--color--text--muted);
-	--wp--custom--color--text--primary: var(--wp--custom--section-3--color--text--primary);
-	--wp--custom--color--text--hover: var(--wp--custom--section-3--color--text--hover);
-	--wp--custom--color--text--on-primary: var(--wp--custom--section-3--color--text--on-primary);
-
-	--wp--custom--color--icon--default: var(--wp--custom--section-3--color--icon--default);
-	--wp--custom--color--icon--muted: var(--wp--custom--section-3--color--icon--muted);
-	--wp--custom--color--icon--primary: var(--wp--custom--section-3--color--icon--primary);
-}
-
-.is-style-section-3 > * {
-	--wp--custom--color--border--default: var(--wp--custom--section-3--color--border--default, currentColor);
-	--wp--custom--global--border--color: var(--wp--custom--section-3--color--border--default, currentColor);
+			// Also assigns the global border in case it and the
+			// semantic border are out of sync for some reason.
+			--wp--custom--global--border--color: var(#{$section}--color--border--default, currentColor);
+		}
+	}
 }

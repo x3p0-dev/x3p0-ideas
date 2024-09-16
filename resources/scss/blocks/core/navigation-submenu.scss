@@ -19,13 +19,13 @@
 /// @link https://github.com/WordPress/gutenberg/pull/59457
 ///
 .wp-block-navigation-submenu .wp-block-navigation__submenu-container {
-	padding: var(--wp--custom--padding, var(--wp--preset--spacing--base));
+	padding: var(--wp--custom--block--navigation-submenu--padding, var(--wp--preset--spacing--base));
 }
 
 nav.wp-block-navigation .wp-block-navigation-submenu .wp-block-navigation__submenu-container,
 nav.wp-block-navigation.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open {
-	background: var(--wp--custom--background, var(--wp--custom--color--surface--default));
-	color: var(--wp--custom--color, var(--wp--custom--color--text--default));
+	background: var(--wp--custom--block--navigation-submenu--background, var(--wp--custom--color--surface--default));
+	color: var(--wp--custom--block--navigation-submenu--color, var(--wp--custom--color--text--default));
 }
 
 // -----------------------------------------------------------------------------
@@ -41,7 +41,7 @@ nav.wp-block-navigation.wp-block-navigation .wp-block-navigation__responsive-con
 	.wp-block-navigation-submenu__toggle[aria-expanded=true] ~ {
 
 		.wp-block-navigation__submenu-container {
-			min-width: var(--wp--custom--min-width, 16rem) !important;
+			min-width: var(--wp--custom--block--navigation-submenu--min-width, 16rem) !important;
 		}
 	}
 }
@@ -59,7 +59,7 @@ nav.wp-block-navigation.wp-block-navigation .wp-block-navigation__responsive-con
 // Fixes the toggle `<button>` when menu items are "open on click."
 .wp-block-navigation-submenu .wp-block-navigation-item.open-on-click .wp-block-navigation-submenu__toggle {
 	padding: var(
-		--wp--custom--submenu-toggle--padding,
+		--wp--custom--block--navigation-submenu--toggle--padding,
 		var(--wp--preset--spacing--minus-2) var(--wp--preset--spacing--base)
 	);
 }
@@ -68,7 +68,7 @@ nav.wp-block-navigation.wp-block-navigation .wp-block-navigation__responsive-con
 .wp-block-navigation-submenu .wp-block-navigation-item:hover,
 .wp-block-navigation-submenu .wp-block-navigation-item:focus {
 	background: var(
-		--wp--custom--submenu-item--hover-background,
+		--wp--custom--block--navigation-submenu--background-hover,
 		var(--wp--custom--color--surface--emphasis)
 	);
 }

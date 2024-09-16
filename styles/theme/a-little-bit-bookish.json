@@ -17,7 +17,7 @@
 					"radius": "4px"
 				},
 				"shadow": "none",
-				"fadedGradient": "linear-gradient( 225deg, #cdb8a425, transparent 80% ), linear-gradient( 180deg, transparent -40%, var( --wp--preset--color--base ) 100% )"
+				"fadedGradient": "linear-gradient( 225deg, #cdb8a425, transparent 80% ), linear-gradient( 180deg, transparent -40%, #f5f1ea 100% )"
 			},
 			"elements": {
 				"summary": {
@@ -30,16 +30,6 @@
 		},
 		"color": {
 			"palette": [
-				{
-					"slug": "base",
-					"color": "#f5f1ea",
-					"name": "Base"
-				},
-				{
-					"slug": "contrast",
-					"color": "#000000",
-					"name": "Contrast"
-				},
 				{
 					"slug": "primary-950",
 					"color": "#3d1712",
@@ -149,6 +139,11 @@
 					"slug": "secondary-50",
 					"color": "#f4f8ed",
 					"name": "Secondary: 50"
+				},
+				{
+					"slug": "black",
+					"color": "#000000",
+					"name": "Black"
 				},
 				{
 					"slug": "neutral-950",
@@ -264,6 +259,7 @@
 	},
 	"styles": {
 		"color": {
+			"background": "#f5f1ea",
 			"gradient": "linear-gradient( 225deg, #cdb8a425, transparent 25% ), linear-gradient( 45deg, #cdb8a425, transparent 25% )"
 		},
 		"elements": {

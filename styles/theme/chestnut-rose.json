@@ -4,20 +4,15 @@
 	"title": "Chestnut Rose",
 	"settings": {
 		"blocks": {
-			"core/navigation": {
-				"custom": {
-					"toggle": {
-						"color": "var:preset|color|white",
-						"background": "var:preset|color|primary-700",
-						"borderRadius": "4px",
-						"hoverBackground": "var:preset|color|primary-900"
-					}
-				}
-			},
 			"core/navigation-submenu": {
 				"custom": {
-					"color": "var:preset|color|contrast",
-					"background": "var:preset|color|neutral-50"
+					"block": {
+						"navigation-submenu": {
+							"color": "var:custom|color|text|default",
+							"background": "var:custom|color|surface|emphasis",
+							"background-hover": "var:custom|color|surface|contrast"
+						}
+					}
 				}
 			},
 			"core/post-comments-form": {
@@ -31,16 +26,6 @@
 		},
 		"color": {
 			"palette": [
-				{
-					"slug": "base",
-					"color": "#f5f7f9",
-					"name": "Base"
-				},
-				{
-					"slug": "contrast",
-					"color": "#364856",
-					"name": "Contrast"
-				},
 				{
 					"slug": "primary-950",
 					"color": "#3a181f",
@@ -152,6 +137,11 @@
 					"name": "Secondary: 50"
 				},
 				{
+					"slug": "black",
+					"color": "#000000",
+					"name": "Black"
+				},
+				{
 					"slug": "neutral-950",
 					"color": "#202831",
 					"name": "Neutral: 950"
@@ -210,11 +200,6 @@
 					"slug": "white",
 					"color": "#ffffff",
 					"name": "White"
-				},
-				{
-					"slug": "black",
-					"color": "#000000",
-					"name": "Black"
 				}
 			]
 		},
@@ -358,10 +343,6 @@
 					"color": "var:custom|global|border|color",
 					"radius": "var:custom|global|border|radius"
 				},
-				"color": {
-					"text": "var:preset|color|contrast",
-					"background": "var:preset|color|neutral-50"
-				},
 				"shadow": "var:preset|shadow|lg",
 				"typography": {
 					"fontSize": "var:preset|font-size|xs"
@@ -380,7 +361,7 @@
 						}
 					}
 				},
-				"css": "& .wp-block-navigation-item:hover, .wp-block-navigation-item:focus {\n\tcolor: var(--wp--preset--color--700);\n\tbackground: var(--wp--preset--color--neutral-100);\n}"
+				"css": "& .wp-block-navigation-item:hover, .wp-block-navigation-item:focus {\n\tcolor: var(--wp--custom--color--text--default);\n\tbackground: var(--wp--custom--color--surface--contrast);\n}"
 			},
 			"core/separator": {
 				"color": {

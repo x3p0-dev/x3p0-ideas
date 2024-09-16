@@ -6,16 +6,6 @@
 		"color": {
 			"palette": [
 				{
-					"slug": "base",
-					"color": "#f7f7f3",
-					"name": "Base"
-				},
-				{
-					"slug": "contrast",
-					"color": "#232829",
-					"name": "Contrast"
-				},
-				{
 					"slug": "primary-950",
 					"color": "#202431",
 					"name": "Primary: 950"
@@ -126,6 +116,11 @@
 					"name": "Secondary: 50"
 				},
 				{
+					"slug": "black",
+					"color": "#000000",
+					"name": "Black"
+				},
+				{
 					"slug": "neutral-950",
 					"color": "#21292b",
 					"name": "Neutral: 950"
@@ -179,11 +174,6 @@
 					"slug": "neutral-50",
 					"color": "#f4f7f7",
 					"name": "Neutral: 50"
-				},
-				{
-					"slug": "black",
-					"color": "#000000",
-					"name": "Black"
 				},
 				{
 					"slug": "white",
