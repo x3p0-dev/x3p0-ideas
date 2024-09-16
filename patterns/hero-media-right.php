@@ -33,10 +33,10 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 			}
 		}
 	},
-	"className":"is-style-section-3",
+	"className":"is-style-section-1",
 	"layout":{"type":"constrained"}
 } -->
-<section class="wp-block-group alignfull is-style-section-3" style="padding-top:var(--wp--preset--spacing--plus-5);padding-bottom:var(--wp--preset--spacing--plus-5)">
+<section class="wp-block-group alignfull is-style-section-1" style="padding-top:var(--wp--preset--spacing--plus-5);padding-bottom:var(--wp--preset--spacing--plus-5)">
 
 	<!-- wp:columns {
 		"verticalAlignment":"center",

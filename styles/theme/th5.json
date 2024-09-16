@@ -40,14 +40,14 @@
 					"default": "var:preset|color|neutral-100"
 				}
 			},
-			"section-2": {
+			"section-1": {
 				"color": {
 					"border": {
 						"default": "var:preset|color|neutral-200"
 					}
 				}
 			},
-			"section-3": {
+			"section-2": {
 				"color": {
 					"border": {
 						"default": "var:preset|color|neutral-200"

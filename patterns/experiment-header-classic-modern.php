@@ -103,7 +103,7 @@ defined('ABSPATH') || exit;
 
 	<!-- wp:group {
 		"align":"full",
-		"className":"is-style-section-1",
+		"className":"is-style-section-3",
 		"style":{
 			"spacing":{
 				"padding":{
@@ -116,7 +116,7 @@ defined('ABSPATH') || exit;
 		},
 		"layout":{"type":"default"}
 	} -->
-	<div class="wp-block-group alignfull is-style-section-1" style="padding-top:var(--wp--preset--spacing--minus-1);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--minus-1);padding-left:var(--wp--preset--spacing--plus-3)">
+	<div class="wp-block-group alignfull is-style-section-3" style="padding-top:var(--wp--preset--spacing--minus-1);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--minus-1);padding-left:var(--wp--preset--spacing--plus-3)">
 
 		<!-- wp:group {
 			"layout":{

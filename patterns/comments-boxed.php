@@ -29,10 +29,10 @@ defined('ABSPATH') || exit;
 
 	<!-- wp:group {
 		"metadata":{"name":"<?= esc_attr__('Comments Container', 'x3p0-ideas') ?>"},
-		"className":"has-global-border is-style-section-3",
+		"className":"has-global-border is-style-section-1",
 		"layout":{"type":"constrained"}
 	} -->
-	<div class="wp-block-group has-global-border is-style-section-3">
+	<div class="wp-block-group has-global-border is-style-section-1">
 
 		<!-- wp:comments-title {
 			"showPostTitle":false,

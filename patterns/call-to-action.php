@@ -17,7 +17,7 @@ use X3P0\Ideas\Tools\Language;
 ?>
 <!-- wp:group {
 	"align":"wide",
-	"className":"is-style-section-3",
+	"className":"is-style-section-1",
 	"style":{
 		"typography":{
 			"textAlign":"center"
@@ -27,7 +27,7 @@ use X3P0\Ideas\Tools\Language;
 		"type":"constrained"
 	}
 } -->
-<div class="wp-block-group has-text-align-center alignwide is-style-section-3">
+<div class="wp-block-group has-text-align-center alignwide is-style-section-1">
 
 	<!-- wp:heading -->
 	<h2 class="wp-block-heading"><?= esc_html__('Placeholder Heading', 'x3p0-ideas') ?></h2>

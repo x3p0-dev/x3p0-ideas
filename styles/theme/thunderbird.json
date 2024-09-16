@@ -61,17 +61,17 @@
 			"section-1": {
 				"color": {
 					"surface": {
-						"default": "var:preset|color|neutral-950",
-						"emphasis": "var:preset|color|neutral-900",
-						"contrast": "var:preset|color|neutral-800",
+						"default": "var:preset|color|white",
+						"emphasis": "var:preset|color|neutral-100",
+						"contrast": "var:preset|color|neutral-200",
 						"primary": "var:preset|color|primary-500",
 						"primary-emphasis": "var:preset|color|primary-700"
 					},
 					"text": {
-						"default": "var:preset|color|white",
-						"muted": "var:preset|color|neutral-300",
-						"primary": "var:preset|color|primary-500",
-						"hover": "var:preset|color|primary-500",
+						"default": "var:preset|color|neutral-950",
+						"muted": "var:preset|color|neutral-600",
+						"primary": "var:preset|color|primary-700",
+						"hover": "inherit",
 						"on-primary": "var:preset|color|white"
 					},
 					"icon": {
@@ -80,7 +80,7 @@
 						"primary": "var:preset|color|primary-500"
 					},
 					"border": {
-						"default": "var:preset|color|neutral-800"
+						"default": "var:preset|color|neutral-300"
 					}
 				}
 			},
@@ -113,17 +113,17 @@
 			"section-3": {
 				"color": {
 					"surface": {
-						"default": "var:preset|color|white",
-						"emphasis": "var:preset|color|neutral-100",
-						"contrast": "var:preset|color|neutral-200",
+						"default": "var:preset|color|neutral-950",
+						"emphasis": "var:preset|color|neutral-900",
+						"contrast": "var:preset|color|neutral-800",
 						"primary": "var:preset|color|primary-500",
 						"primary-emphasis": "var:preset|color|primary-700"
 					},
 					"text": {
-						"default": "var:preset|color|neutral-950",
-						"muted": "var:preset|color|neutral-600",
-						"primary": "var:preset|color|primary-700",
-						"hover": "inherit",
+						"default": "var:preset|color|white",
+						"muted": "var:preset|color|neutral-300",
+						"primary": "var:preset|color|primary-500",
+						"hover": "var:preset|color|primary-500",
 						"on-primary": "var:preset|color|white"
 					},
 					"icon": {
@@ -132,7 +132,7 @@
 						"primary": "var:preset|color|primary-500"
 					},
 					"border": {
-						"default": "var:preset|color|neutral-300"
+						"default": "var:preset|color|neutral-800"
 					}
 				}
 			},
@@ -501,7 +501,7 @@
 					"text": "var:preset|color|neutral-500"
 				}
 			},
-			"section-1": {
+			"section-3": {
 				"elements": {
 					"link": {
 						"color": {

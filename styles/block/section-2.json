@@ -26,34 +26,6 @@
 				"left": "var:preset|spacing|plus-3",
 				"right": "var:preset|spacing|plus-3"
 			}
-		},
-		"elements": {
-			"link": {
-				"color": {
-					"text": "var:custom|color|text|primary"
-				},
-				":focus": {
-					"color": {
-						"text": "var:custom|color|text|hover"
-					}
-				},
-				":hover": {
-					"color": {
-						"text": "var:custom|color|text|hover"
-					}
-				}
-			}
-		},
-		"blocks": {
-			"core/post-title": {
-				"elements": {
-					"link": {
-						"color": {
-							"text": "inherit"
-						}
-					}
-				}
-			}
 		}
 	}
 }

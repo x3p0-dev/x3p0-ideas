@@ -47,7 +47,7 @@ defined('ABSPATH') || exit;
 	<!-- /wp:group -->
 
 	<!-- wp:post-comments-form {
-		"className":"is-style-section-3 has-global-border has-icons"
+		"className":"is-style-section-1 has-global-border has-icons"
 	} /-->
 
 </div>

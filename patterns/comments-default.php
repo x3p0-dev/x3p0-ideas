@@ -32,10 +32,10 @@ defined('ABSPATH') || exit;
 			"name":"<?= esc_attr__('Comments Container', 'x3p0-ideas') ?>",
 			"@if":"get_comments_number"
 		},
-		"className":"is-style-section-3 has-global-border",
+		"className":"is-style-section-1 has-global-border",
 		"layout":{"type":"constrained"}
 	} -->
-	<div class="wp-block-group is-style-section-3 has-global-border">
+	<div class="wp-block-group is-style-section-1 has-global-border">
 
 		<!-- wp:comments-title {
 			"showPostTitle":false,
@@ -66,7 +66,7 @@ defined('ABSPATH') || exit;
 	<?php endif ?>
 
 	<!-- wp:post-comments-form {
-		"className":"is-style-section-3 has-global-border has-icons"
+		"className":"is-style-section-1 has-global-border has-icons"
 	} /-->
 
 </div>

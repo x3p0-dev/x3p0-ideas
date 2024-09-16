@@ -36,7 +36,7 @@ $image = get_theme_file_uri('public/media/images/default-16x9.webp');
 			"minHeight":"100%"
 		}
 	},
-	"className":"has-global-border is-style-section-3",
+	"className":"has-global-border is-style-section-1",
 	"fontSize":"sm",
 	"layout":{
 		"type":"flex",
@@ -46,7 +46,7 @@ $image = get_theme_file_uri('public/media/images/default-16x9.webp');
 		"verticalAlignment":"space-between"
 	}
 } -->
-<div class="wp-block-group has-global-border is-style-section-3 has-sm-font-size" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;min-height:100%">
+<div class="wp-block-group has-global-border is-style-section-1 has-sm-font-size" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;min-height:100%">
 
 	<!-- wp:image {
 		"aspectRatio":"4/3",

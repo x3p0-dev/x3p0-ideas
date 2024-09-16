@@ -34,7 +34,7 @@ $icon = get_theme_file_uri('public/media/svg/earthquake.svg');
 			"minHeight":"0px"
 		}
 	},
-	"className":"has-global-border is-style-section-3",
+	"className":"has-global-border is-style-section-1",
 	"layout":{
 		"type":"flex",
 		"orientation":"vertical",
@@ -43,7 +43,7 @@ $icon = get_theme_file_uri('public/media/svg/earthquake.svg');
 	},
 	"fontSize":"xs"
 } -->
-<div class="wp-block-group has-global-border is-style-section-3 has-xs-font-size" style="min-height:0px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
+<div class="wp-block-group has-global-border is-style-section-1 has-xs-font-size" style="min-height:0px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 
 	<!-- wp:group {
 		"tagName":"header",

@@ -43,9 +43,7 @@
 /// Ensures specific styles inherit their color when used inside of a Cover or
 /// styled section.
 ///
-.wp-block-cover .is-style-meta,
-:is(.is-style-section-1) .is-style-meta,
-:is(.is-style-section-1) .is-style-meta a {
+.wp-block-cover .is-style-meta {
 	color: inherit;
 	background: transparent;
 }

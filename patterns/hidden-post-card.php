@@ -27,14 +27,14 @@ defined('ABSPATH') || exit;
 		},
 		"dimensions":{"minHeight":"100%"}
 	},
-	"className":"has-global-border is-style-section-3",
+	"className":"has-global-border is-style-section-1",
 	"layout":{
 		"type":"flex",
 		"orientation":"vertical",
 		"justifyContent":"stretch"
 	}
 } -->
-<article class="wp-block-group has-global-border is-style-section-3" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;min-height:100%">
+<article class="wp-block-group has-global-border is-style-section-1" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;min-height:100%">
 
 	<!-- wp:post-featured-image {
 		"isLink":true,

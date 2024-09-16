@@ -52,6 +52,9 @@
 					},
 					"text": {
 						"on-primary-hover": "var:preset|color|white"
+					},
+					"border": {
+						"default": "var:preset|color|neutral-200"
 					}
 				}
 			},
@@ -75,9 +78,6 @@
 					},
 					"text": {
 						"on-primary-hover": "var:preset|color|white"
-					},
-					"border": {
-						"default": "var:preset|color|neutral-200"
 					}
 				}
 			},

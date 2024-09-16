@@ -55,25 +55,19 @@
 			"section-1": {
 				"color": {
 					"surface": {
-						"default": "var:preset|color|neutral-950",
-						"emphasis": "var:preset|color|neutral-900",
-						"contrast": "var:preset|color|neutral-800",
 						"primary": "var:preset|color|primary-600",
-						"primary-emphasis": "var:preset|color|primary-800"
+						"primary-emphasis": "var:preset|color|neutral-900"
 					},
 					"text": {
-						"default": "var:preset|color|white",
-						"muted": "var:preset|color|neutral-400",
-						"primary": "var:preset|color|primary-200",
-						"hover": "var:preset|color|primary-200"
+						"default": "var:preset|color|neutral-900"
 					},
 					"icon": {
 						"default": "currentColor",
-						"muted": "var:preset|color|neutral-500",
+						"muted": "var:preset|color|neutral-400",
 						"primary": "var:preset|color|primary-600"
 					},
 					"border": {
-						"default": "var:preset|color|neutral-800"
+						"default": "var:preset|color|neutral-200"
 					}
 				}
 			},
@@ -99,19 +93,25 @@
 			"section-3": {
 				"color": {
 					"surface": {
+						"default": "var:preset|color|neutral-950",
+						"emphasis": "var:preset|color|neutral-900",
+						"contrast": "var:preset|color|neutral-800",
 						"primary": "var:preset|color|primary-600",
-						"primary-emphasis": "var:preset|color|neutral-900"
+						"primary-emphasis": "var:preset|color|primary-800"
 					},
 					"text": {
-						"default": "var:preset|color|neutral-900"
+						"default": "var:preset|color|white",
+						"muted": "var:preset|color|neutral-400",
+						"primary": "var:preset|color|primary-200",
+						"hover": "var:preset|color|primary-200"
 					},
 					"icon": {
 						"default": "currentColor",
-						"muted": "var:preset|color|neutral-400",
+						"muted": "var:preset|color|neutral-500",
 						"primary": "var:preset|color|primary-600"
 					},
 					"border": {
-						"default": "var:preset|color|neutral-200"
+						"default": "var:preset|color|neutral-800"
 					}
 				}
 			},
@@ -429,7 +429,7 @@
 					}
 				}
 			},
-			"section-1": {
+			"section-3": {
 				"elements": {
 					"link": {
 						"color": {
