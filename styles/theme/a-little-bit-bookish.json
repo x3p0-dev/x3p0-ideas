@@ -236,16 +236,16 @@
 					"name": "Secondary (Charter)"
 				},
 				{
-					"fontFamily": "'Dancing Script', cursive",
+					"fontFamily": "Caveat, 'Segoe Print', 'Bradley Hand', Chilanka, TSCu_Comic, casual, cursive",
 					"slug": "tertiary",
-					"name": "Tertiary (Dancing Script)",
+					"name": "Tertiary (Caveat)",
 					"fontFace": [
 						{
-							"fontFamily": "Dancing Script",
+							"fontFamily": "Caveat",
 							"fontWeight": "400 700",
 							"fontStyle": "normal",
 							"fontStretch": "normal",
-							"src": [ "file:./public/fonts/dancing-script/dancing-script.woff2" ]
+							"src": [ "file:./public/fonts/caveat/caveat.woff2" ]
 						}
 					]
 				},
