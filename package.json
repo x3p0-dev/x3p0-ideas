@@ -11,13 +11,13 @@
 		"zip:git": "git archive --format zip --output x3p0-ideas.zip master"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^26.5.0",
-		"copy-webpack-plugin": "^11.0.0",
-		"glob": "^10.2.6",
+		"@wordpress/scripts": "^29.0.0",
+		"copy-webpack-plugin": "^12.0.2",
+		"glob": "^11.0.0",
 		"path": "^0.12.7",
-		"webpack-remove-empty-scripts": "^1.0.3"
+		"webpack-remove-empty-scripts": "^1.0.4"
 	},
 	"dependencies": {
-		"@wordpress/icons": "^9.25.0"
+		"@wordpress/icons": "^10.7.0"
 	}
 }
