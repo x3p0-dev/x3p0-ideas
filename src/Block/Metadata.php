@@ -266,6 +266,20 @@ class Metadata implements Bootable
 	}
 
 	/**
+	 * Fixes the broken selector introduced in Gutenberg 19.2.
+	 *
+	 * @since 1.0.0
+	 * @link  https://github.com/WordPress/gutenberg/pull/64911
+	 */
+	private function coreSiteTitle(array $settings): array
+	{
+		$settings['selectors']               ??= [];
+		$settings['selectors']['typography']   = '.wp-block-site-title';
+
+		return $settings;
+	}
+
+	/**
 	 * Adds color support to the Tag Cloud block.
 	 *
 	 * @since 1.0.0
