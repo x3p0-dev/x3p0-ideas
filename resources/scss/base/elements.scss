@@ -62,13 +62,6 @@ blockquote cite::before {
 }
 
 ///
-/// Center captions (WP doesn't support text-align in `theme.json`).
-///
-.wp-element-caption {
-	text-align: center;
-}
-
-///
 /// Abbreviation styles.
 ///
 /// @link https://github.com/WordPress/gutenberg/issues/64362

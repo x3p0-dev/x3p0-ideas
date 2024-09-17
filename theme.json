@@ -1346,7 +1346,8 @@
 				},
 				"typography": {
 					"fontSize": "var:preset|font-size|sm",
-					"lineHeight": "var:custom|line-height|sm"
+					"lineHeight": "var:custom|line-height|sm",
+					"textAlign": "center"
 				}
 			},
 			"cite": {
