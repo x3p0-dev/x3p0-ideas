@@ -31,8 +31,6 @@ defined('ABSPATH') || exit;
 } -->
 <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--plus-6);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-6);padding-left:var(--wp--preset--spacing--plus-3)">
 
-	<!-- wp:pattern {"slug":"x3p0-ideas/social-menu-outline"} /-->
-
 	<!-- wp:group {
 		"metadata":{"name":"<?= esc_attr__('Footer Content', 'x3p0-ideas') ?>"},
 		"align":"wide",
@@ -71,6 +69,8 @@ defined('ABSPATH') || exit;
 		<!-- /wp:paragraph -->
 	</div>
 	<!-- /wp:group -->
+
+	<!-- wp:pattern {"slug":"x3p0-ideas/social-menu-buttons-primary"} /-->
 
 </div>
 <!-- /wp:group -->

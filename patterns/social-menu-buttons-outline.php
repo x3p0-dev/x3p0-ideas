@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Title: Social Menu: Outline
- * Slug: x3p0-ideas/social-menu-outline
+ * Title: Social Menu: Outlined Buttons
+ * Slug: x3p0-ideas/social-menu-buttons-outline
  * Description:
  * Categories: text
  * Keywords: social, links, menu
