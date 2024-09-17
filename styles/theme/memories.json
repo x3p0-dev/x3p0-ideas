@@ -57,6 +57,32 @@
 					}
 				}
 			},
+			"section-3": {
+				"color": {
+					"surface": {
+						"default": "var:preset|color|primary-700",
+						"emphasis": "var:preset|color|primary-800",
+						"contrast": "var:preset|color|primary-900",
+						"primary": "var:preset|color|primary-900",
+						"primary-emphasis": "var:preset|color|primary-950"
+					},
+					"text": {
+						"default": "var:preset|color|white",
+						"muted": "var:preset|color|primary-200",
+						"primary": "var:preset|color|primary-100",
+						"hover": "currentColor",
+						"on-primary": "var:preset|color|white"
+					},
+					"icon": {
+						"default": "currentColor",
+						"muted": "var:preset|color|primary-950",
+						"primary": "var:preset|color|white"
+					},
+					"border": {
+						"default": "var:preset|color|primary-900"
+					}
+				}
+			},
 			"global": {
 				"border": {
 					"style": "solid",
