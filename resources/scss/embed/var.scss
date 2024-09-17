@@ -25,7 +25,7 @@
 
 	// Color.
 	--color: var(--wp--custom--embed--color, var(--wp--custom--color--text--default));
-	--background: var(--wp--custom--embed--background, var(--wp--custom--color--surface--default));
+	--background: var(--wp--custom--embed--background, var(--wp--custom--color--surface--level-0));
 	--link-color: var(--wp--custom--embed--link-color, currentColor);
 	--link-hover-color: var(--wp--custom--embed--link-hover-color, var(--wp--custom--color--text--primary));
 
@@ -39,6 +39,6 @@
 
 // Flip colors for dialog.
 .wp-embed-share-dialog {
-	--color: var(--wp--custom--embed--background, var(--wp--custom--color--surface--default));
+	--color: var(--wp--custom--embed--background, var(--wp--custom--color--surface--level-0));
 	--background: var(--wp--custom--embed--color, var(--wp--custom--color--text--default));
 }

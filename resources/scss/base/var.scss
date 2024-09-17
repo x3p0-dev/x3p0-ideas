@@ -16,7 +16,7 @@ body {
 	--wp--preset--color--white: #fff;
 
 	// Map TT4 standard color names to semantic theme colors.
-	--wp--preset--color--base:     var(--wp--custom--color--surface--default, #fff);
+	--wp--preset--color--base:     var(--wp--custom--color--surface--level-0, #fff);
 	--wp--preset--color--contrast: var(--wp--custom--color--text--default, #000);
 
 	/// Map default WordPress font sizes to the theme's sizes.
@@ -50,18 +50,30 @@ $border:  '--wp--custom--color--border';
 	:root :where(.is-style-section-#{$id}) {
 
 		// Surface/background colors.
-		#{$surface}--default:          var(#{$section}--color--surface--default);
-		#{$surface}--emphasis:         var(#{$section}--color--surface--emphasis);
-		#{$surface}--contrast:         var(#{$section}--color--surface--contrast);
-		#{$surface}--primary:          var(#{$section}--color--surface--primary);
-		#{$surface}--primary-emphasis: var(#{$section}--color--surface--primary-emphasis);
+		#{$surface}--level-0: var(#{$section}--color--surface--level-0);
+		#{$surface}--level-1: var(#{$section}--color--surface--level-1);
+		#{$surface}--level-2: var(#{$section}--color--surface--level-2);
+		#{$surface}--primary: var(#{$section}--color--surface--primary);
+
+		// Button component surface/background colors.
+		#{$surface}--button--primary--default: var(#{$section}--color--surface--button--primary--default);
+		#{$surface}--button--primary--hover:   var(#{$section}--color--surface--button--primary--hover);
 
 		// Text colors.
 		#{$text}--default:    var(#{$section}--color--text--default);
 		#{$text}--muted:      var(#{$section}--color--text--muted);
 		#{$text}--primary:    var(#{$section}--color--text--primary);
-		#{$text}--hover:      var(#{$section}--color--text--hover);
 		#{$text}--on-primary: var(#{$section}--color--text--on-primary);
+
+		// Button component text colors.
+		#{$text}--button--primary--default: var(#{$section}--color--text--button--primary--default);
+		#{$text}--button--primary--hover:   var(#{$section}--color--text--button--primary--hover);
+
+		// Link component text colors.
+		#{$text}--link--primary--default:   var(#{$section}--color--text--link--primary--default);
+		#{$text}--link--primary--hover:     var(#{$section}--color--text--link--primary--hover);
+		#{$text}--link--secondary--default: var(#{$section}--color--text--link--secondary--default);
+		#{$text}--link--secondary--hover:   var(#{$section}--color--text--link--secondary--hover);
 
 		// Icon colors.
 		#{$icon}--default: var(#{$section}--color--icon--default);

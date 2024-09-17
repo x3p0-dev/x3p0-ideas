@@ -25,9 +25,9 @@
 				"custom": {
 					"block": {
 						"navigation-submenu": {
-							"color": "var:custom|color|text|on-primary",
-							"background": "var:custom|color|surface|primary-emphasis",
-							"background-hover": "var:custom|color|surface|primary",
+							"color": "var:custom|color|text|button|primary|default",
+							"background": "var:custom|color|surface|button|primary|default",
+							"background-hover": "var:custom|color|surface|button|primary|hover",
 							"min-width": "18rem"
 						}
 					}
@@ -60,18 +60,33 @@
 			"section-3": {
 				"color": {
 					"surface": {
-						"default": "var:preset|color|primary-700",
-						"emphasis": "var:preset|color|primary-800",
-						"contrast": "var:preset|color|primary-900",
-						"primary": "var:preset|color|primary-900",
-						"primary-emphasis": "var:preset|color|primary-950"
+						"level-0": "var:preset|color|primary-700",
+						"level-1": "var:preset|color|primary-800",
+						"level-2": "var:preset|color|primary-900",
+						"button": {
+							"primary": {
+								"default": "var:preset|color|primary-900",
+								"hover": "var:preset|color|primary-950"
+							}
+						}
 					},
 					"text": {
 						"default": "var:preset|color|white",
 						"muted": "var:preset|color|primary-200",
 						"primary": "var:preset|color|primary-100",
-						"hover": "currentColor",
-						"on-primary": "var:preset|color|white"
+						"on-primary": "var:preset|color|white",
+						"button": {
+							"primary": {
+								"default": "var:preset|color|white",
+								"hover": "var:preset|color|white"
+							}
+						},
+						"link": {
+							"primary": {
+								"default": "var:preset|color|primary-100",
+								"hover": "currentColor"
+							}
+						}
 					},
 					"icon": {
 						"default": "currentColor",

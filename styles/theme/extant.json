@@ -9,8 +9,8 @@
 					"block": {
 						"navigation-submenu": {
 							"color": "var:custom|color|text|default",
-							"background": "var:custom|color|surface|emphasis",
-							"background-hover": "var:custom|color|surface|contrast",
+							"background": "var:custom|color|surface|level-1",
+							"background-hover": "var:custom|color|surface|level-2",
 							"min-width": "18rem"
 						}
 					}
@@ -36,10 +36,19 @@
 			"variation": "extant",
 			"color": {
 				"surface": {
-					"primary-emphasis": "var:preset|color|black"
+					"button": {
+						"primary": {
+							"hover": "var:preset|color|black"
+						}
+					}
 				},
 				"text": {
-					"on-primary-hover": "var:preset|color|white"
+					"button": {
+						"primary": {
+							"default": "var:preset|color|white",
+							"hover": "var:preset|color|white"
+						}
+					}
 				},
 				"border": {
 					"default": "var:preset|color|neutral-100"
@@ -48,10 +57,19 @@
 			"section-1": {
 				"color": {
 					"surface": {
-						"primary-emphasis": "var:preset|color|black"
+						"button": {
+							"primary": {
+								"hover": "var:preset|color|black"
+							}
+						}
 					},
 					"text": {
-						"on-primary-hover": "var:preset|color|white"
+						"button": {
+							"primary": {
+								"default": "var:preset|color|white",
+								"hover": "var:preset|color|white"
+							}
+						}
 					},
 					"border": {
 						"default": "var:preset|color|neutral-200"
@@ -61,10 +79,19 @@
 			"section-2": {
 				"color": {
 					"surface": {
-						"primary-emphasis": "var:preset|color|black"
+						"button": {
+							"primary": {
+								"hover": "var:preset|color|black"
+							}
+						}
 					},
 					"text": {
-						"on-primary-hover": "var:preset|color|white"
+						"button": {
+							"primary": {
+								"default": "var:preset|color|white",
+								"hover": "var:preset|color|white"
+							}
+						}
 					},
 					"border": {
 						"default": "var:preset|color|neutral-100"
@@ -74,10 +101,19 @@
 			"section-3": {
 				"color": {
 					"surface": {
-						"primary-emphasis": "var:preset|color|black"
+						"button": {
+							"primary": {
+								"hover": "var:preset|color|black"
+							}
+						}
 					},
 					"text": {
-						"on-primary-hover": "var:preset|color|white"
+						"button": {
+							"primary": {
+								"default": "var:preset|color|white",
+								"hover": "var:preset|color|white"
+							}
+						}
 					}
 				}
 			},

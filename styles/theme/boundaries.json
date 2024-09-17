@@ -17,8 +17,12 @@
 			"variation": "boundaries",
 			"color": {
 				"text": {
-					"primary": "currentColor",
-					"hover": "var:preset|color|primary-700"
+					"link": {
+						"primary": {
+							"default": "currentColor",
+							"hover": "var:preset|color|primary-700"
+						}
+					}
 				},
 				"border": {
 					"default": "var:preset|color|neutral-300"
@@ -27,8 +31,12 @@
 			"section-1": {
 				"color": {
 					"text": {
-						"primary": "currentColor",
-						"hover": "var:preset|color|primary-700"
+						"link": {
+							"primary": {
+								"default": "currentColor",
+								"hover": "var:preset|color|primary-700"
+							}
+						}
 					},
 					"border": {
 						"default": "var:preset|color|neutral-300"
@@ -38,8 +46,12 @@
 			"section-2": {
 				"color": {
 					"text": {
-						"primary": "currentColor",
-						"hover": "var:preset|color|primary-700"
+						"link": {
+							"primary": {
+								"default": "currentColor",
+								"hover": "var:preset|color|primary-700"
+							}
+						}
 					},
 					"border": {
 						"default": "var:preset|color|neutral-400"

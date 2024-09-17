@@ -9,8 +9,8 @@
 					"block": {
 						"navigation-submenu": {
 							"color": "var:custom|color|text|default",
-							"background": "var:custom|color|surface|emphasis",
-							"background-hover": "var:custom|color|surface|contrast"
+							"background": "var:custom|color|surface|level-1",
+							"background-hover": "var:custom|color|surface|level-2"
 						}
 					}
 				}
@@ -313,9 +313,6 @@
 				}
 			},
 			"heading": {
-				"color": {
-					"text": "var:preset|color|neutral-700"
-				},
 				"typography": {
 					"fontWeight": "200",
 					"letterSpacing": "-0.02em"

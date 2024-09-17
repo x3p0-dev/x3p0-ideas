@@ -16,7 +16,7 @@
 	],
 	"styles": {
 		"color": {
-			"background": "var:custom|color|surface|default",
+			"background": "var:custom|color|surface|level-0",
 			"text": "var:custom|color|text|default"
 		},
 		"spacing": {

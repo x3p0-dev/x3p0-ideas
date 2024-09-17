@@ -24,7 +24,7 @@
 
 nav.wp-block-navigation .wp-block-navigation-submenu .wp-block-navigation__submenu-container,
 nav.wp-block-navigation.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open {
-	background: var(--wp--custom--block--navigation-submenu--background, var(--wp--custom--color--surface--default));
+	background: var(--wp--custom--block--navigation-submenu--background, var(--wp--custom--color--surface--level-0));
 	color: var(--wp--custom--block--navigation-submenu--color, var(--wp--custom--color--text--default));
 }
 
@@ -69,7 +69,7 @@ nav.wp-block-navigation.wp-block-navigation .wp-block-navigation__responsive-con
 .wp-block-navigation-submenu .wp-block-navigation-item:focus {
 	background: var(
 		--wp--custom--block--navigation-submenu--background-hover,
-		var(--wp--custom--color--surface--emphasis)
+		var(--wp--custom--color--surface--level-1)
 	);
 }
 

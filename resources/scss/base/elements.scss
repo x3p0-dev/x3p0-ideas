@@ -16,11 +16,17 @@
 /// Adds transition effects to hoverable and focusable elements.
 ///
 a:where(:not(:focus)),
+button,
+input[type=reset],
 input[type=submit],
 input:focus,
 textarea:focus {
 	transition: 0.5s ease-in-out;
-	transition-property: color, background-color, border-color, outline-color;
+	transition-property:
+		color,
+		background-color,
+		border-color,
+		outline-color;
 }
 
 ///
@@ -55,13 +61,6 @@ video {
 }
 
 ///
-/// Prefix `cite` elements (WP doesn't support element CSS in `theme.json`).
-///
-blockquote cite::before {
-	content: "\2013\000A0";
-}
-
-///
 /// Abbreviation styles.
 ///
 /// @link https://github.com/WordPress/gutenberg/issues/64362
@@ -70,6 +69,45 @@ abbr[title] {
 	cursor: help;
 	text-decoration: currentColor underline dotted min(0.078125em, 3px);
 	text-underline-offset: 0.078125em;
+}
+
+///
+/// Caption styles.
+///
+.wp-element-caption a {
+	// WordPress targets links for Image blocks with `width: 100%` (when
+	// wide/full) and `display: inline-block`. This breaks links in captions.
+	// This change ensures that this and other cases are covered.
+	display: inline;
+	width:   initial;
+
+	// Add colors for links within captions.
+	color: var(--wp--custom--color--text--link--secondary--default);
+
+	&:hover,
+	&:focus {
+		color: var(--wp--custom--color--text--link--secondary--hover);
+	}
+}
+
+///
+/// Citation styles.
+///
+blockquote cite {
+	// Prefix `cite` elements (WP doesn't support element CSS in `theme.json`).
+	&::before {
+		content: "\2013\000A0";
+	}
+
+	// Add colors for links within block quote citations.
+	a {
+		color: var(--wp--custom--color--text--link--secondary--default);
+
+		&:hover,
+		&:focus {
+			color: var(--wp--custom--color--text--link--secondary--hover);
+		}
+	}
 }
 
 ///
@@ -90,7 +128,7 @@ abbr[title] {
 
 	// Color.
 	color:      var(--wp--custom--color--text--default, inherit);
-	background: var(--wp--custom--color--surface--emphasis, transparent);
+	background: var(--wp--custom--color--surface--level-1, transparent);
 
 	// Border and shadow.
 	border:     none;
