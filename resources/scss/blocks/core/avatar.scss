@@ -12,10 +12,7 @@
 ///
 /// Remove extra whitespace from inline block element so this aligns correctly.
 ///
-/// @todo `block` broke something with layout. Investigate further.
-///
 .wp-block-avatar__image {
-	//display: block;
 	display: inline-block;
 }
 
@@ -59,7 +56,7 @@
 	img {
 		background-color: inherit;
 		background-image: inherit;
-		padding: min( 6px, 8.33% );
+		padding: min(6px, 8.33%);
 	}
 }
 

@@ -41,10 +41,12 @@
 	box-shadow:    var(--wp--custom--site-blocks--shadow, none);
 }
 
-// WordPress has no standard method of controlling the gap between blocks at the
-// top level of the site other than wrapping the site in yet-another-div. This
-// gives us an easy to either wipe out or customize the gap via
-// `custom.siteBlocks.gap` in `theme.json`.
+///
+/// WordPress has no standard method of controlling the gap between blocks at the
+/// top level of the site other than wrapping the site in yet-another-div. This
+/// gives us an easy to either wipe out or customize the gap via
+/// `custom.siteBlocks.gap` in `theme.json`.
+///
 .wp-site-blocks > *,
 .editor-styles-wrapper .wp-site-blocks > * {
 	margin-top: var(--wp--custom--site-blocks--gap, var(--wp--style--block-gap));
