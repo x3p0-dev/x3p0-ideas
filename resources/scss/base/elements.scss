@@ -12,11 +12,9 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
-// -----------------------------------------------------------------------------
-// `theme.json`-supported elements with extra styles.
-// -----------------------------------------------------------------------------
-
-// Adds transition effects to hoverable and focusable elements.
+///
+/// Adds transition effects to hoverable and focusable elements.
+///
 a:where(:not(:focus)),
 input[type=submit],
 input:focus,
@@ -25,7 +23,9 @@ textarea:focus {
 	transition-property: color, background-color, border-color, outline-color;
 }
 
-// Link extras.
+///
+/// Link customizations that are not fully supported through `theme.json`.
+///
 a {
 	// The `!important` is necessary to overrule the shorthand version
 	// `text-decoration` used via `theme.json`.
@@ -46,36 +46,44 @@ a {
 	}
 }
 
-// Ensure audio/video elements are set to block-level.
+///
+/// Ensure audio/video elements are set to block-level.
+///
 audio,
 video {
 	display: block;
 }
 
-// Prefix `cite` elements (WP doesn't support element CSS in `theme.json`).
+///
+/// Prefix `cite` elements (WP doesn't support element CSS in `theme.json`).
+///
 blockquote cite::before {
 	content: "\2013\000A0";
 }
 
-// Center captions (WP doesn't support text-align in `theme.json`).
+///
+/// Center captions (WP doesn't support text-align in `theme.json`).
+///
 .wp-element-caption {
 	text-align: center;
 }
 
-// -----------------------------------------------------------------------------
-// `<abbr>`
-// -----------------------------------------------------------------------------
-
+///
+/// Abbreviation styles.
+///
+/// @link https://github.com/WordPress/gutenberg/issues/64362
+///
 abbr[title] {
 	cursor: help;
 	text-decoration: currentColor underline dotted min(0.078125em, 3px);
 	text-underline-offset: 0.078125em;
 }
 
-// -----------------------------------------------------------------------------
-// `<code>`
-// -----------------------------------------------------------------------------
-
+///
+/// Inline code styles.
+///
+/// @link https://github.com/WordPress/gutenberg/issues/64362
+///
 :where(:not(pre) > code) {
 	// Spacing.
 	padding: 0.125em 0.25em;
@@ -91,18 +99,16 @@ abbr[title] {
 	color:      var(--wp--custom--color--text--default, inherit);
 	background: var(--wp--custom--color--surface--emphasis, transparent);
 
-	// Border.
-	border: none;
-
-	// Box shadow.
+	// Border and shadow.
+	border:     none;
 	box-shadow: none;
 }
 
-// -----------------------------------------------------------------------------
-// `<del>` and `<s>` - While these are technically different elements, they are
-// generally styled the same.
-// -----------------------------------------------------------------------------
-
+///
+/// Delete and strikethrough styles.
+///
+/// @link https://github.com/WordPress/gutenberg/issues/64362
+///
 del,
 s {
 	color: var(--wp--custom--color--text--muted, inherit);
@@ -113,20 +119,20 @@ s {
 		min(0.078125em, 3px);
 }
 
-// -----------------------------------------------------------------------------
-// `<figure>` - WordPress Core zeroes out the browser defaults and adds a
-// default bottom margin to figures.
-// -----------------------------------------------------------------------------
-
+///
+/// WordPress Core zeroes out the browser defaults and adds a default bottom
+/// margin to figures.
+///
 :where(figure) {
 	margin: 0;
 }
 
-// -----------------------------------------------------------------------------
-// `<img>` - WordPress has several image-type blocks, but it doesn't support
-// the image element itself via `theme.json`.
-// -----------------------------------------------------------------------------
-
+///
+/// WordPress has several image-type blocks, but it doesn't support the image
+/// element itself via `theme.json`.
+///
+/// @link https://github.com/WordPress/gutenberg/issues/64362
+///
 img:where(:not(.avatar)) {
 	border-color: var(--wp--custom--elements--img--border-color, transparent);
 	border-style: var(--wp--custom--elements--img--border-style, solid);
@@ -134,20 +140,22 @@ img:where(:not(.avatar)) {
 	box-shadow:   var(--wp--custom--elements--img--shadow, none);
 }
 
-// -----------------------------------------------------------------------------
-// `<ins>`
-// -----------------------------------------------------------------------------
-
+///
+/// Insert styles.
+///
+/// @link https://github.com/WordPress/gutenberg/issues/64362
+///
 ins {
 	color: inherit;
 	text-decoration: currentColor underline solid clamp(2px, 0.125em, 0.125em);
 	text-underline-offset: 4px;
 }
 
-// -----------------------------------------------------------------------------
-// `<kbd>`
-// -----------------------------------------------------------------------------
-
+///
+/// Keyboard input styles.
+///
+/// @link https://github.com/WordPress/gutenberg/issues/64362
+///
 kbd {
 	white-space: nowrap;
 
@@ -165,52 +173,52 @@ kbd {
 	color:      inherit;
 	background: transparent;
 
-	// Border.
+	// Border and shadow.
 	border-color:  var(--wp--custom--color--border--default);
 	border-style:  solid;
 	border-width:  1px;
 	border-radius: 0.25rem;
-
-	// Box shadow.
-	box-shadow: var(--wp--preset--shadow--sm, none);
+	box-shadow:    var(--wp--preset--shadow--sm, none);
 }
 
-// -----------------------------------------------------------------------------
-// `<ul>`, `<ol>`, `<li>`
-// -----------------------------------------------------------------------------
-
+///
+/// Adds a list item marker color.
+///
 li::marker {
 	color: var(--wp--custom--color--text--muted, currentColor);
 }
 
-// -----------------------------------------------------------------------------
-// `<mark>`
-// -----------------------------------------------------------------------------
-
-// Spacing for all `<mark>` elements, including WP's "highlight".
+///
+/// Spacing for all `<mark>` elements, including WP's "highlight".
+///
+/// @link https://github.com/WordPress/gutenberg/issues/64362
+///
 mark {
 	padding: 0.125em 0.25em;
+
+	// Style `<mark>` elements but avoid WP's "highlight" rich text element.
+	&:where(:not(.has-inline-color):not([style])) {
+		color:      var(--wp--custom--color--text--on-primary, currentColor);
+		background: var(--wp--custom--color--surface--primary, transparent);
+	}
 }
 
-// Style <mark> elements but avoid WP's "highlight" rich text element.
-mark:where(:not(.has-inline-color):not([style])) {
-	color:      var(--wp--custom--color--text--on-primary, currentColor);
-	background: var(--wp--custom--color--surface--primary, transparent);
-}
-
-// Bump the line-height when used in a heading and remove padding.
+///
+/// Bump the line-height when using `<mark>` in a heading and remove padding.
+///
 :where(h1, h2, h3, h4, h5 h6) > mark {
 	line-height: 1.625em;
 	padding: 0;
 }
 
-// -----------------------------------------------------------------------------
-// `<sup>` and `<sub>`
-// -----------------------------------------------------------------------------
-
+///
+/// Superscript and subscript styles.
+///
+/// @link https://github.com/WordPress/gutenberg/issues/64362
+///
 sup,
 sub {
-	font-size: 0.8125em;
+	font-size:   0.8125em;
 	line-height: 0; // Don't mess up line-height of parent.
 
 	// Text decoration doesn't really work well for most cases here, such as
