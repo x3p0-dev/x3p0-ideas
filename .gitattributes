@@ -29,6 +29,7 @@
 .ideas/ export-ignore
 .notes/ export-ignore
 .playground/ export-ignore
+dev/ export-ignore
 docs/ export-ignore
 node_modules/ export-ignore
 tests/ export-ignore
@@ -44,7 +45,7 @@ tests/ export-ignore
 /parts/experiment-*.html export-ignore
 /patterns/experiment-*.php export-ignore
 /styles/*/experiment-*.json export-ignore
-/templates/experiment-*.json export-ignore
+/templates/experiment-*.html export-ignore
 
 # Note that we're retaining the `resources/js` and `resources/scss` folders,
 # despite them containing dev-only files. They are required for themes submitted
