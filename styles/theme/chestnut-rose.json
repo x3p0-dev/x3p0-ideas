@@ -14,14 +14,6 @@
 						}
 					}
 				}
-			},
-			"core/post-comments-form": {
-				"custom": {
-					"commentNotes": {
-						"fontSize": "var:preset|font-size|xs",
-						"lineHeight": "var:preset|line-height|xs"
-					}
-				}
 			}
 		},
 		"color": {

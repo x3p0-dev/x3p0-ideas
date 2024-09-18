@@ -199,18 +199,6 @@
 					"textTransform": true
 				}
 			},
-			"core/post-comments-form": {
-				"custom": {
-					"commentNotes": {
-						"color": "var:custom|color|text|muted",
-						"fontSize": "var:preset|font-size|sm",
-						"lineHeight": "var:custom|line-height|sm"
-					},
-					"required": {
-						"color": "var:custom|color|text|primary"
-					}
-				}
-			},
 			"core/post-template": {
 				"border": {
 					"color": true,
