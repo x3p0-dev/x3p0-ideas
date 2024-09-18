@@ -349,14 +349,6 @@
 					}
 				}
 			},
-			"core/navigation-submenu": {
-				"border": {
-					"color": "var:custom|global|border|color",
-					"style": "var:custom|global|border|style",
-					"width": "var:custom|global|border|width",
-					"radius": "var:custom|global|border|radius"
-				}
-			},
 			"core/post-comments-form": {
 				"elements": {
 					"h3": {

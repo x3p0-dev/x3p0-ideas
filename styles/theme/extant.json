@@ -8,9 +8,6 @@
 				"custom": {
 					"block": {
 						"navigation-submenu": {
-							"color": "var:custom|color|text|default",
-							"background": "var:custom|color|surface|level-1",
-							"background-hover": "var:custom|color|surface|level-2",
 							"min-width": "18rem"
 						}
 					}
@@ -32,6 +29,10 @@
 						"primary": {
 							"hover": "var:preset|color|black"
 						}
+					},
+					"submenu": {
+						"default": "var:preset|color|neutral-950",
+						"hover": "var:preset|color|neutral-900"
 					}
 				},
 				"text": {
@@ -40,6 +41,10 @@
 							"default": "var:preset|color|white",
 							"hover": "var:preset|color|white"
 						}
+					},
+					"submenu": {
+						"default": "var:preset|color|neutral-50",
+						"hover": "var:preset|color|neutral-50"
 					}
 				},
 				"border": {
@@ -395,10 +400,6 @@
 				}
 			},
 			"core/navigation-submenu": {
-				"border": {
-					"width": "0",
-					"radius": "var:custom|global|border|radius"
-				},
 				"shadow": "var:preset|shadow|md",
 				"spacing": {
 					"padding": {
@@ -410,28 +411,6 @@
 				},
 				"typography": {
 					"fontSize": "inherit"
-				},
-				"elements": {
-					"link": {
-						"spacing": {
-							"padding": {
-								"top": "var:preset|spacing|minus-2",
-								"bottom": "var:preset|spacing|minus-2",
-								"left": "var:preset|spacing|base",
-								"right": "var:preset|spacing|base"
-							}
-						},
-						":focus": {
-							"color": {
-								"text": "inherit"
-							}
-						},
-						":hover": {
-							"color": {
-								"text": "inherit"
-							}
-						}
-					}
 				}
 			},
 			"core/post-comments-form": {

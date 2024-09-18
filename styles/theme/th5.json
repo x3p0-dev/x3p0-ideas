@@ -17,22 +17,17 @@
 						"background": "linear-gradient(0deg, #29292ab3, #29292a4d 70%, transparent)"
 					}
 				}
-			},
-			"core/navigation-submenu": {
-				"custom": {
-					"block": {
-						"navigation-submenu": {
-							"color": "var:custom|color|text|default",
-							"background": "var:custom|color|surface|level-1",
-							"background-hover": "var:custom|color|surface|level-2"
-						}
-					}
-				}
 			}
 		},
 		"custom": {
 			"variation": "th5",
 			"color": {
+				"surface": {
+					"submenu": {
+						"default": "var:custom|color|surface|level-1",
+						"hover": "var:custom|color|surface|level-2"
+					}
+				},
 				"text": {
 					"muted": "var:preset|color|neutral-700"
 				},

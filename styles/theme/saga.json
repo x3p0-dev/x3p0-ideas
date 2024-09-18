@@ -20,17 +20,6 @@
 						"padding": "var:preset|spacing|base"
 					}
 				}
-			},
-			"core/navigation-submenu": {
-				"custom": {
-					"block": {
-						"navigation-submenu": {
-							"color": "var:custom|color|text|default",
-							"background": "var:custom|color|surface|level-1",
-							"background-hover": "var:custom|color|surface|level-2"
-						}
-					}
-				}
 			}
 		},
 		"custom": {
@@ -43,6 +32,10 @@
 							"default": "var:preset|color|primary-600",
 							"hover": "var:preset|color|primary-900"
 						}
+					},
+					"submenu": {
+						"default": "var:custom|color|surface|level-1",
+						"hover": "var:custom|color|surface|level-2"
 					}
 				},
 				"text": {

@@ -25,9 +25,6 @@
 				"custom": {
 					"block": {
 						"navigation-submenu": {
-							"color": "var:custom|color|text|button|primary|default",
-							"background": "var:custom|color|surface|button|primary|default",
-							"background-hover": "var:custom|color|surface|button|primary|hover",
 							"min-width": "18rem"
 						}
 					}
@@ -43,6 +40,20 @@
 		},
 		"custom": {
 			"variation": "memories",
+			"color": {
+				"surface": {
+					"submenu": {
+						"default": "var:preset|color|primary-700",
+						"hover": "var:preset|color|primary-900"
+					}
+				},
+				"text": {
+					"submenu": {
+						"default": "var:preset|color|primary-50",
+						"hover": "var:preset|color|primary-50"
+					}
+				}
+			},
 			"section-1": {
 				"color": {
 					"border": {

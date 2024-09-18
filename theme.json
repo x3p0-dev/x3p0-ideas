@@ -183,17 +183,6 @@
 					"padding": true
 				}
 			},
-			"core/navigation-submenu": {
-				"custom": {
-					"block": {
-						"navigation-submenu": {
-							"color": "var:custom|color|text|default",
-							"background": "var:custom|color|surface|level-0",
-							"background-hover": "var:custom|color|surface|level-2"
-						}
-					}
-				}
-			},
 			"core/paragraph": {
 				"typography": {
 					"textTransform": true
@@ -750,6 +739,10 @@
 							"default": "var:preset|color|primary-600",
 							"hover": "var:preset|color|primary-800"
 						}
+					},
+					"submenu": {
+						"default": "var:custom|color|surface|level-0",
+						"hover": "var:custom|color|surface|level-2"
 					}
 				},
 				"text": {
@@ -772,6 +765,10 @@
 							"default": "currentColor",
 							"hover": "var:preset|color|primary-700"
 						}
+					},
+					"submenu": {
+						"default": "var:custom|color|text|default",
+						"hover": "var:custom|color|text|default"
 					}
 				},
 				"icon": {
@@ -1805,14 +1802,14 @@
 			},
 			"core/navigation-submenu": {
 				"border": {
-					"width": "1px",
-					"style": "solid",
-					"color": "var:custom|color|border|default",
+					"color": "var:custom|global|border|color",
+					"style": "var:custom|global|border|style",
+					"width": "var:custom|global|border|width",
 					"radius": "var:custom|global|border|radius"
 				},
 				"color": {
-					"background": "var:custom|block|navigation-submenu|background",
-					"text": "var:custom|block|navigation-submenu|color"
+					"background": "var:custom|color|surface|submenu|default",
+					"text": "var:custom|color|text|submenu|default"
 				},
 				"shadow": "var:preset|shadow|md",
 				"spacing": {
@@ -1838,6 +1835,9 @@
 						}
 					},
 					"link": {
+						"color": {
+							"text": "var:custom|color|text|submenu|default"
+						},
 						"outline": {
 							"width": "0"
 						},
@@ -1851,12 +1851,12 @@
 						},
 						":focus": {
 							"color": {
-								"text": "inherit"
+								"text": "var:custom|color|text|submenu|hover"
 							}
 						},
 						":hover": {
 							"color": {
-								"text": "inherit"
+								"text": "var:custom|color|text|submenu|hover"
 							}
 						}
 					}

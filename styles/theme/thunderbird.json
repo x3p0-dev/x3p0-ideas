@@ -11,17 +11,6 @@
 					}
 				}
 			},
-			"core/navigation-submenu": {
-				"custom": {
-					"block": {
-						"navigation-submenu": {
-							"color": "var:custom|color|text|default",
-							"background": "var:custom|color|surface|level-1",
-							"background-hover": "var:custom|color|surface|level-2"
-						}
-					}
-				}
-			},
 			"core/paragraph": {
 				"custom": {
 					"dropCap": {
