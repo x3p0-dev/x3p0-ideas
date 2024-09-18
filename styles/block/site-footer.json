@@ -6,7 +6,7 @@
 	"blockTypes": [ "core/template-part" ],
 	"styles": {
 		"color": {
-			"background": "transparent"
+			"background": "var:custom|color|surface|level-1"
 		}
 	}
 }
