@@ -1,7 +1,5 @@
 <?xml version="1.0"?>
 <ruleset name="X3P0">
-	<!-- Configure PHP version to test. -->
-	<config name="testVersion" value="8.0-"/>
 
 	<!-- Only check the PHP files. -->
 	<arg name="extensions" value="php"/>
@@ -42,6 +40,8 @@
 	########################################################################
 	-->
 	<rule ref="PHPCompatibilityWP">
+		<!-- Configure PHP version to test. -->
+		<config name="testVersion" value="8.0-"/>
 		<include-pattern>*\.php$</include-pattern>
 	</rule>
 
