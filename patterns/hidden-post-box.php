@@ -49,8 +49,7 @@ defined('ABSPATH') || exit;
 
 		<!-- wp:post-featured-image {
 			"isLink":true,
-			"aspectRatio":"16/9",
-			"className":"is-style-borderless"
+			"aspectRatio":"16/9"
 		} /-->
 
 		<!-- wp:group {
