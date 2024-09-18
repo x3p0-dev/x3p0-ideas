@@ -12,6 +12,13 @@
 // -----------------------------------------------------------------------------
 
 ///
+/// `border-box` for the win! 🏆
+///
+.wp-block-latest-comments {
+	box-sizing: border-box;
+}
+
+///
 /// WP hardcodes a font-size for comment dates and excerpt paragraphs.
 ///
 .wp-block-latest-comments__comment-date,
