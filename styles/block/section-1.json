@@ -4,11 +4,13 @@
 	"title": "Style 1",
 	"slug": "section-1",
 	"blockTypes": [
+		"core/code",
 		"core/column",
 		"core/columns",
 		"core/comment-content",
 		"core/comment-template",
 		"core/comments",
+		"core/details",
 		"core/group",
 		"core/media-text",
 		"core/post-comments-form",
