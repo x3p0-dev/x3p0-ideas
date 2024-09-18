@@ -79,7 +79,7 @@
 	border-style:  var(--wp--custom--global--border--style, solid);
 	border-width:  var(--wp--custom--global--border--width, 1px);
 	border-radius: var(--wp--custom--global--border--radius, none);
-	box-shadow:    var(--wp--custom--global--shadow, none);
+	box-shadow:    var(--wp--custom--shadow--primary--secondary, none);
 
 	&:focus {
 		outline: 2px solid var(--wp--custom--color--text--primary, inherit);

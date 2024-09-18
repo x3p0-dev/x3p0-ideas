@@ -57,7 +57,7 @@
 
 	> img {
 		border-radius: var(--wp--custom--global--border--radius);
-		box-shadow: var(--wp--custom--global--shadow);
+		box-shadow: var(--wp--custom--shadow--primary--default);
 	}
 
 	&:where(.alignleft, .alignright) {

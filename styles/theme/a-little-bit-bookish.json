@@ -26,6 +26,16 @@
 			},
 			"embed": {
 				"fontFamily": "var:preset|font-family|secondary"
+			},
+			"shadow": {
+				"primary": {
+					"default": "none",
+					"hover": "var:preset|shadow|enlarge"
+				},
+				"secondary": {
+					"default": "none",
+					"hover": "none"
+				}
 			}
 		},
 		"color": {

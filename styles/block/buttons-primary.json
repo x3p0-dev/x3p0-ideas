@@ -47,6 +47,7 @@
 						"background": { "ref": "styles.elements.button.:focus.color.background" },
 						"text": { "ref": "styles.elements.button.:focus.color.text" }
 					},
+					"shadow": { "ref": "styles.elements.button.:focus.shadow" },
 					"typography": {
 						"textDecoration": { "ref": "styles.elements.button.:focus.typography.textDecoration" }
 					}
@@ -56,6 +57,7 @@
 						"background": { "ref": "styles.elements.button.:hover.color.background" },
 						"text": { "ref": "styles.elements.button.:hover.color.text" }
 					},
+					"shadow": { "ref": "styles.elements.button.:hover.shadow" },
 					"typography": {
 						"textDecoration": { "ref": "styles.elements.button.:hover.typography.textDecoration" }
 					}

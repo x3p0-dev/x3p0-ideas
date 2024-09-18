@@ -28,6 +28,7 @@
 				"outline": {
 					"color": { "ref": "styles.blocks.core/button.variations.outline.outline.color" }
 				},
+				"shadow": { "ref": "styles.elements.button.shadow" },
 				"spacing": {
 					"padding": {
 						"top": { "ref": "styles.elements.button.spacing.padding.top" },
@@ -46,6 +47,7 @@
 					"color": {
 						"background": "transparent"
 					},
+					"shadow": { "ref": "styles.elements.button.:focus.shadow" },
 					"typography": {
 						"textDecoration": "underline !important"
 					}
@@ -54,6 +56,7 @@
 					"color": {
 						"background": "transparent"
 					},
+					"shadow": { "ref": "styles.elements.button.:hover.shadow" },
 					"typography": {
 						"textDecoration": "underline !important"
 					}
@@ -79,11 +82,13 @@
 						},
 						"shadow": { "ref": "styles.elements.button.shadow" },
 						":focus": {
+							"shadow": { "ref": "styles.elements.button.:focus.shadow" },
 							"typography": {
 								"textDecoration": { "ref": "styles.elements.button.:focus.typography.textDecoration" }
 							}
 						},
 						":hover": {
+							"shadow": { "ref": "styles.elements.button.:hover.shadow" },
 							"typography": {
 								"textDecoration": { "ref": "styles.elements.button.:hover.typography.textDecoration" }
 							}

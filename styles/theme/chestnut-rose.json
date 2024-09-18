@@ -199,8 +199,7 @@
 				"border": {
 					"width": "0",
 					"radius": "8px"
-				},
-				"shadow": "var:preset|shadow|lg"
+				}
 			},
 			"elements": {
 				"label": {
@@ -286,8 +285,7 @@
 					"fontWeight": "300",
 					"fontSize": "var:preset|font-size|xs",
 					"lineHeight": "var:custom|line-height|xs"
-				},
-				"shadow": "var:preset|shadow|md"
+				}
 			},
 			"caption": {
 				"typography": {
@@ -319,7 +317,6 @@
 				}
 			},
 			"core/navigation-submenu": {
-				"shadow": "var:preset|shadow|lg",
 				"typography": {
 					"fontSize": "var:preset|font-size|xs"
 				}
@@ -328,9 +325,6 @@
 				"color": {
 					"text": "var:preset|color|primary-500"
 				}
-			},
-			"core/social-link": {
-				"shadow": "var:preset|shadow|md"
 			},
 			"core/site-title": {
 				"typography": {

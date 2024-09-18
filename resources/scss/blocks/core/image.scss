@@ -52,7 +52,7 @@
 	transition: box-shadow 0.5s ease-in-out;
 
 	&:hover {
-		box-shadow: var(--wp--preset--shadow--enlarge);
+		box-shadow: var(--wp--custom--shadow--primary--hover);
 	}
 }
 
@@ -146,7 +146,7 @@ figure.wp-block-image[class*=-gradient-background] {
 		color: inherit;
 		border: 2px solid currentColor;
 		overflow: hidden;
-		box-shadow: var(--wp--custom--global--shadow);
+		box-shadow: var(--wp--custom--shadow--primary--default);
 
 		// No `theme.json` support for this style of radius.
 		border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
@@ -211,7 +211,7 @@ figure.wp-block-image.is-style-polaroid {
 	// there is no gradient background for the image. For those cases, the
 	// gradient wins out.
 	&:where(:not([class*=gradient-])) {
-		box-shadow: var(--wp--custom--global--shadow), 0 0 8rem rgb(255, 255, 235) inset;
+		box-shadow: var(--wp--custom--shadow--primary--default), 0 0 8rem rgb(255, 255, 235) inset;
 	}
 
 	// Updates the spacing of the caption, which is different from other
@@ -321,5 +321,5 @@ figure.wp-block-image.is-style-polaroid {
 	padding: 0 !important;
 	border: none !important;
 	border-radius: var(--wp--custom--global--border--radius) !important;
-	box-shadow: var(--wp--custom--global--shadow) !important;
+	box-shadow: var(--wp--custom--shadow--primary--default) !important;
 }

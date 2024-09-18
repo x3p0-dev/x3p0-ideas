@@ -126,7 +126,16 @@
 					"width": "1px",
 					"radius": "0"
 				},
-				"shadow": "var:preset|shadow|xs"
+				"shadow": {
+					"primary": {
+						"default": "var:preset|shadow|xs",
+						"hover": "var:preset|shadow|md"
+					},
+					"secondary": {
+						"default": "var:preset|shadow|xs",
+						"hover": "var:preset|shadow|xs"
+					}
+				}
 			}
 		},
 		"color": {
@@ -400,7 +409,6 @@
 				}
 			},
 			"core/navigation-submenu": {
-				"shadow": "var:preset|shadow|md",
 				"spacing": {
 					"padding": {
 						"top": "var:preset|spacing|base",
