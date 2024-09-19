@@ -207,18 +207,22 @@
 					"fontFamily": "var:preset|font-family|primary",
 					"fontStyle": "normal"
 				}
-			},
-			"x3p0/breadcrumbs": {
-				"typography": {
-					"fontFamily": "var:preset|font-family|tertiary",
-					"fontSize": "var:preset|font-size|xs"
-				}
 			}
 		},
 		"variations": {
 			"meta": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|tertiary"
+				}
+			},
+			"site-header": {
+				"blocks": {
+					"x3p0/breadcrumbs": {
+						"typography": {
+							"fontFamily": "var:preset|font-family|tertiary",
+							"fontSize": "var:preset|font-size|xs"
+						}
+					}
 				}
 			}
 		}

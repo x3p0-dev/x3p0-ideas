@@ -177,12 +177,18 @@
 					"fontFamily": "var:preset|font-family|primary",
 					"fontStyle": "italic"
 				}
-			},
-			"x3p0/breadcrumbs": {
-				"typography": {
-					"fontFamily": "var:preset|font-family|secondary",
-					"fontSize": "var:preset|font-size|xs",
-					"lineHeight": "var:custom|line-height|xs"
+			}
+		},
+		"variations": {
+			"site-header": {
+				"blocks": {
+					"x3p0/breadcrumbs": {
+						"typography": {
+							"fontFamily": "var:preset|font-family|secondary",
+							"fontSize": "var:preset|font-size|xs",
+							"lineHeight": "var:custom|line-height|xs"
+						}
+					}
 				}
 			}
 		}

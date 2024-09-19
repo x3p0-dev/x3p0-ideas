@@ -166,11 +166,17 @@
 					"fontFamily": "var:preset|font-family|primary",
 					"fontStyle": "normal"
 				}
-			},
-			"x3p0/breadcrumbs": {
-				"typography": {
-					"fontFamily": "var:preset|font-family|secondary",
-					"fontSize": "var:preset|font-size|sm"
+			}
+		},
+		"variations": {
+			"site-header": {
+				"blocks": {
+					"x3p0/breadcrumbs": {
+						"typography": {
+							"fontFamily": "var:preset|font-family|secondary",
+							"fontSize": "var:preset|font-size|sm"
+						}
+					}
 				}
 			}
 		}

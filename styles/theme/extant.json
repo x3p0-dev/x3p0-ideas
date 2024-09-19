@@ -447,12 +447,6 @@
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary"
 				}
-			},
-			"x3p0/breadcrumbs": {
-				"typography": {
-					"fontSize": "var:preset|font-size|xs",
-					"lineHeight": "var:custom|line-height|xs"
-				}
 			}
 		},
 		"variations": {
@@ -503,6 +497,10 @@
 					"x3p0/breadcrumbs": {
 						"color": {
 							"gradient": "var:preset|gradient|90-deg-neutral-50-transparent"
+						},
+						"typography": {
+							"fontSize": "var:preset|font-size|xs",
+							"lineHeight": "var:custom|line-height|xs"
 						}
 					}
 				}

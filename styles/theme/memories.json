@@ -464,21 +464,6 @@
 					"fontStyle": "italic",
 					"lineHeight": "var:custom|line-height|lg"
 				}
-			},
-			"x3p0/breadcrumbs": {
-				"typography": {
-					"fontStyle": "italic",
-					"fontSize": "var:preset|font-size|xs",
-					"lineHeight": "var:custom|line-height|xs"
-				},
-				"elements": {
-					"link": {
-						"typography": {
-							"fontStyle": "normal",
-							"fontWeight": "500"
-						}
-					}
-				}
 			}
 		},
 		"variations": {
@@ -535,6 +520,19 @@
 							"background": "var:preset|color|neutral-100",
 							"gradient": "none",
 							"text": "var:preset|color|neutral-500"
+						},
+						"typography": {
+							"fontStyle": "italic",
+							"fontSize": "var:preset|font-size|xs",
+							"lineHeight": "var:custom|line-height|xs"
+						},
+						"elements": {
+							"link": {
+								"typography": {
+									"fontStyle": "normal",
+									"fontWeight": "500"
+								}
+							}
 						}
 					}
 				}

@@ -12,6 +12,36 @@
 			"x3p0/breadcrumbs": {
 				"color": {
 					"background": "var:custom|color|surface|level-1"
+				},
+				"spacing": {
+					"padding":{
+						"top": "var:preset|spacing|base",
+						"right": "var:preset|spacing|plus-3",
+						"bottom": "var:preset|spacing|base",
+						"left": "var:preset|spacing|plus-3"
+					}
+				},
+				"typography": {
+					"fontSize": "var:preset|font-size|xs",
+					"lineHeight": "var:custom|line-height|xs"
+				},
+				"elements": {
+					"link": {
+						"typography": {
+							"fontWeight": "500",
+							"textDecoration": "none"
+						},
+						":focus": {
+							"typography": {
+								"textDecoration": "underline"
+							}
+						},
+						":hover": {
+							"typography": {
+								"textDecoration": "underline"
+							}
+						}
+					}
 				}
 			}
 		}

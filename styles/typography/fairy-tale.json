@@ -179,11 +179,17 @@
 					"fontSize": "inherit",
 					"fontStyle": "normal"
 				}
-			},
-			"x3p0/breadcrumbs": {
-				"typography": {
-					"fontFamily": "var:preset|font-family|secondary",
-					"fontSize": "var:preset|font-size|xs"
+			}
+		},
+		"variations": {
+			"site-header": {
+				"blocks": {
+					"x3p0/breadcrumbs": {
+						"typography": {
+							"fontFamily": "var:preset|font-family|secondary",
+							"fontSize": "var:preset|font-size|xs"
+						}
+					}
 				}
 			}
 		}

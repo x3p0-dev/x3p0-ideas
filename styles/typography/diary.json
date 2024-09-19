@@ -171,10 +171,16 @@
 					"fontFamily": "var:preset|font-family|primary",
 					"fontStyle": "normal"
 				}
-			},
-			"x3p0/breadcrumbs": {
-				"typography": {
-					"fontFamily": "var:preset|font-family|primary"
+			}
+		},
+		"variations": {
+			"site-header": {
+				"blocks": {
+					"x3p0/breadcrumbs": {
+						"typography": {
+							"fontFamily": "var:preset|font-family|primary"
+						}
+					}
 				}
 			}
 		}

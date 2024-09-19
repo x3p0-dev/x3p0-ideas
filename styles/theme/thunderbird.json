@@ -491,13 +491,6 @@
 				"typography": {
 					"fontStyle": "italic"
 				}
-			},
-			"x3p0/breadcrumbs": {
-				"typography": {
-					"fontFamily": "var:preset|font-family|primary",
-					"fontSize": "var:preset|font-size|sm",
-					"lineHeight": "var:custom|line-height|sm"
-				}
 			}
 		},
 		"variations": {
@@ -550,6 +543,11 @@
 						"color": {
 							"text": "var:custom|color|text|muted",
 							"gradient": "var:preset|gradient|90-deg-white-transparent"
+						},
+						"typography": {
+							"fontFamily": "var:preset|font-family|primary",
+							"fontSize": "var:preset|font-size|sm",
+							"lineHeight": "var:custom|line-height|sm"
 						}
 					}
 				}
