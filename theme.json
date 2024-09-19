@@ -1076,7 +1076,7 @@
 				{
 					"name": "Enlarge",
 					"slug": "enlarge",
-					"shadow": "0 0 16px -3px rgb(0 0 0 / 0.5)"
+					"shadow": "0 0 30px -2px rgb(0 0 0 / 0.25), 0 0 12px -2px rgb(0 0 0 / 0.25)"
 				},
 				{
 					"name": "Inner",
@@ -2335,6 +2335,27 @@
 		{
 			"name": "template-post-hero-media-right",
 			"title": "Post: Hero (Media Right)",
+			"postTypes": [
+				"post"
+			]
+		},
+		{
+			"name": "template-post-section-1",
+			"title": "Post: Style 1",
+			"postTypes": [
+				"post"
+			]
+		},
+		{
+			"name": "template-post-section-2",
+			"title": "Post: Style 2",
+			"postTypes": [
+				"post"
+			]
+		},
+		{
+			"name": "template-post-section-3",
+			"title": "Post: Style 3",
 			"postTypes": [
 				"post"
 			]
