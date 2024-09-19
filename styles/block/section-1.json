@@ -14,7 +14,12 @@
 		"core/group",
 		"core/media-text",
 		"core/post-comments-form",
-		"core/query"
+		"core/preformatted",
+		"core/pullquote",
+		"core/query",
+		"core/quote",
+		"core/verse",
+		"x3p0/breadcrumbs"
 	],
 	"styles": {
 		"color": {
