@@ -280,7 +280,7 @@ class Metadata implements Bootable
 	}
 
 	/**
-	 * Adds color support to the Tag Cloud block.
+	 * Adds color and typography support to the Tag Cloud block.
 	 *
 	 * @since 1.0.0
 	 */
@@ -289,6 +289,9 @@ class Metadata implements Bootable
 		$settings['supports']['color']              ??= [];
 		$settings['supports']['color']['gradients'] ??= true;
 		$settings['supports']['color']['link']      ??= true;
+
+		$settings['supports']['typography']             ??= [];
+		$settings['supports']['typography']['fontSize']   = true;
 
 		return $settings;
 	}
