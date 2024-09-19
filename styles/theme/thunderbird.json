@@ -519,6 +519,7 @@
 				"border": {
 					"top": {
 						"color": "var:preset|color|neutral-100",
+						"style": "solid",
 						"width": "1px"
 					}
 				},
