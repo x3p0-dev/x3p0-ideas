@@ -85,7 +85,7 @@ $border:  '--wp--custom--color--border';
 		// sections with other backgrounds and should inherit their
 		// borders.
 		> * {
-			#{$icon}--default: var(#{$section}--color--border--default, currentColor);
+			#{$border}--default: var(#{$section}--color--border--default, currentColor);
 
 			// Also assigns the global border in case it and the
 			// semantic border are out of sync for some reason.
