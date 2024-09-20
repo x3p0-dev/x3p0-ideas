@@ -15,8 +15,10 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-// Matches the footnote link to the `<sup>` element.
-// Core changed to a link only at some point with no `<sup>` element.
+///
+/// Matches the footnote link to the `<sup>` element. Core changed to a link
+/// only at some point with no `<sup>` element.
+///
 sup.fn,
 sup[data-fn],
 a.fn {
@@ -31,7 +33,13 @@ a.fn {
 	outline: none;
 }
 
-// Do not remove quotes around `#` mark, which will break in the Sass processor.
+///
+/// Remove the text decoration from the footnote link, which doesn't look great
+/// at such a small size.
+///
+/// Note: Do not remove quotes around `#` mark below, which will break in the
+/// Sass processor.
+///
 .wp-block-footnotes a[href^="#"] {
 	text-decoration: none;
 }

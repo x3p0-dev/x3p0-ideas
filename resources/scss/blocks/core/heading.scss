@@ -9,8 +9,11 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-/// Remove core's default padding.
+///
+/// Remove core's default padding when the Heading has a background.
+///
 /// @link https://github.com/WordPress/gutenberg/issues/30725
+///
 .wp-block-heading.has-background {
 	padding: 0;
 }
@@ -47,7 +50,6 @@
 }
 
 .wp-block-heading.is-style-knockout {
-
 	// Add a default gradient background if the user hasn't chosen one.
 	&:not(.has-background) {
 		background: var(--wp--preset--gradient--cool-to-warm-spectrum);

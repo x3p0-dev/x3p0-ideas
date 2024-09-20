@@ -79,6 +79,16 @@
 	text-shadow: var(--wp--custom--text-shadow--sm);
 }
 
+///
+/// Ensures specific styles inherit their color when used inside of a Cover.
+///
+/// @todo Figure out a better way of handling this.
+///
+.wp-block-cover .is-style-meta {
+	color: inherit;
+	background: transparent;
+}
+
 // -----------------------------------------------------------------------------
 // Block style variations.
 // -----------------------------------------------------------------------------

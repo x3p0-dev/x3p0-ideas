@@ -89,7 +89,6 @@
 .wp-block-file.is-style-icon {
 
 	&:where(:not(:has(.wp-block-file__button))) {
-
 		a {
 			@include inline-icon.prefix(icon.get-url('download'));
 		}

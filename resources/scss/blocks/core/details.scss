@@ -83,13 +83,8 @@
 /// Handle nested code blocks by removing spacing on the inside of the details
 /// content area.
 ///
-.wp-block-details:has(
-	summary + .wp-block-code:last-child,
-	summary + .wp-block-code-wrap:last-child
-),
-.wp-block-details:has(
-	summary + .wp-block-code + .block-list-appender
-) {
+.wp-block-details:has(summary + .wp-block-code:last-child),
+.wp-block-details:has(summary + .wp-block-code + .block-list-appender) {
 	padding: 0;
 
 	.wp-block-code {
