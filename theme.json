@@ -2106,7 +2106,9 @@
 				}
 			},
 			"core/social-link": {
-				"css": "border-radius: var(--wp--custom--global--border--radius);",
+				"border": {
+					"radius": "var:custom|global|border|radius"
+				},
 				"shadow": "var:custom|shadow|secondary|default"
 			},
 			"core/social-links": {
