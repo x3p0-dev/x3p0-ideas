@@ -92,15 +92,14 @@ class Theme implements Bootable
 		));
 
 		// phpcs:disable Generic.Functions.FunctionCallArgumentSpacing.TooMuchSpaceAfterComma
-		$this->instance('block.assets',     new Block\Assets());
-		$this->instance('block.metadata',   new Block\Metadata());
-		$this->instance('block.variations', new Block\Variations());
-		$this->instance('editor',           new Editor());
-		$this->instance('embeds',           new Embeds());
-		$this->instance('frontend',         new Frontend());
-		$this->instance('media',            new Media());
-		$this->instance('parts',            new Parts());
-		$this->instance('templates',        new Templates());
+		$this->instance('block.assets',   new Block\Assets());
+		$this->instance('block.metadata', new Block\Metadata());
+		$this->instance('editor',         new Editor());
+		$this->instance('embeds',         new Embeds());
+		$this->instance('frontend',       new Frontend());
+		$this->instance('media',          new Media());
+		$this->instance('parts',          new Parts());
+		$this->instance('templates',      new Templates());
 		// phpcs:enable
 	}
 
