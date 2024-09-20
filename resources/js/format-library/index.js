@@ -35,7 +35,7 @@ registerFormatType(spanFormat.name, spanFormat);
 // Unregisters the Core highlight format type. It doesn't use a semantic
 // background color and, therefore, doesn't translate between style variations.
 // Instead, use the Mark format type (labeled Highlight) registered separately.
-// It uses the semantic `<mark>` tag but leave the styling in control of the
+// It uses the semantic `<mark>` tag but leaves the styling in control of the
 // theme or style variation.
 domReady(() => {
 	unregisterFormatType('core/text-color');

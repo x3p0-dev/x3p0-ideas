@@ -6,22 +6,12 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
-// Import the WordPress variables Sass file. We'll use this to make sure we're
-// using the core UI units and values.
-//
-// @link https://github.com/WordPress/gutenberg/tree/trunk/packages/base-styles
-//@use '~@wordpress/base-styles/variables';
+// Editor styles.
+@use '../js/block-editor/editor' as editor;
 
 // Block Edit styles.
 @use '../js/block-edit/list-marker/editor' as list-marker;
 
-// Editor styles.
-@use '../js/editor/editor' as editor;
-
 // Format library styles.
 @use '../js/format-library/abbreviation/editor' as abbreviation;
 @use '../js/format-library/span/editor' as span;
-
-.components-circular-option-picker__option {
-	color-scheme: light dark;
-}
