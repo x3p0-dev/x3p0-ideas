@@ -132,17 +132,6 @@ class Render implements Bootable
 	}
 
 	/**
-	 * Adds Code block highlight functionality and fixes `<br>` tags.
-	 *
-	 * @since 1.0.0
-	 */
-	#[Filter('render_block_core/code')]
-	public function renderCoreCode(string $content, array $block): string
-	{
-		return (new CodeHighlight($content, $block))->render();
-	}
-
-	/**
 	 * Adds poster support for the Cover block by using the attachment's
 	 * featured image if it exists.
 	 *
