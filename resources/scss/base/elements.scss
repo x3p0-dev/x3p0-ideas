@@ -13,6 +13,14 @@
 ////
 
 ///
+/// Avoid orphans on paragraphs and headings
+///
+p,
+:is(h1, h2, h3, h4, h5, h6) {
+	text-wrap: pretty;
+}
+
+///
 /// Adds transition effects to hoverable and focusable elements.
 ///
 a:where(:not(:focus)),

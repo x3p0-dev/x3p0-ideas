@@ -61,10 +61,3 @@
 		color: inherit !important;
 	}
 }
-
-///
-/// Adds text balancing to the block in an attempt to ensure there are no widows.
-///
-.wp-block-heading.is-style-text-wrap-balance {
-	text-wrap: balance;
-}

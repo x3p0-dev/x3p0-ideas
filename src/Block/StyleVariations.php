@@ -115,8 +115,7 @@ class StyleVariations implements Bootable
 				'reverse' => __('Reverse', 'x3p0-ideas')
 			],
 			'core/heading' => [
-				'knockout'          => __('Knockout',      'x3p0-ideas'),
-				'text-wrap-balance' => __('Wrap: Balance', 'x3p0-ideas')
+				'knockout' => __('Knockout',      'x3p0-ideas'),
 			],
 			'core/home-link' => [
 				'icon' => __('Icon', 'x3p0-ideas')

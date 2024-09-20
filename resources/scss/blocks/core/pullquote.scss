@@ -42,11 +42,16 @@
 // -----------------------------------------------------------------------------
 
 ///
-/// Adds text balancing and quotes.
+/// Adds text balancing.
+///
+.wp-block-pullquote :where(blockquote, p) {
+	text-wrap: balance;
+}
+
+///
+/// Adds quotes.
 ///
 .wp-block-pullquote blockquote {
-	text-wrap: balance;
-
 	// This sets stylistic quotes used on the wrapper element, not the
 	// quotes used for the content itself.
 	&::before,
