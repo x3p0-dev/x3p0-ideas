@@ -1589,8 +1589,8 @@
 				"shadow": "var:custom|shadow|primary|default",
 				"spacing": {
 					"padding": {
-						"top": "0",
-						"bottom": "var:preset|spacing|base",
+						"top": "var:preset|spacing|plus-3",
+						"bottom": "var:preset|spacing|plus-3",
 						"left": "var:preset|spacing|plus-3",
 						"right": "var:preset|spacing|plus-3"
 					}
@@ -1604,15 +1604,7 @@
 						"spacing": {
 							"margin": {
 								"top": "0",
-								"bottom": "0",
-								"left": "calc( -1 * var( --wp--preset--spacing--plus-3 ) )",
-								"right": "calc( -1 * var( --wp--preset--spacing--plus-3 ) )"
-							},
-							"padding": {
-								"top": "var:preset|spacing|plus-1",
-								"bottom": "var:preset|spacing|base",
-								"left": "var:preset|spacing|plus-3",
-								"right": "var:preset|spacing|plus-3"
+								"bottom": "var:preset|spacing|base"
 							}
 						}
 					},

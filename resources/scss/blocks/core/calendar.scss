@@ -10,30 +10,45 @@
 // -----------------------------------------------------------------------------
 
 ///
+/// `border-box` for the win! 🏆
+///
+.wp-block-calendar {
+	box-sizing: border-box;
+}
+
+///
+/// WP nests a calendar wrapper inside itself in the editor for some crazy reason
+/// that I'm sure is some legacy thing. 🫤
+///
+/// WP also applies colors to the table instead of the outer wrapper, so we're
+/// zeroing everything out for the table too.
+///
+.editor-styles-wrapper .wp-block-calendar .wp-block-calendar,
+.wp-block-calendar .wp-calendar-table {
+	background: transparent !important;
+	color: currentColor !important;
+	border: none !important;
+	box-shadow: none !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	outline: 0 !important;
+}
+
+///
 /// Removes WP's default background color on the header, which cannot be
 /// customized via `theme.json`.
 ///
-:where(.wp-block-calendar table:not(.has-background) th) {
+:where(.wp-block-calendar th) {
 	background: unset;
 }
 
 ///
 /// Overwrites WP's default border-color on cells. This is hardcoded, and themes
-/// have no way to customize it via `theme.json`.
+/// have no way to customize it via `theme.json`. We also just reset all borders
+/// here to start with a clean slate.
 ///
-/// @todo Integrate this into `theme.json` custom properties.
-///
-.wp-block-calendar table:where(:not(.has-text-color)) :is(td, th) {
-	border-color: var(--wp--custom--color--border--default);
-}
-
-///
-/// Overwrite WP's hardcoded text color.
-///
-/// @todo Integrate this into `theme.json` custom properties.
-///
-.wp-block-calendar table:where(:not(.has-text-color)) {
-	color: inherit;
+.wp-block-calendar table :is(thead, tbody, td, th) {
+	border: none;
 }
 
 // -----------------------------------------------------------------------------
@@ -41,19 +56,25 @@
 // -----------------------------------------------------------------------------
 
 ///
-/// More spacing than WP's default for cells.
+/// Adds separate borders and bumps up the default border spacing. Also, don't
+/// let anything overflow the table.
 ///
-.wp-block-calendar :is(td, th) {
-	padding: var(--wp--preset--spacing--minus-1) var(--wp--preset--spacing--minus-3);
+.wp-block-calendar table {
+	overflow:        hidden;
+	border-spacing:  2px;
+	border-collapse: separate;
 }
 
 ///
-/// Nicer layout for the calendar nav using flexbox.
+/// Customizes the typography for table headings and ensures there are no colors
+/// applied to them.
 ///
-.wp-calendar-nav {
-	display: flex;
-	justify-content: space-between;
-	margin: var(--wp--preset--spacing--minus-3) var(--wp--preset--spacing--base) 0;
+.wp-block-calendar thead {
+	font-weight: 600;
+	font-size:   var(--wp--preset--font-size--sm, inherit);
+	line-height: var(--wp--custom--line-height--sm, inherit);
+	color:       inherit;
+	background:  transparent;
 }
 
 ///
@@ -65,105 +86,36 @@
 }
 
 ///
-/// Allow styling `thead` from `theme.json`.
+/// More spacing than WP's default for cells.
 ///
-.wp-block-calendar thead {
-	font-family: var(--wp--custom--elements--thead--font-family, inherit);
-	font-style:  var(--wp--custom--elements--thead--font-style, inherit);
-	font-weight: var(--wp--custom--elements--thead--font-weight, 600);
-	line-height: var(--wp--custom--elements--thead--line-height, inherit);
-	font-size:   var(--wp--custom--elements--thead--font-size, inherit);
-	// color:       var(--wp--custom--elements--thead--color, currentColor);
-	color:       inherit;
-	background:  var(--wp--custom--elements--thead--background, transparent);
+.wp-block-calendar :is(td, th) {
+	padding: var(--wp--preset--spacing--minus-1) var(--wp--preset--spacing--minus-3);
 }
 
 ///
-/// Box sizing.
-///
-.wp-block-calendar {
-	box-sizing: border-box;
-}
-
-///
-/// Don't let anything overflow the table.
-///
-.wp-block-calendar table {
-	overflow: hidden;
-	border-spacing: 2px;
-	border-collapse: separate;
-}
-
-///
-/// WP nests a calendar wrapper inside itself in the editor for some crazy reason
-/// that I'm sure is some legacy thing. 🫤
-///
-.editor-styles-wrapper .wp-block-calendar:has(.wp-block-calendar) {
-	padding: 0;
-	border: none;
-	box-shadow: none;
-	outline: 0;
-}
-
-///
-/// Heading font size handling.
-///
-/// @todo Integrate this into `theme.json` custom properties.
-///
-.wp-block-calendar table thead {
-	font-size: var(--wp--preset--font-size--sm);
-	line-height: var(--wp--custom--line-height--sm);
-}
-
-///
-/// Remove borders.
-///
-.wp-block-calendar table thead :where(tr, th),
-.wp-block-calendar .pad {
-	border: none;
-}
-
-///
-/// Give theme-matching color to table body.
-///
-/// @todo Integrate this into `theme.json` custom properties.
-///
-.wp-block-calendar table tbody {
-	border: none;
-}
-
-///
-/// Cell background color.
-///
-/// @todo Integrate this into `theme.json` custom properties.
+/// Cell background color. We're avoiding the `.pad` class here, which are just
+/// empty cells.
 ///
 .wp-block-calendar table td:where(:not(.pad)) {
 	background: var(--wp--custom--color--surface--level-2, transparent);
-	border: none;
 }
 
-
 ///
-/// Allow styling `thead` from `theme.json`.
+/// Nicer layout for the calendar nav using flexbox.
 ///
 .wp-calendar-nav {
-	font-family: var(--wp--custom--nav--font-family, inherit);
-	font-style:  var(--wp--custom--nav--font-style, inherit);
+	display: flex;
+	justify-content: space-between;
+	margin: var(--wp--preset--spacing--minus-3) var(--wp--preset--spacing--base) 0;
 	font-weight: var(--wp--custom--nav--font-weight, 600);
-	line-height: var(--wp--custom--nav--line-height, inherit);
-	font-size:   var(--wp--custom--nav--font-size, inherit);
-	color:       var(--wp--custom--nav--color, currentColor);
-	background:  var(--wp--custom--nav--background, transparent);
 }
 
 ///
-/// Prettier nav elements.
-///
-/// @todo Integrate this into `theme.json` custom properties.
+/// Prettier nav element spacing.
 ///
 .wp-calendar-nav-prev,
 .wp-calendar-nav-next {
-	padding: var(--wp--preset--spacing--minus-1) var(--wp--preset--spacing--minus-3);
+	padding: var(--wp--preset--spacing--minus-1) var(--wp--preset--spacing--minus-3) 0;
 }
 
 // -----------------------------------------------------------------------------
