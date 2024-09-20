@@ -478,7 +478,7 @@
 							}
 						},
 						"color": {
-							"gradient": "var:preset|gradient|90-deg-neutral-50-transparent"
+							"background": "transparent"
 						},
 						"typography": {
 							"fontSize": "var:preset|font-size|sm",
