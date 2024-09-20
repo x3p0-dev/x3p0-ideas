@@ -7,16 +7,16 @@
  */
 
 // WordPress webpack config.
-const defaultConfig = require( '@wordpress/scripts/config/webpack.config' );
+const defaultConfig = require('@wordpress/scripts/config/webpack.config');
 
 // Plugins.
-const RemoveEmptyScriptsPlugin = require( 'webpack-remove-empty-scripts' );
-const CopyPlugin               = require( 'copy-webpack-plugin' );
-const RtlCssPlugin             = require( 'rtlcss-webpack-plugin' );
+const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
+const CopyPlugin               = require('copy-webpack-plugin');
+const RtlCssPlugin             = require('rtlcss-webpack-plugin');
 
 // Utilities.
-const path         = require( 'path' );
-const { globSync } = require( 'glob' );
+const path         = require('path');
+const { globSync } = require('glob');
 
 /**
  * Processes individual block stylesheets for a specific block namespace. These
@@ -26,15 +26,15 @@ const { globSync } = require( 'glob' );
  * @param  {string} namespace
  * @return {Object.<string, string>}
  */
-const blockStylesheets = ( namespace ) => {
-	return globSync( `./resources/scss/blocks/${ namespace }/*.scss` ).reduce(
-		( files, filepath ) => {
-			const name = path.parse( filepath ).name;
+const blockStylesheets = (namespace) => {
+	return globSync(`./resources/scss/blocks/${namespace}/*.scss`).reduce(
+		(files, filepath) => {
+			const name = path.parse(filepath).name;
 
-			files[ `css/blocks/${ namespace }/${ name }` ] = path.resolve(
+			files[`css/blocks/${ namespace }/${name}`] = path.resolve(
 				process.cwd(),
-				`resources/scss/blocks/${ namespace }`,
-				`${ name }.scss`
+				`resources/scss/blocks/${namespace}`,
+				`${name}.scss`
 			);
 
 			return files;
@@ -52,11 +52,11 @@ module.exports = {
 	...defaultConfig,
 	...{
 		entry: {
-			...blockStylesheets( 'core' ),
-			'js/editor':    path.resolve( process.cwd(), 'resources/js',   'editor.js'    ),
-			'css/screen':   path.resolve( process.cwd(), 'resources/scss', 'screen.scss'  ),
-			'css/editor':   path.resolve( process.cwd(), 'resources/scss', 'editor.scss'  ),
-			'css/embed':    path.resolve( process.cwd(), 'resources/scss', 'embed.scss'   )
+			...blockStylesheets('core'),
+			'js/editor':  path.resolve(process.cwd(), 'resources/js',   'editor.js'),
+			'css/screen': path.resolve(process.cwd(), 'resources/scss', 'screen.scss'),
+			'css/editor': path.resolve(process.cwd(), 'resources/scss', 'editor.scss'),
+			'css/embed':  path.resolve(process.cwd(), 'resources/scss', 'embed.scss')
 		},
 		plugins: [
 			// Very important! Include WP's plugin config or the
@@ -71,13 +71,13 @@ module.exports = {
 			// For this to work correctly, it needs to run after
 			// WP has generated its the `*.asset.php` files. This is
 			// what `STAGE_AFTER_PROCESS_PLUGINS` allows.
-			new RemoveEmptyScriptsPlugin( {
+			new RemoveEmptyScriptsPlugin({
 				stage: RemoveEmptyScriptsPlugin.STAGE_AFTER_PROCESS_PLUGINS
-			} ),
+			}),
 
 			// Copies any assets that don't need to be processed to
 			// the output folder.
-			new CopyPlugin( {
+			new CopyPlugin({
 				patterns: [
 					{
 						from: './resources/fonts',
@@ -88,7 +88,7 @@ module.exports = {
 						to:   './media'
 					}
 				]
-			} )
+			})
 		]
 	},
 	performance: {
