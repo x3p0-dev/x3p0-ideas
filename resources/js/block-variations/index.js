@@ -8,7 +8,6 @@
 
 // Internal dependencies.
 import commentParentLink from './comment-parent-link';
-import grid              from './grid';
 import paginationLabel   from './pagination-label';
 import postFormat        from './post-format';
 import readingTime       from './reading-time';
