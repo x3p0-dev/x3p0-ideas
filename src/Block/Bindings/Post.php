@@ -20,16 +20,6 @@ use X3P0\Ideas\Contracts\BlockBindingSource;
 class Post implements BlockBindingSource
 {
 	/**
-	 * Map of keys to their associated methods.
-	 *
-	 * @since 1.0.0
-	 * @todo  Type hint with PHP 8.3+ requirement.
-	 */
-	private const KEY_METHODS = [
-		'readingTime' => 'renderReadingTime'
-	];
-
-	/**
 	 * Stores the post ID.
 	 *
 	 * @since 1.0.0
@@ -59,13 +49,10 @@ class Post implements BlockBindingSource
 	{
 		$this->post_id = $block->context['postId'] ?? get_the_ID();
 
-		if (isset($args['key']) && isset(self::KEY_METHODS[ $args['key'] ])) {
-			$method = self::KEY_METHODS[ $args['key'] ];
-
-			return $this->$method($args, $block);
-		}
-
-		return null;
+		return match ($args['key'] ?? null) {
+			'readingTime' => $this->renderReadingTime($args),
+			default       => null
+		};
 	}
 
 	/**

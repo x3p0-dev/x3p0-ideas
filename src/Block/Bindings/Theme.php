@@ -22,21 +22,6 @@ use X3P0\Ideas\Tools\Superpower;
 class Theme implements BlockBindingSource
 {
 	/**
-	 * Map of keys to their associated methods.
-	 *
-	 * @since 1.0.0
-	 * @todo  Type hint with PHP 8.3+ requirement.
-	 */
-	private const KEY_METHODS = [
-		'name'              => 'renderName',
-		'url'               => 'renderUrl',
-		'link'              => 'renderLink',
-		'superpower'        => 'renderSuperpower',
-		'helloDolly'        => 'renderHelloDolly',
-		'paginationLabel'   => 'renderPaginationLabel'
-	];
-
-	/**
 	 * Registers the block binding source.
 	 *
 	 * @since 1.0.0
@@ -57,13 +42,15 @@ class Theme implements BlockBindingSource
 	 */
 	public function callback(array $args, WP_Block $block, string $name): ?string
 	{
-		if (isset($args['key']) && isset(self::KEY_METHODS[ $args['key'] ])) {
-			$method = self::KEY_METHODS[ $args['key'] ];
-
-			return $this->$method($args, $block);
-		}
-
-		return null;
+		return match ($args['key'] ?? null) {
+			'helloDolly'      => $this->renderHelloDolly(),
+			'link'            => $this->renderLink(),
+			'name'            => $this->renderName(),
+			'paginationLabel' => $this->renderPaginationLabel($args, $block),
+			'superpower'      => $this->renderSuperpower($args),
+			'url'             => $this->renderUrl(),
+			default           => null
+		};
 	}
 
 	/**

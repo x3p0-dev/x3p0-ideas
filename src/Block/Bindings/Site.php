@@ -20,17 +20,6 @@ use X3P0\Ideas\Contracts\BlockBindingSource;
 class Site implements BlockBindingSource
 {
 	/**
-	 * Map of keys to their associated methods.
-	 *
-	 * @since 1.0.0
-	 * @todo  Type hint with PHP 8.3+ requirement.
-	 */
-	private const KEY_METHODS = [
-		'copyright' => 'renderCopyright',
-		'year'      => 'renderYear'
-	];
-
-	/**
 	 * Registers the block binding source.
 	 *
 	 * @since 1.0.0
@@ -50,13 +39,11 @@ class Site implements BlockBindingSource
 	 */
 	public function callback(array $args, WP_Block $block, string $name): ?string
 	{
-		if (isset($args['key']) && isset(self::KEY_METHODS[ $args['key'] ])) {
-			$method = self::KEY_METHODS[ $args['key'] ];
-
-			return $this->$method($args);
-		}
-
-		return null;
+		return match ($args['key'] ?? null) {
+			'copyright' => $this->renderCopyright(),
+			'year'      => $this->renderYear(),
+			default     => null
+		};
 	}
 
 	/**

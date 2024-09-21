@@ -21,19 +21,6 @@ use X3P0\Ideas\Tools\MediaMeta;
 class Media implements BlockBindingSource
 {
 	/**
-	 * Map of keys to their associated methods.
-	 *
-	 * @since 1.0.0
-	 * @todo  Type hint with PHP 8.3+ requirement.
-	 */
-	private const KEY_METHODS = [
-		'alt'     => 'renderAlt',
-		'caption' => 'renderCaption',
-		'src'     => 'renderUrl', // alias for `url`
-		'url'     => 'renderUrl'
-	];
-
-	/**
 	 * Stores the post ID.
 	 *
 	 * @since 1.0.0
@@ -74,13 +61,13 @@ class Media implements BlockBindingSource
 		// If no key is explicitly passed in, use the attribute name.
 		$args['key'] ??= $name;
 
-		if (isset(self::KEY_METHODS[ $args['key'] ])) {
-			$method = self::KEY_METHODS[ $args['key'] ];
-
-			return $this->$method($args);
-		}
-
-		return $this->renderMeta($args);
+		return match ($args['key']) {
+			'alt'     => $this->renderAlt($args),
+			'caption' => $this->renderCaption($args),
+			'src'     => $this->renderUrl($args), // alias for `url`
+			'url'     => $this->renderUrl($args),
+			default   => $this->renderMeta($args)
+		};
 	}
 
 	/**
