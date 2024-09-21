@@ -44,6 +44,31 @@
 // -----------------------------------------------------------------------------
 
 ///
+/// The emoji style prefixes all of the tag links with an emoji.
+///
+/// Note: WordPress wraps the tag cloud in the admin with a `<div>` with the
+/// block class and two inner `<div>` elements before getting to the actual
+/// `<p>` tag.
+///
+.wp-block-tag-cloud.is-style-emoji,
+.wp-block-tag-cloud.is-style-emoji .wp-block-tag-cloud {
+	a {
+		font-size: inherit !important;
+	}
+
+	a::before {
+		content: "🏷️ ";
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: var(--wp--preset--spacing--minus-3);
+	}
+
+	&.taxonomy-category a::before {
+		content: "📂 ";
+	}
+}
+
+///
 /// The icon style prefixes all of the tag links with an icon.
 ///
 /// Note: WordPress wraps the tag cloud in the admin with a `<div>` with the
