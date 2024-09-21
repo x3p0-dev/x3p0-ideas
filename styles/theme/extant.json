@@ -42,6 +42,12 @@
 							"hover": "var:preset|color|white"
 						}
 					},
+					"link": {
+						"secondary": {
+							"default": "var:preset|color|neutral-900",
+							"hover": "currentColor"
+						}
+					},
 					"submenu": {
 						"default": "var:preset|color|neutral-50",
 						"hover": "var:preset|color|neutral-50"
@@ -66,6 +72,12 @@
 								"default": "var:preset|color|white",
 								"hover": "var:preset|color|white"
 							}
+						},
+						"link": {
+							"secondary": {
+								"default": "var:preset|color|neutral-900",
+								"hover": "currentColor"
+							}
 						}
 					},
 					"border": {
@@ -87,6 +99,12 @@
 							"primary": {
 								"default": "var:preset|color|white",
 								"hover": "var:preset|color|white"
+							}
+						},
+						"link": {
+							"secondary": {
+								"default": "var:preset|color|neutral-900",
+								"hover": "currentColor"
 							}
 						}
 					},
@@ -125,16 +143,16 @@
 					"style": "solid",
 					"width": "1px",
 					"radius": "0"
+				}
+			},
+			"shadow": {
+				"primary": {
+					"default": "var:preset|shadow|xs",
+					"hover": "var:preset|shadow|md"
 				},
-				"shadow": {
-					"primary": {
-						"default": "var:preset|shadow|xs",
-						"hover": "var:preset|shadow|md"
-					},
-					"secondary": {
-						"default": "var:preset|shadow|xs",
-						"hover": "var:preset|shadow|xs"
-					}
+				"secondary": {
+					"default": "var:preset|shadow|xs",
+					"hover": "var:preset|shadow|xs"
 				}
 			}
 		},
@@ -450,37 +468,6 @@
 			}
 		},
 		"variations": {
-			"meta": {
-				"color": {
-					"text": "var:custom|color|text|muted"
-				},
-				"elements": {
-					"link": {
-						"color": {
-							"text": "var:preset|color|neutral-900"
-						},
-						"typography": {
-							"textDecoration": "none"
-						},
-						":focus": {
-							"color": {
-								"text": "var:preset|color|primary-700"
-							},
-							"typography": {
-								"textDecoration": "underline"
-							}
-						},
-						":hover": {
-							"color": {
-								"text": "var:preset|color|primary-700"
-							},
-							"typography": {
-								"textDecoration": "underline"
-							}
-						}
-					}
-				}
-			},
 			"site-footer": {
 				"border": {
 					"top": {
