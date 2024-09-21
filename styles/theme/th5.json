@@ -23,6 +23,12 @@
 			"variation": "th5",
 			"color": {
 				"surface": {
+					"button": {
+						"primary": {
+							"default": "var:preset|color|secondary-500",
+							"hover": "var:preset|color|secondary-700"
+						}
+					},
 					"submenu": {
 						"default": "var:custom|color|surface|level-1",
 						"hover": "var:custom|color|surface|level-2"
@@ -37,6 +43,14 @@
 			},
 			"section-1": {
 				"color": {
+					"surface": {
+						"button": {
+							"primary": {
+								"default": "var:preset|color|secondary-500",
+								"hover": "var:preset|color|secondary-700"
+							}
+						}
+					},
 					"border": {
 						"default": "var:preset|color|neutral-200"
 					}
@@ -44,6 +58,14 @@
 			},
 			"section-2": {
 				"color": {
+					"surface": {
+						"button": {
+							"primary": {
+								"default": "var:preset|color|secondary-500",
+								"hover": "var:preset|color|secondary-700"
+							}
+						}
+					},
 					"border": {
 						"default": "var:preset|color|neutral-200"
 					}
