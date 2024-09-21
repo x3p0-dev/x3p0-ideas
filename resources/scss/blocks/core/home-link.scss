@@ -28,5 +28,5 @@
 /// Icon style.
 ///
 .wp-block-home-link.is-style-icon .wp-block-home-link__content {
-	@include inline-icon.prefix( icon.get-url( 'home' ) );
+	@include inline-icon.prefix(icon.get-url('home'));
 }

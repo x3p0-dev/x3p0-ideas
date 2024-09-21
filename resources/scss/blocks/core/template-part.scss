@@ -15,7 +15,9 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-// Removes any margins from the first element in the template part.
+///
+/// Removes any margins from the first element in the template part.
+///
 .wp-block-template-part > * {
 	margin-top: 0;
 }
@@ -30,7 +32,6 @@
 		outline: none;
 	}
 }
-
 
 // -----------------------------------------------------------------------------
 // Block style variations.

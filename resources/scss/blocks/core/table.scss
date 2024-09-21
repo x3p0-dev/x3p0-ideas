@@ -9,17 +9,24 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// Fixes inconsistent default `thead` and `tfoot` alignment.
+///
+/// Fixes inconsistent default `thead` and `tfoot` alignment.
+///
 .wp-block-table thead tr {
 	text-align: left;
 }
 
+///
+/// Zero out borders.
+///
 .wp-block-table :is(tr, th, td, tbody) {
 	border-width: 0;
 }
 
-// `theme.json` border support for tables is horribly broken, so we're just
-// inheriting everything here.
+///
+/// `theme.json` border support for tables is horribly broken, so we're just
+/// inheriting the border color for everything here.
+///
 .wp-block-table.has-border-color :is(thead, tfoot, tr th, tr td) {
 	border-color: inherit;
 }
@@ -28,7 +35,9 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-// Make WP's default borders smaller.
+///
+/// Make WP's default borders smaller and inherit colors.
+///
 .wp-block-table thead {
 	border-bottom: 1px solid;
 	border-color: inherit;
@@ -40,11 +49,16 @@
 	border-color: inherit;
 }
 
-// Less prominent bold for headers.
+///
+/// Less prominent bold for headers.
+///
 .wp-block-table :where(th) {
 	font-weight: 600;
 }
 
+///
+/// Adjust padding for cells.
+///
 .wp-block-table :is(th, td) {
 	padding: var(--wp--preset--spacing--minus-1) var(--wp--preset--spacing--base);
 }

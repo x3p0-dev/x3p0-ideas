@@ -12,9 +12,11 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// WordPress nests the actual `<p>` tag (the block) inside of another `<div>`
-// with the same class in the editor. We need to zero out the default browser
-// margin here.
+///
+/// WordPress nests the actual `<p>` tag (the block) inside of another `<div>`
+/// with the same class in the editor. We need to zero out the default browser
+/// margin here.
+///
 .editor-styles-wrapper .wp-block-tag-cloud .wp-block-tag-cloud {
 	margin: 0;
 }
@@ -23,7 +25,9 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-// Primarily layout adjustments for more consistent handling and styling.
+///
+/// Primarily layout adjustments for more consistent handling and styling.
+///
 .wp-block-tag-cloud {
 	display: flex;
 	flex-direction: row;

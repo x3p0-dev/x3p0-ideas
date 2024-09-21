@@ -21,13 +21,6 @@ p {
 // -----------------------------------------------------------------------------
 
 ///
-/// Text-shadow support that can be set in `theme.json`.
-///
-p {
-	text-shadow: var(--wp--custom--text-shadow, none);
-}
-
-///
 /// Override WP's drop-cap implementation with modern solution. Browser support
 /// is pretty robust for `initial-letter`, but there are limitations. And Firefox
 /// doesn't support it at all.

@@ -38,9 +38,10 @@ nav.wp-block-navigation.wp-block-navigation .wp-block-navigation__responsive-con
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-// Sets the width of the submenu container when hovered.
+///
+/// Sets the width of the submenu container when hovered.
+///
 .wp-block-navigation .has-child {
-
 	&.has-child-selected >,
 	&.is-selected >,
 	&:not(.open-on-click):hover >,
@@ -62,7 +63,9 @@ nav.wp-block-navigation.wp-block-navigation .wp-block-navigation__responsive-con
 	transition: all 0.5s ease-in-out;
 }
 
-// Fixes the toggle `<button>` when menu items are "open on click."
+///
+/// Fixes the toggle `<button>` when menu items are "open on click."
+///
 .wp-block-navigation-submenu .wp-block-navigation-item.open-on-click .wp-block-navigation-submenu__toggle {
 	padding: var(
 		--wp--custom--block--navigation-submenu--toggle--padding,
@@ -70,7 +73,9 @@ nav.wp-block-navigation.wp-block-navigation .wp-block-navigation__responsive-con
 	);
 }
 
-// Hover background color for list items.
+///
+/// Hover background color for list items.
+///
 .wp-block-navigation-submenu .wp-block-navigation-item:hover,
 .wp-block-navigation-submenu .wp-block-navigation-item:focus {
 	background: var(
@@ -83,10 +88,9 @@ nav.wp-block-navigation.wp-block-navigation .wp-block-navigation__responsive-con
 	);
 }
 
-// -----------------------------------------------------------------------------
-// Responsive menu when it is open.
-// -----------------------------------------------------------------------------
-
+///
+/// Responsive menu when it is open.
+///
 nav.wp-block-navigation .is-menu-open .wp-block-navigation-submenu .wp-block-navigation__submenu-container {
 	border-radius: 0;
 	border: none;

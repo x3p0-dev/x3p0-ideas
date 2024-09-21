@@ -13,7 +13,9 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// Sometimes, layout margin is applied to this element.
+///
+/// Sometimes layout margin is applied to this element. 🤷
+///
 .wp-block-search__inside-wrapper {
 	margin-top: 0;
 }
@@ -22,6 +24,10 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
+///
+/// Customizes the design of the search form. This is pretty much impossible via
+/// `theme.json`.
+///
 .wp-block-search {
 
 	// In the editor, this is a `<div>` instead of a real `<label>`.
@@ -112,13 +118,12 @@
 ///
 /// Adds an icon to the search label.
 ///
-.wp-block-search.is-style-icon {
+.wp-block-search.is-style-icon .wp-block-search__label {
+	@include inline-icon.prefix(icon.get-url('search'));
 
-	.wp-block-search__label {
-		@include inline-icon.prefix( icon.get-url( 'search' ) );
-
-		// Flip the icon horizontally.
-		&::before { transform: scaleX( -1 ); }
+	// Flip the icon horizontally.
+	&::before {
+		transform: scaleX(-1);
 	}
 }
 
@@ -128,7 +133,7 @@
 /// @todo Test to see if this style is necessary and if there are better methods
 ///       of making the form smaller when needed.
 .wp-block-search.is-style-sm {
-	font-size: var( --wp--preset--font-size--sm );
+	font-size: var(--wp--preset--font-size--sm);
 
 	&.wp-block-search__button-inside .wp-block-search__inside-wrapper,
 	.wp-block-search__input {

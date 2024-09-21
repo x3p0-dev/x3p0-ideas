@@ -5,14 +5,18 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
-// Some blocks, like Archives, wrap the list in an extra block `<div>` wrapper
-// in the editor and apply the class to this wrapper.
+///
+/// Some blocks, like Archives, wrap the list in an extra block `<div>` wrapper
+/// in the editor and apply the class to this wrapper.
+///
 :where(ul, ol, .wp-block-archives)[class*=has-marker-],
 :where(.wp-block-archives)[class*=has-marker-] ul {
 	list-style: var(--list-type, revert);
 }
 
-// Marker styles.
+///
+/// Marker styles.
+///
 .has-marker-none         { --list-type: none; }
 .has-marker-disc         { --list-type: disc; }
 .has-marker-circle       { --list-type: circle; }
@@ -24,8 +28,10 @@
 .has-marker-lower-roman  { --list-type: lower-roman; }
 .has-marker-upper-roman  { --list-type: upper-roman; }
 
-// Need to target the element for higher specificity to overrule some blocks,
-// such as Page List.
+///
+/// Need to target the element for higher specificity to overrule some blocks,
+/// such as Page List.
+///
 ul.has-marker-none,
 ol.has-marker-none,
 ul.has-marker-none > li,
@@ -36,6 +42,9 @@ ol.has-marker-none > li,
 	padding-right: 0;
 }
 
+///
+/// Inherit list styles for children.
+///
 :where(:where(
 	ul,
 	ol,

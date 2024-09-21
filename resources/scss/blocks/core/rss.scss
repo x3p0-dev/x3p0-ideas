@@ -9,34 +9,48 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// Adds missing spacing between feed items when they have excerpts.
+///
+/// Adds missing spacing between feed items when they have excerpts.
+///
 .wp-block-rss.has-excerpts .wp-block-rss__item + .wp-block-rss__item {
 	margin-block-start: var(--wp--style--block-gap);
 }
 
-// Reverts WP's default author and publish date font-size.
+///
+/// Reverts WP's default author and publish date font-size.
+///
 .wp-block-rss__item-author,
 .wp-block-rss__item-publish-date {
 	font-size: inherit;
 }
 
-// Capitalize the "by Author Name" if there is no preceding date.
+///
+/// Capitalize the "by Author Name" if there is no preceding date.
+///
 .wp-block-rss.has-authors:where(:not(.has-dates)) .wp-block-rss__item-author {
 	text-transform: capitalize;
 }
 
+///
+/// Fix display of date and author, giving them reasonable font sizes.
+///
 .wp-block-rss__item-publish-date,
 .wp-block-rss__item-author {
 	display: inline-block;
 	font-size: min(0.9375em, 1.0625rem);
 }
 
+///
+/// Margin adjustment for the excerpt.
+///
 .wp-block-rss__item-excerpt {
 	margin-top: var(--wp--preset--spacing--minus-1);
 }
 
-// Must target `<ul>` because WordPress wraps a `<div>` with the same block
-// class around the `<ul>` in the editor. 🤦‍♀️
+///
+/// Must target `<ul>` because WordPress wraps a `<div>` with the same block
+/// class around the `<ul>` in the editor. 🤦‍♀️
+///
 ul.wp-block-rss:where(:not(.has-excerpts)) {
 	list-style: revert;
 	padding-inline-start: var(--wp--preset--spacing--plus-4);

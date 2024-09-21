@@ -9,7 +9,9 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// Zero out browser spacing on the top-level list.
+///
+/// Zero out browser spacing on the top-level list.
+///
 .wp-block-table-of-contents > ol {
 	margin-block-start: 0;
 	margin-block-end: 0;
@@ -19,7 +21,9 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-// Tighten spacing between list elements.
+///
+/// Tighten spacing between list elements.
+///
 .wp-block-table-of-contents ol :where( li + li, li > ol ) {
 	margin-block-start: revert;
 }

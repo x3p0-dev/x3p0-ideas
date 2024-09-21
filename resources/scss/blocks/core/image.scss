@@ -31,7 +31,10 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-// Don't add borders to SVG images by default.
+///
+/// Don't add borders or shadow to SVG images or their wrapping link elements
+/// by default.
+///
 .wp-block-image img[src$=".svg"],
 .wp-block-image a:has(img[src$=".svg"]),
 .editor-styles-wrapper .wp-block-image img[src$=".svg"],
@@ -40,14 +43,18 @@
 	box-shadow: none;
 }
 
-// Need to add the default border-radius to the link itself, which may have an
-// outline style. However, it can't inherit the image's radius, so it needs to
-// use the set default.
+///
+/// Need to add the default border-radius to the link itself, which may have an
+/// outline style. However, it can't inherit the image's radius, so it needs to
+/// use the set default.
+///
 .wp-block-image a:has(img) {
 	border-radius: var(--wp--custom--global--border--radius);
 }
 
-// Match hover background with that defined by `a img:hover`.
+///
+/// Match hover background with that defined by `a img:hover`.
+///
 .wp-lightbox-container img {
 	transition: box-shadow 0.5s ease-in-out;
 
@@ -56,7 +63,9 @@
 	}
 }
 
-// Lightbox trigger button positioning to match the theme's spacing.
+///
+/// Lightbox trigger button positioning to match the theme's spacing.
+///
 .wp-lightbox-container .lightbox-trigger {
 	top: var(--wp--preset--spacing--minus-2) !important;
 	right: var(--wp--preset--spacing--minus-2) !important;

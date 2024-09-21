@@ -21,24 +21,8 @@
 /// Cite doesn't have a standalone block-level wrapper, so it should be a block
 /// element itself.
 ///
-.wp-block-quote cite {
+.wp-block-quote > cite {
 	display: block;
-}
-
-///
-/// Faux `blockGap` support.
-///
-/// @todo       Remove with WP 6.5 support.
-/// @link       https://github.com/WordPress/gutenberg/pull/56064
-/// @wordpress  6.5
-///
-:where(.wp-block-quote > *) {
-	margin-block-start: 0;
-	margin-block-end: 0;
-}
-
-:where(.wp-block-quote > * + *) {
-	margin-block-start: var(--wp--custom--gap, var(--wp--style--block-gap));
 }
 
 // -----------------------------------------------------------------------------

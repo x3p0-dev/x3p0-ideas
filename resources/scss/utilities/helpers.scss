@@ -19,6 +19,9 @@
 	box-shadow: var(--wp--custom--shadow--primary--default, none);
 }
 
+///
+/// Removes the border radius and left/right borders on full-width blocks.
+///
 :where(:not(.has-global-padding)) > [class*=wp-block].alignfull,
 .has-global-border.alignfull,
 .wp-block-post-featured-image.alignfull img,
@@ -28,6 +31,9 @@
 	border-right: none;
 }
 
+///
+/// Cleans up smiley styling.
+///
 svg.wp-smiley {
 	display: inline !important;
 	border: none !important;

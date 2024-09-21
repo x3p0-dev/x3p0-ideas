@@ -36,20 +36,26 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-// Zeroes out margins from general list spacing.
+///
+/// Zeroes out margins from general list spacing.
+///
 .wp-block-navigation .wp-block-navigation-item {
 	margin: 0;
 }
 
-// This targets the hover/click icon next to the top-level menu items when they
-// have a submenu.
+///
+/// This targets the hover/click icon next to the top-level menu items when they
+/// have a submenu.
+///
 .wp-block-navigation .wp-block-navigation__submenu-icon {
 	margin-left: var(--wp--preset--spacing--minus-2);
 }
 
-// Custom styles for the open/close toggle button and its inner SVG. We're
-// fighting a lot of specificity in the editor, so the `!important` instances
-// below, well...they're kind of important.
+///
+/// Custom styles for the open/close toggle button and its inner SVG. We're
+/// fighting a lot of specificity in the editor, so the `!important` instances
+/// below, well...they're kind of important.
+///
 .wp-block-navigation button.wp-block-navigation__responsive-container-open,
 .wp-block-navigation button.wp-block-navigation__responsive-container-close {
 	transition: 0.5s ease-in-out;
@@ -59,7 +65,7 @@
 	color:         var(--wp--custom--color--text--button--primary--default) !important;
 	background:    var(--wp--custom--color--surface--button--primary--default);
 	border-radius: var(--wp--custom--global--border--radius);
-	box-shadow:    var(--wp--custom--preset--shadow--sm);
+	box-shadow:    var(--wp--custom--shadow--secondary);
 
 	padding: var(--wp--preset--spacing--minus-2) var(--wp--preset--spacing--minus-1) !important;
 
@@ -79,11 +85,9 @@
 	transform: scale(0.9);
 }
 
-// -----------------------------------------------------------------------------
-// Responsive menu when it is open.
-// -----------------------------------------------------------------------------
-
-// Targets the wrapper for the entire nav menu when it is open.
+///
+/// Targets the wrapper for the entire nav menu when it is open.
+///
 .wp-block-navigation__responsive-container.is-menu-open {
 	> * {
 		color: inherit;
@@ -116,9 +120,11 @@
 	}
 }
 
-// Removes top margin that's added when the admin bar is shown. This makes sense
-// in general, but the menu is completely above the admin bar, so we just get a
-// ton of whitespace instead.
+///
+/// Removes top margin that's added when the admin bar is shown. This makes sense
+/// in general, but the menu is completely above the admin bar, so we just get a
+/// ton of whitespace instead.
+///
 @media (max-width: wp-breakpoints.$break-medium) {
 	.has-modal-open .admin-bar .is-menu-open .wp-block-navigation__responsive-dialog {
 		margin-top: 0;

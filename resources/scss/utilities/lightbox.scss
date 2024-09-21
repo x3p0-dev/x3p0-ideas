@@ -5,6 +5,12 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
+///
+/// Customizes the lightbox overlay.
+///
+/// @todo We need a `--wp--custom--color--scrim` color.
+/// @todo Should we use button styling for the close button?
+///
 .wp-lightbox-overlay {
 	background: var(--wp--custom--color--dark, #000);
 

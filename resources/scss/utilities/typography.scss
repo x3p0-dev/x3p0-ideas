@@ -12,18 +12,18 @@
 /// Combine each line-height set via `settings.custom.lineHeight` in `theme.json`
 /// with the corresponding font-size set via `setting.typography.fontSizes`.
 ///
-.has-7-xl-font-size { line-height: var(--wp--custom--line-height--7-xl); }
-.has-6-xl-font-size { line-height: var(--wp--custom--line-height--6-xl); }
-.has-5-xl-font-size { line-height: var(--wp--custom--line-height--5-xl); }
-.has-4-xl-font-size { line-height: var(--wp--custom--line-height--4-xl); }
-.has-3-xl-font-size { line-height: var(--wp--custom--line-height--3-xl); }
-.has-2-xl-font-size { line-height: var(--wp--custom--line-height--2-xl); }
-.has-xl-font-size   { line-height: var(--wp--custom--line-height--xl); }
-.has-lg-font-size   { line-height: var(--wp--custom--line-height--lg); }
-.has-md-font-size   { line-height: var(--wp--custom--line-height--md); }
-.has-sm-font-size   { line-height: var(--wp--custom--line-height--sm); }
-.has-xs-font-size   { line-height: var(--wp--custom--line-height--xs); }
-.has-2-xs-font-size { line-height: var(--wp--custom--line-height--2-xs); }
+.has-7-xl-font-size    { line-height: var(--wp--custom--line-height--7-xl); }
+.has-6-xl-font-size    { line-height: var(--wp--custom--line-height--6-xl); }
+.has-5-xl-font-size    { line-height: var(--wp--custom--line-height--5-xl); }
+.has-4-xl-font-size    { line-height: var(--wp--custom--line-height--4-xl); }
+.has-3-xl-font-size    { line-height: var(--wp--custom--line-height--3-xl); }
+.has-2-xl-font-size    { line-height: var(--wp--custom--line-height--2-xl); }
+.has-xl-font-size      { line-height: var(--wp--custom--line-height--xl); }
+.has-lg-font-size      { line-height: var(--wp--custom--line-height--lg); }
+.has-md-font-size      { line-height: var(--wp--custom--line-height--md); }
+.has-sm-font-size      { line-height: var(--wp--custom--line-height--sm); }
+.has-xs-font-size      { line-height: var(--wp--custom--line-height--xs); }
+.has-2-xs-font-size    { line-height: var(--wp--custom--line-height--2-xs); }
 .has-inherit-font-size { line-height: inherit; }
 
 ///
