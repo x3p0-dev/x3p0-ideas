@@ -114,9 +114,6 @@ class StyleVariations implements Bootable
 				'classic' => __('Classic', 'x3p0-ideas'),
 				'reverse' => __('Reverse', 'x3p0-ideas')
 			],
-			'core/heading' => [
-				'knockout' => __('Knockout',      'x3p0-ideas'),
-			],
 			'core/home-link' => [
 				'icon' => __('Icon', 'x3p0-ideas')
 			],

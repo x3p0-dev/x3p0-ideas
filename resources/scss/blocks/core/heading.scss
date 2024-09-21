@@ -33,31 +33,4 @@
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-///
-/// Adds a clip-text/knockout style to the block. Essentially, this allows the
-/// background to apply to the text itself instead of the background of the
-/// entire element.
-///
-.wp-block-heading.is-style-knockout,
-.editor-styles-wrapper .wp-block-heading.is-style-knockout{
-	background-clip: text !important;
-	-webkit-background-clip: text !important;
-	color: transparent !important;
-
-	// Always remove text-shadow, which obscures the background with this
-	// technique for knockout text.
-	text-shadow: none !important
-}
-
-.wp-block-heading.is-style-knockout {
-	// Add a default gradient background if the user hasn't chosen one.
-	&:not(.has-background) {
-		background: var(--wp--preset--gradient--cool-to-warm-spectrum);
-	}
-
-	// Sub-elements, such as links, need to inherit the heading color for
-	// the clip-text to work.
-	> * {
-		color: inherit !important;
-	}
-}
+// No variations...
