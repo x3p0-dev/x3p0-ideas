@@ -51,12 +51,16 @@
 /// reason or another. 🤪 It sets some other things too, but those can be easily
 /// overwritten via `theme.json`.
 ///
+/// Core also hardcodes a text decoration on the button that is impossible to
+/// overrule via `theme.json`.
+///
 .wp-block-file__button {
 	&:active,
 	&:focus,
 	&:hover,
 	&:visited {
 		opacity: 1;
+		text-decoration: underline;
 	}
 }
 
