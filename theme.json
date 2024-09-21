@@ -2113,7 +2113,7 @@
 			},
 			"core/social-links": {
 				"spacing": {
-					"blockGap": "var:preset|spacing|plus-1"
+					"blockGap": "var:preset|spacing|base"
 				},
 				"variations": {
 					"logos-only": {

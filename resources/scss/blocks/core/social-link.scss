@@ -9,7 +9,13 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// No fixes...
+///
+/// WordPress hardcodes the `line-height` to `0` for some reason. 🤷‍♂️
+///
+.wp-block-social-links .wp-block-social-link,
+.wp-block-social-link .wp-block-social-link-anchor {
+	//line-height: inherit;
+}
 
 // -----------------------------------------------------------------------------
 // Block customizations.
@@ -39,10 +45,9 @@
 }
 
 ///
-/// Adjusts the padding for social links. Note that we must specifically target
-/// the `.wp-block-social-links` parent to overrule the core style rule.
+/// Adjusts the padding for social links.
 ///
-.wp-block-social-links .wp-social-link .wp-block-social-link-anchor {
+.wp-block-social-links:where(:not(.has-visible-labels)) .wp-block-social-link-anchor {
 	padding: var(--wp--preset--spacing--minus-2);
 }
 
@@ -50,4 +55,21 @@
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-// No variations...
+///
+/// Some adjustments for button-based section styles that doesn't work from the
+/// JSON files.
+///
+:root :where(.wp-block-social-links.has-visible-labels:not(
+	.is-style-logos-only,
+	.is-style-monotone
+)) {
+	.wp-block-social-link,
+	.wp-block-social-link-anchor {
+		font-size: inherit;
+		line-height: inherit;
+	}
+
+	.wp-block-social-link-anchor {
+		padding: var(--wp--preset--spacing--minus-2) var(--wp--preset--spacing--plus-1);
+	}
+}

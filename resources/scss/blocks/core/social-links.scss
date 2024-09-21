@@ -62,6 +62,10 @@
 .wp-block-social-links.has-huge-icon-size {
         font-size: var(--wp--preset--font-size--xl);
 
+	&.has-visible-labels {
+		font-size: var(--wp--preset--font-size--lg);
+	}
+
 	.wp-block-social-link-label:not(.screen-reader-text) {
 		font-size: var(--wp--preset--font-size--md);
 	}

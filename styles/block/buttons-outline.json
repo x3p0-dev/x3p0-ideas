@@ -9,6 +9,10 @@
 		"core/tag-cloud"
 	],
 	"styles": {
+		"css": "gap: var(--wp--preset--spacing--base);",
+		"spacing": {
+			"blockGap": { "ref": "styles.elements.buttons.spacing.blockGap" }
+		},
 		"typography": {
 			"fontSize": { "ref": "styles.elements.button.typography.fontSize" },
 			"fontWeight": { "ref": "styles.elements.button.typography.fontWeight" }
@@ -74,6 +78,9 @@
 				"color": {
 					"background": { "ref": "styles.blocks.core/button.variations.outline.color.background" },
 					"text": { "ref": "styles.blocks.core/button.variations.outline.color.text" }
+				},
+				"typography": {
+					"lineHeight": { "ref": "styles.elements.button.typography.lineHeight" }
 				},
 				"elements": {
 					"link": {
