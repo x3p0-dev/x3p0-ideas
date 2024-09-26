@@ -224,7 +224,7 @@ kbd {
 /// Adds a list item marker color.
 ///
 li::marker {
-	color: var(--wp--custom--color--text--muted, currentColor);
+	color: var(--wp--custom--color--icon--muted, currentColor);
 }
 
 ///
