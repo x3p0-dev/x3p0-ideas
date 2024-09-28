@@ -12,7 +12,8 @@
 /// @todo Should we use button styling for the close button?
 ///
 .wp-lightbox-overlay {
-	background: var(--wp--custom--color--dark, #000);
+	background: var(--wp--custom--color--surface--backdrop, #000);
+	color: var(--wp--custom--color--text--backdrop, #fff);
 
 	.scrim {
 		background: none !important;
@@ -21,7 +22,7 @@
 	.close-button {
 		right: calc(env(safe-area-inset-right) + var(--wp--preset--spacing--plus-3));
 		top: calc(env(safe-area-inset-top) + var(--wp--preset--spacing--base));
-		fill: var(--wp--custom--color--light, #fff) !important;
+		fill: var(--wp--custom--color--text--backdrop, #fff) !important;
 
 		svg {
 			width: 24px;
