@@ -14,6 +14,7 @@
 			"blockGap": { "ref": "styles.elements.buttons.spacing.blockGap" }
 		},
 		"typography": {
+			"fontFamily": { "ref": "styles.elements.button.typography.fontFamily" },
 			"fontSize": { "ref": "styles.elements.button.typography.fontSize" },
 			"fontWeight": { "ref": "styles.elements.button.typography.fontWeight" }
 		},

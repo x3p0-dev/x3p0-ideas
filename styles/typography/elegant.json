@@ -81,12 +81,6 @@
 			},
 			"heading": {
 				"typography": {
-					"fontWeight": "400",
-					"textTransform": "none"
-				}
-			},
-			"h1": {
-				"typography": {
 					"fontWeight": "400"
 				}
 			}

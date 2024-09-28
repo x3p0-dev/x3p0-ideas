@@ -549,112 +549,112 @@
 			"palette": [
 				{
 					"slug": "primary-950",
-					"color": "#1a3151",
+					"color": "#1C334A",
 					"name": "Primary: 950"
 				},
 				{
 					"slug": "primary-900",
-					"color": "#244e84",
+					"color": "#2A4D6F",
 					"name": "Primary: 900"
 				},
 				{
 					"slug": "primary-800",
-					"color": "#265ba7",
+					"color": "#3B6B9C",
 					"name": "Primary: 800"
 				},
 				{
 					"slug": "primary-700",
-					"color": "#2770ce",
+					"color": "#4A82BB",
 					"name": "Primary: 700"
 				},
 				{
 					"slug": "primary-600",
-					"color": "#3086e0",
+					"color": "#6091C3",
 					"name": "Primary: 600"
 				},
 				{
 					"slug": "primary-500",
-					"color": "#45a1ec",
+					"color": "#78A2CC",
 					"name": "Primary: 500"
 				},
 				{
 					"slug": "primary-400",
-					"color": "#68bef2",
+					"color": "#9BBAD9",
 					"name": "Primary: 400"
 				},
 				{
 					"slug": "primary-300",
-					"color": "#99d5f7",
+					"color": "#B9CFE4",
 					"name": "Primary: 300"
 				},
 				{
 					"slug": "primary-200",
-					"color": "#c2e5fb",
+					"color": "#D3E0EE",
 					"name": "Primary: 200"
 				},
 				{
 					"slug": "primary-100",
-					"color": "#ddeffc",
+					"color": "#E9F0F7",
 					"name": "Primary: 100"
 				},
 				{
 					"slug": "primary-50",
-					"color": "#f0f8fe",
+					"color": "#F4F7FB",
 					"name": "Primary: 50"
 				},
 				{
 					"slug": "secondary-950",
-					"color": "#43006c",
+					"color": "#0c2c2a",
 					"name": "Secondary: 950"
 				},
 				{
 					"slug": "secondary-900",
-					"color": "#611390",
+					"color": "#134844",
 					"name": "Secondary: 900"
 				},
 				{
 					"slug": "secondary-800",
-					"color": "#7615b4",
+					"color": "#1b655f",
 					"name": "Secondary: 800"
 				},
 				{
 					"slug": "secondary-700",
-					"color": "#8c13dd",
+					"color": "#1f756e",
 					"name": "Secondary: 700"
 				},
 				{
 					"slug": "secondary-600",
-					"color": "#a223fa",
+					"color": "#24877e",
 					"name": "Secondary: 600"
 				},
 				{
 					"slug": "secondary-500",
-					"color": "#b447ff",
+					"color": "#2eada3",
 					"name": "Secondary: 500"
 				},
 				{
 					"slug": "secondary-400",
-					"color": "#c97aff",
+					"color": "#36c9bd",
 					"name": "Secondary: 400"
 				},
 				{
 					"slug": "secondary-300",
-					"color": "#ddaeff",
+					"color": "#7adcd3",
 					"name": "Secondary: 300"
 				},
 				{
 					"slug": "secondary-200",
-					"color": "#ecd1ff",
+					"color": "#aeeae5",
 					"name": "Secondary: 200"
 				},
 				{
 					"slug": "secondary-100",
-					"color": "#f5e6ff",
+					"color": "#dbf5f3",
 					"name": "Secondary: 100"
 				},
 				{
 					"slug": "secondary-50",
-					"color": "#fbf4ff",
+					"color": "#ebfaf8",
 					"name": "Secondary: 50"
 				},
 				{
@@ -734,6 +734,7 @@
 					"level-1": "var:preset|color|neutral-50",
 					"level-2": "var:preset|color|neutral-100",
 					"primary": "var:preset|color|primary-500",
+					"backdrop": "var:preset|color|primary-950",
 					"button": {
 						"primary": {
 							"default": "var:preset|color|primary-600",
@@ -750,6 +751,7 @@
 					"muted": "var:preset|color|neutral-500",
 					"primary": "var:preset|color|primary-700",
 					"on-primary": "var:preset|color|white",
+					"backdrop": "var:preset|color|primary-50",
 					"button": {
 						"primary": {
 							"default": "var:preset|color|white",
@@ -1189,55 +1191,51 @@
 			"fluid": false,
 			"fontFamilies": [
 				{
-					"fontFamily": "Jost, ui-sans-serif, sans-serif",
+					"fontFamily": "'Source Serif', Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif",
 					"slug": "primary",
-					"name": "Primary (Jost)",
+					"name": "Primary (Source Serif)",
 					"fontFace": [
 						{
-							"fontFamily": "Jost",
-							"fontFeatureSettings": "'tnum', 'ss01' 1",
-							"fontWeight": "100 900",
+							"fontFamily": "Source Serif",
+							"fontWeight": "200 900",
 							"fontStyle": "normal",
 							"fontStretch": "normal",
-							"fontVariant": "slashed-zero",
 							"src": [
-								"file:./public/fonts/jost/jost.woff2"
+								"file:./public/fonts/source/source-serif.woff2"
 							]
 						},
 						{
-							"fontFamily": "Jost",
-							"fontFeatureSettings": "'tnum', 'ss01' 1",
-							"fontWeight": "100 900",
+							"fontFamily": "Source Serif",
+							"fontWeight": "200 900",
 							"fontStyle": "italic",
 							"fontStretch": "normal",
-							"fontVariant": "slashed-zero",
 							"src": [
-								"file:./public/fonts/jost/jost-italic.woff2"
+								"file:./public/fonts/source/source-serif-italic.woff2"
 							]
 						}
 					]
 				},
 				{
-					"fontFamily": "Wix Madefor Text, ui-sans-serif, sans-serif",
+					"fontFamily": "'Source Sans', ui-sans-serif, sans-serif",
 					"slug": "secondary",
-					"name": "Secondary (Wix Madefor Text)",
+					"name": "Secondary (Source Sans)",
 					"fontFace": [
 						{
-							"fontFamily": "Wix Madefor Text",
-							"fontWeight": "400 800",
+							"fontFamily": "Source Sans",
+							"fontWeight": "200 900",
 							"fontStyle": "normal",
 							"fontStretch": "normal",
 							"src": [
-								"file:./public/fonts/wix-madefor/wix-madefor-text.woff2"
+								"file:./public/fonts/source/source-sans.woff2"
 							]
 						},
 						{
-							"fontFamily": "Wix Madefor Text",
-							"fontWeight": "400 800",
+							"fontFamily": "Source Sans",
+							"fontWeight": "200 900",
 							"fontStyle": "italic",
 							"fontStretch": "normal",
 							"src": [
-								"file:./public/fonts/wix-madefor/wix-madefor-text-italic.woff2"
+								"file:./public/fonts/source/source-sans-italic.woff2"
 							]
 						}
 					]
@@ -1374,6 +1372,7 @@
 					}
 				},
 				"typography": {
+					"fontFamily": "var:preset|font-family|secondary",
 					"fontSize": "var:preset|font-size|sm",
 					"fontWeight": "500",
 					"lineHeight": "var:custom|line-height|sm",
@@ -1424,9 +1423,13 @@
 					}
 				},
 				"typography": {
+					"fontFamily": "var:preset|font-family|primary",
 					"fontSize": "var:preset|font-size|sm",
+					"fontStyle": "italic",
+					"fontWeight": "300",
 					"lineHeight": "var:custom|line-height|sm",
-					"textAlign": "center"
+					"textAlign": "center",
+					"textTransform": "none"
 				}
 			},
 			"cite": {
@@ -1437,7 +1440,7 @@
 			"heading": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",
-					"fontWeight": "500"
+					"fontWeight": "400"
 				}
 			},
 			"h1": {
@@ -1662,6 +1665,8 @@
 					}
 				},
 				"typography": {
+					"fontSize": "var:preset|font-size|xl",
+					"lineHeight": "var:preset|line-height|xl",
 					"textTransform": "capitalize"
 				}
 			},
@@ -1871,7 +1876,7 @@
 					"h3": {
 						"typography": {
 							"fontSize": "var:preset|font-size|xl",
-							"lineHeight": "var:custom|line-height|xl"
+							"lineHeight": "var:preset|line-height|xl"
 						}
 					}
 				}
@@ -1935,8 +1940,11 @@
 					}
 				},
 				"typography": {
+					"fontFamily": "var:preset|font-family|primary",
 					"fontSize": "var:preset|font-size|2-xl",
-					"lineHeight": "var:custom|line-height|2-xl"
+					"lineHeight": "var:custom|line-height|2-xl",
+					"fontStyle": "italic",
+					"fontWeight": "300"
 				},
 				"elements": {
 					"cite": {
@@ -1949,8 +1957,10 @@
 							}
 						},
 						"typography": {
+							"fontFamily": "var:preset|font-family|secondary",
 							"fontSize": "clamp(var(--wp--preset--font-size--xs), 0.8125em, var(--wp--preset--font-size--lg))",
 							"fontWeight": "300",
+							"fontStyle": "normal",
 							"letterSpacing": "0"
 						}
 					}
@@ -2024,7 +2034,8 @@
 							}
 						},
 						"typography": {
-							"fontSize": "0.9375em",
+							"fontFamily": "var:preset|font-family|primary",
+							"fontSize": "0.875em",
 							"fontWeight": "300",
 							"letterSpacing": "0"
 						}
@@ -2079,10 +2090,12 @@
 			},
 			"core/site-title": {
 				"typography": {
+					"fontFamily": "var:preset|font-family|primary",
 					"fontSize": "var:preset|font-size|md",
-					"fontStyle": "normal",
-					"fontWeight": "500",
-					"textTransform": "uppercase"
+					"fontStyle": "italic",
+					"fontWeight": "400",
+					"letterSpacing": "0",
+					"textTransform": "none"
 				},
 				"elements": {
 					"link": {
@@ -2181,6 +2194,14 @@
 							}
 						}
 					}
+				}
+			},
+			"core/verse": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|primary",
+					"fontSize": "var:preset|font-size|md",
+					"fontStyle": "italic",
+					"lineHeight": "var:custom|line-height|md"
 				}
 			},
 			"outermost/icon-block": {

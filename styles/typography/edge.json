@@ -1,0 +1,119 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Edge",
+	"settings": {
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "Jost, ui-sans-serif, sans-serif",
+					"slug": "primary",
+					"name": "Primary (Jost)",
+					"fontFace": [
+						{
+							"fontFamily": "Jost",
+							"fontFeatureSettings": "'tnum', 'ss01' 1",
+							"fontWeight": "100 900",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"fontVariant": "slashed-zero",
+							"src": [
+								"file:./public/fonts/jost/jost.woff2"
+							]
+						},
+						{
+							"fontFamily": "Jost",
+							"fontFeatureSettings": "'tnum', 'ss01' 1",
+							"fontWeight": "100 900",
+							"fontStyle": "italic",
+							"fontStretch": "normal",
+							"fontVariant": "slashed-zero",
+							"src": [
+								"file:./public/fonts/jost/jost-italic.woff2"
+							]
+						}
+					]
+				},
+				{
+					"fontFamily": "Wix Madefor Text, ui-sans-serif, sans-serif",
+					"slug": "secondary",
+					"name": "Secondary (Wix Madefor Text)",
+					"fontFace": [
+						{
+							"fontFamily": "Wix Madefor Text",
+							"fontWeight": "400 800",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [
+								"file:./public/fonts/wix-madefor/wix-madefor-text.woff2"
+							]
+						},
+						{
+							"fontFamily": "Wix Madefor Text",
+							"fontWeight": "400 800",
+							"fontStyle": "italic",
+							"fontStretch": "normal",
+							"src": [
+								"file:./public/fonts/wix-madefor/wix-madefor-text-italic.woff2"
+							]
+						}
+					]
+				},
+				{
+					"fontFamily": "ui-monospace, 'Fira Code', 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace",
+					"slug": "mono",
+					"name": "Monospace"
+				}
+			]
+		}
+	},
+	"styles": {
+		"typography": {
+			"fontFamily": "var:preset|font-family|secondary",
+			"fontSize": "var:preset|font-size|md",
+			"lineHeight": "var:custom|line-height|md"
+		},
+		"elements": {
+			"button": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|secondary"
+				}
+			},
+			"caption": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|secondary"
+				}
+			},
+			"cite": {
+				"typography": {
+					"fontStyle": "italic"
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|primary",
+					"fontWeight": "500"
+				}
+			}
+		},
+		"blocks": {
+			"core/quote": {
+				"elements": {
+					"cite": {
+						"typography": {
+							"fontSize": "0.9375em"
+						}
+					}
+				}
+			},
+			"core/site-title": {
+				"typography": {
+					"fontSize": "var:preset|font-size|md",
+					"fontStyle": "normal",
+					"fontWeight": "500",
+					"textTransform": "uppercase"
+				}
+			}
+		}
+	}
+}
