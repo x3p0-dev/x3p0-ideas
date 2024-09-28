@@ -48,8 +48,7 @@
 			"X3P0\\Ideas\\Dev\\": "dev/"
 		},
 		"files" : [
-			"dev/bootstrap.php",
-			"dev/functions-helpers.php"
+			"dev/bootstrap.php"
 		]
 	},
 	"require": {

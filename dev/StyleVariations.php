@@ -1,11 +1,11 @@
 <?php
 
 /**
- * Global style variation tester.
+ * Style variation tester.
  *
- * Global style variations in WordPress can only be tested by going to the site
- * editor and selecting a variation. Once a variation is selected, the settings
- * are stored in the database as custom global styles at the user level. This is
+ * Style variations in WordPress can only be tested by going to the site editor
+ * and selecting a variation. Once a variation is selected, the settings are
+ * stored in the database as custom global styles at the user level. This is
  * problematic in development because it means that any changes that you make
  * to the variation's JSON file are not reflected on the front end. The "user"
  * settings are used instead. The only way to test at this point is to reset the
@@ -16,8 +16,7 @@
  * stored as user styles.
  *
  * To test, simply pass the variation slug(s) into the constructor and boot. If
- * the slug isn't set, no test will be run. If it is set to `default`, the
- * theme's primary `theme.json` will be used.
+ * the slug isn't set, no test will be run.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
@@ -33,7 +32,7 @@ use WP_Theme_JSON_Data;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
 
-class GlobalStyleVariation implements Bootable
+class StyleVariations implements Bootable
 {
 	use Hookable;
 
@@ -52,7 +51,6 @@ class GlobalStyleVariation implements Bootable
 	 * Set up the object's initial state.
 	 *
 	 * @since 1.0.0
-	 * @todo  Promote params to properties with PHP 8.0+ requirement.
 	 */
 	public function __construct(
 		protected string $theme = '',

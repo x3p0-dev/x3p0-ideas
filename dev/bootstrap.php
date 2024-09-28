@@ -13,10 +13,27 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas\Dev;
 
+use X3P0\Ideas\Theme;
+
 # Prevent direct execution.
 if (! defined('ABSPATH')) {
 	return;
 }
 
 # Bootstrap dev.
-add_action('after_setup_theme', __NAMESPACE__ . '\\bootstrap', PHP_INT_MIN);
+add_action('x3p0.ideas.init', function (Theme $theme) {
+	if (! wp_is_development_mode('theme')) {
+		return;
+	}
+
+	$config = new Config();
+
+	$theme->instance('dev.setup', new Setup());
+	$theme->instance('dev.editor', new Editor());
+
+	$theme->instance('dev.style.variations', new StyleVariations(
+		(string) $config->get('theme'),
+		(string) $config->get('color'),
+		(string) $config->get('typography')
+	));
+});

@@ -104,13 +104,11 @@ class Theme implements Bootable
 	}
 
 	/**
-	 * Registers a single instance of a binding. Note that this is marked as
-	 * a `private` method for now since this class is meant to be used
-	 * internally only.
+	 * Registers a single instance of a binding.
 	 *
 	 * @since 1.0.0
 	 */
-	private function instance(string $abstract, mixed $instance): void
+	public function instance(string $abstract, mixed $instance): void
 	{
 		$this->instances[ $abstract ] = $instance;
 	}

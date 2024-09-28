@@ -36,6 +36,7 @@ function theme(string $component = ''): mixed
 
 	if (! $theme instanceof Theme) {
 		$theme = new Theme();
+		do_action('x3p0.ideas.init', $theme);
 	}
 
 	return '' === $component ? $theme : $theme->get($component);
