@@ -925,7 +925,7 @@
 						}
 					},
 					"text": {
-						"default": "var:preset|color|primary-100",
+						"default": "var:preset|color|primary-50",
 						"muted": "var:preset|color|primary-200",
 						"primary": "var:preset|color|primary-300",
 						"on-primary": "var:preset|color|primary-800",
