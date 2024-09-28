@@ -15,13 +15,8 @@
  * variation at all and 2) needing to reset styles if a variation is currently
  * stored as user styles.
  *
- * To test, simply pass the variation slug into the constructor and boot:
- *
- * ```php
- * (new GlobalStyleVariation('variation-slug`))->boot();
- * ```
- *
- * If the slug isn't set, no test will be run. If it is set to `default`, the
+ * To test, simply pass the variation slug(s) into the constructor and boot. If
+ * the slug isn't set, no test will be run. If it is set to `default`, the
  * theme's primary `theme.json` will be used.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
@@ -54,46 +49,19 @@ class GlobalStyleVariation implements Bootable
 	];
 
 	/**
-	 * Stores the current theme style variation for testing.
-	 *
-	 * @since 1.0.0
-	 * @todo  Promote via the constructor with PHP 8.0+ requirement.
-	 */
-	protected string $theme = '';
-
-	/**
-	 * Stores the current color variation for testing.
-	 *
-	 * @since 1.0.0
-	 * @todo  Promote via the constructor with PHP 8.0+ requirement.
-	 */
-	protected string $color = '';
-
-	/**
-	 * Stores the current typography variation for testing.
-	 *
-	 * @since 1.0.0
-	 * @todo  Promote via the constructor with PHP 8.0+ requirement.
-	 */
-	protected string $typography = '';
-
-	/**
 	 * Set up the object's initial state.
 	 *
 	 * @since 1.0.0
 	 * @todo  Promote params to properties with PHP 8.0+ requirement.
 	 */
 	public function __construct(
-		string $theme = '',
-		string $color = '',
-		string $typography = ''
+		protected string $theme = '',
+		protected string $color = '',
+		protected string $typography = ''
 	) {
-		$this->theme = isset(self::SHORT_NAMES[$theme])
-			? self::SHORT_NAMES[$theme]
-			: $theme;
-
-		$this->color      = $color;
-		$this->typography = $typography;
+		if (isset(self::SHORT_NAMES[$this->theme])) {
+			$this->theme = self::SHORT_NAMES[$this->theme];
+		}
 	}
 
 	/**
@@ -119,17 +87,7 @@ class GlobalStyleVariation implements Bootable
 	#[Filter('wp_theme_json_data_user', 'first')]
 	public function setThemeStyle(object $theme_json): object
 	{
-		if ('' === $this->theme) {
-			return $theme_json;
-		}
-
-		$filename = $this->getFilename('theme', $this->theme);
-
-		if (! is_readable($filename)) {
-			return $theme_json;
-		}
-
-		$data = wp_json_file_decode($filename, [ 'associative' => true ]);
+		$data = $this->getVariationData('theme');
 
 		return ! is_null($data)
 			? new WP_Theme_JSON_Data($data, 'user')
@@ -146,17 +104,7 @@ class GlobalStyleVariation implements Bootable
 	#[Filter('wp_theme_json_data_user', 'first')]
 	public function setColorStyle(object $theme_json): object
 	{
-		if ('' === $this->color) {
-			return $theme_json;
-		}
-
-		$filename = $this->getFilename('color', $this->color);
-
-		if (! is_readable($filename)) {
-			return $theme_json;
-		}
-
-		$data = wp_json_file_decode($filename, [ 'associative' => true ]);
+		$data = $this->getVariationData('color');
 
 		return ! is_null($data)
 			? $theme_json->update_with($data)
@@ -173,21 +121,30 @@ class GlobalStyleVariation implements Bootable
 	#[Filter('wp_theme_json_data_user', 'first')]
 	public function setTypographyStyle(object $theme_json): object
 	{
-		if ('' === $this->typography) {
-			return $theme_json;
-		}
-
-		$filename = $this->getFilename('typography', $this->typography);
-
-		if (! is_readable($filename)) {
-			return $theme_json;
-		}
-
-		$data = wp_json_file_decode($filename, [ 'associative' => true ]);
+		$data = $this->getVariationData('typography');
 
 		return ! is_null($data)
 			? $theme_json->update_with($data)
 			: $theme_json;
+	}
+
+	/**
+	 * Returns a variation's data based on type (`theme`, `color`, or
+	 * `typography`) or `null`.
+	 *
+	 * @since 1.0.0
+	 */
+	protected function getVariationData(string $type = 'theme'): ?array
+	{
+		if (! property_exists($this, $type) || '' === $this->$type) {
+			return null;
+		}
+
+		$filename = $this->getFilename($type, $this->$type);
+
+		return is_readable($filename)
+			? wp_json_file_decode($filename, [ 'associative' => true ])
+			: null;
 	}
 
 	/**
