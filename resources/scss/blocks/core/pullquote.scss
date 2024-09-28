@@ -37,6 +37,18 @@
 	display: block;
 }
 
+///
+/// Fixes the broken color for nested `<cite>` elements as of Gutenberg 18.1
+/// (WordPress 6.6). This is already defined in `theme.json` by default, but we
+/// must redefine it here until the issue is fixed. 😞
+///
+/// @link https://github.com/x3p0-dev/x3p0-ideas/issues/25
+/// @link https://github.com/WordPress/gutenberg/issues/65329
+///
+.wp-block-pullquote blockquote > cite {
+	color: var(--wp--custom--color--text--muted, inherit);
+}
+
 // -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
