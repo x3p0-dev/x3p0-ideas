@@ -64,6 +64,10 @@ ul.wp-block-archives-list,
 .wp-block-archives-list.is-style-spread {
 	list-style: none;
 	padding-left: 0;
+
+	li {
+		padding-left: 0;
+	}
 }
 
 .wp-block-archives.is-style-spread .wp-block-archives__content {
