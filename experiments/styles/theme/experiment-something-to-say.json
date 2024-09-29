@@ -1,0 +1,285 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Something to Say",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "primary-950",
+					"color": "#3a0764",
+					"name": "Primary: 950"
+				},
+				{
+					"slug": "primary-900",
+					"color": "#571c87",
+					"name": "Primary: 900"
+				},
+				{
+					"slug": "primary-800",
+					"color": "#6b21a8",
+					"name": "Primary: 800"
+				},
+				{
+					"slug": "primary-700",
+					"color": "#8022ce",
+					"name": "Primary: 700"
+				},
+				{
+					"slug": "primary-600",
+					"color": "#9733ea",
+					"name": "Primary: 600"
+				},
+				{
+					"slug": "primary-500",
+					"color": "#ae55f7",
+					"name": "Primary: 500"
+				},
+				{
+					"slug": "primary-400",
+					"color": "#c684fc",
+					"name": "Primary: 400"
+				},
+				{
+					"slug": "primary-300",
+					"color": "#ddb4fe",
+					"name": "Primary: 300"
+				},
+				{
+					"slug": "primary-200",
+					"color": "#ecd5ff",
+					"name": "Primary: 200"
+				},
+				{
+					"slug": "primary-100",
+					"color": "#f5e8ff",
+					"name": "Primary: 100"
+				},
+				{
+					"slug": "primary-50",
+					"color": "#faf5ff",
+					"name": "Primary: 50"
+				},
+				{
+					"slug": "secondary-950",
+					"color": "#402608",
+					"name": "Secondary: 950"
+				},
+				{
+					"slug": "secondary-900",
+					"color": "#6e4915",
+					"name": "Secondary: 900"
+				},
+				{
+					"slug": "secondary-800",
+					"color": "#815a12",
+					"name": "Secondary: 800"
+				},
+				{
+					"slug": "secondary-700",
+					"color": "#9c710c",
+					"name": "Secondary: 700"
+				},
+				{
+					"slug": "secondary-600",
+					"color": "#c49d0a",
+					"name": "Secondary: 600"
+				},
+				{
+					"slug": "secondary-500",
+					"color": "#e3c70f",
+					"name": "Secondary: 500"
+				},
+				{
+					"slug": "secondary-400",
+					"color": "#f3e01c",
+					"name": "Secondary: 400"
+				},
+				{
+					"slug": "secondary-300",
+					"color": "#f7ef4d",
+					"name": "Secondary: 300"
+				},
+				{
+					"slug": "secondary-200",
+					"color": "#f9f871",
+					"name": "Secondary: 200"
+				},
+				{
+					"slug": "secondary-100",
+					"color": "#fbfcc5",
+					"name": "Secondary: 100"
+				},
+				{
+					"slug": "secondary-50",
+					"color": "#fdfde9",
+					"name": "Secondary: 50"
+				},
+				{
+					"slug": "black",
+					"color": "#000000",
+					"name": "Black"
+				},
+				{
+					"slug": "neutral-950",
+					"color": "#202831",
+					"name": "Neutral: 950"
+				},
+				{
+					"slug": "neutral-900",
+					"color": "#313e49",
+					"name": "Neutral: 900"
+				},
+				{
+					"slug": "neutral-800",
+					"color": "#364856",
+					"name": "Neutral: 800"
+				},
+				{
+					"slug": "neutral-700",
+					"color": "#3e5466",
+					"name": "Neutral: 700"
+				},
+				{
+					"slug": "neutral-600",
+					"color": "#4c687d",
+					"name": "Neutral: 600"
+				},
+				{
+					"slug": "neutral-500",
+					"color": "#608197",
+					"name": "Neutral: 500"
+				},
+				{
+					"slug": "neutral-400",
+					"color": "#809db0",
+					"name": "Neutral: 400"
+				},
+				{
+					"slug": "neutral-300",
+					"color": "#adbfcc",
+					"name": "Neutral: 300"
+				},
+				{
+					"slug": "neutral-200",
+					"color": "#d3dce4",
+					"name": "Neutral: 200"
+				},
+				{
+					"slug": "neutral-100",
+					"color": "#d9e1e8",
+					"name": "Neutral: 100"
+				},
+				{
+					"slug": "neutral-50",
+					"color": "#ecf0f4",
+					"name": "Neutral: 50"
+				},
+				{
+					"slug": "white",
+					"color": "#ffffff",
+					"name": "White"
+				}
+			]
+		},
+		"custom": {
+			"variation": "something-to-say",
+			"color": {
+				"surface": {
+					"level-0": "var:preset|color|secondary-200",
+					"level-1": "var:preset|color|secondary-100",
+					"level-2": "var:preset|color|secondary-50"
+				},
+				"text": {
+					"default": "var:preset|color|neutral-950",
+					"muted": "var:preset|color|neutral-800"
+				},
+				"border": {
+					"default": "var:preset|color|primary-700"
+				}
+			},
+			"section-1": {
+				"color": {
+					"surface": {
+						"level-0": "var:preset|color|secondary-100",
+						"level-1": "var:preset|color|secondary-200",
+						"level-2": "var:preset|color|secondary-300"
+					}
+				}
+			},
+			"section-2": {
+				"color": {
+					"surface": {
+						"level-0": "var:preset|color|secondary-300",
+						"level-1": "var:preset|color|secondary-400",
+						"level-2": "var:preset|color|secondary-500"
+					}
+				}
+			},
+			"global": {
+				"border": {
+					"radius": "0",
+					"width": "0"
+				}
+			}
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "Oswald, ui-sans-serif, sans-serif",
+					"slug": "primary",
+					"name": "Primary (Oswald)",
+					"fontFace": [
+						{
+							"fontFamily": "Oswald",
+							"fontWeight": "200 700",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./public/fonts/oswald/oswald.woff2" ]
+						}
+					]
+				},
+				{
+					"fontFamily": "Cabin, ui-sans-serif, sans-serif",
+					"slug": "secondary",
+					"name": "Secondary (Cabin)",
+					"fontFace": [
+						{
+							"fontFamily": "Cabin",
+							"fontWeight": "400 700",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./public/fonts/cabin/cabin.woff2" ]
+						},
+						{
+							"fontFamily": "Cabin",
+							"fontWeight": "400 700",
+							"fontStyle": "italic",
+							"fontStretch": "normal",
+							"src": [ "file:./public/fonts/cabin/cabin-italic.woff2" ]
+						}
+					]
+				},
+				{
+					"fontFamily": "'Permanent Marker', cursive",
+					"slug": "tertiary",
+					"name": "Tertiary (Permanent Marker)",
+					"fontFace": [
+						{
+							"fontFamily": "Permanent Marker",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./public/fonts/permanent-marker/permanent-marker.woff2" ]
+						}
+					]
+				},
+				{
+					"fontFamily": "ui-monospace, 'Fira Code', 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace",
+					"slug": "mono",
+					"name": "Monospace"
+				}
+			]
+		}
+	}
+}
