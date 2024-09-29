@@ -52,15 +52,8 @@ class StyleVariations implements Bootable
 	 *
 	 * @since 1.0.0
 	 */
-	public function __construct(
-		protected string $theme = '',
-		protected string $color = '',
-		protected string $typography = ''
-	) {
-		if (isset(self::SHORT_NAMES[$this->theme])) {
-			$this->theme = self::SHORT_NAMES[$this->theme];
-		}
-	}
+	public function __construct(protected Config $config)
+	{}
 
 	/**
 	 * Boots the component, running its actions/filters.
@@ -132,13 +125,19 @@ class StyleVariations implements Bootable
 	 *
 	 * @since 1.0.0
 	 */
-	protected function getVariationData(string $type = 'theme'): ?array
+	protected function getVariationData(string $type): ?array
 	{
-		if (! property_exists($this, $type) || '' === $this->$type) {
+		$variation = (string) $this->config->get($type);
+
+		if ('' === $variation) {
 			return null;
 		}
 
-		$filename = $this->getFilename($type, $this->$type);
+		if (isset(self::SHORT_NAMES[$variation])) {
+			$variation = self::SHORT_NAMES[$variation];
+		}
+
+		$filename = $this->getFilename($type, $variation);
 
 		return is_readable($filename)
 			? wp_json_file_decode($filename, [ 'associative' => true ])
@@ -151,16 +150,16 @@ class StyleVariations implements Bootable
 	 *
 	 * @since 1.0.0
 	 */
-	protected function getFilename(string $path, string $variation = ''): string
+	protected function getFilename(string $type, string $variation): string
 	{
 		if ('' === $variation) {
 			return '';
 		}
 
-		if (file_exists(get_theme_file_path("styles/{$path}/{$variation}.json"))) {
-			return get_theme_file_path("styles/{$path}/{$variation}.json");
+		if (file_exists(get_theme_file_path("styles/{$type}/{$variation}.json"))) {
+			return get_theme_file_path("styles/{$type}/{$variation}.json");
 		}
 
-		return get_theme_file_path("styles/{$path}/experiment-{$variation}.json");
+		return get_theme_file_path("styles/{$type}/experiment-{$variation}.json");
 	}
 }

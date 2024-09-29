@@ -20,20 +20,13 @@ if (! defined('ABSPATH')) {
 	return;
 }
 
-# Bootstrap dev.
+# Add dev mode components to the container.
 add_action('x3p0.ideas.init', function (Theme $theme) {
 	if (! wp_is_development_mode('theme')) {
 		return;
 	}
 
-	$config = new Config();
-
 	$theme->instance('dev.setup', new Setup());
 	$theme->instance('dev.editor', new Editor());
-
-	$theme->instance('dev.style.variations', new StyleVariations(
-		(string) $config->get('theme'),
-		(string) $config->get('color'),
-		(string) $config->get('typography')
-	));
+	$theme->instance('dev.style.variations', new StyleVariations(new Config()));
 });
