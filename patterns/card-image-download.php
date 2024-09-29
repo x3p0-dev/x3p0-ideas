@@ -100,17 +100,17 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 		"style":{
 			"spacing":{
 				"padding":{
-					"top":"0",
-					"bottom":"0",
-					"left":"0",
-					"right":"0"
+					"top":"var:preset|spacing|base",
+					"bottom":"var:preset|spacing|base",
+					"left":"var:preset|spacing|plus-3",
+					"right":"var:preset|spacing|plus-3"
 				}
 			}
 		},
 		"className":"is-style-section-2",
 		"layout":{"type":"default"}
 	} -->
-	<footer class="wp-block-group is-style-section-2" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
+	<footer class="wp-block-group is-style-section-2" style="padding-top:var(--wp--preset--spacing--base);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--base);padding-left:var(--wp--preset--spacing--plus-3)">
 		<!-- wp:file {
 			"href":"<?= esc_url($image) ?>",
 			"showDownloadButton":false,

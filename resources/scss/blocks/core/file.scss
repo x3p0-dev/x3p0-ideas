@@ -24,9 +24,10 @@
 }
 
 ///
-/// Zero out the hard-coded resizable container margin in the editor.
+/// Zero out the hard-coded margins in the editor.
 ///
-.wp-block-file .components-resizable-box__container {
+.wp-block-file .components-resizable-box__container,
+.wp-block-file .wp-block-file__button-richtext-wrapper {
 	margin: 0;
 }
 
@@ -80,7 +81,7 @@
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
-	gap: var(--wp--style--block-gap);
+	gap: var(--wp--preset--spacing--base) var(--wp--style--block-gap);
 }
 
 // -----------------------------------------------------------------------------
@@ -101,15 +102,4 @@
 	.wp-block-file__button {
 		@include inline-icon.prefix(icon.get-url('download'));
 	}
-}
-
-///
-/// The plain style removes custom styling from the block.
-///
-.wp-block-file.is-style-plain,
-.editor-styles-wrapper .wp-block-file.is-style-plain {
-	border: none;
-	background: none;
-	box-shadow: none;
-	outline: none;
 }
