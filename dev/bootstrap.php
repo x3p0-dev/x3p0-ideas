@@ -21,7 +21,7 @@ if (! defined('ABSPATH')) {
 }
 
 # Add dev mode components to the container.
-add_action('x3p0.ideas.init', function (Theme $theme) {
+add_action('x3p0/ideas/init', function (Theme $theme) {
 	if (! wp_is_development_mode('theme')) {
 		return;
 	}
