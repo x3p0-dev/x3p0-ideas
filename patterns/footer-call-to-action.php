@@ -96,7 +96,7 @@ defined('ABSPATH') || exit;
 		<!-- wp:site-title {
 			"textAlign":"center",
 			"isLink":false,
-			"className":"is-style-normalize"
+			"className":"is-style-text-normalize"
 		} /-->
 
 	</div>

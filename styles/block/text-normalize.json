@@ -1,0 +1,38 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
+	"version": 3,
+	"title": "Normalize",
+	"slug": "text-normalize",
+	"blockTypes": [
+		"core/heading",
+		"core/site-title"
+	],
+	"styles": {
+		"color": {
+			"background": "transparent",
+			"text": "currentColor"
+		},
+		"typography": {
+			"fontFamily": "inherit",
+			"fontSize": "inherit",
+			"fontStyle": "inherit",
+			"fontWeight": "inherit",
+			"letterSpacing": "revert",
+			"lineHeight": "inherit",
+			"textTransform": "inherit"
+		},
+		"elements": {
+			"link": {
+				"typography": {
+					"fontFamily": "inherit",
+					"fontSize": "inherit",
+					"fontStyle": "inherit",
+					"fontWeight": "inherit",
+					"letterSpacing": "revert",
+					"lineHeight": "inherit",
+					"textTransform": "inherit"
+				}
+			}
+		}
+	}
+}
