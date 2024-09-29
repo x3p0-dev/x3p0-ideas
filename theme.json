@@ -751,7 +751,7 @@
 					"muted": "var:preset|color|neutral-500",
 					"primary": "var:preset|color|primary-700",
 					"on-primary": "var:preset|color|white",
-					"backdrop": "var:preset|color|primary-50",
+					"on-backdrop": "var:preset|color|primary-50",
 					"button": {
 						"primary": {
 							"default": "var:preset|color|white",
