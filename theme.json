@@ -2179,6 +2179,12 @@
 				"spacing": {
 					"blockGap": "var:preset|spacing|base"
 				},
+				"typography": {
+					"fontFamily": { "ref": "styles.elements.button.typography.fontFamily" },
+					"fontSize": { "ref": "styles.elements.button.typography.fontSize" },
+					"fontWeight": { "ref": "styles.elements.button.typography.fontWeight" },
+					"lineHeight": { "ref": "styles.elements.button.typography.lineHeight" }
+				},
 				"variations": {
 					"logos-only": {
 						"blocks": {

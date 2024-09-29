@@ -10,11 +10,15 @@
 // -----------------------------------------------------------------------------
 
 ///
-/// WordPress hardcodes the `line-height` to `0` for some reason. 🤷‍♂️
+/// Inherit typography. Note that the link for the anchor is a `<button>`
+/// element in the editor that is impossible to style via `theme.json`.
 ///
-.wp-block-social-links .wp-block-social-link,
 .wp-block-social-link .wp-block-social-link-anchor {
-	//line-height: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+	line-height: inherit;
 }
 
 // -----------------------------------------------------------------------------
