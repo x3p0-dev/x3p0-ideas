@@ -99,12 +99,3 @@ p.is-style-lead-in::first-line {
 	font-synthesis: none;
 	font-variant: small-caps;
 }
-
-///
-/// The lede style increases the size and weight of the text.
-///
-p.is-style-lede {
-	font-weight: 500;
-	font-size: var(--wp--preset--font-size--lg);
-	line-height: var(--wp--custom--line-height--lg);
-}
