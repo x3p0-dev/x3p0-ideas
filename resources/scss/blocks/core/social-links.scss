@@ -29,18 +29,20 @@
 .wp-block-social-links.has-small-icon-size {
         font-size: var(--wp--preset--font-size--sm);
 
-	.wp-block-social-link-label:not(.screen-reader-text) {
+	.wp-social-link .wp-block-social-link-label:not(.screen-reader-text) {
 		font-size: var(--wp--preset--font-size--2-xs);
 	}
 }
 
 ///
-/// Adjusts the font sizes for the small normal size.
+/// Adjusts the font sizes for the small normal size. This also accounts for
+/// social links without an icon size defined.
 ///
-.wp-block-social-links.has-normal-icon-size {
+.wp-block-social-links.has-normal-icon-size,
+.wp-block-social-links:where(:not([class*=-icon-size])) {
         font-size: var(--wp--preset--font-size--md);
 
-	.wp-block-social-link-label:not(.screen-reader-text) {
+	.wp-social-link .wp-block-social-link-label:not(.screen-reader-text) {
 		font-size: var(--wp--preset--font-size--xs);
 	}
 }
@@ -51,7 +53,7 @@
 .wp-block-social-links.has-large-icon-size {
         font-size: var(--wp--preset--font-size--lg);
 
-	.wp-block-social-link-label:not(.screen-reader-text) {
+	.wp-social-link .wp-block-social-link-label:not(.screen-reader-text) {
 		font-size: var(--wp--preset--font-size--sm);
 	}
 }
@@ -66,7 +68,7 @@
 		font-size: var(--wp--preset--font-size--lg);
 	}
 
-	.wp-block-social-link-label:not(.screen-reader-text) {
+	.wp-social-link .wp-block-social-link-label:not(.screen-reader-text) {
 		font-size: var(--wp--preset--font-size--md);
 	}
 }
