@@ -1,0 +1,186 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Evenfall",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "primary-950",
+					"color": "#531841",
+					"name": "Primary: 950"
+				},
+				{
+					"slug": "primary-900",
+					"color": "#6e2057",
+					"name": "Primary: 900"
+				},
+				{
+					"slug": "primary-800",
+					"color": "#9a2d79",
+					"name": "Primary: 800"
+				},
+				{
+					"slug": "primary-700",
+					"color": "#b93792",
+					"name": "Primary: 700"
+				},
+				{
+					"slug": "primary-600",
+					"color": "#ca4aa3",
+					"name": "Primary: 600"
+				},
+				{
+					"slug": "primary-500",
+					"color": "#d163b0",
+					"name": "Primary: 500"
+				},
+				{
+					"slug": "primary-400",
+					"color": "#df91c7",
+					"name": "Primary: 400"
+				},
+				{
+					"slug": "primary-300",
+					"color": "#e9b4d9",
+					"name": "Primary: 300"
+				},
+				{
+					"slug": "primary-200",
+					"color": "#f1d0e7",
+					"name": "Primary: 200"
+				},
+				{
+					"slug": "primary-100",
+					"color": "#f9ebf5",
+					"name": "Primary: 100"
+				},
+				{
+					"slug": "primary-50",
+					"color": "#fcf3f9",
+					"name": "Primary: 50"
+				},
+				{
+					"slug": "secondary-950",
+					"color": "#232145",
+					"name": "Secondary: 950"
+				},
+				{
+					"slug": "secondary-900",
+					"color": "#36356e",
+					"name": "Secondary: 900"
+				},
+				{
+					"slug": "secondary-800",
+					"color": "#423f94",
+					"name": "Secondary: 800"
+				},
+				{
+					"slug": "secondary-700",
+					"color": "#514bb7",
+					"name": "Secondary: 700"
+				},
+				{
+					"slug": "secondary-600",
+					"color": "#605bd0",
+					"name": "Secondary: 600"
+				},
+				{
+					"slug": "secondary-500",
+					"color": "#767ade",
+					"name": "Secondary: 500"
+				},
+				{
+					"slug": "secondary-400",
+					"color": "#919be8",
+					"name": "Secondary: 400"
+				},
+				{
+					"slug": "secondary-300",
+					"color": "#b0bcf1",
+					"name": "Secondary: 300"
+				},
+				{
+					"slug": "secondary-200",
+					"color": "#ced7f7",
+					"name": "Secondary: 200"
+				},
+				{
+					"slug": "secondary-100",
+					"color": "#e4e9fb",
+					"name": "Secondary: 100"
+				},
+				{
+					"slug": "secondary-50",
+					"color": "#f0f3fd",
+					"name": "Secondary: 50"
+				},
+				{
+					"slug": "black",
+					"color": "#000000",
+					"name": "Black"
+				},
+				{
+					"slug": "neutral-950",
+					"color": "#100e15",
+					"name": "Neutral: 950"
+				},
+				{
+					"slug": "neutral-900",
+					"color": "#1e1b27",
+					"name": "Neutral: 900"
+				},
+				{
+					"slug": "neutral-800",
+					"color": "#3e3852",
+					"name": "Neutral: 800"
+				},
+				{
+					"slug": "neutral-700",
+					"color": "#5c5379",
+					"name": "Neutral: 700"
+				},
+				{
+					"slug": "neutral-600",
+					"color": "#7c719e",
+					"name": "Neutral: 600"
+				},
+				{
+					"slug": "neutral-500",
+					"color": "#a29aba",
+					"name": "Neutral: 500"
+				},
+				{
+					"slug": "neutral-400",
+					"color": "#b4adc7",
+					"name": "Neutral: 400"
+				},
+				{
+					"slug": "neutral-300",
+					"color": "#c7c2d6",
+					"name": "Neutral: 300"
+				},
+				{
+					"slug": "neutral-200",
+					"color": "#dbd8e4",
+					"name": "Neutral: 200"
+				},
+				{
+					"slug": "neutral-100",
+					"color": "#ebeaf1",
+					"name": "Neutral: 100"
+				},
+				{
+					"slug": "neutral-50",
+					"color": "#f7f6f9",
+					"name": "Neutral: 50"
+				},
+				{
+					"slug": "white",
+					"color": "#ffffff",
+					"name": "White"
+				}
+			]
+		}
+	}
+}
