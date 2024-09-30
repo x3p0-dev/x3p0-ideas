@@ -85,7 +85,6 @@
 						"default": "var:preset|color|white",
 						"muted": "var:preset|color|primary-200",
 						"primary": "var:preset|color|primary-100",
-						"on-primary": "var:preset|color|white",
 						"button": {
 							"primary": {
 								"default": "var:preset|color|white",

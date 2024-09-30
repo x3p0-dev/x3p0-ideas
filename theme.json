@@ -748,7 +748,7 @@
 				},
 				"text": {
 					"default": "var:preset|color|neutral-900",
-					"muted": "var:preset|color|neutral-500",
+					"muted": "var:preset|color|neutral-600",
 					"primary": "var:preset|color|primary-700",
 					"on-primary": "var:preset|color|white",
 					"on-backdrop": "var:preset|color|primary-50",
