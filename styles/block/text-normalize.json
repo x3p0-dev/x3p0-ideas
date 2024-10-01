@@ -2,6 +2,7 @@
 	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
 	"version": 3,
 	"title": "Normalize",
+	"description": "The normalize style resets the text to inherit its typography from its parent.",
 	"slug": "text-normalize",
 	"blockTypes": [
 		"core/heading",
