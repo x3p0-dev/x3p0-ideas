@@ -139,9 +139,6 @@ class StyleVariations implements Bootable
 				'horizontal' => __('Horizontal', 'x3p0-ideas'),
 				'pull'       => __('Pull',       'x3p0-ideas')
 			],
-			'core/paragraph' => [
-				'indent'  => __('Indent',  'x3p0-ideas')
-			],
 			'core/post-author-name' => [
 				'icon' => __('Icon', 'x3p0-ideas')
 			],

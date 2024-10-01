@@ -1,0 +1,13 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
+	"version": 3,
+	"title": "Indent",
+	"description": "Sets a length of empty space (indentation) at the start of the text.",
+	"slug": "text-indent",
+	"blockTypes": [
+		"core/paragraph"
+	],
+	"styles": {
+		"css": "text-indent: var(--wp--preset--spacing--plus-4);\n\n&.has-drop-cap {\n\ttext-indent: var(--wp--preset--spacing--plus-2);\n}"
+	}
+}

@@ -74,16 +74,4 @@ p {
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-///
-/// The indent style simply indents the paragraph. `text-indent` is not
-/// currently supported in `theme.json`.
-///
-/// @link https://github.com/WordPress/gutenberg/issues/55225
-///
-p.is-style-indent {
-	text-indent: var(--wp--preset--spacing--plus-4);
-
-	&.has-drop-cap {
-		text-indent: var(--wp--preset--spacing--plus-2);
-	}
-}
+// No variations...
