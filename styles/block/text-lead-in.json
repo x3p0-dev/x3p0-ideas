@@ -1,0 +1,14 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
+	"version": 3,
+	"title": "Lead-in",
+	"description": "Sets the first line in contrasting type that preceding a headline or text.",
+	"slug": "text-lead-in",
+	"blockTypes": [
+		"core/heading",
+		"core/paragraph"
+	],
+	"styles": {
+		"css": "&::first-line{\n\tfont-weight: 700;\n\tfont-synthesis: none;\n\tfont-variant: small-caps;\n}"
+	}
+}
