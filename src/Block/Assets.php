@@ -46,7 +46,7 @@ class Assets implements Bootable
 	public function enqueueStyles(): void
 	{
 		$directory = new RecursiveDirectoryIterator(
-			get_parent_theme_file_path("public/css/blocks"),
+			get_parent_theme_file_path('public/css/blocks'),
 			RecursiveDirectoryIterator::SKIP_DOTS
 		);
 
