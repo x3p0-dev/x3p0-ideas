@@ -13,24 +13,14 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas\Block;
 
-use FilesystemIterator;
+use RecursiveDirectoryIterator;
+use RecursiveIteratorIterator;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Action, Hookable};
 
 class Assets implements Bootable
 {
 	use Hookable;
-
-	/**
-	 * Stores the supported block namespaces that we use for block stylesheets.
-	 *
-	 * @since 1.0.0
-	 * @var   string[]
-	 * @todo  Type hint with PHP 8.3+ requirement.
-	 */
-	protected const NAMESPACES = [
-		'core'
-	];
 
 	/**
 	 * Boots the component, running its actions/filters.
@@ -55,20 +45,26 @@ class Assets implements Bootable
 	#[Action('init', 'last')]
 	public function enqueueStyles(): void
 	{
-		// Loop through each of the block namespace paths, get their
-		// stylesheets, and enqueue them.
-		foreach (self::NAMESPACES as $namespace) {
-			$files = new FilesystemIterator(
-				get_parent_theme_file_path("public/css/blocks/{$namespace}")
-			);
+		$directory = new RecursiveDirectoryIterator(
+			get_parent_theme_file_path("public/css/blocks"),
+			RecursiveDirectoryIterator::SKIP_DOTS
+		);
 
-			foreach ($files as $file) {
-				if (! $file->isDir() && 'css' === $file->getExtension()) {
-					$this->enqueueStyle(
-						$namespace,
-						$file->getBasename('.css')
-					);
-				}
+		$files = new RecursiveIteratorIterator(
+			$directory,
+			RecursiveIteratorIterator::CHILD_FIRST
+		);
+
+		foreach ($files as $file) {
+			if (
+				! $file->isDir()
+				&& 'css' === $file->getExtension()
+				&& ! is_null($file->getPathInfo())
+			) {
+				$this->enqueueStyle(
+					$file->getPathInfo()->getBasename(),
+					$file->getBasename('.css')
+				);
 			}
 		}
 	}
