@@ -1,0 +1,18 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
+	"version": 3,
+	"title": "Headline",
+	"slug": "text-headline",
+	"blockTypes": [
+		"core/heading",
+		"core/post-title",
+		"core/query-title"
+	],
+	"styles": {
+		"typography": {
+			"fontSize": { "ref": "styles.elements.h1.typography.fontSize" },
+			"fontWeight": { "ref": "styles.elements.h1.typography.fontWeight" },
+			"lineHeight": { "ref": "styles.elements.h1.typography.lineHeight" }
+		}
+	}
+}

@@ -74,7 +74,8 @@ defined('ABSPATH') || exit;
 					"type":"archive",
 					"showPrefix":false,
 					"textAlign":"center",
-					"align":"full"
+					"align":"full",
+					"className":"is-style-text-headline"
 				} /-->
 
 				<!-- wp:term-description {

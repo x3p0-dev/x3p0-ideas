@@ -89,7 +89,11 @@ defined('ABSPATH') || exit;
 				} -->
 				<div class="wp-block-group alignfull" style="padding-right:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
 					<!-- wp:avatar {"size":64} /-->
-					<!-- wp:query-title {"type":"archive","showPrefix":false} /-->
+					<!-- wp:query-title {
+						"type":"archive",
+						"showPrefix":false,
+						"className":"is-style-text-headline"
+					} /-->
 				</div>
 				<!-- /wp:group -->
 

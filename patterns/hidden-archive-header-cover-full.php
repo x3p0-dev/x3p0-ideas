@@ -56,7 +56,8 @@ defined('ABSPATH') || exit;
 		<div class="wp-block-group">
 			<!-- wp:query-title {
 				"type":"archive",
-				"showPrefix":false
+				"showPrefix":false,
+				"className":"is-style-text-headline"
 			} /-->
 
 			<!-- wp:term-description /-->

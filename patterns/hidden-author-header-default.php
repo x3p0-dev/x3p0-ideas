@@ -41,7 +41,11 @@ defined('ABSPATH') || exit;
 	} -->
 	<div class="wp-block-group">
 		<!-- wp:avatar {"size":64} /-->
-		<!-- wp:query-title {"type":"archive","showPrefix":false} /-->
+		<!-- wp:query-title {
+			"type":"archive",
+			"showPrefix":false,
+			"className":"is-style-text-headline"
+		} /-->
 	</div>
 	<!-- /wp:group -->
 

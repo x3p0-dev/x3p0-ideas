@@ -53,7 +53,7 @@ defined('ABSPATH') || exit;
 			"layout":{"type":"constrained"}
 		} -->
 		<header class="wp-block-group">
-			<!-- wp:post-title {"level":1} /-->
+			<!-- wp:post-title {"level":1,"className":"is-style-text-headline"} /-->
 			<!-- wp:pattern {"slug":"x3p0-ideas/post-byline"} /-->
 		</header>
 		<!-- /wp:group -->

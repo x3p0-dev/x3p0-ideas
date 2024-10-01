@@ -38,7 +38,8 @@ defined('ABSPATH') || exit;
 	<!-- wp:query-title {
 		"type":"search",
 		"showPrefix":false,
-		"align":"wide"
+		"align":"wide",
+		"className":"is-style-text-headline"
 	} /-->
 
 </div>
