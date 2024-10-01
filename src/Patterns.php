@@ -45,7 +45,7 @@ class Patterns implements Bootable
 	public function __construct(
 		protected WP_Block_Patterns_Registry $patterns,
 		protected WP_Block_Pattern_Categories_Registry $categories,
-		protected WP_Block_Type_Registry $block_types
+		protected WP_Block_Type_Registry $blocks
 	) {}
 
 	/**
@@ -113,7 +113,7 @@ class Patterns implements Bootable
 	public function unregisterPatterns(): void
 	{
 		foreach (self::CONDITIONAL_PATTERNS as $block => $patterns) {
-			if (! $this->block_types->is_registered($block)) {
+			if (! $this->blocks->is_registered($block)) {
 				array_walk(
 					$patterns,
 					fn($pattern) => $this->patterns->unregister($pattern)

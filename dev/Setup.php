@@ -55,7 +55,6 @@ class Setup implements Bootable
 		}
 
 		VarDumper::setHandler(function ($var) {
-			$cloner = new VarCloner();
 			$dumper = new HtmlDumper();
 
 			$dumper->setTheme('light');
@@ -94,7 +93,7 @@ class Setup implements Bootable
 				'toggle'    => 'padding: 0 0.5rem'
 			]);
 
-			$dumper->dump($cloner->cloneVar($var));
+			$dumper->dump((new VarCloner())->cloneVar($var));
 		});
 	}
 }
