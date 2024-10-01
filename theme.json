@@ -1911,17 +1911,6 @@
 					}
 				}
 			},
-			"core/paragraph": {
-				"variations": {
-					"lede": {
-						"typography": {
-							"fontSize": "var:preset|font-size|lg",
-							"fontWeight": "500",
-							"lineHeight": "var:custom|line-height|lg"
-						}
-					}
-				}
-			},
 			"core/post-comments-form": {
 				"elements": {
 					"h3": {
