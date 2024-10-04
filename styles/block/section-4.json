@@ -1,0 +1,35 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
+	"version": 3,
+	"title": "Style 4",
+	"slug": "section-4",
+	"blockTypes": [
+		"core/code",
+		"core/column",
+		"core/columns",
+		"core/comment-content",
+		"core/comment-template",
+		"core/comments",
+		"core/details",
+		"core/group",
+		"core/media-text",
+		"core/post-comments-form",
+		"core/preformatted",
+		"core/query",
+		"core/verse"
+	],
+	"styles": {
+		"color": {
+			"background": "var:custom|color|surface|level-0",
+			"text": "var:custom|color|text|default"
+		},
+		"spacing": {
+			"padding": {
+				"top": "var:preset|spacing|plus-3",
+				"bottom": "var:preset|spacing|plus-3",
+				"left": "var:preset|spacing|plus-3",
+				"right": "var:preset|spacing|plus-3"
+			}
+		}
+	}
+}

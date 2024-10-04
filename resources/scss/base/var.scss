@@ -44,7 +44,7 @@ $text:    '--wp--custom--color--text';
 $icon:    '--wp--custom--color--icon';
 $border:  '--wp--custom--color--border';
 
-@for $id from 1 through 3 {
+@for $id from 1 through 4 {
 	$section: '--wp--custom--section-#{$id}';
 
 	:root :where(.is-style-section-#{$id}) {

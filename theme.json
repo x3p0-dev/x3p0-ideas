@@ -956,6 +956,52 @@
 					}
 				}
 			},
+			"section-4": {
+				"color": {
+					"surface": {
+						"level-0": "var:preset|color|primary-50",
+						"level-1": "var:preset|color|primary-100",
+						"level-2": "var:preset|color|primary-200",
+						"primary": "var:preset|color|primary-600",
+						"button": {
+							"primary": {
+								"default": "var:preset|color|primary-600",
+								"hover": "var:preset|color|primary-800"
+							}
+						}
+					},
+					"text": {
+						"default": "var:preset|color|neutral-950",
+						"muted": "var:preset|color|neutral-600",
+						"primary": "var:preset|color|primary-700",
+						"on-primary": "var:preset|color|white",
+						"button": {
+							"primary": {
+								"default": "var:preset|color|white",
+								"hover": "var:preset|color|primary-50"
+							}
+						},
+						"link": {
+							"primary": {
+								"default": "var:preset|color|primary-700",
+								"hover": "currentColor"
+							},
+							"secondary": {
+								"default": "currentColor",
+								"hover": "var:preset|color|primary-700"
+							}
+						}
+					},
+					"icon": {
+						"default": "currentColor",
+						"muted": "var:preset|color|primary-400",
+						"primary": "var:preset|color|primary-700"
+					},
+					"border": {
+						"default": "var:preset|color|primary-200"
+					}
+				}
+			},
 			"shadow": {
 				"primary": {
 					"default": "var:preset|shadow|lg",
