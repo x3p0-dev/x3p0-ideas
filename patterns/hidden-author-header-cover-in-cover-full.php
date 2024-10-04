@@ -98,6 +98,7 @@ defined('ABSPATH') || exit;
 				<!-- /wp:group -->
 
 				<!-- wp:post-author-biography {
+					"metadata":{"@unless":"is_paged"},
 					"textAlign": "center"
 				} /-->
 

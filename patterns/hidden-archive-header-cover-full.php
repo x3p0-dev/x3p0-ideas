@@ -60,7 +60,7 @@ defined('ABSPATH') || exit;
 				"className":"is-style-text-headline"
 			} /-->
 
-			<!-- wp:term-description /-->
+			<!-- wp:term-description {"metadata":{"@unless":"is_paged"}} /-->
 		</div>
 		<!-- /wp:group -->
 

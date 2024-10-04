@@ -79,6 +79,7 @@ defined('ABSPATH') || exit;
 				} /-->
 
 				<!-- wp:term-description {
+					"metadata":{"@unless":"is_paged"},
 					"textAlign":"center"
 				} /-->
 
