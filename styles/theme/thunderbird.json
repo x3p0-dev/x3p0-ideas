@@ -483,7 +483,9 @@
 			"core/site-title": {
 				"typography": {
 					"fontSize": "var:preset|font-size|lg",
+					"fontStyle": "normal",
 					"fontWeight": "800",
+					"lineHeight": "var:custom|line-height|lg",
 					"textTransform": "none"
 				}
 			},
