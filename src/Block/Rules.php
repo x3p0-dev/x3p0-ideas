@@ -70,9 +70,8 @@ class Rules
 	 * Show the block if the condition is met.
 	 *
 	 * @since 1.0.0
-	 * @param string|array $condition
 	 */
-	protected function checkIf($condition, array $block, WP_Block $instance): bool
+	protected function checkIf(string|array $condition): bool
 	{
 		return is_callable($condition, false)
 			? boolval(call_user_func($condition))
@@ -83,7 +82,6 @@ class Rules
 	 * Show the block if the attribute has a value.
 	 *
 	 * @since 1.0.0
-	 * @param string|array $condition
 	 */
 	protected function checkIfAttribute(string $attr, array $block, WP_Block $instance): bool
 	{
@@ -94,9 +92,8 @@ class Rules
 	 * Show the block unless the condition is met.
 	 *
 	 * @since 1.0.0
-	 * @param string|array $condition
 	 */
-	protected function checkUnless($condition, array $block, WP_Block $instance): bool
+	protected function checkUnless(string|array $condition): bool
 	{
 		return is_callable($condition, false)
 			? ! boolval(call_user_func($condition))
@@ -107,9 +104,8 @@ class Rules
 	 * Show the block if the user matches.
 	 *
 	 * @since 1.0.0
-	 * @param string|int|bool $user
 	 */
-	protected function checkUser($user, array $block, WP_Block $instance): bool
+	protected function checkUser(string|int|bool $user): bool
 	{
 		$logged_in = is_user_logged_in();
 
