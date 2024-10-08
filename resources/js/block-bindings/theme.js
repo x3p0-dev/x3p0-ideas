@@ -16,7 +16,7 @@ export default {
 		// Some of these we can dynamically generate later. Some are
 		// static, so we can just use a custom string.
 		const placeholders = {
-			helloDolly:      __('🎺 🎶 %s', 'x3p0-ideas'),
+			helloDolly:      __('🎺 🎶...', 'x3p0-ideas'),
 			name:            __('Theme Name', 'x3p0-ideas'),
 			paginationLabel: sprintf(__('Page %1$s / %2$s:', 'x3p0-ideas'), 3, 7),
 			superpower:      __('Powered by ❤️ and soul.', 'x3p0-ideas')
@@ -25,9 +25,9 @@ export default {
 		const values = {};
 
 		for (const [ attributeName, source ] of Object.entries(bindings)) {
-			const bindingKey = source.args.key;
+			const bindingKey = source.args?.key || attributeName;
 
-			values[attributeName] = placeholders?.[ bindingKey ] || bindingKey;
+			values[attributeName] = placeholders?.[bindingKey] || bindingKey;
 		}
 
 		return values;
