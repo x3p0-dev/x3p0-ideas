@@ -9,7 +9,11 @@
 import { registerBlockBindingsSource } from '@wordpress/blocks';
 
 // Import block binding sources.
-import theme from './theme';
+import comment from './comment';
+import post    from './post';
+import theme   from './theme';
 
 // Register block binding sources.
+registerBlockBindingsSource(comment);
+registerBlockBindingsSource(post);
 registerBlockBindingsSource(theme);
