@@ -10,7 +10,7 @@
 import commentParentLink from './comment-parent-link';
 import paginationLabel   from './pagination-label';
 import postFormat        from './post-format';
-import readingTime       from './reading-time';
+import postReadingTime   from './post-reading-time';
 import siteCopyright     from './site-copyright';
 import themeSpacer       from './theme-spacer';
 
@@ -21,6 +21,6 @@ import { registerBlockVariation } from '@wordpress/blocks';
 registerBlockVariation(commentParentLink.block, commentParentLink.variation);
 registerBlockVariation(paginationLabel.block,   paginationLabel.variation);
 registerBlockVariation(postFormat.block,        postFormat.variation);
-registerBlockVariation(readingTime.block,       readingTime.variation);
+registerBlockVariation(postReadingTime.block,   postReadingTime.variation);
 registerBlockVariation(siteCopyright.block,     siteCopyright.variation);
 registerBlockVariation(themeSpacer.block,       themeSpacer.variation);

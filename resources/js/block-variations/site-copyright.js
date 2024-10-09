@@ -6,7 +6,7 @@
  * @license   GPL-3.0-or-later
  */
 
-import { copyrightIcon } from '../../common/utils-icon';
+import { copyrightIcon } from '../common/utils-icon';
 import { __, sprintf } from '@wordpress/i18n';
 
 export default {
