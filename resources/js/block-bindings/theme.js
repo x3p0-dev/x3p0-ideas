@@ -19,7 +19,7 @@ export default {
 			helloDolly:      __('🎺 🎶...', 'x3p0-ideas'),
 			name:            __('Theme Name', 'x3p0-ideas'),
 			paginationLabel: sprintf(__('Page %1$s / %2$s:', 'x3p0-ideas'), 3, 7),
-			superpower:      __('Powered by ❤️ and soul.', 'x3p0-ideas')
+			superpower:      __('Powered by WordPress, crazy ideas, and passion.', 'x3p0-ideas')
 		};
 
 		const values = {};

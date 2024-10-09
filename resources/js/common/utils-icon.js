@@ -20,6 +20,13 @@ export const abbreviationIcon = (
 	</svg>
 );
 
+// https://fonts.google.com/icons?selected=Material+Symbols+Outlined:bolt:FILL@0;wght@300;GRAD@0;opsz@24&icon.query=power&icon.size=24&icon.color=%235f6368
+export const bolt = (
+	<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+		<path d="m422-232 207-248H469l29-227-185 267h139l-30 208Zm-78.92 129.69 40-277.69h-185l329.61-475.77h49.23L537.31-540H757.3L392.31-102.31h-49.23ZM471-470Z"/>
+	</svg>
+);
+
 // https://fonts.google.com/icons?icon.query=text&selected=Material+Symbols+Outlined:menu_book:FILL@0;wght@200;GRAD@-25;opsz@24
 export const citeIcon = (
 	<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
