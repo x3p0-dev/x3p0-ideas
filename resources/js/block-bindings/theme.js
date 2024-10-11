@@ -7,19 +7,21 @@
  */
 
 import { __, sprintf } from '@wordpress/i18n';
+import { store as coreDataStore } from '@wordpress/core-data';
 
 export default {
 	name: 'x3p0/theme',
 	label: __('Theme Data', 'x3p0-ideas'),
-	getValues({ bindings }) {
-		// Define placeholders to show for the bound block's content.
-		// Some of these we can dynamically generate later. Some are
-		// static, so we can just use a custom string.
+	getValues({ select, bindings }) {
+		const theme = select(coreDataStore).getCurrentTheme();
+
 		const placeholders = {
 			helloDolly:      __('🎺 🎶...', 'x3p0-ideas'),
-			name:            __('Theme Name', 'x3p0-ideas'),
+			link:            `<a href="${theme.theme_uri.rendered}" class="theme-name theme-name--link">${theme.name.rendered}</a>`,
+			name:            theme.name.rendered,
 			paginationLabel: sprintf(__('Page %1$s / %2$s:', 'x3p0-ideas'), 3, 7),
-			superpower:      __('Powered by WordPress, crazy ideas, and passion.', 'x3p0-ideas')
+			superpower:      __('Powered by WordPress, crazy ideas, and passion.', 'x3p0-ideas'),
+			url:             theme.theme_uri.rendered,
 		};
 
 		const values = {};

@@ -13,6 +13,7 @@ import postFormat        from './post-format';
 import postReadingTime   from './post-reading-time';
 import siteCopyright     from './site-copyright';
 import superpower        from './superpower';
+import themeLink         from './theme-link';
 import themeSpacer       from './theme-spacer';
 
 // WordPress dependencies.
@@ -25,4 +26,5 @@ registerBlockVariation(postFormat.block,        postFormat.variation);
 registerBlockVariation(postReadingTime.block,   postReadingTime.variation);
 registerBlockVariation(siteCopyright.block,     siteCopyright.variation);
 registerBlockVariation(superpower.block,        superpower.variation);
+registerBlockVariation(themeLink.block,         themeLink.variation);
 registerBlockVariation(themeSpacer.block,       themeSpacer.variation);
