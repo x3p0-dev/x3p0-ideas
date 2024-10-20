@@ -95,6 +95,6 @@ class Engine
 			return file_exists($template);
 		}
 
-		return file_exists($stylesheet) ?: file_exists($template);
+		return file_exists($stylesheet) || file_exists($template);
 	}
 }

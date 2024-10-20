@@ -30,7 +30,7 @@ class Theme implements Bootable
 	 * Stored definitions of single instances.
 	 *
 	 * @since 1.0.0
-	 * @var   mixed[]
+	 * @var   array
 	 */
 	private array $instances = [];
 
@@ -52,10 +52,9 @@ class Theme implements Bootable
 	#[\Override]
 	public function boot(): void
 	{
-		array_walk(
-			$this->instances,
-			fn($binding) => $binding instanceof Bootable && $binding->boot()
-		);
+		foreach ($this->instances as $binding) {
+			$binding instanceof Bootable && $binding->boot();
+		}
 	}
 
 	/**

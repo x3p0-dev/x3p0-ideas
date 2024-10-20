@@ -24,9 +24,6 @@ class Component implements Bootable
 
 	/**
 	 * Sets up the initial object state.
-	 *
-	 * @since 1.0.0
-	 * @param BlockBindingSource[]  $sources
 	 */
 	public function __construct(
 		protected WP_Block_Bindings_Registry $bindings,
@@ -34,9 +31,7 @@ class Component implements Bootable
 	) {}
 
 	/**
-	 * Boots the component, running its actions/filters.
-	 *
-	 * @since 1.0.0
+	 * {@inheritDoc}
 	 */
 	#[\Override]
 	public function boot(): void

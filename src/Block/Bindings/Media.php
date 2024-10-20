@@ -62,11 +62,10 @@ class Media implements BlockBindingSource
 		$args['key'] ??= $name;
 
 		return match ($args['key']) {
-			'alt'     => $this->renderAlt($args),
-			'caption' => $this->renderCaption($args),
-			'src'     => $this->renderUrl($args), // alias for `url`
-			'url'     => $this->renderUrl($args),
-			default   => $this->renderMeta($args)
+			'alt'        => $this->renderAlt($args),
+			'caption'    => $this->renderCaption($args),
+			'src', 'url' => $this->renderUrl($args),
+			default      => $this->renderMeta($args)
 		};
 	}
 

@@ -67,7 +67,7 @@ class Frontend implements Bootable
 	 * When using a paged Query Loop block, WordPress doesn't set the `paged`
 	 * query var. So functions like `is_paged()` do not work correctly for
 	 * these types of paginated views, and the `paged` body class is missing.
-	 * This action checks for that case and sets sets the `paged` query var.
+	 * This action checks for that case and sets the `paged` query var.
 	 *
 	 * @since 1.0.0
 	 */
@@ -119,9 +119,7 @@ class Frontend implements Bootable
 	#[Filter('styles_inline_size_limit')]
 	public function filterInlineStylesLimit(int $total_inline_limit): int
 	{
-		return self::INLINE_CSS_LIMIT > $total_inline_limit
-			? self::INLINE_CSS_LIMIT
-			: $total_inline_limit;
+		return max(self::INLINE_CSS_LIMIT, $total_inline_limit);
 	}
 
 	/**
