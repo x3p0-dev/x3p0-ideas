@@ -23,4 +23,4 @@ if (! class_exists(Theme::class) && is_file(__DIR__ . '/vendor/autoload.php')) {
 }
 
 # Bootstrap the theme.
-add_action('after_setup_theme', __NAMESPACE__ . '\\boot', PHP_INT_MIN);
+add_action('after_setup_theme', fn() => theme()->boot(), PHP_INT_MIN);

@@ -14,23 +14,13 @@ declare(strict_types=1);
 namespace X3P0\Ideas;
 
 /**
- * Bootstraps the theme.
- *
- * @since 1.0.0
- */
-function boot(): void
-{
-	theme()->boot();
-}
-
-/**
  * Stores the single instance of the theme in the static `$theme` variable. Devs
- * can access any class/component by passing in its reference via the `$component`
+ * can access any class/component by passing in its reference via the `$abstract`
  * parameter (useful for accessing hooks within classes).
  *
  * @since 1.0.0
  */
-function theme(string $component = ''): mixed
+function theme(string $abstract = ''): mixed
 {
 	static $theme;
 
@@ -38,5 +28,5 @@ function theme(string $component = ''): mixed
 		do_action('x3p0/ideas/init', $theme = new Theme());
 	}
 
-	return '' === $component ? $theme : $theme->get($component);
+	return '' === $abstract ? $theme : $theme->get($abstract);
 }
