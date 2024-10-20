@@ -8,9 +8,9 @@
 ## Files and folders to ignore on commit (untracked files).
 ## -----------------------------------------------------------------------------
 
+/.idea
 /.ideas
 /node_modules
 /vendor
 *.map
 .DS_Store
-
