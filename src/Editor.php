@@ -16,7 +16,6 @@ declare(strict_types=1);
 namespace X3P0\Ideas;
 
 use X3P0\Ideas\Contracts\Bootable;
-use X3P0\Ideas\Tools\FontFaceResolver;
 use X3P0\Ideas\Tools\Hooks\{Action, Filter, Hookable};
 
 class Editor implements Bootable
@@ -32,17 +31,6 @@ class Editor implements Bootable
 	public function boot(): void
 	{
 		$this->hookMethods();
-	}
-
-	/**
-	 * Runs actions only when viewing the Site Editor screen.
-	 *
-	 * @since 1.0.0
-	 */
-	#[Action('load-site-editor.php')]
-	public function loadSiteEditor(): void
-	{
-		add_action('enqueue_block_assets', [$this, 'enqueueFonts']);
 	}
 
 	/**
@@ -88,32 +76,6 @@ class Editor implements Bootable
 		// Set translations for editor scripts.
 		// @link https://developer.wordpress.org/reference/functions/wp_set_script_translations/
 		wp_set_script_translations('x3p0-ideas-editor', 'x3p0-ideas');
-	}
-
-	/**
-	 * Enqueues local web fonts. This is necessary to fix the broken Site
-	 * Editor preview with style variations in WordPress.
-	 *
-	 * @since 1.0.0
-	 * @link  https://github.com/WordPress/gutenberg/issues/59965
-	 */
-	public function enqueueFonts(): void
-	{
-		ob_start();
-		wp_print_font_faces(FontFaceResolver::getFonts());
-		$content = ob_get_clean();
-
-		// phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
-		wp_register_style('x3p0-ideas-fonts', false);
-
-		// In this case, we specifically want to use `strip_tags()`.
-		// `wp_strip_all_tags()` will remove all the inner content from
-		// the `<style>` tag.
-		//
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.strip_tags_strip_tags
-		wp_add_inline_style('x3p0-ideas-fonts', trim(strip_tags($content)));
-
-		wp_enqueue_style('x3p0-ideas-fonts');
 	}
 
 	/**
