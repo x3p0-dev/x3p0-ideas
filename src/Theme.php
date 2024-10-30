@@ -1,9 +1,7 @@
 <?php
 
 /**
- * The Theme class is a simple container used to store and reference the various
- * theme components. It doesn't support automatic dependency injection (manual
- * only) because it would be overkill for this project.
+ * Theme container implementation.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
@@ -20,24 +18,22 @@ use WP_Block_Patterns_Registry;
 use WP_Block_Pattern_Categories_Registry;
 use WP_Block_Styles_Registry;
 use WP_Block_Type_Registry;
-use X3P0\Ideas\Block;
-use X3P0\Ideas\Contracts\Bootable;
-use X3P0\Ideas\Views\Engine;
+use X3P0\Ideas\Contracts\{Bootable, Container};
 
-class Theme implements Bootable
+/**
+ * The Theme class is a simple container used to store and reference the various
+ * theme components. It doesn't support automatic dependency injection (manual
+ * only) because it would be overkill for this project.
+ */
+class Theme implements Bootable, Container
 {
 	/**
 	 * Stored definitions of single instances.
-	 *
-	 * @since 1.0.0
-	 * @var   array
 	 */
 	private array $instances = [];
 
 	/**
-	 * Sets up the object state.
-	 *
-	 * @since 1.0.0
+	 * Registers the default bindings for the theme.
 	 */
 	public function __construct()
 	{
@@ -45,11 +41,9 @@ class Theme implements Bootable
 	}
 
 	/**
-	 * Boots the component by calling bootable bindings.
-	 *
-	 * @since 1.0.0
+	 * Calls the `boot()` method of bootable classes that have been added to
+	 * the container.
 	 */
-	#[\Override]
 	public function boot(): void
 	{
 		foreach ($this->instances as $binding) {
@@ -58,9 +52,31 @@ class Theme implements Bootable
 	}
 
 	/**
+	 * {@inheritdoc}
+	 */
+	public function instance(string $abstract, mixed $instance): void
+	{
+		$this->instances[$abstract] = $instance;
+	}
+
+	/**
+	 * {@inheritdoc}
+	 */
+	public function get(string $abstract): mixed
+	{
+		return $this->has($abstract) ? $this->instances[$abstract] : null;
+	}
+
+	/**
+	 * {@inheritdoc}
+	 */
+	public function has(string $abstract): bool
+	{
+		return isset($this->instances[$abstract]);
+	}
+
+	/**
 	 * Registers the default bindings we need to run the theme.
-	 *
-	 * @since 1.0.0
 	 */
 	private function registerDefaultBindings(): void
 	{
@@ -77,7 +93,7 @@ class Theme implements Bootable
 
 		$this->instance('block.render', new Block\Render(
 			new Block\Rules(),
-			new Engine()
+			new Views\Engine()
 		));
 
 		$this->instance('block.style.variations', new Block\StyleVariations(
@@ -100,35 +116,5 @@ class Theme implements Bootable
 		$this->instance('parts',          new Parts());
 		$this->instance('templates',      new Templates());
 		// phpcs:enable
-	}
-
-	/**
-	 * Registers a single instance of a binding.
-	 *
-	 * @since 1.0.0
-	 */
-	public function instance(string $abstract, mixed $instance): void
-	{
-		$this->instances[ $abstract ] = $instance;
-	}
-
-	/**
-	 * Returns a binding or `null`.
-	 *
-	 * @since 1.0.0
-	 */
-	public function get(string $abstract): mixed
-	{
-		return $this->has($abstract) ? $this->instances[ $abstract ] : null;
-	}
-
-	/**
-	 * Checks if a binding exists.
-	 *
-	 * @since 1.0.0
-	 */
-	public function has(string $abstract): bool
-	{
-		return isset($this->instances[ $abstract ]);
 	}
 }

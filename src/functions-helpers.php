@@ -15,12 +15,12 @@ namespace X3P0\Ideas;
 
 /**
  * Stores the single instance of the theme in the static `$theme` variable. Devs
- * can access any class/component by passing in its reference via the `$abstract`
- * parameter (useful for accessing hooks within classes).
+ * can access any concrete implementation by passing in a reference to its
+ * abstract identifier via `theme()->get($abstract)`.
  *
  * @since 1.0.0
  */
-function theme(string $abstract = ''): mixed
+function theme(): Theme
 {
 	static $theme;
 
@@ -28,5 +28,5 @@ function theme(string $abstract = ''): mixed
 		do_action('x3p0/ideas/init', $theme = new Theme());
 	}
 
-	return '' === $abstract ? $theme : $theme->get($abstract);
+	return $theme;
 }
