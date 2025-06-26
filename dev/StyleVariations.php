@@ -160,6 +160,6 @@ class StyleVariations implements Bootable
 			return get_theme_file_path("styles/{$type}/{$variation}.json");
 		}
 
-		return get_theme_file_path("styles/{$type}/experiment-{$variation}.json");
+		return get_theme_file_path("experiments/styles/{$type}/experiment-{$variation}.json");
 	}
 }
