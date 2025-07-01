@@ -238,18 +238,18 @@
 			"width": false
 		},
 		"color": {
-			"background": false,
-			"button": false,
-			"caption": false,
-			"custom": false,
+			"background": true,
+			"button": true,
+			"caption": true,
+			"custom": true,
 			"customDuotone": false,
 			"customGradient": false,
 			"defaultDuotone": false,
 			"defaultGradients": true,
 			"defaultPalette": false,
-			"heading": false,
-			"link": false,
-			"text": false,
+			"heading": true,
+			"link": true,
+			"text": true,
 			"duotone": [
 				{
 					"name": "Grayscale",
@@ -725,6 +725,7 @@
 			]
 		},
 		"custom": {
+			"color-scheme": "light dark",
 			"variation": "default",
 			"color": {
 				"dark": "var:preset|color|black",
@@ -1137,8 +1138,8 @@
 			"blockGap": true,
 			"customSpacingSize": false,
 			"defaultSpacingSizes": false,
-			"margin": false,
-			"padding": false,
+			"margin": true,
+			"padding": true,
 			"spacingScale": {
 				"steps": 0
 			},
