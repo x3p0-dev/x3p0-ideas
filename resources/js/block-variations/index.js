@@ -15,6 +15,7 @@ import siteCopyright     from './site-copyright';
 import superpower        from './superpower';
 import themeLink         from './theme-link';
 import themeSpacer       from './theme-spacer';
+import toggleColorScheme from './toggle-color-scheme';
 
 // WordPress dependencies.
 import { registerBlockVariation } from '@wordpress/blocks';
@@ -28,3 +29,4 @@ registerBlockVariation(siteCopyright.block,     siteCopyright.variation);
 registerBlockVariation(superpower.block,        superpower.variation);
 registerBlockVariation(themeLink.block,         themeLink.variation);
 registerBlockVariation(themeSpacer.block,       themeSpacer.variation);
+registerBlockVariation(toggleColorScheme.block, toggleColorScheme.variation);

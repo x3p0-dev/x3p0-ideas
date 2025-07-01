@@ -45,6 +45,17 @@ class Frontend implements Bootable
 	}
 
 	/**
+	 * @return void
+	 */
+	#[Action('after_setup_theme')]
+	public function setup(): void
+	{
+		add_theme_support('view-transitions', [
+			'default-animation' => 'slide-from-left'
+		]);
+	}
+
+	/**
 	 * Enqueue scripts/styles for the front end.
 	 *
 	 * @since 1.0.0
@@ -52,14 +63,24 @@ class Frontend implements Bootable
 	#[Action('wp_enqueue_scripts')]
 	public function enqueueAssets(): void
 	{
-		$asset = include get_parent_theme_file_path('public/css/screen.asset.php');
+		$toggle_script = include get_parent_theme_file_path('public/js/views/toggle-light-dark.asset.php');
+		$screen_style  = include get_parent_theme_file_path('public/css/screen.asset.php');
+
+		// Registers the light/dark toggle view script module. This is
+		// later enqueued when the Button block variation is in use.
+		wp_register_script_module(
+			'x3p0-ideas-toggle-color-scheme',
+			get_parent_theme_file_uri('public/js/views/toggle-color-scheme.js'),
+			$toggle_script['dependencies'],
+			$toggle_script['version']
+		);
 
 		// Loads the primary stylesheet.
 		wp_enqueue_style(
 			'x3p0-ideas-style',
 			get_parent_theme_file_uri('public/css/screen.css'),
-			$asset['dependencies'],
-			$asset['version']
+			$screen_style['dependencies'],
+			$screen_style['version']
 		);
 	}
 

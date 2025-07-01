@@ -4,31 +4,31 @@
 	"author": "Justin Tadlock <justintadlock@gmail.com>",
 	"homepage": "https://github.com/x3p0-dev/x3p0-ideas",
 	"scripts": {
-		"start": "wp-scripts start --webpack-src-dir=resources --output-path=public",
-		"build": "wp-scripts build --webpack-src-dir=resources --output-path=public",
+		"start": "wp-scripts start --webpack-src-dir=resources --output-path=public --experimental-modules",
+		"build": "wp-scripts build --webpack-src-dir=resources --output-path=public --experimental-modules",
 		"lint:php": "composer lint:php",
 		"zip": "composer zip",
 		"zip:git": "git archive --format zip --output x3p0-ideas.zip master"
 	},
 	"devDependencies": {
-		"@wordpress/block-editor": "^14.6.0",
-		"@wordpress/blocks": "^14.0.0",
-		"@wordpress/components": "^28.11.0",
-		"@wordpress/core-data": "^7.11.0",
-		"@wordpress/dom-ready": "^4.11.0",
-		"@wordpress/element": "^6.11.0",
-		"@wordpress/hooks": "^4.11.0",
-		"@wordpress/i18n": "^5.11.0",
-		"@wordpress/rich-text": "^7.11.0",
-		"@wordpress/scripts": "^30.4.0",
-		"@wordpress/token-list": "^3.11.0",
-		"copy-webpack-plugin": "^12.0.2",
-		"glob": "^11.0.0",
-		"npm-check-updates": "^17.1.9",
+		"@wordpress/block-editor": "^14.20.0",
+		"@wordpress/blocks": "^14.14.0",
+		"@wordpress/components": "^29.11.0",
+		"@wordpress/core-data": "^7.25.0",
+		"@wordpress/dom-ready": "^4.25.0",
+		"@wordpress/element": "^6.25.0",
+		"@wordpress/hooks": "^4.25.0",
+		"@wordpress/i18n": "^5.25.0",
+		"@wordpress/rich-text": "^7.25.0",
+		"@wordpress/scripts": "^30.18.0",
+		"@wordpress/token-list": "^3.25.0",
+		"copy-webpack-plugin": "^13.0.0",
+		"glob": "^11.0.2",
+		"npm-check-updates": "^18.0.1",
 		"path": "^0.12.7",
-		"webpack-remove-empty-scripts": "^1.0.4"
+		"webpack-remove-empty-scripts": "^1.1.1"
 	},
 	"dependencies": {
-		"@wordpress/icons": "^10.11.0"
+		"@wordpress/icons": "^10.25.0"
 	}
 }

@@ -1,0 +1,28 @@
+/**
+ * Color scheme block variation.
+ *
+ * @author    Justin Tadlock <justintadlock@gmail.com>
+ * @copyright Copyright (c) 2023-2024, Justin Tadlock
+ * @license   GPL-3.0-or-later
+ */
+
+import { __, } from '@wordpress/i18n';
+import { darkMode } from '../common/utils-icon';
+
+export default {
+	block: 'core/button',
+	variation: {
+		name: 'x3p0/toggle-color-scheme',
+		title: __('Toggle: Light/Dark', 'x3p0-ideas'),
+		description: __('Toggle button for switching between light and dark mode.', 'x3p0-ideas'),
+		icon: darkMode,
+		isDefault: true,
+		keywords: [ 'button', 'toggle', 'light', 'dark' ],
+		isActive: [ 'className', 'tagName' ],
+		attributes: {
+			className: 'toggle-color-scheme',
+			tagName: 'button',
+			text: '<span class="screen-reader-text">' + __('Toggle Color Scheme', 'x3p0-ideas') + '<span>'
+		}
+	}
+};

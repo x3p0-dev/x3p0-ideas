@@ -31,6 +31,7 @@ class Metadata implements Bootable
 		$this->hookMethods();
 	}
 
+
 	/**
 	 * Filters block metadata settings by returning the block-specific
 	 * settings if a method exists for it.
@@ -77,6 +78,20 @@ class Metadata implements Bootable
 	private function coreAvatar(array $settings): array
 	{
 		$settings['selectors']['border'] = '.wp-block-avatar';
+
+		return $settings;
+	}
+
+	/**
+	 * Adds Interactivity API support to the Button block. This is needed
+	 * for the light/dark toggle and other use cases where we might use the
+	 * `<button>` element instead of an `<a>` element.
+	 *
+	 * @since 1.0.0
+	 */
+	private function coreButton(array $settings): array
+	{
+		$settings['supports']['interactivity'] = true;
 
 		return $settings;
 	}

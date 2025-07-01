@@ -41,6 +41,14 @@ export const copyrightIcon = (
 	</svg>
 );
 
+// https://fonts.google.com/icons?selected=Material+Symbols+Outlined:dark_mode:FILL@0;wght@400;GRAD@0;opsz@24&icon.query=dark+mode&icon.size=24&icon.color=%235f6368&icon.set=Material+Symbols
+export const darkMode = (
+	<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24">
+		<path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"/>
+	</svg>
+);
+
+
 // https://fonts.google.com/icons?icon.query=slash&selected=Material+Symbols+Outlined:format_clear:FILL@0;wght@200;GRAD@-25;opsz@24
 export const delIcon = (
 	<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">

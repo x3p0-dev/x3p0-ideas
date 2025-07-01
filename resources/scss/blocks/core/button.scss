@@ -5,6 +5,9 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
+@use '../../tools/icon';
+@use '../../tools/inline-icon';
+
 // -----------------------------------------------------------------------------
 // Block fixes.
 // -----------------------------------------------------------------------------
@@ -64,4 +67,24 @@
 	:hover
 ) {
 	text-decoration: underline;
+}
+
+///
+/// Color scheme block variation CSS.
+///
+/// Note that the editor renders a `<div>` element for the `<button>`.
+///
+.wp-block-button.toggle-color-scheme .wp-block-button__link {
+
+	.wp-block-navigation & {
+		padding: var(--wp--preset--spacing--minus-3) var(--wp--preset--spacing--base);
+	}
+
+	border-radius: 9999em;
+
+	@include inline-icon.prefix(icon.get-url('light-mode'));
+
+	&[aria-pressed=true] {
+		@include inline-icon.prefix(icon.get-url('dark-mode'));
+	}
 }

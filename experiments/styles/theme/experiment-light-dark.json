@@ -179,6 +179,16 @@
 					"slug": "neutral-50",
 					"color": "light-dark(#f8fafc, #020617)",
 					"name": "Neutral: 50"
+				},
+				{
+					"slug": "black",
+					"color": "light-dark(#000000, #ffffff)",
+					"name": "Black"
+				},
+				{
+					"slug": "white",
+					"color": "light-dark(#ffffff, #000000)",
+					"name": "White"
 				}
 			]
 		},
