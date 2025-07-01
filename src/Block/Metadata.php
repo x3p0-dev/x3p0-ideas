@@ -31,7 +31,6 @@ class Metadata implements Bootable
 		$this->hookMethods();
 	}
 
-
 	/**
 	 * Filters block metadata settings by returning the block-specific
 	 * settings if a method exists for it.
