@@ -8,41 +8,59 @@
 
 import { store } from '@wordpress/interactivity';
 
-const { state } = store('toggle-color-scheme', {
-	state: {},
+const { state } = store('x3p0-ideas-color-scheme', {
 	actions: {
-		toggleMode() {
-			state.darkMode = ! state.darkMode;
+		/**
+		 * Toggles the color scheme when a user interaction triggers it,
+		 * such as a button click. This sets a cookie to persist the
+		 * color scheme.
+		 *
+		 * @return {void}
+		 */
+		toggle() {
+			state.isDark = ! state.isDark;
 
 			// Save preference to a cookie.
-			document.cookie = `color-scheme=${
-				state.darkMode ? 'dark' : 'light'
+			document.cookie = `x3p0-ideas-color-scheme=${
+				state.isDark ? 'dark' : 'light'
 			};path=/`;
 		}
 	},
 	callbacks: {
-		updateColorScheme() {
-			// Dark mode is undefined if there is no cookie.
-			if ('undefined' === typeof state.darkMode) {
-				return;
-			}
-
-			const root = document.querySelector(':root');
-
-			root.style.setProperty(
-				'color-scheme',
-				state.darkMode ? 'dark' : 'light'
-			);
-		},
-		initToggle() {
+		/**
+		 * Callback for use when initializing the element. If a color
+		 * scheme is defined, the function will use it to determine
+		 * whether we are in dark mode. Otherwise, we capture the user's
+		 * preference via `prefers-color-scheme`.
+		 *
+		 * @return {void}
+		 */
+		init() {
 			if ('light dark' !== state.colorScheme) {
-				state.darkMode = 'dark' === state.colorScheme;
+				state.isDark = 'dark' === state.colorScheme;
 				return;
 			}
 
-			state.darkMode =
+			state.isDark =
 				window.matchMedia
 				&& window.matchMedia('(prefers-color-scheme: dark)').matches;
+		},
+		/**
+		 * Updates the root element's color scheme CSS property when the
+		 * dark mode state changes. If the dark mode is not yet defined
+		 * (the case when no cookie has been set), bail early.
+		 *
+		 * @return {void}
+		 */
+		updateScheme() {
+			if ('undefined' === typeof state.isDark) {
+				return;
+			}
+
+			document.documentElement.style.setProperty(
+				'color-scheme',
+				state.isDark ? 'dark' : 'light'
+			);
 		}
-	},
+	}
 });

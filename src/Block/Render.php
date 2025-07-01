@@ -121,21 +121,28 @@ class Render implements Bootable
 			&& $processor->next_tag('button')
 		) {
 			// Get color scheme cookie and sanitize.
-			$scheme = isset($_COOKIE['color-scheme'])
-				? sanitize_text_field(wp_unslash($_COOKIE['color-scheme']))
+			$scheme = isset($_COOKIE['x3p0-ideas-color-scheme'])
+				? sanitize_text_field(wp_unslash($_COOKIE['x3p0-ideas-color-scheme']))
 				: 'light dark';
 
 			// Set the initial interactivity state.
-			wp_interactivity_state('toggle-color-scheme', [
+			wp_interactivity_state('x3p0-ideas-color-scheme', [
 				'colorScheme' => $scheme
 			]);
 
-			// Add attributes for Interactivity API.
-			$processor->set_attribute('data-wp-interactive', 'toggle-color-scheme');
-			$processor->set_attribute('data-wp-bind--aria-pressed', 'state.darkMode');
-			$processor->set_attribute('data-wp-on--click', 'actions.toggleMode');
-			$processor->set_attribute('data-wp-watch', 'callbacks.updateColorScheme');
-			$processor->set_attribute('data-wp-init', 'callbacks.initToggle');
+			// Add interactivity directives to the `<button>`.
+			$attr = [
+				'data-wp-interactive'           => 'x3p0-ideas-color-scheme',
+				'data-wp-on--click'             => 'actions.toggle',
+				'data-wp-init'                  => 'callbacks.init',
+				'data-wp-watch'                 => 'callbacks.updateScheme',
+				'data-wp-bind--aria-pressed'    => 'state.isDark',
+				'data-wp-class--is-dark-scheme' => 'state.isDark'
+			];
+
+			foreach ($attr as $name => $value) {
+				$processor->set_attribute($name, $value);
+			}
 
 			// Enqueue script module view.
 			wp_enqueue_script_module('x3p0-ideas-toggle-color-scheme');

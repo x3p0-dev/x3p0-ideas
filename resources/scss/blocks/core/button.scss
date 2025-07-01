@@ -76,15 +76,18 @@
 ///
 .wp-block-button.toggle-color-scheme .wp-block-button__link {
 
+	// When used in a nav menu, decrease the default spacing.
 	.wp-block-navigation & {
 		padding: var(--wp--preset--spacing--minus-3) var(--wp--preset--spacing--base);
 	}
 
 	border-radius: 9999em;
 
+	// The default icon is for light mode, but we use the dark mode icon
+	// when the dark color scheme is in use.
 	@include inline-icon.prefix(icon.get-url('light-mode'));
 
-	&[aria-pressed=true] {
+	&.is-dark-scheme {
 		@include inline-icon.prefix(icon.get-url('dark-mode'));
 	}
 }

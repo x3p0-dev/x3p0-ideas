@@ -63,7 +63,7 @@ class Frontend implements Bootable
 	#[Action('wp_enqueue_scripts')]
 	public function enqueueAssets(): void
 	{
-		$toggle_script = include get_parent_theme_file_path('public/js/views/toggle-light-dark.asset.php');
+		$toggle_script = include get_parent_theme_file_path('public/js/views/toggle-color-scheme.asset.php');
 		$screen_style  = include get_parent_theme_file_path('public/css/screen.asset.php');
 
 		// Registers the light/dark toggle view script module. This is
