@@ -150,7 +150,7 @@ class Templates implements Bootable
 	{
 		$post = get_queried_object();
 
-		if (! post_type_supports($post->post_type, 'post-formats')) {
+		if (! $post || ! post_type_supports($post->post_type, 'post-formats')) {
 			return $templates;
 		}
 
