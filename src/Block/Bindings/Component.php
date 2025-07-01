@@ -14,9 +14,10 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas\Block\Bindings;
 
+use WP_Block;
 use WP_Block_Bindings_Registry;
 use X3P0\Ideas\Contracts\{BlockBindingSource, Bootable};
-use X3P0\Ideas\Tools\Hooks\{Action, Hookable};
+use X3P0\Ideas\Tools\Hooks\{Action, Filter, Hookable};
 
 class Component implements Bootable
 {
@@ -27,8 +28,10 @@ class Component implements Bootable
 	 */
 	public function __construct(
 		protected WP_Block_Bindings_Registry $bindings,
-		protected array $sources
-	) {}
+		protected array                      $sources
+	)
+	{
+	}
 
 	/**
 	 * {@inheritDoc}
