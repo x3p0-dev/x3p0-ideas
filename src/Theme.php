@@ -93,7 +93,8 @@ class Theme implements Bootable, Container
 
 		$this->instance('block.render', new Block\Render(
 			new Block\Rules(),
-			new Views\Engine()
+			new Views\Engine(),
+			new Tools\ColorScheme()
 		));
 
 		$this->instance('block.style.variations', new Block\StyleVariations(

@@ -55,10 +55,10 @@ module.exports = (() => {
 			...{
 				entry: {
 					...blockStylesheets('core'),
-					'js/editor': path.resolve(process.cwd(), 'resources/js', 'editor.js'),
+					'js/editor':  path.resolve(process.cwd(), 'resources/js',   'editor.js'),
 					'css/screen': path.resolve(process.cwd(), 'resources/scss', 'screen.scss'),
 					'css/editor': path.resolve(process.cwd(), 'resources/scss', 'editor.scss'),
-					'css/embed': path.resolve(process.cwd(), 'resources/scss', 'embed.scss')
+					'css/embed':  path.resolve(process.cwd(), 'resources/scss', 'embed.scss')
 				},
 				plugins: [
 					// Very important! Include WP's plugin config or the
@@ -102,7 +102,7 @@ module.exports = (() => {
 			...moduleConfig,
 			...{
 				entry: {
-					'js/views/toggle-color-scheme': path.resolve(process.cwd(), 'resources/js/views', 'toggle-color-scheme.js')
+					'js/views/color-scheme': path.resolve(process.cwd(), 'resources/js/views', 'color-scheme.js')
 				}
 			}
 		}
