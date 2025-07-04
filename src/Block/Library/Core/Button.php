@@ -110,12 +110,12 @@ class Button implements Bootable
 
 		// Add interactivity directives to the `<button>`.
 		$attr = [
-			'data-wp-interactive'            => 'x3p0-ideas-color-scheme',
-			'data-wp-on--click'              => 'actions.toggle',
-			'data-wp-init'                   => 'callbacks.init',
-			'data-wp-watch'                  => 'callbacks.updateScheme',
-			'data-wp-bind--aria-pressed'     => 'state.isDark',
-			'data-wp-class--is-dark-scheme'  => 'state.isDark'
+			'data-wp-interactive'           => $this->color_scheme::NAME,
+			'data-wp-on--click'             => 'actions.toggle',
+			'data-wp-init'                  => 'callbacks.init',
+			'data-wp-watch'                 => 'callbacks.updateScheme',
+			'data-wp-bind--aria-pressed'    => 'state.isDark',
+			'data-wp-class--is-dark-scheme' => 'state.isDark'
 		];
 
 		foreach ($attr as $name => $value) {
