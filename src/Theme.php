@@ -91,35 +91,6 @@ class Theme implements Bootable, Container
 			]
 		));
 
-		$this->instance(
-			'block.library.core.button',
-			new Block\Library\Core\Button(new Tools\ColorScheme())
-		);
-
-		$this->instance(
-			'block.library.core.post-content',
-			new Block\Library\Core\PostContent(new Views\Engine())
-		);
-
-		$this->instance('block.library.core.avatar',             new Block\Library\Core\Avatar());
-		$this->instance('block.library.core.archives',           new Block\Library\Core\Archives());
-		$this->instance('block.library.core.calendar',           new Block\Library\Core\Calendar());
-		$this->instance('block.library.core.categories',         new Block\Library\Core\Categories());
-		$this->instance('block.library.core.comment-content',    new Block\Library\Core\CommentContent());
-		$this->instance('block.library.core.comments',           new Block\Library\Core\Comments());
-		$this->instance('block.library.core.cover',              new Block\Library\Core\Cover());
-		$this->instance('block.library.core.group',              new Block\Library\Core\Group());
-		$this->instance('block.library.core.heading',            new Block\Library\Core\Heading());
-		$this->instance('block.library.core.loginout',           new Block\Library\Core\Loginout());
-		$this->instance('block.library.core.query',              new Block\Library\Core\Query());
-		$this->instance('block.library.core.navigation',         new Block\Library\Core\Navigation());
-		$this->instance('block.library.core.navigation-submenu', new Block\Library\Core\NavigationSubmenu());
-		$this->instance('block.library.core.post-excerpt',       new Block\Library\Core\PostExcerpt());
-		$this->instance('block.library.core.post-template',      new Block\Library\Core\PostTemplate());
-		$this->instance('block.library.core.query-pagination',   new Block\Library\Core\QueryPagination());
-		$this->instance('block.library.core.tag-cloud',          new Block\Library\Core\TagCloud());
-		$this->instance('block.library.core.template-part',      new Block\Library\Core\TemplatePart());
-
 		$this->instance('block.style.variations', new Block\StyleVariations(
 			WP_Block_Styles_Registry::get_instance()
 		));
@@ -131,14 +102,52 @@ class Theme implements Bootable, Container
 		));
 
 		// phpcs:disable Generic.Functions.FunctionCallArgumentSpacing.TooMuchSpaceAfterComma
-		$this->instance('block.assets',   new Block\Assets());
-		$this->instance('block.render',   new Block\Render(new Block\Rules()));
-		$this->instance('editor',         new Editor());
-		$this->instance('embeds',         new Embeds());
-		$this->instance('frontend',       new Frontend());
-		$this->instance('media',          new Media());
-		$this->instance('parts',          new Parts());
-		$this->instance('templates',      new Templates());
+		$this->instance('block.assets', new Block\Assets());
+		$this->instance('block.render', new Block\Render(new Block\Rules()));
+		$this->instance('editor',       new Editor());
+		$this->instance('embeds',       new Embeds());
+		$this->instance('frontend',     new Frontend());
+		$this->instance('media',        new Media());
+		$this->instance('parts',        new Parts());
+		$this->instance('templates',    new Templates());
 		// phpcs:enable
+
+		$this->instance(
+			'block.library.core.button',
+			new Block\Library\Core\Button(new Tools\ColorScheme())
+		);
+
+		$this->instance(
+			'block.library.core.post-content',
+			new Block\Library\Core\PostContent(new Views\Engine())
+		);
+
+		// phpcs:disable Generic.Functions.FunctionCallArgumentSpacing.TooMuchSpaceAfterComma
+		$blocks = [
+			'avatar'             => Block\Library\Core\Avatar::class,
+			'archives'           => Block\Library\Core\Archives::class,
+			'calendar'           => Block\Library\Core\Calendar::class,
+			'categories'         => Block\Library\Core\Categories::class,
+			'comment-content'    => Block\Library\Core\CommentContent::class,
+			'comments'           => Block\Library\Core\Comments::class,
+			'cover'              => Block\Library\Core\Cover::class,
+			'group'              => Block\Library\Core\Group::class,
+			'heading'            => Block\Library\Core\Heading::class,
+			'loginout'           => Block\Library\Core\Loginout::class,
+			'query'              => Block\Library\Core\Query::class,
+			'navigation'         => Block\Library\Core\Navigation::class,
+			'navigation-submenu' => Block\Library\Core\NavigationSubmenu::class,
+			'post-excerpt'       => Block\Library\Core\PostExcerpt::class,
+			'post-template'      => Block\Library\Core\PostTemplate::class,
+			'query-pagination'   => Block\Library\Core\QueryPagination::class,
+			'tag-cloud'          => Block\Library\Core\TagCloud::class,
+			'template-part'      => Block\Library\Core\TemplatePart::class,
+		];
+		// phpcs:enable
+
+		array_walk($blocks, fn($block, $name) => $this->instance(
+			"block.library.core{$name}",
+			new $block
+		));
 	}
 }
