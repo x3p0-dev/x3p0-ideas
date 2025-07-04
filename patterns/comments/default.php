@@ -43,7 +43,7 @@ defined('ABSPATH') || exit;
 		} /-->
 
 		<!-- wp:comment-template -->
-			<!-- wp:pattern {"slug":"x3p0-ideas/comment"} /-->
+			<!-- wp:pattern {"slug":"x3p0-ideas/comment-default"} /-->
 		<!-- /wp:comment-template -->
 
 	</div>

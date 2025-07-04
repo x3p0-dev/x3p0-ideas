@@ -2,7 +2,7 @@
 
 /**
  * Title: Section
- * Slug: x3p0-ideas/section
+ * Slug: x3p0-ideas/section-default
  * Categories: x3p0-layout
  * Viewport Width: 640
  */

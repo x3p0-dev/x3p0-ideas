@@ -2,7 +2,7 @@
 
 /**
  * Title: Comment
- * Slug: x3p0-ideas/comment
+ * Slug: x3p0-ideas/comment-default
  * Inserter: no
  */
 
@@ -131,4 +131,3 @@ defined('ABSPATH') || exit;
 
 </article>
 <!-- /wp:group -->
-

@@ -2,7 +2,7 @@
 
 /**
  * Title: Post Byline
- * Slug: x3p0-ideas/post-byline
+ * Slug: x3p0-ideas/post-byline-default
  * Inserter: no
  */
 

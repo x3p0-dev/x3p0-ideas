@@ -54,7 +54,7 @@ defined('ABSPATH') || exit;
 		} -->
 		<header class="wp-block-group">
 			<!-- wp:post-title {"level":1,"className":"is-style-text-headline"} /-->
-			<!-- wp:pattern {"slug":"x3p0-ideas/post-byline"} /-->
+			<!-- wp:pattern {"slug":"x3p0-ideas/post-byline-default"} /-->
 		</header>
 		<!-- /wp:group -->
 
@@ -63,7 +63,7 @@ defined('ABSPATH') || exit;
 			"className":"is-style-prose"
 		} /-->
 
-		<!-- wp:pattern {"slug":"x3p0-ideas/post-meta"} /-->
+		<!-- wp:pattern {"slug":"x3p0-ideas/post-meta-default"} /-->
 
 	</article>
 	<!-- /wp:group -->

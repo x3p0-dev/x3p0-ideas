@@ -2,7 +2,7 @@
 
 /**
  * Title: Post Meta
- * Slug: x3p0-ideas/post-meta
+ * Slug: x3p0-ideas/post-meta-default
  * Inserter: no
  */
 

@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Title: Comments: Plain
- * Slug: x3p0-ideas/comments-plain
+ * Title: Comments: Boxed
+ * Slug: x3p0-ideas/comments-boxed
  * Keywords: comments, discussion
  * Block Types: core/comments, core/template-part/comments
  * Viewport Width: 1376
@@ -28,13 +28,11 @@ defined('ABSPATH') || exit;
 <div class="wp-block-comments" style="padding-top:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3)">
 
 	<!-- wp:group {
-		"metadata":{
-			"name":"<?= esc_attr__('Comments Container', 'x3p0-ideas') ?>",
-			"@if":"get_comments_number"
-		},
+		"metadata":{"name":"<?= esc_attr__('Comments Container', 'x3p0-ideas') ?>"},
+		"className":"has-global-border is-style-section-1",
 		"layout":{"type":"constrained"}
 	} -->
-	<div class="wp-block-group">
+	<div class="wp-block-group has-global-border is-style-section-1">
 
 		<!-- wp:comments-title {
 			"showPostTitle":false,
@@ -42,31 +40,13 @@ defined('ABSPATH') || exit;
 		} /-->
 
 		<!-- wp:comment-template -->
-			<!-- wp:pattern {"slug":"x3p0-ideas/comment"} /-->
+			<!-- wp:pattern {"slug":"x3p0-ideas/comment-default"} /-->
 		<!-- /wp:comment-template -->
+
+		<!-- wp:post-comments-form {"className":"has-icons"} /-->
 
 	</div>
 	<!-- /wp:group -->
-
-	<?php if (get_option('page_comments')) : ?>
-
-		<!-- wp:comments-pagination {
-			"paginationArrow":"arrow",
-			"layout":{
-				"type":"flex",
-				"justifyContent":"space-between"
-			}
-		} -->
-			<!-- wp:comments-pagination-previous /-->
-			<!-- wp:comments-pagination-numbers /-->
-			<!-- wp:comments-pagination-next /-->
-		<!-- /wp:comments-pagination -->
-
-	<?php endif ?>
-
-	<!-- wp:post-comments-form {
-		"className":"has-icons"
-	} /-->
 
 </div>
 <!-- /wp:comments -->
