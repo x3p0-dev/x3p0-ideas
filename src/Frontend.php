@@ -63,25 +63,7 @@ class Frontend implements Bootable
 	#[Action('wp_enqueue_scripts')]
 	public function enqueueAssets(): void
 	{
-		$toggle_script = include get_parent_theme_file_path('public/js/views/color-scheme.asset.php');
-		$screen_style  = include get_parent_theme_file_path('public/css/screen.asset.php');
-
-		// Registers the light/dark toggle view script module. This is
-		// later enqueued when the Button block variation is in use.
-		wp_register_script_module(
-			'x3p0-ideas-color-scheme',
-			get_parent_theme_file_uri('public/js/views/color-scheme.js'),
-			$toggle_script['dependencies'],
-			$toggle_script['version']
-		);
-
-		// Pass the cookie path and domain to the color scheme module.
-		add_filter('script_module_data_x3p0-ideas-color-scheme', function(array $data) {
-			$data['store']        = 'x3p0-ideas-color-scheme';
-			$data['cookiePath']   = COOKIEPATH;
-			$data['cookieDomain'] = COOKIE_DOMAIN;
-			return $data;
-		});
+		$screen_style = include get_parent_theme_file_path('public/css/screen.asset.php');
 
 		// Loads the primary stylesheet.
 		wp_enqueue_style(

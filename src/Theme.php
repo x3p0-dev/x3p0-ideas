@@ -91,10 +91,14 @@ class Theme implements Bootable, Container
 			]
 		));
 
+		$this->instance(
+			'block.library.core.button',
+			new Block\Library\Core\Button(new Tools\ColorScheme())
+		);
+
 		$this->instance('block.render', new Block\Render(
 			new Block\Rules(),
-			new Views\Engine(),
-			new Tools\ColorScheme()
+			new Views\Engine()
 		));
 
 		$this->instance('block.style.variations', new Block\StyleVariations(

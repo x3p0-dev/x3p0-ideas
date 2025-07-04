@@ -16,7 +16,6 @@ namespace X3P0\Ideas\Block;
 use WP_Block;
 use WP_HTML_Tag_Processor;
 use X3P0\Ideas\Contracts\Bootable;
-use X3P0\Ideas\Tools\ColorScheme;
 use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
 use X3P0\Ideas\Views\Engine;
 
@@ -31,8 +30,7 @@ class Render implements Bootable
 	 */
 	public function __construct(
 		protected Rules $rules,
-		protected Engine $views,
-		protected ColorScheme $color_scheme
+		protected Engine $views
 	) {}
 
 	/**
@@ -104,65 +102,6 @@ class Render implements Bootable
 		WP_Block $instance
 	): string {
 		return $this->rules->isPublic($block, $instance) ? $content : '';
-	}
-
-	/**
-	 * Filters the Button block on render. Currently, it checks if there is
-	 * a `toggle-color-scheme` class, and if so, adds custom attributes to
-	 * be used with the Interactivity API and enqueues a view script module.
-	 *
-	 * @since 1.0.0
-	 */
-	#[Filter('render_block_core/button')]
-	public function renderCoreButton(string $content, array $block): string
-	{
-		if (
-			! isset($block['attrs']['className'])
-			|| ! str_contains('toggle-color-scheme', $block['attrs']['className'])
-		) {
-			return $content;
-		}
-
-		// Color scheme toggle.
-		$processor = new WP_HTML_Tag_Processor($content);
-
-		if (
-			! $processor->next_tag([ 'class_name' => 'toggle-color-scheme'])
-			|| ! $processor->next_tag('button')
-		) {
-			return $processor->get_updated_html();
-		}
-
-		// If the color scheme can't be toggled, don't render the button.
-		if (! $this->color_scheme->isSwitchable()) {
-			return '';
-		}
-
-		// Set the initial interactivity state.
-		wp_interactivity_state(
-			$this->color_scheme::NAME,
-			$this->color_scheme->getState()
-		);
-
-		// Add interactivity directives to the `<button>`.
-		$attr = [
-			'data-wp-interactive'            => 'x3p0-ideas-color-scheme',
-			'data-wp-on--click'              => 'actions.toggle',
-			'data-wp-init'                   => 'callbacks.init',
-			'data-wp-watch'                  => 'callbacks.updateScheme',
-			'data-wp-bind--aria-pressed'     => 'state.isDark',
-			'data-wp-class--is-dark-scheme'  => 'state.isDark',
-			'data-wp-class--is-light-scheme' => 'state.isLight',
-		];
-
-		foreach ($attr as $name => $value) {
-			$processor->set_attribute($name, $value);
-		}
-
-		// Enqueue script module view.
-		wp_enqueue_script_module($this->color_scheme::NAME);
-
-		return $processor->get_updated_html();
 	}
 
 	/**
