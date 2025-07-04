@@ -87,7 +87,7 @@
 	// when the dark color scheme is in use.
 	@include inline-icon.prefix(icon.get-url('light-mode'));
 
-	&.is-dark-scheme {
-		@include inline-icon.prefix(icon.get-url('dark-mode'));
+	&.is-dark-scheme::before {
+		@include inline-icon.modify(icon.get-url('dark-mode'));
 	}
 }

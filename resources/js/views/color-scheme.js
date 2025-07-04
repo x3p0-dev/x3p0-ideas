@@ -35,7 +35,7 @@ const { state } = store(data.store, {
 			let domain = data.cookieDomain ? "; domain=" + data.cookieDomain : '';
 
 			// Save preference to a cookie.
-			document.cookie = `x3p0-ideas-color-scheme=${state.colorScheme};path=${path}${domain}`;
+			document.cookie = `${data.store}=${state.colorScheme};path=${path}${domain}`;
 		}
 	},
 	callbacks: {
