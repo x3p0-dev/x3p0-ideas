@@ -20,7 +20,7 @@ class Language
 	 *
 	 * @since 1.0.0
 	 */
-	public static function loremIpsum(int $words = 25): string
+	public static function placeholder(int $words = 25): string
 	{
 		return wp_trim_words(
 			// Translators: This is placeholder text used in patterns.

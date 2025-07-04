@@ -105,7 +105,7 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph -->
-			<p><?= esc_html(Language::loremIpsum(20)) ?></p>
+			<p><?= esc_html(Language::placeholder(20)) ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:buttons -->

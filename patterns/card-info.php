@@ -35,7 +35,7 @@ $url = home_url();
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph -->
-	<p><?= esc_html(Language::loremIpsum(12)) ?></p>
+	<p><?= esc_html(Language::placeholder(12)) ?></p>
 	<!-- /wp:paragraph -->
 
 </div>

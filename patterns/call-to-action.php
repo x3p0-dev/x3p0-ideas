@@ -34,7 +34,7 @@ use X3P0\Ideas\Tools\Language;
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph -->
-	<p><?= esc_html(Language::loremIpsum()) ?></p>
+	<p><?= esc_html(Language::placeholder()) ?></p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:buttons {

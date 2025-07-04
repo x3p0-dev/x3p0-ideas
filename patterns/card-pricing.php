@@ -67,7 +67,7 @@ $icon = get_theme_file_uri('public/media/svg/earthquake.svg');
 		<!-- /wp:heading -->
 
 		<!-- wp:paragraph -->
-		<p><?= esc_html(Language::loremIpsum(4)) ?></p>
+		<p><?= esc_html(Language::placeholder(4)) ?></p>
 		<!-- /wp:paragraph -->
 
 	</header>

@@ -98,7 +98,7 @@ use X3P0\Ideas\Tools\Language;
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph -->
-			<p><?= esc_html(Language::loremIpsum(8)) ?></p>
+			<p><?= esc_html(Language::placeholder(8)) ?></p>
 			<!-- /wp:paragraph -->
 
 		</div>
