@@ -96,10 +96,29 @@ class Theme implements Bootable, Container
 			new Block\Library\Core\Button(new Tools\ColorScheme())
 		);
 
-		$this->instance('block.render', new Block\Render(
-			new Block\Rules(),
-			new Views\Engine()
-		));
+		$this->instance(
+			'block.library.core.post-content',
+			new Block\Library\Core\PostContent(new Views\Engine())
+		);
+
+		$this->instance('block.library.core.avatar',             new Block\Library\Core\Avatar());
+		$this->instance('block.library.core.archives',           new Block\Library\Core\Archives());
+		$this->instance('block.library.core.calendar',           new Block\Library\Core\Calendar());
+		$this->instance('block.library.core.categories',         new Block\Library\Core\Categories());
+		$this->instance('block.library.core.comment-content',    new Block\Library\Core\CommentContent());
+		$this->instance('block.library.core.comments',           new Block\Library\Core\Comments());
+		$this->instance('block.library.core.cover',              new Block\Library\Core\Cover());
+		$this->instance('block.library.core.group',              new Block\Library\Core\Group());
+		$this->instance('block.library.core.heading',            new Block\Library\Core\Heading());
+		$this->instance('block.library.core.loginout',           new Block\Library\Core\Loginout());
+		$this->instance('block.library.core.query',              new Block\Library\Core\Query());
+		$this->instance('block.library.core.navigation',         new Block\Library\Core\Navigation());
+		$this->instance('block.library.core.navigation-submenu', new Block\Library\Core\NavigationSubmenu());
+		$this->instance('block.library.core.post-excerpt',       new Block\Library\Core\PostExcerpt());
+		$this->instance('block.library.core.post-template',      new Block\Library\Core\PostTemplate());
+		$this->instance('block.library.core.query-pagination',   new Block\Library\Core\QueryPagination());
+		$this->instance('block.library.core.tag-cloud',          new Block\Library\Core\TagCloud());
+		$this->instance('block.library.core.template-part',      new Block\Library\Core\TemplatePart());
 
 		$this->instance('block.style.variations', new Block\StyleVariations(
 			WP_Block_Styles_Registry::get_instance()
@@ -113,7 +132,7 @@ class Theme implements Bootable, Container
 
 		// phpcs:disable Generic.Functions.FunctionCallArgumentSpacing.TooMuchSpaceAfterComma
 		$this->instance('block.assets',   new Block\Assets());
-		$this->instance('block.metadata', new Block\Metadata());
+		$this->instance('block.render',   new Block\Render(new Block\Rules()));
 		$this->instance('editor',         new Editor());
 		$this->instance('embeds',         new Embeds());
 		$this->instance('frontend',       new Frontend());

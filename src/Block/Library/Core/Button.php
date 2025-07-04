@@ -49,7 +49,7 @@ class Button implements Bootable
 	 * @since 1.0.0
 	 */
 	#[Filter('block_type_metadata_settings', 'last')]
-	private function settings(array $settings): array
+	public function settings(array $settings): array
 	{
 		if ('core/button' === $settings['name']) {
 			$settings['supports']['interactivity'] = true;
