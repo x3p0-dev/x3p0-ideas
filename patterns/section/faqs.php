@@ -38,7 +38,7 @@ defined('ABSPATH') || exit;
 
 	<?php foreach (range(1, 4) as $number) : ?>
 		<!-- wp:details -->
-		<details class="wp-block-details">
+		<details class="wp-block-details" name="faqs">
 			<summary>
 				<?= esc_html(sprintf(
 					// Translators: %d is the current question.
