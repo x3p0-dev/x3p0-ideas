@@ -96,7 +96,7 @@
 	}
 
 	&__post-excerpt {
-		margin: var(--wp--preset--spacing--base) 0 0;
+		margin: var(--wp--preset--spacing--40) 0 0;
 		font-size: min(1em, 1.1875rem);
 	}
 
@@ -128,7 +128,7 @@
 
 	// Add extra whitespace when there are featured images.
 	&:has(.wp-block-latest-posts__featured-image) li + li {
-		margin-top: var(--wp--preset--spacing--base);
+		margin-top: var(--wp--preset--spacing--40);
 	}
 
 	&:has(

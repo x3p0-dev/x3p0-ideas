@@ -20,22 +20,22 @@ defined('ABSPATH') || exit;
 	"style":{
 		"spacing":{
 			"padding":{
-				"top":"var:preset|spacing|plus-6",
-				"bottom":"var:preset|spacing|plus-6",
-				"left":"var:preset|spacing|plus-3",
-				"right":"var:preset|spacing|plus-3"
+				"top":"var:preset|spacing|100",
+				"bottom":"var:preset|spacing|100",
+				"left":"var:preset|spacing|70",
+				"right":"var:preset|spacing|70"
 			}
 		}
 	},
 	"align":"full"
 } -->
-<div class="wp-block-columns alignfull" style="padding-top:var(--wp--preset--spacing--plus-6);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-6);padding-left:var(--wp--preset--spacing--plus-3)">
+<div class="wp-block-columns alignfull" style="padding-top:var(--wp--preset--spacing--100);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--100);padding-left:var(--wp--preset--spacing--70)">
 
 	<!-- wp:column {
 		"metadata":{"name":"<?= esc_attr__('About Column', 'x3p0-ideas') ?>"},
 		"style":{
 			"spacing":{
-				"blockGap":"var:preset|spacing|base"
+				"blockGap":"var:preset|spacing|40"
 			}
 		}
 	} -->
@@ -77,7 +77,7 @@ defined('ABSPATH') || exit;
 				<!-- wp:column {
 					"style":{
 						"spacing":{
-							"blockGap":"var:preset|spacing|base"
+							"blockGap":"var:preset|spacing|40"
 						}
 					},
 					"fontSize":"sm"

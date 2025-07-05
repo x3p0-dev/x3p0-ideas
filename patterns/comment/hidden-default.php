@@ -26,7 +26,7 @@ defined('ABSPATH') || exit;
 		},
 		"style":{
 			"spacing":{
-				"blockGap":"var:preset|spacing|base"
+				"blockGap":"var:preset|spacing|40"
 			}
 		},
 		"layout":{
@@ -90,7 +90,7 @@ defined('ABSPATH') || exit;
 							"top":"0px",
 							"bottom":"0px"
 						},
-						"blockGap":"var:preset|spacing|base"
+						"blockGap":"var:preset|spacing|40"
 					}
 				},
 				"layout":{"type":"flex"}
@@ -114,7 +114,7 @@ defined('ABSPATH') || exit;
 		"metadata":{"name":"<?= esc_attr__('Comment Footer', 'x3p0-ideas') ?>"},
 		"style":{
 			"spacing":{
-				"blockGap":"var:preset|spacing|minus-2"
+				"blockGap":"var:preset|spacing|20"
 			}
 		},
 		"className":"is-style-meta",

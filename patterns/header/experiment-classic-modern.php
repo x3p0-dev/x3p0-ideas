@@ -27,21 +27,21 @@ defined('ABSPATH') || exit;
 		"style":{
 			"spacing":{
 				"padding":{
-					"top":"var:preset|spacing|base",
-					"bottom":"var:preset|spacing|base",
-					"right":"var:preset|spacing|plus-3",
-					"left":"var:preset|spacing|plus-3"
+					"top":"var:preset|spacing|40",
+					"bottom":"var:preset|spacing|40",
+					"right":"var:preset|spacing|70",
+					"left":"var:preset|spacing|70"
 				}
 			}
 		},
 		"layout":{"type":"default"}
 	} -->
-	<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--base);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--base);padding-left:var(--wp--preset--spacing--plus-3)">
+	<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--70)">
 
 		<!-- wp:group {
 			"style":{
 				"spacing":{
-					"blockGap":"var:preset|spacing|minus-3"
+					"blockGap":"var:preset|spacing|10"
 				}
 			},
 			"layout":{
@@ -54,7 +54,7 @@ defined('ABSPATH') || exit;
 			<!-- wp:group {
 				"metadata":{"name":"<?= esc_attr__('Branding', 'x3p0-ideas') ?>"},
 				"style":{
-					"spacing":{"blockGap":"var:preset|spacing|minus-1"},
+					"spacing":{"blockGap":"var:preset|spacing|30"},
 					"layout":{"selfStretch":"fill","flexSize":null}
 				},
 				"layout":{"type":"flex","flexWrap":"nowrap"}
@@ -107,16 +107,16 @@ defined('ABSPATH') || exit;
 		"style":{
 			"spacing":{
 				"padding":{
-					"top":"var:preset|spacing|minus-1",
-					"right":"var:preset|spacing|plus-3",
-					"bottom":"var:preset|spacing|minus-1",
-					"left":"var:preset|spacing|plus-3"
+					"top":"var:preset|spacing|30",
+					"right":"var:preset|spacing|70",
+					"bottom":"var:preset|spacing|30",
+					"left":"var:preset|spacing|70"
 				}
 			}
 		},
 		"layout":{"type":"default"}
 	} -->
-	<div class="wp-block-group alignfull is-style-section-3" style="padding-top:var(--wp--preset--spacing--minus-1);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--minus-1);padding-left:var(--wp--preset--spacing--plus-3)">
+	<div class="wp-block-group alignfull is-style-section-3" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--70)">
 
 		<!-- wp:group {
 			"layout":{
@@ -141,8 +141,8 @@ defined('ABSPATH') || exit;
 				"style":{
 					"spacing":{
 						"blockGap":{
-							"top":"var:preset|spacing|base",
-							"left":"var:preset|spacing|base"
+							"top":"var:preset|spacing|40",
+							"left":"var:preset|spacing|40"
 						}
 					}
 				},

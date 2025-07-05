@@ -19,12 +19,12 @@ defined('ABSPATH') || exit;
 	"style":{
 		"spacing":{
 			"padding":{
-				"top":"var:preset|spacing|base",
-				"bottom":"var:preset|spacing|base",
-				"left":"var:preset|spacing|base",
-				"right":"var:preset|spacing|base"
+				"top":"var:preset|spacing|40",
+				"bottom":"var:preset|spacing|40",
+				"left":"var:preset|spacing|40",
+				"right":"var:preset|spacing|40"
 			},
-			"blockGap":"var:preset|spacing|base"
+			"blockGap":"var:preset|spacing|40"
 		}
 	},
 	"className":"has-global-border is-style-section-1",
@@ -34,7 +34,7 @@ defined('ABSPATH') || exit;
 	},
 	"fontSize":"sm"
 } -->
-<div class="wp-block-group has-global-border is-style-section-1 has-sm-font-size" style="padding-top:var(--wp--preset--spacing--base);padding-right:var(--wp--preset--spacing--base);padding-bottom:var(--wp--preset--spacing--base);padding-left:var(--wp--preset--spacing--base)">
+<div class="wp-block-group has-global-border is-style-section-1 has-sm-font-size" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 
 	<!-- wp:avatar {
 		"userId":1,

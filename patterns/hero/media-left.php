@@ -28,15 +28,15 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 	"style":{
 		"spacing":{
 			"padding":{
-				"top":"var:preset|spacing|plus-5",
-				"bottom":"var:preset|spacing|plus-5"
+				"top":"var:preset|spacing|90",
+				"bottom":"var:preset|spacing|90"
 			}
 		}
 	},
 	"className":"is-style-section-1",
 	"layout":{"type":"constrained"}
 } -->
-<section class="wp-block-group alignfull is-style-section-1" style="padding-top:var(--wp--preset--spacing--plus-5);padding-bottom:var(--wp--preset--spacing--plus-5)">
+<section class="wp-block-group alignfull is-style-section-1" style="padding-top:var(--wp--preset--spacing--90);padding-bottom:var(--wp--preset--spacing--90)">
 
 	<!-- wp:columns {
 		"verticalAlignment":"center",
@@ -45,7 +45,7 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 			"spacing":{
 				"blockGap":{
 					"top":"0",
-					"left":"var:preset|spacing|plus-3"
+					"left":"var:preset|spacing|70"
 				}
 			}
 		},
@@ -86,10 +86,10 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 			"style":{
 				"spacing":{
 					"padding":{
-						"top":"var:preset|spacing|plus-3",
-						"bottom":"var:preset|spacing|plus-3",
-						"left":"var:preset|spacing|plus-3",
-						"right":"var:preset|spacing|plus-3"
+						"top":"var:preset|spacing|70",
+						"bottom":"var:preset|spacing|70",
+						"left":"var:preset|spacing|70",
+						"right":"var:preset|spacing|70"
 					}
 				}
 			},
@@ -98,7 +98,7 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 				"justifyContent":"left"
 			}
 		} -->
-		<div class="wp-block-column is-vertically-aligned-center" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
+		<div class="wp-block-column is-vertically-aligned-center" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)">
 
 			<!-- wp:heading {"fontSize":"6-xl"} -->
 			<h2 class="wp-block-heading has-6-xl-font-size"><?= esc_html__('Jump start your next project with our open-source engine', 'x3p0-ideas') ?></h2>

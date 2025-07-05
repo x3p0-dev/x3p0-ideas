@@ -32,22 +32,22 @@ defined('ABSPATH') || exit;
 		"style":{
 			"spacing":{
 				"padding":{
-					"top":"var:preset|spacing|plus-3",
-					"bottom":"var:preset|spacing|plus-3"
+					"top":"var:preset|spacing|70",
+					"bottom":"var:preset|spacing|70"
 				}
 			}
 		},
 		"metadata":{"name":"<?= esc_attr__('Post', 'x3p0-ideas') ?>"},
 		"layout":{"type":"default"}
 	} -->
-	<article class="wp-block-group" style="padding-top:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3)">
+	<article class="wp-block-group" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
 
 		<!-- wp:group {
 			"tagName":"header",
 			"metadata":{"name":"<?= esc_attr__('Post Header', 'x3p0-ideas') ?>"},
 			"style":{
 				"spacing":{
-					"blockGap":"var:preset|spacing|base"
+					"blockGap":"var:preset|spacing|40"
 				}
 			},
 			"layout":{"type":"constrained"}

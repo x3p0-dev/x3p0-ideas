@@ -20,16 +20,16 @@ defined('ABSPATH') || exit;
 	"style":{
 		"spacing":{
 			"padding":{
-				"top":"var:preset|spacing|plus-6",
-				"bottom":"var:preset|spacing|plus-6",
-				"left":"var:preset|spacing|plus-3",
-				"right":"var:preset|spacing|plus-3"
+				"top":"var:preset|spacing|100",
+				"bottom":"var:preset|spacing|100",
+				"left":"var:preset|spacing|70",
+				"right":"var:preset|spacing|70"
 			}
 		}
 	},
 	"layout":{"type":"default"}
 } -->
-<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--plus-6);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-6);padding-left:var(--wp--preset--spacing--plus-3)">
+<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--100);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--100);padding-left:var(--wp--preset--spacing--70)">
 
 	<!-- wp:group {
 		"metadata":{"name":"<?= esc_attr__('Footer Content', 'x3p0-ideas') ?>"},

@@ -429,10 +429,10 @@
 			"core/navigation-submenu": {
 				"spacing": {
 					"padding": {
-						"top": "var:preset|spacing|base",
-						"bottom": "var:preset|spacing|base",
-						"left": "var:preset|spacing|base",
-						"right": "var:preset|spacing|base"
+						"top": "var:preset|spacing|40",
+						"bottom": "var:preset|spacing|40",
+						"left": "var:preset|spacing|40",
+						"right": "var:preset|spacing|40"
 					}
 				},
 				"typography": {

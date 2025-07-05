@@ -21,7 +21,7 @@ $url = home_url();
 <!-- wp:group {
 	"style":{
 		"spacing":{
-			"blockGap":"var:preset|spacing|minus-3"
+			"blockGap":"var:preset|spacing|10"
 		}
 	},
 	"className":"has-global-border is-style-section-1",

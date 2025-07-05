@@ -19,10 +19,10 @@ defined('ABSPATH') || exit;
 	"style":{
 		"spacing":{
 			"padding":{
-				"right":"var:preset|spacing|plus-3",
-				"left":"var:preset|spacing|plus-3",
-				"top":"var:preset|spacing|plus-4",
-				"bottom":"var:preset|spacing|plus-4"
+				"right":"var:preset|spacing|70",
+				"left":"var:preset|spacing|70",
+				"top":"var:preset|spacing|80",
+				"bottom":"var:preset|spacing|80"
 			}
 		}
 	},
@@ -30,7 +30,7 @@ defined('ABSPATH') || exit;
 	"className":"is-style-section-1",
 	"layout":{"type":"constrained"}
 } -->
-<section class="wp-block-group alignfull is-style-section-1" style="padding-top:var(--wp--preset--spacing--plus-4);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-4);padding-left:var(--wp--preset--spacing--plus-3)">
+<section class="wp-block-group alignfull is-style-section-1" style="padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--70)">
 
 	<!-- wp:pattern {"slug":"x3p0-ideas/section-header"} /-->
 

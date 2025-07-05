@@ -38,12 +38,12 @@ $content_size = wp_get_global_settings([ 'layout', 'contentSize' ]);
 	"align":"full",
 	"style":{
 		"spacing":{
-			"blockGap":"var:preset|spacing|plus-6",
+			"blockGap":"var:preset|spacing|100",
 			"padding":{
-				"top":"var:preset|spacing|plus-6",
-				"right":"var:preset|spacing|plus-3",
-				"bottom":"var:preset|spacing|plus-6",
-				"left":"var:preset|spacing|plus-3"
+				"top":"var:preset|spacing|100",
+				"right":"var:preset|spacing|70",
+				"bottom":"var:preset|spacing|100",
+				"left":"var:preset|spacing|70"
 			}
 		}
 	},
@@ -53,13 +53,13 @@ $content_size = wp_get_global_settings([ 'layout', 'contentSize' ]);
 		"contentSize":"<?= esc_attr(is_string($content_size) ? $content_size : '40rem') ?>"
 	}
 } -->
-<div class="wp-block-query alignfull" style="padding-top:var(--wp--preset--spacing--plus-6);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-6);padding-left:var(--wp--preset--spacing--plus-3)">
+<div class="wp-block-query alignfull" style="padding-top:var(--wp--preset--spacing--100);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--100);padding-left:var(--wp--preset--spacing--70)">
 
 	<!-- wp:post-template {
 		"align":"wide",
 		"style":{
 			"spacing":{
-				"blockGap":"var:preset|spacing|plus-6"
+				"blockGap":"var:preset|spacing|100"
 			}
 		},
 		"layout":{"type":"default"}
@@ -73,7 +73,7 @@ $content_size = wp_get_global_settings([ 'layout', 'contentSize' ]);
 				"width":"40%",
 				"style":{
 					"spacing":{
-						"blockGap":"var:preset|spacing|base"
+						"blockGap":"var:preset|spacing|40"
 					}
 				},
 				"layout":{"type":"constrained"}
@@ -84,7 +84,7 @@ $content_size = wp_get_global_settings([ 'layout', 'contentSize' ]);
 					"tagName":"header",
 					"style":{
 						"spacing":{
-							"blockGap":"var:preset|spacing|minus-2"
+							"blockGap":"var:preset|spacing|20"
 						}
 					},
 					"layout":{"type":"constrained"}
@@ -126,7 +126,7 @@ $content_size = wp_get_global_settings([ 'layout', 'contentSize' ]);
 		"style":{
 			"spacing":{
 				"margin":{
-					"top":"var:preset|spacing|plus-6"
+					"top":"var:preset|spacing|100"
 				}
 			}
 		},

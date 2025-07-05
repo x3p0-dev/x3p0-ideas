@@ -47,18 +47,18 @@ $download = get_theme_file_uri('public/media/images/mountain-road.webp');
 		"metadata":{"name":"<?= esc_attr__('Card Content', 'x3p0-ideas') ?>"},
 		"style":{
 			"spacing":{
-				"blockGap":"var:preset|spacing|base",
+				"blockGap":"var:preset|spacing|40",
 				"padding":{
-					"top":"var:preset|spacing|plus-3",
-					"bottom":"var:preset|spacing|plus-3",
-					"left":"var:preset|spacing|plus-3",
-					"right":"var:preset|spacing|plus-3"
+					"top":"var:preset|spacing|70",
+					"bottom":"var:preset|spacing|70",
+					"left":"var:preset|spacing|70",
+					"right":"var:preset|spacing|70"
 				}
 			}
 		},
 		"layout":{"type":"default"}
 	} -->
-	<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
+	<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)">
 
 		<!-- wp:image {
 			"lightbox":{"enabled":false},
@@ -92,17 +92,17 @@ $download = get_theme_file_uri('public/media/images/mountain-road.webp');
 		"style":{
 			"spacing":{
 				"padding":{
-					"top":"var:preset|spacing|base",
-					"bottom":"var:preset|spacing|base",
-					"left":"var:preset|spacing|plus-3",
-					"right":"var:preset|spacing|plus-3"
+					"top":"var:preset|spacing|40",
+					"bottom":"var:preset|spacing|40",
+					"left":"var:preset|spacing|70",
+					"right":"var:preset|spacing|70"
 				}
 			}
 		},
 		"className":"is-style-section-2",
 		"layout":{"type":"default"}
 	} -->
-	<footer class="wp-block-group is-style-section-2" style="padding-top:var(--wp--preset--spacing--base);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--base);padding-left:var(--wp--preset--spacing--plus-3)">
+	<footer class="wp-block-group is-style-section-2" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--70)">
 		<!-- wp:file {
 			"href":"<?= esc_url($download) ?>",
 			"showDownloadButton":false,

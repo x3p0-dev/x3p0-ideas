@@ -59,7 +59,7 @@
 	}
 
 	li + li {
-		margin-top: var( --wp--preset--spacing--base );
+		margin-top: var( --wp--preset--spacing--40 );
 	}
 
 	li::before {
@@ -74,7 +74,7 @@
 	}
 
 	li li {
-		margin-top: var( --wp--preset--spacing--base );
+		margin-top: var( --wp--preset--spacing--40 );
 
 		&::before {
 			content: counters( chapter, '.', decimal );

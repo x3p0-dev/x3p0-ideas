@@ -50,10 +50,10 @@ defined('ABSPATH') || exit;
 			"style":{
 				"spacing":{
 					"padding":{
-						"top":"var:preset|spacing|plus-3",
-						"right":"var:preset|spacing|plus-3",
-						"bottom":"var:preset|spacing|plus-3",
-						"left":"var:preset|spacing|plus-3"
+						"top":"var:preset|spacing|70",
+						"right":"var:preset|spacing|70",
+						"bottom":"var:preset|spacing|70",
+						"left":"var:preset|spacing|70"
 					}
 				},
 				"elements":{
@@ -67,13 +67,13 @@ defined('ABSPATH') || exit;
 			"textColor":"white",
 			"layout":{"type":"default"}
 		} -->
-		<article class="wp-block-cover has-white-color has-text-color has-link-color" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3);min-height:100vh">
+		<article class="wp-block-cover has-white-color has-text-color has-link-color" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70);min-height:100vh">
 
 			<span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim-40 has-background-dim"></span>
 			<div class="wp-block-cover__inner-container">
 
-				<!-- wp:spacer {"height":"var:preset|spacing|plus-3"} -->
-				<div style="height:var(--wp--preset--spacing--plus-3)" aria-hidden="true" class="wp-block-spacer"></div>
+				<!-- wp:spacer {"height":"var:preset|spacing|70"} -->
+				<div style="height:var(--wp--preset--spacing--70)" aria-hidden="true" class="wp-block-spacer"></div>
 				<!-- /wp:spacer -->
 
 				<!-- wp:columns {
@@ -81,8 +81,8 @@ defined('ABSPATH') || exit;
 					"style":{
 						"spacing":{
 							"blockGap":{
-								"top":"var:preset|spacing|plus-5",
-								"left":"var:preset|spacing|plus-5"
+								"top":"var:preset|spacing|90",
+								"left":"var:preset|spacing|90"
 							}
 						}
 					}
@@ -104,7 +104,7 @@ defined('ABSPATH') || exit;
 							"metadata":{"name":"<?= esc_attr__('Post Header', 'x3p0-ideas') ?>"},
 							"style":{
 								"spacing":{
-									"blockGap":"var:preset|spacing|base"
+									"blockGap":"var:preset|spacing|40"
 								}
 							},
 							"layout":{
@@ -161,7 +161,7 @@ defined('ABSPATH') || exit;
 							<!-- wp:post-template {
 								"style":{
 									"spacing":{
-										"blockGap":"var:preset|spacing|base"
+										"blockGap":"var:preset|spacing|40"
 									}
 								}
 							} -->
@@ -175,15 +175,15 @@ defined('ABSPATH') || exit;
 									"style":{
 										"spacing":{
 											"padding":{
-												"top":"var:preset|spacing|base",
-												"bottom":"var:preset|spacing|base",
-												"left":"var:preset|spacing|base",
-												"right":"var:preset|spacing|base"
+												"top":"var:preset|spacing|40",
+												"bottom":"var:preset|spacing|40",
+												"left":"var:preset|spacing|40",
+												"right":"var:preset|spacing|40"
 											}
 										}
 									}
 								} -->
-								<div class="wp-block-cover is-style-global-border" style="padding-top:var(--wp--preset--spacing--base);padding-right:var(--wp--preset--spacing--base);padding-bottom:var(--wp--preset--spacing--base);padding-left:var(--wp--preset--spacing--base);min-height:50px">
+								<div class="wp-block-cover is-style-global-border" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40);min-height:50px">
 
 									<span aria-hidden="true" class="wp-block-cover__background has-background-dim-60 has-background-dim"></span>
 									<div class="wp-block-cover__inner-container">
@@ -205,7 +205,7 @@ defined('ABSPATH') || exit;
 												"className":"is-style-meta",
 												"style":{
 													"spacing":{
-														"blockGap":"var:preset|spacing|base"
+														"blockGap":"var:preset|spacing|40"
 													}
 												},
 												"layout":{
@@ -237,8 +237,8 @@ defined('ABSPATH') || exit;
 				</div>
 				<!-- /wp:columns -->
 
-				<!-- wp:spacer {"height":"var:preset|spacing|plus-3"} -->
-				<div style="height:var(--wp--preset--spacing--plus-3)" aria-hidden="true" class="wp-block-spacer"></div>
+				<!-- wp:spacer {"height":"var:preset|spacing|70"} -->
+				<div style="height:var(--wp--preset--spacing--70)" aria-hidden="true" class="wp-block-spacer"></div>
 				<!-- /wp:spacer -->
 
 			</div>

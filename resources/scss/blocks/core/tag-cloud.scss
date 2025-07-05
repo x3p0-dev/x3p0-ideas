@@ -32,7 +32,7 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	gap: var(--wp--preset--spacing--minus-1) var(--wp--preset--spacing--minus-1);
+	gap: var(--wp--preset--spacing--30) var(--wp--preset--spacing--30);
 
 	.tag-link-count {
 		font-weight: 400;
@@ -60,7 +60,7 @@
 		content: "🏷️ ";
 		display: inline-block;
 		vertical-align: middle;
-		margin-right: var(--wp--preset--spacing--minus-3);
+		margin-right: var(--wp--preset--spacing--10);
 	}
 
 	&.taxonomy-category a::before {

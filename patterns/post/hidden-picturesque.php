@@ -29,7 +29,7 @@ defined('ABSPATH') || exit;
 
 	<!-- wp:group {
 		"metadata":{"name":"<?= esc_attr__('Post Container', 'x3p0-ideas') ?>"},
-		"style":{"spacing":{"blockGap":"var:preset|spacing|base"}},
+		"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},
 		"layout":{"type":"constrained"}
 	} -->
 	<div class="wp-block-group">

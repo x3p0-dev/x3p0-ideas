@@ -17,7 +17,7 @@
 				"custom": {
 					"caption": {
 						"background": "rgb(0 0 0 / 50%)",
-						"padding": "var:preset|spacing|base"
+						"padding": "var:preset|spacing|40"
 					}
 				}
 			}

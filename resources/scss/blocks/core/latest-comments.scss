@@ -37,11 +37,11 @@
 
 	&__comment {
 		display: flex;
-		gap: var(--wp--preset--spacing--base);
+		gap: var(--wp--preset--spacing--40);
 		margin: 0;
 
 		+ li {
-			margin-top: var(--wp--preset--spacing--base);
+			margin-top: var(--wp--preset--spacing--40);
 		}
 	}
 
@@ -72,7 +72,7 @@
 	}
 
 	&__comment-excerpt {
-		margin: var(--wp--preset--spacing--minus-3) 0 0;
+		margin: var(--wp--preset--spacing--10) 0 0;
 
 		p {
 			margin: 0;

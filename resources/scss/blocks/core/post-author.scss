@@ -23,7 +23,7 @@
 /// @link https://github.com/WordPress/gutenberg/pull/55352
 ///
 .wp-block-post-author {
-	gap: var( --wp--preset--spacing--base );
+	gap: var( --wp--preset--spacing--40 );
 
 	&__avatar img {
 		border-radius: 9999px;
@@ -37,7 +37,7 @@
 	&__content {
 		display: flex;
 		flex-wrap: wrap;
-		gap: var( --wp--preset--spacing--base ) 0.5ch;
+		gap: var( --wp--preset--spacing--40 ) 0.5ch;
 	}
 
 	&__byline,

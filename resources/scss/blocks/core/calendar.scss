@@ -89,7 +89,7 @@
 /// More spacing than WP's default for cells.
 ///
 .wp-block-calendar :is(td, th) {
-	padding: var(--wp--preset--spacing--minus-1) var(--wp--preset--spacing--minus-3);
+	padding: var(--wp--preset--spacing--30) var(--wp--preset--spacing--10);
 }
 
 ///
@@ -106,7 +106,7 @@
 .wp-calendar-nav {
 	display: flex;
 	justify-content: space-between;
-	margin: var(--wp--preset--spacing--minus-3) var(--wp--preset--spacing--base) 0;
+	margin: var(--wp--preset--spacing--10) var(--wp--preset--spacing--40) 0;
 	font-weight: var(--wp--custom--nav--font-weight, 600);
 }
 
@@ -115,7 +115,7 @@
 ///
 .wp-calendar-nav-prev,
 .wp-calendar-nav-next {
-	padding: var(--wp--preset--spacing--minus-1) var(--wp--preset--spacing--minus-3) 0;
+	padding: var(--wp--preset--spacing--30) var(--wp--preset--spacing--10) 0;
 }
 
 // -----------------------------------------------------------------------------

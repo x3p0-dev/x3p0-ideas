@@ -37,7 +37,7 @@
 		// Because of the structure, this label doesn't pick up the
 		// mixin's bottom margin.
 		& {
-			margin-bottom: var(--wp--preset--spacing--minus-3);
+			margin-bottom: var(--wp--preset--spacing--10);
 		}
 	}
 
@@ -65,15 +65,15 @@
 	// Note: use `:is()` for higher specificity than `:where()` to overrule
 	// WordPress's style rule that zeroes this out.
 	&:is(:not(.wp-block-search__searchfield-hidden)) .wp-block-search__button {
-		margin-left: var(--wp--preset--spacing--minus-2);
+		margin-left: var(--wp--preset--spacing--20);
 	}
 
 	// When the button is placed inside the input wrapper, we need to change
 	// the wrapper design to behave like the search `<input>` itself.
 	&__button-inside {
 		.wp-block-search__inside-wrapper {
-			padding: var(--wp--preset--spacing--minus-3);
-			padding-left: var(--wp--preset--spacing--minus-1);
+			padding: var(--wp--preset--spacing--10);
+			padding-left: var(--wp--preset--spacing--30);
 		}
 
 		.wp-block-search__inside-wrapper:has(.wp-block-search__input:focus) {

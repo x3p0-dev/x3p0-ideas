@@ -9,14 +9,14 @@
 /// Default `<ul>` or `<ol>` list styles
 ///
 @mixin flow() {
-	padding-inline-start: var(--wp--preset--spacing--plus-4);
+	padding-inline-start: var(--wp--preset--spacing--80);
 
 	:where(
 		li + li,
 		li > ul,
 		li > ol
 	) {
-		margin-block-start: var(--wp--preset--spacing--minus-1);
+		margin-block-start: var(--wp--preset--spacing--30);
 	}
 
 	&:where(ul, ol):not([class*=wp-block-]) li,
@@ -33,7 +33,7 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	gap: var(--wp--preset--spacing--minus-2) var(--wp--preset--spacing--base);
+	gap: var(--wp--preset--spacing--20) var(--wp--preset--spacing--40);
 	padding: 0;
 
 	li {

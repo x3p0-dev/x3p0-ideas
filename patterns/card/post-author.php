@@ -17,7 +17,7 @@ defined('ABSPATH') || exit;
 	"metadata":{"name":"<?= esc_attr__('Post Author', 'x3p0-ideas') ?>"},
 	"style":{
 		"spacing":{
-			"blockGap":"var:preset|spacing|base"
+			"blockGap":"var:preset|spacing|40"
 		}
 	},
 	"className":"has-global-border is-style-section-1",
@@ -39,7 +39,7 @@ defined('ABSPATH') || exit;
 	<!-- /wp:group -->
 
 	<!-- wp:group {
-		"style":{"spacing":{"blockGap":"var:preset|spacing|base"}},
+		"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},
 		"layout":{
 			"type":"flex",
 			"flexWrap":"nowrap",

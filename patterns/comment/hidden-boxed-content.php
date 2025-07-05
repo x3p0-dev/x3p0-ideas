@@ -17,7 +17,7 @@ defined('ABSPATH') || exit;
 	"metadata":{"name":"<?= esc_attr__('Comment', 'x3p0-ideas') ?>"},
 	"style":{
 		"spacing":{
-			"blockGap":"var:preset|spacing|base"
+			"blockGap":"var:preset|spacing|40"
 		}
 	},
 	"layout":{"type":"default"}}
@@ -32,7 +32,7 @@ defined('ABSPATH') || exit;
 		"className":"is-style-meta",
 		"style":{
 			"spacing":{
-				"blockGap":"var:preset|spacing|base"
+				"blockGap":"var:preset|spacing|40"
 			}
 		},
 		"layout":{
@@ -95,7 +95,7 @@ defined('ABSPATH') || exit;
 							"top":"0px",
 							"bottom":"0px"
 						},
-						"blockGap":"var:preset|spacing|base"
+						"blockGap":"var:preset|spacing|40"
 					}
 				},
 				"layout":{"type":"flex"}
@@ -122,7 +122,7 @@ defined('ABSPATH') || exit;
 		"className":"is-style-meta",
 		"style":{
 			"spacing":{
-				"blockGap":"var:preset|spacing|minus-2"
+				"blockGap":"var:preset|spacing|20"
 			}
 		},
 		"layout":{

@@ -24,10 +24,10 @@ defined('ABSPATH') || exit;
 	"style":{
 		"spacing":{
 			"padding":{
-				"top":"var:preset|spacing|plus-3",
-				"right":"var:preset|spacing|plus-3",
-				"bottom":"var:preset|spacing|plus-3",
-				"left":"var:preset|spacing|plus-3"
+				"top":"var:preset|spacing|70",
+				"right":"var:preset|spacing|70",
+				"bottom":"var:preset|spacing|70",
+				"left":"var:preset|spacing|70"
 			}
 		},
 		"dimensions":{
@@ -37,7 +37,7 @@ defined('ABSPATH') || exit;
 	"className":"is-style-stretch",
 	"layout":{"type":"default"}
 } -->
-<article class="wp-block-cover alignfull is-style-stretch" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
+<article class="wp-block-cover alignfull is-style-stretch" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)">
 
 	<span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim has-background-gradient has-45-deg-dark-transparent-gradient-background"></span>
 	<div class="wp-block-cover__inner-container">

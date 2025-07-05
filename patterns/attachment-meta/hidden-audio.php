@@ -25,7 +25,7 @@ $fields = [
 ?>
 <!-- wp:group {
 	"metadata":{"name":"<?= esc_attr__('Media Data', 'x3p0-ideas') ?>"},
-	"style":{"spacing":{"blockGap":"var:preset|spacing|base"}},
+	"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},
 	"align":"full",
 	"layout":{"type":"constrained"}
 } -->
@@ -37,7 +37,7 @@ $fields = [
 
 	<!-- wp:group {
 		"templateLock":"insert",
-		"style":{"spacing":{"blockGap":"var:preset|spacing|minus-3"}},
+		"style":{"spacing":{"blockGap":"var:preset|spacing|10"}},
 		"layout":{"type":"default"}
 	} -->
 	<div class="wp-block-group">

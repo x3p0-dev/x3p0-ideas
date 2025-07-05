@@ -8,6 +8,6 @@
 		"core/paragraph"
 	],
 	"styles": {
-		"css": "text-indent: var(--wp--preset--spacing--plus-4);\n\n&.has-drop-cap {\n\ttext-indent: var(--wp--preset--spacing--plus-2);\n}"
+		"css": "text-indent: var(--wp--preset--spacing--80);\n\n&.has-drop-cap {\n\ttext-indent: var(--wp--preset--spacing--60);\n}"
 	}
 }

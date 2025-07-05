@@ -48,12 +48,12 @@ use X3P0\Ideas\Tools\Language;
 	<!-- wp:group {
 		"style":{
 			"spacing":{
-				"blockGap":"var:preset|spacing|base",
+				"blockGap":"var:preset|spacing|40",
 				"padding":{
-					"top":"var:preset|spacing|plus-3",
-					"bottom":"var:preset|spacing|plus-3",
-					"left":"var:preset|spacing|plus-3",
-					"right":"var:preset|spacing|plus-3"
+					"top":"var:preset|spacing|70",
+					"bottom":"var:preset|spacing|70",
+					"left":"var:preset|spacing|70",
+					"right":"var:preset|spacing|70"
 				}
 			},
 			"layout":{
@@ -67,7 +67,7 @@ use X3P0\Ideas\Tools\Language;
 			"justifyContent":"center"
 		}
 	} -->
-	<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
+	<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)">
 
 		<!-- wp:avatar {
 			"userId":null,
@@ -116,8 +116,8 @@ use X3P0\Ideas\Tools\Language;
 		"style":{
 			"spacing":{
 				"padding":{
-					"top":"var:preset|spacing|base",
-					"bottom":"var:preset|spacing|base"
+					"top":"var:preset|spacing|40",
+					"bottom":"var:preset|spacing|40"
 				}
 			}
 		},
@@ -125,7 +125,7 @@ use X3P0\Ideas\Tools\Language;
 			"type":"default"
 		}
 	} -->
-	<footer class="wp-block-group is-style-section-2" style="padding-top:var(--wp--preset--spacing--base);padding-bottom:var(--wp--preset--spacing--base)">
+	<footer class="wp-block-group is-style-section-2" style="padding-top:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40)">
 
 		<!-- wp:social-links {
 			"size":"has-huge-icon-size",
@@ -137,8 +137,8 @@ use X3P0\Ideas\Tools\Language;
 			"style":{
 				"spacing":{
 					"blockGap":{
-						"top":"var:preset|spacing|minus-3",
-						"left":"var:preset|spacing|minus-3"
+						"top":"var:preset|spacing|10",
+						"left":"var:preset|spacing|10"
 					}
 				}
 			},

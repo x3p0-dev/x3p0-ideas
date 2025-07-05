@@ -67,8 +67,8 @@
 /// Lightbox trigger button positioning to match the theme's spacing.
 ///
 .wp-lightbox-container .lightbox-trigger {
-	top: var(--wp--preset--spacing--minus-2) !important;
-	right: var(--wp--preset--spacing--minus-2) !important;
+	top: var(--wp--preset--spacing--20) !important;
+	right: var(--wp--preset--spacing--20) !important;
 }
 
 ///
@@ -111,8 +111,8 @@ figure.wp-block-image[class*=-gradient-background] {
 	// Repositions the lightbox trigger button to account for the additional
 	// padding on the image.
 	.lightbox-trigger {
-		top: calc(var(--image-padding) + var(--wp--preset--spacing--minus-2)) !important;
-		right: calc(var(--image-padding) + var(--wp--preset--spacing--minus-2)) !important;
+		top: calc(var(--image-padding) + var(--wp--preset--spacing--20)) !important;
+		right: calc(var(--image-padding) + var(--wp--preset--spacing--20)) !important;
 	}
 }
 
@@ -207,7 +207,7 @@ figure.wp-block-image[class*=-gradient-background] {
 /// I work).
 ///
 figure.wp-block-image.is-style-polaroid {
-	padding:          var(--wp--preset--spacing--base);
+	padding:          var(--wp--preset--spacing--40);
 	background-color: var(--wp--custom--color--surface--level-0);
 	transition: all 0.5s ease-in-out;
 	overflow: visible;
@@ -227,7 +227,7 @@ figure.wp-block-image.is-style-polaroid {
 	// Image blocks. In this case, the caption itself sits within the photo
 	// frame area.
 	.wp-element-caption {
-		margin-top: var(--wp--preset--spacing--base);
+		margin-top: var(--wp--preset--spacing--40);
 		color: var(--wp--custom--color--text--default);
 	}
 
@@ -265,13 +265,13 @@ figure.wp-block-image.is-style-polaroid {
 		position: absolute;
 		background: rgba(255, 255, 235, 0.5);
 		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3), 0 0 4rem rgba(255, 255, 235, 0.5) inset;
-		height: var(--wp--preset--spacing--plus-3);
+		height: var(--wp--preset--spacing--70);
 		width: 7rem;
 		z-index: 1;
 
 		left: 50%;
 		margin: auto auto auto -3.5rem;
-		top: calc(-1 * var(--wp--preset--spacing--minus-2));
+		top: calc(-1 * var(--wp--preset--spacing--20));
 		transform: rotate(8deg);
 	}
 

@@ -18,7 +18,7 @@ defined('ABSPATH') || exit;
 	},
 	"style":{
 		"spacing":{
-			"blockGap":"var:preset|spacing|base"
+			"blockGap":"var:preset|spacing|40"
 		}
 	},
 	"layout":{
@@ -35,7 +35,7 @@ defined('ABSPATH') || exit;
 		},
 		"style":{
 			"spacing":{
-				"blockGap":"var:preset|spacing|minus-3"
+				"blockGap":"var:preset|spacing|10"
 			}
 		},
 		"layout":{

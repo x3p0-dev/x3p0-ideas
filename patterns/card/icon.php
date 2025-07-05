@@ -22,7 +22,7 @@ $icon = get_theme_file_uri('public/media/svg/earthquake.svg');
 	"metadata":{"name":"<?= esc_attr__('Card', 'x3p0-ideas') ?>"},
 	"style":{
 		"spacing":{
-			"blockGap":"var:preset|spacing|base"
+			"blockGap":"var:preset|spacing|40"
 		}
 	},
 	"className":"has-global-border is-style-section-1",

@@ -54,8 +54,8 @@ hr.wp-block-separator:is(
 ///
 hr.wp-block-separator.is-style-hand-drawn {
 	margin-bottom: -20px !important;
-	padding: var(--wp--preset--spacing--base);
-	border-width: var(--wp--preset--spacing--minus-2) 0 0;
+	padding: var(--wp--preset--spacing--40);
+	border-width: var(--wp--preset--spacing--20) 0 0;
 	border-radius: 255px 15px 0 0/15px 8px 0 0;
 	transform: rotate(-1deg);
 

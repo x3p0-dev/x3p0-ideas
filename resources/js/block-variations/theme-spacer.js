@@ -17,7 +17,7 @@ export default {
 		keywords:   [ 'space', 'spacer', 'spacing' ],
 		isActive: [ 'height' ],
 		attributes: {
-			height: 'var:preset|spacing|plus-8'
+			height: 'var:preset|spacing|120'
 		}
 	}
 };

@@ -49,18 +49,18 @@ $icon = get_theme_file_uri('public/media/svg/earthquake.svg');
 		"tagName":"header",
 		"style":{
 			"spacing":{
-				"blockGap":"var:preset|spacing|minus-3",
+				"blockGap":"var:preset|spacing|10",
 				"padding":{
-					"top":"var:preset|spacing|plus-3",
-					"bottom":"var:preset|spacing|plus-3",
-					"left":"var:preset|spacing|plus-3",
-					"right":"var:preset|spacing|plus-3"
+					"top":"var:preset|spacing|70",
+					"bottom":"var:preset|spacing|70",
+					"left":"var:preset|spacing|70",
+					"right":"var:preset|spacing|70"
 				}
 			}
 		},
 		"layout":{"type":"default"}
 	} -->
-	<header class="wp-block-group" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
+	<header class="wp-block-group" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)">
 
 		<!-- wp:heading {"level":3,"fontSize":"xl"} -->
 		<h3 class="wp-block-heading has-xl-font-size"><?= esc_html__('Placeholder', 'x3p0-ideas') ?></h3>
@@ -77,10 +77,10 @@ $icon = get_theme_file_uri('public/media/svg/earthquake.svg');
 		"style":{
 			"spacing":{
 				"padding":{
-					"top":"var:preset|spacing|base",
-					"bottom":"var:preset|spacing|base"
+					"top":"var:preset|spacing|40",
+					"bottom":"var:preset|spacing|40"
 				},
-				"blockGap":"var:preset|spacing|minus-3"
+				"blockGap":"var:preset|spacing|10"
 			}
 		},
 		"className": "is-style-section-2",
@@ -89,7 +89,7 @@ $icon = get_theme_file_uri('public/media/svg/earthquake.svg');
 			"flexWrap":"nowrap"
 		}
 	} -->
-	<div class="wp-block-group is-style-section-2" style="padding-top:var(--wp--preset--spacing--base);padding-bottom:var(--wp--preset--spacing--base)">
+	<div class="wp-block-group is-style-section-2" style="padding-top:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40)">
 
 		<!-- wp:paragraph {
 			"style":{
@@ -117,10 +117,10 @@ $icon = get_theme_file_uri('public/media/svg/earthquake.svg');
 		"style":{
 			"spacing":{
 				"padding":{
-					"top":"var:preset|spacing|plus-3",
-					"bottom":"var:preset|spacing|plus-3",
-					"left":"var:preset|spacing|plus-3",
-					"right":"var:preset|spacing|plus-3"
+					"top":"var:preset|spacing|70",
+					"bottom":"var:preset|spacing|70",
+					"left":"var:preset|spacing|70",
+					"right":"var:preset|spacing|70"
 				}
 			},
 			"layout":{
@@ -135,7 +135,7 @@ $icon = get_theme_file_uri('public/media/svg/earthquake.svg');
 			"verticalAlignment":"space-between"
 		}
 	} -->
-	<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
+	<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)">
 
 		<!-- wp:list {"className":"has-marker-none"} -->
 		<ul class="has-marker-none">
@@ -163,14 +163,14 @@ $icon = get_theme_file_uri('public/media/svg/earthquake.svg');
 				"style":{
 					"spacing":{
 						"padding":{
-							"top":"var:preset|spacing|minus-1",
-							"bottom":"var:preset|spacing|minus-1"
+							"top":"var:preset|spacing|30",
+							"bottom":"var:preset|spacing|30"
 						}
 					}
 				}
 			} -->
 			<div class="wp-block-button has-custom-width wp-block-button__width-100">
-				<a class="wp-block-button__link wp-element-button" style="padding-top:var(--wp--preset--spacing--minus-1);padding-bottom:var(--wp--preset--spacing--minus-1)"><?= esc_html__('Placeholder Text →', 'x3p0-ideas') ?></a>
+				<a class="wp-block-button__link wp-element-button" style="padding-top:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30)"><?= esc_html__('Placeholder Text →', 'x3p0-ideas') ?></a>
 			</div>
 			<!-- /wp:button -->
 

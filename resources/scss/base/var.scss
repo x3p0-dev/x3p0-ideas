@@ -25,14 +25,22 @@ body {
 	--wp--preset--font-size--large:   var(--wp--preset--font-size--2-xl);
 	--wp--preset--font-size--x-large: var(--wp--preset--font-size--3-xl);
 
-	/// Map default WordPress spacing sizes to the theme's sizes.
-	--wp--preset--spacing--20: var(--wp--preset--spacing--minus-2);
-	--wp--preset--spacing--30: var(--wp--preset--spacing--minus-1);
-	--wp--preset--spacing--40: var(--wp--preset--spacing--base);
-	--wp--preset--spacing--50: var(--wp--preset--spacing--plus-1);
-	--wp--preset--spacing--60: var(--wp--preset--spacing--plus-3);
-	--wp--preset--spacing--70: var(--wp--preset--spacing--plus-4);
-	--wp--preset--spacing--80: var(--wp--preset--spacing--plus-6);
+	// Map theme's old spacing system to the WordPress standard.
+	// @deprecated 1.0.0-alpha
+	--wp--preset--spacing--minus-3: var(--wp--preset--spacing--10);
+	--wp--preset--spacing--minus-2: var(--wp--preset--spacing--20);
+	--wp--preset--spacing--minus-1: var(--wp--preset--spacing--30);
+	--wp--preset--spacing--base:    var(--wp--preset--spacing--40);
+	--wp--preset--spacing--plus-1:  var(--wp--preset--spacing--50);
+	--wp--preset--spacing--plus-2:  var(--wp--preset--spacing--60);
+	--wp--preset--spacing--plus-3:  var(--wp--preset--spacing--70);
+	--wp--preset--spacing--plus-4:  var(--wp--preset--spacing--80);
+	--wp--preset--spacing--plus-5:  var(--wp--preset--spacing--90);
+	--wp--preset--spacing--plus-6:  var(--wp--preset--spacing--100);
+	--wp--preset--spacing--plus-7:  var(--wp--preset--spacing--110);
+	--wp--preset--spacing--plus-8:  var(--wp--preset--spacing--120);
+	--wp--preset--spacing--plus-9:  var(--wp--preset--spacing--130);
+	--wp--preset--spacing--plus-10: var(--wp--preset--spacing--140);
 }
 
 ///

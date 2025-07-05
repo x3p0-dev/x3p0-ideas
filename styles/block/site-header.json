@@ -15,10 +15,10 @@
 				},
 				"spacing": {
 					"padding":{
-						"top": "var:preset|spacing|base",
-						"right": "var:preset|spacing|plus-3",
-						"bottom": "var:preset|spacing|base",
-						"left": "var:preset|spacing|plus-3"
+						"top": "var:preset|spacing|40",
+						"right": "var:preset|spacing|70",
+						"bottom": "var:preset|spacing|40",
+						"left": "var:preset|spacing|70"
 					}
 				},
 				"typography": {

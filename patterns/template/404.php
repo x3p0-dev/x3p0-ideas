@@ -32,13 +32,13 @@ defined('ABSPATH') || exit;
 		"style":{
 			"spacing":{
 				"padding":{
-					"top":"var:preset|spacing|plus-3",
-					"bottom":"var:preset|spacing|plus-3"
+					"top":"var:preset|spacing|70",
+					"bottom":"var:preset|spacing|70"
 				}
 			}
 		}
 	} -->
-	<article class="wp-block-group" style="padding-top:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3)">
+	<article class="wp-block-group" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
 
 		<!-- wp:group {
 			"tagName":"header",

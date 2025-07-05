@@ -8,7 +8,7 @@
 @mixin wrapper {
 	display: flex;
 	flex-wrap: wrap;
-	gap: var( --wp--preset--spacing--minus-3 );
+	gap: var( --wp--preset--spacing--10 );
 	align-items: center;
 }
 

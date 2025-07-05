@@ -1,1 +1,1 @@
-:where(.wp-block-quote){margin:0;padding:0}.wp-block-quote>cite{display:block}.wp-block-quote.is-style-plain:has(.wp-block-verse){padding:0}.wp-block-quote.is-style-plain:has(.wp-block-verse) cite{margin-top:var(--wp--preset--spacing--base)}
+:where(.wp-block-quote){margin:0;padding:0}.wp-block-quote>cite{display:block}.wp-block-quote.is-style-plain:has(.wp-block-verse){padding:0}.wp-block-quote.is-style-plain:has(.wp-block-verse) cite{margin-top:var(--wp--preset--spacing--40)}

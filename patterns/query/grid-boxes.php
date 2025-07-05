@@ -36,19 +36,19 @@ defined('ABSPATH') || exit;
 	"style":{
 		"spacing":{
 			"padding":{
-				"top":"var:preset|spacing|plus-3",
-				"right":"var:preset|spacing|plus-3",
-				"bottom":"var:preset|spacing|plus-3",
-				"left":"var:preset|spacing|plus-3"
+				"top":"var:preset|spacing|70",
+				"right":"var:preset|spacing|70",
+				"bottom":"var:preset|spacing|70",
+				"left":"var:preset|spacing|70"
 			}
 		}
 	},
 	"layout":{"type":"constrained"}
 } -->
-<div class="wp-block-query alignfull" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
+<div class="wp-block-query alignfull" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)">
 
 	<!-- wp:post-template {
-		"style":{"spacing":{"blockGap":"var:preset|spacing|plus-3"}},
+		"style":{"spacing":{"blockGap":"var:preset|spacing|70"}},
 		"align":"full",
 		"layout":{"type":"grid","columnCount":3}
 	} -->

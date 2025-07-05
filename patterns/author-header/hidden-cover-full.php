@@ -25,10 +25,10 @@ defined('ABSPATH') || exit;
 	"style":{
 		"spacing":{
 			"padding":{
-				"top":"var:preset|spacing|plus-5",
-				"bottom":"var:preset|spacing|plus-5",
-				"left":"var:preset|spacing|plus-3",
-				"right":"var:preset|spacing|plus-3"
+				"top":"var:preset|spacing|90",
+				"bottom":"var:preset|spacing|90",
+				"left":"var:preset|spacing|70",
+				"right":"var:preset|spacing|70"
 			}
 		},
 		"elements":{
@@ -43,16 +43,16 @@ defined('ABSPATH') || exit;
 	"backgroundColor":"neutral-950",
 	"layout":{"type":"constrained"}
 } -->
-<div class="wp-block-cover has-custom-content-position is-position-bottom-left has-white-color has-link-color has-text-color has-neutral-950-background-color has-background" style="padding-top:var(--wp--preset--spacing--plus-5);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-5);padding-left:var(--wp--preset--spacing--plus-3)">
+<div class="wp-block-cover has-custom-content-position is-position-bottom-left has-white-color has-link-color has-text-color has-neutral-950-background-color has-background" style="padding-top:var(--wp--preset--spacing--90);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--90);padding-left:var(--wp--preset--spacing--70)">
 
 	<span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim has-background-gradient has-45-deg-dark-transparent-gradient-background"></span>
 	<div class="wp-block-cover__inner-container">
 
-		<!-- wp:spacer {"height":"var:preset|spacing|plus-8"} -->
-		<div style="height:var(--wp--preset--spacing--plus-8)" aria-hidden="true" class="wp-block-spacer"></div>
+		<!-- wp:spacer {"height":"var:preset|spacing|120"} -->
+		<div style="height:var(--wp--preset--spacing--120)" aria-hidden="true" class="wp-block-spacer"></div>
 		<!-- /wp:spacer -->
 
-		<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|base"},"dimensions":{"minHeight":""}},"layout":{"type":"default"}} -->
+		<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|40"},"dimensions":{"minHeight":""}},"layout":{"type":"default"}} -->
 		<div class="wp-block-group">
 			<!-- wp:query-title {
 				"type":"archive",

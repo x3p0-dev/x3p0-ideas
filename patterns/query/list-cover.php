@@ -63,10 +63,10 @@ defined('ABSPATH') || exit;
 					"top":"0"
 				},
 				"padding":{
-					"top":"var:preset|spacing|plus-3",
-					"right":"var:preset|spacing|plus-3",
-					"bottom":"var:preset|spacing|plus-3",
-					"left":"var:preset|spacing|plus-3"
+					"top":"var:preset|spacing|70",
+					"right":"var:preset|spacing|70",
+					"bottom":"var:preset|spacing|70",
+					"left":"var:preset|spacing|70"
 				}
 			}
 		},

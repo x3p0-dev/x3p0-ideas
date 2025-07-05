@@ -8,7 +8,7 @@
 				"custom": {
 					"caption": {
 						"background": "rgb(0 0 0 / 50%)",
-						"padding": "var:preset|spacing|base"
+						"padding": "var:preset|spacing|40"
 					}
 				}
 			}
@@ -77,7 +77,7 @@
 				"borderColor": "var:custom|global|border|color",
 				"borderStyle": "var:custom|global|border|style",
 				"borderWidth": "var:custom|global|border|width",
-				"margin": "var:preset|spacing|plus-3"
+				"margin": "var:preset|spacing|70"
 			}
 		},
 		"color": {

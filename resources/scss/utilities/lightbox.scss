@@ -20,8 +20,8 @@
 	}
 
 	.close-button {
-		right: calc(env(safe-area-inset-right) + var(--wp--preset--spacing--plus-3));
-		top: calc(env(safe-area-inset-top) + var(--wp--preset--spacing--base));
+		right: calc(env(safe-area-inset-right) + var(--wp--preset--spacing--70));
+		top: calc(env(safe-area-inset-top) + var(--wp--preset--spacing--40));
 		fill: var(--wp--custom--color--text--on-backdrop, #fff) !important;
 
 		svg {

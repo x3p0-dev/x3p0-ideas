@@ -7,7 +7,7 @@
 			"core/gallery": {
 				"custom": {
 					"caption": {
-						"padding": "var(--wp--preset--spacing--plus-3) var(--wp--preset--spacing--base) var(--wp--preset--spacing--base)"
+						"padding": "var(--wp--preset--spacing--70) var(--wp--preset--spacing--40) var(--wp--preset--spacing--40)"
 					}
 				}
 			},

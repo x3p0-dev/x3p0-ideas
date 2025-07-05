@@ -32,7 +32,7 @@
 
 .wp-block-post-comments-form > * + *,
 .editor-styles-wrapper .comment-respond > * + * {
-	margin-block-start: var(--wp--custom--gap, var(--wp--preset--spacing--base));
+	margin-block-start: var(--wp--custom--gap, var(--wp--preset--spacing--40));
 }
 
 ///
@@ -62,7 +62,7 @@
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
-	gap: var(--wp--preset--spacing--base);
+	gap: var(--wp--preset--spacing--40);
 
 	small {
 		margin: 0;
@@ -78,7 +78,7 @@
 .wp-block-post-comments-form .comment-form {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	gap: var(--wp--custom--gap, var(--wp--preset--spacing--base));
+	gap: var(--wp--custom--gap, var(--wp--preset--spacing--40));
 
 	// By default, all items span the full width of the grid.
 	> * {

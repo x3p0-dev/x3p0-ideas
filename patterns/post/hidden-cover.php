@@ -23,16 +23,16 @@ defined('ABSPATH') || exit;
 	"style":{
 		"spacing":{
 			"padding":{
-				"top":"var:preset|spacing|plus-3",
-				"right":"var:preset|spacing|plus-3",
-				"bottom":"var:preset|spacing|plus-3",
-				"left":"var:preset|spacing|plus-3"
+				"top":"var:preset|spacing|70",
+				"right":"var:preset|spacing|70",
+				"bottom":"var:preset|spacing|70",
+				"left":"var:preset|spacing|70"
 			}
 		}
 	},
 	"layout":{"type":"constrained"}
 } -->
-<article class="wp-block-cover" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3);min-height:100vh">
+<article class="wp-block-cover" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70);min-height:100vh">
 
 	<span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim has-background-gradient has-45-deg-dark-transparent-gradient-background"></span>
 	<div class="wp-block-cover__inner-container">
@@ -42,7 +42,7 @@ defined('ABSPATH') || exit;
 			"metadata":{"name":"<?= esc_attr__('Post Header', 'x3p0-ideas') ?>"},
 			"style":{
 				"spacing":{
-					"blockGap":"var:preset|spacing|minus-2"
+					"blockGap":"var:preset|spacing|20"
 				}
 			},
 			"layout":{"type":"default"}

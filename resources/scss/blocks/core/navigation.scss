@@ -48,7 +48,7 @@
 /// have a submenu.
 ///
 .wp-block-navigation .wp-block-navigation__submenu-icon {
-	margin-left: var(--wp--preset--spacing--minus-2);
+	margin-left: var(--wp--preset--spacing--20);
 }
 
 ///
@@ -67,7 +67,7 @@
 	border-radius: var(--wp--custom--global--border--radius);
 	box-shadow:    var(--wp--custom--shadow--secondary);
 
-	padding: var(--wp--preset--spacing--minus-2) var(--wp--preset--spacing--minus-1) !important;
+	padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--30) !important;
 
 	&:hover,
 	&:focus {
@@ -112,7 +112,7 @@
 	.wp-block-navigation-item,
 	.wp-block-navigation__responsive-container-content,
 	.wp-block-navigation__responsive-container-content .wp-block-navigation__container {
-		gap: var(--wp--preset--spacing--base);
+		gap: var(--wp--preset--spacing--40);
 	}
 
 	.wp-block-navigation__responsive-close {

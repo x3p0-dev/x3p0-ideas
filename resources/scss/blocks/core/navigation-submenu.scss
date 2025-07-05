@@ -19,7 +19,7 @@
 /// @link https://github.com/WordPress/gutenberg/pull/59457
 ///
 .wp-block-navigation-submenu .wp-block-navigation__submenu-container {
-	padding: var(--wp--custom--block--navigation-submenu--padding, var(--wp--preset--spacing--base));
+	padding: var(--wp--custom--block--navigation-submenu--padding, var(--wp--preset--spacing--40));
 }
 
 nav.wp-block-navigation .wp-block-navigation-submenu .wp-block-navigation__submenu-container,
@@ -69,7 +69,7 @@ nav.wp-block-navigation.wp-block-navigation .wp-block-navigation__responsive-con
 .wp-block-navigation-submenu .wp-block-navigation-item.open-on-click .wp-block-navigation-submenu__toggle {
 	padding: var(
 		--wp--custom--block--navigation-submenu--toggle--padding,
-		var(--wp--preset--spacing--minus-2) var(--wp--preset--spacing--base)
+		var(--wp--preset--spacing--20) var(--wp--preset--spacing--40)
 	);
 }
 

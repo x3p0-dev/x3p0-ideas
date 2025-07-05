@@ -9,7 +9,7 @@
 		"core/tag-cloud"
 	],
 	"styles": {
-		"css": "gap: var(--wp--preset--spacing--base);",
+		"css": "gap: var(--wp--preset--spacing--40);",
 		"spacing": {
 			"blockGap": { "ref": "styles.elements.buttons.spacing.blockGap" }
 		},

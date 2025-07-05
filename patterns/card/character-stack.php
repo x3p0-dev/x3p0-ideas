@@ -70,12 +70,12 @@ $image = get_theme_file_uri('public/media/images/default-16x9.webp');
 		"style":{
 			"spacing":{
 				"padding":{
-					"top":"var:preset|spacing|plus-3",
-					"bottom":"var:preset|spacing|plus-3",
-					"left":"var:preset|spacing|plus-3",
-					"right":"var:preset|spacing|plus-3"
+					"top":"var:preset|spacing|70",
+					"bottom":"var:preset|spacing|70",
+					"left":"var:preset|spacing|70",
+					"right":"var:preset|spacing|70"
 				},
-				"blockGap":"var:preset|spacing|base"
+				"blockGap":"var:preset|spacing|40"
 			},
 			"layout":{
 				"selfStretch":"fill",
@@ -89,7 +89,7 @@ $image = get_theme_file_uri('public/media/images/default-16x9.webp');
 			"type":"default"
 		}
 	} -->
-	<div class="wp-block-group has-text-align-center" style="padding-top:var(--wp--preset--spacing--plus-3);padding-right:var(--wp--preset--spacing--plus-3);padding-bottom:var(--wp--preset--spacing--plus-3);padding-left:var(--wp--preset--spacing--plus-3)">
+	<div class="wp-block-group has-text-align-center" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)">
 
 		<!-- wp:group {
 			"tagName":"header",
@@ -157,8 +157,8 @@ $image = get_theme_file_uri('public/media/images/default-16x9.webp');
 					"spacing":{
 						"blockGap":"0",
 						"padding":{
-							"top":"var:preset|spacing|base",
-							"bottom":"var:preset|spacing|base",
+							"top":"var:preset|spacing|40",
+							"bottom":"var:preset|spacing|40",
 							"left":"var:preset|spacing|px",
 							"right":"var:preset|spacing|px"
 						}
@@ -166,7 +166,7 @@ $image = get_theme_file_uri('public/media/images/default-16x9.webp');
 				},
 				"layout":{"type":"default"}
 			} -->
-			<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--base);padding-right:var(--wp--preset--spacing--px);padding-bottom:var(--wp--preset--spacing--base);padding-left:var(--wp--preset--spacing--px)">
+			<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--px);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--px)">
 
 				<!-- wp:paragraph {
 					"align":"center",

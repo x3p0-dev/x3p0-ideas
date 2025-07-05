@@ -35,7 +35,7 @@
 .wp-block-loginout form {
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
-	gap: var(--wp--custom--gap, var(--wp--preset--spacing--base));
+	gap: var(--wp--custom--gap, var(--wp--preset--spacing--40));
 
 	// Zero out core's margins.
 	> * {

@@ -29,7 +29,7 @@ use X3P0\Ideas\Tools\Language;
 	"metadata":{"name":"<?= esc_attr__('Section Header', 'x3p0-ideas') ?>"},
 	"style":{
 		"spacing":{
-			"blockGap":"var:preset|spacing|base"
+			"blockGap":"var:preset|spacing|40"
 		}
 	},
 	"typography":{"textAlign":"center"},

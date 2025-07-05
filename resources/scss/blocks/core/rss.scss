@@ -44,7 +44,7 @@
 /// Margin adjustment for the excerpt.
 ///
 .wp-block-rss__item-excerpt {
-	margin-top: var(--wp--preset--spacing--minus-1);
+	margin-top: var(--wp--preset--spacing--30);
 }
 
 ///
@@ -53,10 +53,10 @@
 ///
 ul.wp-block-rss:where(:not(.has-excerpts)) {
 	list-style: revert;
-	padding-inline-start: var(--wp--preset--spacing--plus-4);
+	padding-inline-start: var(--wp--preset--spacing--80);
 
 	.wp-block-rss & {
-		padding-inline-start: var(--wp--preset--spacing--plus-4);
+		padding-inline-start: var(--wp--preset--spacing--80);
 	}
 
 	li {
@@ -64,6 +64,6 @@ ul.wp-block-rss:where(:not(.has-excerpts)) {
 	}
 
 	:where(li + li) {
-		margin-block-start: var(--wp--preset--spacing--minus-1);
+		margin-block-start: var(--wp--preset--spacing--30);
 	}
 }

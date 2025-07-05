@@ -20,7 +20,7 @@ defined('ABSPATH') || exit;
 	"metadata":{"name":"<?= esc_attr__('Table of Contents Card', 'x3p0-ideas') ?>"},
 	"style":{
 		"spacing":{
-			"blockGap":"var:preset|spacing|base"
+			"blockGap":"var:preset|spacing|40"
 		}
 	},
 	"className":"has-global-border is-style-section-1",

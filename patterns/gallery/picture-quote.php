@@ -20,7 +20,7 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 ?>
 <!-- wp:group {
 	"align":"wide",
-	"style":{"spacing":{"blockGap":"var:preset|spacing|base"}},
+	"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},
 	"layout":{"type":"grid","minimumColumnWidth":"22rem"}
 } -->
 <div class="wp-block-group alignwide">
@@ -58,7 +58,7 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 	<!-- /wp:group -->
 
 	<!-- wp:group {
-		"style":{"spacing":{"blockGap":"var:preset|spacing|base"}},
+		"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},
 		"layout":{
 			"type":"flex",
 			"orientation":"vertical",

@@ -36,7 +36,7 @@
 	summary {
 		transition: all 0.5s ease-in-out;
 		box-sizing: border-box;
-		padding: var(--wp--preset--spacing--base) var(--wp--style--block-gap);
+		padding: var(--wp--preset--spacing--40) var(--wp--style--block-gap);
 
 		background:  transparent;
 		color:       currentColor;
@@ -144,4 +144,3 @@
 		content: none;
 	}
 }
-
