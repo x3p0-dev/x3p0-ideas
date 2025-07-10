@@ -45,13 +45,17 @@ class Frontend implements Bootable
 	}
 
 	/**
+	 * Adds theme support for various WordPress features.
+	 *
 	 * @return void
 	 */
 	#[Action('after_setup_theme')]
 	public function setup(): void
 	{
+		// Adds support for the View Transitions plugin.
+		// @link https://wordpress.org/plugins/view-transitions/
 		add_theme_support('view-transitions', [
-			'default-animation' => 'slide-from-left'
+			'default-animation' => 'fade'
 		]);
 	}
 
