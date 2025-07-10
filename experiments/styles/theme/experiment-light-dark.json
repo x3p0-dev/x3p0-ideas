@@ -6,16 +6,6 @@
 		"color": {
 			"palette": [
 				{
-					"slug": "base",
-					"color": "light-dark(#ffffff, #13161B)",
-					"name": "Base"
-				},
-				{
-					"slug": "contrast",
-					"color": "light-dark(#000000, #ffffff)",
-					"name": "Contrast"
-				},
-				{
 					"slug": "primary-950",
 					"color": "light-dark(#1a3151, #f0f8fe)",
 					"name": "Primary: 950"
@@ -126,6 +116,11 @@
 					"name": "Secondary: 50"
 				},
 				{
+					"slug": "neutral-1000",
+					"color": "light-dark(#000000, #ffffff)",
+					"name": "Neutral: 1000"
+				},
+				{
 					"slug": "neutral-950",
 					"color": "light-dark(#020617, #f8fafc)",
 					"name": "Neutral: 950"
@@ -181,26 +176,25 @@
 					"name": "Neutral: 50"
 				},
 				{
+					"slug": "neutral-0",
+					"color": "light-dark(#ffffff, #000000)",
+					"name": "Neutral: 0"
+				},
+				{
 					"slug": "black",
-					"color": "light-dark(#000000, #ffffff)",
-					"name": "Black"
+					"color": "#000000",
+					"name": "Always Dark"
 				},
 				{
 					"slug": "white",
-					"color": "light-dark(#ffffff, #000000)",
-					"name": "White"
+					"color": "#ffffff",
+					"name": "Always Light"
 				}
 			]
 		},
 		"custom": {
 			"variation": "light-dark",
-			"colorScheme": "light dark",
-			"color": {
-				"action": "var:preset|color|primary-700",
-				"dark": "var:preset|color|black",
-				"light": "var:preset|color|white",
-				"muted": "var:preset|color|neutral-500"
-			}
+			"colorScheme": "light dark"
 		},
 		"shadow": {
 			"defaultPresets": false,
