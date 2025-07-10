@@ -146,7 +146,7 @@ class Theme implements Bootable, Container
 		// phpcs:enable
 
 		array_walk($blocks, fn($block, $name) => $this->instance(
-			"block.library.core{$name}",
+			"block.library.core.{$name}",
 			new $block
 		));
 	}
