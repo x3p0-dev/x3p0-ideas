@@ -127,7 +127,7 @@
 	summary {
 		padding: initial;
 		background: initial;
-		color: initial;
+		color: currentColor;
 	}
 
 	> :where(:not(summary)) {
