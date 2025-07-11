@@ -108,7 +108,8 @@ class ColorScheme
 	{
 		$state = [
 			'colorScheme' => $this->getColorScheme(),
-			'isDark'      => null
+			'isDark'      => null,
+			'userID'      => get_current_user_id()
 		];
 
 		// By default, we don't always know whether the color scheme is
@@ -179,12 +180,20 @@ class ColorScheme
 
 	/**
 	 * Returns the user's preferred color scheme if it has been saved via
-	 * cookie, or null.
+	 * meta or cookie. Otherwise, returns null.
 	 *
 	 * @since 1.0.0
 	 */
 	private function getUserScheme(): ?string
 	{
+		if (is_user_logged_in()) {
+			$scheme = get_user_meta(get_current_user_id(), self::NAME, true);
+
+			return $scheme && in_array($scheme, self::USER_SCHEMES)
+				? $scheme
+				: null;
+		}
+
 		if (isset($_COOKIE[self::NAME])) {
 			$scheme = sanitize_key(wp_unslash($_COOKIE[self::NAME]));
 

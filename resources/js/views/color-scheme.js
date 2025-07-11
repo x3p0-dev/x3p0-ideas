@@ -18,6 +18,16 @@ const dataElement = document.getElementById('wp-script-module-data-x3p0-ideas-co
 const data        = dataElement ? JSON.parse(dataElement.textContent) : {};
 
 const { state } = store(data.store, {
+	state: {
+		/**
+		 * Determines whether the current user is logged in.
+		 *
+		 * @returns {boolean}
+		 */
+		get isLoggedIn() {
+			return 0 < state.userID;
+		}
+	},
 	actions: {
 		/**
 		 * Toggles the color scheme when a user interaction triggers it,
@@ -29,6 +39,21 @@ const { state } = store(data.store, {
 		toggle() {
 			state.isDark      = ! state.isDark;
 			state.colorScheme = state.isDark ? 'dark' : 'light';
+
+			// If the user is logged in, get the value from their
+			// user meta instead of a cookie.
+			if (state.isLoggedIn) {
+				wp.apiFetch( {
+					path: `/wp/v2/users/${state.userID}`,
+					method: 'POST',
+					data: {
+						meta: {
+							[data.store]: state.colorScheme
+						}
+					}
+				});
+				return;
+			}
 
 			// Define the cookie path and domain.
 			let path   = data.cookiePath || '/';

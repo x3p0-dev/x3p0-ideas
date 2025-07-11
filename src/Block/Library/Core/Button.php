@@ -42,6 +42,21 @@ class Button implements Bootable
 	}
 
 	/**
+	 * Registers user meta for the color scheme toggle.
+	 *
+	 * @since 1.0.0
+	 */
+	#[Action('init')]
+	public function registerMeta(): void
+	{
+		register_meta('user', $this->color_scheme::NAME, [
+			'show_in_rest' => true,
+			'type'         => 'string',
+			'single'       => true,
+		]);
+	}
+
+	/**
 	 * Adds Interactivity API support to the Button block. This is needed
 	 * for the light/dark toggle and other use cases where we might use the
 	 * `<button>` element instead of an `<a>` element.
@@ -120,6 +135,12 @@ class Button implements Bootable
 
 		foreach ($attr as $name => $value) {
 			$processor->set_attribute($name, $value);
+		}
+
+		// Enqueue the API fetch script if the user is logged in. This
+		// is used for storing user metadata.
+		if (is_user_logged_in()) {
+			wp_enqueue_script('wp-api-fetch');
 		}
 
 		// Enqueue script module view.
