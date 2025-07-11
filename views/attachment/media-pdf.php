@@ -27,7 +27,7 @@ $title = get_the_title($data['post_id']);
 		"displayPreview":true,
 		"align":"wide",
 		"className":"is-style-icon"
-		} -->
+	} -->
 	<div class="wp-block-file alignwide is-style-icon">
 		<object class="wp-block-file__embed" data="<?= esc_url($url) ?>" type="application/pdf" style="width:100%;height:600px" aria-label="<?= esc_attr($title) ?>"></object>
 		<a href="<?= esc_url($url) ?>"><?= esc_html(wp_strip_all_tags($title)) ?></a>
