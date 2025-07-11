@@ -1,0 +1,79 @@
+/**
+ * Defines the `x3p0/media` block binding source.
+ *
+ * @author    Justin Tadlock <justintadlock@gmail.com>
+ * @copyright Copyright (c) 2023-2024, Justin Tadlock
+ * @license   GPL-3.0-or-later
+ */
+
+import { __, sprintf } from '@wordpress/i18n';
+
+// @todo Figure out a way to not have to recreate these labels in JS.
+const placeholders = {
+	aperture: {
+		value: '<sup>f</sup>&#8260;<sub>1</sub>',
+		label: __('Aperture:', 'x3p0-ideas')
+	},
+	camera: {
+		value: 'Camera Name',
+		label: __('Camera:', 'x3p0-ideas')
+	},
+	created_timestamp: {
+		value: 'Month 00, 0000',
+		label: __('Date:', 'x3p0-ideas')
+	},
+	dimensions: {
+		value: '0 &#215; 0',
+		label: __('Dimensions:', 'x3p0-ideas')
+	},
+	focal_length: {
+		value: '0 mm',
+		label: __('Focal Length:', 'x3p0-ideas')
+	},
+	iso: {
+		value: '00',
+		label: __('ISO:', 'x3p0-ideas')
+	},
+	shutter_speed: {
+		value: '<sup>0</sup>&#8260;<sub>00</sub> sec',
+		label: __('Shutter Speed:', 'x3p0-ideas')
+	},
+	mime_type: {
+		value: 'type/subtype',
+		label: __('Mime Type:', 'x3p0-ideas')
+	},
+	file_size: {
+		value: '00 kb',
+		label: __('Size:', 'x3p0-ideas')
+	}
+};
+
+const wrapper = (value, label) => {
+	return sprintf(
+		'<span class="media-data__label" style="font-weight:500">%s</span><span class="media-data__content has-xs-font-size has-mono-font-family">%s</span>',
+		label,
+		value
+	);
+}
+
+export default {
+	name: 'x3p0/media',
+	getValues({ bindings }) {
+		const values = {};
+
+		for (const [ attributeName, source ] of Object.entries(bindings)) {
+			const bindingKey = source.args?.key || attributeName;
+
+			if (bindingKey in placeholders) {
+				values[attributeName] = wrapper(
+					placeholders[bindingKey].value,
+					placeholders[bindingKey].label
+				);
+			} else {
+				values[attributeName] = bindingKey;
+			}
+		}
+
+		return values;
+	}
+};
