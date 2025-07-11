@@ -49,7 +49,7 @@ class Button implements Bootable
 	#[Action('init')]
 	public function registerMeta(): void
 	{
-		register_meta('user', $this->color_scheme::NAME, [
+		register_meta('user', ColorScheme::NAME, [
 			'show_in_rest' => true,
 			'type'         => 'string',
 			'single'       => true,
@@ -119,13 +119,13 @@ class Button implements Bootable
 
 		// Set the initial interactivity state.
 		wp_interactivity_state(
-			$this->color_scheme::NAME,
+			ColorScheme::NAME,
 			$this->color_scheme->getState()
 		);
 
 		// Add interactivity directives to the `<button>`.
 		$attr = [
-			'data-wp-interactive'           => $this->color_scheme::NAME,
+			'data-wp-interactive'           => ColorScheme::NAME,
 			'data-wp-on--click'             => 'actions.toggle',
 			'data-wp-init'                  => 'callbacks.init',
 			'data-wp-watch'                 => 'callbacks.updateScheme',
@@ -144,7 +144,7 @@ class Button implements Bootable
 		}
 
 		// Enqueue script module view.
-		wp_enqueue_script_module($this->color_scheme::NAME);
+		wp_enqueue_script_module(ColorScheme::NAME);
 
 		return $processor->get_updated_html();
 	}
@@ -162,15 +162,15 @@ class Button implements Bootable
 		// Registers the light/dark toggle view script module. This is
 		// later enqueued when the Button block variation is in use.
 		wp_register_script_module(
-			$this->color_scheme::NAME,
+			ColorScheme::NAME,
 			get_parent_theme_file_uri('public/js/views/color-scheme.js'),
 			$script['dependencies'],
 			$script['version']
 		);
 
 		// Pass the cookie path and domain to the color scheme module.
-		add_filter('script_module_data_' . $this->color_scheme::NAME, function(array $data) {
-			$data['store']        = $this->color_scheme::NAME;
+		add_filter('script_module_data_' . ColorScheme::NAME, function(array $data) {
+			$data['store']        = ColorScheme::NAME;
 			$data['cookiePath']   = COOKIEPATH;
 			$data['cookieDomain'] = COOKIE_DOMAIN;
 			return $data;
