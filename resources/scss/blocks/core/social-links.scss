@@ -19,6 +19,17 @@
 	height: 1em;
 }
 
+///
+/// Ensures label and icon are centered, particularly when the entire
+/// Social Link is stretched to fill the screen. The `100%` width makes
+/// sure that the element is stretched in the editor, correctly filling
+/// all the available space.
+///
+:where(.wp-block-social-links.is-vertical.is-content-justification-stretch) .wp-block-social-link-anchor {
+	justify-content: center;
+	width: 100%;
+}
+
 // -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
