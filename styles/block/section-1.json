@@ -16,11 +16,16 @@
 		"core/media-text",
 		"core/post-comments-form",
 		"core/preformatted",
+		"core/pullquote",
 		"core/query",
+		"core/quote",
 		"core/verse",
 		"x3p0/breadcrumbs"
 	],
 	"styles": {
+		"border": {
+			"color": "var:custom|color|surface|level-1"
+		},
 		"color": {
 			"background": "var:custom|color|surface|level-0",
 			"text": "var:custom|color|text|default"
