@@ -27,15 +27,15 @@
 			"color": {
 				"surface": {
 					"primary": "var:preset|color|primary-600",
-					"button": {
+					"control": {
 						"primary": {
 							"default": "var:preset|color|primary-600",
-							"hover": "var:preset|color|primary-900"
+							"interact": "var:preset|color|primary-900"
 						}
 					},
 					"submenu": {
 						"default": "var:custom|color|surface|level-1",
-						"hover": "var:custom|color|surface|level-2"
+						"interact": "var:custom|color|surface|level-2"
 					}
 				},
 				"text": {
@@ -54,10 +54,10 @@
 				"color": {
 					"surface": {
 						"primary": "var:preset|color|primary-600",
-						"button": {
+						"control": {
 							"primary": {
 								"default": "var:preset|color|primary-600",
-								"hover": "var:preset|color|primary-900"
+								"interact": "var:preset|color|primary-900"
 							}
 						}
 					},
@@ -78,10 +78,10 @@
 				"color": {
 					"surface": {
 						"primary": "var:preset|color|primary-600",
-						"button": {
+						"control": {
 							"primary": {
 								"default": "var:preset|color|primary-600",
-								"hover": "var:preset|color|primary-900"
+								"interact": "var:preset|color|primary-900"
 							}
 						}
 					},
@@ -105,10 +105,10 @@
 						"level-1": "var:preset|color|neutral-900",
 						"level-2": "var:preset|color|neutral-800",
 						"primary": "var:preset|color|primary-600",
-						"button": {
+						"control": {
 							"primary": {
 								"default": "var:preset|color|primary-600",
-								"hover": "var:preset|color|primary-800"
+								"interact": "var:preset|color|primary-800"
 							}
 						}
 					},
@@ -117,16 +117,16 @@
 						"muted": "var:preset|color|neutral-400",
 						"primary": "var:preset|color|primary-200",
 						"on-primary": "var:preset|color|white",
-						"button": {
+						"control": {
 							"primary": {
 								"default": "var:preset|color|white",
-								"hover": "var:preset|color|white"
+								"interact": "var:preset|color|white"
 							}
 						},
 						"link": {
 							"primary": {
 								"default": "var:preset|color|white",
-								"hover": "var:preset|color|neutral-200"
+								"interact": "var:preset|color|neutral-200"
 							}
 						}
 					},

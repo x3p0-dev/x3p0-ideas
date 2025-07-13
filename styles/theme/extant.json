@@ -25,32 +25,32 @@
 			"variation": "extant",
 			"color": {
 				"surface": {
-					"button": {
+					"control": {
 						"primary": {
-							"hover": "var:preset|color|black"
+							"interact": "var:preset|color|black"
 						}
 					},
 					"submenu": {
 						"default": "var:preset|color|neutral-950",
-						"hover": "var:preset|color|neutral-900"
+						"interact": "var:preset|color|neutral-900"
 					}
 				},
 				"text": {
-					"button": {
+					"control": {
 						"primary": {
 							"default": "var:preset|color|white",
-							"hover": "var:preset|color|white"
+							"interact": "var:preset|color|white"
 						}
 					},
 					"link": {
 						"secondary": {
 							"default": "var:preset|color|neutral-900",
-							"hover": "currentColor"
+							"interact": "currentColor"
 						}
 					},
 					"submenu": {
 						"default": "var:preset|color|neutral-50",
-						"hover": "var:preset|color|neutral-50"
+						"interact": "var:preset|color|neutral-50"
 					}
 				},
 				"border": {
@@ -60,23 +60,23 @@
 			"section-1": {
 				"color": {
 					"surface": {
-						"button": {
+						"control": {
 							"primary": {
-								"hover": "var:preset|color|black"
+								"interact": "var:preset|color|black"
 							}
 						}
 					},
 					"text": {
-						"button": {
+						"control": {
 							"primary": {
 								"default": "var:preset|color|white",
-								"hover": "var:preset|color|white"
+								"interact": "var:preset|color|white"
 							}
 						},
 						"link": {
 							"secondary": {
 								"default": "var:preset|color|neutral-900",
-								"hover": "currentColor"
+								"interact": "currentColor"
 							}
 						}
 					},
@@ -88,23 +88,23 @@
 			"section-2": {
 				"color": {
 					"surface": {
-						"button": {
+						"control": {
 							"primary": {
-								"hover": "var:preset|color|black"
+								"interact": "var:preset|color|black"
 							}
 						}
 					},
 					"text": {
-						"button": {
+						"control": {
 							"primary": {
 								"default": "var:preset|color|white",
-								"hover": "var:preset|color|white"
+								"interact": "var:preset|color|white"
 							}
 						},
 						"link": {
 							"secondary": {
 								"default": "var:preset|color|neutral-900",
-								"hover": "currentColor"
+								"interact": "currentColor"
 							}
 						}
 					},
@@ -116,17 +116,17 @@
 			"section-3": {
 				"color": {
 					"surface": {
-						"button": {
+						"control": {
 							"primary": {
-								"hover": "var:preset|color|black"
+								"interact": "var:preset|color|black"
 							}
 						}
 					},
 					"text": {
-						"button": {
+						"control": {
 							"primary": {
 								"default": "var:preset|color|white",
-								"hover": "var:preset|color|white"
+								"interact": "var:preset|color|white"
 							}
 						}
 					}
@@ -148,11 +148,11 @@
 			"shadow": {
 				"primary": {
 					"default": "var:preset|shadow|xs",
-					"hover": "var:preset|shadow|md"
+					"interact": "var:preset|shadow|md"
 				},
 				"secondary": {
 					"default": "var:preset|shadow|xs",
-					"hover": "var:preset|shadow|xs"
+					"interact": "var:preset|shadow|xs"
 				}
 			}
 		},

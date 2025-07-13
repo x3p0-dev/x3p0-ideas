@@ -64,8 +64,8 @@ $border:  '--wp--custom--color--border';
 		#{$surface}--primary: var(#{$section}--color--surface--primary);
 
 		// Button component surface/background colors.
-		#{$surface}--button--primary--default: var(#{$section}--color--surface--button--primary--default);
-		#{$surface}--button--primary--hover:   var(#{$section}--color--surface--button--primary--hover);
+		#{$surface}--control--primary--default:  var(#{$section}--color--surface--control--primary--default);
+		#{$surface}--control--primary--interact: var(#{$section}--color--surface--control--primary--interact);
 
 		// Text colors.
 		#{$text}--default:    var(#{$section}--color--text--default);
@@ -74,14 +74,14 @@ $border:  '--wp--custom--color--border';
 		#{$text}--on-primary: var(#{$section}--color--text--on-primary);
 
 		// Button component text colors.
-		#{$text}--button--primary--default: var(#{$section}--color--text--button--primary--default);
-		#{$text}--button--primary--hover:   var(#{$section}--color--text--button--primary--hover);
+		#{$text}--control--primary--default:  var(#{$section}--color--text--control--primary--default);
+		#{$text}--control--primary--interact: var(#{$section}--color--text--control--primary--interact);
 
 		// Link component text colors.
-		#{$text}--link--primary--default:   var(#{$section}--color--text--link--primary--default);
-		#{$text}--link--primary--hover:     var(#{$section}--color--text--link--primary--hover);
-		#{$text}--link--secondary--default: var(#{$section}--color--text--link--secondary--default);
-		#{$text}--link--secondary--hover:   var(#{$section}--color--text--link--secondary--hover);
+		#{$text}--link--primary--default:    var(#{$section}--color--text--link--primary--default);
+		#{$text}--link--primary--interact:   var(#{$section}--color--text--link--primary--interact);
+		#{$text}--link--secondary--default:  var(#{$section}--color--text--link--secondary--default);
+		#{$text}--link--secondary--interact: var(#{$section}--color--text--link--secondary--interact);
 
 		// Icon colors.
 		#{$icon}--default: var(#{$section}--color--icon--default);

@@ -20,7 +20,7 @@
 					"link": {
 						"primary": {
 							"default": "currentColor",
-							"hover": "var:preset|color|primary-700"
+							"interact": "var:preset|color|primary-700"
 						}
 					}
 				},
@@ -34,7 +34,7 @@
 						"link": {
 							"primary": {
 								"default": "currentColor",
-								"hover": "var:preset|color|primary-700"
+								"interact": "var:preset|color|primary-700"
 							}
 						}
 					},
@@ -49,7 +49,7 @@
 						"link": {
 							"primary": {
 								"default": "currentColor",
-								"hover": "var:preset|color|primary-700"
+								"interact": "var:preset|color|primary-700"
 							}
 						}
 					},

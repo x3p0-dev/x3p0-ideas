@@ -79,11 +79,11 @@ nav.wp-block-navigation.wp-block-navigation .wp-block-navigation__responsive-con
 .wp-block-navigation-submenu .wp-block-navigation-item:hover,
 .wp-block-navigation-submenu .wp-block-navigation-item:focus {
 	background: var(
-		--wp--custom--color--surface--submenu--hover,
+		--wp--custom--color--surface--submenu--interact,
 		var(--wp--custom--color--surface--level-1)
 	);
 	color: var(
-		--wp--custom--color--text--submenu--hover,
+		--wp--custom--color--text--submenu--interact,
 		var(--wp--custom--color--text--default)
 	);
 }

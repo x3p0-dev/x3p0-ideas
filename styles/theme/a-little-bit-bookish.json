@@ -30,11 +30,11 @@
 			"shadow": {
 				"primary": {
 					"default": "none",
-					"hover": "var:preset|shadow|enlarge"
+					"interact": "var:preset|shadow|enlarge"
 				},
 				"secondary": {
 					"default": "none",
-					"hover": "none"
+					"interact": "none"
 				}
 			}
 		},

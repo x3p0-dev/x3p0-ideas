@@ -23,15 +23,15 @@
 			"variation": "th5",
 			"color": {
 				"surface": {
-					"button": {
+					"control": {
 						"primary": {
 							"default": "var:preset|color|secondary-500",
-							"hover": "var:preset|color|secondary-700"
+							"interact": "var:preset|color|secondary-700"
 						}
 					},
 					"submenu": {
 						"default": "var:custom|color|surface|level-1",
-						"hover": "var:custom|color|surface|level-2"
+						"interact": "var:custom|color|surface|level-2"
 					}
 				},
 				"text": {
@@ -44,10 +44,10 @@
 			"section-1": {
 				"color": {
 					"surface": {
-						"button": {
+						"control": {
 							"primary": {
 								"default": "var:preset|color|secondary-500",
-								"hover": "var:preset|color|secondary-700"
+								"interact": "var:preset|color|secondary-700"
 							}
 						}
 					},
@@ -59,10 +59,10 @@
 			"section-2": {
 				"color": {
 					"surface": {
-						"button": {
+						"control": {
 							"primary": {
 								"default": "var:preset|color|secondary-500",
-								"hover": "var:preset|color|secondary-700"
+								"interact": "var:preset|color|secondary-700"
 							}
 						}
 					},

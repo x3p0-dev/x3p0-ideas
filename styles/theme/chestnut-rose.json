@@ -188,7 +188,7 @@
 				"surface": {
 					"submenu": {
 						"default": "var:preset|color|neutral-50",
-						"hover": "var:preset|color|neutral-200"
+						"interact": "var:preset|color|neutral-200"
 					}
 				},
 				"border": {
