@@ -10,9 +10,17 @@ import { __, sprintf } from '@wordpress/i18n';
 
 // @todo Figure out a way to not have to recreate these labels in JS.
 const placeholders = {
+	album: {
+		value: '...',
+		label: __('Album:', 'x3p0-ideas')
+	},
 	aperture: {
 		value: '<sup>f</sup>&#8260;<sub>1</sub>',
 		label: __('Aperture:', 'x3p0-ideas')
+	},
+	artist: {
+		value: '...',
+		label: __('Artist:', 'x3p0-ideas')
 	},
 	camera: {
 		value: 'Camera Name',
@@ -26,25 +34,45 @@ const placeholders = {
 		value: '0 &#215; 0',
 		label: __('Dimensions:', 'x3p0-ideas')
 	},
+	file_name: {
+		value: '...',
+		label: __('Name:', 'x3p0-ideas')
+	},
+	file_size: {
+		value: '00 kb',
+		label: __('Size:', 'x3p0-ideas')
+	},
 	focal_length: {
 		value: '0 mm',
 		label: __('Focal Length:', 'x3p0-ideas')
+	},
+	genre: {
+		value: '...',
+		label: __('Genre:', 'x3p0-ideas')
 	},
 	iso: {
 		value: '00',
 		label: __('ISO:', 'x3p0-ideas')
 	},
-	shutter_speed: {
-		value: '<sup>0</sup>&#8260;<sub>00</sub> sec',
-		label: __('Shutter Speed:', 'x3p0-ideas')
+	length_formatted: {
+		value: '00',
+		label: __('Run Time:', 'x3p0-ideas')
 	},
 	mime_type: {
 		value: 'type/subtype',
 		label: __('Mime Type:', 'x3p0-ideas')
 	},
-	file_size: {
-		value: '00 kb',
-		label: __('Size:', 'x3p0-ideas')
+	shutter_speed: {
+		value: '<sup>0</sup>&#8260;<sub>00</sub> sec',
+		label: __('Shutter Speed:', 'x3p0-ideas')
+	},
+	track_number: {
+		value: '0',
+		label: __('Track:', 'x3p0-ideas')
+	},
+	year: {
+		value: '0000',
+		label: __('Year:', 'x3p0-ideas')
 	}
 };
 
