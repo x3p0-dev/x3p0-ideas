@@ -4,6 +4,7 @@
 	"title": "Style 2",
 	"slug": "section-2",
 	"blockTypes": [
+		"core/calendar",
 		"core/code",
 		"core/column",
 		"core/columns",

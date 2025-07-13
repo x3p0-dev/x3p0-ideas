@@ -4,6 +4,7 @@
 	"title": "Style 3",
 	"slug": "section-3",
 	"blockTypes": [
+		"core/calendar",
 		"core/code",
 		"core/column",
 		"core/columns",
