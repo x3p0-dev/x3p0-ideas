@@ -1818,7 +1818,7 @@
 				"variations": {
 					"fade-in": {
 						"color": {
-							"text": "var:preset|color|neutral-950"
+							"text": "var:custom|color|text|default"
 						}
 					}
 				}
