@@ -19,7 +19,8 @@
 		"core/pullquote",
 		"core/query",
 		"core/quote",
-		"core/verse"
+		"core/verse",
+		"x3p0/breadcrumbs"
 	],
 	"styles": {
 		"border": {
