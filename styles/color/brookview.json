@@ -118,7 +118,7 @@
 				{
 					"slug": "black",
 					"color": "#000000",
-					"name": "Black"
+					"name": "Neutral: 1000 (Black)"
 				},
 				{
 					"slug": "neutral-950",
@@ -178,7 +178,7 @@
 				{
 					"slug": "white",
 					"color": "#ffffff",
-					"name": "White"
+					"name": "Neutral: 0 (White)"
 				}
 			]
 		}
