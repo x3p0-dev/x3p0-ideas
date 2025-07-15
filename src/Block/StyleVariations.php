@@ -48,6 +48,14 @@ class StyleVariations implements Bootable
 	#[Action('init')]
 	public function register(): void
 	{
+		// Register Primary button separately because we need to set it
+		// as the default.
+		$this->styles->register('core/button', [
+			'name'       => 'primary',
+			'label'      => __('Primary', 'x3p0-ideas'),
+			'is_default' => true
+		]);
+
 		foreach ($this->getCustomStyles() as $block => $styles) {
 			foreach ($styles as $name => $label) {
 				$this->styles->register($block, [
@@ -73,7 +81,8 @@ class StyleVariations implements Bootable
 				'spread'     => __('Spread',     'x3p0-ideas')
 			],
 			'core/button' => [
-				'link' => __('Link', 'x3p0-ideas')
+				'link'      => __('Link', 'x3p0-ideas'),
+				'secondary' => __('Secondary', 'x3p0-ideas')
 			],
 			'core/categories' => [
 				'horizontal' => __('Horizontal', 'x3p0-ideas'),

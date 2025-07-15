@@ -64,8 +64,10 @@ $border:  '--wp--custom--color--border';
 		#{$surface}--primary: var(#{$section}--color--surface--primary);
 
 		// Button component surface/background colors.
-		#{$surface}--control--primary--default:  var(#{$section}--color--surface--control--primary--default);
-		#{$surface}--control--primary--interact: var(#{$section}--color--surface--control--primary--interact);
+		#{$surface}--control--primary--default:    var(#{$section}--color--surface--control--primary--default);
+		#{$surface}--control--primary--interact:   var(#{$section}--color--surface--control--primary--interact);
+		#{$surface}--control--secondary--default:  var(#{$section}--color--surface--control--secondary--default);
+		#{$surface}--control--secondary--interact: var(#{$section}--color--surface--control--secondary--interact);
 
 		// Text colors.
 		#{$text}--default:    var(#{$section}--color--text--default);
@@ -74,8 +76,10 @@ $border:  '--wp--custom--color--border';
 		#{$text}--on-primary: var(#{$section}--color--text--on-primary);
 
 		// Button component text colors.
-		#{$text}--control--primary--default:  var(#{$section}--color--text--control--primary--default);
-		#{$text}--control--primary--interact: var(#{$section}--color--text--control--primary--interact);
+		#{$text}--control--primary--default:    var(#{$section}--color--text--control--primary--default);
+		#{$text}--control--primary--interact:   var(#{$section}--color--text--control--primary--interact);
+		#{$text}--control--secondary--default:  var(#{$section}--color--text--control--secondary--default);
+		#{$text}--control--secondary--interact: var(#{$section}--color--text--control--secondary--interact);
 
 		// Link component text colors.
 		#{$text}--link--primary--default:    var(#{$section}--color--text--link--primary--default);
