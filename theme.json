@@ -875,7 +875,7 @@
 						"muted": "light-dark(var(--wp--preset--color--neutral-400), var(--wp--preset--color--neutral-600))"
 					},
 					"border": {
-						"default": "light-dark(var(--wp--preset--color--neutral-200), var(--wp--preset--color--neutral-800))"
+						"default": "light-dark(var(--wp--preset--color--neutral-200), var(--wp--preset--color--neutral-700))"
 					}
 				}
 			},
