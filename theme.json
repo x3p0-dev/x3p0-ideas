@@ -737,11 +737,11 @@
 					"control": {
 						"primary": {
 							"default": "light-dark(var(--wp--preset--color--primary-600), var(--wp--preset--color--primary-700))",
-							"interact": "light-dark(var(--wp--preset--color--primary-800), var(--wp--preset--color--primary-800))"
+							"interact": "light-dark(var(--wp--preset--color--primary-800), var(--wp--preset--color--primary-600))"
 						},
 						"secondary": {
 							"default": "light-dark(var(--wp--preset--color--secondary-600), var(--wp--preset--color--secondary-700))",
-							"interact": "light-dark(var(--wp--preset--color--secondary-800), var(--wp--preset--color--secondary-800))"
+							"interact": "light-dark(var(--wp--preset--color--secondary-800), var(--wp--preset--color--secondary-600))"
 						}
 					},
 					"submenu": {
@@ -835,11 +835,11 @@
 						"control": {
 							"primary": {
 								"default": "light-dark(var(--wp--preset--color--primary-600), var(--wp--preset--color--primary-700))",
-								"interact": "light-dark(var(--wp--preset--color--primary-800), var(--wp--preset--color--primary-800))"
+								"interact": "light-dark(var(--wp--preset--color--primary-800), var(--wp--preset--color--primary-600))"
 							},
 							"secondary": {
 								"default": "light-dark(var(--wp--preset--color--secondary-600), var(--wp--preset--color--secondary-700))",
-								"interact": "light-dark(var(--wp--preset--color--secondary-800), var(--wp--preset--color--secondary-800))"
+								"interact": "light-dark(var(--wp--preset--color--secondary-800), var(--wp--preset--color--secondary-600))"
 							}
 						}
 					},
@@ -889,11 +889,11 @@
 						"control": {
 							"primary": {
 								"default": "light-dark(var(--wp--preset--color--primary-600), var(--wp--preset--color--primary-700))",
-								"interact": "light-dark(var(--wp--preset--color--primary-800), var(--wp--preset--color--primary-800))"
+								"interact": "light-dark(var(--wp--preset--color--primary-800), var(--wp--preset--color--primary-600))"
 							},
 							"secondary": {
 								"default": "light-dark(var(--wp--preset--color--secondary-600), var(--wp--preset--color--secondary-700))",
-								"interact": "light-dark(var(--wp--preset--color--secondary-800), var(--wp--preset--color--secondary-800))"
+								"interact": "light-dark(var(--wp--preset--color--secondary-800), var(--wp--preset--color--secondary-600))"
 							}
 						}
 					},
