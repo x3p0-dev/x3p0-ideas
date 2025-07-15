@@ -52,10 +52,10 @@ $text:    '--wp--custom--color--text';
 $icon:    '--wp--custom--color--icon';
 $border:  '--wp--custom--color--border';
 
-@for $id from 1 through 4 {
-	$section: '--wp--custom--section-#{$id}';
+@for $name from 1 through 4 {
+	$section: '--wp--custom--section-#{$name}';
 
-	:root :where(.is-style-section-#{$id}) {
+	:root :where(.is-style-section-#{$name}) {
 
 		// Surface/background colors.
 		#{$surface}--level-0: var(#{$section}--color--surface--level-0);
