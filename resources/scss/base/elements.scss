@@ -237,8 +237,8 @@ mark {
 
 	// Style `<mark>` elements but avoid WP's "highlight" rich text element.
 	&:where(:not(.has-inline-color):not([style])) {
-		color:      var(--wp--custom--color--text--on-primary, currentColor);
-		background: var(--wp--custom--color--surface--primary, transparent);
+		color:      var(--wp--custom--color--text--on-accent, currentColor);
+		background: var(--wp--custom--color--surface--accent, transparent);
 	}
 }
 

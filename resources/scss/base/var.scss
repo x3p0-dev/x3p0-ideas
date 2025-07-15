@@ -61,7 +61,7 @@ $border:  '--wp--custom--color--border';
 		#{$surface}--level-0: var(#{$section}--color--surface--level-0);
 		#{$surface}--level-1: var(#{$section}--color--surface--level-1);
 		#{$surface}--level-2: var(#{$section}--color--surface--level-2);
-		#{$surface}--primary: var(#{$section}--color--surface--primary);
+		#{$surface}--accent: var(#{$section}--color--surface--accent);
 
 		// Button component surface/background colors.
 		#{$surface}--control--primary--default:    var(#{$section}--color--surface--control--primary--default);
@@ -72,8 +72,8 @@ $border:  '--wp--custom--color--border';
 		// Text colors.
 		#{$text}--default:    var(#{$section}--color--text--default);
 		#{$text}--muted:      var(#{$section}--color--text--muted);
-		#{$text}--primary:    var(#{$section}--color--text--primary);
-		#{$text}--on-primary: var(#{$section}--color--text--on-primary);
+		#{$text}--accent:    var(#{$section}--color--text--accent);
+		#{$text}--on-accent: var(#{$section}--color--text--on-accent);
 
 		// Button component text colors.
 		#{$text}--control--primary--default:    var(#{$section}--color--text--control--primary--default);
@@ -89,8 +89,8 @@ $border:  '--wp--custom--color--border';
 
 		// Icon colors.
 		#{$icon}--default: var(#{$section}--color--icon--default);
+		#{$icon}--accent: var(#{$section}--color--icon--accent);
 		#{$icon}--muted:   var(#{$section}--color--icon--muted);
-		#{$icon}--primary: var(#{$section}--color--icon--primary);
 
 		// Border colors. Note that these are defined for child elements
 		// only. This is because the border color for the parent sits on
