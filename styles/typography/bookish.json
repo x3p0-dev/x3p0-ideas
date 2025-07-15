@@ -1,0 +1,147 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Bookish",
+	"settings": {
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "Playfair, Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif",
+					"slug": "primary",
+					"name": "Primary (Playfair)",
+					"fontFace": [
+						{
+							"fontFamily": "Playfair",
+							"fontWeight": "200 700",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./public/fonts/playfair/playfair.woff2" ]
+						},
+						{
+							"fontFamily": "Playfair",
+							"fontWeight": "200 700",
+							"fontStyle": "italic",
+							"fontStretch": "normal",
+							"src": [ "file:./public/fonts/playfair/playfair-italic.woff2" ]
+						}
+					]
+				},
+				{
+					"fontFamily": "Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif",
+					"slug": "secondary",
+					"name": "Secondary (Charter)"
+				},
+				{
+					"fontFamily": "Caveat, 'Segoe Print', 'Bradley Hand', Chilanka, TSCu_Comic, casual, cursive",
+					"slug": "tertiary",
+					"name": "Tertiary (Caveat)",
+					"fontFace": [
+						{
+							"fontFamily": "Caveat",
+							"fontWeight": "400 700",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./public/fonts/caveat/caveat.woff2" ]
+						}
+					]
+				},
+				{
+					"fontFamily": "ui-monospace, 'Fira Code', 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace",
+					"slug": "mono",
+					"name": "Monospace"
+				}
+			]
+		}
+	},
+	"styles": {
+		"elements": {
+			"caption": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|tertiary",
+					"fontSize": "var:preset|font-size|md",
+					"lineHeight": "var:custom|line-height|md"
+				}
+			}
+		},
+		"blocks": {
+			"core/calendar": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|tertiary"
+				}
+			},
+			"core/post-comments-form": {
+				"elements": {
+					"h3": {
+						"typography": {
+							"fontSize": "var:preset|font-size|lg",
+							"lineHeight": "var:custom|line-height|lg"
+						}
+					}
+				}
+			},
+			"core/pullquote": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|primary",
+					"fontStyle": "italic"
+				},
+				"elements": {
+					"cite": {
+						"typography": {
+							"fontFamily": "var:preset|font-family|tertiary",
+							"fontSize": "var:preset|font-size|lg",
+							"lineHeight": "var:custom|font-size|lg"
+						}
+					}
+				}
+			},
+			"core/query-pagination": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|tertiary",
+					"fontSize": "var:preset|font-size|md",
+					"fontWeight": "400",
+					"lineHeight": "var:custom|line-height|md"
+				}
+			},
+			"core/quote": {
+				"typography": {
+					"fontStyle": "italic"
+				},
+				"elements": {
+					"cite": {
+						"typography": {
+							"fontFamily": "var:preset|font-family|tertiary",
+							"fontSize": "var:preset|font-size|lg",
+							"lineHeight": "var:custom|font-size|lg"
+						}
+					}
+				}
+			},
+			"core/site-title": {
+				"typography": {
+					"fontSize": "var:preset|font-size|lg",
+					"fontStyle": "italic",
+					"fontWeight": "900",
+					"textTransform": "none"
+				}
+			},
+			"core/verse": {
+				"typography": {
+					"fontStyle": "italic"
+				}
+			}
+		},
+		"variations": {
+			"site-header": {
+				"blocks": {
+					"x3p0/breadcrumbs": {
+						"typography": {
+							"fontFamily": "var:preset|font-family|tertiary",
+							"fontSize": "var:preset|font-size|md",
+							"lineHeight": "var:custom|line-height|md"
+						}
+					}
+				}
+			}
+		}
+	}
+}

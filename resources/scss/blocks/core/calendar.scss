@@ -101,6 +101,14 @@
 }
 
 ///
+/// When the Calendar block itself has a section style, the surface level of
+/// nested elements becomes level 1.
+///
+.wp-block-calendar[class*=is-style-section-] table td:where(:not(.pad)) {
+	background: var(--wp--custom--color--surface--level-1, transparent);
+}
+
+///
 /// Nicer layout for the calendar nav using flexbox.
 ///
 .wp-calendar-nav {

@@ -133,11 +133,11 @@ class StyleVariations implements Bootable
 			return null;
 		}
 
-		if (isset(self::SHORT_NAMES[$variation])) {
-			$variation = self::SHORT_NAMES[$variation];
-		}
-
 		$filename = $this->getFilename($type, $variation);
+
+		if (! is_readable($filename) && isset(self::SHORT_NAMES[$variation])) {
+			$filename = $this->getFilename($type, self::SHORT_NAMES[$variation]);
+		}
 
 		return is_readable($filename)
 			? wp_json_file_decode($filename, [ 'associative' => true ])
@@ -160,6 +160,6 @@ class StyleVariations implements Bootable
 			return get_theme_file_path("styles/{$type}/{$variation}.json");
 		}
 
-		return get_theme_file_path("experiments/styles/{$type}/experiment-{$variation}.json");
+		return get_theme_file_path("experiments/styles/{$type}/{$variation}.json");
 	}
 }

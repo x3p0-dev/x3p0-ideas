@@ -324,9 +324,6 @@
 			]
 		},
 		"typography": {
-			"customFontSize": false,
-			"dropCap": true,
-			"fluid": false,
 			"fontFamilies": [
 				{
 					"fontFamily": "Jost, ui-sans-serif, sans-serif",
