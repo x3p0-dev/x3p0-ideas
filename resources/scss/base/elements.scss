@@ -52,7 +52,7 @@ a {
 	}
 
 	&:hover img:where(:not(.avatar)) {
-		box-shadow: var(--wp--custom--shadow--primary--interact);
+		box-shadow: var(--wp--custom--shadow--primary--hover);
 	}
 
 	.is-style-borderless &:focus {
@@ -94,7 +94,7 @@ abbr[title] {
 
 	&:hover,
 	&:focus {
-		color: var(--wp--custom--color--text--link--secondary--interact);
+		color: var(--wp--custom--color--text--link--secondary--hover);
 	}
 }
 
@@ -113,7 +113,7 @@ blockquote cite {
 
 		&:hover,
 		&:focus {
-			color: var(--wp--custom--color--text--link--secondary--interact);
+			color: var(--wp--custom--color--text--link--secondary--hover);
 		}
 	}
 }

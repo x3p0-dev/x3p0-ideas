@@ -61,35 +61,35 @@ $border:  '--wp--custom--color--border';
 		#{$surface}--level-0: var(#{$section}--color--surface--level-0);
 		#{$surface}--level-1: var(#{$section}--color--surface--level-1);
 		#{$surface}--level-2: var(#{$section}--color--surface--level-2);
-		#{$surface}--accent: var(#{$section}--color--surface--accent);
+		#{$surface}--accent:  var(#{$section}--color--surface--accent);
 
 		// Button component surface/background colors.
-		#{$surface}--control--primary--default:    var(#{$section}--color--surface--control--primary--default);
-		#{$surface}--control--primary--interact:   var(#{$section}--color--surface--control--primary--interact);
-		#{$surface}--control--secondary--default:  var(#{$section}--color--surface--control--secondary--default);
-		#{$surface}--control--secondary--interact: var(#{$section}--color--surface--control--secondary--interact);
+		#{$surface}--interactive--primary--default:   var(#{$section}--color--surface--interactive--primary--default);
+		#{$surface}--interactive--primary--hover:     var(#{$section}--color--surface--interactive--primary--hover);
+		#{$surface}--interactive--secondary--default: var(#{$section}--color--surface--interactive--secondary--default);
+		#{$surface}--interactive--secondary--hover:   var(#{$section}--color--surface--interactive--secondary--hover);
 
 		// Text colors.
-		#{$text}--default:    var(#{$section}--color--text--default);
-		#{$text}--muted:      var(#{$section}--color--text--muted);
+		#{$text}--default:   var(#{$section}--color--text--default);
+		#{$text}--muted:     var(#{$section}--color--text--muted);
 		#{$text}--accent:    var(#{$section}--color--text--accent);
 		#{$text}--on-accent: var(#{$section}--color--text--on-accent);
 
 		// Button component text colors.
-		#{$text}--control--primary--default:    var(#{$section}--color--text--control--primary--default);
-		#{$text}--control--primary--interact:   var(#{$section}--color--text--control--primary--interact);
-		#{$text}--control--secondary--default:  var(#{$section}--color--text--control--secondary--default);
-		#{$text}--control--secondary--interact: var(#{$section}--color--text--control--secondary--interact);
+		#{$text}--interactive--primary--default:   var(#{$section}--color--text--interactive--primary--default);
+		#{$text}--interactive--primary--hover:     var(#{$section}--color--text--interactive--primary--hover);
+		#{$text}--interactive--secondary--default: var(#{$section}--color--text--interactive--secondary--default);
+		#{$text}--interactive--secondary--hover:   var(#{$section}--color--text--interactive--secondary--hover);
 
 		// Link component text colors.
-		#{$text}--link--primary--default:    var(#{$section}--color--text--link--primary--default);
-		#{$text}--link--primary--interact:   var(#{$section}--color--text--link--primary--interact);
-		#{$text}--link--secondary--default:  var(#{$section}--color--text--link--secondary--default);
-		#{$text}--link--secondary--interact: var(#{$section}--color--text--link--secondary--interact);
+		#{$text}--link--primary--default:   var(#{$section}--color--text--link--primary--default);
+		#{$text}--link--primary--hover:     var(#{$section}--color--text--link--primary--hover);
+		#{$text}--link--secondary--default: var(#{$section}--color--text--link--secondary--default);
+		#{$text}--link--secondary--hover:   var(#{$section}--color--text--link--secondary--hover);
 
 		// Icon colors.
 		#{$icon}--default: var(#{$section}--color--icon--default);
-		#{$icon}--accent: var(#{$section}--color--icon--accent);
+		#{$icon}--accent:  var(#{$section}--color--icon--accent);
 		#{$icon}--muted:   var(#{$section}--color--icon--muted);
 
 		// Border colors. Note that these are defined for child elements

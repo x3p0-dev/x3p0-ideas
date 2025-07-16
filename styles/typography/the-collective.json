@@ -72,7 +72,7 @@
 			"fontWeight": "425"
 		},
 		"elements": {
-			"control": {
+			"button": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary"
 				}

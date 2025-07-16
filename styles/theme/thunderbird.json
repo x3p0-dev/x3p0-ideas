@@ -34,10 +34,10 @@
 					"level-1": "var:preset|color|white",
 					"level-2": "var:preset|color|neutral-100",
 					"primary": "var:preset|color|primary-500",
-					"control": {
+					"interactive": {
 						"primary": {
 							"default": "var:preset|color|primary-500",
-							"interact": "var:preset|color|primary-700"
+							"hover": "var:preset|color|primary-700"
 						}
 					}
 				},
@@ -58,10 +58,10 @@
 						"level-1": "var:preset|color|neutral-100",
 						"level-2": "var:preset|color|neutral-200",
 						"primary": "var:preset|color|primary-500",
-						"control": {
+						"interactive": {
 							"primary": {
 								"default": "var:preset|color|primary-500",
-								"interact": "var:preset|color|primary-700"
+								"hover": "var:preset|color|primary-700"
 							}
 						}
 					},
@@ -88,10 +88,10 @@
 						"level-1": "var:preset|color|neutral-200",
 						"level-2": "var:preset|color|neutral-300",
 						"primary": "var:preset|color|primary-500",
-						"control": {
+						"interactive": {
 							"primary": {
 								"default": "var:preset|color|primary-500",
-								"interact": "var:preset|color|primary-700"
+								"hover": "var:preset|color|primary-700"
 							}
 						}
 					},
@@ -118,10 +118,10 @@
 						"level-1": "var:preset|color|neutral-900",
 						"level-2": "var:preset|color|neutral-800",
 						"primary": "var:preset|color|primary-500",
-						"control": {
+						"interactive": {
 							"primary": {
 								"default": "var:preset|color|primary-500",
-								"interact": "var:preset|color|primary-700"
+								"hover": "var:preset|color|primary-700"
 							}
 						}
 					},
@@ -392,7 +392,7 @@
 			"fontWeight": "425"
 		},
 		"elements": {
-			"control": {
+			"button": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary"
 				}

@@ -44,13 +44,13 @@
 				"surface": {
 					"submenu": {
 						"default": "var:preset|color|primary-700",
-						"interact": "var:preset|color|primary-900"
+						"hover": "var:preset|color|primary-900"
 					}
 				},
 				"text": {
 					"submenu": {
 						"default": "var:preset|color|primary-50",
-						"interact": "var:preset|color|primary-50"
+						"hover": "var:preset|color|primary-50"
 					}
 				}
 			},
@@ -74,10 +74,10 @@
 						"level-0": "var:preset|color|primary-700",
 						"level-1": "var:preset|color|primary-800",
 						"level-2": "var:preset|color|primary-900",
-						"control": {
+						"interactive": {
 							"primary": {
 								"default": "var:preset|color|primary-900",
-								"interact": "var:preset|color|primary-950"
+								"hover": "var:preset|color|primary-950"
 							}
 						}
 					},
@@ -85,16 +85,16 @@
 						"default": "var:preset|color|white",
 						"muted": "var:preset|color|primary-200",
 						"primary": "var:preset|color|primary-100",
-						"control": {
+						"interactive": {
 							"primary": {
 								"default": "var:preset|color|white",
-								"interact": "var:preset|color|white"
+								"hover": "var:preset|color|white"
 							}
 						},
 						"link": {
 							"primary": {
 								"default": "var:preset|color|primary-100",
-								"interact": "currentColor"
+								"hover": "currentColor"
 							}
 						}
 					},
