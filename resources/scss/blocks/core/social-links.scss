@@ -96,3 +96,12 @@
 	background: transparent;
 	color: currentColor;
 }
+
+///
+/// WordPress adds the `.wp-block-social-link` class to both the `<li>` and
+/// `<button>` in the editor (it's a button, not a link in the editor). This
+/// causes some styles to get applied twice that we don't need, such as borders.
+///
+.wp-block-social-links.is-style-buttons-secondary .wp-block-social-link-anchor {
+	border: none;
+}

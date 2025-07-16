@@ -59,6 +59,18 @@
 // Block style variations.
 // -----------------------------------------------------------------------------
 
+.wp-block-button.is-style-outline .wp-block-button__link {
+	background: transparent none;
+	border: 1px var(--wp--custom--global--border--style) currentColor;
+	color: currentColor;
+	padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--50);
+
+	&:focus,
+	&:hover {
+		outline-color: currentColor;
+	}
+}
+
 ///
 /// Ensure underline on outline style buttons.
 ///
@@ -68,6 +80,17 @@
 ) {
 	text-decoration: underline;
 }
+
+/*
+.wp-block-button.is-style-secondary .wp-element-button {
+	background-color: var(--wp--custom--color--surface--control--secondary--default);
+	color: var(--wp--custom--color--text--control--secondary--default);
+}
+ */
+
+// -----------------------------------------------------------------------------
+// Block variations.
+// -----------------------------------------------------------------------------
 
 ///
 /// Color scheme block variation CSS.

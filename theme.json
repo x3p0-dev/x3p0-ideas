@@ -740,8 +740,8 @@
 							"interact": "light-dark(var(--wp--preset--color--primary-800), var(--wp--preset--color--primary-600))"
 						},
 						"secondary": {
-							"default": "light-dark(var(--wp--preset--color--secondary-600), var(--wp--preset--color--secondary-700))",
-							"interact": "light-dark(var(--wp--preset--color--secondary-800), var(--wp--preset--color--secondary-600))"
+							"default": "transparent",
+							"interact": "transparent"
 						}
 					},
 					"submenu": {
@@ -761,8 +761,8 @@
 							"interact": "light-dark(var(--wp--preset--color--primary-50), var(--wp--preset--color--primary-50))"
 						},
 						"secondary": {
-							"default": "light-dark(var(--wp--preset--color--white), var(--wp--preset--color--white))",
-							"interact": "light-dark(var(--wp--preset--color--secondary-50), var(--wp--preset--color--secondary-50))"
+							"default": "currentColor",
+							"interact": "currentColor"
 						}
 					},
 					"link": {
@@ -838,8 +838,8 @@
 								"interact": "light-dark(var(--wp--preset--color--primary-800), var(--wp--preset--color--primary-600))"
 							},
 							"secondary": {
-								"default": "light-dark(var(--wp--preset--color--secondary-600), var(--wp--preset--color--secondary-700))",
-								"interact": "light-dark(var(--wp--preset--color--secondary-800), var(--wp--preset--color--secondary-600))"
+								"default": "transparent",
+								"interact": "transparent"
 							}
 						}
 					},
@@ -854,8 +854,8 @@
 								"interact": "light-dark(var(--wp--preset--color--primary-50), var(--wp--preset--color--primary-50))"
 							},
 							"secondary": {
-								"default": "light-dark(var(--wp--preset--color--white), var(--wp--preset--color--white))",
-								"interact": "light-dark(var(--wp--preset--color--secondary-50), var(--wp--preset--color--secondary-50))"
+								"default": "currentColor",
+								"interact": "currentColor"
 							}
 						},
 						"link": {
@@ -892,8 +892,8 @@
 								"interact": "light-dark(var(--wp--preset--color--primary-800), var(--wp--preset--color--primary-600))"
 							},
 							"secondary": {
-								"default": "light-dark(var(--wp--preset--color--secondary-600), var(--wp--preset--color--secondary-700))",
-								"interact": "light-dark(var(--wp--preset--color--secondary-800), var(--wp--preset--color--secondary-600))"
+								"default": "transparent",
+								"interact": "transparent"
 							}
 						}
 					},
@@ -908,8 +908,8 @@
 								"interact": "light-dark(var(--wp--preset--color--primary-50), var(--wp--preset--color--primary-50))"
 							},
 							"secondary": {
-								"default": "light-dark(var(--wp--preset--color--white), var(--wp--preset--color--white))",
-								"interact": "light-dark(var(--wp--preset--color--secondary-50), var(--wp--preset--color--secondary-50))"
+								"default": "currentColor",
+								"interact": "currentColor"
 							}
 						},
 						"link": {
@@ -946,8 +946,8 @@
 								"interact": "light-dark(var(--wp--preset--color--primary-950), var(--wp--preset--color--primary-600))"
 							},
 							"secondary": {
-								"default": "light-dark(var(--wp--preset--color--secondary-900), var(--wp--preset--color--secondary-600))",
-								"interact": "light-dark(var(--wp--preset--color--secondary-950), var(--wp--preset--color--secondary-500))"
+								"default": "transparent",
+								"interact": "transparent"
 							}
 						}
 					},
@@ -962,8 +962,8 @@
 								"interact": "light-dark(var(--wp--preset--color--primary-50), var(--wp--preset--color--primary-50))"
 							},
 							"secondary": {
-								"default": "light-dark(var(--wp--preset--color--white), var(--wp--preset--color--white))",
-								"interact": "light-dark(var(--wp--preset--color--secondary-50), var(--wp--preset--color--secondary-50))"
+								"default": "currentColor",
+								"interact": "currentColor"
 							}
 						},
 						"link": {
@@ -1000,8 +1000,8 @@
 								"interact": "light-dark(var(--wp--preset--color--primary-950), var(--wp--preset--color--primary-700))"
 							},
 							"secondary": {
-								"default": "light-dark(var(--wp--preset--color--secondary-900), var(--wp--preset--color--secondary-600))",
-								"interact": "light-dark(var(--wp--preset--color--secondary-950), var(--wp--preset--color--secondary-700))"
+								"default": "transparent",
+								"interact": "transparent"
 							}
 						}
 					},
@@ -1016,8 +1016,8 @@
 								"interact": "light-dark(var(--wp--preset--color--primary-50), var(--wp--preset--color--primary-50))"
 							},
 							"secondary": {
-								"default": "light-dark(var(--wp--preset--color--white), var(--wp--preset--color--white))",
-								"interact": "light-dark(var(--wp--preset--color--secondary-50), var(--wp--preset--color--secondary-50))"
+								"default": "currentColor",
+								"interact": "currentColor"
 							}
 						},
 						"link": {
@@ -1657,19 +1657,28 @@
 						}
 					},
 					"secondary": {
+						"border": {
+							"color": "currentColor",
+							"style": "var:custom|global|border|style",
+							"width": "1px"
+						},
+						"color": {
+							"background": "var:custom|color|surface|control|secondary|default",
+							"text": "var:custom|color|text|control|secondary|default"
+						},
+						"spacing": {
+							"padding": {
+								"top": { "ref": "styles.elements.button.spacing.padding.top" },
+								"bottom": { "ref": "styles.elements.button.spacing.padding.bottom" },
+								"left": { "ref": "styles.elements.button.spacing.padding.left" },
+								"right": { "ref": "styles.elements.button.spacing.padding.right" }
+							}
+						},
 						"elements": {
 							"button": {
 								"color": {
 									"background": "var:custom|color|surface|control|secondary|default",
 									"text": "var:custom|color|text|control|secondary|default"
-								},
-								"spacing": {
-									"padding": {
-										"top": { "ref": "styles.elements.button.spacing.padding.top" },
-										"bottom": { "ref": "styles.elements.button.spacing.padding.bottom" },
-										"left": { "ref": "styles.elements.button.spacing.padding.left" },
-										"right": { "ref": "styles.elements.button.spacing.padding.right" }
-									}
 								},
 								":focus": {
 									"color": {
@@ -1677,7 +1686,7 @@
 										"text": "var:custom|color|text|control|secondary|interact"
 									},
 									"outline": {
-										"color": "var:custom|color|surface|control|secondary|interact"
+										"color": "currentColor"
 									}
 								},
 								":hover": {
@@ -1686,7 +1695,7 @@
 										"text": "var:custom|color|text|control|secondary|interact"
 									},
 									"outline": {
-										"color": "var:custom|color|surface|control|secondary|interact"
+										"color": "currentColor"
 									}
 								}
 							}
