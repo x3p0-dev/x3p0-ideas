@@ -1,0 +1,38 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
+	"version": 3,
+	"title": "Annotation",
+	"description": "A note or comment added to a text or diagram.",
+	"slug": "text-annotation",
+	"blockTypes": [
+		"core/heading",
+		"core/paragraph"
+	],
+	"styles": {
+		"css": "width: fit-content",
+		"border": {
+			"color": "var:custom|global|border|color",
+			"style": "var:custom|global|border|style",
+			"width": "var:custom|global|border|width",
+			"radius": "var:custom|global|border|radius"
+		},
+		"color": {
+			"background": "var:custom|color|surface|level-1",
+			"text": "var:custom|color|text|default"
+		},
+		"spacing": {
+			"padding": {
+				"top": "var:preset|spacing|20",
+				"bottom": "var:preset|spacing|20",
+				"left": "var:preset|spacing|40",
+				"right": "var:preset|spacing|40"
+			}
+		},
+		"typography": {
+			"fontFamily": "var:preset|font-family|secondary",
+			"fontSize": "var:preset|font-size|xs",
+			"fontWeight": "300",
+			"lineHeight": "var:custom|line-height|xs"
+		}
+	}
+}
