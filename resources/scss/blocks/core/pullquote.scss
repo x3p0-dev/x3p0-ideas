@@ -46,7 +46,7 @@
 /// @link https://github.com/WordPress/gutenberg/issues/65329
 ///
 .wp-block-pullquote blockquote > cite {
-	color: var(--wp--custom--color--text--muted, inherit);
+	color: var(--wp--custom--color--foreground--secondary, inherit);
 }
 
 // -----------------------------------------------------------------------------

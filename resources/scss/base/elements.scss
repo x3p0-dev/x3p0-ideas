@@ -90,11 +90,11 @@ abbr[title] {
 	width:   initial;
 
 	// Add colors for links within captions.
-	color: var(--wp--custom--color--text--link--secondary--default);
+	color: var(--wp--custom--color--foreground--link--secondary--default);
 
 	&:hover,
 	&:focus {
-		color: var(--wp--custom--color--text--link--secondary--hover);
+		color: var(--wp--custom--color--foreground--link--secondary--hover);
 	}
 }
 
@@ -109,11 +109,11 @@ blockquote cite {
 
 	// Add colors for links within block quote citations.
 	a {
-		color: var(--wp--custom--color--text--link--secondary--default);
+		color: var(--wp--custom--color--foreground--link--secondary--default);
 
 		&:hover,
 		&:focus {
-			color: var(--wp--custom--color--text--link--secondary--hover);
+			color: var(--wp--custom--color--foreground--link--secondary--hover);
 		}
 	}
 }
@@ -135,7 +135,7 @@ blockquote cite {
 	line-height: inherit;
 
 	// Color.
-	color:      var(--wp--custom--color--text--default, inherit);
+	color:      var(--wp--custom--color--foreground--primary, inherit);
 	background: var(--wp--custom--color--surface--level-1, transparent);
 
 	// Border and shadow.
@@ -150,9 +150,9 @@ blockquote cite {
 ///
 del,
 s {
-	color: var(--wp--custom--color--text--muted, inherit);
+	color: var(--wp--custom--color--foreground--secondary, inherit);
 	text-decoration:
-		var(--wp--custom--color--text--default, currentColor)
+		var(--wp--custom--color--foreground--primary, currentColor)
 		line-through
 		solid
 		min(0.078125em, 3px);
@@ -213,7 +213,7 @@ kbd {
 	background: transparent;
 
 	// Border and shadow.
-	border-color:  var(--wp--custom--color--border--default);
+	border-color:  var(--wp--custom--color--border--primary);
 	border-style:  solid;
 	border-width:  1px;
 	border-radius: 0.25rem;
@@ -224,7 +224,7 @@ kbd {
 /// Adds a list item marker color.
 ///
 li::marker {
-	color: var(--wp--custom--color--icon--muted, currentColor);
+	color: var(--wp--custom--color--foreground--tertiary, currentColor);
 }
 
 ///
@@ -237,7 +237,7 @@ mark {
 
 	// Style `<mark>` elements but avoid WP's "highlight" rich text element.
 	&:where(:not(.has-inline-color):not([style])) {
-		color:      var(--wp--custom--color--text--on-accent, currentColor);
+		color:      var(--wp--custom--color--foreground--on-accent, currentColor);
 		background: var(--wp--custom--color--surface--accent, transparent);
 	}
 }

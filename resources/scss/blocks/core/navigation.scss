@@ -62,7 +62,7 @@
 	transition-property: color, background-color, border-color, outline-color;
 
 	// `theme.json`-supported styles.
-	color:         var(--wp--custom--color--text--interactive--primary--default) !important;
+	color:         var(--wp--custom--color--foreground--interactive--primary--default) !important;
 	background:    var(--wp--custom--color--surface--interactive--primary--default);
 	border-radius: var(--wp--custom--global--border--radius);
 	box-shadow:    var(--wp--custom--shadow--secondary);
@@ -71,7 +71,7 @@
 
 	&:hover,
 	&:focus {
-		color:      var(--wp--custom--color--text--interactive--primary--hover) !important;
+		color:      var(--wp--custom--color--foreground--interactive--primary--hover) !important;
 		background: var(--wp--custom--color--surface--interactive--primary--hover);
 	}
 

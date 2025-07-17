@@ -13,7 +13,7 @@
 ///
 .wp-lightbox-overlay {
 	background: var(--wp--custom--color--surface--backdrop, #000);
-	color: var(--wp--custom--color--text--on-backdrop, #fff);
+	color: var(--wp--custom--color--foreground--on-backdrop, #fff);
 
 	.scrim {
 		background: none !important;
@@ -22,7 +22,7 @@
 	.close-button {
 		right: calc(env(safe-area-inset-right) + var(--wp--preset--spacing--70));
 		top: calc(env(safe-area-inset-top) + var(--wp--preset--spacing--40));
-		fill: var(--wp--custom--color--text--on-backdrop, #fff) !important;
+		fill: var(--wp--custom--color--foreground--on-backdrop, #fff) !important;
 
 		svg {
 			width: 24px;

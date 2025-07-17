@@ -17,7 +17,7 @@ body {
 
 	// Map TT4 standard color names to semantic theme colors.
 	--wp--preset--color--base:     var(--wp--custom--color--surface--level-0, #fff);
-	--wp--preset--color--contrast: var(--wp--custom--color--text--default, #000);
+	--wp--preset--color--contrast: var(--wp--custom--color--foreground--default, #000);
 
 	/// Map default WordPress font sizes to the theme's sizes.
 	--wp--preset--font-size--small:   var(--wp--preset--font-size--xs);
@@ -47,10 +47,10 @@ body {
 /// When a section style is in use, map its colors defined in `theme.json` to
 /// the semantic color tokens for the theme.
 ///
-$surface: '--wp--custom--color--surface';
-$text:    '--wp--custom--color--text';
-$icon:    '--wp--custom--color--icon';
-$border:  '--wp--custom--color--border';
+$surface:    '--wp--custom--color--surface';
+$foreground: '--wp--custom--color--foreground';
+$icon:       '--wp--custom--color--icon';
+$border:     '--wp--custom--color--border';
 
 @for $name from 1 through 4 {
 	$section: '--wp--custom--section-#{$name}';
@@ -69,39 +69,35 @@ $border:  '--wp--custom--color--border';
 		#{$surface}--interactive--secondary--default: var(#{$section}--color--surface--interactive--secondary--default);
 		#{$surface}--interactive--secondary--hover:   var(#{$section}--color--surface--interactive--secondary--hover);
 
-		// Text colors.
-		#{$text}--default:   var(#{$section}--color--text--default);
-		#{$text}--muted:     var(#{$section}--color--text--muted);
-		#{$text}--accent:    var(#{$section}--color--text--accent);
-		#{$text}--on-accent: var(#{$section}--color--text--on-accent);
+		// Foreground colors.
+		#{$foreground}--primary:   var(#{$section}--color--foreground--primary);
+		#{$foreground}--secondary: var(#{$section}--color--foreground--secondary);
+		#{$foreground}--tertiary:  var(#{$section}--color--foreground--tertiary);
+		#{$foreground}--accent:    var(#{$section}--color--foreground--accent);
+		#{$foreground}--on-accent: var(#{$section}--color--foreground--on-accent);
 
-		// Button component text colors.
-		#{$text}--interactive--primary--default:   var(#{$section}--color--text--interactive--primary--default);
-		#{$text}--interactive--primary--hover:     var(#{$section}--color--text--interactive--primary--hover);
-		#{$text}--interactive--secondary--default: var(#{$section}--color--text--interactive--secondary--default);
-		#{$text}--interactive--secondary--hover:   var(#{$section}--color--text--interactive--secondary--hover);
+		// Button component foreground colors.
+		#{$foreground}--interactive--primary--default:   var(#{$section}--color--foreground--interactive--primary--default);
+		#{$foreground}--interactive--primary--hover:     var(#{$section}--color--foreground--interactive--primary--hover);
+		#{$foreground}--interactive--secondary--default: var(#{$section}--color--foreground--interactive--secondary--default);
+		#{$foreground}--interactive--secondary--hover:   var(#{$section}--color--foreground--interactive--secondary--hover);
 
-		// Link component text colors.
-		#{$text}--link--primary--default:   var(#{$section}--color--text--link--primary--default);
-		#{$text}--link--primary--hover:     var(#{$section}--color--text--link--primary--hover);
-		#{$text}--link--secondary--default: var(#{$section}--color--text--link--secondary--default);
-		#{$text}--link--secondary--hover:   var(#{$section}--color--text--link--secondary--hover);
-
-		// Icon colors.
-		#{$icon}--default: var(#{$section}--color--icon--default);
-		#{$icon}--accent:  var(#{$section}--color--icon--accent);
-		#{$icon}--muted:   var(#{$section}--color--icon--muted);
+		// Link component foreground colors.
+		#{$foreground}--link--primary--default:   var(#{$section}--color--foreground--link--primary--default);
+		#{$foreground}--link--primary--hover:     var(#{$section}--color--foreground--link--primary--hover);
+		#{$foreground}--link--secondary--default: var(#{$section}--color--foreground--link--secondary--default);
+		#{$foreground}--link--secondary--hover:   var(#{$section}--color--foreground--link--secondary--hover);
 
 		// Border colors. Note that these are defined for child elements
 		// only. This is because the border color for the parent sits on
 		// sections with other backgrounds and should inherit their
 		// borders.
 		> * {
-			#{$border}--default: var(#{$section}--color--border--default, currentColor);
+			#{$border}--primary: var(#{$section}--color--border--primary, currentColor);
 
 			// Also assigns the global border in case it and the
 			// semantic border are out of sync for some reason.
-			--wp--custom--global--border--color: var(#{$section}--color--border--default, currentColor);
+			--wp--custom--global--border--color: var(#{$section}--color--border--primary, currentColor);
 		}
 	}
 }

@@ -29,8 +29,8 @@ nav.wp-block-navigation.wp-block-navigation .wp-block-navigation__responsive-con
 		var(--wp--custom--color--surface--level-0)
 	);
 	color: var(
-		--wp--custom--color--text--submenu--default,
-		var(--wp--custom--color--text--default)
+		--wp--custom--color--foreground--submenu--default,
+		var(--wp--custom--color--foreground--primary)
 	);
 }
 
@@ -83,8 +83,8 @@ nav.wp-block-navigation.wp-block-navigation .wp-block-navigation__responsive-con
 		var(--wp--custom--color--surface--level-1)
 	);
 	color: var(
-		--wp--custom--color--text--submenu--interact,
-		var(--wp--custom--color--text--default)
+		--wp--custom--color--foreground--submenu--interact,
+		var(--wp--custom--color--foreground--primary)
 	);
 }
 
