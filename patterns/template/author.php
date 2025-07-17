@@ -24,7 +24,7 @@ defined('ABSPATH') || exit;
 <main class="wp-block-group">
 
 	<!-- wp:template-part {"slug":"author-header","align":"full","className":"is-style-archive-header"} /-->
-	<!-- wp:template-part {"slug":"loop","align":"full","className":"loop"} /-->
+	<!-- wp:template-part {"slug":"loop","align":"full"} /-->
 
 </main>
 <!-- /wp:group -->

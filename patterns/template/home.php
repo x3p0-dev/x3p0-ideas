@@ -27,7 +27,7 @@ defined('ABSPATH') || exit;
 		"metadata":{"@unless":"is_paged"},
 		"slug":"x3p0-ideas/hero-featured"
 	} /-->
-	<!-- wp:template-part {"slug":"loop","align":"full","className":"loop"} /-->
+	<!-- wp:template-part {"slug":"loop","align":"full"} /-->
 </main>
 <!-- /wp:group -->
 
