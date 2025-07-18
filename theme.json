@@ -1,5 +1,5 @@
 {
-	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/wp/6.8/schemas/json/theme.json",
 	"version": 3,
 	"settings": {
 		"background": {
@@ -1158,9 +1158,7 @@
 			"defaultSpacingSizes": false,
 			"margin": true,
 			"padding": true,
-			"spacingScale": {
-				"steps": 0
-			},
+			"spacingScale": {},
 			"spacingSizes": [
 				{
 					"name": "Fluid: -3",
