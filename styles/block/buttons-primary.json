@@ -71,10 +71,12 @@
 		},
 		"blocks": {
 			"core/social-link": {
+				"css": "&:is(:hover, :focus) { box-shadow: var(--wp--custom--shadow--interactive--primary--hover); }",
 				"color": {
 					"background": { "ref": "styles.elements.button.color.background" },
 					"text": { "ref": "styles.elements.button.color.text" }
 				},
+				"shadow": { "ref": "styles.elements.button.shadow" },
 				"typography": {
 					"lineHeight": { "ref": "styles.elements.button.typography.lineHeight" }
 				},
@@ -89,6 +91,7 @@
 								"background": { "ref": "styles.elements.button.:focus.color.background" },
 								"text": { "ref": "styles.elements.button.:focus.color.text" }
 							},
+							"shadow": { "ref": "styles.elements.button.:focus.shadow" },
 							"typography": {
 								"textDecoration": { "ref": "styles.elements.button.:focus.typography.textDecoration" }
 							}
@@ -98,6 +101,7 @@
 								"background": { "ref": "styles.elements.button.:hover.color.background" },
 								"text": { "ref": "styles.elements.button.:hover.color.text" }
 							},
+							"shadow": { "ref": "styles.elements.button.:hover.shadow" },
 							"typography": {
 								"textDecoration": { "ref": "styles.elements.button.:hover.typography.textDecoration" }
 							}
