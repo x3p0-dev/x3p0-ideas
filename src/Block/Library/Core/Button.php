@@ -84,7 +84,7 @@ class Button implements Bootable
 	{
 		if (
 			isset($block['attrs']['className'])
-			&& str_contains('toggle-color-scheme', $block['attrs']['className'])
+			&& str_contains($block['attrs']['className'], 'toggle-color-scheme')
 		) {
 			return $this->renderColorSchemeToggle($content);
 		}

@@ -6,7 +6,7 @@
  * @license   GPL-3.0-or-later
  */
 
-import { __, } from '@wordpress/i18n';
+import { __ } from '@wordpress/i18n';
 import { darkMode } from '../common/utils-icon';
 
 export default {
@@ -18,11 +18,17 @@ export default {
 		icon: darkMode,
 		isDefault: true,
 		keywords: [ 'button', 'toggle', 'light', 'dark' ],
-		isActive: [ 'className', 'tagName' ],
 		attributes: {
 			className: 'toggle-color-scheme',
 			tagName: 'button',
-			text: '<span class="screen-reader-text">' + __('Toggle Color Scheme', 'x3p0-ideas') + '<span>'
+			text: `<span class="screen-reader-text">${ __('Toggle Color Scheme', 'x3p0-ideas') }<span>`
+		},
+		isActive: (blockAttributes, variationAttributes) => {
+			const className = blockAttributes.className || '';
+			const tagName   = blockAttributes.tagName   || '';
+
+			return className.split(' ').includes(variationAttributes.className)
+				&& 'button' === tagName;
 		}
 	}
 };
