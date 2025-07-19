@@ -80,11 +80,12 @@
 	border-style:  var(--wp--custom--global--border--style, solid);
 	border-width:  var(--wp--custom--global--border--width, 1px);
 	border-radius: var(--wp--custom--global--border--radius, none);
-	box-shadow:    var(--wp--custom--shadow--primary--secondary, none);
+	box-shadow:    var(--wp--custom--shadow--primary--default, none);
 
 	&:focus {
-		outline: 2px solid var(--wp--custom--color--foreground--accent, inherit);
+		outline:        2px solid var(--wp--custom--color--foreground--accent, inherit);
 		outline-offset: 2px;
+		box-shadow:     var(--wp--custom--shadow--primary--hover, none);
 	}
 }
 
