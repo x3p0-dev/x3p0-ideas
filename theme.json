@@ -1138,22 +1138,22 @@
 			"defaultPresets": false,
 			"presets": [
 				{
-					"name": "XS: Primary (Default)",
+					"name": "XS",
 					"slug": "xs",
 					"shadow": "0 1px 2px 0 var(--wp--custom--color--shadow--primary--default)"
 				},
 				{
-					"name": "Small: Primary (Default)",
+					"name": "Small",
 					"slug": "sm",
 					"shadow": "0 1px 3px 0 var(--wp--custom--color--shadow--primary--default), 0 1px 2px -1px var(--wp--custom--color--shadow--primary--default)"
 				},
 				{
-					"name": "Medium: Primary (Default)",
+					"name": "Medium",
 					"slug": "md",
 					"shadow": "0 4px 6px -1px var(--wp--custom--color--shadow--primary--default), 0 2px 4px -2px var(--wp--custom--color--shadow--primary--default)"
 				},
 				{
-					"name": "Large: Primary (Default)",
+					"name": "Large",
 					"slug": "lg",
 					"shadow": "0 10px 15px -3px var(--wp--custom--color--shadow--primary--default), 0 4px 6px -4px var(--wp--custom--color--shadow--primary--default)"
 				},
