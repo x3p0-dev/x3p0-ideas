@@ -65,7 +65,7 @@
 						"level-1": "light-dark(var(--wp--preset--color--primary-800), var(--wp--preset--color--primary-800))",
 						"level-2": "light-dark(var(--wp--preset--color--primary-900), var(--wp--preset--color--primary-900))",
 						"primary": "light-dark(var(--wp--preset--color--primary-300), var(--wp--preset--color--primary-300))",
-						"interactive": {
+						"button": {
 							"primary": {
 								"default": "light-dark(var(--wp--preset--color--primary-900), var(--wp--preset--color--primary-900))",
 								"hover": "light-dark(var(--wp--preset--color--primary-950), var(--wp--preset--color--primary-950))"
@@ -77,7 +77,7 @@
 						"muted": "light-dark(var(--wp--preset--color--primary-200), var(--wp--preset--color--primary-200))",
 						"primary": "light-dark(var(--wp--preset--color--primary-300), var(--wp--preset--color--primary-300))",
 						"on-primary": "light-dark(var(--wp--preset--color--primary-800), var(--wp--preset--color--primary-800))",
-						"interactive": {
+						"button": {
 							"primary": {
 								"default": "light-dark(var(--wp--preset--color--white), var(--wp--preset--color--white))",
 								"hover": "light-dark(var(--wp--preset--color--primary-50), var(--wp--preset--color--primary-50))"

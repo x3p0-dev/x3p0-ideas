@@ -35,7 +35,7 @@
 					"level-1": "var(--wp--preset--color--primary-900)",
 					"level-2": "var(--wp--preset--color--primary-950)",
 					"accent": "var(--wp--preset--color--primary-600)",
-					"interactive": {
+					"button": {
 						"primary": {
 							"default": "var(--wp--preset--color--primary-600)",
 							"hover": "var(--wp--preset--color--primary-500)"
@@ -52,7 +52,7 @@
 					"tertiary": "var(--wp--preset--color--primary-500)",
 					"accent": "var(--wp--preset--color--primary-50)",
 					"on-accent": "var(--wp--preset--color--primary-50)",
-					"interactive": {
+					"button": {
 						"primary": {
 							"default": "var(--wp--preset--color--primary-50)",
 							"hover": "var(--wp--preset--color--white)"
@@ -75,7 +75,7 @@
 				}
 			},
 			"shadow": {
-				"interactive": {
+				"button": {
 					"primary": {
 						"default": "0 10px 15px -3px light-dark(color-mix(in oklab, var(--wp--preset--color--primary-950) 40%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 60%, transparent)), 0 4px 6px -4px light-dark(color-mix(in oklab, var(--wp--preset--color--primary-600) 40%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 60%, transparent))",
 						"hover": "0 10px 15px -3px light-dark(color-mix(in oklab, var(--wp--preset--color--primary-950) 60%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 100%, transparent)), 0 4px 6px -4px light-dark(color-mix(in oklab, var(--wp--preset--color--primary-600) 60%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 100%, transparent))"

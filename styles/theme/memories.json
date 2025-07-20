@@ -74,7 +74,7 @@
 						"level-0": "var:preset|color|primary-700",
 						"level-1": "var:preset|color|primary-800",
 						"level-2": "var:preset|color|primary-900",
-						"interactive": {
+						"button": {
 							"primary": {
 								"default": "var:preset|color|primary-900",
 								"hover": "var:preset|color|primary-950"
@@ -85,7 +85,7 @@
 						"default": "var:preset|color|white",
 						"muted": "var:preset|color|primary-200",
 						"primary": "var:preset|color|primary-100",
-						"interactive": {
+						"button": {
 							"primary": {
 								"default": "var:preset|color|white",
 								"hover": "var:preset|color|white"
