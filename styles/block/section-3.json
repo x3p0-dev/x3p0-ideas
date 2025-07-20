@@ -27,6 +27,13 @@
 			"border": {
 				"primary": {
 					"color": "var(--wp--preset--color--primary-100)"
+				},
+				"button": {
+					"primary": {
+						"hover": {
+							"color": "var(--wp--preset--color--primary-900)"
+						}
+					}
 				}
 			},
 			"color": {
@@ -38,7 +45,7 @@
 					"button": {
 						"primary": {
 							"default": "var(--wp--preset--color--primary-600)",
-							"hover": "var(--wp--preset--color--primary-500)"
+							"hover": "color-mix(in oklab, var(--wp--preset--color--primary-600) 95%, var(--wp--preset--color--white))"
 						},
 						"secondary": {
 							"default": "transparent",
@@ -55,7 +62,7 @@
 					"button": {
 						"primary": {
 							"default": "var(--wp--preset--color--primary-50)",
-							"hover": "var(--wp--preset--color--white)"
+							"hover": "var(--wp--preset--color--primary-50)"
 						},
 						"secondary": {
 							"default": "currentColor",

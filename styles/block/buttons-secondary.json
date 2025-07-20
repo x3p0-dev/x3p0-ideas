@@ -20,7 +20,7 @@
 		},
 		"elements": {
 			"link": {
-				"css": "&:is(:hover, :focus) { box-shadow: var(--wp--custom--shadow--interactive--secondary--hover); }",
+				"css": "&:is(:hover, :focus) { box-shadow: var(--wp--custom--shadow--interactive--secondary--hover); border: var(--wp--custom--border--button--secondary--hover--width) var(--wp--custom--border--button--secondary--hover--style) var(--wp--custom--border--button--secondary--hover--color); border-radius: var(--wp--custom--border--button--secondary--hover--radius); }",
 				"border": {
 					"color": { "ref": "styles.blocks.core/button.variations.secondary.border.color" },
 					"style": { "ref": "styles.blocks.core/button.variations.secondary.border.style" },
@@ -50,6 +50,12 @@
 					"textDecoration": "none"
 				},
 				":focus": {
+					"border": {
+						"color": "var(--wp--custom--border--button--secondary--hover--color)",
+						"radius": "var(--wp--custom--border--button--secondary--hover--radius)",
+						"style": "var(--wp--custom--border--button--secondary--hover--style)",
+						"width": "var(--wp--custom--border--button--secondary--hover--width)"
+					},
 					"color": {
 						"background": { "ref": "styles.blocks.core/button.variations.secondary.elements.button.:focus.color.background" },
 						"text": { "ref": "styles.blocks.core/button.variations.secondary.elements.button.:focus.color.text" }
@@ -59,6 +65,12 @@
 					}
 				},
 				":hover": {
+					"border": {
+						"color": "var(--wp--custom--border--button--secondary--hover--color)",
+						"radius": "var(--wp--custom--border--button--secondary--hover--radius)",
+						"style": "var(--wp--custom--border--button--secondary--hover--style)",
+						"width": "var(--wp--custom--border--button--secondary--hover--width)"
+					},
 					"color": {
 						"background": { "ref": "styles.blocks.core/button.variations.secondary.elements.button.:hover.color.background" },
 						"text": { "ref": "styles.blocks.core/button.variations.secondary.elements.button.:hover.color.text" }
@@ -71,7 +83,7 @@
 		},
 		"blocks": {
 			"core/social-link": {
-				"css": "&:is(:hover, :focus) { box-shadow: var(--wp--custom--shadow--interactive--secondary--hover); }",
+				"css": "&:is(:hover, :focus) { box-shadow: var(--wp--custom--shadow--interactive--secondary--hover); border: var(--wp--custom--border--button--secondary--hover--width) var(--wp--custom--border--button--secondary--hover--style) var(--wp--custom--border--button--secondary--hover--color); border-radius: var(--wp--custom--border--button--secondary--hover--radius); }",
 				"border": {
 					"color": { "ref": "styles.blocks.core/button.variations.secondary.border.color" },
 					"style": { "ref": "styles.blocks.core/button.variations.secondary.border.style" },

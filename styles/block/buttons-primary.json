@@ -21,7 +21,10 @@
 		"elements": {
 			"link": {
 				"border": {
-					"radius": { "ref": "styles.elements.button.border.radius" }
+					"color": { "ref": "styles.elements.button.border.color" },
+					"radius": { "ref": "styles.elements.button.border.radius" },
+					"style": { "ref": "styles.elements.button.border.style" },
+					"width": { "ref": "styles.elements.button.border.width" }
 				},
 				"color": {
 					"background": { "ref": "styles.elements.button.color.background" },
@@ -48,6 +51,12 @@
 					}
 				},
 				":focus": {
+					"border": {
+						"color": { "ref": "styles.elements.button.:focus.border.color" },
+						"radius": { "ref": "styles.elements.button.:focus.border.radius" },
+						"style": { "ref": "styles.elements.button.:focus.border.style" },
+						"width": { "ref": "styles.elements.button.:focus.border.width" }
+					},
 					"color": {
 						"background": { "ref": "styles.elements.button.:focus.color.background" },
 						"text": { "ref": "styles.elements.button.:focus.color.text" }
@@ -58,6 +67,12 @@
 					}
 				},
 				":hover": {
+					"border": {
+						"color": { "ref": "styles.elements.button.:hover.border.color" },
+						"radius": { "ref": "styles.elements.button.:hover.border.radius" },
+						"style": { "ref": "styles.elements.button.:hover.border.style" },
+						"width": { "ref": "styles.elements.button.:hover.border.width" }
+					},
 					"color": {
 						"background": { "ref": "styles.elements.button.:hover.color.background" },
 						"text": { "ref": "styles.elements.button.:hover.color.text" }
@@ -71,7 +86,7 @@
 		},
 		"blocks": {
 			"core/social-link": {
-				"css": "&:is(:hover, :focus) { box-shadow: var(--wp--custom--shadow--interactive--primary--hover); }",
+				"css": "&:is(:hover, :focus) { box-shadow: var(--wp--custom--shadow--interactive--primary--hover); border: var(--wp--custom--border--button--primary--hover--width) var(--wp--custom--border--button--primary--hover--style) var(--wp--custom--border--button--primary--hover--color); border-radius: var(--wp--custom--border--button--primary--hover--radius); }",
 				"color": {
 					"background": { "ref": "styles.elements.button.color.background" },
 					"text": { "ref": "styles.elements.button.color.text" }

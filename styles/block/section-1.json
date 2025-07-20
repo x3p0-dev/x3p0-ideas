@@ -27,6 +27,13 @@
 			"border": {
 				"primary": {
 					"color": "light-dark(var(--wp--preset--color--neutral-200), var(--wp--preset--color--neutral-700))"
+				},
+				"button": {
+					"primary": {
+						"hover": {
+							"color": "light-dark(var(--wp--preset--color--primary-800), var(--wp--preset--color--primary-900))"
+						}
+					}
 				}
 			},
 			"color": {
