@@ -11,10 +11,10 @@
 	"styles": {
 		"css": "width: fit-content",
 		"border": {
-			"color": "var:custom|global|border|color",
-			"style": "var:custom|global|border|style",
-			"width": "var:custom|global|border|width",
-			"radius": "var:custom|global|border|radius"
+			"color": "var:custom|border|primary|color",
+			"style": "var:custom|border|primary|style",
+			"width": "var:custom|border|primary|width",
+			"radius": "var:custom|border|primary|radius"
 		},
 		"color": {
 			"background": "var:custom|color|surface|level-1",

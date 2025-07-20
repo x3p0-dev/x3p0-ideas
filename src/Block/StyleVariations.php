@@ -97,17 +97,36 @@ class StyleVariations implements Bootable
 				continue;
 			}
 
-			$declarations = [];
-			$css_vars     = static::flattenTree($variation['settings']['custom']);
+			$base_declarations  = [];
+			$child_declarations = [];
+
+			$css_vars = static::flattenTree($variation['settings']['custom']);
 
 			foreach ($css_vars as $property => $value) {
-				$declarations["--wp--custom--{$property}"] = $value;
+				if (
+					str_starts_with($property, 'border')
+					|| str_starts_with($property, 'shadow')
+				) {
+					$child_declarations["--wp--custom--{$property}"] = $value;
+					continue;
+				}
+
+				$base_declarations["--wp--custom--{$property}"] = $value;
 			}
 
-			$this->css_rules[] = new WP_Style_Engine_CSS_Rule(
-				":root :where(.is-style-{$variation['slug']})",
-				$declarations
-			);
+			if ($base_declarations) {
+				$this->css_rules[] = new WP_Style_Engine_CSS_Rule(
+					":root :where(.is-style-{$variation['slug']})",
+					$base_declarations
+				);
+			}
+
+			if ($child_declarations) {
+				$this->css_rules[] = new WP_Style_Engine_CSS_Rule(
+					":root :where(.is-style-{$variation['slug']} > *)",
+					$child_declarations
+				);
+			}
 		}
 	}
 

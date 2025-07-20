@@ -76,10 +76,10 @@
 	font-weight: inherit;
 	line-height: inherit;
 
-	border-color:  var(--wp--custom--color--border--primary, none);
-	border-style:  var(--wp--custom--global--border--style, solid);
-	border-width:  var(--wp--custom--global--border--width, 1px);
-	border-radius: var(--wp--custom--global--border--radius, none);
+	border-color:  var(--wp--custom--border--primary--color, none);
+	border-style:  var(--wp--custom--border--primary--style, solid);
+	border-width:  var(--wp--custom--border--primary--width, 1px);
+	border-radius: var(--wp--custom--border--primary--radius, none);
 	box-shadow:    var(--wp--custom--shadow--primary--default, none);
 
 	&:focus {

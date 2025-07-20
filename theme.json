@@ -727,6 +727,14 @@
 		"custom": {
 			"colorScheme": "light dark",
 			"variation": "default",
+			"border": {
+				"primary": {
+					"color": "light-dark(var(--wp--preset--color--neutral-200), var(--wp--preset--color--neutral-800))",
+					"style": "solid",
+					"width": "1px",
+					"radius": "6px"
+				}
+			},
 			"color": {
 				"surface": {
 					"level-0": "light-dark(var(--wp--preset--color--white), var(--wp--preset--color--neutral-950))",
@@ -780,21 +788,9 @@
 						"default": "var:custom|color|foreground|primary",
 						"hover": "var:custom|color|foreground|primary"
 					}
-				},
-				"border": {
-					"primary": "light-dark(var(--wp--preset--color--neutral-200), var(--wp--preset--color--neutral-800))",
-					"secondary": "light-dark(var(--wp--preset--color--neutral-300), var(--wp--preset--color--neutral-700))"
 				}
 			},
 			"global": {
-				"border": {
-					"color": "var:custom|color|border|primary",
-					"style": "solid",
-					"width": "1px",
-					"radius": "6px",
-					"rules": "var(--wp--custom--global--border--width) var(--wp--custom--global--border--style) var(--wp--custom--global--border--color)"
-				},
-				"shadow": "var:custom|shadow|primary|default",
 				"fadedGradient": "linear-gradient( 180deg, transparent -40%, var( --wp--custom--color--surface--level-0 ) 100% )"
 			},
 			"elements": {
@@ -1208,7 +1204,7 @@
 			"button": {
 				"border": {
 					"color": "transparent",
-					"radius": "var:custom|global|border|radius",
+					"radius": "var:custom|border|primary|radius",
 					"style": "solid",
 					"width": "1px"
 				},
@@ -1341,7 +1337,7 @@
 			},
 			"link": {
 				"border": {
-					"radius": "var:custom|global|border|radius"
+					"radius": "var:custom|border|primary|radius"
 				},
 				"color": {
 					"text": "var:custom|color|foreground|link|primary|default"
@@ -1412,7 +1408,7 @@
 					"outline": {
 						"border": {
 							"color": "currentColor",
-							"style": "var:custom|global|border|style",
+							"style": "var:custom|border|primary|style",
 							"width": "1px"
 						},
 						"color": {
@@ -1435,7 +1431,7 @@
 						"css": "&:is(:hover, :focus) { box-shadow: var(--wp--custom--shadow--interactive--secondary--hover); }",
 						"border": {
 							"color": "currentColor",
-							"style": "var:custom|global|border|style",
+							"style": "var:custom|border|primary|style",
 							"width": "1px"
 						},
 						"color": {
@@ -1487,10 +1483,10 @@
 			},
 			"core/calendar": {
 				"border": {
-					"color": "var:custom|color|border|primary",
-					"style": "var:custom|global|border|style",
-					"width": "var:custom|global|border|width",
-					"radius": "var:custom|global|border|radius"
+					"color": "var:custom|border|primary|color",
+					"style": "var:custom|border|primary|style",
+					"width": "var:custom|border|primary|width",
+					"radius": "var:custom|border|primary|radius"
 				},
 				"color": {
 					"background": "var:custom|color|surface|level-1",
@@ -1527,10 +1523,10 @@
 			},
 			"core/code": {
 				"border": {
-					"color": "var:custom|color|border|primary",
-					"style": "var:custom|global|border|style",
-					"width": "var:custom|global|border|width",
-					"radius": "var:custom|global|border|radius"
+					"color": "var:custom|border|primary|color",
+					"style": "var:custom|border|primary|style",
+					"width": "var:custom|border|primary|width",
+					"radius": "var:custom|border|primary|radius"
 				},
 				"color": {
 					"background": "var:custom|color|surface|level-1",
@@ -1617,10 +1613,10 @@
 			},
 			"core/details": {
 				"border": {
-					"color": "var:custom|color|border|primary",
-					"style": "var:custom|global|border|style",
-					"width": "var:custom|global|border|width",
-					"radius": "var:custom|global|border|radius"
+					"color": "var:custom|border|primary|color",
+					"style": "var:custom|border|primary|style",
+					"width": "var:custom|border|primary|width",
+					"radius": "var:custom|border|primary|radius"
 				},
 				"color": {
 					"background": "var:custom|color|surface|level-1",
@@ -1631,10 +1627,10 @@
 			},
 			"core/file": {
 				"border": {
-					"color": "var:custom|color|border|primary",
-					"style": "var:custom|global|border|style",
-					"width": "var:custom|global|border|width",
-					"radius": "var:custom|global|border|radius"
+					"color": "var:custom|border|primary|color",
+					"style": "var:custom|border|primary|style",
+					"width": "var:custom|border|primary|width",
+					"radius": "var:custom|border|primary|radius"
 				},
 				"color": {
 					"background": "var:custom|color|surface|level-1",
@@ -1700,7 +1696,7 @@
 			},
 			"core/image": {
 				"border": {
-					"radius": "var:custom|global|border|radius"
+					"radius": "var:custom|border|primary|radius"
 				},
 				"css": "{\n\tborder-radius: var(--wp--custom--global--border--radius); }\n\n& img {\n\tbox-shadow: var(--wp--custom--shadow--primary--default);\n}",
 				"variations": {
@@ -1761,7 +1757,7 @@
 					"color": "var(--wp--custom--global--border--color) !important",
 					"style": "var(--wp--custom--global--border--style) !important",
 					"width": "var(--wp--custom--global--border--width) !important",
-					"radius": "var:custom|global|border|radius"
+					"radius": "var:custom|border|primary|radius"
 				},
 				"color": {
 					"background": "var:custom|color|surface|submenu|default",
@@ -1842,7 +1838,7 @@
 			},
 			"core/post-featured-image": {
 				"border": {
-					"radius": "var:custom|global|border|radius"
+					"radius": "var:custom|border|primary|radius"
 				},
 				"css": "& img {\n\tbox-shadow: var(--wp--custom--shadow--primary--default);\n}"
 			},
@@ -2067,7 +2063,7 @@
 			},
 			"core/social-link": {
 				"border": {
-					"radius": "var:custom|global|border|radius"
+					"radius": "var:custom|border|primary|radius"
 				},
 				"shadow": "var:custom|shadow|interactive|secondary|default"
 			},
@@ -2106,7 +2102,7 @@
 			},
 			"core/table": {
 				"border": {
-					"color": "var:custom|color|border|primary"
+					"color": "var:custom|border|primary|color"
 				},
 				"typography": {
 					"fontSize": "var:preset|font-size|sm",

@@ -376,9 +376,9 @@
 				},
 				"border": {
 					"top": {
-						"color": "var:custom|global|border|color",
-						"style": "var:custom|global|border|style",
-						"width": "var:custom|global|border|width"
+						"color": "var:custom|border|primary|color",
+						"style": "var:custom|border|primary|style",
+						"width": "var:custom|border|primary|width"
 					}
 				}
 			}

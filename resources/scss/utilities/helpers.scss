@@ -12,10 +12,10 @@
 ///
 :root :where(.has-global-border) {
 	overflow: hidden;
-	border-color: var(--wp--custom--color--border--primary, transparent);
-	border-style: var(--wp--custom--global--border--style, solid);
-	border-width: var(--wp--custom--global--border--width, 0);
-	border-radius: var(--wp--custom--global--border--radius, 0);
+	border-color: var(--wp--custom--border--primary--color, transparent);
+	border-style: var(--wp--custom--border--primary--style, solid);
+	border-width: var(--wp--custom--border--primary--width, 0);
+	border-radius: var(--wp--custom--border--primary--radius, 0);
 	box-shadow: var(--wp--custom--shadow--primary--default, none);
 }
 
