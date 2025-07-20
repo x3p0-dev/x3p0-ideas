@@ -1698,7 +1698,7 @@
 				"border": {
 					"radius": "var:custom|border|primary|radius"
 				},
-				"css": "{\n\tborder-radius: var(--wp--custom--global--border--radius); }\n\n& img {\n\tbox-shadow: var(--wp--custom--shadow--primary--default);\n}",
+				"css": "{\n\tborder-radius: var(--wp--custom--border--primary--radius); }\n\n& img {\n\tbox-shadow: var(--wp--custom--shadow--primary--default);\n}",
 				"variations": {
 					"rounded": {
 						"border": {
@@ -1754,9 +1754,9 @@
 			},
 			"core/navigation-submenu": {
 				"border": {
-					"color": "var(--wp--custom--global--border--color) !important",
-					"style": "var(--wp--custom--global--border--style) !important",
-					"width": "var(--wp--custom--global--border--width) !important",
+					"color": "var(--wp--custom--border--primary--color) !important",
+					"style": "var(--wp--custom--border--primary--style) !important",
+					"width": "var(--wp--custom--border--primary--width) !important",
 					"radius": "var:custom|border|primary|radius"
 				},
 				"color": {
