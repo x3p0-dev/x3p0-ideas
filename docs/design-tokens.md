@@ -12,6 +12,16 @@
 	--wp--custom--border--primary--width: 1px;
 	--wp--custom--border--primary--radius: 6px;
 
+	// Button border colors.
+	--wp--custom--border--button--primary--color: #000;
+	--wp--custom--border--button--primary--style: solid;
+	--wp--custom--border--button--primary--width: 1px;
+	--wp--custom--border--button--primary--radius: 6px;
+	--wp--custom--border--button--secondary--color: #000;
+	--wp--custom--border--button--secondary--style: solid;
+	--wp--custom--border--button--secondary--width: 1px;
+	--wp--custom--border--button--secondary--radius: 6px;
+
 	// ---------------------------------------------------------------------
 	// Colors
 	// ---------------------------------------------------------------------
