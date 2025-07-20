@@ -44,13 +44,13 @@ body {
 }
 
 ///
-/// When a section style is in use, map its colors defined in `theme.json` to
-/// the semantic color tokens for the theme.
+/// When a section style is in use, map its properties defined in `theme.json`
+/// to the semantic design tokens for the theme.
 ///
 $surface:    '--wp--custom--color--surface';
 $foreground: '--wp--custom--color--foreground';
-$icon:       '--wp--custom--color--icon';
 $border:     '--wp--custom--color--border';
+$shadow:     '--wp--custom--shadow';
 
 @for $name from 1 through 4 {
 	$section: '--wp--custom--section-#{$name}';
@@ -99,5 +99,15 @@ $border:     '--wp--custom--color--border';
 			// semantic border are out of sync for some reason.
 			--wp--custom--global--border--color: var(#{$section}--color--border--primary, currentColor);
 		}
+
+		// Shadows.
+		#{$shadow}--primary--default: var(#{$section}--shadow--primary--default);
+		#{$shadow}--primary--hover:   var(#{$section}--shadow--primary--hover);
+
+		// Button shadows.
+		#{$shadow}--interactive--primary--default:   var(#{$section}--shadow--interactive--primary--default);
+		#{$shadow}--interactive--primary--hover:     var(#{$section}--shadow--interactive--primary--hover);
+		#{$shadow}--interactive--secondary--default: var(#{$section}--shadow--interactive--secondary--default);
+		#{$shadow}--interactive--secondary--hover:   var(#{$section}--shadow--interactive--secondary--hover);
 	}
 }

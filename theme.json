@@ -784,22 +784,6 @@
 				"border": {
 					"primary": "light-dark(var(--wp--preset--color--neutral-200), var(--wp--preset--color--neutral-800))",
 					"secondary": "light-dark(var(--wp--preset--color--neutral-300), var(--wp--preset--color--neutral-700))"
-				},
-				"shadow": {
-					"primary": {
-						"default": "light-dark(color-mix(in oklab, var(--wp--preset--color--black) 10%, transparent), color-mix(in oklab, var(--wp--preset--color--black) 30%, transparent))",
-						"hover": "light-dark(color-mix(in oklab, var(--wp--preset--color--black) 25%, transparent), color-mix(in oklab, var(--wp--preset--color--black) 45%, transparent))"
-					},
-					"interactive": {
-						"primary": {
-							"default": "light-dark(color-mix(in oklab, var(--wp--preset--color--primary-600) 40%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 60%, transparent))",
-							"hover": "light-dark(color-mix(in oklab, var(--wp--preset--color--primary-600) 60%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 100%, transparent))"
-						},
-						"secondary": {
-							"default": "light-dark(color-mix(in oklab, var(--wp--preset--color--black) 10%, transparent), color-mix(in oklab, var(--wp--preset--color--black) 30%, transparent))",
-							"hover": "light-dark(color-mix(in oklab, var(--wp--preset--color--black) 25%, transparent), color-mix(in oklab, var(--wp--preset--color--black) 45%, transparent))"
-						}
-					}
 				}
 			},
 			"global": {
@@ -887,6 +871,22 @@
 						"primary": "light-dark(var(--wp--preset--color--neutral-200), var(--wp--preset--color--neutral-700))",
 						"secondary": "light-dark(var(--wp--preset--color--neutral-300), var(--wp--preset--color--neutral-600))"
 					}
+				},
+				"shadow": {
+					"primary": {
+						"default": "var:custom|shadow|primary|default",
+						"hover": "var:custom|shadow|primary|hover"
+					},
+					"interactive": {
+						"primary": {
+							"default": "var:custom|shadow|interactive|primary|default",
+							"hover": "var:custom|shadow|interactive|primary|hover"
+						},
+						"secondary": {
+							"default": "var:custom|shadow|interactive|secondary|default",
+							"hover": "var:custom|shadow|interactive|secondary|hover"
+						}
+					}
 				}
 			},
 			"section-2": {
@@ -937,6 +937,22 @@
 					"border": {
 						"primary": "light-dark(var(--wp--preset--color--neutral-300), var(--wp--preset--color--neutral-700))",
 						"secondary": "light-dark(var(--wp--preset--color--neutral-300), var(--wp--preset--color--neutral-600))"
+					}
+				},
+				"shadow": {
+					"primary": {
+						"default": "var:custom|shadow|primary|default",
+						"hover": "var:custom|shadow|primary|hover"
+					},
+					"interactive": {
+						"primary": {
+							"default": "var:custom|shadow|interactive|primary|default",
+							"hover": "var:custom|shadow|interactive|primary|hover"
+						},
+						"secondary": {
+							"default": "var:custom|shadow|interactive|secondary|default",
+							"hover": "var:custom|shadow|interactive|secondary|hover"
+						}
 					}
 				}
 			},
@@ -989,6 +1005,22 @@
 						"primary": "var(--wp--preset--color--primary-100)",
 						"secondary": "var(--wp--preset--color--primary-200)"
 					}
+				},
+				"shadow": {
+					"primary": {
+						"default": "var:custom|shadow|primary|default",
+						"hover": "var:custom|shadow|primary|hover"
+					},
+					"interactive": {
+						"primary": {
+							"default": "0 10px 15px -3px light-dark(color-mix(in oklab, var(--wp--preset--color--primary-950) 40%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 60%, transparent)), 0 4px 6px -4px light-dark(color-mix(in oklab, var(--wp--preset--color--primary-600) 40%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 60%, transparent))",
+							"hover": "0 10px 15px -3px light-dark(color-mix(in oklab, var(--wp--preset--color--primary-950) 60%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 100%, transparent)), 0 4px 6px -4px light-dark(color-mix(in oklab, var(--wp--preset--color--primary-600) 60%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 100%, transparent))"
+						},
+						"secondary": {
+							"default": "var:custom|shadow|interactive|secondary|default",
+							"hover": "var:custom|shadow|interactive|secondary|hover"
+						}
+					}
 				}
 			},
 			"section-4": {
@@ -1040,21 +1072,37 @@
 						"primary": "light-dark(var(--wp--preset--color--secondary-900), var(--wp--preset--color--secondary-100))",
 						"secondary": "light-dark(var(--wp--preset--color--secondary-800), var(--wp--preset--color--secondary-200))"
 					}
+				},
+				"shadow": {
+					"primary": {
+						"default": "var:custom|shadow|primary|default",
+						"hover": "var:custom|shadow|primary|hover"
+					},
+					"interactive": {
+						"primary": {
+							"default": "var:custom|shadow|interactive|primary|default",
+							"hover": "var:custom|shadow|interactive|primary|hover"
+						},
+						"secondary": {
+							"default": "var:custom|shadow|interactive|secondary|default",
+							"hover": "var:custom|shadow|interactive|secondary|hover"
+						}
+					}
 				}
 			},
 			"shadow": {
 				"primary": {
-					"default": "0 10px 15px -3px var(--wp--custom--color--shadow--primary--default), 0 4px 6px -4px var(--wp--custom--color--shadow--primary--default)",
-					"hover": "0 10px 15px -3px var(--wp--custom--color--shadow--primary--hover), 0 4px 6px -4px var(--wp--custom--color--shadow--primary--hover)"
+					"default": "0 10px 15px -3px light-dark(color-mix(in oklab, var(--wp--preset--color--black) 10%, transparent), color-mix(in oklab, var(--wp--preset--color--black) 30%, transparent)), 0 4px 6px -4px light-dark(color-mix(in oklab, var(--wp--preset--color--black) 10%, transparent), color-mix(in oklab, var(--wp--preset--color--black) 30%, transparent))",
+					"hover": "0 10px 15px -3px light-dark(color-mix(in oklab, var(--wp--preset--color--black) 25%, transparent), color-mix(in oklab, var(--wp--preset--color--black) 45%, transparent)), 0 4px 6px -4px light-dark(color-mix(in oklab, var(--wp--preset--color--black) 25%, transparent), color-mix(in oklab, var(--wp--preset--color--black) 45%, transparent))"
 				},
 				"interactive": {
 					"primary": {
-						"default": "0 10px 15px -3px var(--wp--custom--color--shadow--interactive--primary--default), 0 4px 6px -4px var(--wp--custom--color--shadow--interactive--primary--default)",
-						"hover": "0 10px 15px -3px var(--wp--custom--color--shadow--interactive--primary--hover), 0 4px 6px -4px var(--wp--custom--color--shadow--interactive--primary--hover)"
+						"default": "0 10px 15px -3px light-dark(color-mix(in oklab, var(--wp--preset--color--primary-600) 40%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 60%, transparent)), 0 4px 6px -4px light-dark(color-mix(in oklab, var(--wp--preset--color--primary-600) 40%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 60%, transparent))",
+						"hover": "0 10px 15px -3px light-dark(color-mix(in oklab, var(--wp--preset--color--primary-600) 60%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 100%, transparent)), 0 4px 6px -4px light-dark(color-mix(in oklab, var(--wp--preset--color--primary-600) 60%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 100%, transparent))"
 					},
 					"secondary": {
-						"default": "0 10px 15px -3px var(--wp--custom--color--shadow--interactive--secondary--default), 0 4px 6px -4px var(--wp--custom--color--shadow--interactive--secondary--default)",
-						"hover": "0 10px 15px -3px var(--wp--custom--color--shadow--interactive--secondary--hover), 0 4px 6px -4px var(--wp--custom--color--shadow--interactive--secondary--hover)"
+						"default": "0 10px 15px -3px light-dark(color-mix(in oklab, var(--wp--preset--color--black) 10%, transparent), color-mix(in oklab, var(--wp--preset--color--black) 30%, transparent)), 0 4px 6px -4px light-dark(color-mix(in oklab, var(--wp--preset--color--black) 10%, transparent), color-mix(in oklab, var(--wp--preset--color--black) 30%, transparent))",
+						"hover": "0 10px 15px -3px light-dark(color-mix(in oklab, var(--wp--preset--color--black) 25%, transparent), color-mix(in oklab, var(--wp--preset--color--black) 45%, transparent)), 0 4px 6px -4px light-dark(color-mix(in oklab, var(--wp--preset--color--black) 25%, transparent), color-mix(in oklab, var(--wp--preset--color--black) 45%, transparent))"
 					}
 				}
 			},
