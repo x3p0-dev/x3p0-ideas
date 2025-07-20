@@ -12,7 +12,7 @@
 ///
 :root :where(.has-global-border) {
 	overflow: hidden;
-	border-color: var(--wp--custom--global--border--color, transparent);
+	border-color: var(--wp--custom--color--border--primary, transparent);
 	border-style: var(--wp--custom--global--border--style, solid);
 	border-width: var(--wp--custom--global--border--width, 0);
 	border-radius: var(--wp--custom--global--border--radius, 0);

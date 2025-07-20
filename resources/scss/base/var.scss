@@ -47,67 +47,23 @@ body {
 /// When a section style is in use, map its properties defined in `theme.json`
 /// to the semantic design tokens for the theme.
 ///
-$surface:    '--wp--custom--color--surface';
-$foreground: '--wp--custom--color--foreground';
 $border:     '--wp--custom--color--border';
-$shadow:     '--wp--custom--shadow';
 
 @for $name from 1 through 4 {
 	$section: '--wp--custom--section-#{$name}';
 
 	:root :where(.is-style-section-#{$name}) {
 
-		// Surface/background colors.
-		#{$surface}--level-0: var(#{$section}--color--surface--level-0);
-		#{$surface}--level-1: var(#{$section}--color--surface--level-1);
-		#{$surface}--level-2: var(#{$section}--color--surface--level-2);
-		#{$surface}--accent:  var(#{$section}--color--surface--accent);
-
-		// Button component surface/background colors.
-		#{$surface}--interactive--primary--default:   var(#{$section}--color--surface--interactive--primary--default);
-		#{$surface}--interactive--primary--hover:     var(#{$section}--color--surface--interactive--primary--hover);
-		#{$surface}--interactive--secondary--default: var(#{$section}--color--surface--interactive--secondary--default);
-		#{$surface}--interactive--secondary--hover:   var(#{$section}--color--surface--interactive--secondary--hover);
-
-		// Foreground colors.
-		#{$foreground}--primary:   var(#{$section}--color--foreground--primary);
-		#{$foreground}--secondary: var(#{$section}--color--foreground--secondary);
-		#{$foreground}--tertiary:  var(#{$section}--color--foreground--tertiary);
-		#{$foreground}--accent:    var(#{$section}--color--foreground--accent);
-		#{$foreground}--on-accent: var(#{$section}--color--foreground--on-accent);
-
-		// Button component foreground colors.
-		#{$foreground}--interactive--primary--default:   var(#{$section}--color--foreground--interactive--primary--default);
-		#{$foreground}--interactive--primary--hover:     var(#{$section}--color--foreground--interactive--primary--hover);
-		#{$foreground}--interactive--secondary--default: var(#{$section}--color--foreground--interactive--secondary--default);
-		#{$foreground}--interactive--secondary--hover:   var(#{$section}--color--foreground--interactive--secondary--hover);
-
-		// Link component foreground colors.
-		#{$foreground}--link--primary--default:   var(#{$section}--color--foreground--link--primary--default);
-		#{$foreground}--link--primary--hover:     var(#{$section}--color--foreground--link--primary--hover);
-		#{$foreground}--link--secondary--default: var(#{$section}--color--foreground--link--secondary--default);
-		#{$foreground}--link--secondary--hover:   var(#{$section}--color--foreground--link--secondary--hover);
-
 		// Border colors. Note that these are defined for child elements
 		// only. This is because the border color for the parent sits on
 		// sections with other backgrounds and should inherit their
 		// borders.
 		> * {
-			#{$border}--primary: var(#{$section}--color--border--primary, currentColor);
+			#{$border}--primary: var(#{$border}--primary, currentColor);
 
 			// Also assigns the global border in case it and the
 			// semantic border are out of sync for some reason.
-			--wp--custom--global--border--color: var(#{$section}--color--border--primary, currentColor);
+		//	--wp--custom--global--border--color: var(#{$border}--primary, currentColor);
 		}
-
-		// Shadows.
-		#{$shadow}--primary--default: var(#{$section}--shadow--primary--default);
-		#{$shadow}--primary--hover:   var(#{$section}--shadow--primary--hover);
-
-		// Button shadows.
-		#{$shadow}--interactive--primary--default:   var(#{$section}--shadow--interactive--primary--default);
-		#{$shadow}--interactive--primary--hover:     var(#{$section}--shadow--interactive--primary--hover);
-		#{$shadow}--interactive--secondary--default: var(#{$section}--shadow--interactive--secondary--default);
-		#{$shadow}--interactive--secondary--hover:   var(#{$section}--shadow--interactive--secondary--hover);
 	}
 }

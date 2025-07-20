@@ -14,12 +14,22 @@ declare(strict_types=1);
 namespace X3P0\Ideas\Block;
 
 use WP_Block_Styles_Registry;
+use WP_Style_Engine_CSS_Rule;
+use WP_Theme_JSON_Resolver;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Action, Hookable};
 
 class StyleVariations implements Bootable
 {
 	use Hookable;
+
+	/**
+	 * Stores an array off `WP_Style_Engine_CSS_Rule` objects.
+	 *
+	 * @since 1.0.0
+	 * @var   WP_Style_Engine_CSS_Rule[]
+	 */
+	protected array $css_rules = [];
 
 	/**
 	 * Sets up the object state.
@@ -64,6 +74,97 @@ class StyleVariations implements Bootable
 				]);
 			}
 		}
+	}
+
+	/**
+	 * Registers custom CSS rules from the `settings.custom` property from
+	 * block style variation files.
+	 *
+	 * @since 1.0.0
+	 */
+	#[Action('init')]
+	public function registerCssRules(): void
+	{
+		$variations = WP_Theme_JSON_Resolver::get_style_variations('block');
+
+		foreach ($variations as $variation) {
+			if (
+				empty($variation['slug'])
+				|| empty($variation['blockTypes'])
+				|| empty($variation['settings'])
+				|| empty($variation['settings']['custom'])
+			) {
+				continue;
+			}
+
+			$declarations = [];
+			$css_vars     = static::flattenTree($variation['settings']['custom']);
+
+			foreach ($css_vars as $property => $value) {
+				$declarations["--wp--custom--{$property}"] = $value;
+			}
+
+			$this->css_rules[] = new WP_Style_Engine_CSS_Rule(
+				":root :where(.is-style-{$variation['slug']})",
+				$declarations,
+				null
+			);
+		}
+	}
+
+	/**
+	 * Enqueues the CSS from our custom block style CSS rules.
+	 *
+	 * @since 1.0.0
+	 */
+	#[Action('enqueue_block_assets')]
+	public function enqueueStyles(): void
+	{
+		if ([] === $this->css_rules) {
+			return;
+		}
+		$style = '';
+
+		foreach ($this->css_rules as $rule) {
+			$declarations = '';
+
+			foreach ($rule->get_declarations()->get_declarations() as $property => $value) {
+				$declarations .= "{$property}: {$value};";
+			}
+
+			$style .= "{$rule->get_selector()} { {$declarations} }";
+		}
+
+		wp_register_style('x3p0-ideas-block-styles-custom', false);
+		wp_add_inline_style('x3p0-ideas-block-styles-custom', $style);
+		wp_enqueue_style('x3p0-ideas-block-styles-custom');
+	}
+
+	/**
+	 * Flattens a JSON object tree, creating CSS custom properties.
+	 *
+	 * @since 1.0.0
+	 */
+	private static function flattenTree(array $tree, string $prefix = ''): array
+	{
+		$result = [];
+
+		foreach ($tree as $property => $value) {
+			$kebab = strtolower(_wp_to_kebab_case($property));
+			$key   = $prefix . str_replace('/', '-', $kebab);
+
+			if (is_array($value)) {
+				$result = array_replace(
+					$result,
+					static::flattenTree($value, "{$key}--")
+				);
+				continue;
+			}
+
+			$result[$key] = $value;
+		}
+
+		return $result;
 	}
 
 	/**
