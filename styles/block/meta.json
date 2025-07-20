@@ -6,7 +6,7 @@
 	"blockTypes": [ "core/group" ],
 	"styles": {
 		"color": {
-			"text": "var:custom|color|text|muted"
+			"text": "var:custom|color|foreground|secondary"
 		},
 		"typography": {
 			"fontSize": "var:preset|font-size|sm",
@@ -15,14 +15,14 @@
 		"elements": {
 			"link": {
 				"color": {
-					"text": "var:custom|color|text|link|secondary|default"
+					"text": "var:custom|color|foreground|link|secondary|primary"
 				},
 				"typography": {
 					"textDecoration": "none"
 				},
 				":focus": {
 					"color": {
-						"text": "var:custom|color|text|link|secondary|interact"
+						"text": "var:custom|color|foreground|link|secondary|hover"
 					},
 					"typography": {
 						"textDecoration": "underline"
@@ -30,7 +30,7 @@
 				},
 				":hover": {
 					"color": {
-						"text": "var:custom|color|text|link|secondary|interact"
+						"text": "var:custom|color|foreground|link|secondary|hover"
 					},
 					"typography": {
 						"textDecoration": "underline"

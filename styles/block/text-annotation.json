@@ -18,7 +18,7 @@
 		},
 		"color": {
 			"background": "var:custom|color|surface|level-1",
-			"text": "var:custom|color|text|default"
+			"text": "var:custom|color|foreground|default"
 		},
 		"spacing": {
 			"padding": {
