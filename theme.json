@@ -916,32 +916,32 @@
 				{
 					"name": "XS",
 					"slug": "xs",
-					"shadow": "0 1px 2px 0 var(--wp--custom--color--shadow--primary--default)"
+					"shadow": "0 1px 2px 0 var(--wp--preset--color--black) 10%, transparent)"
 				},
 				{
 					"name": "Small",
 					"slug": "sm",
-					"shadow": "0 1px 3px 0 var(--wp--custom--color--shadow--primary--default), 0 1px 2px -1px var(--wp--custom--color--shadow--primary--default)"
+					"shadow": "0 1px 3px 0 var(--wp--preset--color--black) 10%, transparent), 0 1px 2px -1px var(--wp--preset--color--black) 10%, transparent)"
 				},
 				{
 					"name": "Medium",
 					"slug": "md",
-					"shadow": "0 4px 6px -1px var(--wp--custom--color--shadow--primary--default), 0 2px 4px -2px var(--wp--custom--color--shadow--primary--default)"
+					"shadow": "0 4px 6px -1px var(--wp--preset--color--black) 10%, transparent), 0 2px 4px -2px var(--wp--preset--color--black) 10%, transparent)"
 				},
 				{
 					"name": "Large",
 					"slug": "lg",
-					"shadow": "0 10px 15px -3px var(--wp--custom--color--shadow--primary--default), 0 4px 6px -4px var(--wp--custom--color--shadow--primary--default)"
+					"shadow": "0 10px 15px -3px var(--wp--preset--color--black) 10%, transparent), 0 4px 6px -4px var(--wp--preset--color--black) 10%, transparent)"
 				},
 				{
 					"name": "XL",
 					"slug": "xl",
-					"shadow": "0 20px 25px -5px var(--wp--custom--color--shadow--primary--default), 0 8px 10px -6px var(--wp--custom--color--shadow--primary--default)"
+					"shadow": "0 20px 25px -5px var(--wp--preset--color--black) 10%, transparent), 0 8px 10px -6px var(--wp--preset--color--black) 10%, transparent)"
 				},
 				{
 					"name": "2XL",
 					"slug": "2-xl",
-					"shadow": "0 25px 50px -12px rgb(0 0 0 / 0.25)"
+					"shadow": "0 25px 50px -12px var(--wp--preset--color--black) 25%, transparent)"
 				}
 			]
 		},
@@ -1428,7 +1428,7 @@
 						}
 					},
 					"secondary": {
-						"css": "&:is(:hover, :focus) { box-shadow: var(--wp--custom--shadow--interactive--secondary--hover); }",
+						"css": "&:is(:hover, :focus) { box-shadow: var(--wp--custom--shadow--button--secondary--hover); }",
 						"border": {
 							"color": "currentColor",
 							"style": "var:custom|border|primary|style",
