@@ -81,6 +81,7 @@ class StyleVariations implements Bootable
 	 * block style variation files.
 	 *
 	 * @since 1.0.0
+	 * @link  https://github.com/WordPress/gutenberg/issues/40318
 	 */
 	#[Action('init')]
 	public function registerCssRules(): void
@@ -91,8 +92,7 @@ class StyleVariations implements Bootable
 			if (
 				empty($variation['slug'])
 				|| empty($variation['blockTypes'])
-				|| empty($variation['settings'])
-				|| empty($variation['settings']['custom'])
+				|| empty($variation['settings']['custom'] ?? null)
 			) {
 				continue;
 			}
@@ -106,8 +106,7 @@ class StyleVariations implements Bootable
 
 			$this->css_rules[] = new WP_Style_Engine_CSS_Rule(
 				":root :where(.is-style-{$variation['slug']})",
-				$declarations,
-				null
+				$declarations
 			);
 		}
 	}
@@ -116,6 +115,7 @@ class StyleVariations implements Bootable
 	 * Enqueues the CSS from our custom block style CSS rules.
 	 *
 	 * @since 1.0.0
+	 * @link  https://github.com/WordPress/gutenberg/issues/40318
 	 */
 	#[Action('enqueue_block_assets')]
 	public function enqueueStyles(): void
@@ -123,6 +123,7 @@ class StyleVariations implements Bootable
 		if ([] === $this->css_rules) {
 			return;
 		}
+
 		$style = '';
 
 		foreach ($this->css_rules as $rule) {
@@ -144,6 +145,7 @@ class StyleVariations implements Bootable
 	 * Flattens a JSON object tree, creating CSS custom properties.
 	 *
 	 * @since 1.0.0
+	 * @link  https://github.com/WordPress/gutenberg/issues/40318
 	 */
 	private static function flattenTree(array $tree, string $prefix = ''): array
 	{
