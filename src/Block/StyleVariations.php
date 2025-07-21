@@ -59,9 +59,11 @@ class StyleVariations implements Bootable
 	public function register(): void
 	{
 		// Register Primary button separately because we need to set it
-		// as the default.
+		// as the default. Basically, this is essentially changing the
+		// user-facing label. The variation actually uses the default
+		// Button block styles.
 		$this->styles->register('core/button', [
-			'name'       => 'primary',
+			'name'       => 'button-primary',
 			'label'      => __('Primary', 'x3p0-ideas'),
 			'is_default' => true
 		]);
@@ -201,10 +203,6 @@ class StyleVariations implements Bootable
 				'horizontal' => __('Horizontal', 'x3p0-ideas'),
 				'pull'       => __('Pull',       'x3p0-ideas'),
 				'spread'     => __('Spread',     'x3p0-ideas')
-			],
-			'core/button' => [
-				'link'      => __('Link', 'x3p0-ideas'),
-				'secondary' => __('Secondary', 'x3p0-ideas')
 			],
 			'core/categories' => [
 				'horizontal' => __('Horizontal', 'x3p0-ideas'),

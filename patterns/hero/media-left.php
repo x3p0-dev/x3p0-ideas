@@ -117,8 +117,8 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 				</div>
 				<!-- /wp:button -->
 
-				<!-- wp:button {"className":"is-style-secondary"} -->
-				<div class="wp-block-button is-style-secondary">
+				<!-- wp:button {"className":"is-style-button-secondary"} -->
+				<div class="wp-block-button is-style-button-secondary">
 					<a class="wp-block-button__link wp-element-button"><?= esc_html__('Learn More &rarr;', 'x3p0-ideas') ?></a>
 				</div>
 				<!-- /wp:button -->
