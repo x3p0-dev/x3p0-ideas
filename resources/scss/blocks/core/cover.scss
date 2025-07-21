@@ -89,6 +89,14 @@
 	background: transparent;
 }
 
+///
+/// Ensures that when this gradient is used, particularly for a block (e.g.,
+/// Group, Columns, etc.), that the color changes based on scheme.
+///
+.wp-block-cover .has-180-deg-transparent-base-gradient-background {
+	color: var(--wp--custom--color--foreground--primary);
+}
+
 // -----------------------------------------------------------------------------
 // Block style variations.
 // -----------------------------------------------------------------------------
