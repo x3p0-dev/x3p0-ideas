@@ -1,7 +1,7 @@
 {
 	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
 	"version": 3,
-	"title": "Buttons: Primary",
+	"title": "Primary",
 	"slug": "buttons-primary",
 	"blockTypes": [
 		"core/post-terms",

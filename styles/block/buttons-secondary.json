@@ -1,7 +1,7 @@
 {
 	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
 	"version": 3,
-	"title": "Buttons: Secondary",
+	"title": "Secondary",
 	"slug": "buttons-secondary",
 	"blockTypes": [
 		"core/post-terms",
@@ -22,19 +22,19 @@
 			"link": {
 				"css": "&:is(:hover, :focus) { box-shadow: var(--wp--custom--shadow--button--secondary--hover); border: var(--wp--custom--border--button--secondary--hover--width) var(--wp--custom--border--button--secondary--hover--style) var(--wp--custom--border--button--secondary--hover--color); border-radius: var(--wp--custom--border--button--secondary--hover--radius); }",
 				"border": {
-					"color": { "ref": "styles.blocks.core/button.variations.secondary.border.color" },
-					"style": { "ref": "styles.blocks.core/button.variations.secondary.border.style" },
-					"width": { "ref": "styles.blocks.core/button.variations.secondary.border.width" },
-					"radius": { "ref": "styles.blocks.core/button.variations.secondary.border.radius" }
+					"color": { "ref": "styles.blocks.core/button.variations.button-secondary.border.color" },
+					"style": { "ref": "styles.blocks.core/button.variations.button-secondary.border.style" },
+					"width": { "ref": "styles.blocks.core/button.variations.button-secondary.border.width" },
+					"radius": { "ref": "styles.blocks.core/button.variations.button-secondary.border.radius" }
 				},
 				"color": {
-					"background": { "ref": "styles.blocks.core/button.variations.secondary.elements.button.color.background" },
-					"text": { "ref": "styles.blocks.core/button.variations.secondary.elements.button.color.text" }
+					"background": { "ref": "styles.blocks.core/button.variations.button-secondary.elements.button.color.background" },
+					"text": { "ref": "styles.blocks.core/button.variations.button-secondary.elements.button.color.text" }
 				},
 				"outline": {
-					"color": { "ref": "styles.blocks.core/button.variations.secondary.outline.color" }
+					"color": { "ref": "styles.blocks.core/button.variations.button-secondary.outline.color" }
 				},
-				"shadow": { "ref": "styles.blocks.core/button.variations.secondary.shadow" },
+				"shadow": { "ref": "styles.blocks.core/button.variations.button-secondary.shadow" },
 				"spacing": {
 					"padding": {
 						"top": { "ref": "styles.elements.button.spacing.padding.top" },
@@ -57,8 +57,8 @@
 						"width": "var(--wp--custom--border--button--secondary--hover--width)"
 					},
 					"color": {
-						"background": { "ref": "styles.blocks.core/button.variations.secondary.elements.button.:focus.color.background" },
-						"text": { "ref": "styles.blocks.core/button.variations.secondary.elements.button.:focus.color.text" }
+						"background": { "ref": "styles.blocks.core/button.variations.button-secondary.elements.button.:focus.color.background" },
+						"text": { "ref": "styles.blocks.core/button.variations.button-secondary.elements.button.:focus.color.text" }
 					},
 					"typography": {
 						"textDecoration": "underline !important"
@@ -72,8 +72,8 @@
 						"width": "var(--wp--custom--border--button--secondary--hover--width)"
 					},
 					"color": {
-						"background": { "ref": "styles.blocks.core/button.variations.secondary.elements.button.:hover.color.background" },
-						"text": { "ref": "styles.blocks.core/button.variations.secondary.elements.button.:hover.color.text" }
+						"background": { "ref": "styles.blocks.core/button.variations.button-secondary.elements.button.:hover.color.background" },
+						"text": { "ref": "styles.blocks.core/button.variations.button-secondary.elements.button.:hover.color.text" }
 					},
 					"typography": {
 						"textDecoration": "underline !important"
@@ -85,16 +85,16 @@
 			"core/social-link": {
 				"css": "&:is(:hover, :focus) { box-shadow: var(--wp--custom--shadow--button--secondary--hover); border: var(--wp--custom--border--button--secondary--hover--width) var(--wp--custom--border--button--secondary--hover--style) var(--wp--custom--border--button--secondary--hover--color); border-radius: var(--wp--custom--border--button--secondary--hover--radius); }",
 				"border": {
-					"color": { "ref": "styles.blocks.core/button.variations.secondary.border.color" },
-					"style": { "ref": "styles.blocks.core/button.variations.secondary.border.style" },
-					"width": { "ref": "styles.blocks.core/button.variations.secondary.border.width" },
-					"radius": { "ref": "styles.blocks.core/button.variations.secondary.border.radius" }
+					"color": { "ref": "styles.blocks.core/button.variations.button-secondary.border.color" },
+					"style": { "ref": "styles.blocks.core/button.variations.button-secondary.border.style" },
+					"width": { "ref": "styles.blocks.core/button.variations.button-secondary.border.width" },
+					"radius": { "ref": "styles.blocks.core/button.variations.button-secondary.border.radius" }
 				},
 				"color": {
-					"background": { "ref": "styles.blocks.core/button.variations.secondary.elements.button.color.background" },
-					"text": { "ref": "styles.blocks.core/button.variations.secondary.elements.button.color.text" }
+					"background": { "ref": "styles.blocks.core/button.variations.button-secondary.elements.button.color.background" },
+					"text": { "ref": "styles.blocks.core/button.variations.button-secondary.elements.button.color.text" }
 				},
-				"shadow": { "ref": "styles.blocks.core/button.variations.secondary.shadow" },
+				"shadow": { "ref": "styles.blocks.core/button.variations.button-secondary.shadow" },
 				"typography": {
 					"lineHeight": { "ref": "styles.elements.button.typography.lineHeight" }
 				},
@@ -103,7 +103,7 @@
 						"border": {
 							"width": "0"
 						},
-						"shadow": { "ref": "styles.blocks.core/button.variations.secondary.shadow" },
+						"shadow": { "ref": "styles.blocks.core/button.variations.button-secondary.shadow" },
 						":focus": {
 							"typography": {
 								"textDecoration": { "ref": "styles.elements.button.:focus.typography.textDecoration" }
