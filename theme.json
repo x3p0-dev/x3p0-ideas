@@ -1426,13 +1426,14 @@
 			"core/button": {
 				"variations": {
 					"link": {
+						"css": "&:is(:focus, :hover) { color: var(--wp--custom--color--foreground--link--primary--hover); }",
 						"border": {
 							"width": "0",
 							"radius": "0"
 						},
 						"color": {
 							"background": "transparent",
-							"text": "currentColor"
+							"text": "var(--wp--custom--color--foreground--link--primary--default)"
 						},
 						"outline": {
 							"width": "0"
