@@ -10,9 +10,9 @@
 	],
 	"styles": {
 		"typography": {
-			"fontSize": "var:preset|font-size|lg",
+			"fontSize": "var(--wp--preset--font-size--lg)",
 			"fontWeight": "500",
-			"lineHeight": "var:custom|line-height|lg"
+			"lineHeight": "var(--wp--custom--line-height--lg)"
 		}
 	}
 }

@@ -65,23 +65,23 @@
 	},
 	"styles": {
 		"typography": {
-			"fontSize": "var:preset|font-size|sm",
-			"lineHeight": "var:custom|line-height|sm"
+			"fontSize": "var(--wp--preset--font-size--sm)",
+			"lineHeight": "var(--wp--custom--line-height--sm)"
 		},
 		"elements": {
 			"button": {
 				"typography": {
 					"fontWeight": "300",
-					"fontSize": "var:preset|font-size|xs",
-					"lineHeight": "var:custom|line-height|xs"
+					"fontSize": "var(--wp--preset--font-size--xs)",
+					"lineHeight": "var(--wp--custom--line-height--xs)"
 				}
 			},
 			"caption": {
 				"typography": {
 					"fontStyle": "italic",
 					"fontWeight": "300",
-					"fontSize": "var:preset|font-size|xs",
-					"lineHeight": "var:custom|line-height|xs"
+					"fontSize": "var(--wp--preset--font-size--xs)",
+					"lineHeight": "var(--wp--custom--line-height--xs)"
 				}
 			},
 			"heading": {
@@ -94,26 +94,26 @@
 		"blocks": {
 			"core/comment-reply-link": {
 				"typography": {
-					"fontSize":"var:preset|font-size|xs",
-					"lineHeight":"var:custom|line-height|xs"
+					"fontSize":"var(--wp--preset--font-size--xs)",
+					"lineHeight":"var(--wp--custom--line-height--xs)"
 				}
 			},
 			"core/gallery": {
 				"typography": {
 					"fontStyle": "italic",
-					"fontSize": "var:preset|font-size|xs",
-					"lineHeight": "var:custom|line-height|xs"
+					"fontSize": "var(--wp--preset--font-size--xs)",
+					"lineHeight": "var(--wp--custom--line-height--xs)"
 				}
 			},
 			"core/navigation-submenu": {
 				"typography": {
-					"fontSize": "var:preset|font-size|xs"
+					"fontSize": "var(--wp--preset--font-size--xs)"
 				}
 			},
 			"core/site-title": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|secondary",
-					"fontSize": "var:preset|font-size|md",
+					"fontFamily": "var(--wp--preset--font-family--secondary)",
+					"fontSize": "var(--wp--preset--font-size--md)",
 					"fontStyle": "italic",
 					"fontWeight": "400",
 					"letterSpacing": "0",
@@ -122,8 +122,8 @@
 			},
 			"core/navigation": {
 				"typography": {
-					"fontSize": "var:preset|font-size|xs",
-					"lineHeight": "var:custom|line-height|xs"
+					"fontSize": "var(--wp--preset--font-size--xs)",
+					"lineHeight": "var(--wp--custom--line-height--xs)"
 				}
 			},
 			"core/pullquote": {
@@ -148,8 +148,8 @@
 						"typography": {
 							"fontStyle": "normal",
 							"fontWeight": "300",
-							"fontSize": "var:preset|font-size|xs",
-							"lineHeight": "var:custom|line-height|xs"
+							"fontSize": "var(--wp--preset--font-size--xs)",
+							"lineHeight": "var(--wp--custom--line-height--xs)"
 						}
 					}
 				}
@@ -162,18 +162,18 @@
 			"core/table": {
 				"typography": {
 					"fontWeight": "300",
-					"fontSize": "var:preset|font-size|xs",
-					"lineHeight": "var:custom|line-height|xs"
+					"fontSize": "var(--wp--preset--font-size--xs)",
+					"lineHeight": "var(--wp--custom--line-height--xs)"
 				}
 			},
 			"core/tag-cloud": {
 				"typography": {
-					"fontSize": "var:preset|font-size|xs"
+					"fontSize": "var(--wp--preset--font-size--xs)"
 				}
 			},
 			"core/verse": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|secondary",
+					"fontFamily": "var(--wp--preset--font-family--secondary)",
 					"fontStyle": "italic",
 					"fontWeight": "300"
 				}
@@ -187,19 +187,19 @@
 			},
 			"meta": {
 				"typography": {
-					"fontSize": "var:preset|font-size|xs",
-					"lineHeight": "var:custom|line-height|xs"
+					"fontSize": "var(--wp--preset--font-size--xs)",
+					"lineHeight": "var(--wp--custom--line-height--xs)"
 				}
 			},
 			"site-header": {
 				"blocks": {
 					"x3p0/breadcrumbs": {
 						"typography": {
-							"fontFamily": "var:preset|font-family|secondary",
+							"fontFamily": "var(--wp--preset--font-family--secondary)",
 							"fontStyle": "italic",
 							"fontWeight": "300",
-							"fontSize": "var:preset|font-size|xs",
-							"lineHeight": "var:custom|line-height|xs"
+							"fontSize": "var(--wp--preset--font-size--xs)",
+							"lineHeight": "var(--wp--custom--line-height--xs)"
 						}
 					}
 				}

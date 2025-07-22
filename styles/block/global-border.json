@@ -9,11 +9,11 @@
 	],
 	"styles": {
 		"border": {
-			"color": "var:custom|border|primary|color",
-			"style": "var:custom|border|primary|style",
-			"width": "var:custom|border|primary|width",
-			"radius": "var:custom|border|primary|radius"
+			"color": "var(--wp--custom--border--primary--color)",
+			"style": "var(--wp--custom--border--primary--style)",
+			"width": "var(--wp--custom--border--primary--width)",
+			"radius": "var(--wp--custom--border--primary--radius)"
 		},
-		"shadow": "var:custom|shadow|primary|default"
+		"shadow": "var(--wp--custom--shadow--primary--default)"
 	}
 }

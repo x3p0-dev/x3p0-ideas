@@ -58,13 +58,13 @@
 		"elements": {
 			"button": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|secondary"
+					"fontFamily": "var(--wp--preset--font-family--secondary)"
 				}
 			},
 			"caption": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|primary",
-					"fontSize": "var:preset|font-size|sm",
+					"fontFamily": "var(--wp--preset--font-family--primary)",
+					"fontSize": "var(--wp--preset--font-size--sm)",
 					"fontStyle": "normal",
 					"fontWeight": "300",
 					"textTransform": "none"
@@ -85,37 +85,37 @@
 		"blocks": {
 			"core/gallery": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|primary",
-					"fontSize": "var:preset|font-size|sm",
+					"fontFamily": "var(--wp--preset--font-family--primary)",
+					"fontSize": "var(--wp--preset--font-size--sm)",
 					"fontStyle": "normal",
 					"textTransform": "none"
 				}
 			},
 			"core/image": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|primary",
-					"fontSize": "var:preset|font-size|sm",
+					"fontFamily": "var(--wp--preset--font-family--primary)",
+					"fontSize": "var(--wp--preset--font-size--sm)",
 					"fontStyle": "normal",
 					"textTransform": "none"
 				}
 			},
 			"core/navigation": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|secondary",
-					"fontSize": "var:preset|font-size|sm",
+					"fontFamily": "var(--wp--preset--font-family--secondary)",
+					"fontSize": "var(--wp--preset--font-size--sm)",
 					"fontWeight": "400"
 				}
 			},
 			"core/pullquote": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|primary",
+					"fontFamily": "var(--wp--preset--font-family--primary)",
 					"fontStyle": "normal",
 					"fontWeight": "500"
 				},
 				"elements": {
 					"cite": {
 						"typography": {
-							"fontFamily": "var:preset|font-family|primary",
+							"fontFamily": "var(--wp--preset--font-family--primary)",
 							"fontStyle": "normal",
 							"fontWeight": "300"
 						}
@@ -124,21 +124,21 @@
 			},
 			"core/query-pagination": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|primary",
-					"fontSize": "var:preset|font-size|sm",
+					"fontFamily": "var(--wp--preset--font-family--primary)",
+					"fontSize": "var(--wp--preset--font-size--sm)",
 					"fontWeight": "600",
-					"lineHeight": "var:custom|line-height|sm"
+					"lineHeight": "var(--wp--custom--line-height--sm)"
 				}
 			},
 			"core/quote": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|secondary",
+					"fontFamily": "var(--wp--preset--font-family--secondary)",
 					"fontStyle": "italic"
 				},
 				"elements": {
 					"cite": {
 						"typography": {
-							"fontFamily": "var:preset|font-family|primary",
+							"fontFamily": "var(--wp--preset--font-family--primary)",
 							"fontSize": "0.875em",
 							"fontStyle": "normal"
 						}
@@ -147,8 +147,8 @@
 			},
 			"core/site-title": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|primary",
-					"fontSize": "var:preset|font-size|md",
+					"fontFamily": "var(--wp--preset--font-family--primary)",
+					"fontSize": "var(--wp--preset--font-size--md)",
 					"fontStyle": "normal",
 					"fontWeight": "500",
 					"letterSpacing": "0",
@@ -157,11 +157,11 @@
 			},
 			"core/verse": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|primary",
-					"fontSize": "var:preset|font-size|md",
+					"fontFamily": "var(--wp--preset--font-family--primary)",
+					"fontSize": "var(--wp--preset--font-size--md)",
 					"fontStyle": "italic",
 					"fontWeight": "400",
-					"lineHeight": "var:custom|line-height|md"
+					"lineHeight": "var(--wp--custom--line-height--md)"
 				}
 			}
 		},
@@ -170,9 +170,9 @@
 				"blocks": {
 					"x3p0/breadcrumbs": {
 						"typography": {
-							"fontFamily": "var:preset|font-family|secondary",
-							"fontSize": "var:preset|font-size|xs",
-							"lineHeight": "var:custom|line-height|xs"
+							"fontFamily": "var(--wp--preset--font-family--secondary)",
+							"fontSize": "var(--wp--preset--font-size--xs)",
+							"lineHeight": "var(--wp--custom--line-height--xs)"
 						}
 					}
 				}

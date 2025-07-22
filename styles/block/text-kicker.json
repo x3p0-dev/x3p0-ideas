@@ -10,10 +10,10 @@
 	],
 	"styles": {
 		"typography": {
-			"fontFamily": "var:preset|font-family|secondary",
-			"fontSize": "var:preset|font-size|xs",
+			"fontFamily": "var(--wp--preset--font-family--secondary)",
+			"fontSize": "var(--wp--preset--font-size--xs)",
 			"fontWeight": "600",
-			"lineHeight": "var:custom|line-height|xs",
+			"lineHeight": "var(--wp--custom--line-height--xs)",
 			"textTransform": "uppercase"
 		}
 	}

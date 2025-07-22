@@ -6,7 +6,7 @@
 	"blockTypes": [ "core/template-part" ],
 	"styles": {
 		"color": {
-			"background": "var:custom|color|surface|level-1"
+			"background": "var(--wp--custom--color--surface--level-1)"
 		}
 	}
 }

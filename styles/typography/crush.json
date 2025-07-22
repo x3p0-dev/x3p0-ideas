@@ -47,13 +47,13 @@
 		"elements": {
 			"button": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|secondary"
+					"fontFamily": "var(--wp--preset--font-family--secondary)"
 				}
 			},
 			"caption": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|primary",
-					"fontSize": "var:preset|font-size|md",
+					"fontFamily": "var(--wp--preset--font-family--primary)",
+					"fontSize": "var(--wp--preset--font-size--md)",
 					"fontStyle": "normal",
 					"textTransform": "none"
 				}
@@ -73,51 +73,51 @@
 		"blocks": {
 			"core/comments-title": {
 				"typography": {
-					"fontSize": "var:preset|font-size|xl",
-					"lineHeight": "var:preset|line-height|xl"
+					"fontSize": "var(--wp--preset--font-size--xl)",
+					"lineHeight": "var(--wp--preset--line-height--xl)"
 				}
 			},
 			"core/gallery": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|primary",
-					"fontSize": "var:preset|font-size|md",
+					"fontFamily": "var(--wp--preset--font-family--primary)",
+					"fontSize": "var(--wp--preset--font-size--md)",
 					"fontStyle": "normal",
 					"textTransform": "none"
 				}
 			},
 			"core/image": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|primary",
-					"fontSize": "var:preset|font-size|md",
+					"fontFamily": "var(--wp--preset--font-family--primary)",
+					"fontSize": "var(--wp--preset--font-size--md)",
 					"fontStyle": "normal",
 					"textTransform": "none"
 				}
 			},
 			"core/navigation": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|secondary",
-					"fontSize": "var:preset|font-size|sm"
+					"fontFamily": "var(--wp--preset--font-family--secondary)",
+					"fontSize": "var(--wp--preset--font-size--sm)"
 				}
 			},
 			"core/post-comments-form": {
 				"elements": {
 					"h3": {
 						"typography": {
-							"fontSize": "var:preset|font-size|xl",
-							"lineHeight": "var:preset|line-height|xl"
+							"fontSize": "var(--wp--preset--font-size--xl)",
+							"lineHeight": "var(--wp--preset--line-height--xl)"
 						}
 					}
 				}
 			},
 			"core/pullquote": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|primary",
+					"fontFamily": "var(--wp--preset--font-family--primary)",
 					"fontStyle": "normal"
 				},
 				"elements": {
 					"cite": {
 						"typography": {
-							"fontFamily": "var:preset|font-family|secondary",
+							"fontFamily": "var(--wp--preset--font-family--secondary)",
 							"fontStyle": "normal",
 							"fontWeight": "300"
 						}
@@ -126,20 +126,20 @@
 			},
 			"core/query-pagination": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|secondary",
-					"fontSize": "var:preset|font-size|sm",
+					"fontFamily": "var(--wp--preset--font-family--secondary)",
+					"fontSize": "var(--wp--preset--font-size--sm)",
 					"fontWeight": "500",
-					"lineHeight": "var:custom|line-height|sm"
+					"lineHeight": "var(--wp--custom--line-height--sm)"
 				}
 			},
 			"core/quote": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|secondary"
+					"fontFamily": "var(--wp--preset--font-family--secondary)"
 				},
 				"elements": {
 					"cite": {
 						"typography": {
-							"fontFamily": "var:preset|font-family|primary",
+							"fontFamily": "var(--wp--preset--font-family--primary)",
 							"fontSize": "1em",
 							"fontStyle": "normal"
 						}
@@ -148,13 +148,13 @@
 			},
 			"core/social-links": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|secondary"
+					"fontFamily": "var(--wp--preset--font-family--secondary)"
 				}
 			},
 			"core/site-title": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|primary",
-					"fontSize": "var:preset|font-size|xl",
+					"fontFamily": "var(--wp--preset--font-family--primary)",
+					"fontSize": "var(--wp--preset--font-size--xl)",
 					"fontStyle": "normal",
 					"fontWeight": "400",
 					"letterSpacing": "0",
@@ -163,7 +163,7 @@
 			},
 			"core/verse": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|primary",
+					"fontFamily": "var(--wp--preset--font-family--primary)",
 					"fontStyle": "normal"
 				}
 			}
@@ -173,8 +173,8 @@
 				"blocks": {
 					"x3p0/breadcrumbs": {
 						"typography": {
-							"fontFamily": "var:preset|font-family|secondary",
-							"fontSize": "var:preset|font-size|sm"
+							"fontFamily": "var(--wp--preset--font-family--secondary)",
+							"fontSize": "var(--wp--preset--font-size--sm)"
 						}
 					}
 				}
