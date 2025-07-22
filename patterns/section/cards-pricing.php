@@ -46,9 +46,9 @@ defined('ABSPATH') || exit;
 	} -->
 	<div class="wp-block-group alignwide">
 
-		<?php foreach (range(1, 3) as $card) : ?>
-			<!-- wp:pattern {"slug":"x3p0-ideas/card-pricing"} /-->
-		<?php endforeach ?>
+		<!-- wp:pattern {"slug":"x3p0-ideas/card-pricing-secondary"} /-->
+		<!-- wp:pattern {"slug":"x3p0-ideas/card-pricing-secondary"} /-->
+		<!-- wp:pattern {"slug":"x3p0-ideas/card-pricing-primary"} /-->
 
 	</div>
 	<!-- /wp:group -->
