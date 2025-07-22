@@ -15,8 +15,6 @@ defined('ABSPATH') || exit;
 
 use X3P0\Ideas\Tools\Language;
 
-$icon = get_theme_file_uri('public/media/svg/earthquake.svg');
-
 ?>
 <!-- wp:group {
 	"metadata":{"name":"<?= esc_attr__('Card', 'x3p0-ideas') ?>"},
