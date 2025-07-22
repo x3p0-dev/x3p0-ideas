@@ -7,10 +7,10 @@
 	"styles": {
 		"css": "&:is(:hover, :focus) { box-shadow: var(--wp--custom--shadow--button--secondary--hover); border: var(--wp--custom--border--button--secondary--hover--width) var(--wp--custom--border--button--secondary--hover--style) var(--wp--custom--border--button--secondary--hover--color); border-radius: var(--wp--custom--border--button--secondary--hover--radius); }",
 		"border": {
-			"color": "var(--wp--custom--border--button--secondary--default--color)",
-			"radius": "var(--wp--custom--border--button--secondary--default--radius)",
-			"style": "var(--wp--custom--border--button--secondary--default--style)",
-			"width": "var(--wp--custom--border--button--secondary--default--width)"
+			"color": "var(--wp--custom--border--button--secondary--color)",
+			"radius": "var(--wp--custom--border--button--secondary--radius)",
+			"style": "var(--wp--custom--border--button--secondary--style)",
+			"width": "var(--wp--custom--border--button--secondary--width)"
 		},
 		"color": {
 			"background": "var(--wp--custom--color--surface--button--secondary--default)",
