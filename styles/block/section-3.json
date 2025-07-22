@@ -26,7 +26,7 @@
 		"custom": {
 			"border": {
 				"primary": {
-					"color": "var(--wp--preset--color--primary-100)"
+					"color": "var(--wp--preset--color--primary-700)"
 				},
 				"button": {
 					"primary": {
