@@ -865,9 +865,9 @@
 			},
 			"textShadow": {
 				"none": "none",
-				"sm": "1px 1px 0 rgba( 0, 0, 0, 0.5 )",
-				"md": "2px 2px 2px rgba( 0, 0, 0, 0.3 )",
-				"lg": "3px 3px 6px rgba( 0, 0, 0, 0.3 )"
+				"sm": "1px 1px 0 color-mix(in oklab, var(--wp--preset--color--black) 50%, transparent)",
+				"md": "2px 2px 2px color-mix(in oklab, var(--wp--preset--color--black) 30%, transparent)",
+				"lg": "3px 3px 6px color-mix(in oklab, var(--wp--preset--color--black) 30%, transparent)"
 			}
 		},
 		"dimensions": {
