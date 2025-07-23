@@ -246,7 +246,7 @@ mark {
 ///
 /// Bump the line-height when using `<mark>` in a heading and remove padding.
 ///
-:where(h1, h2, h3, h4, h5 h6) > mark {
+:where(h1, h2, h3, h4, h5, h6) > mark {
 	line-height: 1.625em;
 	padding: 0;
 }
