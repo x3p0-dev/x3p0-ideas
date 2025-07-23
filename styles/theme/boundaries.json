@@ -60,7 +60,7 @@
 			},
 			"section-3": {
 				"color": {
-					"surface": {
+					"background": {
 						"level-0": "light-dark(var(--wp--preset--color--primary-700), var(--wp--preset--color--primary-700))",
 						"level-1": "light-dark(var(--wp--preset--color--primary-800), var(--wp--preset--color--primary-800))",
 						"level-2": "light-dark(var(--wp--preset--color--primary-900), var(--wp--preset--color--primary-900))",

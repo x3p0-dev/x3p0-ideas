@@ -41,7 +41,7 @@
 		"custom": {
 			"variation": "memories",
 			"color": {
-				"surface": {
+				"background": {
 					"submenu": {
 						"default": "var(--wp--preset|color|primary-700)",
 						"hover": "var(--wp--preset|color|primary-900)"
@@ -70,7 +70,7 @@
 			},
 			"section-3": {
 				"color": {
-					"surface": {
+					"background": {
 						"level-0": "var(--wp--preset|color|primary-700)",
 						"level-1": "var(--wp--preset|color|primary-800)",
 						"level-2": "var(--wp--preset|color|primary-900)",

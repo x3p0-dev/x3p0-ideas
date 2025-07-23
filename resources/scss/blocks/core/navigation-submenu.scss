@@ -26,7 +26,7 @@ nav.wp-block-navigation .wp-block-navigation-submenu .wp-block-navigation__subme
 nav.wp-block-navigation.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open {
 	background: var(
 		--wp--custom--components--submenu--background,
-		var(--wp--custom--color--surface--level-0)
+		var(--wp--custom--color--background--level-0)
 	);
 	color: var(
 		--wp--custom--components--submenu--foreground,
@@ -80,7 +80,7 @@ nav.wp-block-navigation.wp-block-navigation .wp-block-navigation__responsive-con
 .wp-block-navigation-submenu .wp-block-navigation-item:focus {
 	background: var(
 		--wp--custom--components--submenu--hover--background,
-		var(--wp--custom--color--surface--level-1)
+		var(--wp--custom--color--background--level-1)
 	);
 	color: var(
 		--wp--custom--components--submenu--hover--foreground,

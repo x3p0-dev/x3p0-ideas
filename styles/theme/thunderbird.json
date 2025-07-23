@@ -29,7 +29,7 @@
 		"custom": {
 			"variation": "thunderbird",
 			"color": {
-				"surface": {
+				"background": {
 					"level-0": "var(--wp--preset|color|neutral-50)",
 					"level-1": "var(--wp--preset|color|white)",
 					"level-2": "var(--wp--preset|color|neutral-100)",
@@ -53,7 +53,7 @@
 			},
 			"section-1": {
 				"color": {
-					"surface": {
+					"background": {
 						"level-0": "var(--wp--preset|color|white)",
 						"level-1": "var(--wp--preset|color|neutral-100)",
 						"level-2": "var(--wp--preset|color|neutral-200)",
@@ -83,7 +83,7 @@
 			},
 			"section-2": {
 				"color": {
-					"surface": {
+					"background": {
 						"level-0": "var(--wp--preset|color|neutral-100)",
 						"level-1": "var(--wp--preset|color|neutral-200)",
 						"level-2": "var(--wp--preset|color|neutral-300)",
@@ -113,7 +113,7 @@
 			},
 			"section-3": {
 				"color": {
-					"surface": {
+					"background": {
 						"level-0": "var(--wp--preset|color|neutral-950)",
 						"level-1": "var(--wp--preset|color|neutral-900)",
 						"level-2": "var(--wp--preset|color|neutral-800)",

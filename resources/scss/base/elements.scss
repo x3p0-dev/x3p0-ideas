@@ -137,7 +137,7 @@ blockquote cite {
 
 	// Color.
 	color:      var(--wp--custom--color--foreground--primary, inherit);
-	background: var(--wp--custom--color--surface--level-1, transparent);
+	background: var(--wp--custom--color--background--level-1, transparent);
 
 	// Border and shadow.
 	border:     none;
@@ -239,7 +239,7 @@ mark {
 	// Style `<mark>` elements but avoid WP's "highlight" rich text element.
 	&:where(:not(.has-inline-color):not([style])) {
 		color:      var(--wp--custom--color--foreground--on-accent, currentColor);
-		background: var(--wp--custom--color--surface--accent, transparent);
+		background: var(--wp--custom--color--background--accent, transparent);
 	}
 }
 

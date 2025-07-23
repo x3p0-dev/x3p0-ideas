@@ -17,7 +17,7 @@
 			"radius": "var(--wp--custom--border--primary--radius)"
 		},
 		"color": {
-			"background": "var(--wp--custom--color--surface--level-1)",
+			"background": "var(--wp--custom--color--background--level-1)",
 			"text": "var(--wp--custom--color--foreground--default)"
 		},
 		"spacing": {

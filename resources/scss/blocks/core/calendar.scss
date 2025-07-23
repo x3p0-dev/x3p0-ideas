@@ -97,7 +97,7 @@
 /// empty cells.
 ///
 .wp-block-calendar table td:where(:not(.pad)) {
-	background: var(--wp--custom--color--surface--level-2, transparent);
+	background: var(--wp--custom--color--background--level-2, transparent);
 }
 
 ///
@@ -105,7 +105,7 @@
 /// nested elements becomes level 1.
 ///
 .wp-block-calendar[class*=is-style-section-] table td:where(:not(.pad)) {
-	background: var(--wp--custom--color--surface--level-1, transparent);
+	background: var(--wp--custom--color--background--level-1, transparent);
 }
 
 ///
