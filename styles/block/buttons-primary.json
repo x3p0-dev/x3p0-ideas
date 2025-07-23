@@ -20,7 +20,7 @@
 		},
 		"elements": {
 			"link": {
-				"css": "&:is(:hover, :focus) { box-shadow: var(--wp--custom--shadow--button--primary--hover); border: var(--wp--custom--border--button--primary--hover--width) var(--wp--custom--border--button--primary--hover--style) var(--wp--custom--border--button--primary--hover--color); border-radius: var(--wp--custom--border--button--primary--hover--radius); }",
+				"css": "&:is(:hover, :focus) { box-shadow: var(--wp--custom--components--button--primary--hover--shadow); border: var(--wp--custom--components--button--primary--hover--border--width) var(--wp--custom--components--button--primary--hover--border--style) var(--wp--custom--components--button--primary--hover--border--color); border-radius: var(--wp--custom--components--button--primary--hover--border--radius); }",
 				"border": {
 					"color": { "ref": "styles.elements.button.border.color" },
 					"style": { "ref": "styles.elements.button.border.style" },
@@ -51,14 +51,14 @@
 				},
 				":focus": {
 					"border": {
-						"color": "var(--wp--custom--border--button--primary--hover--color)",
-						"radius": "var(--wp--custom--border--button--primary--hover--radius)",
-						"style": "var(--wp--custom--border--button--primary--hover--style)",
-						"width": "var(--wp--custom--border--button--primary--hover--width)"
+						"color": "var(--wp--custom--components--button--primary--hover--border--color)",
+						"radius": "var(--wp--custom--components--button--primary--hover--border--radius)",
+						"style": "var(--wp--custom--components--button--primary--hover--border--style)",
+						"width": "var(--wp--custom--components--button--primary--hover--border--width)"
 					},
 					"color": {
-						"background": { "ref": "styles.elements.button.:focus.color.background" },
-						"text": { "ref": "styles.elements.button.:focus.color.text" }
+						"background": "var(--wp--custom--components--button--primary--hover--background)",
+						"text": "var(--wp--custom--components--button--primary--hover--foreground)"
 					},
 					"typography": {
 						"textDecoration": "underline !important"
@@ -66,14 +66,14 @@
 				},
 				":hover": {
 					"border": {
-						"color": "var(--wp--custom--border--button--primary--hover--color)",
-						"radius": "var(--wp--custom--border--button--primary--hover--radius)",
-						"style": "var(--wp--custom--border--button--primary--hover--style)",
-						"width": "var(--wp--custom--border--button--primary--hover--width)"
+						"color": "var(--wp--custom--components--button--primary--hover--border--color)",
+						"radius": "var(--wp--custom--components--button--primary--hover--border--radius)",
+						"style": "var(--wp--custom--components--button--primary--hover--border--style)",
+						"width": "var(--wp--custom--components--button--primary--hover--border--width)"
 					},
 					"color": {
-						"background": { "ref": "styles.elements.button.:hover.color.background" },
-						"text": { "ref": "styles.elements.button.:hover.color.text" }
+						"background": "var(--wp--custom--components--button--primary--hover--background)",
+						"text": "var(--wp--custom--components--button--primary--hover--foreground)"
 					},
 					"typography": {
 						"textDecoration": "underline !important"
@@ -83,7 +83,7 @@
 		},
 		"blocks": {
 			"core/social-link": {
-				"css": "&:is(:hover, :focus) { box-shadow: var(--wp--custom--shadow--button--primary--hover); border: var(--wp--custom--border--button--primary--hover--width) var(--wp--custom--border--button--primary--hover--style) var(--wp--custom--border--button--primary--hover--color); border-radius: var(--wp--custom--border--button--primary--hover--radius); }",
+				"css": "&:is(:hover, :focus) { box-shadow: var(--wp--custom--components--button--primary--hover--shadow); border: var(--wp--custom--components--button--primary--hover--border--width) var(--wp--custom--components--button--primary--hover--border--style) var(--wp--custom--components--button--primary--hover--border--color); border-radius: var(--wp--custom--components--button--primary--hover--border--radius); }",
 				"border": {
 					"color": { "ref": "styles.elements.button.border.color" },
 					"style": { "ref": "styles.elements.button.border.style" },

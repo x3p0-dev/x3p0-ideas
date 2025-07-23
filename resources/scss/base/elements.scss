@@ -91,11 +91,11 @@ abbr[title] {
 	width:   initial;
 
 	// Add colors for links within captions.
-	color: var(--wp--custom--color--foreground--link--secondary--default);
+	color: var(--wp--custom--components--link--secondary--foreground);
 
 	&:hover,
 	&:focus {
-		color: var(--wp--custom--color--foreground--link--secondary--hover);
+		color: var(--wp--custom--components--link--secondary--foreground--hover);
 	}
 }
 
@@ -110,11 +110,11 @@ blockquote cite {
 
 	// Add colors for links within block quote citations.
 	a {
-		color: var(--wp--custom--color--foreground--link--secondary--default);
+		color: var(--wp--custom--components--link--secondary--foreground);
 
 		&:hover,
 		&:focus {
-			color: var(--wp--custom--color--foreground--link--secondary--hover);
+			color: var(--wp--custom--components--link--secondary--foreground--hover);
 		}
 	}
 }

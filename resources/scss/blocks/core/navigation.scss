@@ -62,22 +62,30 @@
 	transition-property: color, background-color, border-color, outline-color;
 
 	// `theme.json`-supported styles.
-	color:         var(--wp--custom--color--foreground--button--primary--default) !important;
-	background:    var(--wp--custom--color--surface--button--primary--default);
-	border-radius: var(--wp--custom--border--primary--radius);
-	box-shadow:    var(--wp--custom--shadow--secondary);
+	color:         var(--wp--custom--components--button--primary--foreground) !important;
+	background:    var(--wp--custom--components--button--primary--background);
+	border-color:  var(--wp--custom--components--button--primary--border--color);
+	border-style:  var(--wp--custom--components--button--primary--border--style);
+	border-width:  var(--wp--custom--components--button--primary--border--width);
+	border-radius: var(--wp--custom--components--button--primary--border--radius);
+	box-shadow:    var(--wp--custom--components--button--primary--shadow);
 
 	padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--30) !important;
 
 	&:hover,
 	&:focus {
-		color:      var(--wp--custom--color--foreground--button--primary--hover) !important;
-		background: var(--wp--custom--color--surface--button--primary--hover);
+		color:         var(--wp--custom--components--button--primary--hover--foreground) !important;
+		background:    var(--wp--custom--components--button--primary--hover--background);
+		border-color:  var(--wp--custom--components--button--primary--hover--border--color);
+		border-style:  var(--wp--custom--components--button--primary--hover--border--style);
+		border-width:  var(--wp--custom--components--button--primary--hover--border--width);
+		border-radius: var(--wp--custom--components--button--primary--hover--border--radius);
+		box-shadow:    var(--wp--custom--components--button--primary--hover--shadow);
 	}
 
 	svg {
-		width: 20px;
-		height: 20px;
+		width: calc(20px - var(--wp--custom--components--button--primary--border--width, 0));
+		height: calc(20px - var(--wp--custom--components--button--primary--border--width, 0));
 	}
 }
 

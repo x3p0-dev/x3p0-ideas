@@ -5,18 +5,18 @@
 	"slug": "button-secondary",
 	"blockTypes": [ "core/button" ],
 	"styles": {
-		"css": "&:is(:hover, :focus) { box-shadow: var(--wp--custom--shadow--button--secondary--hover); border: var(--wp--custom--border--button--secondary--hover--width) var(--wp--custom--border--button--secondary--hover--style) var(--wp--custom--border--button--secondary--hover--color); border-radius: var(--wp--custom--border--button--secondary--hover--radius); }",
+		"css": "&:is(:hover, :focus) { box-shadow: var(--wp--custom--components--button--secondary--hover--shadow); border: var(--wp--custom--components--button--secondary--hover--border--width) var(--wp--custom--components--button--secondary--hover--border--style) var(--wp--custom--components--button--secondary--hover--border--color); border-radius: var(--wp--custom--components--button--secondary--hover--border--radius); }",
 		"border": {
-			"color": "var(--wp--custom--border--button--secondary--color)",
-			"radius": "var(--wp--custom--border--button--secondary--radius)",
-			"style": "var(--wp--custom--border--button--secondary--style)",
-			"width": "var(--wp--custom--border--button--secondary--width)"
+			"color": "var(--wp--custom--components--button--secondary--border--color)",
+			"radius": "var(--wp--custom--components--button--secondary--border--radius)",
+			"style": "var(--wp--custom--components--button--secondary--border--style)",
+			"width": "var(--wp--custom--components--button--secondary--border--width)"
 		},
 		"color": {
-			"background": "var(--wp--custom--color--surface--button--secondary--default)",
-			"text": "var(--wp--custom--color--foreground--button--secondary--default)"
+			"background": "var(--wp--custom--components--button--secondary--background)",
+			"text": "var(--wp--custom--components--button--secondary--foreground)"
 		},
-		"shadow": "var(--wp--custom--shadow--button--secondary--default)",
+		"shadow": "var(--wp--custom--components--button--secondary--shadow)",
 		"spacing": {
 			"padding": {
 				"top": {
@@ -35,20 +35,16 @@
 		},
 		"elements": {
 			"button": {
-				"color": {
-					"background": "var(--wp--custom--color--surface--button--secondary--default)",
-					"text": "var(--wp--custom--color--foreground--button--secondary--default)"
-				},
 				":focus": {
 					"border": {
-						"color": "var(--wp--custom--border--button--secondary--hover--color)",
-						"radius": "var(--wp--custom--border--button--secondary--hover--radius)",
-						"style": "var(--wp--custom--border--button--secondary--hover--style)",
-						"width": "var(--wp--custom--border--button--secondary--hover--width)"
+						"color": "var(--wp--custom--components--button--secondary--hover--border--color)",
+						"radius": "var(--wp--custom--components--button--secondary--hover--border--radius)",
+						"style": "var(--wp--custom--components--button--secondary--hover--border--style)",
+						"width": "var(--wp--custom--components--button--secondary--hover--border--width)"
 					},
 					"color": {
-						"background": "var(--wp--custom--color--surface--button--secondary--hover)",
-						"text": "var(--wp--custom--color--foreground--button--secondary--hover)"
+						"background": "var(--wp--custom--components--button--secondary--hover--background)",
+						"text": "var(--wp--custom--components--button--secondary--hover--foreground)"
 					},
 					"outline": {
 						"color": "currentColor"
@@ -56,14 +52,14 @@
 				},
 				":hover": {
 					"border": {
-						"color": "var(--wp--custom--border--button--secondary--hover--color)",
-						"radius": "var(--wp--custom--border--button--secondary--hover--radius)",
-						"style": "var(--wp--custom--border--button--secondary--hover--style)",
-						"width": "var(--wp--custom--border--button--secondary--hover--width)"
+						"color": "var(--wp--custom--components--button--secondary--hover--border--color)",
+						"radius": "var(--wp--custom--components--button--secondary--hover--border--radius)",
+						"style": "var(--wp--custom--components--button--secondary--hover--border--style)",
+						"width": "var(--wp--custom--components--button--secondary--hover--border--width)"
 					},
 					"color": {
-						"background": "var(--wp--custom--color--surface--button--secondary--hover)",
-						"text": "var(--wp--custom--color--foreground--button--secondary--hover)"
+						"background": "var(--wp--custom--components--button--secondary--hover--background)",
+						"text": "var(--wp--custom--components--button--secondary--hover--foreground)"
 					},
 					"outline": {
 						"color": "currentColor"
