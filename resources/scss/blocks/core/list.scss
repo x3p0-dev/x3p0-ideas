@@ -41,14 +41,14 @@ ol li::marker {
 ///
 /// The pull style "pulls" the list back to be flush with the text.
 ///
-:is(ul, ol).is-style-pull {
+:is(ul, ol).is-style-list-pull {
 	padding-left: 1em;
 }
 
 ///
 /// Horizontal list style.
 ///
-:is(ul, ol).is-style-horizontal,
-.wp-block-list.is-style-horizontal {
+:is(ul, ol).is-style-list-horizontal,
+.wp-block-list.is-style-list-horizontal {
 	@include list.horizontal();
 }

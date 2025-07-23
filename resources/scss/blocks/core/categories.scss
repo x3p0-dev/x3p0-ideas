@@ -35,14 +35,14 @@
 ///
 /// Horizontal list style.
 ///
-ul.wp-block-categories-list.is-style-horizontal {
+ul.wp-block-categories-list.is-style-list-horizontal {
 	@include list.horizontal();
 }
 
 ///
 /// The pull style "pulls" the list back to be flush with the text.
 ///
-ul.wp-block-categories-list.is-style-pull {
+ul.wp-block-categories-list.is-style-list-pull {
 	padding-left: 1em;
 }
 
@@ -51,12 +51,12 @@ ul.wp-block-categories-list.is-style-pull {
 ///
 /// Note: only allow this style if the list is not hierarchical.
 ///
-ul.wp-block-categories-list.is-style-spread:where(:not(:has(ul))) {
+ul.wp-block-categories-list.is-style-list-spread:where(:not(:has(ul))) {
 	list-style: none;
 	padding-left: 0;
 }
 
-ul.wp-block-categories-list.is-style-spread:where(:not(:has(ul))) .cat-item {
+ul.wp-block-categories-list.is-style-list-spread:where(:not(:has(ul))) .cat-item {
 	display: flex;
 	flex-wrap: nowrap;
 	align-items: flex-start;

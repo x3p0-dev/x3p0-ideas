@@ -41,15 +41,15 @@ ul.wp-block-archives-list,
 ///
 /// Horizontal list style.
 ///
-.wp-block-archives.is-style-horizontal .wp-block-archives-list,
-.wp-block-archives-list.is-style-horizontal {
+.wp-block-archives.is-style-list-horizontal .wp-block-archives-list,
+.wp-block-archives-list.is-style-list-horizontal {
 	@include list.horizontal();
 }
 
 ///
 /// The pull style "pulls" the list back to be flush with the text.
 ///
-.wp-block-archives.is-style-pull {
+.wp-block-archives.is-style-list-pull {
 	padding-left: 1em;
 
 	.wp-block-archives {
@@ -60,8 +60,8 @@ ul.wp-block-archives-list,
 ///
 /// The spread list style adds space between the link and post count.
 ///
-.wp-block-archives.is-style-spread .wp-block-archives-list,
-.wp-block-archives-list.is-style-spread {
+.wp-block-archives.is-style-list-spread .wp-block-archives-list,
+.wp-block-archives-list.is-style-list-spread {
 	list-style: none;
 	padding-left: 0;
 
@@ -70,7 +70,7 @@ ul.wp-block-archives-list,
 	}
 }
 
-.wp-block-archives.is-style-spread .wp-block-archives__content {
+.wp-block-archives.is-style-list-spread .wp-block-archives__content {
 	display: flex;
 	flex-wrap: nowrap;
 	align-items: flex-start;

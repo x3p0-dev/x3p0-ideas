@@ -20,6 +20,6 @@ defined('ABSPATH') || exit;
 <!-- wp:details -->
 <details class="wp-block-details">
 	<summary><?= esc_html__('Table of Contents', 'x3p0-ideas') ?></summary>
-	<!-- wp:table-of-contents {"className":"is-style-pull"} /-->
+	<!-- wp:table-of-contents {"className":"is-style-list-pull"} /-->
 </details>
 <!-- /wp:details -->

@@ -32,7 +32,7 @@ defined('ABSPATH') || exit;
 	<p class="has-primary-font-family"><strong><?= esc_html__('Table of Contents', 'x3p0-ideas') ?></strong></p>
 	<!-- /wp:paragraph -->
 
-	<!-- wp:table-of-contents {"className":"is-style-pull"} /-->
+	<!-- wp:table-of-contents {"className":"is-style-list-pull"} /-->
 
 </div>
 <!-- /wp:group -->

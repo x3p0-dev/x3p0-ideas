@@ -35,13 +35,13 @@
 ///
 /// Horizontal list style.
 ///
-ul.wp-block-page-list.is-style-horizontal {
+ul.wp-block-page-list.is-style-list-horizontal {
 	@include list.horizontal();
 }
 
 ///
 /// The pull style "pulls" the list back to be flush with the text.
 ///
-.wp-block-page-list.is-style-pull {
+.wp-block-page-list.is-style-list-pull {
 	padding-left: 1em;
 }

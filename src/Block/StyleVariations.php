@@ -200,14 +200,14 @@ class StyleVariations implements Bootable
 		// phpcs:disable Generic.Functions.FunctionCallArgumentSpacing.TooMuchSpaceAfterComma
 		return [
 			'core/archives' => [
-				'horizontal' => __('Horizontal', 'x3p0-ideas'),
-				'pull'       => __('Pull',       'x3p0-ideas'),
-				'spread'     => __('Spread',     'x3p0-ideas')
+				'list-horizontal' => __('Horizontal', 'x3p0-ideas'),
+				'list-pull'       => __('Pull',       'x3p0-ideas'),
+				'list-spread'     => __('Spread',     'x3p0-ideas')
 			],
 			'core/categories' => [
-				'horizontal' => __('Horizontal', 'x3p0-ideas'),
-				'pull'       => __('Pull',       'x3p0-ideas'),
-				'spread'     => __('Spread',     'x3p0-ideas')
+				'list-horizontal' => __('Horizontal', 'x3p0-ideas'),
+				'list-pull'       => __('Pull',       'x3p0-ideas'),
+				'list-spread'     => __('Spread',     'x3p0-ideas')
 			],
 			'core/columns' => [
 				'grid-auto'     => __('Grid: Auto',           'x3p0-ideas'),
@@ -237,7 +237,7 @@ class StyleVariations implements Bootable
 				'plain' => __('Plain', 'x3p0-ideas')
 			],
 			'core/footnotes' => [
-				'pull' => __('Pull', 'x3p0-ideas')
+				'list-pull' => __('Pull', 'x3p0-ideas')
 			],
 			'core/gallery' => [
 				'classic' => __('Classic', 'x3p0-ideas'),
@@ -254,8 +254,8 @@ class StyleVariations implements Bootable
 				'tape'       => __('Tape',         'x3p0-ideas')
 			],
 			'core/list' => [
-				'horizontal' => __('Horizontal', 'x3p0-ideas'),
-				'pull'       => __('Pull',       'x3p0-ideas')
+				'list-horizontal' => __('Horizontal', 'x3p0-ideas'),
+				'list-pull'       => __('Pull',       'x3p0-ideas')
 			],
 			'core/list-item' => [
 				'cancel-circle' => __('Cancel Circle', 'x3p0-ideas'),
@@ -265,8 +265,8 @@ class StyleVariations implements Bootable
 				'icon' => __('Icon', 'x3p0-ideas')
 			],
 			'core/page-list' => [
-				'horizontal' => __('Horizontal', 'x3p0-ideas'),
-				'pull'       => __('Pull',       'x3p0-ideas')
+				'list-horizontal' => __('Horizontal', 'x3p0-ideas'),
+				'list-pull'       => __('Pull',       'x3p0-ideas')
 			],
 			'core/post-author-name' => [
 				'icon' => __('Icon', 'x3p0-ideas')
@@ -312,8 +312,8 @@ class StyleVariations implements Bootable
 				'monotone' => __('Monotone', 'x3p0-ideas')
 			],
 			'core/table-of-contents' => [
-				'chapters' => __('Chapters', 'x3p0-ideas'),
-				'pull'     => __('Pull',     'x3p0-ideas')
+				'chapters'  => __('Chapters', 'x3p0-ideas'),
+				'list-pull' => __('Pull',     'x3p0-ideas')
 			],
 			'core/tag-cloud' => [
 				'emoji' => __('Emoji', 'x3p0-ideas'),

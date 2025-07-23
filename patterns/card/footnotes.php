@@ -32,7 +32,7 @@ defined('ABSPATH') || exit;
 	<p class="has-primary-font-family"><strong><?= esc_html__('Footnotes', 'x3p0-ideas') ?></strong></p>
 	<!-- /wp:paragraph -->
 
-	<!-- wp:footnotes {"className":"is-style-pull"} /-->
+	<!-- wp:footnotes {"className":"is-style-list-pull"} /-->
 
 </div>
 <!-- /wp:group -->
