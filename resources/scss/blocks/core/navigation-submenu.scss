@@ -93,7 +93,7 @@ nav.wp-block-navigation.wp-block-navigation .wp-block-navigation__responsive-con
 ///
 nav.wp-block-navigation .is-menu-open .wp-block-navigation-submenu .wp-block-navigation__submenu-container {
 	border-radius: 0;
-	border: none;
+	border: none !important;
 	background: transparent;
 	padding: 0;
 	box-shadow: none;
