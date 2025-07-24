@@ -1934,48 +1934,23 @@
 			},
 			"core/separator": {
 				"border": {
+					"color": "currentColor",
+					"style": "solid",
 					"top": {
-						"width": "2px"
+						"width": "calc(var(--wp--preset--spacing--10) / 2)"
 					},
 					"bottom": {
+						"width": "0"
+					},
+					"left": {
+						"width": "0"
+					},
+					"right": {
 						"width": "0"
 					}
 				},
 				"color": {
 					"text": "currentColor"
-				},
-				"variations": {
-					"dashed": {
-						"border": {
-							"top": {
-								"style": "dashed",
-								"width": "var(--wp--preset--spacing--10)"
-							}
-						}
-					},
-					"dotted": {
-						"border": {
-							"top": {
-								"style": "dotted",
-								"width": "var(--wp--preset--spacing--10)"
-							}
-						}
-					},
-					"double": {
-						"border": {
-							"top": {
-								"style": "double",
-								"width": "var(--wp--preset--spacing--20)"
-							}
-						}
-					},
-					"wide": {
-						"border": {
-							"top": {
-								"width": "var(--wp--preset--spacing--20)"
-							}
-						}
-					}
 				}
 			},
 			"core/site-title": {

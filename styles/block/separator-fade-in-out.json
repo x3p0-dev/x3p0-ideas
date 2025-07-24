@@ -1,0 +1,16 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/wp/6.8/schemas/json/theme.json",
+	"version": 3,
+	"title": "Fade In/Out",
+	"description": "Creates a border that fades in and out for the Separator block.",
+	"slug": "separator-fade-in-out",
+	"blockTypes": [
+		"core/separator"
+	],
+	"styles": {
+		"css": "border-image-slice: 1; border-image-source: linear-gradient(to right, transparent, currentColor 25%, currentColor 75%, transparent);",
+		"color": {
+			"background": "transparent !important"
+		}
+	}
+}

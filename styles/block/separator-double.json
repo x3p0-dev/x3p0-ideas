@@ -1,0 +1,21 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/wp/6.8/schemas/json/theme.json",
+	"version": 3,
+	"title": "Double",
+	"description": "Gives a double border style to the Separator block.",
+	"slug": "separator-double",
+	"blockTypes": [
+		"core/separator"
+	],
+	"styles": {
+		"color": {
+			"background": "transparent !important"
+		},
+		"border": {
+			"top": {
+				"style": "double",
+				"width": "var(--wp--preset--spacing--20)"
+			}
+		}
+	}
+}

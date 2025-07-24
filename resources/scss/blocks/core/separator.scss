@@ -39,33 +39,12 @@
 // which WP automatically applies to the border via `currentColor`.
 
 ///
-/// Normal dashed, dotted, and double border styles.
-///
-hr.wp-block-separator:is(
-	.is-style-dashed,
-	.is-style-dotted,
-	.is-style-double
-) {
-	background-color: transparent !important;
-}
-
-///
 /// Hand-drawn style.
 ///
-hr.wp-block-separator.is-style-hand-drawn {
-	margin-bottom: -20px !important;
-	padding: var(--wp--preset--spacing--40);
-	border-width: var(--wp--preset--spacing--20) 0 0;
-	border-radius: 255px 15px 0 0/15px 8px 0 0;
-	transform: rotate(-1deg);
-
+hr.wp-block-separator.is-style-separator-hand-drawn {
 	&:where([class*=gradient-background]) {
 		margin-bottom: 0 !important;
-		padding: 4px;
+		padding: 4px !important;
 		border-radius: 94% 6% 95% 5% / 95% 4% 96% 5%;
-	}
-
-	&:where(:not([class*=gradient-background])) {
-		background: none !important;
 	}
 }

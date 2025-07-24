@@ -1,0 +1,20 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/wp/6.8/schemas/json/theme.json",
+	"version": 3,
+	"title": "Dotted",
+	"description": "Gives a dotted border style to the Separator block.",
+	"slug": "separator-dotted",
+	"blockTypes": [
+		"core/separator"
+	],
+	"styles": {
+		"color": {
+			"background": "transparent !important"
+		},
+		"border": {
+			"top": {
+				"style": "dotted"
+			}
+		}
+	}
+}

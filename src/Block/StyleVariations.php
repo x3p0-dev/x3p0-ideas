@@ -301,12 +301,6 @@ class StyleVariations implements Bootable
 				'icon' => __('Icon',  'x3p0-ideas'),
 				'sm'   => __('Small', 'x3p0-ideas')
 			],
-			'core/separator' => [
-				'dashed'     => __('Dashed',     'x3p0-ideas'),
-				'dotted'     => __('Dotted',     'x3p0-ideas'),
-				'double'     => __('Double',     'x3p0-ideas'),
-				'hand-drawn' => __('Hand Drawn', 'x3p0-ideas')
-			],
 			'core/social-links' => [
 				'monotone' => __('Monotone', 'x3p0-ideas')
 			],

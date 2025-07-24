@@ -73,8 +73,8 @@ defined('ABSPATH') || exit;
 		"layout":{"type":"constrained"}
 	} -->
 	<div class="wp-block-group">
-		<!-- wp:separator {"className":"is-style-hand-drawn"} -->
-		<hr class="wp-block-separator has-alpha-channel-opacity is-style-hand-drawn"/>
+		<!-- wp:separator {"className":"is-style-separator-hand-drawn"} -->
+		<hr class="wp-block-separator has-alpha-channel-opacity is-style-separator-hand-drawn"/>
 		<!-- /wp:separator -->
 	</div>
 	<!-- /wp:group -->

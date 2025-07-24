@@ -16,6 +16,7 @@ domReady(() => {
 	unregisterBlockStyle('core/button', 'fill');
 	unregisterBlockStyle('core/button', 'outline');
 	unregisterBlockStyle('core/separator', 'dots');
+	unregisterBlockStyle('core/separator', 'wide')
 	unregisterBlockStyle('core/social-links', 'pill-shape');
 	unregisterBlockStyle('core/tag-cloud', 'outline');
 });

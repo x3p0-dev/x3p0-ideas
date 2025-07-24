@@ -1,0 +1,34 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/wp/6.8/schemas/json/theme.json",
+	"version": 3,
+	"title": "Hand Drawn",
+	"description": "Gives a hand-drawn border style to the Separator block.",
+	"slug": "separator-hand-drawn",
+	"blockTypes": [
+		"core/separator"
+	],
+	"styles": {
+		"css": "transform: rotate(-1deg);",
+		"color": {
+			"background": "transparent !important"
+		},
+		"border": {
+			"radius": "255px 15px 0 0/15px 8px 0 0",
+			"top": {
+				"style": "solid",
+				"width": "var(--wp--preset--spacing--20)"
+			}
+		},
+		"spacing": {
+			"margin": {
+				"bottom": "-20px !important"
+			},
+			"padding": {
+				"top": "var(--wp--preset--spacing--40) !important",
+				"bottom": "var(--wp--preset--spacing--40) !important",
+				"left": "var(--wp--preset--spacing--40)",
+				"right": "var(--wp--preset--spacing--40)"
+			}
+		}
+	}
+}
