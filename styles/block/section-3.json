@@ -47,6 +47,12 @@
 			"elements": {
 				"button": {
 					"primary": {
+						"border": {
+							"color": "transparent",
+							"radius": "var(--wp--custom--border--primary--radius)",
+							"style": "var(--wp--custom--border--primary--style)",
+							"width": "var(--wp--custom--border--primary--width)"
+						},
 						"color": {
 							"background": "var(--wp--preset--color--primary-600)",
 							"foreground": "var(--wp--preset--color--primary-50)"
@@ -54,7 +60,10 @@
 						"shadow": "0 10px 15px -3px light-dark(color-mix(in oklab, var(--wp--preset--color--primary-950) 40%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 60%, transparent)), 0 4px 6px -4px light-dark(color-mix(in oklab, var(--wp--preset--color--primary-600) 40%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 60%, transparent))",
 						"hover": {
 							"border": {
-								"color": "var(--wp--preset--color--primary-900)"
+								"color": "var(--wp--preset--color--primary-900)",
+								"radius": "var(--wp--custom--elements--button--primary--border--radius)",
+								"style": "var(--wp--custom--elements--button--primary--border--style)",
+								"width": "var(--wp--custom--elements--button--primary--border--width)"
 							},
 							"color": {
 								"background": "color-mix(in oklab, var(--wp--preset--color--primary-600) 95%, var(--wp--preset--color--white))",
