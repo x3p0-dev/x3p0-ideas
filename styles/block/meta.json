@@ -15,14 +15,14 @@
 		"elements": {
 			"link": {
 				"color": {
-					"text": "var(--wp--custom--elements--link--secondary--foreground)"
+					"text": "var(--wp--custom--elements--link--secondary--color--foreground)"
 				},
 				"typography": {
 					"textDecoration": "none"
 				},
 				":focus": {
 					"color": {
-						"text": "var(--wp--custom--elements--link--secondary--hover--foreground)"
+						"text": "var(--wp--custom--elements--link--secondary--hover--color--foreground)"
 					},
 					"typography": {
 						"textDecoration": "underline"
@@ -30,7 +30,7 @@
 				},
 				":hover": {
 					"color": {
-						"text": "var(--wp--custom--elements--link--secondary--hover--foreground)"
+						"text": "var(--wp--custom--elements--link--secondary--hover--color--foreground)"
 					},
 					"typography": {
 						"textDecoration": "underline"
