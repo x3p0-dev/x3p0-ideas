@@ -768,7 +768,10 @@
 					"on-backdrop": "light-dark(var(--wp--preset--color--neutral-50), var(--wp--preset--color--neutral-50))"
 				}
 			},
-			"components": {
+			"global": {
+				"fadedGradient": "linear-gradient( 180deg, transparent -40%, var( --wp--custom--color--background--level-0 ) 100% )"
+			},
+			"elements": {
 				"button": {
 					"primary": {
 						"border": {
@@ -785,9 +788,9 @@
 						"hover": {
 							"border": {
 								"color": "light-dark(var(--wp--preset--color--primary-800), var(--wp--preset--color--primary-900))",
-								"radius": "var(--wp--custom--components--button--primary--border--radius)",
-								"style": "var(--wp--custom--components--button--primary--border--style)",
-								"width": "var(--wp--custom--components--button--primary--border--width)"
+								"radius": "var(--wp--custom--elements--button--primary--border--radius)",
+								"style": "var(--wp--custom--elements--button--primary--border--style)",
+								"width": "var(--wp--custom--elements--button--primary--border--width)"
 							},
 							"color": {
 								"background": "light-dark(var(--wp--preset--color--primary-700), var(--wp--preset--color--primary-600))",
@@ -815,13 +818,17 @@
 							},
 							"border": {
 								"color": "light-dark(color-mix(in oklab, currentColor 90%, var(--wp--preset--color--black)), color-mix(in oklab, currentColor 50%, var(--wp--preset--color--white)))",
-								"radius": "var(--wp--custom--components--button--secondary--border--radius)",
-								"style": "var(--wp--custom--components--button--secondary--border--style)",
-								"width": "var(--wp--custom--components--button--secondary--border--width)"
+								"radius": "var(--wp--custom--elements--button--secondary--border--radius)",
+								"style": "var(--wp--custom--elements--button--secondary--border--style)",
+								"width": "var(--wp--custom--elements--button--secondary--border--width)"
 							},
 							"shadow": "0 10px 15px -3px light-dark(color-mix(in oklab, var(--wp--preset--color--black) 25%, transparent), color-mix(in oklab, var(--wp--preset--color--black) 45%, transparent)), 0 4px 6px -4px light-dark(color-mix(in oklab, var(--wp--preset--color--black) 25%, transparent), color-mix(in oklab, var(--wp--preset--color--black) 45%, transparent))"
 						}
 					}
+				},
+				"label": {
+					"fontSize": "var(--wp--preset--font-size--sm)",
+					"checkFontSize": "var(--wp--preset--font-size--sm)"
 				},
 				"link": {
 					"primary": {
@@ -844,15 +851,6 @@
 							}
 						}
 					}
-				}
-			},
-			"global": {
-				"fadedGradient": "linear-gradient( 180deg, transparent -40%, var( --wp--custom--color--background--level-0 ) 100% )"
-			},
-			"elements": {
-				"label": {
-					"fontSize": "var(--wp--preset--font-size--sm)",
-					"checkFontSize": "var(--wp--preset--font-size--sm)"
 				},
 				"summary": {
 					"backgroundHover": "var(--wp--custom--color--background--level-1)",
@@ -1249,22 +1247,22 @@
 		"elements": {
 			"button": {
 				"border": {
-					"color": "var(--wp--custom--components--button--primary--border--color)",
-					"radius": "var(--wp--custom--components--button--primary--border--radius)",
-					"style": "var(--wp--custom--components--button--primary--border--style)",
-					"width": "var(--wp--custom--components--button--primary--border--width)"
+					"color": "var(--wp--custom--elements--button--primary--border--color)",
+					"radius": "var(--wp--custom--elements--button--primary--border--radius)",
+					"style": "var(--wp--custom--elements--button--primary--border--style)",
+					"width": "var(--wp--custom--elements--button--primary--border--width)"
 				},
 				"color": {
-					"background": "var(--wp--custom--components--button--primary--color--background)",
-					"text": "var(--wp--custom--components--button--primary--color--foreground)"
+					"background": "var(--wp--custom--elements--button--primary--color--background)",
+					"text": "var(--wp--custom--elements--button--primary--color--foreground)"
 				},
 				"outline": {
-					"color": "var(--wp--custom--components--button--primary--hover--color--background)",
+					"color": "var(--wp--custom--elements--button--primary--hover--color--background)",
 					"offset": "2px",
 					"style": "solid",
 					"width": "0"
 				},
-				"shadow": "var(--wp--custom--components--button--primary--shadow)",
+				"shadow": "var(--wp--custom--elements--button--primary--shadow)",
 				"spacing": {
 					"padding": {
 						"top": "var(--wp--preset--spacing--20)",
@@ -1290,35 +1288,35 @@
 				},
 				":focus": {
 					"border": {
-						"color": "var(--wp--custom--components--button--primary--hover--border--color)",
-						"radius": "var(--wp--custom--components--button--primary--hover--border--radius)",
-						"style": "var(--wp--custom--components--button--primary--hover--border--style)",
-						"width": "var(--wp--custom--components--button--primary--hover--border--width)"
+						"color": "var(--wp--custom--elements--button--primary--hover--border--color)",
+						"radius": "var(--wp--custom--elements--button--primary--hover--border--radius)",
+						"style": "var(--wp--custom--elements--button--primary--hover--border--style)",
+						"width": "var(--wp--custom--elements--button--primary--hover--border--width)"
 					},
 					"color": {
-						"background": "var(--wp--custom--components--button--primary--hover--color--background)",
-						"text": "var(--wp--custom--components--button--primary--hover--color--foreground)"
+						"background": "var(--wp--custom--elements--button--primary--hover--color--background)",
+						"text": "var(--wp--custom--elements--button--primary--hover--color--foreground)"
 					},
 					"outline": {
 						"width": "2px"
 					},
-					"shadow": "var(--wp--custom--components--button--primary--hover--shadow)",
+					"shadow": "var(--wp--custom--elements--button--primary--hover--shadow)",
 					"typography": {
 						"textDecoration": "underline"
 					}
 				},
 				":hover": {
 					"border": {
-						"color": "var(--wp--custom--components--button--primary--hover--border--color)",
-						"radius": "var(--wp--custom--components--button--primary--hover--border--radius)",
-						"style": "var(--wp--custom--components--button--primary--hover--border--style)",
-						"width": "var(--wp--custom--components--button--primary--hover--border--width)"
+						"color": "var(--wp--custom--elements--button--primary--hover--border--color)",
+						"radius": "var(--wp--custom--elements--button--primary--hover--border--radius)",
+						"style": "var(--wp--custom--elements--button--primary--hover--border--style)",
+						"width": "var(--wp--custom--elements--button--primary--hover--border--width)"
 					},
 					"color": {
-						"background": "var(--wp--custom--components--button--primary--hover--color--background)",
-						"text": "var(--wp--custom--components--button--primary--hover--color--foreground)"
+						"background": "var(--wp--custom--elements--button--primary--hover--color--background)",
+						"text": "var(--wp--custom--elements--button--primary--hover--color--foreground)"
 					},
-					"shadow": "var(--wp--custom--components--button--primary--hover--shadow)",
+					"shadow": "var(--wp--custom--elements--button--primary--hover--shadow)",
 					"typography": {
 						"textDecoration": "underline"
 					}
@@ -1398,7 +1396,7 @@
 					"radius": "var(--wp--custom--border--primary--radius)"
 				},
 				"color": {
-					"text": "var(--wp--custom--components--link--primary--color--foreground)"
+					"text": "var(--wp--custom--elements--link--primary--color--foreground)"
 				},
 				"typography": {
 					"textDecoration": "underline"
@@ -1410,7 +1408,7 @@
 				},
 				":focus": {
 					"color": {
-						"text": "var(--wp--custom--components--link--primary--hover--color--foreground)"
+						"text": "var(--wp--custom--elements--link--primary--hover--color--foreground)"
 					},
 					"outline": {
 						"color": "currentColor",
@@ -1424,7 +1422,7 @@
 				},
 				":hover": {
 					"color": {
-						"text": "var(--wp--custom--components--link--primary--hover--color--foreground)"
+						"text": "var(--wp--custom--elements--link--primary--hover--color--foreground)"
 					},
 					"typography": {
 						"textDecoration": "underline"
