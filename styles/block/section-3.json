@@ -44,7 +44,7 @@
 					"on-accent": "var(--wp--preset--color--primary-50)"
 				}
 			},
-			"components": {
+			"elements": {
 				"button": {
 					"primary": {
 						"color": {
