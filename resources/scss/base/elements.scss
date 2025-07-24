@@ -174,10 +174,10 @@ s {
 /// @link https://github.com/WordPress/gutenberg/issues/64362
 ///
 img:where(:not(.avatar)) {
-	border-color: var(--wp--custom--elements--img--border-color, transparent);
-	border-style: var(--wp--custom--elements--img--border-style, solid);
-	border-width: var(--wp--custom--elements--img--border-width, 0);
-	box-shadow:   var(--wp--custom--elements--img--shadow, none);
+	border-color: var(--wp--custom--elements--img--border--color, transparent);
+	border-style: var(--wp--custom--elements--img--border--style, solid);
+	border-width: var(--wp--custom--elements--img--border--width, 0);
+	box-shadow:   var(--wp--custom--elements--img--shadow,        none);
 }
 
 ///

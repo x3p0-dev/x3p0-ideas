@@ -67,26 +67,28 @@
 /// Allow styling `thead` from `theme.json`.
 ///
 .wp-block-table thead {
-	font-family: var(--wp--custom--elements--thead--font-family, inherit);
-	font-style:  var(--wp--custom--elements--thead--font-style, inherit);
-	font-weight: var(--wp--custom--elements--thead--font-weight, 600);
-	line-height: var(--wp--custom--elements--thead--line-height, inherit);
-	font-size:   var(--wp--custom--elements--thead--font-size, inherit);
-	color:       var(--wp--custom--elements--thead--color, currentColor);
-	background:  var(--wp--custom--elements--thead--background, transparent);
+	background:  var(--wp--custom--elements--thead--color--background, transparent);
+	color:       var(--wp--custom--elements--thead--color--foreground, currentColor);
+
+	font-family: var(--wp--custom--elements--thead--typography--font-family, inherit);
+	font-size:   var(--wp--custom--elements--thead--typography--font-size,   inherit);
+	font-style:  var(--wp--custom--elements--thead--typography--font-style,  inherit);
+	font-weight: var(--wp--custom--elements--thead--typography--font-weight, 600);
+	line-height: var(--wp--custom--elements--thead--typography--line-height, inherit);
 }
 
 ///
 /// Allow styling `tfoot` from `theme.json`.
 ///
 .wp-block-table tfoot {
-	font-family: var(--wp--custom--elements--tfoot--font-family, inherit);
-	font-style:  var(--wp--custom--elements--tfoot--font-style, inherit);
-	font-weight: var(--wp--custom--elements--tfoot--font-weight, 600);
-	line-height: var(--wp--custom--elements--tfoot--line-height, inherit);
-	font-size:   var(--wp--custom--elements--tfoot--font-size, inherit);
-	color:      var(--wp--custom--elements--tfoot--color, currentColor);
-	background: var(--wp--custom--elements--tfoot--background, transparent);
+	background:  var(--wp--custom--elements--tfoot--color--background, transparent);
+	color:       var(--wp--custom--elements--tfoot--color--foreground, currentColor);
+
+	font-family: var(--wp--custom--elements--tfoot--typography--font-family, inherit);
+	font-style:  var(--wp--custom--elements--tfoot--typography--font-style,  inherit);
+	font-weight: var(--wp--custom--elements--tfoot--typography--font-weight, 600);
+	line-height: var(--wp--custom--elements--tfoot--typography--line-height, inherit);
+	font-size:   var(--wp--custom--elements--tfoot--typography--font-size,   inherit);
 }
 
 // -----------------------------------------------------------------------------
@@ -112,7 +114,7 @@
 	thead tr,
 	tbody tr:nth-child(even),
 	tbody:has(tr:last-child:nth-child(odd)) + tfoot tr {
-		color:      var(--wp--custom--stripes--stripe-color, inherit);
-		background: var(--wp--custom--stripes--stripe-background, transparent);
+		background: var(--wp--custom--stripes--color--background, transparent);
+		color:      var(--wp--custom--stripes--color--foreground, inherit);
 	}
 }

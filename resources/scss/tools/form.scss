@@ -9,11 +9,13 @@
 /// Default label styles.
 ///
 @mixin label() {
-	color:       var(--wp--custom--color--foreground--secondary, inherit);
-	font-family: var(--wp--custom--elements--label--font-family, inherit);
-	font-size:   var(--wp--custom--elements--label--font-size, inherit);
-	font-style:  var(--wp--custom--elements--label--font-style, inherit);
-	font-weight: var(--wp--custom--elements--label--font-weight, inherit);
+	background: var(--wp--custom--elements--label--color--background, transparent);
+	color:      var(--wp--custom--elements--label--color--foreground, var(--wp--custom--color--foreground--secondary, inherit));
+
+	font-family: var(--wp--custom--elements--label--typography--font-family, inherit);
+	font-size:   var(--wp--custom--elements--label--typography--font-size, inherit);
+	font-style:  var(--wp--custom--elements--label--typography--font-style, inherit);
+	font-weight: var(--wp--custom--elements--label--typography--font-weight, inherit);
 
 	&:has(
 		+ :where(input:not([type=submit]):not([type=checkbox])),
@@ -33,7 +35,9 @@
 		textarea:focus,
 		select:focus
 	) {
-		color: var(--wp--custom--color--foreground--accent, inherit);
+		background: var(--wp--custom--elements--label--hover--color--background, transparent);
+		color:      var(--wp--custom--elements--label--hover--color--foreground, var(--wp--custom--color--foreground--accent, inherit));
+
 	}
 
 	// When the label is next to or wraps a checkbox or radio, use a

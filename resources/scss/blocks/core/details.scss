@@ -38,19 +38,21 @@
 		box-sizing: border-box;
 		padding: var(--wp--preset--spacing--40) var(--wp--style--block-gap);
 
-		background:  transparent;
-		color:       currentColor;
-		font-family: var(--wp--custom--elements--summary--font-family, inherit);
-		font-style:  var(--wp--custom--elements--summary--font-style, inherit);
-		font-weight: var(--wp--custom--elements--summary--font-weight, inherit);
-		line-height: var(--wp--custom--elements--summary--line-height, inherit);
-		font-size:   var(--wp--custom--elements--summary--font-size, inherit);
+		background:  var(--wp--custom--elements--summary--color--background, transparent);
+		color:       var(--wp--custom--elements--summary--color--foreground, currentColor);
+
+		font-family: var(--wp--custom--elements--summary--typography--font-family, inherit);
+		font-size:   var(--wp--custom--elements--summary--typography--font-size,   inherit);
+		font-style:  var(--wp--custom--elements--summary--typography--font-style,  inherit);
+		font-weight: var(--wp--custom--elements--summary--typography--font-weight, inherit);
+		line-height: var(--wp--custom--elements--summary--typography--line-height, inherit);
 	}
 
 	&[open] summary,
 	summary:hover,
 	summary:focus {
-		background: var(--wp--custom--elements--summary--background-hover);
+		background:  var(--wp--custom--elements--summary--hover--color--background, transparent);
+		color:       var(--wp--custom--elements--summary--hover--color--foreground, currentColor);
 	}
 
 	// Disable the default browser marker and add a custom one.
@@ -59,7 +61,7 @@
 	}
 
 	summary::after {
-		content: var(--wp--custom--marker--content, "+");
+		content: var(--wp--custom--elements--summary--marker--content, "+");
 		color: currentColor;
 		float: right;
 		text-align: right;
@@ -67,7 +69,7 @@
 	}
 
 	&[open] summary::after {
-		content: var(--wp--custom--marker--content-open, "-");
+		content: var(--wp--custom--elements--summary--open--marker--content, "-");
 	}
 
 	// The original block had a wrapper element around nested blocks after
