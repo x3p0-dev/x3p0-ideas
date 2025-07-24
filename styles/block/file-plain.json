@@ -1,0 +1,46 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
+	"version": 3,
+	"title": "Plain",
+	"description": "A plain File block design with no styles.",
+	"slug": "file-plain",
+	"blockTypes": [ "core/file" ],
+	"styles": {
+		"border": {
+			"width": "0",
+			"radius": "0"
+		},
+		"color": {
+			"background": "transparent"
+		},
+		"outline": {
+			"width": "0"
+		},
+		"shadow": "none",
+		"spacing": {
+			"padding": {
+				"top": "0",
+				"bottom": "0",
+				"left": "0",
+				"right": "0"
+			}
+		},
+		"elements": {
+			"link": {
+				"color": {
+					"text": { "ref": "styles.elements.link.color.text" }
+				},
+				":focus": {
+					"color": {
+						"text": { "ref": "styles.elements.link.:focus.color.text" }
+					}
+				},
+				":hover": {
+					"color": {
+						"text": { "ref": "styles.elements.link.:hover.color.text" }
+					}
+				}
+			}
+		}
+	}
+}

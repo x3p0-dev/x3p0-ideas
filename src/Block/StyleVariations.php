@@ -233,8 +233,7 @@ class StyleVariations implements Bootable
 				'plain' => __('Plain', 'x3p0-ideas')
 			],
 			'core/file' => [
-				'icon'  => __('Icon',  'x3p0-ideas'),
-				'plain' => __('Plain', 'x3p0-ideas')
+				'icon' => __('Icon',  'x3p0-ideas')
 			],
 			'core/footnotes' => [
 				'list-pull' => __('Pull', 'x3p0-ideas')
