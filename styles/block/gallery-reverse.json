@@ -1,0 +1,13 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/wp/6.8/schemas/json/theme.json",
+	"version": 3,
+	"title": "Reverse",
+	"description": "Reverses the direction and wrap of the gallery.",
+	"slug": "gallery-reverse",
+	"blockTypes": [
+		"core/gallery"
+	],
+	"styles": {
+		"css": "flex-flow: row-reverse wrap-reverse;"
+	}
+}

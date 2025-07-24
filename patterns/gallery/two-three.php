@@ -23,9 +23,9 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 	"linkTo":"none",
 	"sizeSlug":"x3p0-wide",
 	"align":"wide",
-	"className":"is-style-reverse"
+	"className":"is-style-gallery-reverse"
 } -->
-<figure class="wp-block-gallery alignwide has-nested-images columns-3 is-cropped is-style-reverse">
+<figure class="wp-block-gallery alignwide has-nested-images columns-3 is-cropped is-style-gallery-reverse">
 
 	<?php foreach (range(1, 5) as $number) : ?>
 

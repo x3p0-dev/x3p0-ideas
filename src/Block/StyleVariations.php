@@ -239,8 +239,7 @@ class StyleVariations implements Bootable
 				'list-pull' => __('Pull', 'x3p0-ideas')
 			],
 			'core/gallery' => [
-				'classic' => __('Classic', 'x3p0-ideas'),
-				'reverse' => __('Reverse', 'x3p0-ideas')
+				'gallery-classic' => __('Classic', 'x3p0-ideas')
 			],
 			'core/home-link' => [
 				'icon' => __('Icon', 'x3p0-ideas')
