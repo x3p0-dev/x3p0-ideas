@@ -1,5 +1,5 @@
 {
-	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/wp/6.8/schemas/json/theme.json",
 	"version": 3,
 	"title": "Indent",
 	"description": "Sets a length of empty space (indentation) at the start of the text.",
