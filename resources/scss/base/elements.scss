@@ -142,6 +142,16 @@ blockquote cite {
 	// Border and shadow.
 	border:     none;
 	box-shadow: none;
+
+	> a {
+		color: inherit;
+		text-decoration-color: currentColor;
+	}
+}
+
+a:has(code:only-child) {
+	color: var(--wp--custom--color--foreground--primary, inherit);
+	text-decoration-color: currentColor;
 }
 
 ///
