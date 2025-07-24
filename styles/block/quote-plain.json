@@ -1,0 +1,30 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/wp/6.8/schemas/json/theme.json",
+	"version": 3,
+	"title": "Plain",
+	"description": "Removes most default styling from blockquotes and presents them closer to the browser default.",
+	"slug": "quote-plain",
+	"blockTypes": [
+		"core/quote"
+	],
+	"styles": {
+		"border": {
+			"width": "0"
+		},
+		"color": {
+			"background": "transparent"
+		},
+		"outline": {
+			"width": "0"
+		},
+		"spacing": {
+			"padding": {
+				"top": "0",
+				"bottom": "0",
+				"left": "var(--wp--preset--spacing--70)",
+				"right": "var(--wp--preset--spacing--70)"
+			}
+		},
+		"shadow": "none"
+	}
+}

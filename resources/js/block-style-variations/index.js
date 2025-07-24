@@ -15,6 +15,7 @@ domReady(() => {
 	// Remove core block styles.
 	unregisterBlockStyle('core/button', 'fill');
 	unregisterBlockStyle('core/button', 'outline');
+	unregisterBlockStyle('core/quote', 'plain');
 	unregisterBlockStyle('core/separator', 'dots');
 	unregisterBlockStyle('core/separator', 'wide')
 	unregisterBlockStyle('core/social-links', 'pill-shape');

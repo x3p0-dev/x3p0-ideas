@@ -1900,19 +1900,6 @@
 						"left": "var(--wp--preset--spacing--60)"
 					}
 				},
-				"variations": {
-					"plain": {
-						"border": {
-							"width": "0"
-						},
-						"spacing": {
-							"padding": {
-								"left": "var(--wp--preset--spacing--70)",
-								"right": "var(--wp--preset--spacing--70)"
-							}
-						}
-					}
-				},
 				"elements": {
 					"cite": {
 						"color": {
