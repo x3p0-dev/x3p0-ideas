@@ -5,14 +5,14 @@
 	"slug": "button-link",
 	"blockTypes": [ "core/button" ],
 	"styles": {
-		"css": "&:is(:focus, :hover) { color: var(--wp--custom--components--link--primary--hover--foreground); }",
+		"css": "&:is(:focus, :hover) { color: var(--wp--custom--components--link--primary--hover--color--foreground); }",
 		"border": {
 			"width": "0",
 			"radius": "0"
 		},
 		"color": {
 			"background": "transparent",
-			"text": "var(--wp--custom--components--link--primary--foreground)"
+			"text": "var(--wp--custom--components--link--primary--color--foreground)"
 		},
 		"outline": {
 			"width": "0"

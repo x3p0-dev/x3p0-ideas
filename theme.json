@@ -755,70 +755,90 @@
 			"components": {
 				"button": {
 					"primary": {
-						"background": "light-dark(var(--wp--preset--color--primary-600), var(--wp--preset--color--primary-700))",
-						"foreground": "light-dark(var(--wp--preset--color--white), var(--wp--preset--color--white))",
-						"shadow": "0 10px 15px -3px light-dark(color-mix(in oklab, var(--wp--preset--color--primary-600) 40%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 60%, transparent)), 0 4px 6px -4px light-dark(color-mix(in oklab, var(--wp--preset--color--primary-600) 40%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 60%, transparent))",
 						"border": {
 							"color": "transparent",
 							"radius": "var(--wp--custom--border--primary--radius)",
 							"style": "var(--wp--custom--border--primary--style)",
 							"width": "var(--wp--custom--border--primary--width)"
 						},
+						"color": {
+							"background": "light-dark(var(--wp--preset--color--primary-600), var(--wp--preset--color--primary-700))",
+							"foreground": "light-dark(var(--wp--preset--color--white), var(--wp--preset--color--white))"
+						},
+						"shadow": "0 10px 15px -3px light-dark(color-mix(in oklab, var(--wp--preset--color--primary-600) 40%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 60%, transparent)), 0 4px 6px -4px light-dark(color-mix(in oklab, var(--wp--preset--color--primary-600) 40%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 60%, transparent))",
 						"hover": {
-							"background": "light-dark(var(--wp--preset--color--primary-700), var(--wp--preset--color--primary-600))",
-							"foreground": "light-dark(var(--wp--preset--color--primary-50), var(--wp--preset--color--primary-50))",
-							"shadow": "0 10px 15px -3px light-dark(color-mix(in oklab, var(--wp--preset--color--primary-600) 60%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 100%, transparent)), 0 4px 6px -4px light-dark(color-mix(in oklab, var(--wp--preset--color--primary-600) 60%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 100%, transparent))",
 							"border": {
 								"color": "light-dark(var(--wp--preset--color--primary-800), var(--wp--preset--color--primary-900))",
 								"radius": "var(--wp--custom--components--button--primary--border--radius)",
 								"style": "var(--wp--custom--components--button--primary--border--style)",
 								"width": "var(--wp--custom--components--button--primary--border--width)"
-							}
+							},
+							"color": {
+								"background": "light-dark(var(--wp--preset--color--primary-700), var(--wp--preset--color--primary-600))",
+								"foreground": "light-dark(var(--wp--preset--color--primary-50), var(--wp--preset--color--primary-50))"
+							},
+							"shadow": "0 10px 15px -3px light-dark(color-mix(in oklab, var(--wp--preset--color--primary-600) 60%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 100%, transparent)), 0 4px 6px -4px light-dark(color-mix(in oklab, var(--wp--preset--color--primary-600) 60%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 100%, transparent))"
 						}
 					},
 					"secondary": {
-						"background": "transparent",
-						"foreground": "currentColor",
-						"shadow": "0 10px 15px -3px light-dark(color-mix(in oklab, var(--wp--preset--color--black) 10%, transparent), color-mix(in oklab, var(--wp--preset--color--black) 30%, transparent)), 0 4px 6px -4px light-dark(color-mix(in oklab, var(--wp--preset--color--black) 10%, transparent), color-mix(in oklab, var(--wp--preset--color--black) 30%, transparent))",
+						"color": {
+							"background": "transparent",
+							"foreground": "currentColor"
+						},
 						"border": {
 							"color": "currentColor",
 							"radius": "var(--wp--custom--border--primary--radius)",
 							"style": "var(--wp--custom--border--primary--style)",
 							"width": "var(--wp--custom--border--primary--width)"
 						},
+						"shadow": "0 10px 15px -3px light-dark(color-mix(in oklab, var(--wp--preset--color--black) 10%, transparent), color-mix(in oklab, var(--wp--preset--color--black) 30%, transparent)), 0 4px 6px -4px light-dark(color-mix(in oklab, var(--wp--preset--color--black) 10%, transparent), color-mix(in oklab, var(--wp--preset--color--black) 30%, transparent))",
 						"hover": {
-							"background": "transparent",
-							"foreground": "currentColor",
-							"shadow": "0 10px 15px -3px light-dark(color-mix(in oklab, var(--wp--preset--color--black) 25%, transparent), color-mix(in oklab, var(--wp--preset--color--black) 45%, transparent)), 0 4px 6px -4px light-dark(color-mix(in oklab, var(--wp--preset--color--black) 25%, transparent), color-mix(in oklab, var(--wp--preset--color--black) 45%, transparent))",
+							"color": {
+								"background": "transparent",
+								"foreground": "currentColor"
+							},
 							"border": {
 								"color": "light-dark(color-mix(in oklab, currentColor 90%, var(--wp--preset--color--black)), color-mix(in oklab, currentColor 50%, var(--wp--preset--color--white)))",
 								"radius": "var(--wp--custom--components--button--secondary--border--radius)",
 								"style": "var(--wp--custom--components--button--secondary--border--style)",
 								"width": "var(--wp--custom--components--button--secondary--border--width)"
-							}
+							},
+							"shadow": "0 10px 15px -3px light-dark(color-mix(in oklab, var(--wp--preset--color--black) 25%, transparent), color-mix(in oklab, var(--wp--preset--color--black) 45%, transparent)), 0 4px 6px -4px light-dark(color-mix(in oklab, var(--wp--preset--color--black) 25%, transparent), color-mix(in oklab, var(--wp--preset--color--black) 45%, transparent))"
 						}
 					}
 				},
 				"link": {
 					"primary": {
-						"foreground": "light-dark(var(--wp--preset--color--primary-700), var(--wp--preset--color--primary-300))",
+						"color": {
+							"foreground": "light-dark(var(--wp--preset--color--primary-700), var(--wp--preset--color--primary-300))"
+						},
 						"hover": {
-							"foreground": "currentColor"
+							"color": {
+								"foreground": "currentColor"
+							}
 						}
 					},
 					"secondary": {
-						"default": "currentColor",
+						"color": {
+							"foreground": "currentColor"
+						},
 						"hover": {
-							"foreground": "light-dark(var(--wp--preset--color--primary-700), var(--wp--preset--color--primary-300))"
+							"color": {
+								"foreground": "light-dark(var(--wp--preset--color--primary-700), var(--wp--preset--color--primary-300))"
+							}
 						}
 					}
 				},
 				"submenu": {
-					"background": "var(--wp--custom--color--background--level-0)",
-					"foreground": "var(--wp--custom--color--foreground--primary)",
-					"hover": {
-						"background": "var(--wp--custom--color--background--level-2)",
+					"color": {
+						"background": "var(--wp--custom--color--background--level-0)",
 						"foreground": "var(--wp--custom--color--foreground--primary)"
+					},
+					"hover": {
+						"color": {
+							"background": "var(--wp--custom--color--background--level-2)",
+							"foreground": "var(--wp--custom--color--foreground--primary)"
+						}
 					}
 				}
 			},
@@ -1231,11 +1251,11 @@
 					"width": "var(--wp--custom--components--button--primary--border--width)"
 				},
 				"color": {
-					"background": "var(--wp--custom--components--button--primary--background)",
-					"text": "var(--wp--custom--components--button--primary--foreground)"
+					"background": "var(--wp--custom--components--button--primary--color--background)",
+					"text": "var(--wp--custom--components--button--primary--color--foreground)"
 				},
 				"outline": {
-					"color": "var(--wp--custom--components--button--primary--hover--background)",
+					"color": "var(--wp--custom--components--button--primary--hover--color--background)",
 					"offset": "2px",
 					"style": "solid",
 					"width": "0"
@@ -1272,8 +1292,8 @@
 						"width": "var(--wp--custom--components--button--primary--hover--border--width)"
 					},
 					"color": {
-						"background": "var(--wp--custom--components--button--primary--hover--background)",
-						"text": "var(--wp--custom--components--button--primary--hover--foreground)"
+						"background": "var(--wp--custom--components--button--primary--hover--color--background)",
+						"text": "var(--wp--custom--components--button--primary--hover--color--foreground)"
 					},
 					"outline": {
 						"width": "2px"
@@ -1291,8 +1311,8 @@
 						"width": "var(--wp--custom--components--button--primary--hover--border--width)"
 					},
 					"color": {
-						"background": "var(--wp--custom--components--button--primary--hover--background)",
-						"text": "var(--wp--custom--components--button--primary--hover--foreground)"
+						"background": "var(--wp--custom--components--button--primary--hover--color--background)",
+						"text": "var(--wp--custom--components--button--primary--hover--color--foreground)"
 					},
 					"shadow": "var(--wp--custom--components--button--primary--hover--shadow)",
 					"typography": {
@@ -1374,7 +1394,7 @@
 					"radius": "var(--wp--custom--border--primary--radius)"
 				},
 				"color": {
-					"text": "var(--wp--custom--components--link--primary--foreground)"
+					"text": "var(--wp--custom--components--link--primary--color--foreground)"
 				},
 				"typography": {
 					"textDecoration": "underline"
@@ -1386,7 +1406,7 @@
 				},
 				":focus": {
 					"color": {
-						"text": "var(--wp--custom--components--link--primary--hover--foreground)"
+						"text": "var(--wp--custom--components--link--primary--hover--color--foreground)"
 					},
 					"outline": {
 						"color": "currentColor",
@@ -1400,7 +1420,7 @@
 				},
 				":hover": {
 					"color": {
-						"text": "var(--wp--custom--components--link--primary--hover--foreground)"
+						"text": "var(--wp--custom--components--link--primary--hover--color--foreground)"
 					},
 					"typography": {
 						"textDecoration": "underline"
@@ -1725,8 +1745,8 @@
 					"radius": "var(--wp--custom--border--primary--radius)"
 				},
 				"color": {
-					"background": "var(--wp--custom--components--submenu--background)",
-					"text": "var(--wp--custom--components--submenu--foreground)"
+					"background": "var(--wp--custom--components--submenu--color--background)",
+					"text": "var(--wp--custom--components--submenu--color--foreground)"
 				},
 				"shadow": "var(--wp--custom--shadow--primary--default)",
 				"spacing": {
@@ -1753,7 +1773,7 @@
 					},
 					"link": {
 						"color": {
-							"text": "var(--wp--custom--components--submenu--foreground)"
+							"text": "var(--wp--custom--components--submenu--color--foreground)"
 						},
 						"outline": {
 							"width": "0"
