@@ -124,6 +124,7 @@ class Theme implements Bootable, Container
 
 		// phpcs:disable Generic.Functions.FunctionCallArgumentSpacing.TooMuchSpaceAfterComma
 		$blocks = [
+			'audio'              => Block\Library\Core\Audio::class,
 			'avatar'             => Block\Library\Core\Avatar::class,
 			'archives'           => Block\Library\Core\Archives::class,
 			'calendar'           => Block\Library\Core\Calendar::class,
@@ -143,6 +144,7 @@ class Theme implements Bootable, Container
 			'query-pagination'   => Block\Library\Core\QueryPagination::class,
 			'tag-cloud'          => Block\Library\Core\TagCloud::class,
 			'template-part'      => Block\Library\Core\TemplatePart::class,
+			'video'              => Block\Library\Core\Video::class
 		];
 		// phpcs:enable
 
