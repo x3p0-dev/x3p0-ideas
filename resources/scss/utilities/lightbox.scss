@@ -12,11 +12,10 @@
 /// @todo Should we use button styling for the close button?
 ///
 .wp-lightbox-overlay {
-	background: var(--wp--custom--color--background--backdrop, #000);
 	color: var(--wp--custom--color--foreground--on-backdrop, #fff);
 
 	.scrim {
-		background: none !important;
+		background: var(--wp--custom--color--background--backdrop, #000) !important;
 	}
 
 	.close-button {

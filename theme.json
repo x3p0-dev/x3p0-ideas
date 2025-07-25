@@ -742,7 +742,7 @@
 					"level-1": "light-dark(var(--wp--preset--color--neutral-50), var(--wp--preset--color--neutral-900))",
 					"level-2": "light-dark(var(--wp--preset--color--neutral-100), var(--wp--preset--color--neutral-800))",
 					"accent": "light-dark(var(--wp--preset--color--primary-600), var(--wp--preset--color--primary-400))",
-					"backdrop": "light-dark(var(--wp--preset--color--neutral-950), var(--wp--preset--color--neutral-950))"
+					"backdrop": "var(--wp--preset--color--neutral-950)"
 				},
 				"foreground": {
 					"primary": "light-dark(var(--wp--preset--color--neutral-900), var(--wp--preset--color--neutral-200))",
@@ -750,7 +750,7 @@
 					"tertiary": "light-dark(var(--wp--preset--color--neutral-400), var(--wp--preset--color--neutral-600))",
 					"accent": "light-dark(var(--wp--preset--color--primary-700), var(--wp--preset--color--primary-300))",
 					"on-accent": "light-dark(var(--wp--preset--color--white), var(--wp--preset--color--primary-950))",
-					"on-backdrop": "light-dark(var(--wp--preset--color--neutral-50), var(--wp--preset--color--neutral-50))"
+					"on-backdrop": "var(--wp--preset--color--neutral-50)"
 				}
 			},
 			"elements": {
