@@ -2044,13 +2044,7 @@
 				}
 			},
 			"core/video": {
-				"border": {
-					"color": "var(--wp--custom--border--primary--color)",
-					"style": "var(--wp--custom--border--primary--style)",
-					"width": "var(--wp--custom--border--primary--width)",
-					"radius": "var(--wp--custom--border--primary--radius)"
-				},
-				"shadow": "var(--wp--custom--shadow--primary--default)"
+				"css": "& video {\n\tborder: var(--wp--custom--border--primary--width) var(--wp--custom--border--primary--style) var(--wp--custom--border--primary--color);\n\tborder-radius: var(--wp--custom--border--primary--radius);\n\tbox-shadow: var(--wp--custom--shadow--primary--default);\n}"
 			},
 			"outermost/icon-block": {
 				"css": "& svg {\n\tfill: currentColor;\n}"
