@@ -34,10 +34,10 @@ defined('ABSPATH') || exit;
 			"aspectRatio":"3/4"
 		}
 	},
-	"className":"is-style-stretch",
+	"className":"is-style-cover-stretch",
 	"layout":{"type":"default"}
 } -->
-<article class="wp-block-cover alignfull is-style-stretch" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)">
+<article class="wp-block-cover alignfull is-style-cover-stretch" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)">
 
 	<span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim has-background-gradient has-45-deg-dark-transparent-gradient-background"></span>
 	<div class="wp-block-cover__inner-container">

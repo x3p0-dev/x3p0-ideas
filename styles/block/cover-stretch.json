@@ -1,0 +1,13 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/wp/6.8/schemas/json/theme.json",
+	"version": 3,
+	"title": "Stretcher",
+	"description": "Vertically stretches the inner content so that it fills the entire Cover block.",
+	"slug": "cover-stretch",
+	"blockTypes": [
+		"core/cover"
+	],
+	"styles": {
+		"css": "align-items: stretch;\n\n& .wp-block-cover__inner-container {\n\tdisplay: flex;\n\tflex-direction: column;\n\tjustify-content: space-between;\n}"
+	}
+}

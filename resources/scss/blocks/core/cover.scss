@@ -109,16 +109,3 @@
 .editor-styles-wrapper .wp-block-cover.is-style-global-border {
 	overflow: hidden;
 }
-
-///
-/// Stretches items inside of a Cover block and justifies the space between.
-///
-.wp-block-cover.is-style-stretch {
-	align-items: stretch;
-
-	.wp-block-cover__inner-container {
-		display:         flex;
-		flex-direction:  column;
-		justify-content: space-between;
-	}
-}

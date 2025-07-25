@@ -48,7 +48,7 @@
 /// we can use that information to "count" up to the number of columns we need
 /// to target within breaks.
 ///
-.wp-block-columns-is-layout-flex.is-style-grid-auto {
+.wp-block-columns-is-layout-flex.is-style-columns-grid-auto {
 	display: grid !important;
 	grid-template-columns: repeat(1, 1fr);
 
@@ -89,7 +89,7 @@
 /// and text section.
 ///
 @media (max-width: wp.$break-medium) {
-	.wp-block-columns.is-style-reverse-stack {
+	.wp-block-columns.is-style-columns-reverse-stack {
 		flex-wrap: wrap-reverse !important;
 	}
 }

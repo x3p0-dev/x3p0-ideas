@@ -1,0 +1,16 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/wp/6.8/schemas/json/theme.json",
+	"version": 3,
+	"title": "Fade In",
+	"description": "Creates a fade-in effect that transitions from a transparent overlay at the top and gradually blends into the background.",
+	"slug": "cover-fade-in",
+	"blockTypes": [
+		"core/cover"
+	],
+	"styles": {
+		"css": "& .wp-block-cover__background {\n\topacity: 1 !important;\n\tbackground: linear-gradient(180deg, transparent -40%, var(--wp--custom--color--background--level-0) 100%) !important;\n}",
+		"color": {
+			"text": "var(--wp--custom--color--foreground--primary)"
+		}
+	}
+}
