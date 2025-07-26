@@ -14,7 +14,6 @@ declare(strict_types=1);
 namespace X3P0\Ideas\Block;
 
 use WP_Block;
-use WP_HTML_Tag_Processor;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
 
