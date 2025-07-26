@@ -24,6 +24,19 @@ class StyleVariations implements Bootable
 	use Hookable;
 
 	/**
+	 * Slugs for section styles registered by the theme.
+	 *
+	 * @since 1.0.0
+	 * @todo  Type hint with PHP 8.3+ requirement.
+	 */
+	private const SECTION_STYLES = [
+		'section-1',
+		'section-2',
+		'section-3',
+		'section-4',
+	];
+
+	/**
 	 * Stores an array off `WP_Style_Engine_CSS_Rule` objects.
 	 *
 	 * @since 1.0.0
@@ -106,8 +119,11 @@ class StyleVariations implements Bootable
 
 			foreach ($css_vars as $property => $value) {
 				if (
-					str_starts_with($property, 'border')
-					|| str_starts_with($property, 'shadow')
+					in_array($variation['slug'], self::SECTION_STYLES, true)
+					&& (
+						str_starts_with($property, 'border')
+						|| str_starts_with($property, 'shadow')
+					)
 				) {
 					$child_declarations["--wp--custom--{$property}"] = $value;
 					continue;
