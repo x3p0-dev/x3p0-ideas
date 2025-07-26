@@ -48,6 +48,9 @@ class PostTemplate implements Bootable
 
 			$settings['supports']['spacing']            ??= [];
 			$settings['supports']['spacing']['padding'] ??= true;
+
+			// Disable client-side navigation.
+			$settings['supports']['interactivity']['clientNavigation'] = false;
 		}
 
 		return $settings;
