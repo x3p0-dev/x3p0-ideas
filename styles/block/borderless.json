@@ -1,0 +1,28 @@
+
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/wp/6.8/schemas/json/theme.json",
+	"version": 3,
+	"title": "Borderless",
+	"slug": "borderless",
+	"blockTypes": [
+		"core/image",
+		"core/post-featured-image"
+	],
+	"styles": {
+		"border": {
+			"width": "0 !important"
+		},
+		"outline": {
+			"width": "0 !important"
+		},
+		"shadow": "none !important",
+		"spacing": {
+			"padding": {
+				"top": "0",
+				"bottom": "0",
+				"left": "0",
+				"right": "0"
+			}
+		}
+	}
+}

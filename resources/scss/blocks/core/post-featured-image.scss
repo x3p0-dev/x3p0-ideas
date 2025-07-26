@@ -41,18 +41,4 @@ figure.wp-block-post-featured-image[class*=-gradient-background] {
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-///
-/// The borderless style removes any potential borders around the images, even
-/// styles that are similar to a border, such as outlines and shadows. We also
-/// remove any padding so that backgrounds on the block or image don't appear.
-/// This style targets both the outer block and the nested image to clear away
-/// those styles.
-///
-.wp-block-post-featured-image.is-style-borderless,
-.wp-block-post-featured-image.is-style-borderless img {
-	padding: 0 !important;
-	background: none !important;
-	border: none !important;
-	box-shadow: none !important;
-	outline: none !important;
-}
+// No style variations...

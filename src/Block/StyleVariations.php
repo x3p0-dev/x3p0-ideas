@@ -241,7 +241,6 @@ class StyleVariations implements Bootable
 				'icon' => __('Icon', 'x3p0-ideas')
 			],
 			'core/image' => [
-				'borderless' => __('Borderless',   'x3p0-ideas'),
 				'hand-drawn' => __('Hand-Drawn',   'x3p0-ideas'),
 				'icon'       => __('Caption Icon', 'x3p0-ideas'),
 				'polaroid'   => __('Polaroid',     'x3p0-ideas'),
@@ -273,9 +272,6 @@ class StyleVariations implements Bootable
 			],
 			'core/post-comments-link' => [
 				'icon' => __('Icon', 'x3p0-ideas')
-			],
-			'core/post-featured-image' => [
-				'borderless' => __('Borderless', 'x3p0-ideas')
 			],
 			'core/post-date' => [
 				'icon' => __('Icon', 'x3p0-ideas')
