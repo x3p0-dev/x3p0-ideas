@@ -37,6 +37,18 @@ class StyleVariations implements Bootable
 	];
 
 	/**
+	 * Properties that should be defined for descendants of section styles.
+	 *
+	 * @since 1.0.0
+	 * @todo  Type hint with PHP 8.3+ requirement.
+	 */
+	private const SECTION_DESCENDANT_PROPERTIES = [
+		'border',
+		'outline',
+		'shadow'
+	];
+
+	/**
 	 * Stores an array off `WP_Style_Engine_CSS_Rule` objects.
 	 *
 	 * @since 1.0.0
@@ -118,13 +130,7 @@ class StyleVariations implements Bootable
 			$css_vars = static::flattenTree($variation['settings']['custom']);
 
 			foreach ($css_vars as $property => $value) {
-				if (
-					in_array($variation['slug'], self::SECTION_STYLES, true)
-					&& (
-						str_starts_with($property, 'border')
-						|| str_starts_with($property, 'shadow')
-					)
-				) {
+				if (static::isDescendantProperty($variation, $property)) {
 					$child_declarations["--wp--custom--{$property}"] = $value;
 					continue;
 				}
@@ -176,6 +182,27 @@ class StyleVariations implements Bootable
 		wp_register_style('x3p0-ideas-block-styles-custom', false);
 		wp_add_inline_style('x3p0-ideas-block-styles-custom', $style);
 		wp_enqueue_style('x3p0-ideas-block-styles-custom');
+	}
+
+	/**
+	 * Determine if the current property for the variation should be defined
+	 * for its descendants.
+	 *
+	 * @since 1.0.0
+	 */
+	private static function isDescendantProperty(array $variation, string $property): bool
+	{
+		if (! in_array($variation['slug'], self::SECTION_STYLES, true)) {
+			return false;
+		}
+
+		foreach (self::SECTION_DESCENDANT_PROPERTIES as $needle) {
+			if (str_starts_with($property, $needle)) {
+				return true;
+			}
+		}
+
+		return false;
 	}
 
 	/**
