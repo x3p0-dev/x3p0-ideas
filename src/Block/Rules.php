@@ -73,9 +73,7 @@ class Rules
 	 */
 	protected function checkIf(string|array $condition): bool
 	{
-		return is_callable($condition, false)
-			? boolval(call_user_func($condition))
-			: true;
+		return ! is_callable($condition, false) || boolval(call_user_func($condition));
 	}
 
 	/**
@@ -95,9 +93,7 @@ class Rules
 	 */
 	protected function checkUnless(string|array $condition): bool
 	{
-		return is_callable($condition, false)
-			? ! boolval(call_user_func($condition))
-			: true;
+		return ! is_callable($condition, false) || ! boolval(call_user_func($condition));
 	}
 
 	/**
