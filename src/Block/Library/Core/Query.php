@@ -33,8 +33,7 @@ class Query implements Bootable
 
 	/**
 	 * Adds spacing support to the Query Loop block and disables
-	 * interactivity. Disabling interactivity will ensure that the user
-	 * cannot select it in the admin.
+	 * interactivity.
 	 *
 	 * @since 1.0.0
 	 */
@@ -45,8 +44,6 @@ class Query implements Bootable
 			$settings['supports']['spacing']             ??= [];
 			$settings['supports']['spacing']['blockGap'] ??= true;
 			$settings['supports']['spacing']['padding']  ??= true;
-
-			$settings['supports']['interactivity'] = false;
 		}
 
 		return $settings;

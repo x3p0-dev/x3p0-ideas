@@ -135,11 +135,11 @@ class Theme implements Bootable, Container
 			'group'              => Block\Library\Core\Group::class,
 			'heading'            => Block\Library\Core\Heading::class,
 			'loginout'           => Block\Library\Core\Loginout::class,
-			'query'              => Block\Library\Core\Query::class,
 			'navigation'         => Block\Library\Core\Navigation::class,
 			'navigation-submenu' => Block\Library\Core\NavigationSubmenu::class,
 			'post-excerpt'       => Block\Library\Core\PostExcerpt::class,
 			'post-template'      => Block\Library\Core\PostTemplate::class,
+			'query'              => Block\Library\Core\Query::class,
 			'query-pagination'   => Block\Library\Core\QueryPagination::class,
 			'tag-cloud'          => Block\Library\Core\TagCloud::class,
 			'template-part'      => Block\Library\Core\TemplatePart::class
