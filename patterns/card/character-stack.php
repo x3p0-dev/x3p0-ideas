@@ -13,7 +13,7 @@ declare(strict_types=1);
 # Prevent direct access.
 defined('ABSPATH') || exit;
 
-use X3P0\Ideas\Tools\Language;
+use X3P0\Ideas\Tools\Placeholder;
 
 $image = get_theme_file_uri('public/media/images/default-16x9.webp');
 
@@ -119,7 +119,7 @@ $image = get_theme_file_uri('public/media/images/default-16x9.webp');
 		<!-- /wp:group -->
 
 		<!-- wp:paragraph -->
-		<p><?= esc_html(Language::placeholder(12)) ?></p>
+		<p><?= esc_html(Placeholder::text(12)) ?></p>
 		<!-- /wp:paragraph -->
 
 	</div>

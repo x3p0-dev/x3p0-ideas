@@ -12,7 +12,7 @@ declare(strict_types=1);
 # Prevent direct access.
 defined('ABSPATH') || exit;
 
-use X3P0\Ideas\Tools\Language;
+use X3P0\Ideas\Tools\Placeholder;
 
 ?>
 <!-- wp:group {
@@ -47,7 +47,7 @@ use X3P0\Ideas\Tools\Language;
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph -->
-	<p><?= esc_html(Language::placeholder()) ?></p>
+	<p><?= esc_html(Placeholder::text()) ?></p>
 	<!-- /wp:paragraph -->
 
 </header>

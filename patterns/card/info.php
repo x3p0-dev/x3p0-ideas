@@ -13,7 +13,7 @@ declare(strict_types=1);
 # Prevent direct access.
 defined('ABSPATH') || exit;
 
-use X3P0\Ideas\Tools\Language;
+use X3P0\Ideas\Tools\Placeholder;
 
 $url = home_url();
 
@@ -35,7 +35,7 @@ $url = home_url();
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph -->
-	<p><?= esc_html(Language::placeholder(12)) ?></p>
+	<p><?= esc_html(Placeholder::text(12)) ?></p>
 	<!-- /wp:paragraph -->
 
 </div>

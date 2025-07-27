@@ -13,7 +13,7 @@ declare(strict_types=1);
 # Prevent direct access.
 defined('ABSPATH') || exit;
 
-use X3P0\Ideas\Tools\Language;
+use X3P0\Ideas\Tools\Placeholder;
 
 $icon     = get_theme_file_uri('public/media/svg/earthquake.svg');
 $download = get_theme_file_uri('public/media/images/mountain-road.webp');
@@ -78,7 +78,7 @@ $download = get_theme_file_uri('public/media/images/mountain-road.webp');
 		<!-- /wp:heading -->
 
 		<!-- wp:paragraph -->
-		<p><?= esc_html(Language::placeholder(8)) ?></p>
+		<p><?= esc_html(Placeholder::text(8)) ?></p>
 		<!-- /wp:paragraph -->
 
 	</div>

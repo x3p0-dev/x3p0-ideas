@@ -1,7 +1,8 @@
 <?php
 
 /**
- * The Language class includes helper methods related to language and i18n.
+ * The Placeholder class includes helper methods for generating placeholder
+ * content primarily in patterns until the user can change it for their site.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2022-2024, Justin Tadlock
@@ -13,14 +14,14 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas\Tools;
 
-class Language
+class Placeholder
 {
 	/**
 	 * Returns lorem ipsum text for use in patterns as placeholder text.
 	 *
 	 * @since 1.0.0
 	 */
-	public static function placeholder(int $words = 25): string
+	public static function text(int $words = 25): string
 	{
 		return wp_trim_words(
 			// Translators: This is placeholder text used in patterns.

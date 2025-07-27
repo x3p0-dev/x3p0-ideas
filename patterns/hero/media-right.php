@@ -14,7 +14,7 @@ declare(strict_types=1);
 # Prevent direct access.
 defined('ABSPATH') || exit;
 
-use X3P0\Ideas\Tools\Language;
+use X3P0\Ideas\Tools\Placeholder;
 
 $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 
@@ -77,7 +77,7 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph -->
-			<p><?= esc_html(Language::placeholder(20)) ?></p>
+			<p><?= esc_html(Placeholder::text(20)) ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:buttons -->
