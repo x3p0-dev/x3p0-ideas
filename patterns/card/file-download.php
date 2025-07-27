@@ -16,7 +16,7 @@ defined('ABSPATH') || exit;
 use X3P0\Ideas\Tools\Placeholder;
 
 $icon     = get_theme_file_uri('public/media/svg/earthquake.svg');
-$download = get_theme_file_uri('public/media/images/mountain-road.webp');
+$download = Placeholder::image('placeholder-01-wide.webp');
 
 ?>
 <!-- wp:group {

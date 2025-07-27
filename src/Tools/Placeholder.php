@@ -17,6 +17,19 @@ namespace X3P0\Ideas\Tools;
 class Placeholder
 {
 	/**
+	 * Returns a placeholder image URL.
+	 *
+	 * @since 1.0.0
+	 */
+	public static function image(string $filename): string
+	{
+		return get_theme_file_uri(sprintf(
+			'public/media/images/%s',
+			sanitize_file_name($filename)
+		));
+	}
+
+	/**
 	 * Returns lorem ipsum text for use in patterns as placeholder text.
 	 *
 	 * @since 1.0.0

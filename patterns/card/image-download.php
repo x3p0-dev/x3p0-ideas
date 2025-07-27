@@ -15,7 +15,7 @@ defined('ABSPATH') || exit;
 
 use X3P0\Ideas\Tools\Placeholder;
 
-$image = get_theme_file_uri('public/media/images/mountain-road.webp');
+$image = Placeholder::image('placeholder-01-wide.webp');
 
 ?>
 <!-- wp:group {

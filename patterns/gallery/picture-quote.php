@@ -15,47 +15,16 @@ declare(strict_types=1);
 # Prevent direct access.
 defined('ABSPATH') || exit;
 
-$image = get_theme_file_uri('public/media/images/mountain-road.webp');
+use X3P0\Ideas\Tools\Placeholder;
 
 ?>
 <!-- wp:group {
 	"align":"wide",
+	"className":"is-style-section-1 has-global-border",
 	"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},
 	"layout":{"type":"grid","minimumColumnWidth":"22rem"}
 } -->
-<div class="wp-block-group alignwide">
-
-	<!-- wp:group {
-		"layout":{
-			"type":"flex",
-			"orientation":"vertical",
-			"verticalAlignment":"space-between"
-		}
-	} -->
-	<div class="wp-block-group">
-
-		<!-- wp:gallery {
-			"columns":2,
-			"linkTo":"none",
-			"sizeSlug":"x3p0-square",
-			"style":{"layout":{"selfStretch":"fill","flexSize":null}}
-		} -->
-		<figure class="wp-block-gallery has-nested-images columns-2 is-cropped">
-
-			<!-- wp:image {
-				"sizeSlug":"x3p0-square",
-				"linkDestination":"none"
-			} -->
-			<figure class="wp-block-image size-x3p0-square">
-				<img src="<?= esc_url($image) ?>" alt="" />
-			</figure>
-			<!-- /wp:image -->
-
-		</figure>
-		<!-- /wp:gallery -->
-
-	</div>
-	<!-- /wp:group -->
+<div class="wp-block-group alignwide is-style-section-1 has-global-border">
 
 	<!-- wp:group {
 		"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},
@@ -84,18 +53,50 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 		} -->
 		<figure class="wp-block-gallery has-nested-images columns-2 is-cropped">
 
-			<?php foreach (range(1, 2) as $col) : ?>
+			<?php foreach (range(2, 3) as $col) : ?>
 
 				<!-- wp:image {
 					"sizeSlug":"x3p0-square",
 					"linkDestination":"none"
 				} -->
 				<figure class="wp-block-image size-x3p0-square">
-					<img src="<?= esc_url($image) ?>" alt="" />
+					<img src="<?= esc_url(Placeholder::image("placeholder-0{$col}-square.webp")) ?>" alt="" />
 				</figure>
 				<!-- /wp:image -->
 
 			<?php endforeach ?>
+
+		</figure>
+		<!-- /wp:gallery -->
+
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:group {
+		"layout":{
+			"type":"flex",
+			"orientation":"vertical",
+			"verticalAlignment":"space-between"
+		}
+	} -->
+	<div class="wp-block-group">
+
+		<!-- wp:gallery {
+			"columns":2,
+			"linkTo":"none",
+			"sizeSlug":"x3p0-square",
+			"style":{"layout":{"selfStretch":"fill","flexSize":null}}
+		} -->
+		<figure class="wp-block-gallery has-nested-images columns-2 is-cropped">
+
+			<!-- wp:image {
+				"sizeSlug":"x3p0-square",
+				"linkDestination":"none"
+			} -->
+			<figure class="wp-block-image size-x3p0-square">
+				<img src="<?= esc_url(Placeholder::image('placeholder-01-square.webp')) ?>" alt="" />
+			</figure>
+			<!-- /wp:image -->
 
 		</figure>
 		<!-- /wp:gallery -->

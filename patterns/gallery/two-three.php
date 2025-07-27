@@ -15,7 +15,7 @@ declare(strict_types=1);
 # Prevent direct access.
 defined('ABSPATH') || exit;
 
-$image = get_theme_file_uri('public/media/images/mountain-road.webp');
+use X3P0\Ideas\Tools\Placeholder;
 
 ?>
 <!-- wp:gallery {
@@ -34,7 +34,10 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 			"linkDestination":"none"
 		} -->
 		<figure class="wp-block-image size-x3p0-wide">
-			<img src="<?= esc_url($image) ?>" alt=""/>
+			<img src="<?= esc_url(Placeholder::image(sprintf(
+				'placeholder-0%s-wide.webp',
+				mt_rand(1, 3)
+			))) ?>" alt=""/>
 		</figure>
 		<!-- /wp:image -->
 

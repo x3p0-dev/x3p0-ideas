@@ -15,7 +15,7 @@ declare(strict_types=1);
 # Prevent direct access.
 defined('ABSPATH') || exit;
 
-$image = get_theme_file_uri('public/media/images/mountain-road.webp');
+use X3P0\Ideas\Tools\Placeholder;
 
 ?>
 <!-- wp:gallery {
@@ -34,7 +34,7 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 			"style":{"border":{"radius":"0px"}}
 		} -->
 		<figure class="wp-block-image size-x3p0-portrait has-custom-border">
-			<img src="<?= esc_url($image) ?>" alt="" style="border-radius:0px"/>
+			<img src="<?= esc_url(Placeholder::image("placeholder-0{$number}-portrait.webp")) ?>" alt="" style="border-radius:0px"/>
 		</figure>
 		<!-- /wp:image -->
 
