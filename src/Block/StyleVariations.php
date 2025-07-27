@@ -284,10 +284,7 @@ class StyleVariations implements Bootable
 				'icon' => __('Icon', 'x3p0-ideas')
 			],
 			'core/image' => [
-				'hand-drawn' => __('Hand-Drawn',   'x3p0-ideas'),
-				'icon'       => __('Caption Icon', 'x3p0-ideas'),
-				'polaroid'   => __('Polaroid',     'x3p0-ideas'),
-				'tape'       => __('Tape',         'x3p0-ideas')
+				'icon' => __('Caption Icon', 'x3p0-ideas'),
 			],
 			'core/list' => [
 				'list-horizontal' => __('Horizontal', 'x3p0-ideas'),
