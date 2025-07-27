@@ -112,10 +112,10 @@ $download = get_theme_file_uri('public/media/images/mountain-road.webp');
 					"style":"none"
 				}
 			},
-			"className":"is-style-plain",
+			"className":"is-style-file-plain",
 			"fontSize":"sm"
 		} -->
-		<div class="wp-block-file is-style-plain has-sm-font-size" style="border-style:none;border-width:0px">
+		<div class="wp-block-file is-style-file-plain has-sm-font-size" style="border-style:none;border-width:0px">
 			<a href="<?= esc_url($download) ?>"><?= esc_html__('Download', 'x3p0-ideas') ?></a>
 		</div>
 		<!-- /wp:file -->
