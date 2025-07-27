@@ -541,7 +541,7 @@
 						},
 						"color": {
 							"text": "var(--wp--custom|color|text|muted)",
-							"gradient": "var(--wp--preset|gradient|90-deg-white-transparent)"
+							"gradient": "linear-gradient( 90deg, var( --wp--preset--color--white ) -40%, transparent max( 70vw, 40rem ) )"
 						},
 						"typography": {
 							"fontFamily": "var(--wp--preset|font-family|primary)",

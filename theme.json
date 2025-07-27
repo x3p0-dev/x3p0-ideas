@@ -412,139 +412,54 @@
 			],
 			"gradients": [
 				{
-					"gradient": "linear-gradient( 45deg, var( --wp--preset--color--black ) 0%, transparent max( 70vw, 40rem ) )",
+					"gradient": "linear-gradient(45deg, var(--wp--preset--color--black) 0%, transparent max(70vw, 40rem))",
 					"name": "Linear: Dark ↗ Transparent",
 					"slug": "45-deg-dark-transparent"
 				},
 				{
-					"gradient": "linear-gradient( 180deg, transparent -40%, var( --wp--custom--color--background--level-0 ) 100% )",
-					"name": "Linear: Transparent ↓ Base",
-					"slug": "180-deg-transparent-base"
+					"gradient": "linear-gradient(90deg, var(--wp--preset--color--primary-400) 0, var(--wp--preset--color--secondary-300))",
+					"name": "Drift",
+					"slug": "drift"
 				},
 				{
-					"gradient": "linear-gradient( 180deg, var( --wp--custom--color--background--level-0 ) 0%, transparent 100% )",
-					"name": "Linear: Base ↓ Transparent",
-					"slug": "180-deg-base-transparent"
+					"gradient": "linear-gradient(90deg, var(--wp--preset--color--neutral-900) 0, var(--wp--preset--color--primary-900))",
+					"name": "Emerge",
+					"slug": "emerge"
 				},
 				{
-					"gradient": "linear-gradient(90deg, light-dark(var(--wp--preset--color--neutral-50), var(--wp--preset--color--neutral-950)) -80%, transparent max(70vw, 40rem))",
-					"name": "Linear: Neutral Base → Transparent",
-					"slug": "90-deg-neutral-50-transparent"
+					"gradient": "linear-gradient(0deg, var(--wp--preset--color--neutral-950) 0, var(--wp--preset--color--neutral-600))",
+					"name": "Eternal",
+					"slug": "eternal"
 				},
 				{
-					"gradient": "linear-gradient( 270deg, var( --wp--preset--color--neutral-50 ) -80%, transparent max( 70vw, 40rem ) )",
-					"name": "Linear: Transparent → Neutral Base",
-					"slug": "270-deg-neutral-50-transparent"
+					"gradient": "linear-gradient(-225deg,var(--wp--preset--color--primary-950), var(--wp--preset--color--primary-800) 29%, var(--wp--preset--color--secondary-600) 67%, var(--wp--preset--color--secondary-400))",
+					"name": "Fabled",
+					"slug": "fabled"
 				},
 				{
-					"gradient": "linear-gradient( 90deg, var( --wp--preset--color--white ) -40%, transparent max( 70vw, 40rem ) )",
-					"name": "Linear: White → Transparent",
-					"slug": "90-deg-white-transparent"
+					"gradient": "linear-gradient(to right, var(--wp--preset--color--primary-900), var(--wp--preset--color--primary-100))",
+					"name": "Light Path",
+					"slug": "light-path"
 				},
 				{
-					"gradient": "linear-gradient( 270deg, var( --wp--preset--color--white ) -40%, transparent max( 70vw, 40rem ) )",
-					"name": "Linear: Transparent → White",
-					"slug": "270-deg-white-transparent"
+					"gradient": "linear-gradient(-225deg, var(--wp--preset--color--primary-100), var(--wp--preset--color--secondary-100))",
+					"name": "Light Shift",
+					"slug": "light-shift"
 				},
 				{
-					"gradient": "linear-gradient( 90deg, var( --wp--preset--color--primary-50 ) -80%, transparent max( 70vw, 40rem ) )",
-					"name": "Linear: Primary Base → Transparent",
-					"slug": "90-deg-primary-50-transparent"
+					"gradient": "linear-gradient(0deg, var(--wp--preset--color--primary-700) 0, var(--wp--preset--color--primary-400) 0, var(--wp--preset--color--secondary-200))",
+					"name": "Magic",
+					"slug": "magic"
 				},
 				{
-					"gradient": "linear-gradient( 270deg, var( --wp--preset--color--primary-50 ) -80%, transparent max( 70vw, 40rem ) )",
-					"name": "Linear: Transparent → Primary Base",
-					"slug": "270-deg-primary-50-transparent"
+					"gradient": "linear-gradient(120deg, var(--wp--preset--color--primary-400), var(--wp--preset--color--secondary-100))",
+					"name": "Neva",
+					"slug": "neva"
 				},
 				{
-					"gradient": "linear-gradient(to right, rgb(16, 185, 129), rgb(101, 163, 13))",
-					"name": "Emerald",
-					"slug": "emerald"
-				},
-				{
-					"gradient": "linear-gradient(0deg,#09203f 0,#537895)",
-					"name": "Eternal Constance",
-					"slug": "eternal-constance"
-				},
-				{
-					"gradient": "linear-gradient(-225deg,#231557,#44107a 29%,#ff1361 67%,#fff800)",
-					"name": "Fabled Sunset",
-					"slug": "fabled-sunset"
-				},
-				{
-					"gradient": "linear-gradient(-60deg,#ff5858,#f09819)",
-					"name": "Happy Memories",
-					"slug": "happy-memories"
-				},
-				{
-					"gradient": "linear-gradient(0deg,#d5dee7 0,#ffafbd 0,#c9ffbf)",
-					"name": "Magic Lake",
-					"slug": "magic-lake"
-				},
-				{
-					"gradient": "linear-gradient(to right, rgb(254, 249, 195), rgb(253, 224, 71), rgb(234, 179, 8))",
-					"name": "Mohave",
-					"slug": "mohave"
-				},
-				{
-					"gradient": "linear-gradient(0deg,#5ee7df 0,#b490ca)",
-					"name": "Near Moon",
-					"slug": "near-moon"
-				},
-				{
-					"gradient": "linear-gradient(to top, rgb(251, 146, 60), rgb(56, 189, 248))",
-					"name": "Oahu",
-					"slug": "oahu"
-				},
-				{
-					"gradient": "linear-gradient(to right, rgb(56, 189, 248), rgb(251, 113, 133), rgb(163, 230, 53))",
-					"name": "Powerpuff",
-					"slug": "powerpuff"
-				},
-				{
-					"gradient": "linear-gradient(0deg,#209cff 0,#68e0cf)",
-					"name": "Seashore",
-					"slug": "seashore"
-				},
-				{
-					"gradient": "linear-gradient(90deg,#eea2a2 0,#bbc1bf 19%,#57c6e1 42%,#b49fda 79%,#7ac5d8)",
-					"name": "Shy Rainbow",
-					"slug": "shy-rainbow"
-				},
-				{
-					"gradient": "radial-gradient(at right center, rgb(56, 189, 248), rgb(49, 46, 129))",
-					"name": "Sky Sea",
-					"slug": "sky-sea"
-				},
-				{
-					"gradient": "linear-gradient(90deg,#243949 0,#517fa4)",
-					"name": "Solid Stone",
-					"slug": "solid-stone"
-				},
-				{
-					"gradient": "linear-gradient(90deg, #0099f7, #f11712)",
-					"name": "Superman",
-					"slug": "superman"
-				},
-				{
-					"gradient": "linear-gradient(90deg,#fa709a 0,#fee140)",
-					"name": "True Sunset",
-					"slug": "true-sunset"
-				},
-				{
-					"gradient": "linear-gradient(135deg,#0e0214 0%,#350668 100%)",
-					"name": "Violet Jaguar",
-					"slug": "violet-jaguar"
-				},
-				{
-					"gradient": "linear-gradient(-225deg,#e3fdf5,#ffe6fa)",
-					"name": "White Rainbow",
-					"slug": "white-rainbow"
-				},
-				{
-					"gradient": "linear-gradient( 120deg, #a1c4fd, #c2e9fb )",
-					"name": "Inter Neva",
-					"slug": "inter-neva"
+					"gradient": "linear-gradient(to right, var(--wp--preset--color--primary-900), var(--wp--preset--color--primary-800), var(--wp--preset--color--primary-700), var(--wp--preset--color--primary-600), var(--wp--preset--color--primary-500), var(--wp--preset--color--primary-400), var(--wp--preset--color--primary-300), var(--wp--preset--color--primary-200), var(--wp--preset--color--primary-100))",
+					"name": "Spectrum",
+					"slug": "spectrum"
 				}
 			],
 			"palette": [
