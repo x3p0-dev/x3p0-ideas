@@ -34,12 +34,13 @@ class Placeholder
 	 *
 	 * @since 1.0.0
 	 */
-	public static function text(int $words = 25): string
+	public static function text(int $words = 25, ?string $more = null): string
 	{
 		return wp_trim_words(
 			// Translators: This is placeholder text used in patterns.
 			__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra eget neque ut consequat. Nunc odio sem, finibus malesuada sagittis vitae, euismod at ante. Sed quis suscipit quam, sit amet interdum ligula.', 'x3p0-ideas'),
-			$words
+			$words,
+			$more
 		);
 	}
 }
