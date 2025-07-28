@@ -8,6 +8,7 @@
 
 // Internal dependencies.
 import commentParentLink from './comment-parent-link';
+import currentYear       from './current-year';
 import paginationLabel   from './pagination-label';
 import postFormat        from './post-format';
 import postReadingTime   from './post-reading-time';
@@ -22,6 +23,7 @@ import { registerBlockVariation } from '@wordpress/blocks';
 
 // Register each block variation.
 registerBlockVariation(commentParentLink.block, commentParentLink.variation);
+registerBlockVariation(currentYear.block,       currentYear.variation);
 registerBlockVariation(paginationLabel.block,   paginationLabel.variation);
 registerBlockVariation(postFormat.block,        postFormat.variation);
 registerBlockVariation(postReadingTime.block,   postReadingTime.variation);
