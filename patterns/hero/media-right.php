@@ -16,8 +16,6 @@ defined('ABSPATH') || exit;
 
 use X3P0\Ideas\Tools\Placeholder;
 
-$image = get_theme_file_uri('public/media/images/mountain-road.webp');
-
 ?>
 <!-- wp:group {
 	"tagName":"section",
@@ -73,7 +71,7 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 		<div class="wp-block-column is-vertically-aligned-center" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)">
 
 			<!-- wp:heading {"fontSize":"6-xl"} -->
-			<h2 class="wp-block-heading has-6-xl-font-size"><?= esc_html__('Jump start your next project with our open-source engine', 'x3p0-ideas') ?></h2>
+			<h2 class="wp-block-heading has-6-xl-font-size"><?= esc_html(Placeholder::text(8, '')) ?></h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph -->
@@ -121,7 +119,7 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 				}
 			} -->
 			<figure class="wp-block-image size-full">
-				<img src="<?= esc_url($image) ?>" alt="" style="aspect-ratio:4/3;object-fit:cover"/>
+				<img src="<?= esc_url(Placeholder::image('placeholder-01-square.webp')) ?>" alt="" style="aspect-ratio:4/3;object-fit:cover"/>
 			</figure>
 			<!-- /wp:image -->
 
