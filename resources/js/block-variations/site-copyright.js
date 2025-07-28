@@ -29,12 +29,7 @@ export default {
 						}
 					}
 				}
-			},
-			content: sprintf(
-				// Translators: %s is the copyright year.
-				__('Copyright © %s', 'x3p0-ideas'),
-				new Date().getFullYear()
-			)
+			}
 		},
 		isActive: [
 			'metadata.bindings.content.source',

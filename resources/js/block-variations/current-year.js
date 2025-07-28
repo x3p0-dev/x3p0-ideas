@@ -29,8 +29,7 @@ export default {
 						}
 					}
 				}
-			},
-			content: new Date().getFullYear()
+			}
 		},
 		isActive: [
 			'metadata.bindings.content.source',
