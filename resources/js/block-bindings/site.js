@@ -28,8 +28,6 @@ export default {
 			values[attributeName] = placeholders?.[bindingKey] || bindingKey;
 		}
 
-		console.log(values);
-
 		return values;
 	},
 	canUserEditValue: () => false
