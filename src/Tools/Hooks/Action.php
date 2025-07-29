@@ -1,8 +1,7 @@
 <?php
 
 /**
- * The action attribute class is for registering class methods as an action on a
- * WordPress hook using a PHP attribute.
+ * Action attribute.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright 2008-2024 Justin Tadlock
@@ -16,6 +15,10 @@ namespace X3P0\Ideas\Tools\Hooks;
 
 use Attribute;
 
+/**
+ * The action attribute is for registering class constants, methods, or
+ * properties as an action on a WordPress hook using a PHP attribute.
+ */
 #[Attribute(
 	Attribute::IS_REPEATABLE
 	| Attribute::TARGET_CLASS_CONSTANT

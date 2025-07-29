@@ -1,8 +1,7 @@
 <?php
 
 /**
- * The Block Template Parts class is responsible for housing any custom code
- * related to template parts.
+ * Template Parts class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
@@ -17,14 +16,16 @@ namespace X3P0\Ideas;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
 
+/**
+ * The Block Template Parts class is responsible for housing any custom code
+ * related to template parts.
+ */
 class Parts implements Bootable
 {
 	use Hookable;
 
 	/**
 	 * Boots the component, running its actions/filters.
-	 *
-	 * @since 1.0.0
 	 */
 	#[\Override]
 	public function boot(): void
@@ -39,10 +40,9 @@ class Parts implements Bootable
 	 * Core only supports four icons at the moment, so the `icon` field
 	 * value doesn't actually work. But the value must be defined to avoid
 	 * an error.
-	 * @link https://github.com/WordPress/gutenberg/issues/36814
 	 *
-	 * @since 1.0.0
-	 * @link  https://developer.wordpress.org/reference/hooks/default_wp_template_part_areas/
+	 * @link https://github.com/WordPress/gutenberg/issues/36814
+	 * @link https://developer.wordpress.org/reference/hooks/default_wp_template_part_areas/
 	 */
 	#[Filter('default_wp_template_part_areas')]
 	public function registerAreas(array $areas): array

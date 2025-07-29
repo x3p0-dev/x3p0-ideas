@@ -1,9 +1,7 @@
 <?php
 
 /**
- * The Block Patterns class is responsible for registering block pattern
- * categories and block patterns. However, it's recommended to register patterns
- * by placing individual files in the `/patterns` folder.
+ * Patterns class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
@@ -21,16 +19,20 @@ use WP_Block_Type_Registry;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Action, Hookable};
 
+/**
+ * The Block Patterns class is responsible for registering block pattern
+ * categories and block patterns. However, it's recommended to register patterns
+ * by placing individual files in the `/patterns` folder.
+ */
 class Patterns implements Bootable
 {
 	use Hookable;
 
 	/**
 	 * Patterns that should be conditionally removed if the block is not
-	 * registered for the install.
+	 * registered for the installation.
 	 *
-	 * @since 1.0.0
-	 * @todo  Type hint with PHP 8.3+ requirement.
+	 * @todo Type hint with PHP 8.3+ requirement.
 	 */
 	protected const CONDITIONAL_PATTERNS = [
 		'core/table-of-contents' => [ 'x3p0-ideas/card-table-of-contents' ],
@@ -39,8 +41,6 @@ class Patterns implements Bootable
 
 	/**
 	 * Sets up the object state.
-	 *
-	 * @since 1.0.0
 	 */
 	public function __construct(
 		protected WP_Block_Patterns_Registry $patterns,
@@ -50,8 +50,6 @@ class Patterns implements Bootable
 
 	/**
 	 * Boots the component, running its actions/filters.
-	 *
-	 * @since 1.0.0
 	 */
 	#[\Override]
 	public function boot(): void
@@ -61,8 +59,6 @@ class Patterns implements Bootable
 
 	/**
 	 * Removes theme support for core patterns.
-	 *
-	 * @since 1.0.0
 	 */
 	#[Action('after_setup_theme')]
 	public function themeSupport(): void
@@ -75,8 +71,7 @@ class Patterns implements Bootable
 	 * patterns by adding them as individual pattern files in the `/patterns`
 	 * folder.
 	 *
-	 * @since 1.0.0
-	 * @link  https://developer.wordpress.org/reference/functions/register_block_pattern_category/
+	 * @link https://developer.wordpress.org/reference/functions/register_block_pattern_category/
 	 */
 	#[Action('init', 'first')]
 	public function registerCategories(): void
@@ -106,8 +101,7 @@ class Patterns implements Bootable
 	 * Unregister block patterns, specifically those that use block types
 	 * that are not in use on the site.
 	 *
-	 * @since 1.0.0
-	 * @link  https://developer.wordpress.org/reference/functions/unregister_block_pattern/
+	 * @link https://developer.wordpress.org/reference/functions/unregister_block_pattern/
 	 */
 	#[Action('init', 'last')]
 	public function unregisterPatterns(): void

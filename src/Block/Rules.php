@@ -1,13 +1,7 @@
 <?php
 
 /**
- * Block rules are instructions for how to handle the front-end output of a
- * block. This is done via a limited set of rules that conditionally decide
- * whether the block should be public (should be shown) or not. This could
- * potentially be expanded to include other instructions for how to handle
- * blocks, but the primary goal is conditional inclusion. This class doesn't
- * actually alter blocks in any way. It simply checks a block's attributes to
- * perform checks.
+ * Block Rules class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
@@ -21,13 +15,21 @@ namespace X3P0\Ideas\Block;
 
 use WP_Block;
 
+/**
+ * Block rules are instructions for how to handle the front-end output of a
+ * block. This is done via a limited set of rules that conditionally decide
+ * whether the block should be public (should be shown) or not. This could
+ * potentially be expanded to include other instructions for how to handle
+ * blocks, but the primary goal is conditional inclusion. This class doesn't
+ * actually alter blocks in any way. It simply checks a block's attributes to
+ * perform checks.
+ */
 class Rules
 {
 	/**
 	 * List of allowed rules and their callback methods.
 	 *
-	 * @since 1.0.0
-	 * @todo  Type hint with PHP 8.3+ requirement.
+	 * @todo Type hint with PHP 8.3+ requirement.
 	 */
 	private const RULE_METHODS = [
 		'@if'          => 'checkIf',
@@ -39,8 +41,6 @@ class Rules
 	/**
 	 * Checks if the block content is allowed to be shown based on the what
 	 * is returned by the rule method.
-	 *
-	 * @since 1.0.0
 	 */
 	public function isPublic(array $block, WP_Block $instance): bool
 	{
@@ -68,8 +68,6 @@ class Rules
 
 	/**
 	 * Show the block if the condition is met.
-	 *
-	 * @since 1.0.0
 	 */
 	protected function checkIf(string|array $condition): bool
 	{
@@ -78,8 +76,6 @@ class Rules
 
 	/**
 	 * Show the block if the attribute has a value.
-	 *
-	 * @since 1.0.0
 	 */
 	protected function checkIfAttribute(string $attr, array $block, WP_Block $instance): bool
 	{
@@ -88,8 +84,6 @@ class Rules
 
 	/**
 	 * Show the block unless the condition is met.
-	 *
-	 * @since 1.0.0
 	 */
 	protected function checkUnless(string|array $condition): bool
 	{
@@ -98,8 +92,6 @@ class Rules
 
 	/**
 	 * Show the block if the user matches.
-	 *
-	 * @since 1.0.0
 	 */
 	protected function checkUser(string|int|bool $user): bool
 	{

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * The Heading class handles filters related to the `core/heading` block.
+ * Heading Block class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
@@ -16,14 +16,15 @@ namespace X3P0\Ideas\Block\Library\Core;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
 
+/**
+ * Filters settings and rendered output for the `core/heading` block.
+ */
 class Heading implements Bootable
 {
 	use Hookable;
 
 	/**
 	 * Boots the component, running its actions/filters.
-	 *
-	 * @since 1.0.0
 	 */
 	#[\Override]
 	public function boot(): void
@@ -34,8 +35,6 @@ class Heading implements Bootable
 	/**
 	 * Adds support for background images to the Heading block so that the
 	 * `clip-text` style variation can work.
-	 *
-	 * @since 1.0.0
 	 */
 	#[Filter('block_type_metadata_settings', 'last')]
 	public function settings(array $settings): array

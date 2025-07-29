@@ -19,12 +19,14 @@ use WP_Query;
 use X3P0\Ideas\Contracts\BlockBindingSource;
 use X3P0\Ideas\Tools\Superpower;
 
+/**
+ * Handles registering the `x3p0/theme` block bindings source and rendering its
+ * output based on the given arguments.
+ */
 class Theme implements BlockBindingSource
 {
 	/**
 	 * Registers the block binding source.
-	 *
-	 * @since 1.0.0
 	 */
 	public function register(WP_Block_Bindings_Registry $bindings): void
 	{
@@ -37,8 +39,6 @@ class Theme implements BlockBindingSource
 
 	/**
 	 * Returns media data based on the bound attribute.
-	 *
-	 * @since 1.0.0
 	 */
 	public function callback(array $args, WP_Block $block, string $name): ?string
 	{
@@ -55,8 +55,6 @@ class Theme implements BlockBindingSource
 
 	/**
 	 * Returns the theme name.
-	 *
-	 * @since 1.0.0
 	 */
 	private function renderName(): string
 	{
@@ -65,8 +63,6 @@ class Theme implements BlockBindingSource
 
 	/**
 	 * Returns the theme URL.
-	 *
-	 * @since 1.0.0
 	 */
 	private function renderUrl(): string
 	{
@@ -77,8 +73,6 @@ class Theme implements BlockBindingSource
 
 	/**
 	 * Returns the theme link.
-	 *
-	 * @since 1.0.0
 	 */
 	private function renderLink(): string
 	{
@@ -98,8 +92,6 @@ class Theme implements BlockBindingSource
 
 	/**
 	 * Returns a randomly-generated "powered by" message.
-	 *
-	 * @since 1.0.0
 	 */
 	private function renderSuperpower(array $args): string
 	{
@@ -108,8 +100,6 @@ class Theme implements BlockBindingSource
 
 	/**
 	 * Returns a random lyric from the Hello Dolly plugin if available.
-	 *
-	 * @since 1.0.0
 	 */
 	private function renderHelloDolly(): ?string
 	{
@@ -127,8 +117,6 @@ class Theme implements BlockBindingSource
 	/**
 	 * Returns a pagination label: "Page 00 / 00". This is intended to be
 	 * used within the Query Pagination block.
-	 *
-	 * @since 1.0.0
 	 */
 	private function renderPaginationLabel(array $args, WP_Block $block): ?string
 	{

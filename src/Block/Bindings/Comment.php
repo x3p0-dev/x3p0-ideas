@@ -17,19 +17,19 @@ use WP_Block;
 use WP_Block_Bindings_Registry;
 use X3P0\Ideas\Contracts\BlockBindingSource;
 
+/**
+ * Handles registering the `x3p0/comment` block bindings source and rendering its
+ * output based on the given arguments.
+ */
 class Comment implements BlockBindingSource
 {
 	/**
 	 * Stores the comment ID.
-	 *
-	 * @since 1.0.0
 	 */
 	private int $comment_id = 0;
 
 	/**
 	 * Registers the block binding source.
-	 *
-	 * @since 1.0.0
 	 */
 	public function register(WP_Block_Bindings_Registry $bindings): void
 	{
@@ -42,8 +42,6 @@ class Comment implements BlockBindingSource
 
 	/**
 	 * Returns media data based on the bound attribute.
-	 *
-	 * @since 1.0.0
 	 */
 	public function callback(array $args, WP_Block $block, string $name): ?string
 	{
@@ -57,8 +55,6 @@ class Comment implements BlockBindingSource
 
 	/**
 	 * Renders a comment's parent link.
-	 *
-	 * @since 1.0.0
 	 */
 	private function renderParentLink(array $args, WP_Block $block): ?string
 	{

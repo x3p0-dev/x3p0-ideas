@@ -1,8 +1,7 @@
 <?php
 
 /**
- * The view engine is designed to make using the `View` class easy and stands as
- * a wrapper for quickly getting or rendering a view.
+ * View Engine class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
@@ -14,12 +13,14 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas\Views;
 
+/**
+ * The view engine is designed to make using the `View` class easy and stands as
+ * a wrapper for quickly getting or rendering a view.
+ */
 class Engine
 {
 	/**
 	 * Returns a new view.
-	 *
-	 * @since 1.0.0
 	 */
 	public function view(string $name, array $data = []): View
 	{
@@ -28,8 +29,6 @@ class Engine
 
 	/**
 	 * Returns the first found view or `false`.
-	 *
-	 * @since 1.0.0
 	 */
 	public function any(array|string $views, array $data = []): View|false
 	{
@@ -44,8 +43,6 @@ class Engine
 
 	/**
 	 * Renders a view only if it exists.
-	 *
-	 * @since 1.0.0
 	 */
 	public function renderIf(array|string $views, array $data = []): string
 	{
@@ -56,8 +53,6 @@ class Engine
 
 	/**
 	 * Renders a view when `$when` is `true`.
-	 *
-	 * @since 1.0.0
 	 */
 	public function renderWhen(
 		mixed $when,
@@ -69,8 +64,6 @@ class Engine
 
 	/**
 	 * Renders a view unless `$unless` is `true`.
-	 *
-	 * @since 1.0.0
 	 */
 	public function renderUnless(
 		mixed $unless,
@@ -82,8 +75,6 @@ class Engine
 
 	/**
 	 * Checks if a view exists.
-	 *
-	 * @since 1.0.0
 	 */
 	public function exists(string $name): bool
 	{

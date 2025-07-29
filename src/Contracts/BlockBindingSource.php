@@ -15,12 +15,14 @@ namespace X3P0\Ideas\Contracts;
 
 use WP_Block_Bindings_Registry;
 
+/**
+ * The Block Bindings Source contract defines how block binding sources should
+ * be implemented within the theme.
+ */
 interface BlockBindingSource
 {
 	/**
 	 * Registers the block bindings source.
-	 *
-	 * @since 1.0.0
 	 */
 	public function register(WP_Block_Bindings_Registry $bindings): void;
 }

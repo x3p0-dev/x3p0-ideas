@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Editor settings for dev mode.
+ * Editor class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
@@ -16,6 +16,9 @@ namespace X3P0\Ideas\Dev;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
 
+/**
+ * Defines block editor settings while in development mode.
+ */
 class Editor implements Bootable
 {
 	use Hookable;

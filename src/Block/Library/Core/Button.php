@@ -1,7 +1,7 @@
 <?php
 
 /**
- * The Button class handles filters related to the `core/button` block.
+ * Button Block class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
@@ -18,22 +18,21 @@ use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\ColorScheme;
 use X3P0\Ideas\Tools\Hooks\{Action, Filter, Hookable};
 
+/**
+ * Filters settings and rendered output for the `core/button` block.
+ */
 class Button implements Bootable
 {
 	use Hookable;
 
 	/**
 	 * Sets up the object state.
-	 *
-	 * @since 1.0.0
 	 */
 	public function __construct(protected ColorScheme $color_scheme)
 	{}
 
 	/**
 	 * Boots the component, running its actions/filters.
-	 *
-	 * @since 1.0.0
 	 */
 	#[\Override]
 	public function boot(): void
@@ -43,8 +42,6 @@ class Button implements Bootable
 
 	/**
 	 * Registers user meta for the color scheme toggle.
-	 *
-	 * @since 1.0.0
 	 */
 	#[Action('init')]
 	public function registerMeta(): void
@@ -60,8 +57,6 @@ class Button implements Bootable
 	 * Adds Interactivity API support to the Button block. This is needed
 	 * for the light/dark toggle and other use cases where we might use the
 	 * `<button>` element instead of an `<a>` element.
-	 *
-	 * @since 1.0.0
 	 */
 	#[Filter('block_type_metadata_settings', 'last')]
 	public function settings(array $settings): array
@@ -76,8 +71,6 @@ class Button implements Bootable
 	/**
 	 * Filters the Button block on render and runs any class methods based
 	 * on various attributes that may be set.
-	 *
-	 * @since 1.0.0
 	 */
 	#[Filter('render_block_core/button')]
 	public function render(string $content, array $block): string
@@ -97,8 +90,6 @@ class Button implements Bootable
 	 * if there is a `toggle-color-scheme` class, and if so, adds custom
 	 * attributes to be used with the Interactivity API and enqueues a view
 	 * script module.
-	 *
-	 * @since 1.0.0
 	 */
 	private function renderColorSchemeToggle(string $content): string
 	{
@@ -151,8 +142,6 @@ class Button implements Bootable
 
 	/**
 	 * Enqueue scripts/styles for the front end.
-	 *
-	 * @since 1.0.0
 	 */
 	#[Action('wp_enqueue_scripts')]
 	public function enqueueAssets(): void

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * The Render class handles filters on block rendering.
+ * Block Render class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
@@ -17,22 +17,21 @@ use WP_Block;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
 
+/**
+ * Handles filters on block render.
+ */
 class Render implements Bootable
 {
 	use Hookable;
 
 	/**
 	 * Sets up the object state.
-	 *
-	 * @since 1.0.0
 	 */
 	public function __construct(protected Rules $rules)
 	{}
 
 	/**
 	 * Boots the component, running its actions/filters.
-	 *
-	 * @since 1.0.0
 	 */
 	#[\Override]
 	public function boot(): void
@@ -43,8 +42,6 @@ class Render implements Bootable
 	/**
 	 * Filters block content, determining if it should be shown according to
 	 * any rules passed in via attributes.
-	 *
-	 * @since 1.0.0
 	 */
 	#[Filter('render_block', 'last')]
 	public function renderByRule(

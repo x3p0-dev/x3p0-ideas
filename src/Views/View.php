@@ -1,11 +1,7 @@
 <?php
 
 /**
- * Views essentially allow you to create dynamic block patterns and render them
- * when needed. They are meant to be used on the front end when you need to have
- * access to dynamic data, such as WordPress template and conditional tags. In a
- * block theme, this generally means using them alongside a filter when
- * rendering a block.
+ * Views class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
@@ -19,19 +15,22 @@ namespace X3P0\Ideas\Views;
 
 use Stringable;
 
+/**
+ * Views essentially allow you to create dynamic block patterns and render them
+ * when needed. They are meant to be used on the front end when you need to have
+ * access to dynamic data, such as WordPress template and conditional tags. In a
+ * block theme, this generally means using them alongside a filter when
+ * rendering a block.
+ */
 class View implements Stringable
 {
 	/**
 	 * The template filename.
-	 *
-	 * @since 1.0.0
 	 */
 	protected ?string $template = null;
 
 	/**
 	 * Sets up the view properties.
-	 *
-	 * @since 1.0.0
 	 */
 	public function __construct(protected string $name, protected array $data = [])
 	{
@@ -40,8 +39,6 @@ class View implements Stringable
 
 	/**
 	 * Returns the located template.
-	 *
-	 * @since 1.0.0
 	 */
 	protected function template(): string
 	{
@@ -55,8 +52,6 @@ class View implements Stringable
 
 	/**
 	 * Returns the view.
-	 *
-	 * @since 1.0.0
 	 */
 	public function render(): string
 	{
@@ -85,8 +80,6 @@ class View implements Stringable
 	/**
 	 * When attempting to use the object as a string, return the template
 	 * output.
-	 *
-	 * @since 1.0.0
 	 */
 	public function __toString(): string
 	{

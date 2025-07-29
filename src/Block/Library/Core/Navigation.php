@@ -1,7 +1,7 @@
 <?php
 
 /**
- * The Navigation class handles filters related to the `core/navigation` block.
+ * Navigation Block class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
@@ -16,14 +16,15 @@ namespace X3P0\Ideas\Block\Library\Core;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
 
+/**
+ * Filters settings and rendered output for the `core/navigation` block.
+ */
 class Navigation implements Bootable
 {
 	use Hookable;
 
 	/**
 	 * Boots the component, running its actions/filters.
-	 *
-	 * @since 1.0.0
 	 */
 	#[\Override]
 	public function boot(): void
@@ -35,8 +36,7 @@ class Navigation implements Bootable
 	 * Adds missing wrapping `<li>` to the Loginout block when used in a
 	 * navigation menu.
 	 *
-	 * @since 1.0.0
-	 * @link  https://github.com/WordPress/gutenberg/pull/55551
+	 * @link https://github.com/WordPress/gutenberg/pull/55551
 	 */
 	#[Filter('block_core_navigation_listable_blocks')]
 	public function listableBlocks(array $blocks): array

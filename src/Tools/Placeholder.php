@@ -1,8 +1,7 @@
 <?php
 
 /**
- * The Placeholder class includes helper methods for generating placeholder
- * content primarily in patterns until the user can change it for their site.
+ * Placeholder tool.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2022-2024, Justin Tadlock
@@ -14,12 +13,14 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas\Tools;
 
+/**
+ * The Placeholder class includes helper methods for generating placeholder
+ * content primarily in patterns until the user can change it for their site.
+ */
 class Placeholder
 {
 	/**
 	 * Returns a placeholder image URL.
-	 *
-	 * @since 1.0.0
 	 */
 	public static function image(string $filename): string
 	{
@@ -31,8 +32,6 @@ class Placeholder
 
 	/**
 	 * Returns lorem ipsum text for use in patterns as placeholder text.
-	 *
-	 * @since 1.0.0
 	 */
 	public static function text(int $words = 25, ?string $more = null): string
 	{

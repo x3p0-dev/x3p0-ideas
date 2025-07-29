@@ -1,7 +1,7 @@
 <?php
 
 /**
- * The PostContent class handles filters related to the `core/post-content` block.
+ * Post Content Block class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
@@ -14,27 +14,25 @@ declare(strict_types=1);
 namespace X3P0\Ideas\Block\Library\Core;
 
 use WP_Block;
-use WP_HTML_Tag_Processor;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
 use X3P0\Ideas\Views\Engine;
 
+/**
+ * Filters settings and rendered output for the `core/post-content` block.
+ */
 class PostContent implements Bootable
 {
 	use Hookable;
 
 	/**
 	 * Sets up the object state.
-	 *
-	 * @since 1.0.0
 	 */
 	public function __construct(protected Engine $views)
 	{}
 
 	/**
 	 * Boots the component, running its actions/filters.
-	 *
-	 * @since 1.0.0
 	 */
 	#[\Override]
 	public function boot(): void
@@ -45,8 +43,6 @@ class PostContent implements Bootable
 	/**
 	 * Filters the post content block when viewing single attachment views
 	 * and returns block-based media content.
-	 *
-	 * @since 1.0.0
 	 */
 	#[Filter('render_block_core/post-content')]
 	public function render(
@@ -80,8 +76,6 @@ class PostContent implements Bootable
 
 	/**
 	 * Returns the rendered attachment partial.
-	 *
-	 * @since 1.0.0
 	 */
 	private function attachmentViewNames(string $name, array $types, int $post_id): array
 	{

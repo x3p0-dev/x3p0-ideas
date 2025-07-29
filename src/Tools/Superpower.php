@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Class for randomly generating a "powered by" message.
+ * Superpower class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2022-2024, Justin Tadlock
@@ -13,19 +13,18 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas\Tools;
 
+/**
+ * Generates a random "powered by" message.
+ */
 class Superpower
 {
 	/**
 	 * Holds the potential messages.
-	 *
-	 * @since 1.0.0
 	 */
 	protected array $messages = [];
 
 	/**
 	 * Sets the initial object state.
-	 *
-	 * @since 1.0.0
 	 */
 	public function __construct()
 	{
@@ -70,8 +69,6 @@ class Superpower
 
 	/**
 	 * Returns the message.
-	 *
-	 * @since 1.0.0
 	 */
 	public function render(string $type = ''): string
 	{
@@ -89,8 +86,6 @@ class Superpower
 
 	/**
 	 * Returns the default messages.
-	 *
-	 * @since 1.0.0
 	 */
 	public function messages(): array
 	{

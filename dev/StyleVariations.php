@@ -1,22 +1,7 @@
 <?php
 
 /**
- * Style variation tester.
- *
- * Style variations in WordPress can only be tested by going to the site editor
- * and selecting a variation. Once a variation is selected, the settings are
- * stored in the database as custom global styles at the user level. This is
- * problematic in development because it means that any changes that you make
- * to the variation's JSON file are not reflected on the front end. The "user"
- * settings are used instead. The only way to test at this point is to reset the
- * styles in the site editor.
- *
- * This class was developed to quickly test variations without: 1) selecting a
- * variation at all and 2) needing to reset styles if a variation is currently
- * stored as user styles.
- *
- * To test, simply pass the variation slug(s) into the constructor and boot. If
- * the slug isn't set, no test will be run.
+ * Style Variations testing class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
@@ -32,6 +17,22 @@ use WP_Theme_JSON_Data;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
 
+/**
+ * Style variations in WordPress can only be tested by going to the site editor
+ * and selecting a variation. Once a variation is selected, the settings are
+ * stored in the database as custom global styles at the user level. This is
+ * problematic in development because it means that any changes that you make
+ * to the variation's JSON file are not reflected on the front end. The "user"
+ * settings are used instead. The only way to test at this point is to reset the
+ * styles in the site editor.
+ *
+ * This class was developed to quickly test variations without: 1) selecting a
+ * variation at all and 2) needing to reset styles if a variation is currently
+ * stored as user styles.
+ *
+ * To test, simply pass the variation slug(s) into the constructor and boot. If
+ * the slug isn't set, no test will be run.
+ */
 class StyleVariations implements Bootable
 {
 	use Hookable;
@@ -39,8 +40,7 @@ class StyleVariations implements Bootable
 	/**
 	 * Mappings for short variation names.
 	 *
-	 * @since 1.0.0
-	 * @todo  Add type hinting with PHP 8.3+ requirement.
+	 * @todo Add type hinting with PHP 8.3+ requirement.
 	 */
 	private const SHORT_NAMES = [
 		'bookish'  => 'a-little-bit-bookish',
@@ -49,16 +49,12 @@ class StyleVariations implements Bootable
 
 	/**
 	 * Set up the object's initial state.
-	 *
-	 * @since 1.0.0
 	 */
 	public function __construct(protected Config $config)
 	{}
 
 	/**
 	 * Boots the component, running its actions/filters.
-	 *
-	 * @since 1.0.0
 	 */
 	#[\Override]
 	public function boot(): void
@@ -72,7 +68,6 @@ class StyleVariations implements Bootable
 	 * into the constructor.
 	 *
 	 * @param WP_Theme_JSON_Data  The Gutenberg plugin breaks this.
-	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/wp_theme_json_data_user/
 	 */
 	#[Filter('wp_theme_json_data_user', 'first')]
@@ -89,7 +84,6 @@ class StyleVariations implements Bootable
 	 * Filters color variation.
 	 *
 	 * @param WP_Theme_JSON_Data  The Gutenberg plugin breaks this.
-	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/wp_theme_json_data_user/
 	 */
 	#[Filter('wp_theme_json_data_user', 'first')]
@@ -106,7 +100,6 @@ class StyleVariations implements Bootable
 	 * Filters typography variation.
 	 *
 	 * @param WP_Theme_JSON_Data  The Gutenberg plugin breaks this.
-	 * @since 1.0.0
 	 * @link  https://developer.wordpress.org/reference/hooks/wp_theme_json_data_user/
 	 */
 	#[Filter('wp_theme_json_data_user', 'first')]
@@ -122,8 +115,6 @@ class StyleVariations implements Bootable
 	/**
 	 * Returns a variation's data based on type (`theme`, `color`, or
 	 * `typography`) or `null`.
-	 *
-	 * @since 1.0.0
 	 */
 	protected function getVariationData(string $type): ?array
 	{
@@ -147,8 +138,6 @@ class StyleVariations implements Bootable
 	/**
 	 * Returns the variation's JSON filename and path or an empty string if
 	 * not found or unreadable.
-	 *
-	 * @since 1.0.0
 	 */
 	protected function getFilename(string $type, string $variation): string
 	{

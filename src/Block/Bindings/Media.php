@@ -18,27 +18,26 @@ use WP_Block_Bindings_Registry;
 use X3P0\Ideas\Contracts\BlockBindingSource;
 use X3P0\Ideas\Tools\MediaMeta;
 
+/**
+ * Handles registering the `x3p0/media` block bindings source and rendering its
+ * output based on the given arguments.
+ */
 class Media implements BlockBindingSource
 {
 	/**
 	 * Stores the post ID.
-	 *
-	 * @since 1.0.0
 	 */
 	private int $post_id = 0;
 
 	/**
 	 * Stores instances of the `MediaMeta` class by post ID.
 	 *
-	 * @var   MediaMeta[]
-	 * @since 1.0.0
+	 * @var MediaMeta[]
 	 */
 	private array $meta = [];
 
 	/**
 	 * Registers the block binding source.
-	 *
-	 * @since 1.0.0
 	 */
 	public function register(WP_Block_Bindings_Registry $bindings): void
 	{
@@ -51,8 +50,6 @@ class Media implements BlockBindingSource
 
 	/**
 	 * Returns media data based on the bound attribute.
-	 *
-	 * @since 1.0.0
 	 */
 	public function callback(array $args, WP_Block $block, string $name): ?string
 	{
@@ -71,8 +68,6 @@ class Media implements BlockBindingSource
 
 	/**
 	 * Returns an attachment source URL.
-	 *
-	 * @since 1.0.0
 	 */
 	private function renderUrl(array $args): ?string
 	{
@@ -92,8 +87,6 @@ class Media implements BlockBindingSource
 
 	/**
 	 * Returns an image attachment alt text.
-	 *
-	 * @since 1.0.0
 	 */
 	private function renderAlt(): ?string
 	{
@@ -104,8 +97,6 @@ class Media implements BlockBindingSource
 
 	/**
 	 * Returns an image attachment alt text.
-	 *
-	 * @since 1.0.0
 	 */
 	private function renderCaption(): ?string
 	{
@@ -116,8 +107,6 @@ class Media implements BlockBindingSource
 
 	/**
 	 * Returns an attachment's media metadata based on key.
-	 *
-	 * @since 1.0.0
 	 */
 	private function renderMeta(array $args): ?string
 	{

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * A trait for defining attribute-based actions and filters with class methods.
+ * Hookable trait.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright 2008-2024 Justin Tadlock
@@ -18,19 +18,18 @@ use ReflectionClass;
 use ReflectionMethod;
 use X3P0\Ideas\Contracts\Hook;
 
+/**
+ * A trait for defining attribute-based actions and filters with class methods.
+ */
 trait Hookable
 {
 	/**
 	 * Stores the instance of the reflected class.
-	 *
-	 * @since 1.0.0
 	 */
 	protected ReflectionClass $reflector;
 
 	/**
 	 * Returns the reflection of the current class.
-	 *
-	 * @since 1.0.0
 	 */
 	protected function getReflector(): ReflectionClass
 	{
@@ -44,8 +43,6 @@ trait Hookable
 	/**
 	 * Adds all class members with attributes that have the `Hook` contract
 	 * as actions or filters.
-	 *
-	 * @since 1.0.0
 	 */
 	protected function hookMembers(): void
 	{
@@ -57,8 +54,6 @@ trait Hookable
 	/**
 	 * Adds constants with attributes that have the `Hook` contract as
 	 * anonymous actions or filters.
-	 *
-	 * @since 1.0.0
 	 */
 	protected function hookConstants(): void
 	{
@@ -79,8 +74,6 @@ trait Hookable
 	/**
 	 * Adds methods with attributes that have the `Hook` contract as actions
 	 * or filters.
-	 *
-	 * @since 1.0.0
 	 */
 	protected function hookMethods(): void
 	{
@@ -109,9 +102,8 @@ trait Hookable
 	 * Adds properties with attributes that have the `Hook` contract as
 	 * anonymous actions or filters.
 	 *
-	 * @since 1.0.0
-	 * @todo  Remove `setAccessible()` call with PHP 8.1-only support.
-	 * @link  https://www.php.net/manual/en/reflectionmethod.setaccessible.php
+	 * @todo Remove `setAccessible()` call with PHP 8.1-only support.
+	 * @link https://www.php.net/manual/en/reflectionmethod.setaccessible.php
 	 */
 	protected function hookProperties(): void
 	{

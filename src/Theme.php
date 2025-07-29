@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Theme container implementation.
+ * Theme class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock

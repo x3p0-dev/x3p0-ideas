@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Dev mode setup.
+ * Dev mode setup class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
@@ -15,16 +15,16 @@ namespace X3P0\Ideas\Dev;
 
 use Symfony\Component\VarDumper\VarDumper;
 use Symfony\Component\VarDumper\Cloner\VarCloner;
-use Symfony\Component\VarDumper\Dumper\{HtmlDumper, CliDumper};
+use Symfony\Component\VarDumper\Dumper\HtmlDumper;
 use X3P0\Ideas\Contracts\Bootable;
 
+/**
+ * Sets up development mode features.
+ */
 class Setup implements Bootable
 {
 	/**
 	 * Set up the object's initial state.
-	 *
-	 * @since 1.0.0
-	 * @todo  Promote params to properties with PHP 8.0+ requirement.
 	 */
 	public function __construct()
 	{
@@ -33,8 +33,6 @@ class Setup implements Bootable
 
 	/**
 	 * Boots the component, running its actions/filters.
-	 *
-	 * @since 1.0.0
 	 */
 	#[\Override]
 	public function boot(): void
@@ -45,8 +43,6 @@ class Setup implements Bootable
 
 	/**
 	 * Sets up custom styles for the Symfony var dumper.
-	 *
-	 * @since 1.0.0
 	 */
 	private function setVarDumper(): void
 	{

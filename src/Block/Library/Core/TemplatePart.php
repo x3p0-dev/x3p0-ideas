@@ -1,7 +1,7 @@
 <?php
 
 /**
- * The TemplatePart class handles filters related to the `core/template-part` block.
+ * Template Part Block class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
@@ -17,14 +17,15 @@ use WP_HTML_Tag_Processor;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
 
+/**
+ * Filters settings and rendered output for the `core/template-part` block.
+ */
 class TemplatePart implements Bootable
 {
 	use Hookable;
 
 	/**
 	 * Boots the component, running its actions/filters.
-	 *
-	 * @since 1.0.0
 	 */
 	#[\Override]
 	public function boot(): void
@@ -37,8 +38,6 @@ class TemplatePart implements Bootable
 	 * no comments and commenting is disabled. Then, it adds a contextual
 	 * class to the wrapping template part markup with the slug name (e.g.,
 	 * `.wp-block-template-part-{slug}`).
-	 *
-	 * @since 1.0.0
 	 */
 	#[Filter('render_block_core/template-part')]
 	public function render(string $content, array $block): string

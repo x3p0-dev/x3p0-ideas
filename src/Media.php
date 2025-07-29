@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Media filters and actions.
+ * Media class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright 2023 Justin Tadlock
@@ -16,6 +16,9 @@ namespace X3P0\Ideas;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Action, Filter, Hookable};
 
+/**
+ * Wrapper for actions and filters related to media files and attachments.
+ */
 class Media implements Bootable
 {
 	use Hookable;
@@ -23,15 +26,12 @@ class Media implements Bootable
 	/**
 	 * Width size to scale large images down to.
 	 *
-	 * @since 1.0.0
-	 * @todo  Type hint with PHP 8.3+ requirement.
+	 * @todo Type hint with PHP 8.3+ requirement.
 	 */
 	protected const THRESHOLD_WIDTH = 3480;
 
 	/**
 	 * Bootstraps the class' actions/filters.
-	 *
-	 * @since 1.0.0
 	 */
 	#[\Override]
 	public function boot(): void
@@ -41,8 +41,6 @@ class Media implements Bootable
 
 	/**
 	 * Registers custom image sizes.
-	 *
-	 * @since 1.0.0
 	 */
 	#[Action('init')]
 	public function registerImageSizes(): void
@@ -58,8 +56,7 @@ class Media implements Bootable
 	 * Filters the image size dropdown in the editor so our custom sizes
 	 * appear for selection.
 	 *
-	 * @since 1.0.0
-	 * @todo  Use array unpacking (string keys) with PHP 8.1+ requirement.
+	 * @todo Use array unpacking (string keys) with PHP 8.1+ requirement.
 	 */
 	#[Filter('image_size_names_choose')]
 	public function registerImageSizeNames(array $sizes): array
@@ -75,8 +72,6 @@ class Media implements Bootable
 
 	/**
 	 * Limit the big image threshold to our largest image.
-	 *
-	 * @since 1.0.0
 	 */
 	#[Filter('big_image_size_threshold', 5)]
 	public function filterBigImageThreshold(int $threshold): int
@@ -86,8 +81,6 @@ class Media implements Bootable
 
 	/**
 	 * Sets the default `post-thumbnail` size to a theme-specific size.
-	 *
-	 * @since 1.0.0
 	 */
 	#[Filter('post_thumbnail_size', 5)]
 	public function filterPostThumbnailSize(string $size): string
@@ -100,9 +93,8 @@ class Media implements Bootable
 	 * emoji in WordPress. So all this filter does is replace `:mrgreen`
 	 * with the original SVG version instead of the default PNG.
 	 *
-	 * @since 1.0.0
-	 * @link  https://core.trac.wordpress.org/attachment/ticket/31709/mrgreen.svg
-	 * @todo  Use array unpacking (string keys) with PHP 8.1+ requirement.
+	 * @link https://core.trac.wordpress.org/attachment/ticket/31709/mrgreen.svg
+	 * @todo Use array unpacking (string keys) with PHP 8.1+ requirement.
 	 */
 	#[Filter('smilies')]
 	public function registerEmoticons(array $smilies): array

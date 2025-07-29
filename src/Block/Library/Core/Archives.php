@@ -1,7 +1,7 @@
 <?php
 
 /**
- * The Archives class handles filters related to the `core/archives` block.
+ * Archives Block class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
@@ -16,14 +16,15 @@ namespace X3P0\Ideas\Block\Library\Core;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
 
+/**
+ * Filters settings and rendered output for the `core/archives` block.
+ */
 class Archives implements Bootable
 {
 	use Hookable;
 
 	/**
 	 * Boots the component, running its actions/filters.
-	 *
-	 * @since 1.0.0
 	 */
 	#[\Override]
 	public function boot(): void
@@ -33,8 +34,6 @@ class Archives implements Bootable
 
 	/**
 	 * Adds color support to the Archives block.
-	 *
-	 * @since 1.0.0
 	 */
 	#[Filter('block_type_metadata_settings', 'last')]
 	public function settings(array $settings): array
@@ -54,8 +53,6 @@ class Archives implements Bootable
 	 * function. We're using it here to give a wrapper `<div>` to individual
 	 * list items. This provides a bit more design flexibility with custom
 	 * block styles.
-	 *
-	 * @since 1.0.0
 	 */
 	#[Filter('widget_archives_args', 'last')]
 	public function setWidgetArchivesArgs(array $args): array

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * The Style Variations class registers block style variations via PHP.
+ * Block Style Variations class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
@@ -19,6 +19,9 @@ use WP_Theme_JSON_Resolver;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Action, Hookable};
 
+/**
+ * Handles actions and filters related to block style variations.
+ */
 class StyleVariations implements Bootable
 {
 	use Hookable;

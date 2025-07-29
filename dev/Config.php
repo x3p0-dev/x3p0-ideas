@@ -3,9 +3,6 @@
 /**
  * Config class.
  *
- * Pulls data from `extra.x3p0` in the `composer.json` file for configuring dev
- * mode. Set options via command line with `composer config extra.x3p0.{$key}`.
- *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPL-3.0-or-later
@@ -16,20 +13,20 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas\Dev;
 
+/**
+ * Pulls data from `extra.x3p0` in the `composer.json` file for configuring dev
+ * mode. Set options via command line with `composer config extra.x3p0.{$key}`.
+ */
 class Config
 {
 	/**
 	 * Stores an array of configuration options defined in `extra.x3p0` in
 	 * the `composer.json` file.
-	 *
-	 * @since 1.0.0
 	 */
 	protected array $config = [];
 
 	/**
 	 * Set up the object's initial state.
-	 *
-	 * @since 1.0.0
 	 */
 	public function __construct()
 	{
@@ -52,8 +49,6 @@ class Config
 
 	/**
 	 * Checks if the config key is set.
-	 *
-	 * @since 1.0.0
 	 */
 	public function has(string $key): bool
 	{
@@ -62,8 +57,6 @@ class Config
 
 	/**
 	 * Returns the given configuration option's data by key.
-	 *
-	 * @since 1.0.0
 	 */
 	public function get(string $key): mixed
 	{

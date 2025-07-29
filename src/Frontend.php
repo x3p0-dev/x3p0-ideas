@@ -1,8 +1,7 @@
 <?php
 
 /**
- * The Frontend class handles actions and filters that are needed for running on
- * the frontend of a website.
+ * Frontend class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
@@ -18,6 +17,10 @@ use WP;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Action, Filter, Hookable};
 
+/**
+ * The Frontend class handles actions and filters that are needed for running on
+ * the frontend of a website.
+ */
 class Frontend implements Bootable
 {
 	use Hookable;
@@ -25,15 +28,12 @@ class Frontend implements Bootable
 	/**
 	 * Inline CSS limit.
 	 *
-	 * @since 1.0.0
-	 * @todo  Type hint with PHP 8.3+ requirement.
+	 * @todo Type hint with PHP 8.3+ requirement.
 	 */
 	protected const INLINE_CSS_LIMIT = 50000;
 
 	/**
 	 * Boots the component, running its actions/filters.
-	 *
-	 * @since 1.0.0
 	 */
 	#[\Override]
 	public function boot(): void
@@ -46,8 +46,6 @@ class Frontend implements Bootable
 
 	/**
 	 * Adds theme support for various WordPress features.
-	 *
-	 * @return void
 	 */
 	#[Action('after_setup_theme')]
 	public function setup(): void
@@ -61,8 +59,6 @@ class Frontend implements Bootable
 
 	/**
 	 * Enqueue scripts/styles for the front end.
-	 *
-	 * @since 1.0.0
 	 */
 	#[Action('wp_enqueue_scripts')]
 	public function enqueueAssets(): void
@@ -83,8 +79,6 @@ class Frontend implements Bootable
 	 * query var. So functions like `is_paged()` do not work correctly for
 	 * these types of paginated views, and the `paged` body class is missing.
 	 * This action checks for that case and sets the `paged` query var.
-	 *
-	 * @since 1.0.0
 	 */
 	#[Action('parse_request')]
 	public function parseRequest(WP $wp): void
@@ -99,8 +93,6 @@ class Frontend implements Bootable
 	/**
 	 * Gets the current page number when there's a paginated Query Loop
 	 * block. WordPress doesn't have a conditional function for this.
-	 *
-	 * @since 1.0.0
 	 */
 	private function getQueryBlockPage(): int
 	{
@@ -128,8 +120,6 @@ class Frontend implements Bootable
 
 	/**
 	 * Custom inline CSS size limit.
-	 *
-	 * @since 1.0.0
 	 */
 	#[Filter('styles_inline_size_limit')]
 	public function filterInlineStylesLimit(int $total_inline_limit): int
@@ -139,8 +129,6 @@ class Frontend implements Bootable
 
 	/**
 	 * Adds the style variation to the body class.
-	 *
-	 * @since 1.0.0
 	 */
 	#[Filter('body_class')]
 	public function filterBodyClass(array $classes): array
@@ -158,8 +146,6 @@ class Frontend implements Bootable
 	 * Replaces the space before the required field indicator with a
 	 * non-breaking space. This ensures that the indicator doesn't end up on
 	 * a line by itself in the comment form. 😢
-	 *
-	 * @since 1.0.0
 	 */
 	#[Filter('wp_required_field_message')]
 	public function filterRequiredFieldMessage(string $message): string

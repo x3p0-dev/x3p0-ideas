@@ -1,7 +1,7 @@
 <?php
 
 /**
- * The PostExcerpt class handles filters related to the `core/post-excerpt` block.
+ * Post Excerpt Block class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
@@ -17,14 +17,15 @@ use WP_Block;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
 
+/**
+ * Filters settings and rendered output for the `core/post-excerpt` block.
+ */
 class PostExcerpt implements Bootable
 {
 	use Hookable;
 
 	/**
 	 * Boots the component, running its actions/filters.
-	 *
-	 * @since 1.0.0
 	 */
 	#[\Override]
 	public function boot(): void
@@ -36,8 +37,7 @@ class PostExcerpt implements Bootable
 	 * Before rendering the Post Excerpt block, add a custom filter to
 	 * `wp_trim_words` so that we can handle the output of custom excerpts.
 	 *
-	 * @since 1.0.0
-	 * @link  https://github.com/WordPress/gutenberg/issues/49449
+	 * @link https://github.com/WordPress/gutenberg/issues/49449
 	 */
 	#[Filter('pre_render_block')]
 	public function preRender(
@@ -62,9 +62,8 @@ class PostExcerpt implements Bootable
 	 * Removes the filter on `wp_trim_words` if it was added on the earlier
 	 * `pre_render_block` hook.
 	 *
-	 * @since 1.0.0
-	 * @link  https://github.com/WordPress/gutenberg/issues/49449
-	 * @see   PostExcerpt::preRender()
+	 * @link https://github.com/WordPress/gutenberg/issues/49449
+	 * @see  PostExcerpt::preRender()
 	 */
 	#[Filter('render_block_core/post-excerpt', 'first')]
 	public function render(string $content): string
@@ -81,9 +80,8 @@ class PostExcerpt implements Bootable
 	 * unwanted tags. This is meant to be used only when the user has
 	 * written a custom excerpt.
 	 *
-	 * @since 1.0.0
-	 * @link  https://github.com/WordPress/gutenberg/issues/49449
-	 * @see   PostExcerpt::preRender()
+	 * @link https://github.com/WordPress/gutenberg/issues/49449
+	 * @see  PostExcerpt::preRender()
 	 */
 	public function formatManualExcerpt(
 		string $text,

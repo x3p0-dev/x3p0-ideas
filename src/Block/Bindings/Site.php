@@ -17,12 +17,14 @@ use WP_Block;
 use WP_Block_Bindings_Registry;
 use X3P0\Ideas\Contracts\BlockBindingSource;
 
+/**
+ * Handles registering the `x3p0/site` block bindings source and rendering its
+ * output based on the given arguments.
+ */
 class Site implements BlockBindingSource
 {
 	/**
 	 * Registers the block binding source.
-	 *
-	 * @since 1.0.0
 	 */
 	public function register(WP_Block_Bindings_Registry $bindings): void
 	{
@@ -34,8 +36,6 @@ class Site implements BlockBindingSource
 
 	/**
 	 * Returns site data based on the bound attribute.
-	 *
-	 * @since 1.0.0
 	 */
 	public function callback(array $args, WP_Block $block, string $name): ?string
 	{
@@ -48,8 +48,6 @@ class Site implements BlockBindingSource
 
 	/**
 	 * Returns the site copyright statement.
-	 *
-	 * @since 1.0.0
 	 */
 	private function renderCopyright(): string
 	{
@@ -62,8 +60,6 @@ class Site implements BlockBindingSource
 
 	/**
 	 * Returns the current year.
-	 *
-	 * @since 1.0.0
 	 */
 	private function renderYear(): string
 	{

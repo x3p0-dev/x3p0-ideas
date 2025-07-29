@@ -1,8 +1,7 @@
 <?php
 
 /**
- * The filter attribute class is for registering class methods as a filter on a
- * WordPress hook using a PHP attribute.
+ * Filter attribute.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright 2008-2024 Justin Tadlock
@@ -17,6 +16,10 @@ namespace X3P0\Ideas\Tools\Hooks;
 use Attribute;
 use X3P0\Ideas\Contracts\Hook;
 
+/**
+ * The filter attribute is for registering class constants, methods, or
+ * properties as a filter on a WordPress hook using a PHP attribute.
+ */
 #[Attribute(
 	Attribute::IS_REPEATABLE
 	| Attribute::TARGET_CLASS_CONSTANT

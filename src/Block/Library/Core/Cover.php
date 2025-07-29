@@ -1,7 +1,7 @@
 <?php
 
 /**
- * The Cover class handles filters related to the `core/cover` block.
+ * Cover Block class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
@@ -17,14 +17,15 @@ use WP_HTML_Tag_Processor;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
 
+/**
+ * Filters settings and rendered output for the `core/cover` block.
+ */
 class Cover implements Bootable
 {
 	use Hookable;
 
 	/**
 	 * Boots the component, running its actions/filters.
-	 *
-	 * @since 1.0.0
 	 */
 	#[\Override]
 	public function boot(): void
@@ -34,17 +35,15 @@ class Cover implements Bootable
 
 	/**
 	 * Adds more color support to the Cover block.
-	 *
-	 * @since 1.0.0
 	 */
 	#[Filter('block_type_metadata_settings', 'last')]
 	public function settings(array $settings): array
 	{
 		if ('core/cover' === $settings['name']) {
-			$settings['supports']['color'] ??= [];
-			$settings['supports']['color']['background'] = true;
-			$settings['supports']['color']['button'] = true;
-			$settings['supports']['color']['link'] = true;
+			$settings['supports']['color']               ??= [];
+			$settings['supports']['color']['background']   = true;
+			$settings['supports']['color']['button']       = true;
+			$settings['supports']['color']['link']         = true;
 		}
 
 		return $settings;
@@ -54,8 +53,7 @@ class Cover implements Bootable
 	 * Adds poster support for the Cover block by using the attachment's
 	 * featured image if it exists.
 	 *
-	 * @since 1.0.0
-	 * @link  https://github.com/WordPress/gutenberg/issues/18962
+	 * @link https://github.com/WordPress/gutenberg/issues/18962
 	 */
 	#[Filter('render_block_core/cover')]
 	public function render(string $content, array $block): string

@@ -14,7 +14,7 @@ declare(strict_types=1);
 namespace X3P0\Ideas\Contracts;
 
 /**
- * A simple container used to store and reference the various Plugin components.
+ * A simple container used to store and reference the various theme components.
  */
 interface Container
 {

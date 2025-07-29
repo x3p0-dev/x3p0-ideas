@@ -1,7 +1,7 @@
 <?php
 
 /**
- * The Calendar class handles filters related to the `core/calendar` block.
+ * Calendar Block class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
@@ -17,14 +17,15 @@ use WP_HTML_Tag_Processor;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
 
+/**
+ * Filters settings and rendered output for the `core/calendar` block.
+ */
 class Calendar implements Bootable
 {
 	use Hookable;
 
 	/**
 	 * Boots the component, running its actions/filters.
-	 *
-	 * @since 1.0.0
 	 */
 	#[\Override]
 	public function boot(): void
@@ -38,8 +39,7 @@ class Calendar implements Bootable
 	 * elements within the block and nested table. Also re-adds the classes
 	 * to the outer block wrapper.
 	 *
-	 * @since 1.0.0
-	 * @link  https://developer.wordpress.org/block-editor/reference-guides/block-api/block-selectors/
+	 * @link https://developer.wordpress.org/block-editor/reference-guides/block-api/block-selectors/
 	 */
 	#[Filter('block_type_metadata_settings', 'last')]
 	public function settings(array $settings): array
@@ -59,8 +59,6 @@ class Calendar implements Bootable
 
 	/**
 	 * Adds a caption class and replaces nav arrows.
-	 *
-	 * @since 1.0.0
 	 */
 	#[Filter('render_block_core/calendar')]
 	public function render(string $content): string

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * The File class handles filters related to the `core/file` block.
+ * File Block class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
@@ -16,14 +16,15 @@ namespace X3P0\Ideas\Block\Library\Core;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
 
+/**
+ * Filters settings and rendered output for the `core/file` block.
+ */
 class File implements Bootable
 {
 	use Hookable;
 
 	/**
 	 * Boots the component, running its actions/filters.
-	 *
-	 * @since 1.0.0
 	 */
 	#[\Override]
 	public function boot(): void
@@ -33,8 +34,6 @@ class File implements Bootable
 
 	/**
 	 * Adds button element color support to the File block.
-	 *
-	 * @since 1.0.0
 	 */
 	#[Filter('block_type_metadata_settings', 'last')]
 	public function settings(array $settings): array

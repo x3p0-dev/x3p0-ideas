@@ -1,12 +1,7 @@
 <?php
 
 /**
- * The Color Scheme class is for handling the CSS `color-scheme` defined in
- * `theme.json` and/or style variations via the `settings.custom.color-scheme`
- * property. It is also meant to be used alongside the Interactivity API for
- * implementing buttons/toggles/switches for letting site visitors switch the
- * color scheme, but it is agnostic of the final implementation, only providing
- * the necessary interactive states needed from the server by default.
+ * Color Scheme tool.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
@@ -18,6 +13,14 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas\Tools;
 
+/**
+ * The Color Scheme class is for handling the CSS `color-scheme` defined in
+ * `theme.json` and/or style variations via the `settings.custom.color-scheme`
+ * property. It is also meant to be used alongside the Interactivity API for
+ * implementing buttons/toggles/switches for letting site visitors switch the
+ * color scheme, but it is agnostic of the final implementation, only providing
+ * the necessary interactive states needed from the server by default.
+ */
 class ColorScheme
 {
 	/**
@@ -27,16 +30,12 @@ class ColorScheme
 
 	/**
 	 * Stores the default color scheme.
-	 *
-	 * @since 1.0.0
 	 */
 	private const DEFAULT_SCHEME = 'normal';
 
 	/**
 	 * Stores an array of supported global color schemes that can be defined
 	 * via `theme.json`.
-	 *
-	 * @since 1.0.0
 	 */
 	private const GLOBAL_SCHEMES = [
 		'normal',
@@ -53,8 +52,6 @@ class ColorScheme
 	/**
 	 * Stores an array of supported user color schemes that can be stored
 	 * via cookie (or even user meta).
-	 *
-	 * @since 1.0.0
 	 */
 	private const USER_SCHEMES = [
 		'light',
@@ -63,8 +60,6 @@ class ColorScheme
 
 	/**
 	 * Stores an array of supported color schemes that can be toggled.
-	 *
-	 * @since 1.0.0
 	 */
 	private const SWITCHABLE_SCHEMES = [
 		'light dark',
@@ -73,8 +68,6 @@ class ColorScheme
 
 	/**
 	 * Stores an array of supported light color schemes.
-	 *
-	 * @since 1.0.0
 	 */
 	private const LIGHT_SCHEMES = [
 		'light',
@@ -84,8 +77,6 @@ class ColorScheme
 
 	/**
 	 * Stores an array of supported dark color schemes.
-	 *
-	 * @since 1.0.0
 	 */
 	private const DARK_SCHEMES = [
 		'dark',
@@ -95,8 +86,6 @@ class ColorScheme
 
 	/**
 	 * The current color scheme.
-	 *
-	 * @since 1.0.0
 	 */
 	private string $scheme;
 
@@ -131,8 +120,6 @@ class ColorScheme
 	/**
 	 * Determines whether the global color scheme supports toggling between
 	 * light and dark schemes.
-	 *
-	 * @since 1.0.0
 	 */
 	public function isSwitchable(): bool
 	{
@@ -142,8 +129,6 @@ class ColorScheme
 	/**
 	 * Returns the color scheme by first checking the user scheme and then
 	 * falling back to the global scheme.
-	 *
-	 * @since 1.0.0
 	 */
 	private function getColorScheme(): string
 	{
@@ -158,8 +143,6 @@ class ColorScheme
 	/**
 	 * Returns the global color scheme defined in `theme.json`, the active
 	 * stylesheet, or user data (whichever wins out).
-	 *
-	 * @since 1.0.0
 	 */
 	private function getGlobalScheme(): string
 	{
@@ -181,8 +164,6 @@ class ColorScheme
 	/**
 	 * Returns the user's preferred color scheme if it has been saved via
 	 * meta or cookie. Otherwise, returns null.
-	 *
-	 * @since 1.0.0
 	 */
 	private function getUserScheme(): ?string
 	{

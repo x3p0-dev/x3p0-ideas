@@ -1,7 +1,7 @@
 <?php
 
 /**
- * The Assets class handles block-specific assets, such as stylesheets.
+ * Block Assets class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
@@ -18,14 +18,15 @@ use RecursiveIteratorIterator;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Action, Hookable};
 
+/**
+ * Registers and/or enqueues block assets.
+ */
 class Assets implements Bootable
 {
 	use Hookable;
 
 	/**
 	 * Boots the component, running its actions/filters.
-	 *
-	 * @since 1.0.0
 	 */
 	#[\Override]
 	public function boot(): void
@@ -39,8 +40,7 @@ class Assets implements Bootable
 	 * automatically enqueued. Each file should be named
 	 * `{$block_namespace}/{$block_slug}.css`.
 	 *
-	 * @since 1.0.0
-	 * @link  https://developer.wordpress.org/reference/functions/wp_enqueue_block_style/
+	 * @link https://developer.wordpress.org/reference/functions/wp_enqueue_block_style/
 	 */
 	#[Action('init', 'last')]
 	public function enqueueStyles(): void
@@ -72,8 +72,6 @@ class Assets implements Bootable
 	/**
 	 * Enqueues an individual block stylesheet based on a given block
 	 * namespace and slug.
-	 *
-	 * @since 1.0.0
 	 */
 	private function enqueueStyle(string $namespace, string $slug): void
 	{

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Embed filters and actions.
+ * Embeds class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright 2023 Justin Tadlock
@@ -16,6 +16,10 @@ namespace X3P0\Ideas;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Action, Filter, Hookable};
 
+/**
+ * Actions and filters wrapper for when a site's post is embedded in a post/page
+ * on a third-party website.
+ */
 class Embeds implements Bootable
 {
 	use Hookable;
@@ -23,31 +27,26 @@ class Embeds implements Bootable
 	/**
 	 * Image size to use for featured images.
 	 *
-	 * @since 1.0.0
-	 * @todo  Type hint with PHP 8.3+ requirement.
+	 * @todo Type hint with PHP 8.3+ requirement.
 	 */
 	protected const IMAGE_SIZE = 'x3p0-wide';
 
 	/**
 	 * Image shape to use for featured images (`rectangular` or `square`).
 	 *
-	 * @since 1.0.0
-	 * @todo  Type hint with PHP 8.3+ requirement.
+	 * @todo Type hint with PHP 8.3+ requirement.
 	 */
 	protected const IMAGE_SHAPE = 'rectangular';
 
 	/**
 	 * Maximum number of words in the excerpt.
 	 *
-	 * @since 1.0.0
-	 * @todo  Type hint with PHP 8.3+ requirement.
+	 * @todo Type hint with PHP 8.3+ requirement.
 	 */
 	protected const EXCERPT_LENGTH = 24;
 
 	/**
 	 * Bootstraps the class' actions/filters.
-	 *
-	 * @since 1.0.0
 	 */
 	#[\Override]
 	public function boot(): void
@@ -58,8 +57,7 @@ class Embeds implements Bootable
 	/**
 	 * Loads assets needed for the embed.
 	 *
-	 * @since 1.0.0
-	 * @link  https://developer.wordpress.org/reference/hooks/enqueue_embed_scripts/
+	 * @link https://developer.wordpress.org/reference/hooks/enqueue_embed_scripts/
 	 */
 	#[Action('enqueue_embed_scripts')]
 	public function enqueueAssets(): void
@@ -91,8 +89,7 @@ class Embeds implements Bootable
 	/**
 	 * Replaces the default size with our custom image size.
 	 *
-	 * @since 1.0.0
-	 * @link  https://developer.wordpress.org/reference/hooks/embed_thumbnail_image_size/
+	 * @link https://developer.wordpress.org/reference/hooks/embed_thumbnail_image_size/
 	 */
 	#[Filter('embed_thumbnail_image_size')]
 	public function filterImageSize(): string
@@ -104,8 +101,7 @@ class Embeds implements Bootable
 	 * Ensures that the featured image shape is set to match our size. This
 	 * also affects how the embed is laid out.
 	 *
-	 * @since 1.0.0
-	 * @link  https://developer.wordpress.org/reference/hooks/embed_thumbnail_image_shape/
+	 * @link https://developer.wordpress.org/reference/hooks/embed_thumbnail_image_shape/
 	 */
 	#[Filter('embed_thumbnail_image_shape')]
 	public function filterImageShape(): string
@@ -116,8 +112,7 @@ class Embeds implements Bootable
 	/**
 	 * Adds a custom excerpt length.
 	 *
-	 * @since 1.0.0
-	 * @link  https://developer.wordpress.org/reference/hooks/excerpt_length/
+	 * @link https://developer.wordpress.org/reference/hooks/excerpt_length/
 	 */
 	#[Filter('excerpt_length')]
 	public function filterExcerptLength(int $number): int
@@ -128,8 +123,7 @@ class Embeds implements Bootable
 	/**
 	 * Adds a custom excerpt more string.
 	 *
-	 * @since 1.0.0
-	 * @link  https://developer.wordpress.org/reference/hooks/excerpt_more/
+	 * @link https://developer.wordpress.org/reference/hooks/excerpt_more/
 	 */
 	#[Filter('excerpt_more', 'last')]
 	public function filterExcerptMore(string $more_string): string
@@ -142,8 +136,7 @@ class Embeds implements Bootable
 	 * icon. We do this to replace the WordPress logo with an SVG version
 	 * that is more customizable via CSS.
 	 *
-	 * @since 1.0.0
-	 * @link  https://developer.wordpress.org/reference/hooks/embed_site_title_html/
+	 * @link https://developer.wordpress.org/reference/hooks/embed_site_title_html/
 	 */
 	#[Filter('embed_site_title_html')]
 	public function filterSiteTitleHtml(string $site_title): string

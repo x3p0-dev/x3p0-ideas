@@ -1,9 +1,7 @@
 <?php
 
 /**
- * The Editor class handles actions and filters that are needed for running
- * when the block editor is in use. This is primarily needed for enqueueing
- * scripts and styles.
+ * Editor class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
@@ -18,14 +16,17 @@ namespace X3P0\Ideas;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Action, Filter, Hookable};
 
+/**
+ * The Editor class handles actions and filters that are needed for running
+ * when the block editor is in use. This is primarily needed for enqueueing
+ * scripts and styles.
+ */
 class Editor implements Bootable
 {
 	use Hookable;
 
 	/**
 	 * Boots the component, running its actions/filters.
-	 *
-	 * @since 1.0.0
 	 */
 	#[\Override]
 	public function boot(): void
@@ -36,8 +37,7 @@ class Editor implements Bootable
 	/**
 	 * Add editor stylesheets.
 	 *
-	 * @since 1.0.0
-	 * @link  https://developer.wordpress.org/reference/functions/add_editor_style/
+	 * @link https://developer.wordpress.org/reference/functions/add_editor_style/
 	 */
 	#[Action('after_setup_theme')]
 	public function addEditorStyles(): void
@@ -49,8 +49,6 @@ class Editor implements Bootable
 
 	/**
 	 * Loads editor assets.
-	 *
-	 * @since 1.0.0
 	 */
 	#[Action('enqueue_block_editor_assets')]
 	public function enqueueAssets(): void
@@ -80,8 +78,6 @@ class Editor implements Bootable
 
 	/**
 	 * Customizes the block editor settings.
-	 *
-	 * @since 1.0.0
 	 */
 	#[Filter('block_editor_settings_all', 'last')]
 	public function registerSettings(array $settings): array

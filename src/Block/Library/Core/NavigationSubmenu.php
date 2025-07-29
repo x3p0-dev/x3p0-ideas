@@ -1,7 +1,7 @@
 <?php
 
 /**
- * The NavigationSubmenu class handles filters related to the `core/navigation-submenu` block.
+ * Navigation Submenu Block class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
@@ -16,14 +16,15 @@ namespace X3P0\Ideas\Block\Library\Core;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
 
+/**
+ * Filters settings and rendered output for the `core/navigation-submenu` block.
+ */
 class NavigationSubmenu implements Bootable
 {
 	use Hookable;
 
 	/**
 	 * Boots the component, running its actions/filters.
-	 *
-	 * @since 1.0.0
 	 */
 	#[\Override]
 	public function boot(): void
@@ -38,9 +39,8 @@ class NavigationSubmenu implements Bootable
 	 * container. Without this, the values are set to both the container
 	 * and the parent menu item.
 	 *
-	 * @since 1.0.0
-	 * @link  https://developer.wordpress.org/block-editor/reference-guides/block-api/block-selectors/
-	 * @link  https://github.com/WordPress/gutenberg/issues/39392
+	 * @link https://developer.wordpress.org/block-editor/reference-guides/block-api/block-selectors/
+	 * @link https://github.com/WordPress/gutenberg/issues/39392
 	 */
 	#[Filter('block_type_metadata_settings', 'last')]
 	public function settings(array $settings): array

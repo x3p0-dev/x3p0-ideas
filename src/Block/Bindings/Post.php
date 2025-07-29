@@ -17,19 +17,19 @@ use WP_Block;
 use WP_Block_Bindings_Registry;
 use X3P0\Ideas\Contracts\BlockBindingSource;
 
+/**
+ * Handles registering the `x3p0/post` block bindings source and rendering its
+ * output based on the given arguments.
+ */
 class Post implements BlockBindingSource
 {
 	/**
 	 * Stores the post ID.
-	 *
-	 * @since 1.0.0
 	 */
 	private int $post_id = 0;
 
 	/**
 	 * Registers the block binding source.
-	 *
-	 * @since 1.0.0
 	 */
 	public function register(WP_Block_Bindings_Registry $bindings): void
 	{
@@ -42,8 +42,6 @@ class Post implements BlockBindingSource
 
 	/**
 	 * Returns media data based on the bound attribute.
-	 *
-	 * @since 1.0.0
 	 */
 	public function callback(array $args, WP_Block $block, string $name): ?string
 	{
@@ -57,8 +55,6 @@ class Post implements BlockBindingSource
 
 	/**
 	 * Returns a post's reading time.
-	 *
-	 * @since 1.0.0
 	 */
 	private function renderReadingTime(array $args): ?string
 	{

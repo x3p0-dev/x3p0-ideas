@@ -1,8 +1,7 @@
 <?php
 
 /**
- * The Bindings component registers custom binding sources with the WordPress
- * Block Bindings API.
+ * Bindings Component class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
@@ -14,11 +13,14 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas\Block\Bindings;
 
-use WP_Block;
 use WP_Block_Bindings_Registry;
 use X3P0\Ideas\Contracts\{BlockBindingSource, Bootable};
-use X3P0\Ideas\Tools\Hooks\{Action, Filter, Hookable};
+use X3P0\Ideas\Tools\Hooks\{Action, Hookable};
 
+/**
+ * The Bindings component registers custom binding sources with the WordPress
+ * Block Bindings API.
+ */
 class Component implements Bootable
 {
 	use Hookable;
@@ -28,10 +30,8 @@ class Component implements Bootable
 	 */
 	public function __construct(
 		protected WP_Block_Bindings_Registry $bindings,
-		protected array                      $sources
-	)
-	{
-	}
+		protected array $sources
+	) {}
 
 	/**
 	 * {@inheritDoc}
@@ -44,8 +44,6 @@ class Component implements Bootable
 
 	/**
 	 * Register custom block bindings sources.
-	 *
-	 * @since 1.0.0
 	 */
 	#[Action('init')]
 	public function register(): void

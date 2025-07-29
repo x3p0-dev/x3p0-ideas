@@ -1,11 +1,7 @@
 <?php
 
 /**
- * Media meta retriever.
- *
- * Simplifies the process of getting media metadata, which core WordPress has no
- * standardized methods for handling. This class allows you to get the metadata
- * for a single attachment post and output meta values by key.
+ * Media Metadata tool.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright 2008-2024 Justin Tadlock
@@ -19,13 +15,17 @@ namespace X3P0\Ideas\Tools;
 
 use WP_Post;
 
+/**
+ * Simplifies the process of getting media metadata, which core WordPress has no
+ * standardized methods for handling. This class allows you to get the metadata
+ * for a single attachment post and output meta values by key.
+ */
 class MediaMeta
 {
 	/**
-	 * Stores an array of methods to call when specific keys are passed in.
+	 * Maps specific keys to their rendering methods.
 	 *
-	 * @since 1.0.0
-	 * @todo  Type hint with PHP 8.3+ requirement.
+	 * @todo Type hint with PHP 8.3+ requirement.
 	 */
 	private const KEY_METHODS = [
 		'aperture'          => 'aperture',
@@ -41,23 +41,17 @@ class MediaMeta
 
 	/**
 	 * Stores the raw attachment metadata.
-	 *
-	 * @since 1.0.0
 	 */
 	private array $raw = [];
 
 	/**
 	 * Stores all copies of the meta that has been searched for. If found,
 	 * the value is formatted and escaped. Else, it is an empty string.
-	 *
-	 * @since 1.0.0
 	 */
 	private array $meta = [];
 
 	/**
-	 * Sets up the new media meta object.
-	 *
-	 * @since 1.0.0
+	 * Sets up the new media metadata object.
 	 */
 	public function __construct(protected ?WP_Post $post)
 	{
@@ -72,8 +66,6 @@ class MediaMeta
 
 	/**
 	 * Checks if the metadata exists for the attachment.
-	 *
-	 * @since 1.0.0
 	 */
 	public function has(string $key): bool
 	{
@@ -84,8 +76,6 @@ class MediaMeta
 
 	/**
 	 * Displays the formatted and escaped metadata.
-	 *
-	 * @since 1.0.0
 	 */
 	public function display(string $key): void
 	{
@@ -95,8 +85,6 @@ class MediaMeta
 
 	/**
 	 * Returns the escaped and formatted media meta.
-	 *
-	 * @since 1.0.0
 	 */
 	public function render(string $key): string
 	{
@@ -120,8 +108,6 @@ class MediaMeta
 	/**
 	 * Internal function for checking if the raw metadata exists. Use the
 	 * public `has()` method for checking in external scripts.
-	 *
-	 * @since 1.0.0
 	 */
 	protected function exists(string $key, string $type = ''): bool
 	{
@@ -134,8 +120,6 @@ class MediaMeta
 
 	/**
 	 * Returns the raw value from the media meta.
-	 *
-	 * @since 1.0.0
 	 */
 	public function get(string $key): string
 	{
@@ -152,8 +136,6 @@ class MediaMeta
 
 	/**
 	 * Returns the camera aperture for an image.
-	 *
-	 * @since 1.0.0
 	 */
 	protected function aperture(): string
 	{
@@ -169,8 +151,6 @@ class MediaMeta
 
 	/**
 	 * Returns the created timestamp for an image.
-	 *
-	 * @since 1.0.0
 	 */
 	protected function createdTimestamp(): string
 	{
@@ -186,8 +166,6 @@ class MediaMeta
 
 	/**
 	 * Returns the media dimensions (width/height).
-	 *
-	 * @since 1.0.0
 	 */
 	protected function dimensions(): string
 	{
@@ -204,8 +182,6 @@ class MediaMeta
 
 	/**
 	 * Returns the media file name, linked to the original media file.
-	 *
-	 * @since 1.0.0
 	 */
 	protected function fileName(): string
 	{
@@ -216,8 +192,6 @@ class MediaMeta
 
 	/**
 	 * Returns the media file size.
-	 *
-	 * @since 1.0.0
 	 */
 	protected function fileSize(): string
 	{
@@ -242,8 +216,6 @@ class MediaMeta
 
 	/**
 	 * Returns the camera focal length for an image.
-	 *
-	 * @since 1.0.0
 	 */
 	protected function focalLength(): string
 	{
@@ -260,8 +232,6 @@ class MediaMeta
 
 	/**
 	 * Returns the lyrics for an audio file.
-	 *
-	 * @since 1.0.0
 	 */
 	protected function lyrics(): string
 	{
@@ -277,8 +247,6 @@ class MediaMeta
 
 	/**
 	 * Returns the media file mime type.
-	 *
-	 * @since 1.0.0
 	 */
 	protected function mimeType(): string
 	{
@@ -291,8 +259,6 @@ class MediaMeta
 
 	/**
 	 * Returns the camera shutter speed for an image.
-	 *
-	 * @since 1.0.0
 	 */
 	protected function shutterSpeed(): string
 	{

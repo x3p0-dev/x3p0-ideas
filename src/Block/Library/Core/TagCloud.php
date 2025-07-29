@@ -1,7 +1,7 @@
 <?php
 
 /**
- * The TagCloud class handles filters related to the `core/tag-cloud` block.
+ * Tag Cloud Block class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
@@ -17,14 +17,15 @@ use WP_HTML_Tag_Processor;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
 
+/**
+ * Filters settings and rendered output for the `core/tag-cloud` block.
+ */
 class TagCloud implements Bootable
 {
 	use Hookable;
 
 	/**
 	 * Boots the component, running its actions/filters.
-	 *
-	 * @since 1.0.0
 	 */
 	#[\Override]
 	public function boot(): void
@@ -34,8 +35,6 @@ class TagCloud implements Bootable
 
 	/**
 	 * Adds color and typography support to the Tag Cloud block.
-	 *
-	 * @since 1.0.0
 	 */
 	#[Filter('block_type_metadata_settings', 'last')]
 	public function settings(array $settings): array
@@ -56,8 +55,6 @@ class TagCloud implements Bootable
 	 * WordPress doesn't add the taxonomy name to the tag cloud wrapper. In
 	 * order for taxonomy-based block styles to work, the theme is adding
 	 * a `.taxonomy-{taxonomy}` class to the wrapper.
-	 *
-	 * @since 1.0.0
 	 */
 	#[Filter('render_block_core/tag-cloud')]
 	public function render(string $content, array $block): string

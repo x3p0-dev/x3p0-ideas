@@ -1,7 +1,7 @@
 <?php
 
 /**
- * The Loginout class handles filters related to the `core/loginout` block.
+ * Login/out Block class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2024, Justin Tadlock
@@ -17,14 +17,15 @@ use WP_HTML_Tag_Processor;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
 
+/**
+ * Filters settings and rendered output for the `core/loginout` block.
+ */
 class Loginout implements Bootable
 {
 	use Hookable;
 
 	/**
 	 * Boots the component, running its actions/filters.
-	 *
-	 * @since 1.0.0
 	 */
 	#[\Override]
 	public function boot(): void
@@ -36,8 +37,7 @@ class Loginout implements Bootable
 	 * Adds the `.wp-element-button` class to the login form's submit button.
 	 * This is currently missing from core WP.
 	 *
-	 * @since 1.0.0
-	 * @link  https://github.com/WordPress/gutenberg/issues/50466
+	 * @link https://github.com/WordPress/gutenberg/issues/50466
 	 */
 	#[Filter('render_block_core/loginout')]
 	public function render(string $content, array $block): string
