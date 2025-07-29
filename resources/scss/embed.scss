@@ -11,7 +11,10 @@
 @use 'base/elements';
 
 // Import embed styles.
-@use 'embed/var' as embed-var;
-@use 'embed/root' as embed-root;
-@use 'embed/embed' as embed-embed;
-@use 'embed/dialog' as embed-dialog;
+@use 'embed/root';
+@use 'embed/embed';
+@use 'embed/embed-featured-image';
+@use 'embed/embed-heading';
+@use 'embed/embed-excerpt';
+@use 'embed/embed-footer';
+@use 'embed/embed-share-dialog';

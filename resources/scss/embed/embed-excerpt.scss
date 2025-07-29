@@ -1,0 +1,11 @@
+////
+/// Styling for the embedded post excerpt.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+.wp-embed-excerpt {
+	padding: 0 var(--wp--style--block-gap);
+	margin:  var(--wp--preset--spacing--10) 0 0;
+}

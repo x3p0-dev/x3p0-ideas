@@ -5,16 +5,33 @@
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
 
+///
+/// Reset the font size for the embed.
+///
 html { font-size: 16px; }
+
+///
+/// Resets the body element to remove anything we don't want/need.
+///
+body {
+	margin:     0 !important;
+	padding:    0 !important;
+	background: none !important;
+	border:     none !important;
+	box-shadow: none !important;
+	outline:    none !important;
+}
 
 .wp-embed-responsive .wp-embed,
 .wp-embed-responsive .wp-embed-share-dialog {
 	overflow: hidden;
-	padding: 0;
-	font-family: var(--font-family);
-	font-size: var(--font-size);
-	line-height: var(--line-height);
-	border: var(--border-width) var(--border-style) var(--border-color);
-	border-radius: var(--border-radius);
-	box-shadow: var(--shadow);
+	padding:  0;
+
+	font-family: system-ui;
+	font-size:   var(--wp--preset--font-size--sm);
+	line-height: var(--wp--custom--line-height--sm);
+
+	border:        var(--wp--custom--border--primary--width) var(--wp--custom--border--primary--style) var(--wp--custom--border--primary--color);
+	border-radius: var(--wp--custom--border--primary--radius);
+	box-shadow:    var(--wp--custom--shadow--primary);
 }

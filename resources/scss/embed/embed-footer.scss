@@ -1,0 +1,103 @@
+////
+/// Styling for the embedded post footer.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+// Import tools.
+@use '../tools/icon';
+@use '../tools/inline-icon';
+
+///
+/// Footer container.
+///
+.wp-embed-footer {
+	width:      auto;
+	max-width:  100%;
+	box-sizing: border-box;
+
+	display:         flex;
+	justify-content: space-between;
+	align-items:     center;
+	flex-wrap:       wrap;
+
+	gap:     var(--wp--style--block-gap);
+	margin:  var(--wp--style--block-gap) 0 0;
+	padding: var(--wp--preset--spacing--40) var(--wp--style--block-gap);
+
+	background: var(--wp--custom--color--background--level-1);
+}
+
+///
+/// Site title + icon.
+///
+.wp-embed-site-title {
+	display:     block;
+	font-size:   0.9375em;
+	font-weight: 600;
+	line-height: 1.2;
+
+	a {
+		display: flex;
+		align-items: center;
+		gap: var(--wp--preset--spacing--20);
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.wp-embed-site-title a svg,
+.wp-embed-site-icon {
+	position: initial;
+	width: 32px;
+	height: 32px;
+	transform: none;
+}
+
+.wp-embed-site-title svg {
+	fill: currentColor;
+}
+
+///
+/// Meta section.
+///
+.wp-embed-meta {
+	display: flex;
+	align-items: center;
+	gap: var(--wp--preset--spacing--20);
+}
+
+///
+/// Comments link and share dialog button.
+///
+.wp-embed-comments a,
+.wp-embed-share .wp-embed-share-dialog-open {
+	font-size: inherit;
+	margin:    0;
+
+	.dashicons { display: none !important; }
+}
+
+///
+/// Comments link.
+.wp-embed-comments a {
+	@include inline-icon.prefix(icon.get-url('comment'));
+
+}
+
+///
+/// Share dialog open button.
+///
+.wp-embed-share-dialog-open {
+	@include inline-icon.prefix(icon.get-url('share'));
+
+	& {
+		color: var(--wp--custom--elements--link--secondary--color--foreground);
+	}
+
+	&:hover,
+	&:focus {
+		color: var(--wp--custom--elements--link--secondary--hover--color--foreground);
+	}
+}

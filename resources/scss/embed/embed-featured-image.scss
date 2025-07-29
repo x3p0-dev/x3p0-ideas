@@ -1,0 +1,15 @@
+////
+/// Styling for the embedded post featured image.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+.wp-embed-featured-image img {
+	display:       block;
+	aspect-ratio:  var(--wp--preset--aspect-ratio--2-1);
+	object-fit:    cover;
+	outline:       none !important;
+	box-shadow:    none !important;
+	border-radius: 0 !important;
+}

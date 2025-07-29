@@ -1,0 +1,15 @@
+////
+/// Styling for the embedded post heading.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+// Heading.
+.wp-embed .wp-embed-heading {
+	margin:      var(--wp--style--block-gap) 0 0;
+	padding:     0 var(--wp--style--block-gap);
+	font-size:   var(--wp--preset--font-size--lg);
+	font-weight: 600;
+	line-height: var(--wp--custom--line-height--lg);
+}

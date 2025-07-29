@@ -1,0 +1,140 @@
+////
+/// Styling for the embed dialog popover.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+// Import tools.
+@use '../tools/icon';
+@use '../tools/inline-icon';
+
+///
+/// Container for the share dialog.
+///
+.wp-embed-share-dialog {
+	background: var(--wp--custom--color--background--level-2);
+	color:      var(--wp--custom--color--foreground--primary);
+}
+
+///
+/// Inner container for the dialog content.
+///
+.wp-embed-share-dialog-text {
+	padding: var(--wp--style--block-gap);
+	margin:  var(--wp--style--block-gap) 0 0;
+}
+
+///
+/// Share dialog tabs.
+///
+.wp-embed-share-tabs {
+	display:     flex;
+	align-items: center;
+	gap:         var(--wp--preset--spacing--70);
+	margin:      0;
+}
+
+.wp-embed-share-tab-button + .wp-embed-share-tab-button {
+	margin:  0;
+	padding: 0;
+	border:  none;
+}
+
+.wp-embed-share-tab-button button {
+	transition: 0.5s ease-in-out;
+	transition-property: color, border-color, opacity;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	color: inherit;
+	opacity: 0.8;
+	padding-bottom: 1px;
+	border-bottom: 2px solid transparent;
+
+	&:hover,
+	&button:focus,
+	&[aria-selected="true"] {
+		text-decoration: none;
+		color: inherit;
+		opacity: 1;
+		border-bottom-color: currentColor;
+	}
+}
+
+///
+/// Share dialog tab content.
+///
+.wp-embed-share-tab {
+	margin: var(--wp--preset--spacing--30) 0 0;
+}
+
+///
+/// Form fields in the share dialog.
+///
+.wp-embed-share-input {
+	display:    block;
+	appearance: none;
+	height:     revert;
+	margin:     0;
+	padding:    var(--wp--preset--spacing--30);
+
+	color:       var(--wp--custom--color--foreground--primary, inherit);
+	background:  var(--wp--custom--color--background--level-1, transparent);
+	caret-color: var(--wp--custom--color--foreground--accent, inherit);
+
+	font-family: var(--wp--preset--font-family--mono);
+	font-size:   var(--wp--preset--font-size--sm);
+	font-style:  normal;
+	font-weight: 400;
+	line-height: var(--wp--custom--line-height--sm);
+
+	border-color:  var(--wp--custom--border--primary--color, none);
+	border-style:  var(--wp--custom--border--primary--style, solid);
+	border-width:  var(--wp--custom--border--primary--width, 1px);
+	border-radius: var(--wp--custom--border--primary--radius, none);
+	box-shadow:    var(--wp--custom--shadow--primary--default, none);
+
+	&:is(textarea) {
+		height: calc(3 * 1.625em + var(--wp--preset--spacing--30));
+	}
+
+	&:focus {
+		outline:        2px solid var(--wp--custom--color--foreground--accent, inherit);
+		outline-offset: 2px;
+		box-shadow:     var(--wp--custom--shadow--primary--hover, none);
+	}
+}
+
+///
+/// Description under each of the form fields.
+///
+.wp-embed-share-tab .wp-embed-share-description {
+	margin:      var(--wp--preset--spacing--30) 0 0;
+	font-size:   var(--wp--preset--font-size--sm);
+	font-style:  normal;
+	line-height: var(--wp--custom--line-height--sm);
+	color:       inherit;
+}
+
+///
+/// Share dialog close button.
+///
+.wp-embed-share-dialog-close {
+	top:       var(--wp--style--block-gap);
+	right:     var(--wp--style--block-gap);
+	font-size: inherit;
+	color:     var(--wp--custom--elements--link--secondary--color--foreground);
+
+	@include inline-icon.prefix(icon.get-url('close'));
+
+	&:hover,
+	&:focus {
+		color: var(--wp--custom--elements--link--secondary--hover--color--foreground);
+	}
+
+	// Hide any dashicons since we're handling icons.
+	.dashicons {
+		display: none !important;
+	}
+}
