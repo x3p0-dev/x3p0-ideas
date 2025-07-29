@@ -1,132 +1,378 @@
 # Color Scheme
 
-The theme uses a very specific naming convention for the colors in its palette. This way, it is easy to override via style variations and child themes to allow the
-colors to trickle down automatically blocks, elements, etc. This creates less work when building variations/children while still allowing style overrides on an as-needed basis.
+The theme uses a very specific naming convention for the colors in its palette. This way, it is easy to override via style variations and child themes, allowing the colors to trickle down automatically to blocks, elements, etc. This creates less work when building variations/children while still allowing style overrides on an as-needed basis. It also makes it much easier to create section styles and handle light/dark mode.
 
-## Rules
+Colors in the theme follow a three-layer design token system:
 
-- **Base and Contrast Colors:**
-	- The _de facto_ standard in the WordPress theming community is to set both a `base` and `contrast` color, applying them to the root `background` and `text` styles, respectively.
-	- All style variations must include both the `base` and `contrast` colors.
-- **Color Sets:**
-	- The theme supports three color sets out of the box:
-		- `primary`
-		- `secondary`
-		- `neutral`
-	- Each color set must register colors with the following suffixes to account for the various shades:
-		- `{color}-50`
-		- `{color}-100`
-		- `{color}-300`
-		- `{color}-500`
-		- `{color}-700`
-		- `{color}-900`
-		- `{color}-950`
-	- Light vs. dark designs:
-		- For light designs (dark text on light background), the shades are ordered lightest (`50`) to darkest (`950`).
-		- For dark designs (light text on a dark background), the shades are ordered darkest (`950`) to lightest (`50`).
-		- This is merely the default that's used for all the styles in the theme, but variations can override this if they want.
-	- Stye variations may include other shades as needed, following the same numeric naming convention.
-	- All style variations must include at least the `primary` and `neutral` color sets.
-	- Other color sets are allowed but must follow the naming rules.
-- **White and Black Colors:**
-	- If any style variation or child theme does not include a pure white (`#ffffff`) or pure black (`#000000`) color in one of the color sets, they must:
-		- Either register those colors with the slugs of `white` and `black`, respectively.
-		- Or enable `settings.color.defaultPalette` in `theme.json`.
+- Primitive
+- Semantic
+- Component (e.g., Block, Element)
 
-## Tools
+## Primitive Colors (Palette)
 
-- [Color Space](https://mycolor.space/): Build palettes based on a color.
-- [UI Colors](https://uicolors.app/create): Quickly get shades of a color.
-- [RegExr](https://regexr.com/): For converting CSS custom properties into JSON object to use in `theme.json`.
+The color palette defined in `theme.json` and any `styles/color/*.json` file all follow the same color system, defining the primitive colors. The primitives should not be used to assign colors via the `styles` property or custom CSS (except in some rare exceptions).
 
-**RegExr Patterns:**
+### Primitive Color Names
 
+The color palette consists of three primary color sets, which are the prefixes for the actual color slugs:
+
+- `primary`
+- `secondary`
+- `neutral`
+
+Each color set consists of 11 variations of a single base color, ranging from the lightest (`*-50`) to the darkest (`*-950`). Here is what the `primary` color set should be named as:
+
+- `primary-50`
+- `primary-100`
+- `primary-200`
+- `primary-300`
+- `primary-400`
+- `primary-500`
+- `primary-600`
+- `primary-700`
+- `primary-800`
+- `primary-900`
+- `primary-950`
+
+The theme also accounts for and supports the default `black` and `white` colors, which are generally grouped with the `neutral` color set.
+
+### Defining Primitive Colors in `theme.json`
+
+```json
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/wp/trunk/schemas/json/theme.json",
+	"version": 3,
+	"settings": {
+		"palette": [
+			{
+				"slug": "primary-950",
+				"color": "#1a3151",
+				"name": "Primary: 950"
+			},
+			{
+				"slug": "primary-900",
+				"color": "#244e84",
+				"name": "Primary: 900"
+			},
+			{
+				"slug": "primary-800",
+				"color": "#265ba7",
+				"name": "Primary: 800"
+			},
+			{
+				"slug": "primary-700",
+				"color": "#2770ce",
+				"name": "Primary: 700"
+			},
+			{
+				"slug": "primary-600",
+				"color": "#3086e0",
+				"name": "Primary: 600"
+			},
+			{
+				"slug": "primary-500",
+				"color": "#45a1ec",
+				"name": "Primary: 500"
+			},
+			{
+				"slug": "primary-400",
+				"color": "#68bef2",
+				"name": "Primary: 400"
+			},
+			{
+				"slug": "primary-300",
+				"color": "#99d5f7",
+				"name": "Primary: 300"
+			},
+			{
+				"slug": "primary-200",
+				"color": "#c2e5fb",
+				"name": "Primary: 200"
+			},
+			{
+				"slug": "primary-100",
+				"color": "#ddeffc",
+				"name": "Primary: 100"
+			},
+			{
+				"slug": "primary-50",
+				"color": "#f0f8fe",
+				"name": "Primary: 50"
+			},
+			{
+				"slug": "secondary-950",
+				"color": "#43006c",
+				"name": "Secondary: 950"
+			},
+			{
+				"slug": "secondary-900",
+				"color": "#611390",
+				"name": "Secondary: 900"
+			},
+			{
+				"slug": "secondary-800",
+				"color": "#7615b4",
+				"name": "Secondary: 800"
+			},
+			{
+				"slug": "secondary-700",
+				"color": "#8c13dd",
+				"name": "Secondary: 700"
+			},
+			{
+				"slug": "secondary-600",
+				"color": "#a223fa",
+				"name": "Secondary: 600"
+			},
+			{
+				"slug": "secondary-500",
+				"color": "#b447ff",
+				"name": "Secondary: 500"
+			},
+			{
+				"slug": "secondary-400",
+				"color": "#c97aff",
+				"name": "Secondary: 400"
+			},
+			{
+				"slug": "secondary-300",
+				"color": "#ddaeff",
+				"name": "Secondary: 300"
+			},
+			{
+				"slug": "secondary-200",
+				"color": "#ecd1ff",
+				"name": "Secondary: 200"
+			},
+			{
+				"slug": "secondary-100",
+				"color": "#f5e6ff",
+				"name": "Secondary: 100"
+			},
+			{
+				"slug": "secondary-50",
+				"color": "#fbf4ff",
+				"name": "Secondary: 50"
+			},
+			{
+				"slug": "black",
+				"color": "#000000",
+				"name": "Black"
+			},
+			{
+				"slug": "neutral-950",
+				"color": "#22272f",
+				"name": "Neutral: 950"
+			},
+			{
+				"slug": "neutral-900",
+				"color": "#343b46",
+				"name": "Neutral: 900"
+			},
+			{
+				"slug": "neutral-800",
+				"color": "#3d4856",
+				"name": "Neutral: 800"
+			},
+			{
+				"slug": "neutral-700",
+				"color": "#435061",
+				"name": "Neutral: 700"
+			},
+			{
+				"slug": "neutral-600",
+				"color": "#526277",
+				"name": "Neutral: 600"
+			},
+			{
+				"slug": "neutral-500",
+				"color": "#677a90",
+				"name": "Neutral: 500"
+			},
+			{
+				"slug": "neutral-400",
+				"color": "#8697aa",
+				"name": "Neutral: 400"
+			},
+			{
+				"slug": "neutral-300",
+				"color": "#b1bcc8",
+				"name": "Neutral: 300"
+			},
+			{
+				"slug": "neutral-200",
+				"color": "#d5dae2",
+				"name": "Neutral: 200"
+			},
+			{
+				"slug": "neutral-100",
+				"color": "#eceff2",
+				"name": "Neutral: 100"
+			},
+			{
+				"slug": "neutral-50",
+				"color": "#f6f7f9",
+				"name": "Neutral: 50"
+			},
+			{
+				"slug": "white",
+				"color": "#ffffff",
+				"name": "White"
+			}
+		]
+	}
+}
 ```
-// Finds the named properties from UI Colors.
---(.*?)-(.*?): (.*?);
 
-// Replaces with JSON object (note: change `Primary` to preferred name).
-{\n\t"slug": "$1-$2",\n\t"color": "$3",\n\t"name": "Primary: $2"\n},
-```
+### CSS Custom Properties
 
-## Colors
-
-### Default (`theme.json`)
+WordPress will automatically generate the CSS custom properties for each of the colors with the `--wp--preset--color--` prefix. Here is what the primitive colors look like:
 
 ```css
---neutral-50: #f4f6fb;
---neutral-100: #e9edf5;
---neutral-200: #cedae9;
---neutral-300: #a3bbd6;
---neutral-400: #7196bf;
---neutral-500: #4f78a8;
---neutral-600: #3d608c;
---neutral-700: #324d72;
---neutral-800: #2c4360;
---neutral-900: #293951;
---neutral-950: #1e293b;
+:root {
+	/* Primary primitive colors. */
+	--wp--preset--color--primary-950: #1a3151;
+	--wp--preset--color--primary-900: #244e84;
+	--wp--preset--color--primary-800: #265ba7;
+	--wp--preset--color--primary-700: #2770ce;
+	--wp--preset--color--primary-600: #3086e0;
+	--wp--preset--color--primary-500: #45a1ec;
+	--wp--preset--color--primary-400: #68bef2;
+	--wp--preset--color--primary-300: #99d5f7;
+	--wp--preset--color--primary-200: #c2e5fb;
+	--wp--preset--color--primary-100: #ddeffc;
+	--wp--preset--color--primary-50: #f0f8fe;
 
---primary-50: #f0f8fe;
---primary-100: #ddeffc;
---primary-200: #c2e5fb;
---primary-300: #99d5f7;
---primary-400: #68bef2;
---primary-500: #45a1ec;
---primary-600: #2b83e0;
---primary-700: #2770ce;
---primary-800: #265aa7;
---primary-900: #244e84;
---primary-950: #1a3151;
+	/* Secondary primitive colors. */
+	--wp--preset--color--secondary-950: #43006c;
+	--wp--preset--color--secondary-900: #611390;
+	--wp--preset--color--secondary-800: #7615b4;
+	--wp--preset--color--secondary-700: #8c13dd;
+	--wp--preset--color--secondary-600: #a223fa;
+	--wp--preset--color--secondary-500: #b447ff;
+	--wp--preset--color--secondary-400: #c97aff;
+	--wp--preset--color--secondary-300: #ddaeff;
+	--wp--preset--color--secondary-200: #ecd1ff;
+	--wp--preset--color--secondary-100: #f5e6ff;
+	--wp--preset--color--secondary-50: #fbf4ff;
 
---secondary-50: #ecfdf8;
---secondary-100: #d1faed;
---secondary-200: #a7f3db;
---secondary-300: #6ee7c1;
---secondary-400: #34d3a2;
---secondary-500: #10b985;
---secondary-600: #059669;
---secondary-700: #047854;
---secondary-800: #065f43;
---secondary-900: #064e38;
---secondary-950: #022c1f;
+	/* Neutral primitive colors. */
+	--wp--preset--color--neutral-950: #22272f;
+	--wp--preset--color--neutral-900: #343b46;
+	--wp--preset--color--neutral-800: #3d4856;
+	--wp--preset--color--neutral-700: #435061;
+	--wp--preset--color--neutral-600: #526277;
+	--wp--preset--color--neutral-500: #677a90;
+	--wp--preset--color--neutral-400: #8697aa;
+	--wp--preset--color--neutral-300: #b1bcc8;
+	--wp--preset--color--neutral-200: #d5dae2;
+	--wp--preset--color--neutral-100: #eceff2;
+	--wp--preset--color--neutral-50: #f6f7f9;
+
+	/* Black and white primitive colors. */
+	--wp--preset--color--black: #000000;
+	--wp--preset--color--white: #ffffff;
+}
 ```
 
-### A Little Bit Bookish
+Except for `--wp--preset--color--black` and `--wp--preset--color--white` in cases where you always want black or white colors (even when toggling between light and dark mode), you should never use other primitive colors in `theme.json`, style variations, or custom CSS. Instead, use semantic colors.
+
+## Semantic Colors
+
+The semantic color layer allows you to assign primitive color tokens to semantically-mapped colors that are used throughout the design. Essentially, the
+
+```text
+Primitive → Semantic → Component
+```
+
+This is also the layer where we can utilize CSS functions like `light-dark()` to output colors based on user preference.
+
+### Semantic Color Names
+
+Colors at the semantic layer are broken down into two groups:
+
+- `background`: Used for surfaces and other backgrounds and never for text.
+- `foreground`: Used for text, icons, and other elements that appear on the background.
+
+Background colors are as follows:
+
+- `level-0`: Typically the base surface.
+- `level-1`: Should visually appear as a distinct layer above `level-0`.
+- `level-2`: Should visually appear as a distinct layer above `level-0` or `level-1`.
+- `accent`: Used for highlighting a particular surface.
+- `backdrop`: Used behind overlays, such as lightboxes, to obscure what's below.
+
+Foreground colors are as follows:
+
+- `primary`: Used as the main text color.
+- `secondary`: Used as a for less important text.
+- `tertiary`: Used for an even lighter emphasis.
+- `accent`: Used for text that needs to stand out.
+- `on-accent`: Used for text that sits atop the background `accent` color.
+- `on-backdrop`: Used for text that sits atop the background `backdrop` color.
+
+Unless specified by the `on-` prefix, all colors should have readable text against any of the `level-*` backgrounds.
+
+### Defining Semantic Colors in `theme.json`
+
+Because WordPress has no standard method of defining a semantic layer, the theme uses the `settings.custom.color` property in `theme.json` to handle this.
+
+For semantic colors, there are two important things to keep in mind as they are defined:
+
+- **Use Primitive Colors:** Each semantic color token is assigned a primitive color based on the needs of the design.
+- **Handle Color Scheme:** For colors that should change based on whether the user is in light or dark mode, use the `light-dark()` CSS function here.
+
+Here is what semantic colors should look like at the semantic layer in `theme.json`:
+
+```json
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/wp/trunk/schemas/json/theme.json",
+	"version": 3,
+	"settings": {
+		"color": {
+			"background": {
+				"level-0": "light-dark(var(--wp--preset--color--white), var(--wp--preset--color--neutral-950))",
+				"level-1": "light-dark(var(--wp--preset--color--neutral-50), var(--wp--preset--color--neutral-900))",
+				"level-2": "light-dark(var(--wp--preset--color--neutral-100), var(--wp--preset--color--neutral-800))",
+				"accent": "light-dark(var(--wp--preset--color--primary-600), var(--wp--preset--color--primary-400))",
+				"backdrop": "var(--wp--preset--color--neutral-950)"
+			},
+			"foreground": {
+				"primary": "light-dark(var(--wp--preset--color--neutral-900), var(--wp--preset--color--neutral-200))",
+				"secondary": "light-dark(var(--wp--preset--color--neutral-600), var(--wp--preset--color--neutral-400))",
+				"tertiary": "light-dark(var(--wp--preset--color--neutral-400), var(--wp--preset--color--neutral-600))",
+				"accent": "light-dark(var(--wp--preset--color--primary-700), var(--wp--preset--color--primary-300))",
+				"on-accent": "light-dark(var(--wp--preset--color--white), var(--wp--preset--color--primary-950))",
+				"on-backdrop": "var(--wp--preset--color--neutral-50)"
+			}
+		}
+	}
+}
+```
+
+### CSS Custom Properties
+
+WordPress will automatically generate the CSS custom properties for each of the semantic colors with the `--wp--custom--color--` prefix. For example, here is what the `background` and `foreground` color properties look like:
 
 ```css
---primary-50: #fcf5f4;
---primary-100: #fae8e6;
---primary-200: #f7d5d1;
---primary-300: #f0b8b1;
---primary-400: #e58f84;
---primary-500: #d76a5c;
---primary-600: #c65a4c;
---primary-700: #a33f32;
---primary-800: #87372d;
---primary-900: #71332b;
---primary-950: #3d1712;
+:root {
+	/* Background colors. */
+	--wp--custom--color--background--level-0: light-dark(var(--wp--preset--color--white), var(--wp--preset--color--neutral-950));
+	--wp--custom--color--background--level-1: light-dark(var(--wp--preset--color--neutral-50), var(--wp--preset--color--neutral-900));
+	--wp--custom--color--background--level-2: light-dark(var(--wp--preset--color--neutral-100), var(--wp--preset--color--neutral-800));
+	--wp--custom--color--background--accent: light-dark(var(--wp--preset--color--primary-600), var(--wp--preset--color--primary-400));
+	--wp--custom--color--background--backdrop: var(--wp--preset--color--neutral-950);
 
---secondary-50: #f4f8ed;
---secondary-100: #e6efd8;
---secondary-200: #cfe1b5;
---secondary-300: #afcc8a;
---secondary-400: #92b764;
---secondary-500: #759e47;
---secondary-600: #597b35;
---secondary-700: #455f2c;
---secondary-800: #394d27;
---secondary-900: #334225;
---secondary-950: #192310;
-
---neutral-50: #eeece7;
---neutral-100: #e0d9d2;
---neutral-200: #cabdaf;
---neutral-300: #ae9a89;
---neutral-400: #987d67;
---neutral-500: #866b5b;
---neutral-600: #70574c;
---neutral-700: #5a453f;
---neutral-800: #56423e;
---neutral-900: #4c3a38;
---neutral-950: #2a1f1e;
+	/* Foreground colors. */
+	--wp--custom--color--foreground--primary: light-dark(var(--wp--preset--color--neutral-900), var(--wp--preset--color--neutral-200));
+	--wp--custom--color--foreground--secondary: light-dark(var(--wp--preset--color--neutral-600), var(--wp--preset--color--neutral-400));
+	--wp--custom--color--foreground--tertiary: light-dark(var(--wp--preset--color--neutral-400), var(--wp--preset--color--neutral-600));
+	--wp--custom--color--foreground--accent: light-dark(var(--wp--preset--color--primary-700), var(--wp--preset--color--primary-300));
+	--wp--custom--color--foreground--on-accent: light-dark(var(--wp--preset--color--white), var(--wp--preset--color--primary-950));
+	--wp--custom--color--foreground--on-backdrop: var(--wp--preset--color--neutral-50);
+}
 ```
+
+## Applying Colors
+
+Still gotta do this section, teaching folks how to apply semantic colors at the block and element layer.
