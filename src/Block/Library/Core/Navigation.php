@@ -41,7 +41,7 @@ class Navigation implements Bootable
 	#[Filter('block_core_navigation_listable_blocks')]
 	public function listableBlocks(array $blocks): array
 	{
-		return array_merge($blocks,[
+		return array_merge($blocks, [
 			'core/buttons',
 			'core/loginout'
 		]);
