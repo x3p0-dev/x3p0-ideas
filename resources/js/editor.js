@@ -3,7 +3,7 @@
  * be bundled into a final file during the build process.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright Copyright (c) 2023-2024, Justin Tadlock
+ * @copyright Copyright (c) 2023-2025, Justin Tadlock
  * @license   GPL-3.0-or-later
  */
 

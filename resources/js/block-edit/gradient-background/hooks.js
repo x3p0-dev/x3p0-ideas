@@ -2,7 +2,7 @@
  * The hooks file houses custom React hooks for use with the component.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright Copyright (c) 2023-2024, Justin Tadlock
+ * @copyright Copyright (c) 2023-2025, Justin Tadlock
  * @license   GPL-3.0-or-later
  */
 
