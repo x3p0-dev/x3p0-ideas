@@ -103,7 +103,7 @@ class Theme implements BlockBindingSource
 	 */
 	private function renderSuperpower(array $args): string
 	{
-		return esc_html((new Superpower())->text($args['type'] ?? ''));
+		return esc_html((new Superpower())->render($args['type'] ?? ''));
 	}
 
 	/**

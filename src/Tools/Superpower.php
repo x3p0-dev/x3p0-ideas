@@ -73,7 +73,7 @@ class Superpower
 	 *
 	 * @since 1.0.0
 	 */
-	public function text(string $type = ''): string
+	public function render(string $type = ''): string
 	{
 		$collection = match ($type) {
 			'text'  => $this->messages['text'],
