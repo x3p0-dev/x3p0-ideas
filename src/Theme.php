@@ -14,8 +14,8 @@ declare(strict_types=1);
 namespace X3P0\Ideas;
 
 use WP_Block_Bindings_Registry;
-use WP_Block_Patterns_Registry;
 use WP_Block_Pattern_Categories_Registry;
+use WP_Block_Patterns_Registry;
 use WP_Block_Styles_Registry;
 use WP_Block_Type_Registry;
 use X3P0\Ideas\Contracts\{Bootable, Container};
@@ -102,14 +102,14 @@ class Theme implements Bootable, Container
 		));
 
 		// phpcs:disable Generic.Functions.FunctionCallArgumentSpacing.TooMuchSpaceAfterComma
-		$this->instance('block.assets', new Block\Assets());
-		$this->instance('block.render', new Block\Render(new Block\Rules()));
-		$this->instance('editor',       new Editor());
-		$this->instance('embeds',       new Embeds());
-		$this->instance('frontend',     new Frontend());
-		$this->instance('media',        new Media());
-		$this->instance('parts',        new Parts());
-		$this->instance('templates',    new Templates());
+		$this->instance('block.assets',       new Block\Assets());
+		$this->instance('block.render',       new Block\Render(new Block\Rules()));
+		$this->instance('editor',             new Editor());
+		$this->instance('embeds',             new Embeds());
+		$this->instance('frontend',           new Frontend());
+		$this->instance('media',              new Media());
+		$this->instance('template.parts',     new Template\Parts());
+		$this->instance('template.templates', new Template\Templates());
 		// phpcs:enable
 
 		$this->instance(

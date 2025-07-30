@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas;
+namespace X3P0\Ideas\Template;
 
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
@@ -26,8 +26,6 @@ class Templates implements Bootable
 
 	/**
 	 * Boots the component, running its actions/filters.
-	 *
-	 * @since 1.0.0
 	 */
 	#[\Override]
 	public function boot(): void

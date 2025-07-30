@@ -11,14 +11,14 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas;
+namespace X3P0\Ideas\Template;
 
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
 
 /**
- * The Block Template Parts class is responsible for housing any custom code
- * related to template parts.
+ * The Template Parts class is responsible for housing any custom code related
+ * to template parts.
  */
 class Parts implements Bootable
 {
