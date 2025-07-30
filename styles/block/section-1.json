@@ -58,7 +58,21 @@
 							"background": "light-dark(var(--wp--preset--color--primary-600), var(--wp--preset--color--primary-700))",
 							"foreground": "light-dark(var(--wp--preset--color--white), var(--wp--preset--color--white))"
 						},
+						"outline": {
+							"color": "transparent",
+							"offset": "var(--wp--custom--outline--primary--offset)",
+							"style": "var(--wp--custom--outline--primary--style)",
+							"width": "var(--wp--custom--outline--primary--width)"
+						},
 						"shadow": "0 10px 15px -3px light-dark(color-mix(in oklab, var(--wp--preset--color--primary-600) 40%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 60%, transparent)), 0 4px 6px -4px light-dark(color-mix(in oklab, var(--wp--preset--color--primary-600) 40%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 60%, transparent))",
+						"focus": {
+							"outline": {
+								"color": "light-dark(var(--wp--preset--color--primary-700), var(--wp--preset--color--primary-600))",
+								"offset": "var(--wp--custom--elements--button--primary--outline--offset)",
+								"style": "var(--wp--custom--elements--button--primary--outline--style)",
+								"width": "var(--wp--custom--elements--button--primary--outline--width)"
+							}
+						},
 						"hover": {
 							"border": {
 								"color": "light-dark(var(--wp--preset--color--primary-800), var(--wp--preset--color--primary-900))",
@@ -84,7 +98,21 @@
 							"style": "var(--wp--custom--border--primary--style)",
 							"width": "var(--wp--custom--border--primary--width)"
 						},
+						"outline": {
+							"color": "transparent",
+							"offset": "var(--wp--custom--outline--primary--offset)",
+							"style": "var(--wp--custom--outline--primary--style)",
+							"width": "var(--wp--custom--outline--primary--width)"
+						},
 						"shadow": "0 10px 15px -3px light-dark(color-mix(in oklab, var(--wp--preset--color--black) 10%, transparent), color-mix(in oklab, var(--wp--preset--color--black) 30%, transparent)), 0 4px 6px -4px light-dark(color-mix(in oklab, var(--wp--preset--color--black) 10%, transparent), color-mix(in oklab, var(--wp--preset--color--black) 30%, transparent))",
+						"focus": {
+							"outline": {
+								"color": "currentColor",
+								"offset": "var(--wp--custom--elements--button--secondary--outline--offset)",
+								"style": "var(--wp--custom--elements--button--secondary--outline--style)",
+								"width": "var(--wp--custom--elements--button--secondary--outline--width)"
+							}
+						},
 						"hover": {
 							"color": {
 								"background": "transparent",

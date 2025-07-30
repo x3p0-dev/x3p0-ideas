@@ -96,13 +96,12 @@
 }
 
 ///
-/// Shared fill and outline block styles. Inherit the outline font size from the
-/// parent element if assigned a preset.
+/// Shared primary and secondary button styles. Inherit the outline font size
+/// from the parent element if assigned a preset.
 ///
 [class*=-font-size] .wp-block-tag-cloud:is(
 	.is-style-buttons-primary,
-	.is-style-buttons-secondary,
-	.is-style-buttons-outline
+	.is-style-buttons-secondary
  ) {
 	line-height: inherit;
 }

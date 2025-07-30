@@ -59,26 +59,27 @@
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-.wp-block-button.is-style-outline .wp-block-button__link {
-	background: transparent none;
-	border: 1px var(--wp--custom--border--primary--style) currentColor;
-	color: currentColor;
-	padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--50);
+///
+/// Secondary style.
+///
+:root :where(.is-style-button-secondary .wp-block-button__link) {
 
-	&:focus,
-	&:hover {
-		outline-color: currentColor;
+	&:is(:hover, :focus) {
+		background:    var(--wp--custom--elements--button--secondary--hover--color--background);
+		color:         var(--wp--custom--elements--button--secondary--hover--color--foreground);
+		border-color:  var(--wp--custom--elements--button--secondary--hover--border--color);
+		border-radius: var(--wp--custom--elements--button--secondary--hover--border--radius);
+		border-style:  var(--wp--custom--elements--button--secondary--hover--border--style);
+		border-width:  var(--wp--custom--elements--button--secondary--hover--border--width);
+		box-shadow:    var(--wp--custom--elements--button--secondary--hover--shadow);
 	}
-}
 
-///
-/// Ensure underline on outline style buttons.
-///
-.wp-block-button.is-style-outline .wp-element-button:where(
-	:focus,
-	:hover
-) {
-	text-decoration: underline;
+	&:is(:active, :focus) {
+		outline-color:  var(--wp--custom--elements--button--secondary--focus--outline--color);
+		outline-offset: var(--wp--custom--elements--button--secondary--focus--outline--offset);
+		outline-style:  var(--wp--custom--elements--button--secondary--focus--outline--style);
+		outline-width:  var(--wp--custom--elements--button--secondary--focus--outline--width);
+	}
 }
 
 // -----------------------------------------------------------------------------

@@ -20,7 +20,6 @@
 		},
 		"elements": {
 			"link": {
-				"css": "&:is(:hover, :focus) { box-shadow: var(--wp--custom--elements--button--primary--hover--shadow); border: var(--wp--custom--elements--button--primary--hover--border--width) var(--wp--custom--elements--button--primary--hover--border--style) var(--wp--custom--elements--button--primary--hover--border--color); border-radius: var(--wp--custom--elements--button--primary--hover--border--radius); }",
 				"border": {
 					"color": { "ref": "styles.elements.button.border.color" },
 					"style": { "ref": "styles.elements.button.border.style" },
@@ -32,7 +31,10 @@
 					"text": { "ref": "styles.elements.button.color.text" }
 				},
 				"outline": {
-					"color": { "ref": "styles.elements.button.outline.color" }
+					"color": { "ref": "styles.elements.button.outline.color" },
+					"offset": { "ref": "styles.elements.button.outline.offset" },
+					"style": { "ref": "styles.elements.button.outline.style" },
+					"width": { "ref": "styles.elements.button.outline.width" }
 				},
 				"shadow": { "ref": "styles.elements.button.shadow" },
 				"spacing": {
@@ -49,6 +51,14 @@
 					"lineHeight": { "ref": "styles.elements.button.typography.lineHeight" },
 					"textDecoration": "none"
 				},
+				":active": {
+					"outline": {
+						"color": { "ref": "styles.elements.button.:active.outline.color" },
+						"offset": { "ref": "styles.elements.button.:active.outline.offset" },
+						"style": { "ref": "styles.elements.button.:active.outline.style" },
+						"width": { "ref": "styles.elements.button.:active.outline.width" }
+					}
+				},
 				":focus": {
 					"border": {
 						"color": "var(--wp--custom--elements--button--primary--hover--border--color)",
@@ -60,6 +70,13 @@
 						"background": "var(--wp--custom--elements--button--primary--hover--color--background)",
 						"text": "var(--wp--custom--elements--button--primary--hover--color--foreground)"
 					},
+					"outline": {
+						"color": { "ref": "styles.elements.button.:focus.outline.color" },
+						"offset": { "ref": "styles.elements.button.:focus.outline.offset" },
+						"style": { "ref": "styles.elements.button.:focus.outline.style" },
+						"width": { "ref": "styles.elements.button.:focus.outline.width" }
+					},
+					"shadow": "var(--wp--custom--elements--button--primary--hover--shadow)",
 					"typography": {
 						"textDecoration": "underline !important"
 					}
@@ -75,6 +92,7 @@
 						"background": "var(--wp--custom--elements--button--primary--hover--color--background)",
 						"text": "var(--wp--custom--elements--button--primary--hover--color--foreground)"
 					},
+					"shadow": "var(--wp--custom--elements--button--primary--hover--shadow)",
 					"typography": {
 						"textDecoration": "underline !important"
 					}
@@ -83,7 +101,6 @@
 		},
 		"blocks": {
 			"core/social-link": {
-				"css": "&:is(:hover, :focus) { box-shadow: var(--wp--custom--elements--button--primary--hover--shadow); border: var(--wp--custom--elements--button--primary--hover--border--width) var(--wp--custom--elements--button--primary--hover--border--style) var(--wp--custom--elements--button--primary--hover--border--color); border-radius: var(--wp--custom--elements--button--primary--hover--border--radius); }",
 				"border": {
 					"color": { "ref": "styles.elements.button.border.color" },
 					"style": { "ref": "styles.elements.button.border.style" },
@@ -97,24 +114,6 @@
 				"shadow": { "ref": "styles.elements.button.shadow" },
 				"typography": {
 					"lineHeight": { "ref": "styles.elements.button.typography.lineHeight" }
-				},
-				"elements": {
-					"link": {
-						"border": {
-							"width": "0"
-						},
-						"shadow": { "ref": "styles.elements.button.shadow" },
-						":focus": {
-							"typography": {
-								"textDecoration": { "ref": "styles.elements.button.:focus.typography.textDecoration" }
-							}
-						},
-						":hover": {
-							"typography": {
-								"textDecoration": { "ref": "styles.elements.button.:hover.typography.textDecoration" }
-							}
-						}
-					}
 				}
 			}
 		}

@@ -89,6 +89,70 @@
 // -----------------------------------------------------------------------------
 
 ///
+/// Buttons Primary styles that are not feasible in JSON.
+///
+.wp-block-social-links.is-style-buttons-primary {
+
+	.wp-block-social-link:has(.wp-block-social-link-anchor:where(:focus, :hover)) {
+		background:    var(--wp--custom--elements--button--primary--hover--color--background);
+		color:         var(--wp--custom--elements--button--primary--hover--color--foreground);
+		border-color:  var(--wp--custom--elements--button--primary--hover--border--color);
+		border-radius: var(--wp--custom--elements--button--primary--hover--border--radius);
+		border-style:  var(--wp--custom--elements--button--primary--hover--border--style);
+		border-width:  var(--wp--custom--elements--button--primary--hover--border--width);
+		box-shadow:    var(--wp--custom--elements--button--primary--hover--shadow);
+	}
+
+	.wp-block-social-link:has(.wp-block-social-link-anchor:where(:active, :focus)) {
+		outline-color:  var(--wp--custom--elements--button--primary--focus--outline--color);
+		outline-offset: var(--wp--custom--elements--button--primary--focus--outline--offset);
+		outline-style:  var(--wp--custom--elements--button--primary--focus--outline--style);
+		outline-width:  var(--wp--custom--elements--button--primary--focus--outline--width);
+	}
+
+	.wp-block-social-link-anchor {
+		background: inherit;
+		color:      currentColor;
+		border:     none;
+		box-shadow: none;
+		outline:    none;
+	}
+}
+
+///
+/// Buttons Secondary styles that are not feasible in JSON.
+///
+.wp-block-social-links.is-style-buttons-secondary {
+
+	.wp-block-social-link:has(.wp-block-social-link-anchor:where(:focus, :hover)) {
+		background:    var(--wp--custom--elements--button--secondary--hover--color--background);
+		color:         var(--wp--custom--elements--button--secondary--hover--color--foreground);
+		border-color:  var(--wp--custom--elements--button--secondary--hover--border--color);
+		border-radius: var(--wp--custom--elements--button--secondary--hover--border--radius);
+		border-style:  var(--wp--custom--elements--button--secondary--hover--border--style);
+		border-width:  var(--wp--custom--elements--button--secondary--hover--border--width);
+		box-shadow:    var(--wp--custom--elements--button--secondary--hover--shadow);
+	}
+
+	.wp-block-social-link:has(.wp-block-social-link-anchor:where(:active, :focus)) {
+		outline-color:  var(--wp--custom--elements--button--secondary--focus--outline--color);
+		outline-offset: var(--wp--custom--elements--button--secondary--focus--outline--offset);
+		outline-style:  var(--wp--custom--elements--button--secondary--focus--outline--style);
+		outline-width:  var(--wp--custom--elements--button--secondary--focus--outline--width);
+	}
+}
+
+.wp-block-social-links:where(.is-style-buttons-primary, .is-style-buttons-secondary) {
+	.wp-block-social-link-anchor {
+		background: inherit;
+		color:      currentColor;
+		border:     none;
+		box-shadow: none;
+		outline:    none;
+	}
+}
+
+///
 /// Monotone block style. Note that we must define the colors via CSS to prevent
 /// WordPress's hardcoded CSS from overwriting them.
 ///

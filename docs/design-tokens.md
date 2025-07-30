@@ -31,6 +31,15 @@
 	--wp--custom--color--foreground--on-backdrop: #000;
 
 	// ---------------------------------------------------------------------
+	// Outlines
+	// ---------------------------------------------------------------------
+
+	--wp--custom--outline--primary--color: #000;
+	--wp--custom--outline--primary--style: solid;
+	--wp--custom--outline--primary--width: 1px;
+	--wp--custom--outline--primary--offset: 6px;
+
+	// ---------------------------------------------------------------------
 	// Shadows
 	// ---------------------------------------------------------------------
 

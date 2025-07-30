@@ -100,8 +100,10 @@
 	}
 
 	&:focus {
-		outline:        2px solid var(--wp--custom--color--foreground--accent, inherit);
-		outline-offset: 2px;
+		outline-color:  var(--wp--custom--color--foreground--accent, currentColor);
+		outline-offset: var(--wp--custom--outline--primary--offset);
+		outline-style:  var(--wp--custom--outline--primary--style);
+		outline-width:  var(--wp--custom--outline--primary--width);
 		box-shadow:     var(--wp--custom--shadow--primary--hover, none);
 	}
 }
