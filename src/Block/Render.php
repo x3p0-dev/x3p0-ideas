@@ -31,15 +31,6 @@ class Render implements Bootable
 	{}
 
 	/**
-	 * Boots the component, running its actions/filters.
-	 */
-	#[\Override]
-	public function boot(): void
-	{
-		$this->hookMethods();
-	}
-
-	/**
 	 * Filters block content, determining if it should be shown according to
 	 * any rules passed in via attributes.
 	 */

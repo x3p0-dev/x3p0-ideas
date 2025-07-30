@@ -24,14 +24,6 @@ class Calendar implements Bootable
 {
 	use Hookable;
 
-	/**
-	 * Boots the component, running its actions/filters.
-	 */
-	#[\Override]
-	public function boot(): void
-	{
-		$this->hookMethods();
-	}
 
 	/**
 	 * Filters the Calendar block args to set custom selectors via the

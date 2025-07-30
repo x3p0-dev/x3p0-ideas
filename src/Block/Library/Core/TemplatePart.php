@@ -25,15 +25,6 @@ class TemplatePart implements Bootable
 	use Hookable;
 
 	/**
-	 * Boots the component, running its actions/filters.
-	 */
-	#[\Override]
-	public function boot(): void
-	{
-		$this->hookMethods();
-	}
-
-	/**
 	 * This filter first disables the Comments template part when there are
 	 * no comments and commenting is disabled. Then, it adds a contextual
 	 * class to the wrapping template part markup with the slug name (e.g.,

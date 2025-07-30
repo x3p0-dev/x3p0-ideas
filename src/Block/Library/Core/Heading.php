@@ -24,15 +24,6 @@ class Heading implements Bootable
 	use Hookable;
 
 	/**
-	 * Boots the component, running its actions/filters.
-	 */
-	#[\Override]
-	public function boot(): void
-	{
-		$this->hookMethods();
-	}
-
-	/**
 	 * Adds support for background images to the Heading block so that the
 	 * `clip-text` style variation can work.
 	 */

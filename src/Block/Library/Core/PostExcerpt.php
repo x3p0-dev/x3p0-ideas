@@ -25,15 +25,6 @@ class PostExcerpt implements Bootable
 	use Hookable;
 
 	/**
-	 * Boots the component, running its actions/filters.
-	 */
-	#[\Override]
-	public function boot(): void
-	{
-		$this->hookMethods();
-	}
-
-	/**
 	 * Before rendering the Post Excerpt block, add a custom filter to
 	 * `wp_trim_words` so that we can handle the output of custom excerpts.
 	 *

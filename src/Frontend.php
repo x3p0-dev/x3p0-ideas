@@ -38,7 +38,7 @@ class Frontend implements Bootable
 	#[\Override]
 	public function boot(): void
 	{
-		$this->hookMethods();
+		$this->hookMembers();
 
 		// Disable the emoji script.
 		remove_action('wp_head', 'print_emoji_detection_script', 7);

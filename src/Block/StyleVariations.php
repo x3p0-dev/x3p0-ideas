@@ -68,17 +68,6 @@ class StyleVariations implements Bootable
 	{}
 
 	/**
-	 * Boots the component, running its actions/filters.
-	 *
-	 * @since 1.0.0
-	 */
-	#[\Override]
-	public function boot(): void
-	{
-		$this->hookMethods();
-	}
-
-	/**
 	 * Register custom block styles.
 	 *
 	 * @since 1.0.0

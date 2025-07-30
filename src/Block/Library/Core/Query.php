@@ -24,15 +24,6 @@ class Query implements Bootable
 	use Hookable;
 
 	/**
-	 * Boots the component, running its actions/filters.
-	 */
-	#[\Override]
-	public function boot(): void
-	{
-		$this->hookMethods();
-	}
-
-	/**
 	 * Adds spacing support to the Query Loop block and disables
 	 * interactivity.
 	 */

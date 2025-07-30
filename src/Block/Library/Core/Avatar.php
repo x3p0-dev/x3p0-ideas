@@ -24,15 +24,6 @@ class Avatar implements Bootable
 	use Hookable;
 
 	/**
-	 * Boots the component, running its actions/filters.
-	 */
-	#[\Override]
-	public function boot(): void
-	{
-		$this->hookMethods();
-	}
-
-	/**
 	 * Filters the Avatar block args to set custom selectors via the
 	 * Selectors API. Originally, Core set the border to the wrapping `<div>`
 	 * for around the image. This was fixed by applying the border to the

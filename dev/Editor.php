@@ -24,17 +24,6 @@ class Editor implements Bootable
 	use Hookable;
 
 	/**
-	 * Boots the component, running its actions/filters.
-	 *
-	 * @since 1.0.0
-	 */
-	#[\Override]
-	public function boot(): void
-	{
-		$this->hookMethods();
-	}
-
-	/**
 	 * Enables features that are disabled for production installs.
 	 *
 	 * @since 1.0.0

@@ -24,15 +24,6 @@ class Comments implements Bootable
 	use Hookable;
 
 	/**
-	 * Boots the component, running its actions/filters.
-	 */
-	#[\Override]
-	public function boot(): void
-	{
-		$this->hookMethods();
-	}
-
-	/**
 	 * Adds layout support to the Comments block.
 	 */
 	#[Filter('block_type_metadata_settings', 'last')]

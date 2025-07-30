@@ -32,15 +32,6 @@ class Button implements Bootable
 	{}
 
 	/**
-	 * Boots the component, running its actions/filters.
-	 */
-	#[\Override]
-	public function boot(): void
-	{
-		$this->hookMethods();
-	}
-
-	/**
 	 * Registers user meta for the color scheme toggle.
 	 */
 	#[Action('init')]

@@ -24,15 +24,6 @@ class QueryPagination implements Bootable
 	use Hookable;
 
 	/**
-	 * Boots the component, running its actions/filters.
-	 */
-	#[\Override]
-	public function boot(): void
-	{
-		$this->hookMethods();
-	}
-
-	/**
 	 * Adds support for Paragraphs to the Query Pagination block. This is
 	 * specifically needed for binding a pagination label. Also adds spacing
 	 * support.

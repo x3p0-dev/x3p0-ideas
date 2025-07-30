@@ -24,15 +24,6 @@ class NavigationSubmenu implements Bootable
 	use Hookable;
 
 	/**
-	 * Boots the component, running its actions/filters.
-	 */
-	#[\Override]
-	public function boot(): void
-	{
-		$this->hookMethods();
-	}
-
-	/**
 	 * Filters the Navigation Submenu block args to set custom selectors via
 	 * the Selectors API. We must do this so that values set in `theme.json`
 	 * for `core/navigation-submenu` are applied only to the submenu

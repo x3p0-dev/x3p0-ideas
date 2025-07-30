@@ -31,15 +31,6 @@ class Media implements Bootable
 	protected const THRESHOLD_WIDTH = 3480;
 
 	/**
-	 * Bootstraps the class' actions/filters.
-	 */
-	#[\Override]
-	public function boot(): void
-	{
-		$this->hookMethods();
-	}
-
-	/**
 	 * Registers custom image sizes.
 	 */
 	#[Action('init')]

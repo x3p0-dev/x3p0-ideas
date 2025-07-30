@@ -24,15 +24,6 @@ class Navigation implements Bootable
 	use Hookable;
 
 	/**
-	 * Boots the component, running its actions/filters.
-	 */
-	#[\Override]
-	public function boot(): void
-	{
-		$this->hookMethods();
-	}
-
-	/**
 	 * Adds missing wrapping `<li>` to the Loginout block when used in a
 	 * navigation menu.
 	 *

@@ -25,15 +25,6 @@ class Loginout implements Bootable
 	use Hookable;
 
 	/**
-	 * Boots the component, running its actions/filters.
-	 */
-	#[\Override]
-	public function boot(): void
-	{
-		$this->hookMethods();
-	}
-
-	/**
 	 * Adds the `.wp-element-button` class to the login form's submit button.
 	 * This is currently missing from core WP.
 	 *

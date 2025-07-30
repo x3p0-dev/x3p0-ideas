@@ -20,6 +20,8 @@ use X3P0\Ideas\Contracts\Hook;
 
 /**
  * A trait for defining attribute-based actions and filters with class methods.
+ * This trait can also automatically boostrap `Bootable` class hooks with its
+ * `boot()` method if undefined by the class.
  */
 trait Hookable
 {
@@ -27,6 +29,15 @@ trait Hookable
 	 * Stores the instance of the reflected class.
 	 */
 	protected ReflectionClass $reflector;
+
+	/**
+	 * Boots the component, running its actions/filters.
+	 */
+	#[\Override]
+	public function boot(): void
+	{
+		$this->hookMembers();
+	}
 
 	/**
 	 * Returns the reflection of the current class.

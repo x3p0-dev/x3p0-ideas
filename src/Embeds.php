@@ -46,15 +46,6 @@ class Embeds implements Bootable
 	protected const EXCERPT_LENGTH = 24;
 
 	/**
-	 * Bootstraps the class' actions/filters.
-	 */
-	#[\Override]
-	public function boot(): void
-	{
-		$this->hookMethods();
-	}
-
-	/**
 	 * Loads assets needed for the embed.
 	 *
 	 * @link https://developer.wordpress.org/reference/hooks/enqueue_embed_scripts/

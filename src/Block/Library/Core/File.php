@@ -24,15 +24,6 @@ class File implements Bootable
 	use Hookable;
 
 	/**
-	 * Boots the component, running its actions/filters.
-	 */
-	#[\Override]
-	public function boot(): void
-	{
-		$this->hookMethods();
-	}
-
-	/**
 	 * Adds button element color support to the File block.
 	 */
 	#[Filter('block_type_metadata_settings', 'last')]

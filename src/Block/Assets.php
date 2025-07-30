@@ -26,15 +26,6 @@ class Assets implements Bootable
 	use Hookable;
 
 	/**
-	 * Boots the component, running its actions/filters.
-	 */
-	#[\Override]
-	public function boot(): void
-	{
-		$this->hookMethods();
-	}
-
-	/**
 	 * Enqueues block-specific styles so that they only load when the block
 	 * is in use. Block styles stored under `/assets/css/blocks` are
 	 * automatically enqueued. Each file should be named

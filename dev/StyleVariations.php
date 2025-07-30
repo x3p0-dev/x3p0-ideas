@@ -54,15 +54,6 @@ class StyleVariations implements Bootable
 	{}
 
 	/**
-	 * Boots the component, running its actions/filters.
-	 */
-	#[\Override]
-	public function boot(): void
-	{
-		$this->hookMethods();
-	}
-
-	/**
 	 * Filters the data at the user level in case something is saved in the
 	 * database already. We want the front end to use the variation passed
 	 * into the constructor.

@@ -34,15 +34,6 @@ class Component implements Bootable
 	) {}
 
 	/**
-	 * {@inheritDoc}
-	 */
-	#[\Override]
-	public function boot(): void
-	{
-		$this->hookMethods();
-	}
-
-	/**
 	 * Register custom block bindings sources.
 	 */
 	#[Action('init')]

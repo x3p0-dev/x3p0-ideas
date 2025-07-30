@@ -49,15 +49,6 @@ class Patterns implements Bootable
 	) {}
 
 	/**
-	 * Boots the component, running its actions/filters.
-	 */
-	#[\Override]
-	public function boot(): void
-	{
-		$this->hookMethods();
-	}
-
-	/**
 	 * Removes theme support for core patterns.
 	 */
 	#[Action('after_setup_theme')]

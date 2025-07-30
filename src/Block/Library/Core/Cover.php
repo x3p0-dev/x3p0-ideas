@@ -25,15 +25,6 @@ class Cover implements Bootable
 	use Hookable;
 
 	/**
-	 * Boots the component, running its actions/filters.
-	 */
-	#[\Override]
-	public function boot(): void
-	{
-		$this->hookMethods();
-	}
-
-	/**
 	 * Adds more color support to the Cover block.
 	 */
 	#[Filter('block_type_metadata_settings', 'last')]

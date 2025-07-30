@@ -26,15 +26,6 @@ class Editor implements Bootable
 	use Hookable;
 
 	/**
-	 * Boots the component, running its actions/filters.
-	 */
-	#[\Override]
-	public function boot(): void
-	{
-		$this->hookMethods();
-	}
-
-	/**
 	 * Add editor stylesheets.
 	 *
 	 * @link https://developer.wordpress.org/reference/functions/add_editor_style/

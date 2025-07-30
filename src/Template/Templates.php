@@ -25,15 +25,6 @@ class Templates implements Bootable
 	use Hookable;
 
 	/**
-	 * Boots the component, running its actions/filters.
-	 */
-	#[\Override]
-	public function boot(): void
-	{
-		$this->hookMethods();
-	}
-
-	/**
 	 * Customizes the titles of the default template types.
 	 *
 	 * @link https://developer.wordpress.org/reference/hooks/default_template_types/

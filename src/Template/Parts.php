@@ -25,15 +25,6 @@ class Parts implements Bootable
 	use Hookable;
 
 	/**
-	 * Boots the component, running its actions/filters.
-	 */
-	#[\Override]
-	public function boot(): void
-	{
-		$this->hookMethods();
-	}
-
-	/**
 	 * Filter the core template part areas to add custom areas needed for
 	 * the theme.
 	 *

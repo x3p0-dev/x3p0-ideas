@@ -32,15 +32,6 @@ class PostContent implements Bootable
 	{}
 
 	/**
-	 * Boots the component, running its actions/filters.
-	 */
-	#[\Override]
-	public function boot(): void
-	{
-		$this->hookMethods();
-	}
-
-	/**
 	 * Filters the post content block when viewing single attachment views
 	 * and returns block-based media content.
 	 */
