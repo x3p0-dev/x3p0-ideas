@@ -95,7 +95,7 @@ abbr[title] {
 
 	&:hover,
 	&:focus {
-		color: var(--wp--custom--elements--link--secondary--color--foreground--hover);
+		color: var(--wp--custom--elements--link--secondary--hover--color--foreground);
 	}
 }
 
@@ -114,7 +114,7 @@ blockquote cite {
 
 		&:hover,
 		&:focus {
-			color: var(--wp--custom--elements--link--secondary--color--foreground--hover);
+			color: var(--wp--custom--elements--link--secondary--hover--color--foreground);
 		}
 	}
 }
