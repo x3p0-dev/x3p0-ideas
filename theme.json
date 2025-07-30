@@ -1695,6 +1695,13 @@
 				}
 			},
 			"core/post-comments-form": {
+				"css": "&:has(form:focus-within) { outline-color: color-mix(in oklab, var(--wp--custom--color--foreground--accent, currentColor) 50%, transparent); }",
+				"outline": {
+					"color": "transparent",
+					"offset": "var(--wp--custom--outline--primary--offset)",
+					"style": "var(--wp--custom--outline--primary--style)",
+					"width": "var(--wp--custom--outline--primary--width)"
+				},
 				"elements": {
 					"h3": {
 						"typography": {
