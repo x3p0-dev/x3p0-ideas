@@ -96,9 +96,10 @@ class ColorScheme
 	public function getState(): array
 	{
 		$state = [
-			'colorScheme' => $this->getColorScheme(),
-			'isDark'      => null,
-			'userID'      => get_current_user_id()
+			'colorScheme'       => $this->getColorScheme(),
+			'switchableSchemes' => self::SWITCHABLE_SCHEMES,
+			'isDark'            => null,
+			'userID'            => get_current_user_id()
 		];
 
 		// By default, we don't always know whether the color scheme is

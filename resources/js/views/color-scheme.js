@@ -8,15 +8,10 @@
 
 import { store } from '@wordpress/interactivity';
 
-const SWITCHABLE_SCHEMES = [
-	'light dark',
-	'dark light'
-];
-
 // Get the module data for the script module, which is set via a PHP filter.
 const dataElement = document.getElementById('wp-script-module-data-x3p0-ideas-color-scheme');
 const data        = dataElement ? JSON.parse(dataElement.textContent) : {};
-const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+const mediaQuery  = window.matchMedia('(prefers-color-scheme: dark)');
 
 const { callbacks, state } = store(data.store, {
 	state: {
@@ -75,7 +70,7 @@ const { callbacks, state } = store(data.store, {
 		 */
 		init() {
 			// Bail early if the color scheme is not switchable.
-			if (! SWITCHABLE_SCHEMES.includes(state.colorScheme)) {
+			if (! state.switchableSchemes.includes(state.colorScheme)) {
 				return;
 			}
 
