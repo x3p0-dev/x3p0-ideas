@@ -148,6 +148,18 @@
 							}
 						}
 					}
+				},
+				"summary": {
+					"color": {
+						"background": "transparent",
+						"foreground": "currentColor"
+					},
+					"hover": {
+						"color": {
+							"background": "var(--wp--custom--color--background--level-2)",
+							"foreground": "currentColor"
+						}
+					}
 				}
 			}
 		}

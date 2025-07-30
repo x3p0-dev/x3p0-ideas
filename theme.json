@@ -779,13 +779,18 @@
 					}
 				},
 				"summary": {
+					"color": {
+						"background": "transparent",
+						"foreground": "currentColor"
+					},
 					"typography": {
 						"fontFamily": "var(--wp--preset--font-family--primary)",
 						"fontWeight": "500"
 					},
 					"hover": {
 						"color": {
-							"background": "var(--wp--custom--color--background--level-2)"
+							"background": "var(--wp--custom--color--background--level-2)",
+							"foreground": "currentColor"
 						}
 					}
 				}
