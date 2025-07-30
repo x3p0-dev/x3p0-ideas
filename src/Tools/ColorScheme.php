@@ -97,9 +97,11 @@ class ColorScheme
 	{
 		$state = [
 			'colorScheme'       => $this->getColorScheme(),
-			'switchableSchemes' => self::SWITCHABLE_SCHEMES,
 			'isDark'            => null,
-			'userID'            => get_current_user_id()
+			'userID'            => get_current_user_id(),
+			'switchableSchemes' => self::SWITCHABLE_SCHEMES,
+			'cookiePath'        => COOKIEPATH,
+			'cookieDomain'      => COOKIE_DOMAIN
 		];
 
 		// By default, we don't always know whether the color scheme is

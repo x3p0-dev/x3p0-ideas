@@ -147,13 +147,5 @@ class Button implements Bootable
 			$script['dependencies'],
 			$script['version']
 		);
-
-		// Pass the cookie path and domain to the color scheme module.
-		add_filter('script_module_data_' . ColorScheme::NAME, function(array $data) {
-			$data['store']        = ColorScheme::NAME;
-			$data['cookiePath']   = COOKIEPATH;
-			$data['cookieDomain'] = COOKIE_DOMAIN;
-			return $data;
-		});
 	}
 }

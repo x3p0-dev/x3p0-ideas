@@ -8,12 +8,10 @@
 
 import { store } from '@wordpress/interactivity';
 
-// Get the module data for the script module, which is set via a PHP filter.
-const dataElement = document.getElementById('wp-script-module-data-x3p0-ideas-color-scheme');
-const data        = dataElement ? JSON.parse(dataElement.textContent) : {};
-const mediaQuery  = window.matchMedia('(prefers-color-scheme: dark)');
+const storeName  = 'x3p0-ideas-color-scheme';
+const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
-const { callbacks, state } = store(data.store, {
+const { callbacks, state } = store(storeName, {
 	state: {
 		/**
 		 * Determines whether the current user is logged in.
@@ -44,7 +42,7 @@ const { callbacks, state } = store(data.store, {
 					method: 'POST',
 					data: {
 						meta: {
-							[data.store]: state.colorScheme
+							[storeName]: state.colorScheme
 						}
 					}
 				});
@@ -52,11 +50,11 @@ const { callbacks, state } = store(data.store, {
 			}
 
 			// Define the cookie path and domain.
-			let path   = data.cookiePath || '/';
-			let domain = data.cookieDomain ? "; domain=" + data.cookieDomain : '';
+			let path   = state.cookiePath || '/';
+			let domain = state.cookieDomain ? "; domain=" + state.cookieDomain : '';
 
 			// Save preference to a cookie.
-			document.cookie = `${data.store}=${state.colorScheme};path=${path}${domain}`;
+			document.cookie = `${storeName}=${state.colorScheme};path=${path}${domain}`;
 		}
 	},
 	callbacks: {
