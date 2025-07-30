@@ -16,8 +16,9 @@ const SWITCHABLE_SCHEMES = [
 // Get the module data for the script module, which is set via a PHP filter.
 const dataElement = document.getElementById('wp-script-module-data-x3p0-ideas-color-scheme');
 const data        = dataElement ? JSON.parse(dataElement.textContent) : {};
+const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
-const { state } = store(data.store, {
+const { callbacks, state } = store(data.store, {
 	state: {
 		/**
 		 * Determines whether the current user is logged in.
@@ -78,9 +79,7 @@ const { state } = store(data.store, {
 				return;
 			}
 
-			state.isDark =
-				window.matchMedia
-				&& window.matchMedia('(prefers-color-scheme: dark)').matches;
+			state.isDark = mediaQuery.matches;
 		},
 		/**
 		 * Updates the root element's color scheme CSS property when the
@@ -95,4 +94,13 @@ const { state } = store(data.store, {
 			);
 		}
 	}
+});
+
+// Add an event listener for when the media query for color scheme preference
+// changes. When this happens, reinitialize the color scheme. This is needed for
+// cases where the user hasn't saved a preference with the site via cookie or
+// metadata. This ensures that elements, such as buttons, that are tied to the
+// state will be updated.
+mediaQuery.addEventListener('change', () => {
+	callbacks.init();
 });
