@@ -6,6 +6,15 @@
 ////
 
 ///
+/// Allows style variations to set a custom color scheme that works with the
+/// user's system preferences. It can be set via `settings.custom.colorScheme`
+/// in `theme.json`.
+///
+:root {
+	color-scheme: var(--wp--custom--color-scheme, 'normal');
+}
+
+///
 /// Reset the font size for the embed.
 ///
 html { font-size: 16px; }
