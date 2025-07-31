@@ -51,7 +51,9 @@
 ///
 /// Adjusts the padding for social links.
 ///
-.wp-block-social-links:where(:not(.has-visible-labels)) .wp-block-social-link-anchor {
+.wp-block-social-links:where(
+	:not(.has-visible-labels):not(.is-style-logos-only)
+) .wp-block-social-link-anchor {
 	padding: var(--wp--preset--spacing--20);
 }
 
