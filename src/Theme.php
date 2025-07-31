@@ -80,6 +80,8 @@ class Theme implements Bootable, Container
 	 */
 	private function registerDefaultBindings(): void
 	{
+		$this->instance('block.support.color.scheme', new Block\Support\ColorScheme());
+
 		$this->instance('block.bindings', new Block\Bindings\Component(
 			WP_Block_Bindings_Registry::get_instance(),
 			[
@@ -114,7 +116,7 @@ class Theme implements Bootable, Container
 
 		$this->instance(
 			'block.library.core.button',
-			new Block\Library\Core\Button(new Tools\ColorScheme())
+			new Block\Library\Core\Button($this->get('block.support.color.scheme'))
 		);
 
 		$this->instance(

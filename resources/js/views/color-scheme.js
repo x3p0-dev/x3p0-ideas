@@ -8,10 +8,9 @@
 
 import { store } from '@wordpress/interactivity';
 
-const storeName  = 'x3p0-ideas-color-scheme';
 const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
-const { callbacks, state } = store(storeName, {
+const { callbacks, state } = store('x3p0-ideas/color-scheme', {
 	state: {
 		/**
 		 * Determines whether the current user is logged in.
@@ -42,7 +41,7 @@ const { callbacks, state } = store(storeName, {
 					method: 'POST',
 					data: {
 						meta: {
-							[storeName]: state.colorScheme
+							[state.name]: state.colorScheme
 						}
 					}
 				});
@@ -54,7 +53,7 @@ const { callbacks, state } = store(storeName, {
 			let domain = state.cookieDomain ? "; domain=" + state.cookieDomain : '';
 
 			// Save preference to a cookie.
-			document.cookie = `${storeName}=${state.colorScheme};path=${path}${domain}`;
+			document.cookie = `${state.name}=${state.colorScheme};path=${path}${domain}`;
 		}
 	},
 	callbacks: {

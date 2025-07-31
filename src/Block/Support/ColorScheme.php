@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Color Scheme tool.
+ * Color Scheme support class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2025, Justin Tadlock
@@ -11,31 +11,48 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Tools;
+namespace X3P0\Ideas\Block\Support;
+
+use X3P0\Ideas\Contracts\Bootable;
+use X3P0\Ideas\Tools\Hooks\{Action, Hookable};
 
 /**
  * The Color Scheme class is for handling the CSS `color-scheme` defined in
  * `theme.json` and/or style variations via the `settings.custom.color-scheme`
  * property. It is also meant to be used alongside the Interactivity API for
  * implementing buttons/toggles/switches for letting site visitors switch the
- * color scheme, but it is agnostic of the final implementation, only providing
- * the necessary interactive states needed from the server by default.
+ * color scheme, but it is agnostic of the block(s) it is used with.
  */
-class ColorScheme
+class ColorScheme implements Bootable
 {
+	use Hookable;
+
+	/**
+	 * Unique name for the store.
+	 *
+	 * @todo Type hint with PHP 8.3+ requirement.
+	 */
+	public const STORE = 'x3p0-ideas/color-scheme';
+
 	/**
 	 * Unique name/ID used to reference in scripts, cookies, etc.
+	 *
+	 * @todo Type hint with PHP 8.3+ requirement.
 	 */
-	public const NAME = 'x3p0-ideas-color-scheme';
+	private const NAME = 'x3p0-ideas-color-scheme';
 
 	/**
 	 * Stores the default color scheme.
+	 *
+	 * @todo Type hint with PHP 8.3+ requirement.
 	 */
 	private const DEFAULT_SCHEME = 'normal';
 
 	/**
 	 * Stores an array of supported global color schemes that can be defined
 	 * via `theme.json`.
+	 *
+	 * @todo Type hint with PHP 8.3+ requirement.
 	 */
 	private const GLOBAL_SCHEMES = [
 		'normal',
@@ -52,6 +69,8 @@ class ColorScheme
 	/**
 	 * Stores an array of supported user color schemes that can be stored
 	 * via cookie (or even user meta).
+	 *
+	 * @todo Type hint with PHP 8.3+ requirement.
 	 */
 	private const USER_SCHEMES = [
 		'light',
@@ -60,6 +79,8 @@ class ColorScheme
 
 	/**
 	 * Stores an array of supported color schemes that can be toggled.
+	 *
+	 * @todo Type hint with PHP 8.3+ requirement.
 	 */
 	private const SWITCHABLE_SCHEMES = [
 		'light dark',
@@ -68,6 +89,8 @@ class ColorScheme
 
 	/**
 	 * Stores an array of supported light color schemes.
+	 *
+	 * @todo Type hint with PHP 8.3+ requirement.
 	 */
 	private const LIGHT_SCHEMES = [
 		'light',
@@ -77,6 +100,8 @@ class ColorScheme
 
 	/**
 	 * Stores an array of supported dark color schemes.
+	 *
+	 * @todo Type hint with PHP 8.3+ requirement.
 	 */
 	private const DARK_SCHEMES = [
 		'dark',
@@ -90,15 +115,61 @@ class ColorScheme
 	private string $scheme;
 
 	/**
-	 * Returns the default state from the server for use with the custom
+	 * Registers user meta for storing the color scheme.
+	 */
+	#[Action('init')]
+	public function registerMeta(): void
+	{
+		register_meta('user', self::NAME, [
+			'show_in_rest' => true,
+			'type'         => 'string',
+			'single'       => true,
+		]);
+	}
+
+	/**
+	 * Registers assets to enable interactivity, such as button toggles.
+	 */
+	#[Action('wp_enqueue_scripts')]
+	public function registerAssets(): void
+	{
+		$script = include get_parent_theme_file_path('public/js/views/color-scheme.asset.php');
+
+		wp_register_script_module(
+			self::NAME,
+			get_parent_theme_file_uri('public/js/views/color-scheme.js'),
+			$script['dependencies'],
+			$script['version']
+		);
+	}
+
+	/**
+	 * Enqueues the color scheme assets. Blocks that enable an interactive
+	 * color scheme toggle must call this on render.
+	 */
+	public function enqueueAssets(): void
+	{
+		// Enqueue the API fetch script if the user is logged in. This
+		// is used for storing user metadata.
+		if (is_user_logged_in()) {
+			wp_enqueue_script('wp-api-fetch');
+		}
+
+		// Enqueue the script module.
+		wp_enqueue_script_module(self::NAME);
+	}
+
+	/**
+	 * Sets/Gets the default state from the server for use with the custom
 	 * implementations with the Interactivity API.
 	 */
-	public function getState(): array
+	public function interactivityState(): array
 	{
 		$state = [
 			'colorScheme'       => $this->getColorScheme(),
 			'isDark'            => null,
 			'userID'            => get_current_user_id(),
+			'name'              => self::NAME,
 			'switchableSchemes' => self::SWITCHABLE_SCHEMES,
 			'cookiePath'        => COOKIEPATH,
 			'cookieDomain'      => COOKIE_DOMAIN
@@ -117,7 +188,7 @@ class ColorScheme
 			$state['isDark'] = false;
 		}
 
-		return $state;
+		return wp_interactivity_state(self::STORE, $state);
 	}
 
 	/**
