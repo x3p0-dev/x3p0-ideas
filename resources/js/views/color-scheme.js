@@ -8,7 +8,7 @@
 
 import { store } from '@wordpress/interactivity';
 
-const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
 const { callbacks, state } = store('x3p0-ideas/color-scheme', {
 	state: {
@@ -67,11 +67,14 @@ const { callbacks, state } = store('x3p0-ideas/color-scheme', {
 		 */
 		init() {
 			// Bail early if the color scheme is not switchable.
-			if (! state.switchableSchemes.includes(state.colorScheme)) {
+			if (
+				! state.hasOwnProperty('switchableSchemes')
+				|| ! state.switchableSchemes.includes(state.colorScheme)
+			) {
 				return;
 			}
 
-			state.isDark = mediaQuery.matches;
+			state.isDark = prefersDarkScheme.matches;
 		},
 		/**
 		 * Updates the root element's color scheme CSS property when the
@@ -93,6 +96,6 @@ const { callbacks, state } = store('x3p0-ideas/color-scheme', {
 // cases where the user hasn't saved a preference with the site via cookie or
 // metadata. This ensures that elements, such as buttons, that are tied to the
 // state will be updated.
-mediaQuery.addEventListener('change', () => {
+prefersDarkScheme.addEventListener('change', () => {
 	callbacks.init();
 });
