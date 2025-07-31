@@ -50,7 +50,7 @@
 /// @link https://github.com/WordPress/gutenberg/issues/56587
 /// @link https://github.com/WordPress/gutenberg/issues/8030
 ///
-.wp-block-gallery.has-nested-images:where(:not(.is-style-classic)) figure.wp-block-image figcaption {
+.wp-block-gallery.has-nested-images:where(:not(.is-style-gallery-classic)) figure.wp-block-image figcaption {
 	padding: var(
 		--wp--custom--caption--padding,
 		var(--wp--preset--spacing--70) var(--wp--preset--spacing--20) var(--wp--preset--spacing--40)

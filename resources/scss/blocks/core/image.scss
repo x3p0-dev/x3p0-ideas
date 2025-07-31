@@ -114,6 +114,10 @@ figure.wp-block-image[class*=-gradient-background] {
 		top: calc(var(--image-padding) + var(--wp--preset--spacing--20)) !important;
 		right: calc(var(--image-padding) + var(--wp--preset--spacing--20)) !important;
 	}
+
+	.wp-block-gallery:not(.is-style-gallery-classic) & .wp-element-caption {
+		margin: 0 var(--image-padding) var(--image-padding);
+	}
 }
 
 // -----------------------------------------------------------------------------
