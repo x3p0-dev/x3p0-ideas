@@ -84,7 +84,7 @@
 ///
 /// @todo Figure out a better way of handling this.
 ///
-.wp-block-cover .is-style-meta {
+.wp-block-cover.has-text-color .is-style-meta {
 	color: inherit;
 	background: transparent;
 }

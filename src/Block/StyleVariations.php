@@ -37,6 +37,7 @@ class StyleVariations implements Bootable
 		'section-2',
 		'section-3',
 		'section-4',
+		'cover-dark'
 	];
 
 	/**
