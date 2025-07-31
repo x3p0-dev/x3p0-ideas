@@ -81,6 +81,7 @@ class Theme implements Bootable, Container
 	private function registerDefaultBindings(): void
 	{
 		$this->instance('block.support.color.scheme', new Block\Support\ColorScheme());
+		$this->instance('block.support.rules',        new Block\Support\Rules());
 
 		$this->instance('block.bindings', new Block\Bindings\Component(
 			WP_Block_Bindings_Registry::get_instance(),
@@ -105,7 +106,6 @@ class Theme implements Bootable, Container
 
 		// phpcs:disable Generic.Functions.FunctionCallArgumentSpacing.TooMuchSpaceAfterComma
 		$this->instance('block.assets',       new Block\Assets());
-		$this->instance('block.render',       new Block\Render(new Block\Rules()));
 		$this->instance('editor',             new Editor());
 		$this->instance('embeds',             new Embeds());
 		$this->instance('frontend',           new Frontend());
@@ -113,6 +113,11 @@ class Theme implements Bootable, Container
 		$this->instance('template.parts',     new Template\Parts());
 		$this->instance('template.templates', new Template\Templates());
 		// phpcs:enable
+
+		$this->instance(
+			'block.render',
+			new Block\Render($this->get('block.support.rules'))
+		);
 
 		$this->instance(
 			'block.library.core.button',

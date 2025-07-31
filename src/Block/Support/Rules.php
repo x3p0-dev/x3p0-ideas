@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Block;
+namespace X3P0\Ideas\Block\Support;
 
 use WP_Block;
 
