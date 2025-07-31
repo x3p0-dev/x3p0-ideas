@@ -417,6 +417,11 @@
 					"slug": "45-deg-dark-transparent"
 				},
 				{
+					"gradient": "linear-gradient( 180deg, transparent -40%, var( --wp--custom--color--background--level-0 ) 100% )",
+					"name": "Linear: Transparent ↓ Base",
+					"slug": "180-deg-transparent-base"
+				},
+				{
 					"gradient": "linear-gradient(90deg, var(--wp--preset--color--primary-400) 0, var(--wp--preset--color--secondary-300))",
 					"name": "Drift",
 					"slug": "drift"
