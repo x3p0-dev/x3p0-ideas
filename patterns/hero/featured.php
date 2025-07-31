@@ -38,9 +38,10 @@ $image = get_theme_file_uri('public/media/images/mountain-road.webp');
 			}
 		}
 	},
+	"className": "is-style-cover-dark",
 	"layout":{"type":"default"}
 } -->
-<div class="wp-block-cover alignfull has-parallax has-custom-content-position is-position-bottom-left" style="padding-top:var(--wp--preset--spacing--90);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--90);padding-left:var(--wp--preset--spacing--70);min-height:90vh">
+<div class="wp-block-cover alignfull is-style-cover-dark has-parallax has-custom-content-position is-position-bottom-left" style="padding-top:var(--wp--preset--spacing--90);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--90);padding-left:var(--wp--preset--spacing--70);min-height:90vh">
 
 	<span aria-hidden="true" class="wp-block-cover__background has-background-dim has-background-dim-100 wp-block-cover__gradient-background has-background-gradient has-45-deg-dark-transparent-gradient-background"></span>
 	<div role="img" class="wp-block-cover__image-background has-parallax" style="background-position:50% 50%;background-image:url(<?= esc_url($image) ?>)"></div>
