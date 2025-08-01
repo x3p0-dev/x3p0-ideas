@@ -7,7 +7,7 @@
  */
 
 // Internal dependencies.
-import { markerIcon } from '../../common/utils-icon';
+import { markerIcon } from '../../../common/utils-icon';
 import { UL_MARKERS, OL_MARKERS } from './constants';
 
 import {

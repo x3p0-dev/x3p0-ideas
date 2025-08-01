@@ -7,7 +7,7 @@
  */
 
 // Internal dependencies.
-import { updateClass } from '../../common/utils-classname';
+import { updateClass } from '../../../common/utils-classname';
 import { GRADIENT_PREFIX, GRADIENT_SUFFIX } from './constants';
 
 // WordPress dependencies.

@@ -7,7 +7,7 @@
  */
 
 // Internal dependencies.
-import { updateClass } from '../../common/utils-classname';
+import { updateClass } from '../../../common/utils-classname';
 
 import {
 	MARKERS,

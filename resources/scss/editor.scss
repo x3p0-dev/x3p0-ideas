@@ -7,10 +7,10 @@
 ////
 
 // Editor styles.
-@use '../js/block-editor/editor' as editor;
+@use '../js/editor/editor' as editor;
 
 // Block Edit styles.
-@use '../js/block-edit/list-marker/editor' as list-marker;
+@use '../js/block/edit/list-marker/editor' as list-marker;
 
 // Format library styles.
 @use '../js/format-library/abbreviation/editor' as abbreviation;

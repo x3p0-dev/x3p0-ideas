@@ -17,6 +17,7 @@ import { Popover, TextControl }  from '@wordpress/components';
 
 import {
 	applyFormat,
+	registerFormatType,
 	removeFormat,
 	useAnchor
 } from '@wordpress/rich-text';
@@ -38,12 +39,6 @@ const abbreviationFormat = {
 	className: null,
 	edit:      Edit
 };
-
-/**
- * RichText format type definition.
- * @type {object}
- */
-export default abbreviationFormat;
 
 /**
  * Creates the format type edit component.
@@ -129,3 +124,5 @@ function AbbrTitlePopover({ value, contentRef, onChange, onClose })
 		</Popover>
 	);
 };
+
+registerFormatType(name, abbreviationFormat);

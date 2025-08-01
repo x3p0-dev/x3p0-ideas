@@ -11,21 +11,10 @@ import { textIncreaseIcon } from '../../common/utils-icon';
 
 // WordPress dependencies.
 import { RichTextToolbarButton } from '@wordpress/block-editor';
-import { __ }                    from '@wordpress/i18n';
-import { toggleFormat }          from '@wordpress/rich-text';
+import { __ } from '@wordpress/i18n';
+import { registerFormatType, toggleFormat } from '@wordpress/rich-text';
 
-/**
- * Name of the format.
- * @type {string}
- */
-const name = 'x3p0/big';
-
-/**
- * RichText format type definition.
- * @type {object}
- */
-export default {
-	name,
+registerFormatType('x3p0/big', {
 	title: __('Big', 'x3p0-ideas'),
 	tagName: 'span',
 	className: 'has-larger-text',
@@ -39,4 +28,4 @@ export default {
 			) }
 		/>
 	)
-};
+});

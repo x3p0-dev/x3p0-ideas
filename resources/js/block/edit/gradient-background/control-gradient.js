@@ -13,7 +13,7 @@ import { getGradientFromClassName, updateGradientClass } from './utils';
 import {
 	gradientAttribute,
 	gradientSlug
-} from '../../common/utils-gradient';
+} from '../../../common/utils-gradient';
 
 // WordPress dependencies.
 import { __ } from '@wordpress/i18n';
