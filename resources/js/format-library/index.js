@@ -18,6 +18,7 @@ import "./delete";
 import "./insert";
 import "./mark";
 import "./overline";
+import "./samp";
 import "./small";
 import "./span";
 

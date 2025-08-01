@@ -262,6 +262,34 @@ mark {
 }
 
 ///
+/// Sample output tag styles.
+///
+samp {
+	// Spacing.
+	padding: 0.125em 0.25em;
+
+	// Typography.
+	font-family: var(--wp--preset--font-family--mono, monospace);
+	font-size:   clamp(var(--wp--preset--font-size--xs), 0.8125em, 0.8125em);
+	font-style:  normal;
+	font-weight: 600;
+	line-height: inherit;
+
+	// Color.
+	color:      var(--wp--custom--color--foreground--accent, inherit);
+	background: var(--wp--custom--color--background--level-1, transparent);
+
+	// Border and shadow.
+	border:     none;
+	box-shadow: none;
+
+	> a {
+		color: inherit;
+		text-decoration-color: currentColor;
+	}
+}
+
+///
 /// Superscript and subscript styles.
 ///
 /// @link https://github.com/WordPress/gutenberg/issues/64362

@@ -34,6 +34,13 @@ export const citeIcon = (
 	</svg>
 );
 
+// https://fonts.google.com/icons?icon.query=computer&icon.size=24&icon.color=%235f6368&icon.set=Material+Symbols&selected=Material+Symbols+Outlined:computer:FILL@0;wght@400;GRAD@0;opsz@24
+export const computerIcon = (
+	<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+		<path d="M40-120v-80h880v80H40Zm120-120q-33 0-56.5-23.5T80-320v-440q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v440q0 33-23.5 56.5T800-240H160Zm0-80h640v-440H160v440Zm0 0v-440 440Z"/>
+	</svg>
+);
+
 // https://fonts.google.com/icons?selected=Material+Symbols+Outlined:copyright:FILL@0;wght@400;GRAD@0;opsz@24&icon.query=copyright
 export const copyrightIcon = (
 	<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
