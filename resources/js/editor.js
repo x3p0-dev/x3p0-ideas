@@ -8,9 +8,9 @@
  */
 
 // Import all the cool editor features from the theme.
+import './block/variations';
 import './block-bindings';
 import './block-editor';
 import './block-edit';
 import './block-style-variations';
-import './block-variations';
 import './format-library';
