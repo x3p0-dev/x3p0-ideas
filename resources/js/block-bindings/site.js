@@ -16,8 +16,10 @@ export default {
 
 		const placeholders = {
 			// Translators: %s is the current year.
-			copyright: sprintf(__('Copyright &copy; %s', 'x3p0-ideas'), currentYear),
-			year: `${currentYear}` // Note: this must be a string.
+			copyright:    sprintf(__('Copyright &copy; %s', 'x3p0-ideas'), currentYear),
+			loginoutText: __('Log Out', 'x3p0-ideas'),
+			loginoutUrl: '#x3p0-logout-pseudo-url',
+			year:        `${currentYear}` // Note: this must be a string.
 		};
 
 		const values = {};

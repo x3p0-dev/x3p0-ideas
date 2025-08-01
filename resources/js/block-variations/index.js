@@ -7,6 +7,7 @@
  */
 
 // Internal dependencies.
+import buttonLoginout    from './button-loginout';
 import commentParentLink from './comment-parent-link';
 import currentYear       from './current-year';
 import paginationLabel   from './pagination-label';
@@ -22,6 +23,7 @@ import toggleColorScheme from './toggle-color-scheme';
 import { registerBlockVariation } from '@wordpress/blocks';
 
 // Register each block variation.
+registerBlockVariation(buttonLoginout.block,    buttonLoginout.variation);
 registerBlockVariation(commentParentLink.block, commentParentLink.variation);
 registerBlockVariation(currentYear.block,       currentYear.variation);
 registerBlockVariation(paginationLabel.block,   paginationLabel.variation);
