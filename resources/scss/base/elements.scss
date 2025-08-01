@@ -306,3 +306,14 @@ sub {
 		outline: none;
 	}
 }
+
+///
+/// Unarticulated annotation `<u>` tag styles.
+///
+u {
+	text-decoration:
+		underline
+		wavy
+		var(--wp--custom--color--foreground--accent)
+		min(0.078125em, 2px);
+}

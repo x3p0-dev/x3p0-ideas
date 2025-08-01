@@ -21,6 +21,8 @@ import "./overline";
 import "./samp";
 import "./small";
 import "./span";
+import "./u";
+import "./underline";
 
 // Unregisters the Core highlight format type. It doesn't use a semantic
 // background color and, therefore, doesn't translate between style variations.
