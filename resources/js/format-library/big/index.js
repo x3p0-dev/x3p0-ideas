@@ -14,7 +14,9 @@ import { RichTextToolbarButton } from '@wordpress/block-editor';
 import { __ } from '@wordpress/i18n';
 import { registerFormatType, toggleFormat } from '@wordpress/rich-text';
 
-registerFormatType('x3p0/big', {
+const name = 'x3p0/big';
+
+registerFormatType(name, {
 	title: __('Big', 'x3p0-ideas'),
 	tagName: 'span',
 	className: 'has-larger-text',

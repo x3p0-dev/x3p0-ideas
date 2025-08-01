@@ -14,7 +14,9 @@ import { RichTextToolbarButton } from '@wordpress/block-editor';
 import { __ } from '@wordpress/i18n';
 import { registerFormatType, toggleFormat } from '@wordpress/rich-text';
 
-registerFormatType('x3p0/del', {
+const name = 'x3p0/del';
+
+registerFormatType(name, {
 	title: __('Delete', 'x3p0-ideas'),
 	tagName: 'del',
 	className: null,

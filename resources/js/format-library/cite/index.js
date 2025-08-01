@@ -14,7 +14,9 @@ import { RichTextToolbarButton } from '@wordpress/block-editor';
 import { __ } from '@wordpress/i18n';
 import { registerFormatType, toggleFormat } from '@wordpress/rich-text';
 
-registerFormatType('x3p0/cite', {
+const name = 'x3p0/cite';
+
+registerFormatType(name, {
 	title: __('Cite', 'x3p0-ideas'),
 	tagName: 'cite',
 	className: null,

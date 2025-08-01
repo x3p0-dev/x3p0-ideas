@@ -7,7 +7,7 @@
 
 // Use the WordPress variables module.
 // @link https://github.com/WordPress/gutenberg/tree/trunk/packages/base-styles
-@use 'variables' as wp;
+@use '~@wordpress/base-styles/variables' as wp;
 
 .x3p0-list-marker-selector__list {
 	margin-left: 0;

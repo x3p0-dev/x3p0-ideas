@@ -14,7 +14,9 @@ import { RichTextToolbarButton } from '@wordpress/block-editor';
 import { __ } from '@wordpress/i18n';
 import { registerFormatType, toggleFormat } from '@wordpress/rich-text';
 
-registerFormatType('x3p0/ins', {
+const name = 'x3p0/ins';
+
+registerFormatType(name, {
 	title: __('Insert', 'x3p0-ideas'),
 	tagName: 'ins',
 	className: null,

@@ -14,7 +14,9 @@ import { RichTextToolbarButton } from '@wordpress/block-editor';
 import { __ } from '@wordpress/i18n';
 import { registerFormatType, toggleFormat } from '@wordpress/rich-text';
 
-registerFormatType('x3p0/overline', {
+const name = 'x3p0/overline';
+
+registerFormatType(name, {
 	title: __('Overline', 'x3p0-ideas'),
 	tagName: 'span',
 	className: 'has-overline',
