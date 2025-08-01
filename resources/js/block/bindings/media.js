@@ -6,6 +6,7 @@
  * @license   GPL-3.0-or-later
  */
 
+import { registerBlockBindingsSource } from '@wordpress/blocks';
 import { __, sprintf } from '@wordpress/i18n';
 
 // @todo Figure out a way to not have to recreate these labels in JS.
@@ -84,7 +85,7 @@ const wrapper = (value, label) => {
 	);
 }
 
-export default {
+registerBlockBindingsSource({
 	name: 'x3p0/media',
 	getValues({ bindings }) {
 		const values = {};
@@ -104,4 +105,4 @@ export default {
 
 		return values;
 	}
-};
+});

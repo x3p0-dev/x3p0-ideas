@@ -6,10 +6,11 @@
  * @license   GPL-3.0-or-later
  */
 
+import { registerBlockBindingsSource } from '@wordpress/blocks';
 import { __, sprintf } from '@wordpress/i18n';
 import { store as coreDataStore } from '@wordpress/core-data';
 
-export default {
+registerBlockBindingsSource({
 	name: 'x3p0/theme',
 	label: __('Theme Data', 'x3p0-ideas'),
 	getValues({ select, bindings }) {
@@ -35,4 +36,4 @@ export default {
 		return values;
 	},
 	canUserEditValue: () => false
-};
+});

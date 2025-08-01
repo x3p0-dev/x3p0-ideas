@@ -1,25 +1,23 @@
 /**
- * Defines the `x3p0/site` block binding source.
+ * Defines the `x3p0/post` block binding source.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2025, Justin Tadlock
  * @license   GPL-3.0-or-later
  */
 
+import { registerBlockBindingsSource } from '@wordpress/blocks';
 import { __, sprintf } from '@wordpress/i18n';
 
-export default {
-	name: 'x3p0/site',
-	label: __('Site Data', 'x3p0-ideas'),
-	getValues({ select, bindings }) {
-		const currentYear  = new Date().getFullYear();
-
+registerBlockBindingsSource({
+	name: 'x3p0/post',
+	label: __('Post Data', 'x3p0-ideas'),
+	getValues({ bindings }) {
+		// Define placeholders to show for the bound block's content.
+		// Some of these we can dynamically generate later. Some are
+		// static, so we can just use a custom string.
 		const placeholders = {
-			// Translators: %s is the current year.
-			copyright:    sprintf(__('Copyright &copy; %s', 'x3p0-ideas'), currentYear),
-			loginoutText: __('Log Out', 'x3p0-ideas'),
-			loginoutUrl: '#x3p0-logout-pseudo-url',
-			year:        `${currentYear}` // Note: this must be a string.
+			readingTime: sprintf(__('%d Minutes', 'x3p0-ideas'), 0)
 		};
 
 		const values = {};
@@ -33,4 +31,4 @@ export default {
 		return values;
 	},
 	canUserEditValue: () => false
-};
+});

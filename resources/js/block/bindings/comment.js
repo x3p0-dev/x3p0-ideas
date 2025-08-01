@@ -6,9 +6,10 @@
  * @license   GPL-3.0-or-later
  */
 
+import { registerBlockBindingsSource } from '@wordpress/blocks';
 import { __ } from '@wordpress/i18n';
 
-export default {
+registerBlockBindingsSource({
 	name: 'x3p0/comment',
 	label: __('Comment Data', 'x3p0-ideas'),
 	getValues({ bindings }) {
@@ -30,4 +31,4 @@ export default {
 		return values;
 	},
 	canUserEditValue: () => false
-};
+});
