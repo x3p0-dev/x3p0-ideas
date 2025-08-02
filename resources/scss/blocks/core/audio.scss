@@ -1,0 +1,33 @@
+////
+/// Audio block CSS.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+// -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+// No fixes...
+
+// -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+///
+/// Tweak the audio player controls enclosure for webkit browsers.
+///
+.wp-block-audio audio::-webkit-media-controls-enclosure {
+	background-color: var(--wp--custom--color--background--level-1);
+	border-radius: var(--wp--custom--border--primary--radius);
+	border: var(--wp--custom--border--primary--width) var(--wp--custom--border--primary--style) var(--wp--custom--border--primary--color);
+	box-shadow: var(--wp--custom--shadow--primary--default);
+}
+
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+// No variations...
