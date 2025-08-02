@@ -43,6 +43,11 @@ ol li::marker {
 ///
 :is(ul, ol).is-style-list-pull {
 	padding-left: 1em;
+
+	&.has-marker-none {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 
 ///
@@ -51,4 +56,18 @@ ol li::marker {
 :is(ul, ol).is-style-list-horizontal,
 .wp-block-list.is-style-list-horizontal {
 	@include list.horizontal();
+}
+
+///
+/// When a list doesn't have markers and the list item has custom markers, we
+/// reduce the size of the inline padding by the width of the list item markers.
+///
+.wp-block-list.has-marker-none:is(
+	:not([class*=is-style-]),
+	.is-style-default
+):has(
+	.is-style-check-circle,
+	.is-style-cancel-circle
+) {
+	padding-inline-start: calc(var(--wp--preset--spacing--80) - 1.5em);
 }

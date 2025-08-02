@@ -29,20 +29,6 @@
 .has-marker-upper-roman  { --list-type: upper-roman; }
 
 ///
-/// Need to target the element for higher specificity to overrule some blocks,
-/// such as Page List.
-///
-ul.has-marker-none,
-ol.has-marker-none,
-ul.has-marker-none > li,
-ol.has-marker-none > li,
-.wp-block-archives-list.has-marker-none,
-.wp-block-archives.has-marker-none .wp-block-archives {
-	padding-left: 0;
-	padding-right: 0;
-}
-
-///
 /// Inherit list styles for children.
 ///
 :where(:where(

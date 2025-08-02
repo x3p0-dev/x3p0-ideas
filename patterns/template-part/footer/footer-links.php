@@ -98,9 +98,9 @@ defined('ABSPATH') || exit;
 					<!-- /wp:heading -->
 
 					<!-- wp:list {
-						"className":"has-marker-none is-style-gap-normal"
+						"className":"has-marker-none is-style-list-pull"
 					} -->
-					<ul class="has-marker-none is-style-gap-normal">
+					<ul class="has-marker-none is-style-list-pull">
 
 						<?php foreach (range(1, 4) as $link) : ?>
 

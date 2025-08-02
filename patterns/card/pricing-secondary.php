@@ -135,8 +135,8 @@ use X3P0\Ideas\Tools\Placeholder;
 	} -->
 	<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)">
 
-		<!-- wp:list {"className":"has-marker-none"} -->
-		<ul class="has-marker-none">
+		<!-- wp:list {"className":"has-marker-none is-style-list-pull"} -->
+		<ul class="has-marker-none is-style-list-pull">
 
 			<?php foreach (range(1, 5) as $item) : ?>
 
