@@ -11,4 +11,5 @@ import './comment';
 import './media';
 import './post';
 import './site';
+import './superpower';
 import './theme';

@@ -17,7 +17,6 @@ use WP_Block;
 use WP_Block_Bindings_Registry;
 use WP_Query;
 use X3P0\Ideas\Contracts\BlockBindingSource;
-use X3P0\Ideas\Tools\Superpower;
 
 /**
  * Handles registering the `x3p0/theme` block bindings source and rendering its
@@ -47,7 +46,6 @@ class Theme implements BlockBindingSource
 			'link'            => $this->renderLink(),
 			'name'            => $this->renderName(),
 			'paginationLabel' => $this->renderPaginationLabel($args, $block),
-			'superpower'      => $this->renderSuperpower($args),
 			'url'             => $this->renderUrl(),
 			default           => null
 		};
@@ -88,14 +86,6 @@ class Theme implements BlockBindingSource
 			'<span class="theme-name">%s</span>',
 			esc_html($this->renderName())
 		);
-	}
-
-	/**
-	 * Returns a randomly-generated "powered by" message.
-	 */
-	private function renderSuperpower(array $args): string
-	{
-		return esc_html((new Superpower())->render($args['type'] ?? ''));
 	}
 
 	/**

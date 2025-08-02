@@ -56,10 +56,7 @@ defined('ABSPATH') || exit;
 			"metadata":{
 				"bindings":{
 					"content":{
-						"source":"x3p0/theme",
-						"args":{
-							"key":"superpower"
-						}
+						"source":"x3p0/superpower"
 					}
 				}
 			},

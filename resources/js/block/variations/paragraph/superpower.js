@@ -15,24 +15,18 @@ registerBlockVariation('core/paragraph', {
 	title:      __('Superpower', 'x3p0-ideas'),
 	description: __('Displays a random "powered by" message on your site.', 'x3p0-ideas'),
 	category:   'widgets',
-	keywords:   [ 'superpower', 'footer' ],
+	keywords:   [ 'superpower', 'footer', 'message' ],
 	icon:       bolt,
 	scope:      [ 'inserter' ],
 	attributes: {
 		metadata: {
 			bindings: {
 				content: {
-					source: 'x3p0/theme',
-					args: {
-						key: 'superpower'
-					}
+					source: 'x3p0/superpower'
 				}
 			}
 		},
 		content: __('Powered by WordPress, crazy ideas, and passion.', 'x3p0-ideas')
 	},
-	isActive: [
-		'metadata.bindings.content.source',
-		'metadata.bindings.content.args.key'
-	]
+	isActive: [ 'metadata.bindings.content.source' ]
 });

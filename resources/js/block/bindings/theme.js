@@ -21,7 +21,6 @@ registerBlockBindingsSource({
 			link:            `<a href="${theme.theme_uri.rendered}" class="theme-name theme-name--link">${theme.name.rendered}</a>`,
 			name:            theme.name.rendered,
 			paginationLabel: sprintf(__('Page %1$s / %2$s:', 'x3p0-ideas'), 3, 7),
-			superpower:      __('Powered by WordPress, crazy ideas, and passion.', 'x3p0-ideas'),
 			url:             theme.theme_uri.rendered,
 		};
 

@@ -90,6 +90,7 @@ class Theme implements Bootable, Container
 				Block\Bindings\Media::class,
 				Block\Bindings\Post::class,
 				Block\Bindings\Site::class,
+				Block\Bindings\Superpower::class,
 				Block\Bindings\Theme::class
 			]
 		));
