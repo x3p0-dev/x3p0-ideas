@@ -65,6 +65,12 @@ class Superpower
 			__('Powered by an old mix 💿 and memories of 💔.', 'x3p0-ideas'),
 			__('Powered by thoughts of old 💌.', 'x3p0-ideas')
 		];
+
+		// Add your own superpowers!
+		$this->messages = apply_filters(
+			'x3p0/ideas/superpower/messages',
+			$this->messages
+		);
 	}
 
 	/**
@@ -72,16 +78,9 @@ class Superpower
 	 */
 	public function render(string $type = ''): string
 	{
-		$collection = match ($type) {
-			'text'  => $this->messages['text'],
-			'emoji' => $this->messages['emoji'],
-			default => [
-				...$this->messages['text'],
-				...$this->messages['emoji']
-			]
-		};
+		$collection = $this->messages[$type] ?? array_merge(...array_values($this->messages));
 
-		return $collection[ array_rand($collection, 1) ];
+		return $collection[ array_rand($collection) ];
 	}
 
 	/**
