@@ -29,8 +29,7 @@ class StyleVariations implements Bootable
 	/**
 	 * Slugs for section styles registered by the theme.
 	 *
-	 * @since 1.0.0
-	 * @todo  Type hint with PHP 8.3+ requirement.
+	 * @todo Type hint with PHP 8.3+ requirement.
 	 */
 	private const SECTION_STYLES = [
 		'section-1',
@@ -43,8 +42,7 @@ class StyleVariations implements Bootable
 	/**
 	 * Properties that should be defined for descendants of section styles.
 	 *
-	 * @since 1.0.0
-	 * @todo  Type hint with PHP 8.3+ requirement.
+	 * @todo Type hint with PHP 8.3+ requirement.
 	 */
 	private const SECTION_DESCENDANT_PROPERTIES = [
 		'border',
@@ -55,23 +53,18 @@ class StyleVariations implements Bootable
 	/**
 	 * Stores an array off `WP_Style_Engine_CSS_Rule` objects.
 	 *
-	 * @since 1.0.0
-	 * @var   WP_Style_Engine_CSS_Rule[]
+	 * @var WP_Style_Engine_CSS_Rule[]
 	 */
 	protected array $css_rules = [];
 
 	/**
 	 * Sets up the object state.
-	 *
-	 * @since 1.0.0
 	 */
 	public function __construct(protected WP_Block_Styles_Registry $styles)
 	{}
 
 	/**
 	 * Register custom block styles.
-	 *
-	 * @since 1.0.0
 	 */
 	#[Action('init')]
 	public function register(): void
@@ -100,8 +93,7 @@ class StyleVariations implements Bootable
 	 * Registers custom CSS rules from the `settings.custom` property from
 	 * block style variation files.
 	 *
-	 * @since 1.0.0
-	 * @link  https://github.com/WordPress/gutenberg/issues/40318
+	 * @link https://github.com/WordPress/gutenberg/issues/40318
 	 */
 	#[Action('init')]
 	public function registerCssRules(): void
