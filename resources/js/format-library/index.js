@@ -11,7 +11,7 @@ import domReady from '@wordpress/dom-ready';
 import { unregisterFormatType } from '@wordpress/rich-text';
 
 // Register format types.
-import "./abbreviation";
+import "./abbr";
 import "./big";
 import "./cite";
 import "./delete";
