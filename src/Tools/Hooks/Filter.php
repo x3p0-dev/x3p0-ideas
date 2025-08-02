@@ -29,28 +29,29 @@ use X3P0\Ideas\Contracts\Hook;
 class Filter implements Hook
 {
 	/**
+	 * Stores the hook callback priority.
+	 */
+	protected int $priority = 10;
+
+	/**
 	 * Sets up the object state.
-	 *
-	 * @since 1.0.0
 	 */
 	public function __construct(
 		protected string $hook,
-		protected int|string $priority = 10
+		int|string $priority = 10
 	) {
-		$this->priority = match ($this->priority) {
+		$this->priority = match ($priority) {
 			'first' => PHP_INT_MIN,
 			'last'  => PHP_INT_MAX,
-			default => intval($this->priority)
+			default => intval($priority)
 		};
 	}
 
 	/**
 	 * Registers the filter hook.
-	 *
-	 * @since 1.0.0
 	 */
-	public function register(callable $method, int $arguments = 1): void
+	public function register(callable $callback, int $arguments = 1): void
 	{
-		add_filter($this->hook, $method, intval($this->priority), $arguments);
+		add_filter($this->hook, $callback, $this->priority, $arguments);
 	}
 }

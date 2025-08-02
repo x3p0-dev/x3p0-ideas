@@ -23,5 +23,5 @@ interface Hook
 	/**
 	 * Registers the callback.
 	 */
-	public function register(callable $method, int $arguments = 1): void;
+	public function register(callable $callback, int $arguments = 1): void;
 }

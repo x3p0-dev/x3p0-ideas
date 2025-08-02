@@ -29,11 +29,9 @@ class Action extends Filter
 {
 	/**
 	 * Registers the action hook.
-	 *
-	 * @since 1.0.0
 	 */
-	public function register(callable $method, int $arguments = 1): void
+	public function register(callable $callback, int $arguments = 1): void
 	{
-		add_action($this->hook, $method, intval($this->priority), $arguments);
+		add_action($this->hook, $callback, $this->priority, $arguments);
 	}
 }
