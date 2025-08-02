@@ -1301,8 +1301,10 @@
 				}
 			},
 			"cite": {
+				"css": "text-underline-offset: 0.078125em;",
 				"typography": {
-					"fontStyle": "italic"
+					"fontStyle": "italic",
+					"textDecoration": "underline solid color-mix(in oklab, var(--wp--custom--color--foreground--tertiary), transparent) min(0.078125em, 2px)"
 				}
 			},
 			"heading": {
@@ -1814,7 +1816,8 @@
 							"fontSize": "clamp(var(--wp--preset--font-size--xs), 0.8125em, var(--wp--preset--font-size--lg))",
 							"fontWeight": "300",
 							"fontStyle": "normal",
-							"letterSpacing": "0"
+							"letterSpacing": "0",
+							"textDecoration": "none"
 						}
 					}
 				}
@@ -1877,7 +1880,8 @@
 							"fontFamily": "var(--wp--preset--font-family--primary)",
 							"fontSize": "0.875em",
 							"fontWeight": "300",
-							"letterSpacing": "0"
+							"letterSpacing": "0",
+							"textDecoration": "none"
 						}
 					}
 				}
