@@ -17,13 +17,13 @@ import { registerFormatType, toggleFormat } from '@wordpress/rich-text';
 const name = 'x3p0/cite';
 
 registerFormatType(name, {
-	title: __('Cite', 'x3p0-ideas'),
+	title: __('Citation', 'x3p0-ideas'),
 	tagName: 'cite',
 	className: null,
 	edit: ({ isActive, onChange, value }) => (
 		<RichTextToolbarButton
 			icon={ citeIcon }
-			title={ __('Cite', 'x3p0-ideas') }
+			title={ __('Citation', 'x3p0-ideas') }
 			isActive={ isActive }
 			onClick={ () => onChange(
 				toggleFormat(value, { type: name })
