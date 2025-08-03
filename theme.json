@@ -462,6 +462,11 @@
 					"slug": "neva"
 				},
 				{
+					"gradient": "linear-gradient(90deg, var(--wp--preset--color--primary-400) 0, color-mix(in oklab, var(--wp--preset--color--primary-400), var(--wp--preset--color--primary-300)) 0, var(--wp--preset--color--primary-300) 21%, color-mix(in oklab, var(--wp--preset--color--primary-300), var(--wp--preset--color--primary-200)) 52%, var(--wp--preset--color--primary-400) 78%, var(--wp--preset--color--primary-600))",
+					"name": "Passion",
+					"slug": "passion"
+				},
+				{
 					"gradient": "linear-gradient(to right, var(--wp--preset--color--primary-900), var(--wp--preset--color--primary-800), var(--wp--preset--color--primary-700), var(--wp--preset--color--primary-600), var(--wp--preset--color--primary-500), var(--wp--preset--color--primary-400), var(--wp--preset--color--primary-300), var(--wp--preset--color--primary-200), var(--wp--preset--color--primary-100))",
 					"name": "Spectrum",
 					"slug": "spectrum"
