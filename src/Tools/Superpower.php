@@ -43,7 +43,10 @@ class Superpower
 			// 2022-10-05 - @justintadlock
 			__('Powered by elbow grease. Held together by tape and bubble gum.', 'x3p0-ideas'),
 			__('Powered by an old mixtape and memories of lost love.', 'x3p0-ideas'),
-			__('Powered by thoughts of old love letters.', 'x3p0-ideas')
+			__('Powered by thoughts of old love letters.', 'x3p0-ideas'),
+			// 2025-08-02
+			__('Powered by coffee and doughnuts.', 'x3p0-ideas'),
+			__('Powered by music that speaks to my soul.', 'x3p0-ideas')
 		];
 
 		// @todo Come up with emoji equivalents for the messages that
@@ -51,19 +54,17 @@ class Superpower
 		$this->messages['emoji'] = [
 			__('Powered by ❤️ and soul.', 'x3p0-ideas'),
 			__('Powered by crazy 🤔 and passion.', 'x3p0-ideas'),
-		//	__('Powered by the thing that holds all things together in the universe.', 'x3p0-ideas'),
 			__('Powered by ❤️.', 'x3p0-ideas'),
-		//	__('Powered by the vast and endless void.', 'x3p0-ideas'),
-		//	__('Powered by the code of a maniac.', 'x3p0-ideas'),
 			__('Powered by ☮️ and understanding.', 'x3p0-ideas'),
 			__('Powered by ☕.', 'x3p0-ideas'),
 			__('Powered by sleepless 🌛.', 'x3p0-ideas'),
 			__('Powered by ❤️ for all things.', 'x3p0-ideas'),
-		//	__('Powered by something greater than myself.', 'x3p0-ideas'),
 			// 2022-10-05 - @justintadlock
-		//	__('Powered by elbow grease. Held together by tape and bubble gum.', 'x3p0-ideas'),
 			__('Powered by an old mix 💿 and memories of 💔.', 'x3p0-ideas'),
-			__('Powered by thoughts of old 💌.', 'x3p0-ideas')
+			__('Powered by thoughts of old 💌.', 'x3p0-ideas'),
+			// 2025-08-02
+			__('Powered by ☕ and 🍩.', 'x3p0-ideas'),
+			__('Powered by 🎶 that speaks to my soul.', 'x3p0-ideas')
 		];
 
 		// Add your own superpowers!
