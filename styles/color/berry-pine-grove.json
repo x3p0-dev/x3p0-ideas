@@ -1,0 +1,186 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Berry & Pine Grove",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "primary-950",
+					"color": "#020617",
+					"name": "Primary: 950"
+				},
+				{
+					"slug": "primary-900",
+					"color": "#831843",
+					"name": "Primary: 900"
+				},
+				{
+					"slug": "primary-800",
+					"color": "#9d174f",
+					"name": "Primary: 800"
+				},
+				{
+					"slug": "primary-700",
+					"color": "#be185d",
+					"name": "Primary: 700"
+				},
+				{
+					"slug": "primary-600",
+					"color": "#db2772",
+					"name": "Primary: 600"
+				},
+				{
+					"slug": "primary-500",
+					"color": "#ec4899",
+					"name": "Primary: 500"
+				},
+				{
+					"slug": "primary-400",
+					"color": "#f472a8",
+					"name": "Primary: 400"
+				},
+				{
+					"slug": "primary-300",
+					"color": "#f9a8d4",
+					"name": "Primary: 300"
+				},
+				{
+					"slug": "primary-200",
+					"color": "#fbcfe1",
+					"name": "Primary: 200"
+				},
+				{
+					"slug": "primary-100",
+					"color": "#fce7f3",
+					"name": "Primary: 100"
+				},
+				{
+					"slug": "primary-50",
+					"color": "#fdf2f8",
+					"name": "Primary: 50"
+				},
+				{
+					"slug": "secondary-950",
+					"color": "#0e2522",
+					"name": "Secondary: 950"
+				},
+				{
+					"slug": "secondary-900",
+					"color": "#20413a",
+					"name": "Secondary: 900"
+				},
+				{
+					"slug": "secondary-800",
+					"color": "#224d44",
+					"name": "Secondary: 800"
+				},
+				{
+					"slug": "secondary-700",
+					"color": "#265f52",
+					"name": "Secondary: 700"
+				},
+				{
+					"slug": "secondary-600",
+					"color": "#2b7664",
+					"name": "Secondary: 600"
+				},
+				{
+					"slug": "secondary-500",
+					"color": "#38947c",
+					"name": "Secondary: 500"
+				},
+				{
+					"slug": "secondary-400",
+					"color": "#6abaa4",
+					"name": "Secondary: 400"
+				},
+				{
+					"slug": "secondary-300",
+					"color": "#7dcbb3",
+					"name": "Secondary: 300"
+				},
+				{
+					"slug": "secondary-200",
+					"color": "#aee1cf",
+					"name": "Secondary: 200"
+				},
+				{
+					"slug": "secondary-100",
+					"color": "#d6f1e7",
+					"name": "Secondary: 100"
+				},
+				{
+					"slug": "secondary-50",
+					"color": "#f3faf7",
+					"name": "Secondary: 50"
+				},
+				{
+					"slug": "black",
+					"color": "#000000",
+					"name": "Black"
+				},
+				{
+					"slug": "neutral-950",
+					"color": "#22252f",
+					"name": "Neutral: 950"
+				},
+				{
+					"slug": "neutral-900",
+					"color": "#333847",
+					"name": "Neutral: 900"
+				},
+				{
+					"slug": "neutral-800",
+					"color": "#394053",
+					"name": "Neutral: 800"
+				},
+				{
+					"slug": "neutral-700",
+					"color": "#424b62",
+					"name": "Neutral: 700"
+				},
+				{
+					"slug": "neutral-600",
+					"color": "#505b79",
+					"name": "Neutral: 600"
+				},
+				{
+					"slug": "neutral-500",
+					"color": "#657392",
+					"name": "Neutral: 500"
+				},
+				{
+					"slug": "neutral-400",
+					"color": "#8491ac",
+					"name": "Neutral: 400"
+				},
+				{
+					"slug": "neutral-300",
+					"color": "#afb7ca",
+					"name": "Neutral: 300"
+				},
+				{
+					"slug": "neutral-200",
+					"color": "#d5d9e2",
+					"name": "Neutral: 200"
+				},
+				{
+					"slug": "neutral-100",
+					"color": "#eceef2",
+					"name": "Neutral: 100"
+				},
+				{
+					"slug": "neutral-50",
+					"color": "#f6f7f9",
+					"name": "Neutral: 50"
+				},
+				{
+					"slug": "white",
+					"color": "#ffffff",
+					"name": "White"
+				}
+			]
+		}
+	}
+}
