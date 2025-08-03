@@ -120,10 +120,16 @@ class ColorScheme implements Bootable
 	#[Action('init')]
 	public function registerMeta(): void
 	{
+		$sanitize = fn($value) => in_array($value, self::USER_SCHEMES) ? $value : '';
+
 		register_meta('user', self::NAME, [
-			'show_in_rest' => true,
-			'type'         => 'string',
-			'single'       => true,
+			'label'             => __('Color Scheme', 'x3p0-ideas'),
+			'description'       => __('Stores the preferred color scheme for the site.', 'x3p0-ideas' ),
+			'default'           => '',
+			'sanitize_callback' => $sanitize,
+			'show_in_rest'      => true,
+			'single'            => true,
+			'type'              => 'string'
 		]);
 	}
 
