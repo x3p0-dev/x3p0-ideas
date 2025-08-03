@@ -417,6 +417,16 @@
 					"slug": "45-deg-dark-transparent"
 				},
 				{
+					"gradient": "linear-gradient(90deg, var(--wp--preset--color--primary-50) 0%, var(--wp--preset--color--primary-50) 9.09%, var(--wp--preset--color--primary-100) 9.09%, var(--wp--preset--color--primary-100) 18.18%, var(--wp--preset--color--primary-200) 18.18%, var(--wp--preset--color--primary-200) 27.27%, var(--wp--preset--color--primary-300) 27.7%, var(--wp--preset--color--primary-300) 36.36%, var(--wp--preset--color--primary-400) 36.36%, var(--wp--preset--color--primary-400) 45.45%, var(--wp--preset--color--primary-500) 45.45%, var(--wp--preset--color--primary-500) 54.54%, var(--wp--preset--color--primary-600) 54.54%, var(--wp--preset--color--primary-600) 63.63%, var(--wp--preset--color--primary-700) 63.63%, var(--wp--preset--color--primary-700) 72.72%, var(--wp--preset--color--primary-800) 72.72%, var(--wp--preset--color--primary-800) 81.81%, var(--wp--preset--color--primary-900) 81.81%, var(--wp--preset--color--primary-900) 90.9%,var(--wp--preset--color--primary-950) 90.9%, var(--wp--preset--color--primary-950) 100%)",
+					"name": "Palette: Primary",
+					"slug": "90-deg-palette-primary"
+				},
+				{
+					"gradient": "linear-gradient(90deg, var(--wp--preset--color--secondary-50) 0%, var(--wp--preset--color--secondary-50) 9.09%, var(--wp--preset--color--secondary-100) 9.09%, var(--wp--preset--color--secondary-100) 18.18%, var(--wp--preset--color--secondary-200) 18.18%, var(--wp--preset--color--secondary-200) 27.27%, var(--wp--preset--color--secondary-300) 27.7%, var(--wp--preset--color--secondary-300) 36.36%, var(--wp--preset--color--secondary-400) 36.36%, var(--wp--preset--color--secondary-400) 45.45%, var(--wp--preset--color--secondary-500) 45.45%, var(--wp--preset--color--secondary-500) 54.54%, var(--wp--preset--color--secondary-600) 54.54%, var(--wp--preset--color--secondary-600) 63.63%, var(--wp--preset--color--secondary-700) 63.63%, var(--wp--preset--color--secondary-700) 72.72%, var(--wp--preset--color--secondary-800) 72.72%, var(--wp--preset--color--secondary-800) 81.81%, var(--wp--preset--color--secondary-900) 81.81%, var(--wp--preset--color--secondary-900) 90.9%,var(--wp--preset--color--secondary-950) 90.9%, var(--wp--preset--color--secondary-950) 100%)",
+					"name": "Palette: Secondary",
+					"slug": "90-deg-palette-secondary"
+				},
+				{
 					"gradient": "linear-gradient( 180deg, transparent -40%, var( --wp--custom--color--background--level-0 ) 100% )",
 					"name": "Linear: Transparent ↓ Base",
 					"slug": "180-deg-transparent-base"
