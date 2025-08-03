@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas\Block;
 
+use FilesystemIterator;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 use X3P0\Ideas\Contracts\Bootable;
@@ -38,7 +39,7 @@ class Assets implements Bootable
 	{
 		$directory = new RecursiveDirectoryIterator(
 			get_parent_theme_file_path('public/css/blocks'),
-			RecursiveDirectoryIterator::SKIP_DOTS
+			FilesystemIterator::SKIP_DOTS
 		);
 
 		$files = new RecursiveIteratorIterator(
