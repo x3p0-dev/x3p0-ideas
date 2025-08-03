@@ -829,7 +829,9 @@
 				}
 			},
 			"siteBlocks": {
-				"gap": "0"
+				"spacing": {
+					"blockGap": "0"
+				}
 			},
 			"textShadow": {
 				"none": "none",
