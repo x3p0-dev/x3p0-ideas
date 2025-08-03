@@ -462,6 +462,11 @@
 					"slug": "neva"
 				},
 				{
+					"gradient": "linear-gradient(to right, var(--wp--preset--color--neutral-950), var(--wp--preset--color--neutral-900), var(--wp--preset--color--neutral-800))",
+					"name": "Moonlit",
+					"slug": "moonlit"
+				},
+				{
 					"gradient": "linear-gradient(90deg, var(--wp--preset--color--primary-400) 0, color-mix(in oklab, var(--wp--preset--color--primary-400), var(--wp--preset--color--primary-300)) 0, var(--wp--preset--color--primary-300) 21%, color-mix(in oklab, var(--wp--preset--color--primary-300), var(--wp--preset--color--primary-200)) 52%, var(--wp--preset--color--primary-400) 78%, var(--wp--preset--color--primary-600))",
 					"name": "Passion",
 					"slug": "passion"
