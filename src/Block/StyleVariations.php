@@ -275,8 +275,8 @@ class StyleVariations implements Bootable
 				'list-pull'       => __('Pull',       'x3p0-ideas')
 			],
 			'core/list-item' => [
-				'cancel-circle' => __('Cancel Circle', 'x3p0-ideas'),
-				'check-circle'  => __('Check Circle',  'x3p0-ideas')
+				'list-item-positive' => __('Positive', 'x3p0-ideas'),
+				'list-item-negative' => __('Negative', 'x3p0-ideas')
 			],
 			'core/loginout' => [
 				'icon' => __('Icon', 'x3p0-ideas')

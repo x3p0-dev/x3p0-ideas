@@ -27,7 +27,7 @@
 ///
 /// Adds a check-circle icon before the list item.
 ///
-li.is-style-check-circle {
+li.is-style-list-item-positive {
 	@include inline-icon.prefix(icon.get-url('check-circle'));
 
 	&::before {
@@ -38,7 +38,7 @@ li.is-style-check-circle {
 ///
 /// Adds a cancel/x-circle icon before the list item.
 ///
-li.is-style-cancel-circle {
+li.is-style-list-item-negative {
 	@include inline-icon.prefix(icon.get-url('cancel-circle'));
 
 	&::before {
@@ -49,8 +49,8 @@ li.is-style-cancel-circle {
 ///
 /// Shared list item styles to increase the icon size.
 ///
-li.is-style-check-circle::before,
-li.is-style-cancel-circle::before {
+li.is-style-list-item-positive::before,
+li.is-style-list-item-negative::before {
 	width: 1.5em;
 	height: 1.5em;
 }

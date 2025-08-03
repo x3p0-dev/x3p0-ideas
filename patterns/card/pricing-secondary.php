@@ -140,7 +140,7 @@ use X3P0\Ideas\Tools\Placeholder;
 
 			<?php foreach (range(1, 5) as $item) : ?>
 
-				<?php $style = 4 > $item ? 'is-style-check-circle' : 'is-style-cancel-circle' ?>
+				<?php $style = 4 > $item ? 'is-style-list-item-positive' : 'is-style-list-item-negative' ?>
 
 				<!-- wp:list-item {
 					"className":"<?= esc_attr($style) ?>"

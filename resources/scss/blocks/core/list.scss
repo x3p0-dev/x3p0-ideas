@@ -66,8 +66,8 @@ ol li::marker {
 	:not([class*=is-style-]),
 	.is-style-default
 ):has(
-	.is-style-check-circle,
-	.is-style-cancel-circle
+	.is-style-list-item-positive,
+	.is-style-list-item-negative
 ) {
 	padding-inline-start: calc(var(--wp--preset--spacing--80) - 1.5em);
 }
