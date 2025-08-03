@@ -238,8 +238,7 @@ class StyleVariations implements Bootable
 				'list-spread'     => __('Spread',     'x3p0-ideas')
 			],
 			'core/columns' => [
-				'columns-grid-auto'     => __('Grid: Auto',           'x3p0-ideas'),
-				'columns-reverse-stack' => __('Reverse Mobile Stack', 'x3p0-ideas'),
+				'columns-reverse-stack' => __('Reverse Mobile Stack', 'x3p0-ideas')
 			],
 			'core/comment-author-name' => [
 				'icon' => __('Icon', 'x3p0-ideas')

@@ -38,47 +38,6 @@
 // -----------------------------------------------------------------------------
 
 ///
-/// Grid Auto style. Turns the normal flexbox style into grid. This gives us
-/// better control over the breakpoints for a nicer layout. It also forces all
-/// columns to be the same width.
-///
-/// Note: we're using `nth-child()` to essentially count the total number of
-/// sub-blocks. Technically, there's no native way in CSS to count sub-elements,
-/// but we know that the core Columns block only supports a max of 6 blocks. So
-/// we can use that information to "count" up to the number of columns we need
-/// to target within breaks.
-///
-.wp-block-columns-is-layout-flex.is-style-columns-grid-auto {
-	display: grid !important;
-	grid-template-columns: repeat(1, 1fr);
-
-	// Break into two columns when there are at least two nested columns.
-	@media (min-width: 48rem) {
-		&:has(> .wp-block-column:nth-child(2)) {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-
-	// Break into three columns when there are at least three nested columns.
-	@media (min-width: 64rem) {
-		&:has(> .wp-block-column:nth-child(5)) {
-			grid-template-columns: repeat(3, 1fr);
-		}
-	}
-
-	// Allow any number of columns at equal width.
-	@media (min-width: 80rem) {
-		grid-auto-columns: minmax(0, 1fr);
-		grid-auto-flow: column;
-	}
-
-	&.is-not-stacked-on-mobile {
-		grid-auto-columns: minmax(0, 1fr);
-		grid-auto-flow: column;
-	}
-}
-
-///
 /// Reverses stack. Reverses the order of the columns on "mobile" using the
 /// default WordPress breakpoint.
 ///
