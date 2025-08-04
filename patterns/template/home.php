@@ -19,10 +19,10 @@ defined('ABSPATH') || exit;
 	"tagName":"main",
 	"metadata":{"name":"<?= esc_attr__('Content', 'x3p0-ideas') ?>"},
 	"style":{"spacing":{"blockGap":"0"}},
-	"className":"site-content",
+	"className":"is-style-site-main",
 	"layout":{"type":"constrained"}
 } -->
-<main class="wp-block-group site-content">
+<main class="wp-block-group is-style-site-main">
 	<!-- wp:pattern {
 		"metadata":{"@unless":"is_paged"},
 		"slug":"x3p0-ideas/hero-featured"

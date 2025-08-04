@@ -18,9 +18,10 @@ defined('ABSPATH') || exit;
 <!-- wp:group {
 	"tagName":"main",
 	"metadata":{"name":"<?= esc_attr__('Content', 'x3p0-ideas') ?>"},
+	"className":"is-style-site-main",
 	"layout":{"type":"constrained"}
 } -->
-<main class="wp-block-group">
+<main class="wp-block-group is-style-site-main">
 	<!-- wp:template-part {"slug":"loop","align":"full"} /-->
 </main>
 <!-- /wp:group -->

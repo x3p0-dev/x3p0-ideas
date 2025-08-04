@@ -1,0 +1,15 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/wp/6.8/schemas/json/theme.json",
+	"version": 3,
+	"title": "Site Main",
+	"slug": "site-main",
+	"blockTypes": [
+		"core/group",
+		"core/template-part"
+	],
+	"styles": {
+		"color": {
+			"background": "transparent"
+		}
+	}
+}
