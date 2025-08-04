@@ -1,13 +1,13 @@
 <?php
 
 /**
- * Title: Header: Overlay
- * Slug: x3p0-ideas/header-overlay
+ * Title: Header: Default
+ * Slug: x3p0-ideas/header-content
  * Description:
  * Categories: header
  * Keywords: header
- * Block Types: core/template-part/header
  * Viewport Width: 1376
+ * Inserter: no
  */
 
 declare(strict_types=1);

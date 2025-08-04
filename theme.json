@@ -2068,22 +2068,8 @@
 			]
 		},
 		{
-			"name": "template-page-header-cover-fade-in",
-			"title": "Page: Header Cover (Fade In)",
-			"postTypes": [
-				"page"
-			]
-		},
-		{
 			"name": "template-post-header-cover",
 			"title": "Post: Header Cover",
-			"postTypes": [
-				"post"
-			]
-		},
-		{
-			"name": "template-post-header-cover-fade-in",
-			"title": "Post: Header Cover (Fade In)",
 			"postTypes": [
 				"post"
 			]
@@ -2218,8 +2204,13 @@
 		},
 		{
 			"area": "header",
-			"name": "header-overlay",
-			"title": "Header: Overlay"
+			"name": "header-single-page-cover",
+			"title": "Header: Page Cover"
+		},
+		{
+			"area": "header",
+			"name": "header-single-post-cover",
+			"title": "Header: Post Cover"
 		},
 		{
 			"area": "footer",

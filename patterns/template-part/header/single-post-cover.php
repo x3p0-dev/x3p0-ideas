@@ -1,3 +1,21 @@
+<?php
+
+/**
+ * Title: Header: Cover for Single Post
+ * Slug: x3p0-ideas/header-single-post-cover
+ * Description:
+ * Categories: header
+ * Keywords: header
+ * Block Types: core/template-part/header
+ * Viewport Width: 1376
+ */
+
+declare(strict_types=1);
+
+# Prevent direct access.
+defined('ABSPATH') || exit;
+
+?>
 <!-- wp:cover {
 	"useFeaturedImage":true,
 	"hasParallax":true,
@@ -22,10 +40,7 @@
 	<span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim"></span>
 	<div class="wp-block-cover__inner-container">
 
-		<!-- wp:template-part {
-			"slug":"header-overlay",
-			"className":"site-header site-header-overlay"
-		} /-->
+		<!-- wp:pattern {"slug":"x3p0-ideas/header-content"} /-->
 
 		<!-- wp:group {
 			"metadata":{"name":"Post Header"},
@@ -58,6 +73,19 @@
 				"className":"is-style-text-headline"
 			} /-->
 
+			<!-- wp:group {
+				"layout":{
+					"type":"flex",
+					"flexWrap":"wrap",
+					"orientation":"vertical",
+					"justifyContent":"center"
+				}
+			} -->
+			<div class="wp-block-group">
+				<!-- wp:pattern {"slug":"x3p0-ideas/post-byline-default"} /-->
+			</div>
+			<!-- /wp:group -->
+
 		</div>
 		<!-- /wp:group -->
 
@@ -65,46 +93,3 @@
 
 </div>
 <!-- /wp:cover -->
-
-<!-- wp:group {
-	"tagName":"main",
-	"metadata":{"name":"Content"},
-	"style":{
-		"spacing":{
-			"blockGap":"0"
-		}
-	},
-	"className":"is-style-site-main",
-	"layout":{"type":"default"}
-} -->
-<main class="wp-block-group is-style-site-main">
-
-	<!-- wp:group {
-		"tagName":"article",
-		"metadata":{"name":"Post"},
-		"style":{
-			"spacing":{
-				"padding":{
-					"top":"var:preset|spacing|70",
-					"bottom":"var:preset|spacing|70"
-				}
-			}
-		},
-		"layout":{"type":"default"}
-	} -->
-	<article class="wp-block-group" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
-
-		<!-- wp:post-content {
-			"layout":{"type":"constrained"},
-			"className":"is-style-prose"
-		} /-->
-
-		<!-- wp:pattern {"slug":"x3p0-ideas/post-meta-default"} /-->
-
-	</article>
-	<!-- /wp:group -->
-
-</main>
-<!-- /wp:group -->
-
-<!-- wp:template-part {"slug":"footer","className":"is-style-site-footer"} /-->
