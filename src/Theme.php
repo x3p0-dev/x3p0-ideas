@@ -87,6 +87,7 @@ class Theme implements Bootable, Container
 			WP_Block_Bindings_Registry::get_instance(),
 			[
 				Block\Bindings\Comment::class,
+				Block\Bindings\General::class,
 				Block\Bindings\Media::class,
 				Block\Bindings\Post::class,
 				Block\Bindings\Site::class,

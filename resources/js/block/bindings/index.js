@@ -8,6 +8,7 @@
 
 // Import block binding sources.
 import './comment';
+import './general';
 import './media';
 import './post';
 import './site';

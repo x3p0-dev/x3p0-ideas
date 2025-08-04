@@ -78,12 +78,25 @@ defined('ABSPATH') || exit;
 					"className":"is-style-text-headline"
 				} /-->
 
-				<!-- wp:term-description {
-					"metadata":{
-						"x3p0Rules":{"rules":[{"type": "unless", "callback":"is_paged"}]}
+				<!-- wp:paragraph {
+					"metadata": {
+						"bindings":{
+							"content":{
+								"source":"x3p0/general",
+								"args":{
+									"key":"queryDescription"
+								}
+							}
+						},
+						"x3p0Rules": {"rules":[
+							{"type": "unless", "callback": "is_paged"},
+							{"type": "ifAttribute", "attribute": "content"}
+						]}
 					},
-					"textAlign":"center"
-				} /-->
+					"placeholder":"<?= esc_attr__('You are viewing the site archives.', 'x3p0-ideas') ?>"
+				} -->
+				<p></p>
+				<!-- /wp:paragraph -->
 
 			</div>
 

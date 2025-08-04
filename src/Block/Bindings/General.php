@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Site binding class.
+ * General binding class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2025, Justin Tadlock
@@ -18,7 +18,7 @@ use WP_Block_Bindings_Registry;
 use X3P0\Ideas\Contracts\BlockBindingSource;
 
 /**
- * Handles registering the `x3p0/site` block bindings source and rendering its
+ * Handles registering the `x3p0/general` block bindings source and rendering its
  * output based on the given arguments.
  */
 class General implements BlockBindingSource
@@ -28,8 +28,8 @@ class General implements BlockBindingSource
 	 */
 	public function register(WP_Block_Bindings_Registry $bindings): void
 	{
-		$bindings->register('x3p0/site', [
-			'label'              => __('Site Data', 'x3p0-ideas'),
+		$bindings->register('x3p0/general', [
+			'label'              => __('General', 'x3p0-ideas'),
 			'get_value_callback' => [ $this, 'callback' ]
 		]);
 	}
@@ -40,57 +40,26 @@ class General implements BlockBindingSource
 	public function callback(array $args, WP_Block $block, string $name): ?string
 	{
 		return match ($args['key'] ?? null) {
-			'copyright'    => $this->renderCopyright(),
-			'loginoutText' => $this->renderLoginoutText(),
-			'loginoutUrl'  => $this->renderLoginoutUrl(),
-			'year'         => $this->renderYear(),
-			default        => null
+			'queryDescription' => $this->renderQueryDescription(),
+			'queryTitle'       => $this->renderQueryTitle(),
+			default            => null
 		};
 	}
 
 	/**
-	 * Returns the site copyright statement.
+	 * Renders the query description.
 	 */
-	private function renderCopyright(): string
+	private function renderQueryDescription(): string
 	{
-		return esc_html(sprintf(
-			// Translators: %s is the current year.
-			__('Copyright &copy; %s', 'x3p0-ideas'),
-			$this->renderYear()
-		));
+		return esc_html(get_the_archive_description());
 	}
 
 	/**
-	 * Renders a text string to either Log In or Log Out of the site based
-	 * on the current user's logged-in status.
+	 * Renders the query title. Note that the `core/query-title` block only
+	 * supports Archives and Search Results.
 	 */
-	private function renderLoginoutText(): string
+	private function renderQueryTitle(): string
 	{
-		return  is_user_logged_in()
-			? esc_html__('Log Out', 'x3p0-ideas')
-			: esc_html__('Log In', 'x3p0-ideas');
-	}
-
-	/**
-	 * Renders a URL for either logging in or out, depending on the current
-	 * user's logged-in status.
-	 */
-	private function renderLoginoutUrl(): string
-	{
-		$ssl  = is_ssl() ? 'https://' : 'http://';
-		$host = isset($_SERVER['HTTP_HOST']) ? wp_unslash($_SERVER['HTTP_HOST']) : '';
-		$uri  = isset($_SERVER['REQUEST_URI']) ? wp_unslash($_SERVER['REQUEST_URI']) : '';
-
-		$redirect = $host && $uri ? esc_url_raw($ssl . $host . $uri) : '';
-
-		return esc_url(is_user_logged_in() ? wp_logout_url($redirect) : wp_login_url($redirect));
-	}
-
-	/**
-	 * Returns the current year.
-	 */
-	private function renderYear(): string
-	{
-		return esc_html(wp_date('Y'));
+		return esc_html(get_the_archive_title());
 	}
 }
