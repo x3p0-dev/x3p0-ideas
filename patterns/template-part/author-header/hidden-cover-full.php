@@ -60,7 +60,9 @@ defined('ABSPATH') || exit;
 				"className":"is-style-text-headline"
 			} /-->
 
-			<!-- wp:post-author-biography {"metadata":{"@unless":"is_paged"}} /-->
+			<!-- wp:post-author-biography {"metadata":{
+				"x3p0Rules":{"rules":[{"type": "unless", "callback":"is_paged"}]}
+			}} /-->
 		</div>
 		<!-- /wp:group -->
 

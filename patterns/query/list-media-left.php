@@ -145,7 +145,7 @@ $content_size = wp_get_global_settings([ 'layout', 'contentSize' ]);
 						}
 					}
 				},
-				"@ifAttribute":"content"
+				"x3p0Rules":{"rules":[{"type": "ifAttribute", "attribute": "content"}]}
 			},
 			"placeholder":"<?= esc_attr__('Page 3 / 7:', 'x3p0-ideas') ?>",
 			"className":"pagination-label"

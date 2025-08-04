@@ -30,7 +30,7 @@ defined('ABSPATH') || exit;
 	<!-- wp:group {
 		"metadata":{
 			"name":"<?= esc_attr__('Comments Container', 'x3p0-ideas') ?>",
-			"@if":"get_comments_number"
+			"x3p0Rules":{"rules":[{"type": "if", "callback":"get_comments_number"}]}
 		},
 		"className":"is-style-section-1 has-global-border",
 		"layout":{"type":"constrained"}

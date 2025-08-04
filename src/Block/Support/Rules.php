@@ -27,40 +27,58 @@ use WP_Block;
 class Rules
 {
 	/**
-	 * List of allowed rules and their callback methods.
+	 * Metadata key to check in block attributes.
 	 *
 	 * @todo Type hint with PHP 8.3+ requirement.
 	 */
-	private const RULE_METHODS = [
-		'@if'          => 'checkIf',
-		'@ifAttribute' => 'checkIfAttribute',
-		'@unless'      => 'checkUnless',
-		'@user'        => 'checkUser'
+	private const KEY = 'x3p0Rules';
+
+	/**
+	 * List of allowed rule types and their callback methods.
+	 *
+	 * @todo Type hint with PHP 8.3+ requirement.
+	 */
+	private const RULE_TYPES = [
+		'if'          => 'checkIf',
+		'ifAttribute' => 'checkIfAttribute',
+		'unless'      => 'checkUnless',
+		'user'        => 'checkUser'
 	];
 
 	/**
-	 * Checks if the block content is allowed to be shown based on the what
-	 * is returned by the rule method.
+	 * Checks if the block content is allowed to be shown based on what is
+	 * returned by the rule method.
 	 */
 	public function isPublic(array $block, WP_Block $instance): bool
 	{
 		if (
-			! isset($block['attrs']['metadata'])
-			|| ! is_array($block['attrs']['metadata'])
+			empty($block['attrs']['metadata'][self::KEY])
+			|| ! is_array($block['attrs']['metadata'][self::KEY])
+			|| empty($block['attrs']['metadata'][self::KEY]['rules'])
+			|| ! is_array($block['attrs']['metadata'][self::KEY]['rules'])
 		) {
 			return true;
 		}
 
-		$metadata = $block['attrs']['metadata'];
+		$operator = $block['attrs']['metadata'][self::KEY]['operator'] ?? 'AND';
+		$rules    = $block['attrs']['metadata'][self::KEY]['rules'];
 
-		foreach (self::RULE_METHODS as $rule => $method) {
-			if (isset($metadata[$rule])) {
-				return $this->$method(
-					wp_strip_all_tags($metadata[$rule]),
-					$block,
-					$instance
-				);
+		$results = [];
+
+		foreach ($rules as $rule) {
+			if (isset($rule['type']) && isset(self::RULE_TYPES[$rule['type']])) {
+				$method = self::RULE_TYPES[$rule['type']];
+
+				$results[] = $this->$method($rule, $block, $instance);
 			}
+		}
+
+		if ([] !== $results) {
+			return match ($operator) {
+				'AND'   => ! in_array(false, $results, true),
+				'OR'    => in_array(true, $results, true),
+				default => true
+			};
 		}
 
 		return true;
@@ -69,32 +87,38 @@ class Rules
 	/**
 	 * Show the block if the condition is met.
 	 */
-	protected function checkIf(string|array $condition): bool
+	protected function checkIf(array $rule): bool
 	{
+		$condition = $rule['callback'] ?? null;
+
 		return ! is_callable($condition, false) || boolval(call_user_func($condition));
 	}
 
 	/**
 	 * Show the block if the attribute has a value.
 	 */
-	protected function checkIfAttribute(string $attr, array $block, WP_Block $instance): bool
+	protected function checkIfAttribute(array $rule, array $block, WP_Block $instance): bool
 	{
-		return ! empty($instance->attributes[$attr]);
+		return isset($rule['attribute']) && ! empty($instance->attributes[$rule['attribute']]);
 	}
 
 	/**
 	 * Show the block unless the condition is met.
 	 */
-	protected function checkUnless(string|array $condition): bool
+	protected function checkUnless(array $rule): bool
 	{
+		$condition = $rule['callback'] ?? null;
+
 		return ! is_callable($condition, false) || ! boolval(call_user_func($condition));
 	}
 
 	/**
 	 * Show the block if the user matches.
 	 */
-	protected function checkUser(string|int|bool $user): bool
+	protected function checkUser(array $rule): bool
 	{
+		$user = $rule['user'] ?? null;
+
 		$logged_in = is_user_logged_in();
 
 		// If a boolean value is provided, check against the user's

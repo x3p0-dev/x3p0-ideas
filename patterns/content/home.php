@@ -21,7 +21,7 @@ defined('ABSPATH') || exit;
 } -->
 <main class="wp-block-group is-style-site-content">
 	<!-- wp:pattern {
-		"metadata":{"@unless":"is_paged"},
+		"metadata":{"x3p0Rules":{"rules":[{"type": "unless", "callback": "is_paged"}]}},
 		"slug":"x3p0-ideas/hero-featured"
 	} /-->
 	<!-- wp:template-part {"slug":"loop","align":"full"} /-->

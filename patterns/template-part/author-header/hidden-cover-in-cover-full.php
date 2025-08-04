@@ -98,7 +98,9 @@ defined('ABSPATH') || exit;
 				<!-- /wp:group -->
 
 				<!-- wp:post-author-biography {
-					"metadata":{"@unless":"is_paged"},
+					"metadata":{
+						"x3p0Rules":{"rules":[{"type": "unless", "callback":"is_paged"}]}
+					},
 					"textAlign": "center"
 				} /-->
 

@@ -42,7 +42,9 @@ defined('ABSPATH') || exit;
 		"className":"is-style-text-headline"
 	} /-->
 
-	<!-- wp:term-description {"metadata":{"@unless":"is_paged"}} /-->
+	<!-- wp:term-description {"metadata":{
+		"x3p0Rules":{"rules":[{"type": "unless", "callback":"is_paged"}]}
+	}} /-->
 
 </div>
 <!-- /wp:group -->

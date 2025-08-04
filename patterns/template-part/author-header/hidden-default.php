@@ -49,7 +49,9 @@ defined('ABSPATH') || exit;
 	</div>
 	<!-- /wp:group -->
 
-	<!-- wp:post-author-biography {"metadata":{"@unless":"is_paged"}} /-->
+	<!-- wp:post-author-biography {"metadata":{
+		"x3p0Rules":{"rules":[{"type": "unless", "callback":"is_paged"}]}
+	}} /-->
 
 </div>
 <!-- /wp:group -->

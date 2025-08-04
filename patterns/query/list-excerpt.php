@@ -83,7 +83,7 @@ defined('ABSPATH') || exit;
 						}
 					}
 				},
-				"@ifAttribute":"content"
+				"x3p0Rules":{"rules":[{"type": "ifAttribute", "attribute": "content"}]}
 			},
 			"placeholder":"<?= esc_attr__('Page 3 / 7:', 'x3p0-ideas') ?>",
 			"className":"pagination-label"

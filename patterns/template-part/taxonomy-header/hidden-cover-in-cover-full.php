@@ -79,7 +79,9 @@ defined('ABSPATH') || exit;
 				} /-->
 
 				<!-- wp:term-description {
-					"metadata":{"@unless":"is_paged"},
+					"metadata":{
+						"x3p0Rules":{"rules":[{"type": "unless", "callback":"is_paged"}]}
+					},
 					"textAlign":"center"
 				} /-->
 

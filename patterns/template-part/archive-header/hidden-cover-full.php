@@ -16,7 +16,7 @@ defined('ABSPATH') || exit;
 
 ?>
 <!-- wp:cover {
-	"metadata":{"name":"<?= esc_attr__('Author Header Content', 'x3p0-ideas') ?>"},
+	"metadata":{"name":"<?= esc_attr__('Archive Header Content', 'x3p0-ideas') ?>"},
 	"useFeaturedImage":true,
 	"isUserOverlayColor":true,
 	"minHeightUnit":"rem",
@@ -60,7 +60,9 @@ defined('ABSPATH') || exit;
 				"className":"is-style-text-headline"
 			} /-->
 
-			<!-- wp:term-description {"metadata":{"@unless":"is_paged"}} /-->
+			<!-- wp:term-description {"metadata":{
+				"x3p0Rules":{"rules":[{"type": "unless", "callback":"is_paged"}]}
+			}} /-->
 		</div>
 		<!-- /wp:group -->
 
