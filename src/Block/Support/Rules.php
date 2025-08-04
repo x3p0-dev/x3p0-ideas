@@ -72,7 +72,7 @@ class Rules
 		}
 
 		if ([] !== $results) {
-			return match ($operator) {
+			return match (strtoupper($operator)) {
 				'AND'   => ! in_array(false, $results, true),
 				'OR'    => in_array(true, $results, true),
 				default => true
