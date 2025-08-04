@@ -31,7 +31,7 @@ class Rules
 	 *
 	 * @todo Type hint with PHP 8.3+ requirement.
 	 */
-	private const KEY = 'x3p0Rules';
+	private const METADATA_KEY = 'x3p0Rules';
 
 	/**
 	 * List of allowed rule types and their callback methods.
@@ -52,14 +52,14 @@ class Rules
 	public function isPublic(array $block, WP_Block $instance): bool
 	{
 		if (
-			empty($block['attrs']['metadata'][self::KEY]['rules'])
-			|| ! is_array($block['attrs']['metadata'][self::KEY]['rules'])
+			empty($block['attrs']['metadata'][self::METADATA_KEY]['rules'])
+			|| ! is_array($block['attrs']['metadata'][self::METADATA_KEY]['rules'])
 		) {
 			return true;
 		}
 
-		$operator = $block['attrs']['metadata'][self::KEY]['operator'] ?? 'AND';
-		$rules    = $block['attrs']['metadata'][self::KEY]['rules'];
+		$operator = $block['attrs']['metadata'][self::METADATA_KEY]['operator'] ?? 'AND';
+		$rules    = $block['attrs']['metadata'][self::METADATA_KEY]['rules'];
 
 		$results = [];
 
