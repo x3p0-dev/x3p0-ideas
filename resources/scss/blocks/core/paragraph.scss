@@ -61,12 +61,17 @@ p {
 .media-data {
 	display: flex;
 	flex-wrap: nowrap;
-	align-items: center;
+	align-items: start;
+	gap: var(--wp--style--block-gap);
 
 	// Only justify with space-between if we have the inner elements. This
 	// is to avoid the right alignment of the placeholder text in the editor.
 	&:has(.media-data__label, .media-data__content) {
 		justify-content: space-between;
+	}
+
+	&__content {
+		text-align: right;
 	}
 }
 
