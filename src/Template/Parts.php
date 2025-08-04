@@ -74,6 +74,13 @@ class Parts implements Bootable
 				'label'       => __('Search Header', 'x3p0-ideas'),
 				'description' => __('The Search Header template part defines an area that contains the search title and description for search results.', 'x3p0-ideas'),
 				'icon'        => 'layout'
+			],
+			[
+				'area'        => 'taxonomy-header',
+				'area_tag'    => 'header',
+				'label'       => __('Taxonomy Header', 'x3p0-ideas'),
+				'description' => __('The Taxonomy Header template part defines an area that contains the taxonomy term and description for taxonomy term archives.', 'x3p0-ideas'),
+				'icon'        => 'layout'
 			]
 		];
 	}

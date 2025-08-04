@@ -2241,6 +2241,11 @@
 			"area": "search-header",
 			"name": "search-header",
 			"title": "Search Header"
+		},
+		{
+			"area": "taxonomy-header",
+			"name": "taxonomy-header",
+			"title": "Taxonomy Header"
 		}
 	]
 }
