@@ -14,7 +14,7 @@ defined('ABSPATH') || exit;
 ?>
 <!-- wp:group {
 	"tagName":"main",
-	"metadata":{"name":"Content"},
+	"metadata":{"name":"<?= esc_attr__('Content', 'x3p0-ideas') ?>"},
 	"style":{
 		"spacing":{
 			"blockGap":"0"
@@ -27,7 +27,7 @@ defined('ABSPATH') || exit;
 
 	<!-- wp:group {
 		"tagName":"article",
-		"metadata":{"name":"Post"},
+		"metadata":{"name":"<?= esc_attr__('Post', 'x3p0-ideas') ?>"},
 		"style":{
 			"spacing":{
 				"padding":{
@@ -51,7 +51,7 @@ defined('ABSPATH') || exit;
 
 		<!-- wp:group {
 			"tagName":"header",
-			"metadata":{"name":"Post Header"},
+			"metadata":{"name":"<?= esc_attr__('Post Header', 'x3p0-ideas') ?>"},
 			"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},
 			"layout":{"type":"constrained"}
 		} -->
