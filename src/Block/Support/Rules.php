@@ -52,9 +52,7 @@ class Rules
 	public function isPublic(array $block, WP_Block $instance): bool
 	{
 		if (
-			empty($block['attrs']['metadata'][self::KEY])
-			|| ! is_array($block['attrs']['metadata'][self::KEY])
-			|| empty($block['attrs']['metadata'][self::KEY]['rules'])
+			empty($block['attrs']['metadata'][self::KEY]['rules'])
 			|| ! is_array($block['attrs']['metadata'][self::KEY]['rules'])
 		) {
 			return true;
