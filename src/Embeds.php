@@ -25,25 +25,29 @@ class Embeds implements Bootable
 	use Hookable;
 
 	/**
-	 * Image size to use for featured images.
-	 *
-	 * @todo Type hint with PHP 8.3+ requirement.
-	 */
-	protected const IMAGE_SIZE = 'x3p0-wide';
-
-	/**
-	 * Image shape to use for featured images (`rectangular` or `square`).
-	 *
-	 * @todo Type hint with PHP 8.3+ requirement.
-	 */
-	protected const IMAGE_SHAPE = 'rectangular';
-
-	/**
 	 * Maximum number of words in the excerpt.
 	 *
 	 * @todo Type hint with PHP 8.3+ requirement.
 	 */
 	protected const EXCERPT_LENGTH = 24;
+
+	/**
+	 * Image shape to use for featured images (`rectangular` or `square`).
+	 *
+	 * @link https://developer.wordpress.org/reference/hooks/embed_thumbnail_image_shape/
+	 * @todo Type hint with PHP 8.3+ requirement.
+	 */
+	#[Filter('embed_thumbnail_image_shape')]
+	protected const IMAGE_SHAPE = 'rectangular';
+
+	/**
+	 * Image size to use for featured images.
+	 *
+	 * @link https://developer.wordpress.org/reference/hooks/embed_thumbnail_image_size/
+	 * @todo Type hint with PHP 8.3+ requirement.
+	 */
+	#[Filter('embed_thumbnail_image_size')]
+	protected const IMAGE_SIZE = 'x3p0-wide';
 
 	/**
 	 * Loads assets needed for the embed.
@@ -75,29 +79,6 @@ class Embeds implements Bootable
 
 		// Enqueue embed style.
 		wp_enqueue_style('x3p0-ideas-embed');
-	}
-
-	/**
-	 * Replaces the default size with our custom image size.
-	 *
-	 * @link https://developer.wordpress.org/reference/hooks/embed_thumbnail_image_size/
-	 */
-	#[Filter('embed_thumbnail_image_size')]
-	public function filterImageSize(): string
-	{
-		return self::IMAGE_SIZE;
-	}
-
-	/**
-	 * Ensures that the featured image shape is set to match our size. This
-	 * also affects how the embed is laid out.
-	 *
-	 * @link https://developer.wordpress.org/reference/hooks/embed_thumbnail_image_shape/
-	 */
-	#[Filter('embed_thumbnail_image_shape')]
-	public function filterImageShape(): string
-	{
-		return self::IMAGE_SHAPE;
 	}
 
 	/**
