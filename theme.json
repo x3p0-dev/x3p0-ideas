@@ -2061,17 +2061,26 @@
 	},
 	"customTemplates": [
 		{
+			"name": "template-blank",
+			"title": "Template: Blank",
+			"postTypes": [
+				"page",
+				"post"
+			]
+		},
+		{
+			"name": "template-canvas",
+			"title": "Template: Canvas",
+			"postTypes": [
+				"page",
+				"post"
+			]
+		},
+		{
 			"name": "template-page-header-cover",
 			"title": "Page: Header Cover",
 			"postTypes": [
 				"page"
-			]
-		},
-		{
-			"name": "template-post-header-cover",
-			"title": "Post: Header Cover",
-			"postTypes": [
-				"post"
 			]
 		},
 		{
@@ -2145,6 +2154,13 @@
 			]
 		},
 		{
+			"name": "template-post-header-cover",
+			"title": "Post: Header Cover",
+			"postTypes": [
+				"post"
+			]
+		},
+		{
 			"name": "template-post-hero-media-left",
 			"title": "Post: Hero (Media Left)",
 			"postTypes": [
@@ -2176,22 +2192,6 @@
 			"name": "template-post-section-3",
 			"title": "Post: Style 3",
 			"postTypes": [
-				"post"
-			]
-		},
-		{
-			"name": "template-blank",
-			"title": "Template: Blank",
-			"postTypes": [
-				"page",
-				"post"
-			]
-		},
-		{
-			"name": "template-canvas",
-			"title": "Template: Canvas",
-			"postTypes": [
-				"page",
 				"post"
 			]
 		}

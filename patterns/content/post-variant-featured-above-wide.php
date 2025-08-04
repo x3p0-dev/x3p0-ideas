@@ -1,10 +1,9 @@
 <?php
 
 /**
- * Title: Singular Template
- * Slug: x3p0-ideas/template-singular
+ * Title: Post Content: Featured Above (Wide)
+ * Slug: x3p0-ideas/content-post-variant-featured-above-wide
  * Inserter: no
- * Template Types: attachment, page, single, singular
  */
 
 declare(strict_types=1);
@@ -13,23 +12,22 @@ declare(strict_types=1);
 defined('ABSPATH') || exit;
 
 ?>
-<!-- wp:template-part {"slug":"header","className":"is-style-site-header"} /-->
-
 <!-- wp:group {
 	"tagName":"main",
-	"metadata":{"name":"<?= esc_attr__('Content', 'x3p0-ideas') ?>"},
+	"metadata":{"name":"Content"},
 	"style":{
 		"spacing":{
 			"blockGap":"0"
 		}
 	},
-	"className":"is-style-site-main",
+	"className":"is-style-site-content",
 	"layout":{"type":"default"}
 } -->
-<main class="wp-block-group is-style-site-main">
+<main class="wp-block-group is-style-site-content">
 
 	<!-- wp:group {
 		"tagName":"article",
+		"metadata":{"name":"Post"},
 		"style":{
 			"spacing":{
 				"padding":{
@@ -38,23 +36,28 @@ defined('ABSPATH') || exit;
 				}
 			}
 		},
-		"metadata":{"name":"<?= esc_attr__('Post', 'x3p0-ideas') ?>"},
 		"layout":{"type":"default"}
 	} -->
 	<article class="wp-block-group" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
 
+		<!-- wp:group {"layout":{"type":"constrained"}} -->
+		<div class="wp-block-group">
+			<!-- wp:post-featured-image {
+				"aspectRatio":"21/9",
+				"align":"wide"
+			} /-->
+		</div>
+		<!-- /wp:group -->
+
 		<!-- wp:group {
 			"tagName":"header",
-			"metadata":{"name":"<?= esc_attr__('Post Header', 'x3p0-ideas') ?>"},
-			"style":{
-				"spacing":{
-					"blockGap":"var:preset|spacing|40"
-				}
-			},
+			"metadata":{"name":"Post Header"},
+			"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},
 			"layout":{"type":"constrained"}
 		} -->
 		<header class="wp-block-group">
 			<!-- wp:post-title {"level":1,"className":"is-style-text-headline"} /-->
+			<!-- wp:pattern {"slug":"x3p0-ideas/post-byline-default"} /-->
 		</header>
 		<!-- /wp:group -->
 
@@ -63,10 +66,12 @@ defined('ABSPATH') || exit;
 			"className":"is-style-prose"
 		} /-->
 
+		<!-- wp:pattern {"slug":"x3p0-ideas/post-meta-default"} /-->
+
 	</article>
 	<!-- /wp:group -->
 
+	<!-- wp:template-part {"slug":"comments"} /-->
+
 </main>
 <!-- /wp:group -->
-
-<!-- wp:template-part {"slug":"footer","className":"is-style-site-footer"} /-->

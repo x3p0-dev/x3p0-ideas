@@ -1,10 +1,9 @@
 <?php
 
 /**
- * Title: Search Template
- * Slug: x3p0-ideas/template-search
+ * Title: Search Results Content
+ * Slug: x3p0-ideas/content-search
  * Inserter: no
- * Template Types: search
  */
 
 declare(strict_types=1);
@@ -13,21 +12,17 @@ declare(strict_types=1);
 defined('ABSPATH') || exit;
 
 ?>
-<!-- wp:template-part {"slug":"header","className":"is-style-site-header"} /-->
-
 <!-- wp:group {
 	"tagName":"main",
 	"metadata":{"name":"<?= esc_attr__('Content', 'x3p0-ideas') ?>"},
 	"style":{"spacing":{"blockGap":"0"}},
-	"className":"is-style-site-main",
+	"className":"is-style-site-content",
 	"layout":{"type":"constrained"}
 } -->
-<main class="wp-block-group is-style-site-main">
+<main class="wp-block-group is-style-site-content">
 
 	<!-- wp:template-part {"slug":"search-header","align":"full","className":"is-style-archive-header"} /-->
 	<!-- wp:template-part {"slug":"loop","align":"full"} /-->
 
 </main>
 <!-- /wp:group -->
-
-<!-- wp:template-part {"slug":"footer","className":"is-style-site-footer"} /-->

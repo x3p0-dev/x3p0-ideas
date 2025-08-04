@@ -1,5 +1,17 @@
-<!-- wp:template-part {"slug":"header","className":"is-style-site-header"} /-->
+<?php
 
+/**
+ * Title: Post Content: Cover (Overlay Fade In)
+ * Slug: x3p0-ideas/content-post-variant-cover-overlay-fade-in
+ * Inserter: no
+ */
+
+declare(strict_types=1);
+
+# Prevent direct access.
+defined('ABSPATH') || exit;
+
+?>
 <!-- wp:group {
 	"tagName":"main",
 	"metadata":{"name":"Content"},
@@ -61,14 +73,14 @@
 					"style":{
 						"spacing":{
 							"padding":{
-								"top":"var:preset|spacing|110",
+								"top":"var:preset|spacing|70",
 								"left":"var:preset|spacing|70",
 								"right":"var:preset|spacing|70"
 							}
 						}
 					},
-					"backgroundColor":"base",
 					"textColor":"contrast",
+					"gradient":"180-deg-transparent-base",
 					"layout":{
 						"type":"flex",
 						"orientation":"vertical",
@@ -76,7 +88,11 @@
 						"verticalAlignment":"bottom"
 					}
 				} -->
-				<div class="wp-block-group alignwide has-contrast-color has-base-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--110);padding-right:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)">
+				<div class="wp-block-group alignwide has-contrast-color has-180-deg-transparent-base-gradient-background has-text-color has-background" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)">
+
+					<!-- wp:spacer {"height":"var:preset|spacing|70"} -->
+					<div style="height:var(--wp--preset--spacing--70)" aria-hidden="true" class="wp-block-spacer"></div>
+					<!-- /wp:spacer -->
 
 					<!-- wp:group {
 						"style":{
@@ -124,5 +140,3 @@
 
 </main>
 <!-- /wp:group -->
-
-<!-- wp:template-part {"slug":"footer","className":"is-style-site-footer"} /-->

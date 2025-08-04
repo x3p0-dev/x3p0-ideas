@@ -1,10 +1,9 @@
 <?php
 
 /**
- * Title: 404 Template
- * Slug: x3p0-ideas/template-404
+ * Title: 404 Content
+ * Slug: x3p0-ideas/content-404
  * Inserter: no
- * Template Types: 404
  */
 
 declare(strict_types=1);
@@ -13,8 +12,6 @@ declare(strict_types=1);
 defined('ABSPATH') || exit;
 
 ?>
-<!-- wp:template-part {"slug":"header","className":"is-style-site-header"} /-->
-
 <!-- wp:group {
 	"tagName":"main",
 	"metadata":{"name":"<?= esc_attr__('Content', 'x3p0-ideas') ?>"},
@@ -23,10 +20,10 @@ defined('ABSPATH') || exit;
 			"blockGap":"0"
 		}
 	},
-	"className":"is-style-site-main",
+	"className":"is-style-site-content",
 	"layout":{"type":"default"}
 } -->
-<main class="wp-block-group is-style-site-main">
+<main class="wp-block-group is-style-site-content">
 
 	<!-- wp:group {
 		"tagName":"article",
@@ -81,5 +78,3 @@ defined('ABSPATH') || exit;
 
 </main>
 <!-- /wp:group -->
-
-<!-- wp:template-part {"slug":"footer","className":"is-style-site-footer"} /-->
