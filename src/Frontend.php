@@ -72,6 +72,13 @@ class Frontend implements Bootable
 			$screen_style['dependencies'],
 			$screen_style['version']
 		);
+
+		// Add path data so the stylesheet can potentially be inlined.
+		wp_style_add_data(
+			'x3p0-ideas-style',
+			'path',
+			get_parent_theme_file_path('public/css/screen.css')
+		);
 	}
 
 	/**
