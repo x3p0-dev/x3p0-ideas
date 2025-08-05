@@ -8,7 +8,16 @@
 	],
 	"styles": {
 		"color": {
-			"background": "transparent"
+			"background": "var(--wp--custom--color--background--level-1)",
+			"text": "var(--wp--custom--color--foreground--primary)"
+		},
+		"spacing": {
+			"padding": {
+				"top": "var(--wp--preset--spacing--100)",
+				"bottom": "var(--wp--preset--spacing--100)",
+				"left": "var(--wp--preset--spacing--70)",
+				"right": "var(--wp--preset--spacing--70)"
+			}
 		}
 	}
 }

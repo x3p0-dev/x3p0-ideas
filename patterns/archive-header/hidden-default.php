@@ -17,23 +17,17 @@ defined('ABSPATH') || exit;
 ?>
 <!-- wp:group {
 	"metadata":{"name":"<?= esc_attr__('Archive Header Container', 'x3p0-ideas') ?>"},
-	"align":"full",
 	"className": "is-style-archive-header",
 	"style":{"spacing":{"blockGap":"0"}},
 	"layout":{"type":"default"}
 } -->
-<div class="wp-block-group alignfull is-style-archive-header">
+<div class="wp-block-group is-style-archive-header">
 
 	<!-- wp:group {
 		"metadata":{"name":"<?= esc_attr__('Archive Header Content', 'x3p0-ideas') ?>"},
-		"className":"is-style-section-2",
 		"style":{
 			"spacing":{
-				"blockGap":"var:preset|spacing|40",
-				"padding":{
-					"top":"var:preset|spacing|100",
-					"bottom":"var:preset|spacing|100"
-				}
+				"blockGap":"var:preset|spacing|40"
 			}
 		},
 		"layout":{
@@ -41,7 +35,7 @@ defined('ABSPATH') || exit;
 			"justifyContent":"left"
 		}
 	} -->
-	<div class="wp-block-group is-style-section-2" style="padding-top:var(--wp--preset--spacing--100);padding-bottom:var(--wp--preset--spacing--100)">
+	<div class="wp-block-group">
 
 		<!-- wp:query-title {
 			"type":"archive",

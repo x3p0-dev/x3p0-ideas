@@ -350,6 +350,9 @@
 						"style": "var(--wp--custom--border--primary--style)",
 						"width": "var(--wp--custom--border--primary--width)"
 					}
+				},
+				"color": {
+					"background": "transparent"
 				}
 			},
 			"meta": {

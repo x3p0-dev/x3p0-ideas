@@ -16,13 +16,18 @@ defined('ABSPATH') || exit;
 
 ?>
 <!-- wp:group {
-	"metadata":{"name":"<?= esc_attr__('Archive Header Container', 'x3p0-ideas') ?>"},
+	"metadata":{"name":"<?= esc_attr__('Taxonomy Header Container', 'x3p0-ideas') ?>"},
 	"align":"full",
 	"className": "is-style-archive-header",
-	"style":{"spacing":{"blockGap":"0"}},
+	"style":{
+		"spacing":{
+			"blockGap":"0",
+			"padding":{"top":"0","bottom":"0","left":"0","right":"0"}
+		}
+	},
 	"layout":{"type":"default"}
 } -->
-<div class="wp-block-group alignfull is-style-archive-header">
+<div class="wp-block-group alignfull is-style-archive-header" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 
 	<!-- wp:cover {
 		"metadata":{"name":"<?= esc_attr__('Taxonomy Header Content', 'x3p0-ideas') ?>"},
