@@ -16,42 +16,53 @@ defined('ABSPATH') || exit;
 
 ?>
 <!-- wp:group {
-	"metadata":{"name":"<?= esc_attr__('Author Header Content', 'x3p0-ideas') ?>"},
+	"metadata":{"name":"<?= esc_attr__('Author Header Container', 'x3p0-ideas') ?>"},
 	"align":"full",
-	"className":"is-style-section-2",
-	"style":{
-		"spacing":{
-			"blockGap":"var:preset|spacing|40",
-			"padding":{
-				"top":"var:preset|spacing|100",
-				"bottom":"var:preset|spacing|100"
-			}
-		}
-	},
-	"layout":{
-		"type":"constrained",
-		"justifyContent":"left"
-	}
+	"className": "is-style-site-header",
+	"style":{"spacing":{"blockGap":"0"}},
+	"layout":{"type":"default"}
 } -->
-<div class="wp-block-group alignfull is-style-section-2" style="padding-top:var(--wp--preset--spacing--100);padding-bottom:var(--wp--preset--spacing--100)">
+<div class="wp-block-group alignfull is-style-site-header">
 
 	<!-- wp:group {
-		"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},
-		"layout":{"type":"flex","flexWrap":"nowrap"}
+		"metadata":{"name":"<?= esc_attr__('Author Header Content', 'x3p0-ideas') ?>"},
+		"className":"is-style-section-2",
+		"style":{
+			"spacing":{
+				"blockGap":"var:preset|spacing|40",
+				"padding":{
+					"top":"var:preset|spacing|100",
+					"bottom":"var:preset|spacing|100"
+				}
+			}
+		},
+		"layout":{
+			"type":"constrained",
+			"justifyContent":"left"
+		}
 	} -->
-	<div class="wp-block-group">
-		<!-- wp:avatar {"size":64} /-->
-		<!-- wp:query-title {
-			"type":"archive",
-			"showPrefix":false,
-			"className":"is-style-text-headline"
-		} /-->
+	<div class="wp-block-group is-style-section-2" style="padding-top:var(--wp--preset--spacing--100);padding-bottom:var(--wp--preset--spacing--100)">
+
+		<!-- wp:group {
+			"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},
+			"layout":{"type":"flex","flexWrap":"nowrap"}
+		} -->
+		<div class="wp-block-group">
+			<!-- wp:avatar {"size":64} /-->
+			<!-- wp:query-title {
+				"type":"archive",
+				"showPrefix":false,
+				"className":"is-style-text-headline"
+			} /-->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- wp:post-author-biography {"metadata":{
+			"x3p0Rules":{"rules":[{"type": "unless", "callback":"is_paged"}]}
+		}} /-->
+
 	</div>
 	<!-- /wp:group -->
-
-	<!-- wp:post-author-biography {"metadata":{
-		"x3p0Rules":{"rules":[{"type": "unless", "callback":"is_paged"}]}
-	}} /-->
 
 </div>
 <!-- /wp:group -->
