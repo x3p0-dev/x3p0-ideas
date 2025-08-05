@@ -387,7 +387,8 @@
 							}
 						},
 						"color": {
-							"background": "transparent"
+							"background": "transparent",
+							"gradient": "none"
 						},
 						"typography": {
 							"fontSize": "var(--wp--preset--font-size--sm)",
