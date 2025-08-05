@@ -17,11 +17,11 @@ defined('ABSPATH') || exit;
 ?>
 <!-- wp:group {
 	"metadata":{"name":"<?= esc_attr__('Taxonomy Header Container', 'x3p0-ideas') ?>"},
-	"className": "is-style-archive-header",
+	"className": "is-style-query-header",
 	"style":{"spacing":{"blockGap":"0"}},
 	"layout":{"type":"default"}
 } -->
-<div class="wp-block-group is-style-archive-header">
+<div class="wp-block-group is-style-query-header">
 
 	<!-- wp:group {
 		"metadata":{"name":"<?= esc_attr__('Taxonomy Header Content', 'x3p0-ideas') ?>"},

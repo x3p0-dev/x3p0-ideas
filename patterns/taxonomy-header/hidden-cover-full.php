@@ -18,7 +18,7 @@ defined('ABSPATH') || exit;
 <!-- wp:group {
 	"metadata":{"name":"<?= esc_attr__('Taxonomy Header Container', 'x3p0-ideas') ?>"},
 	"align":"full",
-	"className": "is-style-archive-header",
+	"className": "is-style-query-header",
 	"style":{
 		"spacing":{
 			"blockGap":"0",
@@ -27,7 +27,7 @@ defined('ABSPATH') || exit;
 	},
 	"layout":{"type":"default"}
 } -->
-<div class="wp-block-group alignfull is-style-archive-header" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
+<div class="wp-block-group alignfull is-style-query-header" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 
 	<!-- wp:cover {
 		"metadata":{"name":"<?= esc_attr__('Taxonomy Header Content', 'x3p0-ideas') ?>"},
