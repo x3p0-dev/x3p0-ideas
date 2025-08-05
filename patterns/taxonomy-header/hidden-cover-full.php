@@ -18,11 +18,11 @@ defined('ABSPATH') || exit;
 <!-- wp:group {
 	"metadata":{"name":"<?= esc_attr__('Taxonomy Header Container', 'x3p0-ideas') ?>"},
 	"align":"full",
-	"className": "is-style-site-header",
+	"className": "is-style-archive-header",
 	"style":{"spacing":{"blockGap":"0"}},
 	"layout":{"type":"default"}
 } -->
-<div class="wp-block-group alignfull is-style-site-header">
+<div class="wp-block-group alignfull is-style-archive-header">
 
 	<!-- wp:cover {
 		"metadata":{"name":"<?= esc_attr__('Taxonomy Header Content', 'x3p0-ideas') ?>"},
