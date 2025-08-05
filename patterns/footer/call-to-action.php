@@ -18,6 +18,7 @@ defined('ABSPATH') || exit;
 <!-- wp:group {
 	"metadata":{"name":"<?= esc_attr__('Footer Container', 'x3p0-ideas') ?>"},
 	"align":"full",
+	"className":"is-style-site-footer",
 	"style":{
 		"spacing":{
 			"blockGap":"var:preset|spacing|90",
@@ -31,7 +32,7 @@ defined('ABSPATH') || exit;
 	},
 	"layout":{"type":"default"}
 } -->
-<div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--100);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--100);padding-left:var(--wp--preset--spacing--70)">
+<div class="wp-block-group alignfull is-style-site-footer" style="padding-top:var(--wp--preset--spacing--100);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--100);padding-left:var(--wp--preset--spacing--70)">
 
 	<!-- wp:group {
 		"metadata":{"name":"<?= esc_attr__('Call To Action', 'x3p0-ideas') ?>"},

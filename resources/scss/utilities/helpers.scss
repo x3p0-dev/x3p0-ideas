@@ -22,8 +22,8 @@
 ///
 /// Removes the border radius and left/right borders on full-width blocks.
 ///
-:where(:not(.has-global-padding)) > [class*=wp-block].alignfull,
-.has-global-border.alignfull,
+:where(.wp-block-post-content) :where(:not(.has-global-padding)) > [class*=wp-block].alignfull,
+:where(.wp-block-post-content) .has-global-border.alignfull,
 .wp-block-post-featured-image.alignfull img,
 .wp-block-image.alignfull img {
 	border-radius: 0;

@@ -21,7 +21,7 @@ defined('ABSPATH') || exit;
 } -->
 <main class="wp-block-group is-style-site-content">
 
-	<!-- wp:template-part {"slug":"taxonomy-header","align":"full","className":"is-style-archive-header"} /-->
+	<!-- wp:template-part {"slug":"taxonomy-header","align":"full"} /-->
 	<!-- wp:template-part {"slug":"loop","align":"full"} /-->
 
 </main>

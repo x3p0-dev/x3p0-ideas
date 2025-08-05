@@ -56,3 +56,8 @@
 .editor-styles-wrapper .wp-site-blocks > * {
 	margin-top: var(--wp--custom--site-blocks--spacing--block-gap, var(--wp--style--block-gap));
 }
+
+.wp-site-blocks > :first-child,
+.editor-styles-wrapper .wp-site-blocks > :first-child {
+	margin-top: 0;
+}

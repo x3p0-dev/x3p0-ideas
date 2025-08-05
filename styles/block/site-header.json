@@ -3,7 +3,9 @@
 	"version": 3,
 	"title": "Site Header",
 	"slug": "site-header",
-	"blockTypes": [ "core/template-part" ],
+	"blockTypes": [
+		"core/group"
+	],
 	"styles": {
 		"color": {
 			"background": "transparent"

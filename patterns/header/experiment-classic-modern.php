@@ -18,10 +18,11 @@ defined('ABSPATH') || exit;
 ?>
 <!-- wp:group {
 	"align":"full",
+	"className": "is-style-site-header",
 	"style":{"spacing":{"blockGap":"0"}},
 	"layout":{"type":"default"}
 } -->
-<div class="wp-block-group alignfull">
+<div class="wp-block-group alignfull is-style-site-header">
 
 	<!-- wp:group {
 		"style":{
