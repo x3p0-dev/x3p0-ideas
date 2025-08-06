@@ -1,0 +1,58 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/wp/6.8/schemas/json/theme.json",
+	"version": 3,
+	"title": "Button",
+	"slug": "loginout-button-primary",
+	"blockTypes": [
+		"core/loginout"
+	],
+	"styles": {
+		"elements": {
+			"link": {
+				"css": "display: inline-block;",
+				"border": {
+					"color": { "ref": "styles.elements.button.border.color" },
+					"style": { "ref": "styles.elements.button.border.style" },
+					"width": { "ref": "styles.elements.button.border.width" },
+					"radius": { "ref": "styles.elements.button.border.radius" }
+				},
+				"color": {
+					"background": { "ref": "styles.elements.button.color.background" },
+					"text": { "ref": "styles.elements.button.color.text" }
+				},
+				"shadow": { "ref": "styles.elements.button.shadow" },
+				"spacing": {
+					"padding": {
+						"top": { "ref": "styles.elements.button.spacing.padding.top" },
+						"bottom": { "ref": "styles.elements.button.spacing.padding.bottom" },
+						"left": { "ref": "styles.elements.button.spacing.padding.left" },
+						"right": { "ref": "styles.elements.button.spacing.padding.right" }
+					}
+				},
+				"typography": {
+					"fontFamily": { "ref": "styles.elements.button.typography.fontFamily" },
+					"fontSize": { "ref": "styles.elements.button.typography.fontSize" },
+					"fontWeight": { "ref": "styles.elements.button.typography.fontWeight"},
+					"lineHeight": { "ref": "styles.elements.button.typography.lineHeight" },
+					"textDecoration": { "ref": "styles.elements.button.typography.textDecoration" }
+				},
+				":hover": {
+					"border": {
+						"color": "var(--wp--custom--elements--button--primary--hover--border--color)",
+						"radius": "var(--wp--custom--elements--button--primary--hover--border--radius)",
+						"style": "var(--wp--custom--elements--button--primary--hover--border--style)",
+						"width": "var(--wp--custom--elements--button--primary--hover--border--width)"
+					},
+					"color": {
+						"background": "var(--wp--custom--elements--button--primary--hover--color--background)",
+						"text": "var(--wp--custom--elements--button--primary--hover--color--foreground)"
+					},
+					"shadow": "var(--wp--custom--elements--button--primary--hover--shadow)",
+					"typography": {
+						"textDecoration": "underline !important"
+					}
+				}
+			}
+		}
+	}
+}
