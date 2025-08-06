@@ -12,9 +12,9 @@
 ///
 :root :where(.has-global-border) {
 	overflow: hidden;
-	border-color: var(--wp--custom--border--primary--color, transparent);
-	border-style: var(--wp--custom--border--primary--style, solid);
-	border-width: var(--wp--custom--border--primary--width, 0);
+	border: var(--wp--custom--border--primary--width, 0)
+		var(--wp--custom--border--primary--style, solid)
+		var(--wp--custom--border--primary--color, transparent);
 	border-radius: var(--wp--custom--border--primary--radius, 0);
 	box-shadow: var(--wp--custom--shadow--primary--default, none);
 }

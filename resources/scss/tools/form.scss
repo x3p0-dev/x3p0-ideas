@@ -80,17 +80,19 @@
 	font-weight: inherit;
 	line-height: inherit;
 
-	border-color:  var(--wp--custom--border--primary--color, none);
-	border-style:  var(--wp--custom--border--primary--style, solid);
-	border-width:  var(--wp--custom--border--primary--width, 1px);
+	border: var(--wp--custom--border--primary--width, 1px)
+		var(--wp--custom--border--primary--style, solid)
+		var(--wp--custom--border--primary--color, none);
+
 	border-radius: var(--wp--custom--border--primary--radius, none);
 	box-shadow:    var(--wp--custom--shadow--primary--default, none);
 
 	&:focus {
-		outline-color:  var(--wp--custom--color--foreground--accent, currentColor);
+		outline: var(--wp--custom--outline--primary--width)
+			var(--wp--custom--outline--primary--style)
+			var(--wp--custom--color--foreground--accent, currentColor);
+
 		outline-offset: var(--wp--custom--outline--primary--offset);
-		outline-style:  var(--wp--custom--outline--primary--style);
-		outline-width:  var(--wp--custom--outline--primary--width);
 		box-shadow:     var(--wp--custom--shadow--primary--hover, none);
 	}
 }
