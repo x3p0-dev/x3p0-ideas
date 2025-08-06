@@ -70,7 +70,12 @@
 		@include inline-icon.icon(icon.get-url('folder'));
 	}
 
-	&.taxonomy-post_tag::before {
+	&.taxonomy-post_tag::before,
+	&.taxonomy-portfolio_tag::before {
 		@include inline-icon.modify(icon.get-url('tag'));
+	}
+
+	&.taxonomy-portfolio_category::before {
+		@include inline-icon.modify(icon.get-url('work'));
 	}
 }
