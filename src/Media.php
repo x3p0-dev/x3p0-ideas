@@ -71,10 +71,13 @@ class Media implements Bootable
 	}
 
 	/**
-	 * Sets the default `post-thumbnail` size to a theme-specific size.
+	 * Sets the default `post-thumbnail` size to a theme-specific size. Note
+	 * that `$size` can be an array of width and height values.
+	 *
+	 * @link https://developer.wordpress.org/reference/hooks/post_thumbnail_size/
 	 */
 	#[Filter('post_thumbnail_size', 5)]
-	public function filterPostThumbnailSize(string $size): string
+	public function filterPostThumbnailSize(string|array $size): string|array
 	{
 		return 'post-thumbnail' === $size ? 'x3p0-wide' : $size;
 	}
