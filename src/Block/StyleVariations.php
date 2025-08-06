@@ -320,8 +320,7 @@ class StyleVariations implements Bootable
 				'monotone' => __('Monotone', 'x3p0-ideas')
 			],
 			'core/table-of-contents' => [
-				'chapters'  => __('Chapters', 'x3p0-ideas'),
-				'list-pull' => __('Pull',     'x3p0-ideas')
+				'list-pull' => __('Pull', 'x3p0-ideas')
 			],
 			'core/tag-cloud' => [
 				'emoji' => __('Emoji', 'x3p0-ideas'),
