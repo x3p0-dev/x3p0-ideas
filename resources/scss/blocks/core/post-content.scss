@@ -29,6 +29,40 @@
 }
 
 // -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+///
+/// Use grid to handle the form layout.
+///
+/// @link https://github.com/WordPress/gutenberg/issues/70433
+///
+.post-password-form p:has(label, input) {
+
+	&,
+	label {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		gap: var(--wp--custom--gap, var(--wp--preset--spacing--40));
+	}
+
+	label {
+		gap: 0;
+	}
+
+	input[type=password] {
+		box-sizing: border-box;
+		display: block;
+		width: 100%;
+		margin-top: var(--wp--preset--spacing--10);
+	}
+
+	.wp-element-button {
+		width: fit-content;
+	}
+}
+
+// -----------------------------------------------------------------------------
 // Block style customizations.
 // -----------------------------------------------------------------------------
 

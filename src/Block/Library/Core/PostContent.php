@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace X3P0\Ideas\Block\Library\Core;
 
 use WP_Block;
+use WP_HTML_Tag_Processor;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
 use X3P0\Ideas\Views\Engine;
@@ -32,24 +33,69 @@ class PostContent implements Bootable
 	{}
 
 	/**
-	 * Filters the post content block when viewing single attachment views
-	 * and returns block-based media content.
+	 * Filters the post content block for handling password form fixes and
+	 * attachment views.
 	 */
 	#[Filter('render_block_core/post-content')]
 	public function render(
 		string $content,
 		array $block,
 		WP_Block $instance
-	): string {
-		// Bail early if there's no post ID or not specifically viewing
-		// the attachment page for this specific post.
-		if (
-			empty($instance->context['postId'])
-			|| ! is_attachment($instance->context['postId'])
-		) {
+	): string
+	{
+		if (empty($instance->context['postId'])) {
 			return $content;
 		}
 
+		// Filter the password form if password required.
+		if (post_password_required($instance->context['postId'])) {
+			return $this->renderPasswordForm($content);
+		}
+
+		// Render the attachment view if is attachment page.
+		if (is_attachment($instance->context['postId'])) {
+			return $this->renderAttachmentView($content, $block, $instance);
+		}
+
+		return $content;
+	}
+
+	/**
+	 * Filters the post content block when it is password protected to add
+	 * the `.wp-element-button` class to the submit button for the form.
+	 * This ensures that it correctly uses the `theme.json` styling.
+	 *
+	 * @link https://github.com/WordPress/gutenberg/issues/70433
+	 */
+	private function renderPasswordForm(string $content): string
+	{
+		$processor = new WP_HTML_Tag_Processor($content);
+
+		// Specifically look for `<input name="Submit"/>` and add the
+		// `.wp-element-button` class to it.
+		while ($processor->next_tag()) {
+			if (
+				'INPUT' === $processor->get_tag()
+				&& 'Submit' === $processor->get_attribute('name')
+			) {
+				$processor->add_class(wp_theme_get_element_class_name('button'));
+				break;
+			}
+		}
+
+		return $processor->get_updated_html();
+	}
+
+	/**
+	 * Filters the post content block when viewing single attachment views
+	 * and returns block-based media content.
+	 */
+	private function renderAttachmentView(
+		string $content,
+		array $block,
+		WP_Block $instance
+	): string
+	{
 		// Assign needed data.
 		$post_id = absint($instance->context['postId']);
 		$data    = [ 'post_id' => $post_id ];
