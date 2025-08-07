@@ -2061,6 +2061,7 @@
 			"title": "Template: Blank",
 			"postTypes": [
 				"page",
+				"portfolio_project",
 				"post"
 			]
 		},
@@ -2069,14 +2070,16 @@
 			"title": "Template: Canvas",
 			"postTypes": [
 				"page",
+				"portfolio_project",
 				"post"
 			]
 		},
 		{
-			"name": "template-page-header-cover",
-			"title": "Page: Header Cover",
+			"name": "template-header-cover",
+			"title": "Template: Header Cover",
 			"postTypes": [
-				"page"
+				"page",
+				"portfolio_project"
 			]
 		},
 		{
@@ -2200,8 +2203,8 @@
 		},
 		{
 			"area": "header",
-			"name": "header-single-page-cover",
-			"title": "Header: Page Cover"
+			"name": "header-single-cover",
+			"title": "Header: Single Cover"
 		},
 		{
 			"area": "header",
