@@ -140,6 +140,25 @@ class StyleVariations implements Bootable
 	#[Action('init')]
 	public function registerCssRules(): void
 	{
+		$gradient   = wp_get_global_styles(['color', 'gradient']);
+		$background = wp_get_global_styles(['color', 'background']);
+		$text       = wp_get_global_styles(['color', 'text']);
+
+		$gradient   = is_string($gradient) ? $gradient : 'none';
+		$background = is_string($background) ? $background : 'transparent';
+		$text       = is_string($text) ? $text : 'inherit';
+
+		$root_declarations = [];
+
+		$root_declarations['background'] = "var(--wp--custom--site-content--colour--background, {$background})";
+		$root_declarations['background-image'] = "var(--wp--custom--site-content--colour--gradient, {$gradient})";
+		$root_declarations['color'] = "var(--wp--custom--site-content--colour--foreground, {$text})";
+
+		$this->css_rules[] = new WP_Style_Engine_CSS_Rule(
+			"body:not(:has(.wp-site-blocks))",
+			$root_declarations
+		);
+
 		$variations = WP_Theme_JSON_Resolver::get_style_variations('block');
 
 		foreach ($variations as $variation) {

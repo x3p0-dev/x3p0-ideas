@@ -8,12 +8,14 @@
 	],
 	"styles": {
 		"color": {
-			"background": "transparent"
+			"background": "var(--wp--custom--site-header--colour--background, transparent)",
+			"gradient": "var(--wp--custom--site-header--colour--gradient, none)",
+			"text": "var(--wp--custom--site-header--colour--foreground, inherit)"
 		},
 		"blocks": {
 			"x3p0/breadcrumbs": {
 				"color": {
-					"gradient": "linear-gradient(90deg, var(--wp--custom--color--background--level-1) 0%, transparent 100%)"
+					"gradient": "linear-gradient(90deg, var(--wp--custom--colour--background--level-1) 0%, transparent 100%)"
 				},
 				"spacing": {
 					"padding":{

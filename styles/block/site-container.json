@@ -1,0 +1,17 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/wp/6.8/schemas/json/theme.json",
+	"version": 3,
+	"title": "Site Container",
+	"slug": "site-container",
+	"blockTypes": [
+		"core/group"
+	],
+	"styles": {
+		"css": "& > * { margin-top: 0; }",
+		"color": {
+			"background": "var(--wp--custom--site-container--colour--background, var(--wp--custom--body--colour--background, var(--wp--custom--colour--background--level-0)))",
+			"gradient": "var(--wp--custom--site-container--colour--gradient, none)",
+			"text": "var(--wp--custom--site-container--colour--foreground, inherit)"
+		}
+	}
+}

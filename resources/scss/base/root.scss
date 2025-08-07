@@ -19,8 +19,8 @@
 /// via `custom.global.::selectionColor` and `custom.global.::selectionBackground`.
 ///
 ::selection {
-	background: var(--wp--custom--color--background--accent);
-	color: var(--wp--custom--color--foreground--on-accent);
+	background: var(--wp--custom--colour--background--accent);
+	color: var(--wp--custom--colour--foreground--on-accent);
 }
 
 ///
@@ -33,9 +33,13 @@
 .editor-styles-wrapper .wp-site-blocks {
 	// Color.
 	background: var(--wp--custom--site-blocks--color--background, transparent);
+	color:      var(--wp--custom--site-blocks--color--foreground, inherit);
 
 	// Dimensions.
 	max-width: var(--wp--custom--site-blocks--dimensions--max-width, 100%);
+
+	// Layout.
+	contain: var(--wp--custom--site-blocks--layout--contain, none);
 
 	// Spacing.
 	margin:  var(--wp--custom--site-blocks--spacing--margin, 0);
@@ -44,23 +48,7 @@
 	// Border and shadow.
 	border-width:  var(--wp--custom--site-blocks--border--width, 0);
 	border-style:  var(--wp--custom--site-blocks--border--style, solid);
-	border-color:  var(--wp--custom--site-blocks--border--color, transparent);
+	border-color:  var(--wp--custom--site-blocks--border--colour, transparent);
 	border-radius: var(--wp--custom--site-blocks--border--radius, 0);
 	box-shadow:    var(--wp--custom--site-blocks--shadow, none);
-}
-
-///
-/// WordPress has no standard method of controlling the gap between blocks at the
-/// top level of the site other than wrapping the site in yet-another-div. This
-/// gives us an easy method to either wipe out or customize the gap via
-/// `custom.siteBlocks.spacing.blockGap` in `theme.json`.
-///
-.wp-site-blocks > *,
-.editor-styles-wrapper .wp-site-blocks > * {
-	margin-top: var(--wp--custom--site-blocks--spacing--block-gap, var(--wp--style--block-gap));
-}
-
-.wp-site-blocks > :first-child,
-.editor-styles-wrapper .wp-site-blocks > :first-child {
-	margin-top: 0;
 }

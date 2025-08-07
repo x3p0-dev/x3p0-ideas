@@ -16,8 +16,8 @@ body {
 	--wp--preset--color--white: #fff;
 
 	// Map TT4 standard color names to semantic theme colors.
-	--wp--preset--color--base:     var(--wp--custom--color--background--level-0, #fff);
-	--wp--preset--color--contrast: var(--wp--custom--color--foreground--default, #000);
+	--wp--preset--color--base:     var(--wp--custom--colour--background--level-0, #fff);
+	--wp--preset--color--contrast: var(--wp--custom--colour--foreground--default, #000);
 
 	/// Map default WordPress font sizes to the theme's sizes.
 	--wp--preset--font-size--small:   var(--wp--preset--font-size--xs);

@@ -19,10 +19,13 @@
 		}
 	},
 	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--primary-900)"
+		},
 		"variations": {
 			"site-content": {
 				"border": {
-					"color": "var(--wp--custom--border--primary--color)",
+					"color": "var(--wp--custom--border--primary--colour)",
 					"style": "var(--wp--custom--border--primary--style)",
 					"width": "var(--wp--custom--border--primary--width)",
 					"radius": "var(--wp--custom--border--primary--radius)"
@@ -31,7 +34,7 @@
 			},
 			"site-footer": {
 				"border": {
-					"color": "var(--wp--custom--border--primary--color)",
+					"color": "var(--wp--custom--border--primary--colour)",
 					"style": "var(--wp--custom--border--primary--style)",
 					"width": "var(--wp--custom--border--primary--width)",
 					"radius": "var(--wp--custom--border--primary--radius)"
@@ -43,7 +46,7 @@
 			},
 			"site-header": {
 				"border": {
-					"color": "var(--wp--custom--border--primary--color)",
+					"color": "var(--wp--custom--border--primary--colour)",
 					"style": "var(--wp--custom--border--primary--style)",
 					"width": "var(--wp--custom--border--primary--width)",
 					"radius": "var(--wp--custom--border--primary--radius)"

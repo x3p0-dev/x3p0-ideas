@@ -6,17 +6,17 @@
 	"blockTypes": [ "core/button" ],
 	"styles": {
 		"border": {
-			"color": "var(--wp--custom--elements--button--secondary--border--color)",
+			"color": "var(--wp--custom--elements--button--secondary--border--colour)",
 			"radius": "var(--wp--custom--elements--button--secondary--border--radius)",
 			"style": "var(--wp--custom--elements--button--secondary--border--style)",
 			"width": "var(--wp--custom--elements--button--secondary--border--width)"
 		},
 		"color": {
-			"background": "var(--wp--custom--elements--button--secondary--color--background)",
-			"text": "var(--wp--custom--elements--button--secondary--color--foreground)"
+			"background": "var(--wp--custom--elements--button--secondary--colour--background)",
+			"text": "var(--wp--custom--elements--button--secondary--colour--foreground)"
 		},
 		"outline": {
-			"color": "var(--wp--custom--elements--button--secondary--outline--color)",
+			"color": "var(--wp--custom--elements--button--secondary--outline--colour)",
 			"offset": "var(--wp--custom--elements--button--secondary--outline--offset)",
 			"style": "var(--wp--custom--elements--button--secondary--outline--style)",
 			"width": "var(--wp--custom--elements--button--secondary--outline--width)"

@@ -38,8 +38,8 @@
 		box-sizing: border-box;
 		padding: var(--wp--preset--spacing--40) var(--wp--style--block-gap);
 
-		background:  var(--wp--custom--elements--summary--color--background, transparent);
-		color:       var(--wp--custom--elements--summary--color--foreground, currentColor);
+		background:  var(--wp--custom--elements--summary--colour--background, transparent);
+		color:       var(--wp--custom--elements--summary--colour--foreground, currentColor);
 
 		font-family: var(--wp--custom--elements--summary--typography--font-family, inherit);
 		font-size:   var(--wp--custom--elements--summary--typography--font-size,   inherit);
@@ -51,8 +51,8 @@
 	&[open] summary,
 	summary:hover,
 	summary:focus {
-		background:  var(--wp--custom--elements--summary--hover--color--background, transparent);
-		color:       var(--wp--custom--elements--summary--hover--color--foreground, currentColor);
+		background:  var(--wp--custom--elements--summary--hover--colour--background, transparent);
+		color:       var(--wp--custom--elements--summary--hover--colour--foreground, currentColor);
 	}
 
 	// Disable the default browser marker and add a custom one.

@@ -13,8 +13,8 @@
 /// Container for the share dialog.
 ///
 .wp-embed-share-dialog {
-	background: var(--wp--custom--color--background--level-2);
-	color:      var(--wp--custom--color--foreground--primary);
+	background: var(--wp--custom--colour--background--level-2);
+	color:      var(--wp--custom--colour--foreground--primary);
 }
 
 ///
@@ -79,9 +79,9 @@
 	margin:     0;
 	padding:    var(--wp--preset--spacing--30);
 
-	color:       var(--wp--custom--color--foreground--primary, inherit);
-	background:  var(--wp--custom--color--background--level-1, transparent);
-	caret-color: var(--wp--custom--color--foreground--accent, inherit);
+	color:       var(--wp--custom--colour--foreground--primary, inherit);
+	background:  var(--wp--custom--colour--background--level-1, transparent);
+	caret-color: var(--wp--custom--colour--foreground--accent, inherit);
 
 	font-family: var(--wp--preset--font-family--mono);
 	font-size:   var(--wp--preset--font-size--sm);
@@ -89,7 +89,7 @@
 	font-weight: 400;
 	line-height: var(--wp--custom--line-height--sm);
 
-	border-color:  var(--wp--custom--border--primary--color, none);
+	border-color:  var(--wp--custom--border--primary--colour, none);
 	border-style:  var(--wp--custom--border--primary--style, solid);
 	border-width:  var(--wp--custom--border--primary--width, 1px);
 	border-radius: var(--wp--custom--border--primary--radius, none);
@@ -100,7 +100,7 @@
 	}
 
 	&:focus {
-		outline-color:  var(--wp--custom--color--foreground--accent, currentColor);
+		outline-color:  var(--wp--custom--colour--foreground--accent, currentColor);
 		outline-offset: var(--wp--custom--outline--primary--offset);
 		outline-style:  var(--wp--custom--outline--primary--style);
 		outline-width:  var(--wp--custom--outline--primary--width);
@@ -126,13 +126,13 @@
 	top:       var(--wp--style--block-gap);
 	right:     var(--wp--style--block-gap);
 	font-size: inherit;
-	color:     var(--wp--custom--elements--link--secondary--color--foreground);
+	color:     var(--wp--custom--elements--link--secondary--colour--foreground);
 
 	@include inline-icon.prefix(icon.get-url('close'));
 
 	&:hover,
 	&:focus {
-		color: var(--wp--custom--elements--link--secondary--hover--color--foreground);
+		color: var(--wp--custom--elements--link--secondary--hover--colour--foreground);
 	}
 
 	// Hide any dashicons since we're handling icons.

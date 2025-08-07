@@ -9,7 +9,9 @@
 	],
 	"styles": {
 		"color": {
-			"background": "transparent"
+			"background": "var(--wp--custom--site-content--colour--background, var(--wp--custom--site-container--colour--background, var(--wp--custom--body--colour--background, var(--wp--custom--colour--background--level-0))))",
+			"gradient": "var(--wp--custom--site-content--colour--gradient, none)",
+			"text": "var(--wp--custom--site-content--colour--foreground, inherit)"
 		}
 	}
 }

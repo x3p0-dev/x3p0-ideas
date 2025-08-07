@@ -9,7 +9,7 @@
 	],
 	"styles": {
 		"border": {
-			"color": "var(--wp--custom--border--primary--color)",
+			"color": "var(--wp--custom--border--primary--colour)",
 			"style": "var(--wp--custom--border--primary--style)",
 			"width": "var(--wp--custom--border--primary--width)",
 			"radius": "var(--wp--custom--border--primary--radius)"

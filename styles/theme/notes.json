@@ -1,0 +1,54 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/wp/6.8/schemas/json/theme.json",
+	"version": 3,
+	"title": "Notes",
+	"settings": {
+		"custom": {
+			"body": {
+				"colour": {
+					"background": "transparent",
+					"gradient": "var(--wp--preset--gradient--emerge)",
+					"foreground": "var(--wp--preset--color--white)"
+				}
+			},
+			"siteContent": {
+				"colour": {
+					"background": "var(--wp--custom--colour--background--level-0)",
+					"gradient": "none",
+					"foreground": "var(--wp--custom--colour--foreground--primary)"
+				}
+			},
+			"siteFooter": {
+				"colour": {
+					"background": "var(--wp--custom--colour--background--level-0)",
+					"foreground": "var(--wp--custom--colour--foreground--primary)"
+				}
+			},
+			"siteHeader": {
+				"colour": {
+					"background": "var(--wp--custom--colour--background--level-0)",
+					"foreground": "var(--wp--custom--colour--foreground--primary)"
+				}
+			}
+		}
+	},
+	"styles": {
+		"variations": {
+			"site-container": {
+				"css": "contain: paint; max-width: 56rem; width: 100%; & > * { margin-top: 0; }",
+				"border": {
+					"radius": "var(--wp--custom--border--primary--radius)"
+				},
+				"shadow": "var(--wp--custom--shadow--primary--default)",
+				"spacing": {
+					"margin": {
+						"top": "var(--wp--preset--spacing--100) !important",
+						"bottom": "var(--wp--preset--spacing--100) !important",
+						"left": "auto",
+						"right": "auto"
+					}
+				}
+			}
+		}
+	}
+}
