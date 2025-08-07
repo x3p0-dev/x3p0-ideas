@@ -20,7 +20,7 @@
 			},
 			"siteFooter": {
 				"colour": {
-					"background": "var(--wp--custom--colour--background--level-0)",
+					"background": "var(--wp--custom--colour--background--level-1)",
 					"foreground": "var(--wp--custom--colour--foreground--primary)"
 				}
 			},
