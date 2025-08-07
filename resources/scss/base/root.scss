@@ -34,6 +34,9 @@
 	// Color.
 	background: var(--wp--custom--site-blocks--color--background, transparent);
 
+	// Dimensions.
+	max-width: var(--wp--custom--site-blocks--dimensions--max-width, 100%);
+
 	// Spacing.
 	margin:  var(--wp--custom--site-blocks--spacing--margin, 0);
 	padding: var(--wp--custom--site-blocks--spacing--padding, 0);
