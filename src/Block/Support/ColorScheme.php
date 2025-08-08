@@ -188,30 +188,15 @@ class ColorScheme implements Bootable
 	 */
 	public function interactivityState(): array
 	{
-		$state = [
+		return wp_interactivity_state(self::STORE, [
 			'colorScheme'       => $this->getColorScheme(),
-			'isDark'            => null,
+			'isDark'            => $this->isDarkScheme(),
 			'userID'            => get_current_user_id(),
 			'name'              => self::NAME,
 			'switchableSchemes' => self::SWITCHABLE_SCHEMES,
 			'cookiePath'        => COOKIEPATH,
 			'cookieDomain'      => COOKIE_DOMAIN
-		];
-
-		// By default, we don't always know whether the color scheme is
-		// dark or light. But there are some scenarios where we do. One
-		// is where the user has stored their preferred scheme for the
-		// site. The other is when the theme has explicitly set a scheme
-		// that isn't switchable.
-		if ($user_scheme = $this->getUserScheme()) {
-			$state['isDark']  = 'dark' === $user_scheme;
-		} elseif (in_array($this->getGlobalScheme(), self::DARK_SCHEMES)) {
-			$state['isDark'] = true;
-		} elseif (in_array($this->getGlobalScheme(), self::LIGHT_SCHEMES)) {
-			$state['isDark'] = false;
-		}
-
-		return wp_interactivity_state(self::STORE, $state);
+		]);
 	}
 
 	/**
@@ -276,6 +261,28 @@ class ColorScheme implements Bootable
 			$scheme = sanitize_key(wp_unslash($_COOKIE[self::NAME]));
 
 			return in_array($scheme, self::USER_SCHEMES) ? $scheme : null;
+		}
+
+		return null;
+	}
+
+	/**
+	 * Determines if the current scheme is dark. By default, we don't always
+	 * know whether the color scheme is dark or light. But there are some
+	 * scenarios where we do. One is where the user has stored their
+	 * preferred scheme for the site. The other is when the theme has
+	 * explicitly set a scheme that isn't switchable. Note that this
+	 * function will return `null` if the light/dark state cannot be
+	 * determined at this point.
+	 */
+	private function isDarkScheme(): ?bool
+	{
+		if ($user_scheme = $this->getUserScheme()) {
+			return 'dark' === $user_scheme;
+		} elseif (in_array($this->getGlobalScheme(), self::DARK_SCHEMES, true)) {
+			return true;
+		} elseif (in_array($this->getGlobalScheme(), self::LIGHT_SCHEMES, true)) {
+			return false;
 		}
 
 		return null;
