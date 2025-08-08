@@ -249,21 +249,39 @@ class ColorScheme implements Bootable
 	 */
 	private function getUserScheme(): ?string
 	{
-		if (is_user_logged_in()) {
-			$scheme = get_user_meta(get_current_user_id(), self::NAME, true);
+		return $this->getSchemeFromMeta() ?? $this->getSchemeFromCookie();
+	}
 
-			return $scheme && in_array($scheme, self::USER_SCHEMES, true)
-				? $scheme
-				: null;
+	/**
+	 * Returns the user's preferred color scheme if it has been saved as
+	 * user metadata.
+	 */
+	private function getSchemeFromMeta(): ?string
+	{
+		if (! is_user_logged_in()) {
+			return null;
 		}
 
-		if (isset($_COOKIE[self::NAME])) {
-			$scheme = sanitize_key(wp_unslash($_COOKIE[self::NAME]));
+		$scheme = get_user_meta(get_current_user_id(), self::NAME, true);
 
-			return in_array($scheme, self::USER_SCHEMES, true) ? $scheme : null;
+		return $scheme && in_array($scheme, self::USER_SCHEMES, true)
+			? $scheme
+			: null;
+	}
+
+	/**
+	 * Returns the user's preferred color scheme if it has been saved as a
+	 * browser cookie.
+	 */
+	private function getSchemeFromCookie(): ?string
+	{
+		if (! isset($_COOKIE[self::NAME])) {
+			return null;
 		}
 
-		return null;
+		$scheme = sanitize_key(wp_unslash($_COOKIE[self::NAME]));
+
+		return in_array($scheme, self::USER_SCHEMES, true) ? $scheme : null;
 	}
 
 	/**
