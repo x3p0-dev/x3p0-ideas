@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas\Block\Support;
 
+use WP_Style_Engine_CSS_Rule;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Action, Hookable};
 
@@ -163,6 +164,23 @@ class ColorScheme implements Bootable
 
 		// Enqueue the script module.
 		wp_enqueue_script_module(self::NAME);
+	}
+
+	/**
+	 * Adds inline CSS in the front end and editor for printing the color
+	 * scheme on the root element.
+	 */
+	#[Action('enqueue_block_assets')]
+	public function enqueueBlockAssets(): void
+	{
+		$css = sprintf(
+			':root {color-scheme: %s;}',
+			esc_attr($this->getColorScheme())
+		);
+
+		wp_register_style(self::NAME, false);
+		wp_add_inline_style(self::NAME, $css);
+		wp_enqueue_style(self::NAME);
 	}
 
 	/**
