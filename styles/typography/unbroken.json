@@ -193,17 +193,11 @@
 					"fontSize": "var(--wp--preset--font-size--md)",
 					"fontStyle": "italic"
 				}
-			}
-		},
-		"variations": {
-			"site-header": {
-				"blocks": {
-					"x3p0/breadcrumbs": {
-						"typography": {
-							"fontFamily": "var(--wp--preset--font-family--secondary)",
-							"fontSize": "var(--wp--preset--font-size--xs)"
-						}
-					}
+			},
+			"x3p0/breadcrumbs": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--secondary)",
+					"fontSize": "var(--wp--preset--font-size--xs)"
 				}
 			}
 		}

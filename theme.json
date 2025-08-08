@@ -2052,6 +2052,30 @@
 			},
 			"outermost/icon-block": {
 				"css": "& svg {\n\tfill: currentColor;\n}"
+			},
+			"x3p0/breadcrumbs": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--xs)",
+					"lineHeight": "var(--wp--custom--line-height--xs)"
+				},
+				"elements": {
+					"link": {
+						"typography": {
+							"fontWeight": "500",
+							"textDecoration": "none"
+						},
+						":focus": {
+							"typography": {
+								"textDecoration": "underline"
+							}
+						},
+						":hover": {
+							"typography": {
+								"textDecoration": "underline"
+							}
+						}
+					}
+				}
 			}
 		}
 	},

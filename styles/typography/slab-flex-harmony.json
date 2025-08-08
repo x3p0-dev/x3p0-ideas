@@ -154,17 +154,11 @@
 					"letterSpacing": "0",
 					"textTransform": "none"
 				}
-			}
-		},
-		"variations": {
-			"site-header": {
-				"blocks": {
-					"x3p0/breadcrumbs": {
-						"typography": {
-							"fontSize": "var(--wp--preset--font-size--xs)",
-							"lineHeight": "var(--wp--custom--line-height--xs)"
-						}
-					}
+			},
+			"x3p0/breadcrumbs": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--xs)",
+					"lineHeight": "var(--wp--custom--line-height--xs)"
 				}
 			}
 		}

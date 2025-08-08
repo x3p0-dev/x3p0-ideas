@@ -11,43 +11,6 @@
 			"background": "var(--wp--custom--site-header--colour--background, transparent)",
 			"gradient": "var(--wp--custom--site-header--colour--gradient, none)",
 			"text": "var(--wp--custom--site-header--colour--foreground, inherit)"
-		},
-		"blocks": {
-			"x3p0/breadcrumbs": {
-				"color": {
-					"gradient": "linear-gradient(90deg, var(--wp--custom--colour--background--level-1) 0%, transparent 100%)"
-				},
-				"spacing": {
-					"padding":{
-						"top": "var(--wp--preset--spacing--40)",
-						"right": "var(--wp--preset--spacing--70)",
-						"bottom": "var(--wp--preset--spacing--40)",
-						"left": "var(--wp--preset--spacing--70)"
-					}
-				},
-				"typography": {
-					"fontSize": "var(--wp--preset--font-size--xs)",
-					"lineHeight": "var(--wp--custom--line-height--xs)"
-				},
-				"elements": {
-					"link": {
-						"typography": {
-							"fontWeight": "500",
-							"textDecoration": "none"
-						},
-						":focus": {
-							"typography": {
-								"textDecoration": "underline"
-							}
-						},
-						":hover": {
-							"typography": {
-								"textDecoration": "underline"
-							}
-						}
-					}
-				}
-			}
 		}
 	}
 }

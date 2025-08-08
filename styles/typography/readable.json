@@ -170,23 +170,19 @@
 					"fontSize": "var(--wp--preset--font-size--md)",
 					"fontStyle": "normal"
 				}
+			},
+			"x3p0/breadcrumbs": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--secondary)",
+					"fontSize": "var(--wp--preset--font-size--xs)",
+					"fontStyle": "normal"
+				}
 			}
 		},
 		"variations": {
 			"meta": {
 				"typography": {
 					"fontWeight": "300"
-				}
-			},
-			"site-header": {
-				"blocks": {
-					"x3p0/breadcrumbs": {
-						"typography": {
-							"fontFamily": "var(--wp--preset--font-family--secondary)",
-							"fontSize": "var(--wp--preset--font-size--xs)",
-							"fontStyle": "normal"
-						}
-					}
 				}
 			}
 		}

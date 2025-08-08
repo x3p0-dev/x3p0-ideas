@@ -128,18 +128,12 @@
 				"typography": {
 					"fontStyle": "italic"
 				}
-			}
-		},
-		"variations": {
-			"site-header": {
-				"blocks": {
-					"x3p0/breadcrumbs": {
-						"typography": {
-							"fontFamily": "var(--wp--preset--font-family--tertiary)",
-							"fontSize": "var(--wp--preset--font-size--md)",
-							"lineHeight": "var(--wp--custom--line-height--md)"
-						}
-					}
+			},
+			"x3p0/breadcrumbs": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--tertiary)",
+					"fontSize": "var(--wp--preset--font-size--md)",
+					"lineHeight": "var(--wp--custom--line-height--md)"
 				}
 			}
 		}
