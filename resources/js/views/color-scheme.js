@@ -18,7 +18,7 @@ const { callbacks, state } = store('x3p0-ideas/color-scheme', {
 		 * @returns {boolean}
 		 */
 		get isLoggedIn() {
-			return 0 < state.userID;
+			return 0 < state.userId;
 		}
 	},
 	actions: {
@@ -37,7 +37,7 @@ const { callbacks, state } = store('x3p0-ideas/color-scheme', {
 			// user meta instead of a cookie.
 			if (state.isLoggedIn) {
 				wp.apiFetch( {
-					path: `/wp/v2/users/${state.userID}`,
+					path: `/wp/v2/users/${state.userId}`,
 					method: 'POST',
 					data: {
 						meta: {

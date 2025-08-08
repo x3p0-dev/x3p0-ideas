@@ -191,7 +191,7 @@ class ColorScheme implements Bootable
 		return wp_interactivity_state(self::STORE, [
 			'colorScheme'       => $this->getColorScheme(),
 			'isDark'            => $this->isDarkScheme(),
-			'userID'            => get_current_user_id(),
+			'userId'            => get_current_user_id(),
 			'name'              => self::NAME,
 			'switchableSchemes' => self::SWITCHABLE_SCHEMES,
 			'cookiePath'        => COOKIEPATH,
