@@ -61,6 +61,7 @@ class Media implements BlockBindingSource
 		return match ($args['key']) {
 			'alt'        => $this->renderAlt($args),
 			'caption'    => $this->renderCaption($args),
+			'id'         => strval($this->post_id),
 			'src', 'url' => $this->renderUrl($args),
 			default      => $this->renderMeta($args)
 		};

@@ -100,6 +100,18 @@ class PostContent implements Bootable
 		$post_id = absint($instance->context['postId']);
 		$data    = [ 'post_id' => $post_id ];
 
+		// Bindable attributes hook prefix.
+		$prefix = 'block_bindings_supported_attributes_core';
+
+		// Bail if the hook has already fired. This is how we check that
+		// a user is running WordPress 6.9+ and no longer needs this.
+		if (
+			wp_attachment_is('video', $post_id) && did_filter("{$prefix}/video")
+			|| wp_attachment_is('audio', $post_id) && did_filter("{$prefix}/audio")
+		) {
+			return $content;
+		}
+
 		// Get the media view names.
 		$media = $this->attachmentViewNames(
 			'media',

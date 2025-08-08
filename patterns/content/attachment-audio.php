@@ -51,6 +51,8 @@ defined('ABSPATH') || exit;
 		</header>
 		<!-- /wp:group -->
 
+		<!-- wp:pattern {"slug":"x3p0-ideas/attachment-media-audio"} /-->
+
 		<!-- wp:post-content {
 			"layout":{"type":"constrained"},
 			"className":"is-style-prose"

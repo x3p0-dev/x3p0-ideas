@@ -15,7 +15,7 @@ namespace X3P0\Ideas\Block\Bindings;
 
 use WP_Block_Bindings_Registry;
 use X3P0\Ideas\Contracts\{BlockBindingSource, Bootable};
-use X3P0\Ideas\Tools\Hooks\{Action, Hookable};
+use X3P0\Ideas\Tools\Hooks\{Action, Filter, Hookable};
 
 /**
  * The Bindings component registers custom binding sources with the WordPress
@@ -44,5 +44,15 @@ class Component implements Bootable
 				(new $source())->register($this->bindings);
 			}
 		}
+	}
+
+	/**
+	 * Adds supported attributes for the Audio and Video blocks.
+	 */
+	#[Filter('block_bindings_supported_attributes_core/audio')]
+	#[Filter('block_bindings_supported_attributes_core/video')]
+	public function mediaBindableAttrs(array $attrs): array
+	{
+		return array_merge($attrs, [ 'src' ]);
 	}
 }
