@@ -120,7 +120,7 @@ class ColorScheme implements Bootable
 	#[Action('init')]
 	public function registerMeta(): void
 	{
-		$sanitize = fn($value) => in_array($value, self::USER_SCHEMES) ? $value : '';
+		$sanitize = fn($value) => in_array($value, self::USER_SCHEMES, true) ? $value : '';
 
 		register_meta('user', self::NAME, [
 			'label'             => __('Color Scheme', 'x3p0-ideas'),
@@ -205,7 +205,7 @@ class ColorScheme implements Bootable
 	 */
 	public function isSwitchable(): bool
 	{
-		return in_array($this->getGlobalScheme(), self::SWITCHABLE_SCHEMES);
+		return in_array($this->getGlobalScheme(), self::SWITCHABLE_SCHEMES, true);
 	}
 
 	/**
@@ -238,7 +238,7 @@ class ColorScheme implements Bootable
 			$scheme = wp_get_global_settings(['custom', 'color-scheme']);
 		}
 
-		return is_string($scheme) && in_array($scheme, self::GLOBAL_SCHEMES)
+		return is_string($scheme) && in_array($scheme, self::GLOBAL_SCHEMES, true)
 			? $scheme
 			: self::DEFAULT_SCHEME;
 	}
@@ -252,7 +252,7 @@ class ColorScheme implements Bootable
 		if (is_user_logged_in()) {
 			$scheme = get_user_meta(get_current_user_id(), self::NAME, true);
 
-			return $scheme && in_array($scheme, self::USER_SCHEMES)
+			return $scheme && in_array($scheme, self::USER_SCHEMES, true)
 				? $scheme
 				: null;
 		}
@@ -260,7 +260,7 @@ class ColorScheme implements Bootable
 		if (isset($_COOKIE[self::NAME])) {
 			$scheme = sanitize_key(wp_unslash($_COOKIE[self::NAME]));
 
-			return in_array($scheme, self::USER_SCHEMES) ? $scheme : null;
+			return in_array($scheme, self::USER_SCHEMES, true) ? $scheme : null;
 		}
 
 		return null;
