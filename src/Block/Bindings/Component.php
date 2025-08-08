@@ -26,6 +26,16 @@ class Component implements Bootable
 	use Hookable;
 
 	/**
+	 * Defines blocks and their supported bindable attributes.
+	 *
+	 * @todo Type hint with PHP 8.3+ requirement.
+	 */
+	private const SUPPORTED_ATTRIBUTES = [
+		'core/audio' => ['src'],
+		'core/video' => ['src']
+	];
+
+	/**
 	 * Sets up the initial object state.
 	 */
 	public function __construct(
@@ -51,8 +61,12 @@ class Component implements Bootable
 	 */
 	#[Filter('block_bindings_supported_attributes_core/audio')]
 	#[Filter('block_bindings_supported_attributes_core/video')]
-	public function mediaBindableAttrs(array $attrs): array
+	public function addSupportedAttributes(array $attrs): array
 	{
-		return array_merge($attrs, [ 'src' ]);
+		$block = str_replace('block_bindings_supported_attributes_', '', current_filter());
+
+		return isset(self::SUPPORTED_ATTRIBUTES[$block])
+			? array_merge($attrs, self::SUPPORTED_ATTRIBUTES[$block])
+			: $attrs;
 	}
 }
