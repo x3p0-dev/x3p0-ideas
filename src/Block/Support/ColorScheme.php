@@ -13,7 +13,6 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas\Block\Support;
 
-use WP_Style_Engine_CSS_Rule;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Action, Hookable};
 
