@@ -31,7 +31,7 @@ defined('ABSPATH') || exit;
 		}
 	} -->
 	<figure class="wp-block-video alignwide">
-		<video controls muted src=""></video>
+		<video controls src="#"></video>
 	</figure>
 	<!-- /wp:video -->
 
