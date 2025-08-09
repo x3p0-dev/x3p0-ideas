@@ -108,6 +108,7 @@ class PostContent implements Bootable
 		if (
 			wp_attachment_is('video', $post_id) && did_filter("{$prefix}/video")
 			|| wp_attachment_is('audio', $post_id) && did_filter("{$prefix}/audio")
+			|| did_filter("{$prefix}/file")
 		) {
 			return $content;
 		}

@@ -127,6 +127,11 @@ class Theme implements Bootable, Container
 		);
 
 		$this->instance(
+			'block.library.core.file',
+			new Block\Library\Core\File(WP_Block_Type_Registry::get_instance())
+		);
+
+		$this->instance(
 			'block.library.core.post-content',
 			new Block\Library\Core\PostContent(new Views\Engine())
 		);
@@ -140,7 +145,6 @@ class Theme implements Bootable, Container
 			'comment-content'    => Block\Library\Core\CommentContent::class,
 			'comments'           => Block\Library\Core\Comments::class,
 			'cover'              => Block\Library\Core\Cover::class,
-			'file'               => Block\Library\Core\File::class,
 			'group'              => Block\Library\Core\Group::class,
 			'heading'            => Block\Library\Core\Heading::class,
 			'loginout'           => Block\Library\Core\Loginout::class,

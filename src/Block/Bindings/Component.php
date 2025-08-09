@@ -32,7 +32,13 @@ class Component implements Bootable
 	 */
 	private const SUPPORTED_ATTRIBUTES = [
 		'core/audio' => ['src'],
-		'core/video' => ['src']
+		'core/video' => ['src'],
+		'core/file'  => [
+			'downloadButtonText',
+			'fileName',
+			'href',
+			'textLinkHref'
+		]
 	];
 
 	/**
@@ -60,6 +66,7 @@ class Component implements Bootable
 	 * Adds supported attributes for the Audio and Video blocks.
 	 */
 	#[Filter('block_bindings_supported_attributes_core/audio')]
+	#[Filter('block_bindings_supported_attributes_core/file')]
 	#[Filter('block_bindings_supported_attributes_core/video')]
 	public function addSupportedAttributes(array $attrs): array
 	{

@@ -48,6 +48,8 @@ defined('ABSPATH') || exit;
 	<!-- /wp:group -->
 
 	<!-- wp:navigation {
+		"templateLock":false,
+		"lock":{"move":false,"remove":false,"edit":true},
 		"icon":"menu",
 		"layout":{
 			"type":"flex",

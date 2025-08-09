@@ -61,10 +61,21 @@ class Media implements BlockBindingSource
 		return match ($args['key']) {
 			'alt'        => $this->renderAlt($args),
 			'caption'    => $this->renderCaption($args),
-			'id'         => strval($this->post_id),
+			'id'         => $this->post_id,
 			'src', 'url' => $this->renderUrl($args),
+			'title'      => esc_html(wp_strip_all_tags(get_the_title($this->post_id))),
 			default      => $this->renderMeta($args)
 		};
+	}
+
+	/**
+	 * Renders the attachment title.
+	 */
+	private function renderTitle(): ?string
+	{
+		$title = get_the_title($this->post_id);
+
+		return $title ? esc_html(wp_strip_all_tags($title)) : null;
 	}
 
 	/**

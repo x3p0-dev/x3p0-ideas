@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Title: Attachment Content
- * Slug: x3p0-ideas/content-attachment
+ * Title: PDF Attachment Content
+ * Slug: x3p0-ideas/content-attachment-pdf
  * Inserter: no
  */
 
@@ -51,7 +51,7 @@ defined('ABSPATH') || exit;
 		</header>
 		<!-- /wp:group -->
 
-		<!-- wp:pattern {"slug":"x3p0-ideas/attachment-media-file"} /-->
+		<!-- wp:pattern {"slug":"x3p0-ideas/attachment-media-pdf"} /-->
 
 		<!-- wp:post-content {
 			"layout":{"type":"constrained"},
