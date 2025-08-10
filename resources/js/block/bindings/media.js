@@ -10,7 +10,7 @@ import { registerBlockBindingsSource } from '@wordpress/blocks';
 import { __, sprintf } from '@wordpress/i18n';
 
 // @todo Figure out a way to not have to recreate these labels in JS.
-const placeholders = {
+const metaPlaceholders = {
 	album: {
 		value: '...',
 		label: __('Album:', 'x3p0-ideas')
@@ -77,6 +77,15 @@ const placeholders = {
 	}
 };
 
+const placeholders = {
+	'alt':     __('Alternate Text', 'x3p0-ideas'),
+	'caption': __('Media Caption...', 'x3p0-ideas'),
+	'id':      '00',
+	'src':     '#',
+	'url':     '#',
+	'title':   __('Media Title', 'x3p0-ideas')
+};
+
 const wrapper = (value, label) => {
 	return sprintf(
 		'<span class="media-data__label" style="font-weight:500">%s</span><span class="media-data__content has-xs-font-size has-mono-font-family">%s</span>',
@@ -93,11 +102,13 @@ registerBlockBindingsSource({
 		for (const [ attributeName, source ] of Object.entries(bindings)) {
 			const bindingKey = source.args?.key || attributeName;
 
-			if (bindingKey in placeholders) {
+			if (bindingKey in metaPlaceholders) {
 				values[attributeName] = wrapper(
-					placeholders[bindingKey].value,
-					placeholders[bindingKey].label
+					metaPlaceholders[bindingKey].value,
+					metaPlaceholders[bindingKey].label
 				);
+			} else if (bindingKey in placeholders) {
+				values[attributeName] = placeholders[bindingKey]
 			} else {
 				values[attributeName] = bindingKey;
 			}
