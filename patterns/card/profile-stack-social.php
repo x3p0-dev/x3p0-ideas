@@ -117,7 +117,9 @@ use X3P0\Ideas\Tools\Placeholder;
 			"spacing":{
 				"padding":{
 					"top":"var:preset|spacing|40",
-					"bottom":"var:preset|spacing|40"
+					"bottom":"var:preset|spacing|40",
+					"left":"var:preset|spacing|70",
+					"right":"var:preset|spacing|70"
 				}
 			}
 		},
@@ -125,7 +127,7 @@ use X3P0\Ideas\Tools\Placeholder;
 			"type":"default"
 		}
 	} -->
-	<footer class="wp-block-group is-style-section-2" style="padding-top:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40)">
+	<footer class="wp-block-group is-style-section-2" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--70)">
 
 		<!-- wp:social-links {
 			"size":"has-huge-icon-size",

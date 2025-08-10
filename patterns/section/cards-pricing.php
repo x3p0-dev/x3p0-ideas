@@ -2,7 +2,7 @@
 
 /**
  * Title: Section: Pricing Cards
- * Slug: x3p0-ideas/section-pricing-cards
+ * Slug: x3p0-ideas/section-cards-pricing
  * Categories: x3p0-grid
  * Keywords: pricing
  * Viewport Width: 1376

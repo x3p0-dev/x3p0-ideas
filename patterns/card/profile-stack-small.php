@@ -18,7 +18,13 @@ defined('ABSPATH') || exit;
 	"metadata":{"name":"<?= esc_attr__('Card', 'x3p0-ideas') ?>"},
 	"style":{
 		"spacing":{
-			"blockGap":"var:preset|spacing|40"
+			"blockGap":"var:preset|spacing|40",
+			"padding":{
+				"top":"var:preset|spacing|70",
+				"bottom":"var:preset|spacing|70",
+				"left":"var:preset|spacing|70",
+				"right":"var:preset|spacing|70"
+			}
 		},
 		"typography":{
 			"textAlign":"center"
@@ -32,7 +38,7 @@ defined('ABSPATH') || exit;
 	},
 	"fontSize":"sm"
 } -->
-<div class="wp-block-group has-text-align-center has-global-border is-style-section-1 has-sm-font-size">
+<div class="wp-block-group has-text-align-center has-global-border is-style-section-1 has-sm-font-size" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)">
 
 	<!-- wp:avatar {
 		"userId":1,

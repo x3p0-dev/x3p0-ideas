@@ -21,10 +21,20 @@ use X3P0\Ideas\Tools\Placeholder;
 <!-- wp:group {
 	"align":"wide",
 	"className":"is-style-section-1 has-global-border",
-	"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},
+	"style":{
+		"spacing":{
+			"blockGap":"var:preset|spacing|40",
+			"padding":{
+				"top":"var:preset|spacing|70",
+				"bottom":"var:preset|spacing|70",
+				"left":"var:preset|spacing|70",
+				"right":"var:preset|spacing|70"
+			}
+		}
+	},
 	"layout":{"type":"grid","minimumColumnWidth":"22rem"}
 } -->
-<div class="wp-block-group alignwide is-style-section-1 has-global-border">
+<div class="wp-block-group alignwide is-style-section-1 has-global-border" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)">
 
 	<!-- wp:group {
 		"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},

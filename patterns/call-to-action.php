@@ -21,13 +21,19 @@ use X3P0\Ideas\Tools\Placeholder;
 	"style":{
 		"typography":{
 			"textAlign":"center"
+		},
+		"spacing":{
+			"padding":{
+				"top":"var:preset|spacing|70",
+				"bottom":"var:preset|spacing|70",
+				"left":"var:preset|spacing|70",
+				"right":"var:preset|spacing|70"
+			}
 		}
 	},
-	"layout":{
-		"type":"constrained"
-	}
+	"layout":{"type":"constrained"}
 } -->
-<div class="wp-block-group has-text-align-center alignwide is-style-section-1">
+<div class="wp-block-group has-text-align-center alignwide is-style-section-1" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)">
 
 	<!-- wp:heading -->
 	<h2 class="wp-block-heading"><?= esc_html__('Placeholder Heading', 'x3p0-ideas') ?></h2>

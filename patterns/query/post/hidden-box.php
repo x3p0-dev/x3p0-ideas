@@ -20,6 +20,14 @@ defined('ABSPATH') || exit;
 	"style":{
 		"dimensions":{
 			"minHeight":"100%"
+		},
+		"spacing":{
+			"padding":{
+				"top":"var:preset|spacing|70",
+				"bottom":"var:preset|spacing|70",
+				"left":"var:preset|spacing|70",
+				"right":"var:preset|spacing|70"
+			}
 		}
 	},
 	"className":"has-global-border is-style-section-1",
@@ -30,7 +38,7 @@ defined('ABSPATH') || exit;
 		"justifyContent":"stretch"
 	}
 } -->
-<article class="wp-block-group has-global-border is-style-section-1" style="min-height:100%">
+<article class="wp-block-group has-global-border is-style-section-1" style="min-height:100%;padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)">
 
 	<!-- wp:group {
 		"metadata":{

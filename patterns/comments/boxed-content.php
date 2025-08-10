@@ -47,6 +47,16 @@ defined('ABSPATH') || exit;
 	<!-- /wp:group -->
 
 	<!-- wp:post-comments-form {
+		"style":{
+			"spacing":{
+				"padding":{
+					"top":"var:preset|spacing|70",
+					"bottom":"var:preset|spacing|70",
+					"left":"var:preset|spacing|70",
+					"right":"var:preset|spacing|70"
+				}
+			}
+		},
 		"className":"is-style-section-1 has-global-border has-icons"
 	} /-->
 

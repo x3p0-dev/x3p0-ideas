@@ -76,7 +76,9 @@ use X3P0\Ideas\Tools\Placeholder;
 			"spacing":{
 				"padding":{
 					"top":"var:preset|spacing|40",
-					"bottom":"var:preset|spacing|40"
+					"bottom":"var:preset|spacing|40",
+					"left":"var:preset|spacing|70",
+					"right":"var:preset|spacing|70"
 				},
 				"blockGap":"var:preset|spacing|10"
 			}
@@ -87,7 +89,7 @@ use X3P0\Ideas\Tools\Placeholder;
 			"flexWrap":"nowrap"
 		}
 	} -->
-	<div class="wp-block-group is-style-section-4" style="padding-top:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40)">
+	<div class="wp-block-group is-style-section-4" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--70)">
 
 		<!-- wp:paragraph {
 			"style":{

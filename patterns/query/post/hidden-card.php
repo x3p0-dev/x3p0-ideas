@@ -116,10 +116,20 @@ defined('ABSPATH') || exit;
 		"metadata":{
 			"name":"<?= esc_attr__('Post Footer', 'x3p0-ideas') ?>"
 		},
+		"style":{
+			"spacing":{
+				"padding":{
+					"top":"var:preset|spacing|40",
+					"bottom":"var:preset|spacing|40",
+					"left":"var:preset|spacing|70",
+					"right":"var:preset|spacing|70"
+				}
+			}
+		},
 		"className":"is-style-section-2",
 		"layout":{"type":"default"}
 	} -->
-	<footer class="wp-block-group is-style-section-2">
+	<footer class="wp-block-group is-style-section-2" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--70)">
 
 		<!-- wp:pattern {"slug":"x3p0-ideas/post-byline-short"} /-->
 

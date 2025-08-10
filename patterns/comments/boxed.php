@@ -15,24 +15,26 @@ defined('ABSPATH') || exit;
 
 ?>
 <!-- wp:comments {
-	"style":{
-		"spacing":{
-			"padding":{
-				"top":"var:preset|spacing|70",
-				"bottom":"var:preset|spacing|70"
-			}
-		}
-	},
 	"layout":{"type":"constrained"}
 } -->
-<div class="wp-block-comments" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
+<div class="wp-block-comments">
 
 	<!-- wp:group {
 		"metadata":{"name":"<?= esc_attr__('Comments Container', 'x3p0-ideas') ?>"},
+		"style":{
+			"spacing":{
+				"padding":{
+					"top":"var:preset|spacing|70",
+					"bottom":"var:preset|spacing|70",
+					"right":"var:preset|spacing|70",
+					"left":"var:preset|spacing|70"
+				}
+			}
+		},
 		"className":"has-global-border is-style-section-1",
 		"layout":{"type":"constrained"}
 	} -->
-	<div class="wp-block-group has-global-border is-style-section-1">
+	<div class="wp-block-group has-global-border is-style-section-1" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)">
 
 		<!-- wp:comments-title {
 			"showPostTitle":false,

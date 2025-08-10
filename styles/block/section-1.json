@@ -169,14 +169,6 @@
 		"color": {
 			"background": "var(--wp--custom--colour--background--level-0)",
 			"text": "var(--wp--custom--colour--foreground--primary)"
-		},
-		"spacing": {
-			"padding": {
-				"top": "var(--wp--preset--spacing--70)",
-				"bottom": "var(--wp--preset--spacing--70)",
-				"left": "var(--wp--preset--spacing--70)",
-				"right": "var(--wp--preset--spacing--70)"
-			}
 		}
 	}
 }

@@ -27,48 +27,39 @@ use X3P0\Ideas\Tools\Placeholder;
 		"spacing":{
 			"padding":{
 				"top":"var:preset|spacing|90",
-				"bottom":"var:preset|spacing|90"
+				"bottom":"var:preset|spacing|90",
+				"left":"var:preset|spacing|70",
+				"right":"var:preset|spacing|70"
 			}
 		}
 	},
 	"className":"is-style-section-1",
-	"layout":{"type":"constrained"}
+	"layout":{"type":"default"}
 } -->
-<section class="wp-block-group alignfull is-style-section-1" style="padding-top:var(--wp--preset--spacing--90);padding-bottom:var(--wp--preset--spacing--90)">
+<section class="wp-block-group alignfull is-style-section-1" style="padding-top:var(--wp--preset--spacing--90);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--90);padding-left:var(--wp--preset--spacing--70)">
 
 	<!-- wp:columns {
 		"verticalAlignment":"center",
-		"align":"full",
 		"style":{
 			"spacing":{
 				"blockGap":{
-					"top":"0",
-					"left":"var:preset|spacing|70"
+					"top":"var:preset|spacing|70",
+					"left":"var:preset|spacing|90"
 				}
 			}
 		}
 	} -->
-	<div class="wp-block-columns alignfull are-vertically-aligned-center">
+	<div class="wp-block-columns are-vertically-aligned-center">
 
 		<!-- wp:column {
 			"verticalAlignment":"center",
 			"width":"",
-			"style":{
-				"spacing":{
-					"padding":{
-						"top":"var:preset|spacing|70",
-						"bottom":"var:preset|spacing|70",
-						"left":"var:preset|spacing|70",
-						"right":"var:preset|spacing|70"
-					}
-				}
-			},
 			"layout":{
 				"type":"constrained",
 				"justifyContent":"left"
 			}
 		} -->
-		<div class="wp-block-column is-vertically-aligned-center" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)">
+		<div class="wp-block-column is-vertically-aligned-center">
 
 			<!-- wp:heading {"fontSize":"6-xl"} -->
 			<h2 class="wp-block-heading has-6-xl-font-size"><?= esc_html(Placeholder::text(8, '')) ?></h2>
