@@ -4,46 +4,25 @@
 	"title": "Notes",
 	"settings": {
 		"custom": {
-			"body": {
-				"colour": {
-					"background": "transparent",
-					"gradient": "var(--wp--preset--gradient--emerge)",
-					"foreground": "var(--wp--preset--color--white)"
-				}
-			},
-			"siteContent": {
-				"colour": {
-					"background": "var(--wp--custom--colour--background--level-0)",
-					"gradient": "none",
-					"foreground": "var(--wp--custom--colour--foreground--primary)"
-				}
-			},
-			"siteFooter": {
-				"colour": {
-					"background": "var(--wp--custom--colour--background--level-1)",
-					"foreground": "var(--wp--custom--colour--foreground--primary)"
-				}
-			},
-			"siteHeader": {
-				"colour": {
-					"background": "var(--wp--custom--colour--background--level-0)",
-					"foreground": "var(--wp--custom--colour--foreground--primary)"
-				}
-			}
+			"variation": "notes"
 		}
 	},
 	"styles": {
+		"css": "@layer variation { body { background: var(--wp--preset--gradient--emerge); } }",
+		"color": {
+			"gradient": "var(--wp--preset--gradient--emerge)"
+		},
 		"variations": {
 			"site-container": {
 				"css": "contain: paint; max-width: 56rem; width: 100%; & > * { margin-top: 0; }",
 				"border": {
-					"radius": "var(--wp--custom--border--primary--radius)"
+					"radius": "clamp(0rem, calc(0.23583 * (100cqi - 56rem)), var(--wp--custom--border--primary--radius))"
 				},
 				"shadow": "var(--wp--custom--shadow--primary--default)",
 				"spacing": {
 					"margin": {
-						"top": "var(--wp--preset--spacing--100) !important",
-						"bottom": "var(--wp--preset--spacing--100) !important",
+						"top": "clamp(0rem, calc(0.23583 * (100cqi - 56rem)), 5.66rem) !important",
+						"bottom": "clamp(0rem, calc(0.23583 * (100cqi - 56rem)), 5.66rem) !important",
 						"left": "auto",
 						"right": "auto"
 					}

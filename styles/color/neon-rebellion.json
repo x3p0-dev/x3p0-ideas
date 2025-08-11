@@ -182,5 +182,12 @@
 				}
 			]
 		}
+	},
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--primary-950)",
+			"gradient": "var(--wp--preset--gradient--emerge)",
+			"text": "var(--wp--preset--color--white)"
+		}
 	}
 }

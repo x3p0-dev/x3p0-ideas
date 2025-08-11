@@ -81,7 +81,7 @@ defined('ABSPATH') || exit;
 	</div>
 	<!-- /wp:group -->
 
-	<!-- wp:pattern {"slug":"x3p0-ideas/breadcrumbs"} /-->
+	<!-- wp:pattern {"slug":"x3p0-ideas/breadcrumbs-centered"} /-->
 
 </div>
 <!-- /wp:group -->

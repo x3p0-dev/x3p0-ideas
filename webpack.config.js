@@ -23,17 +23,17 @@ const { globSync } = require('glob');
  * are not imported into the primary stylesheets and are enqueued separately.
  *
  * @since  1.0.0
- * @param  {string} namespace
+ * @param  {string} dir
  * @return {Object.<string, string>}
  */
-const blockStylesheets = (namespace) => {
-	return globSync(`./resources/scss/blocks/${namespace}/*.scss`).reduce(
+const groupStylesheets = (dir) => {
+	return globSync(`./resources/scss/${dir}/*.scss`).reduce(
 		(files, filepath) => {
 			const name = path.parse(filepath).name;
 
-			files[`css/blocks/${ namespace }/${name}`] = path.resolve(
+			files[`css/${dir}/${name}`] = path.resolve(
 				process.cwd(),
-				`resources/scss/blocks/${namespace}`,
+				`resources/scss/${dir}`,
 				`${name}.scss`
 			);
 
@@ -54,7 +54,7 @@ module.exports = (() => {
 			...scriptConfig,
 			...{
 				entry: {
-					...blockStylesheets('core'),
+					...groupStylesheets('blocks/core'),
 					'js/editor':  path.resolve(process.cwd(), 'resources/js',   'editor.js'),
 					'css/screen': path.resolve(process.cwd(), 'resources/scss', 'screen.scss'),
 					'css/editor': path.resolve(process.cwd(), 'resources/scss', 'editor.scss'),

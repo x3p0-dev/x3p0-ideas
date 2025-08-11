@@ -8,9 +8,9 @@
 	],
 	"styles": {
 		"color": {
-			"background": "var(--wp--custom--site-header--colour--background, transparent)",
-			"gradient": "var(--wp--custom--site-header--colour--gradient, none)",
-			"text": "var(--wp--custom--site-header--colour--foreground, inherit)"
+			"background": "var(--wp--custom--colour--background--level-0)",
+			"gradient": "none",
+			"text": "var(--wp--custom--colour--foreground--primary)"
 		}
 	}
 }

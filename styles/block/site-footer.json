@@ -9,9 +9,9 @@
 	],
 	"styles": {
 		"color": {
-			"background": "var(--wp--custom--site-footer--colour--background, var(--wp--custom--colour--background--level-1))",
-			"gradient": "var(--wp--custom--site-footer--colour--gradient, none)",
-			"text": "var(--wp--custom--site-footer--colour--foreground, inherit)"
+			"background": "var(--wp--custom--colour--background--level-1)",
+			"gradient": "none",
+			"text": "var(--wp--custom--colour--foreground--primary)"
 		}
 	}
 }
