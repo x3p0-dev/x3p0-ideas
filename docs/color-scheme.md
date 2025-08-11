@@ -279,11 +279,13 @@ Except for `--wp--preset--color--black` and `--wp--preset--color--white` in case
 
 ## Semantic Colors
 
-The semantic color layer allows you to assign primitive color tokens to semantically-mapped colors that are used throughout the design. Essentially, the
+The semantic color layer allows you to map primitives to semantically named colors that are used throughout the design. Essentially, we follow a path like this:
 
 ```text
 Primitive → Semantic → Component
 ```
+
+A single primitive color can be mapped to any number of semantic colors. For example, the primitive `white` color can be mapped to both the `background.level-0` and `foreground.on-accent` colors (or even more). The semantic layer gives purpose to the colors.
 
 This is also the layer where we can utilize CSS functions like `light-dark()` to output colors based on user preference.
 
@@ -310,6 +312,12 @@ Foreground colors are as follows:
 - `accent`: Used for text that needs to stand out.
 - `on-accent`: Used for text that sits atop the background `accent` color.
 - `on-backdrop`: Used for text that sits atop the background `backdrop` color.
+
+Border colors are as follows:
+
+- `accent-1`: Used for borders that should be highlighted.
+- `bounds`: Used for general-purpose borders that are usually given to surfaces.
+- `emphasis`: Used for borders that need a higher degree of emphasis.
 
 Unless specified by the `on-` prefix, all colors should have readable text against any of the `level-*` backgrounds.
 
