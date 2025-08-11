@@ -10,7 +10,8 @@
 	"styles": {
 		"css": "@layer variation { body { background: var(--wp--preset--gradient--emerge); } }",
 		"color": {
-			"gradient": "var(--wp--preset--gradient--emerge)"
+			"gradient": "var(--wp--preset--gradient--emerge)",
+			"text": "var(--wp--preset--color--white)"
 		},
 		"variations": {
 			"site-container": {

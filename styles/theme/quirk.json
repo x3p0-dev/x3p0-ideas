@@ -26,7 +26,8 @@
 			}
 		},
 		"color": {
-			"gradient": "var(--wp--preset--gradient--fabled)"
+			"gradient": "var(--wp--preset--gradient--fabled)",
+			"text": "var(--wp--preset--color--white)"
 		},
 		"variations": {
 			"site-container": {
