@@ -1,0 +1,215 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/wp/6.8/schemas/json/theme.json",
+	"version": 3,
+	"title": "Socially Awkward",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "primary-950",
+					"color": "#142c3d",
+					"name": "Primary: 950"
+				},
+				{
+					"slug": "primary-900",
+					"color": "#1f445b",
+					"name": "Primary: 900"
+				},
+				{
+					"slug": "primary-800",
+					"color": "#1f506d",
+					"name": "Primary: 800"
+				},
+				{
+					"slug": "primary-700",
+					"color": "#215e83",
+					"name": "Primary: 700"
+				},
+				{
+					"slug": "primary-600",
+					"color": "#2774a0",
+					"name": "Primary: 600"
+				},
+				{
+					"slug": "primary-500",
+					"color": "#3892bf",
+					"name": "Primary: 500"
+				},
+				{
+					"slug": "primary-400",
+					"color": "#5cacd4",
+					"name": "Primary: 400"
+				},
+				{
+					"slug": "primary-300",
+					"color": "#95c8e4",
+					"name": "Primary: 300"
+				},
+				{
+					"slug": "primary-200",
+					"color": "#c7e1f0",
+					"name": "Primary: 200"
+				},
+				{
+					"slug": "primary-100",
+					"color": "#e6f1f8",
+					"name": "Primary: 100"
+				},
+				{
+					"slug": "primary-50",
+					"color": "#f3f8fc",
+					"name": "Primary: 50"
+				},
+				{
+					"slug": "secondary-950",
+					"color": "#41130e",
+					"name": "Secondary: 950"
+				},
+				{
+					"slug": "secondary-900",
+					"color": "#782c24",
+					"name": "Secondary: 900"
+				},
+				{
+					"slug": "secondary-800",
+					"color": "#902e24",
+					"name": "Secondary: 800"
+				},
+				{
+					"slug": "secondary-700",
+					"color": "#c0392b",
+					"name": "Secondary: 700"
+				},
+				{
+					"slug": "secondary-600",
+					"color": "#cf4233",
+					"name": "Secondary: 600"
+				},
+				{
+					"slug": "secondary-500",
+					"color": "#e35e50",
+					"name": "Secondary: 500"
+				},
+				{
+					"slug": "secondary-400",
+					"color": "#ef857a",
+					"name": "Secondary: 400"
+				},
+				{
+					"slug": "secondary-300",
+					"color": "#f6b2ab",
+					"name": "Secondary: 300"
+				},
+				{
+					"slug": "secondary-200",
+					"color": "#fad2ce",
+					"name": "Secondary: 200"
+				},
+				{
+					"slug": "secondary-100",
+					"color": "#fce6e4",
+					"name": "Secondary: 100"
+				},
+				{
+					"slug": "secondary-50",
+					"color": "#fdf4f3",
+					"name": "Secondary: 50"
+				},
+				{
+					"slug": "black",
+					"color": "#000000",
+					"name": "Neutral: 10000 (Black)"
+				},
+				{
+					"slug": "neutral-950",
+					"color": "#202020",
+					"name": "Neutral: 950"
+				},
+				{
+					"slug": "neutral-900",
+					"color": "#3d3d3d",
+					"name": "Neutral: 900"
+				},
+				{
+					"slug": "neutral-800",
+					"color": "#454545",
+					"name": "Neutral: 800"
+				},
+				{
+					"slug": "neutral-700",
+					"color": "#4f4f4f",
+					"name": "Neutral: 700"
+				},
+				{
+					"slug": "neutral-600",
+					"color": "#5d5d5d",
+					"name": "Neutral: 600"
+				},
+				{
+					"slug": "neutral-500",
+					"color": "#6d6d6d",
+					"name": "Neutral: 500"
+				},
+				{
+					"slug": "neutral-400",
+					"color": "#888888",
+					"name": "Neutral: 400"
+				},
+				{
+					"slug": "neutral-300",
+					"color": "#b0b0b0",
+					"name": "Neutral: 300"
+				},
+				{
+					"slug": "neutral-200",
+					"color": "#d1d1d1",
+					"name": "Neutral: 200"
+				},
+				{
+					"slug": "neutral-100",
+					"color": "#e7e7e7",
+					"name": "Neutral: 100"
+				},
+				{
+					"slug": "neutral-50",
+					"color": "#f6f6f6",
+					"name": "Neutral: 50"
+				},
+				{
+					"slug": "white",
+					"color": "#ffffff",
+					"name": "Neutral: 0 (White)"
+				}
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "light-dark(var(--wp--preset--color--primary-50), var(--wp--preset--color--black))",
+			"gradient": "url(data:image/png;base64,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)"
+		},
+		"variations": {
+			"breadcrumbs-primary": {
+				"color": {
+					"gradient": "linear-gradient(90deg, var(--wp--custom--colour--background--level-1) -80%, transparent 100%)",
+					"background": "light-dark(color-mix(in oklab, var(--wp--preset--color--neutral-100), transparent), color-mix(in oklab, var(--wp--preset--color--neutral-800), transparent))"
+				}
+			},
+			"site-content": {
+				"color": {
+					"background": "light-dark(color-mix(in oklab, var(--wp--preset--color--neutral-50), transparent), color-mix(in oklab, var(--wp--preset--color--neutral-900), transparent))"
+				}
+			},
+			"site-footer": {
+				"color": {
+					"background": "light-dark(color-mix(in oklab, var(--wp--preset--color--neutral-100), transparent), color-mix(in oklab, var(--wp--preset--color--neutral-800), transparent))"
+				}
+			},
+			"site-header": {
+				"color": {
+					"background": "light-dark(color-mix(in oklab, var(--wp--preset--color--neutral-100), transparent), color-mix(in oklab, var(--wp--preset--color--neutral-800), transparent))"
+				}
+			}
+		}
+	}
+}
