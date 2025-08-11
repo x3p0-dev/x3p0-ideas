@@ -55,18 +55,18 @@
 }
 
 ///
-/// Breakpoint handling that better matches the theme.
-///
-.wp-block-query .wp-block-post-template.is-layout-grid {
-	grid-template-columns: repeat(var(--col-count, 1), 1fr) !important;
-}
-
-///
 /// Use container sizing for grid post queries and templates to better
 /// accommodate various widths that style variations may create.
 ///
 .wp-block-query:has(.wp-block-post-template.is-layout-grid) {
 	container-type: inline-size;
+}
+
+///
+/// Breakpoint handling that better matches the theme.
+///
+.wp-block-query .wp-block-post-template.is-layout-grid[class*=columns-] {
+	grid-template-columns: repeat(var(--col-count, 1), 1fr) !important;
 }
 
 @container (min-width: 40rem) {
