@@ -1,0 +1,67 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/wp/6.8/schemas/json/theme.json",
+	"version": 3,
+	"title": "Quirk",
+	"settings": {
+		"custom": {
+			"variation": "quirk",
+			"border": {
+				"primary": {
+					"radius": "0"
+				}
+			}
+		}
+	},
+	"styles": {
+		"css": "@layer variation { body { background: var(--wp--preset--gradient--fabled); } body, .is-style-site-footer, .is-style-site-header { border-color: var(--wp--custom--colour--border--accent); } }",
+		"border": {
+			"color": "var(--wp--custom--colour--border--accent)",
+			"top": {
+				"width": "5px",
+				"style": "solid"
+			},
+			"bottom": {
+				"width": "5px",
+				"style": "solid"
+			}
+		},
+		"color": {
+			"gradient": "var(--wp--preset--gradient--fabled)"
+		},
+		"variations": {
+			"site-container": {
+				"css": "contain: paint; max-width: 60rem; width: 100%; & > * { margin-top: 0; }",
+				"border": {
+					"radius": "var(--wp--custom--border--primary--radius)"
+				},
+				"shadow": "var(--wp--custom--shadow--primary--default)",
+				"spacing": {
+					"margin": {
+						"top": "clamp(0rem, calc(0.283 * (100cqi - 60rem)), 5.66rem) !important",
+						"bottom": "clamp(0rem, calc(0.283 * (100cqi - 60rem)), 5.66rem) !important",
+						"left": "auto",
+						"right": "auto"
+					}
+				}
+			},
+			"site-footer": {
+				"border": {
+					"color": "var(--wp--custom--colour--border--accent)",
+					"bottom": {
+						"width": "var(--wp--preset--spacing--10)",
+						"style": "solid"
+					}
+				}
+			},
+			"site-header": {
+				"border": {
+					"color": "var(--wp--custom--colour--border--accent)",
+					"top": {
+						"width": "var(--wp--preset--spacing--10)",
+						"style": "solid"
+					}
+				}
+			}
+		}
+	}
+}
