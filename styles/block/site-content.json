@@ -4,8 +4,7 @@
 	"title": "Site Content",
 	"slug": "site-content",
 	"blockTypes": [
-		"core/group",
-		"core/template-part"
+		"core/group"
 	],
 	"styles": {
 		"color": {
