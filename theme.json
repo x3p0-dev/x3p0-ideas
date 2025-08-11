@@ -693,6 +693,7 @@
 				},
 				"border": {
 					"accent-1": "light-dark(var(--wp--preset--color--primary-700), var(--wp--preset--color--primary-300))",
+					"accent-2": "light-dark(var(--wp--preset--color--secondary-700), var(--wp--preset--color--secondary-300))",
 					"bounds": "light-dark(var(--wp--preset--color--neutral-200), var(--wp--preset--color--neutral-800))",
 					"emphasis": "light-dark(var(--wp--preset--color--neutral-700), var(--wp--preset--color--neutral-400))"
 				}

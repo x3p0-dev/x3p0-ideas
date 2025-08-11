@@ -39,6 +39,7 @@
 				},
 				"border": {
 					"accent-1": "light-dark(var(--wp--preset--color--secondary-700), var(--wp--preset--color--secondary-100))",
+					"accent-2": "light-dark(var(--wp--preset--color--primary-700), var(--wp--preset--color--primary-100))",
 					"bounds": "light-dark(var(--wp--preset--color--secondary-300), var(--wp--preset--color--secondary-700))",
 					"emphasis": "light-dark(var(--wp--preset--color--secondary-800), var(--wp--preset--color--secondary-200))"
 				}
