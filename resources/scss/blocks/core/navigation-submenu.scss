@@ -26,11 +26,11 @@ nav.wp-block-navigation .wp-block-navigation-submenu .wp-block-navigation__subme
 nav.wp-block-navigation.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open {
 	background: var(
 		--wp--custom--submenu-container--color--background,
-		var(--wp--custom--colour--background--level-0)
+		var(--wp--custom--color--background--level-0)
 	);
 	color: var(
 		--wp--custom--submenu-container--color--foreground,
-		var(--wp--custom--colour--foreground--primary)
+		var(--wp--custom--color--foreground--primary)
 	);
 }
 
@@ -79,12 +79,12 @@ nav.wp-block-navigation.wp-block-navigation .wp-block-navigation__responsive-con
 .wp-block-navigation-submenu .wp-block-navigation-item:hover,
 .wp-block-navigation-submenu .wp-block-navigation-item:focus {
 	background: var(
-		--wp--custom--submenu-container--hover--colour--background,
-		var(--wp--custom--colour--background--level-1)
+		--wp--custom--submenu-container--hover--color--background,
+		var(--wp--custom--color--background--level-1)
 	);
 	color: var(
-		--wp--custom--submenu-container--hover--colour--foreground,
-		var(--wp--custom--colour--foreground--primary)
+		--wp--custom--submenu-container--hover--color--foreground,
+		var(--wp--custom--color--foreground--primary)
 	);
 }
 

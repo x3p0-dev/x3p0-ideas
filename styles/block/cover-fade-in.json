@@ -8,9 +8,9 @@
 		"core/cover"
 	],
 	"styles": {
-		"css": "& .wp-block-cover__background {\n\topacity: 1 !important;\n\tbackground: linear-gradient(180deg, transparent -40%, var(--wp--custom--colour--background--level-0) 100%) !important;\n}",
+		"css": "& .wp-block-cover__background {\n\topacity: 1 !important;\n\tbackground: linear-gradient(180deg, transparent -40%, var(--wp--custom--color--background--level-0) 100%) !important;\n}",
 		"color": {
-			"text": "var(--wp--custom--colour--foreground--primary)"
+			"text": "var(--wp--custom--color--foreground--primary)"
 		}
 	}
 }

@@ -19,9 +19,9 @@
 /// Tweak the audio player controls enclosure for webkit browsers.
 ///
 .wp-block-audio audio::-webkit-media-controls-enclosure {
-	background-color: var(--wp--custom--colour--background--level-1);
+	background-color: var(--wp--custom--color--background--level-1);
 	border-radius: var(--wp--custom--border--global--radius);
-	border: var(--wp--custom--border--global--width) var(--wp--custom--border--global--style) var(--wp--custom--colour--border--bounds);
+	border: var(--wp--custom--border--global--width) var(--wp--custom--border--global--style) var(--wp--custom--color--border--bounds);
 	box-shadow: var(--wp--custom--shadow--primary--default);
 }
 

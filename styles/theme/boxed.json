@@ -13,7 +13,7 @@
 		}
 	},
 	"styles": {
-		"css": "@layer variation { .is-style-site-container { border-color: var(--wp--custom--colour--border--bounds); } }",
+		"css": "@layer variation { .is-style-site-container { border-color: var(--wp--custom--color--border--bounds); } }",
 		"variations": {
 			"site-container": {
 				"css": "contain: paint; & > * { margin-top: 0; }",

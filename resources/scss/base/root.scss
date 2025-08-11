@@ -10,8 +10,8 @@
 /// via `custom.global.::selectionColor` and `custom.global.::selectionBackground`.
 ///
 ::selection {
-	background: var(--wp--custom--colour--background--accent);
-	color: var(--wp--custom--colour--foreground--on-accent);
+	background: var(--wp--custom--color--background--accent);
+	color: var(--wp--custom--color--foreground--on-accent);
 }
 
 ///
@@ -39,7 +39,7 @@
 	// Border and shadow.
 	border-width:  var(--wp--custom--site-blocks--border--width, 0);
 	border-style:  var(--wp--custom--site-blocks--border--style, solid);
-	border-color:  var(--wp--custom--site-blocks--border--colour, transparent);
+	border-color:  var(--wp--custom--site-blocks--border--color, transparent);
 	border-radius: var(--wp--custom--site-blocks--border--radius, 0);
 	box-shadow:    var(--wp--custom--site-blocks--shadow, none);
 }

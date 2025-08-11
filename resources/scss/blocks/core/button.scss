@@ -69,9 +69,9 @@
 :root :where(.wp-block-button.is-style-outline .wp-block-button__link) {
 
 	&:is(:hover, :focus) {
-		background:    var(--wp--custom--elements--button--secondary--hover--colour--background);
-		color:         var(--wp--custom--elements--button--secondary--hover--colour--foreground);
-		border-color:  var(--wp--custom--elements--button--secondary--hover--border--colour);
+		background:    var(--wp--custom--elements--button--secondary--hover--color--background);
+		color:         var(--wp--custom--elements--button--secondary--hover--color--foreground);
+		border-color:  var(--wp--custom--elements--button--secondary--hover--border--color);
 		border-radius: var(--wp--custom--elements--button--secondary--hover--border--radius);
 		border-style:  var(--wp--custom--elements--button--secondary--hover--border--style);
 		border-width:  var(--wp--custom--elements--button--secondary--hover--border--width);
@@ -79,7 +79,7 @@
 	}
 
 	&:is(:active, :focus) {
-		outline-color:  var(--wp--custom--elements--button--secondary--focus--outline--colour);
+		outline-color:  var(--wp--custom--elements--button--secondary--focus--outline--color);
 		outline-offset: var(--wp--custom--elements--button--secondary--focus--outline--offset);
 		outline-style:  var(--wp--custom--elements--button--secondary--focus--outline--style);
 		outline-width:  var(--wp--custom--elements--button--secondary--focus--outline--width);

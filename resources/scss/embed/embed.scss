@@ -9,20 +9,20 @@
 /// Embed wrapper.
 ///
 .wp-embed {
-	color:      var(--wp--custom--colour--foreground--primary);
-	background: var(--wp--custom--colour--background--level-0);
+	color:      var(--wp--custom--color--foreground--primary);
+	background: var(--wp--custom--color--background--level-0);
 }
 
 ///
 /// Links in the embed.
 ///
 .wp-embed a {
-	color: var(--wp--custom--elements--link--secondary--colour--foreground);
+	color: var(--wp--custom--elements--link--secondary--color--foreground);
 
 	&:hover,
 	&:focus {
 		text-decoration: underline;
-		color: var(--wp--custom--elements--link--secondary--hover--colour--foreground);
+		color: var(--wp--custom--elements--link--secondary--hover--color--foreground);
 
 		> svg { fill: currentColor; }
 	}

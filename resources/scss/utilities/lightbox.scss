@@ -8,20 +8,20 @@
 ///
 /// Customizes the lightbox overlay.
 ///
-/// @todo We need a `--wp--custom--colour--scrim` color.
+/// @todo We need a `--wp--custom--color--scrim` color.
 /// @todo Should we use button styling for the close button?
 ///
 .wp-lightbox-overlay {
-	color: var(--wp--custom--colour--foreground--on-backdrop, #fff);
+	color: var(--wp--custom--color--foreground--on-backdrop, #fff);
 
 	.scrim {
-		background: var(--wp--custom--colour--background--backdrop, #000) !important;
+		background: var(--wp--custom--color--background--backdrop, #000) !important;
 	}
 
 	.close-button {
 		right: calc(env(safe-area-inset-right) + var(--wp--preset--spacing--70));
 		top: calc(env(safe-area-inset-top) + var(--wp--preset--spacing--40));
-		fill: var(--wp--custom--colour--foreground--on-backdrop, #fff) !important;
+		fill: var(--wp--custom--color--foreground--on-backdrop, #fff) !important;
 
 		svg {
 			width: 24px;

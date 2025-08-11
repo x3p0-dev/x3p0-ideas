@@ -19,13 +19,13 @@
 	overflow: hidden;
 	border: var(--wp--custom--border--global--width, 0)
 		var(--wp--custom--border--global--style, solid)
-		var(--wp--custom--colour--border--bounds, transparent);
+		var(--wp--custom--color--border--bounds, transparent);
 	border-radius: var(--wp--custom--border--global--radius, 0);
 	box-shadow: var(--wp--custom--shadow--primary--default, none);
 }
 
-:root :where(.has-accent-border)   { border-color: var(--wp--custom--colour--border--accent-1); }
-:root :where(.has-emphasis-border) { border-color: var(--wp--custom--colour--border--emphasis); }
+:root :where(.has-accent-border)   { border-color: var(--wp--custom--color--border--accent-1); }
+:root :where(.has-emphasis-border) { border-color: var(--wp--custom--color--border--emphasis); }
 
 ///
 /// Removes the border radius and left/right borders on full-width blocks.

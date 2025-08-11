@@ -47,7 +47,7 @@
 	&__label:has(
 		+ .wp-block-search__inside-wrapper .wp-block-search__input:focus
 	) {
-		color: var(--wp--custom--colour--foreground--accent, inherit);
+		color: var(--wp--custom--color--foreground--accent, inherit);
 	}
 
 	// Input styling, which includes styling the inside wrapper to appear as
@@ -77,7 +77,7 @@
 		}
 
 		.wp-block-search__inside-wrapper:has(.wp-block-search__input:focus) {
-			outline-color:  var(--wp--custom--colour--foreground--accent, currentColor);
+			outline-color:  var(--wp--custom--color--foreground--accent, currentColor);
 			outline-offset: var(--wp--custom--outline--primary--offset);
 			outline-style:  var(--wp--custom--outline--primary--style);
 			outline-width:  var(--wp--custom--outline--primary--width);

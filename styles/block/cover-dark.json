@@ -10,10 +10,10 @@
 		"custom": {
 			"border": {
 				"primary": {
-					"colour": "var(--wp--preset--color--neutral-700)"
+					"color": "var(--wp--preset--color--neutral-700)"
 				}
 			},
-			"colour": {
+			"color": {
 				"background": {
 					"level-0": "var(--wp--preset--color--neutral-950)",
 					"level-1": "var(--wp--preset--color--neutral-900)",
@@ -32,26 +32,26 @@
 				"button": {
 					"primary": {
 						"border": {
-							"colour": "transparent"
+							"color": "transparent"
 						},
-						"colour": {
+						"color": {
 							"background": "var(--wp--preset--color--primary-600)",
 							"foreground": "var(--wp--preset--color--white)"
 						},
 						"outline": {
-							"colour": "transparent"
+							"color": "transparent"
 						},
 						"shadow": "0 10px 15px -3px color-mix(in oklab, var(--wp--preset--color--primary-950) 80%, transparent), 0 4px 6px -4px color-mix(in oklab, var(--wp--preset--color--primary-950) 80%, transparent)",
 						"focus": {
 							"outline": {
-								"colour": "var(--wp--preset--color--primary-700)"
+								"color": "var(--wp--preset--color--primary-700)"
 							}
 						},
 						"hover": {
 							"border": {
-								"colour": "var(--wp--preset--color--primary-800)"
+								"color": "var(--wp--preset--color--primary-800)"
 							},
-							"colour": {
+							"color": {
 								"background": "var(--wp--preset--color--primary-700)",
 								"foreground": "var(--wp--preset--color--primary-50)"
 							},
@@ -59,29 +59,29 @@
 						}
 					},
 					"secondary": {
-						"colour": {
+						"color": {
 							"background": "transparent",
 							"foreground": "currentColor"
 						},
 						"border": {
-							"colour": "currentColor"
+							"color": "currentColor"
 						},
 						"outline": {
-							"colour": "transparent"
+							"color": "transparent"
 						},
 						"shadow": "0 10px 15px -3px color-mix(in oklab, var(--wp--preset--color--black) 30%, transparent), 0 4px 6px -4px color-mix(in oklab, var(--wp--preset--color--black) 30%, transparent)",
 						"focus": {
 							"outline": {
-								"colour": "currentColor"
+								"color": "currentColor"
 							}
 						},
 						"hover": {
-							"colour": {
+							"color": {
 								"background": "transparent",
 								"foreground": "currentColor"
 							},
 							"border": {
-								"colour": "color-mix(in oklab, currentColor 50%, var(--wp--preset--color--white))"
+								"color": "color-mix(in oklab, currentColor 50%, var(--wp--preset--color--white))"
 							},
 							"shadow": "0 10px 15px -3px color-mix(in oklab, var(--wp--preset--color--black) 45%, transparent), 0 4px 6px -4px color-mix(in oklab, var(--wp--preset--color--black) 45%, transparent)"
 						}
@@ -89,34 +89,34 @@
 				},
 				"link": {
 					"primary": {
-						"colour": {
+						"color": {
 							"foreground": "var(--wp--preset--color--neutral-200)"
 						},
 						"hover": {
-							"colour": {
+							"color": {
 								"foreground": "currentColor"
 							}
 						}
 					},
 					"secondary": {
-						"colour": {
+						"color": {
 							"foreground": "currentColor"
 						},
 						"hover": {
-							"colour": {
+							"color": {
 								"foreground": "var(--wp--preset--color--white)"
 							}
 						}
 					}
 				},
 				"summary": {
-					"colour": {
+					"color": {
 						"background": "transparent",
 						"foreground": "currentColor"
 					},
 					"hover": {
-						"colour": {
-							"background": "var(--wp--custom--colour--background--level-2)",
+						"color": {
+							"background": "var(--wp--custom--color--background--level-2)",
 							"foreground": "currentColor"
 						}
 					}
@@ -126,7 +126,7 @@
 	},
 	"styles": {
 		"color": {
-			"text": "var(--wp--custom--colour--foreground--primary)"
+			"text": "var(--wp--custom--color--foreground--primary)"
 		}
 	}
 }

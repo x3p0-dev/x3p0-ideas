@@ -62,9 +62,9 @@
 	transition-property: color, background-color, border-color, outline-color;
 
 	// `theme.json`-supported styles.
-	color:         var(--wp--custom--elements--button--primary--colour--foreground) !important;
-	background:    var(--wp--custom--elements--button--primary--colour--background);
-	border-color:  var(--wp--custom--elements--button--primary--border--colour);
+	color:         var(--wp--custom--elements--button--primary--color--foreground) !important;
+	background:    var(--wp--custom--elements--button--primary--color--background);
+	border-color:  var(--wp--custom--elements--button--primary--border--color);
 	border-style:  var(--wp--custom--elements--button--primary--border--style);
 	border-width:  var(--wp--custom--elements--button--primary--border--width);
 	border-radius: var(--wp--custom--elements--button--primary--border--radius);
@@ -74,9 +74,9 @@
 
 	&:hover,
 	&:focus {
-		color:         var(--wp--custom--elements--button--primary--hover--colour--foreground) !important;
-		background:    var(--wp--custom--elements--button--primary--hover--colour--background);
-		border-color:  var(--wp--custom--elements--button--primary--hover--border--colour);
+		color:         var(--wp--custom--elements--button--primary--hover--color--foreground) !important;
+		background:    var(--wp--custom--elements--button--primary--hover--color--background);
+		border-color:  var(--wp--custom--elements--button--primary--hover--border--color);
 		border-style:  var(--wp--custom--elements--button--primary--hover--border--style);
 		border-width:  var(--wp--custom--elements--button--primary--hover--border--width);
 		border-radius: var(--wp--custom--elements--button--primary--hover--border--radius);

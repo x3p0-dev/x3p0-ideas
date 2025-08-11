@@ -191,7 +191,7 @@
 		"variations": {
 			"breadcrumbs-primary": {
 				"color": {
-					"gradient": "linear-gradient(90deg, var(--wp--custom--colour--background--level-1) -80%, transparent 100%)",
+					"gradient": "linear-gradient(90deg, var(--wp--custom--color--background--level-1) -80%, transparent 100%)",
 					"background": "light-dark(color-mix(in oklab, var(--wp--preset--color--neutral-100), transparent), color-mix(in oklab, var(--wp--preset--color--neutral-800), transparent))"
 				}
 			},

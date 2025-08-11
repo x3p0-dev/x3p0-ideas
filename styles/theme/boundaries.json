@@ -28,7 +28,7 @@
 		"blocks": {
 			"core/post-featured-image": {
 				"border": {
-					"color": "var(--wp--custom--colour--border--bounds)",
+					"color": "var(--wp--custom--color--border--bounds)",
 					"style": "var(--wp--custom--border--global--style)",
 					"width": "var(--wp--custom--border--global--width)",
 					"radius": "var(--wp--custom--border--global--radius)"
@@ -40,7 +40,7 @@
 			"breadcrumbs-primary": {
 				"border": {
 					"top": {
-						"color": "var(--wp--custom--colour--border--bounds)",
+						"color": "var(--wp--custom--color--border--bounds)",
 						"style": "var(--wp--custom--border--global--style)",
 						"width": "var(--wp--custom--border--global--width)"
 					}
@@ -49,7 +49,7 @@
 			"query-header": {
 				"border": {
 					"bottom": {
-						"color": "var(--wp--custom--colour--border--bounds)",
+						"color": "var(--wp--custom--color--border--bounds)",
 						"style": "var(--wp--custom--border--global--style)",
 						"width": "var(--wp--custom--border--global--width)"
 					}
@@ -57,7 +57,7 @@
 			},
 			"site-container": {
 				"border": {
-					"color": "var(--wp--custom--colour--border--bounds)",
+					"color": "var(--wp--custom--color--border--bounds)",
 					"style": "var(--wp--custom--border--global--style)",
 					"width": "var(--wp--custom--border--global--width)",
 					"radius": "var(--wp--custom--border--global--radius)"
@@ -69,7 +69,7 @@
 			"site-footer": {
 				"border": {
 					"top": {
-						"color": "var(--wp--custom--colour--border--bounds)",
+						"color": "var(--wp--custom--color--border--bounds)",
 						"style": "var(--wp--custom--border--global--style)",
 						"width": "var(--wp--custom--border--global--width)"
 					}
@@ -78,7 +78,7 @@
 			"site-header": {
 				"border": {
 					"bottom": {
-						"color": "var(--wp--custom--colour--border--bounds)",
+						"color": "var(--wp--custom--color--border--bounds)",
 						"style": "var(--wp--custom--border--global--style)",
 						"width": "var(--wp--custom--border--global--width)"
 					}

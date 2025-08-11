@@ -13,9 +13,9 @@
 		}
 	},
 	"styles": {
-		"css": "@layer variation { body { background: var(--wp--preset--gradient--fabled); } body, .is-style-site-footer, .is-style-site-header { border-color: var(--wp--custom--colour--border--accent-1); } }",
+		"css": "@layer variation { body { background: var(--wp--preset--gradient--fabled); } body, .is-style-site-footer, .is-style-site-header { border-color: var(--wp--custom--color--border--accent-1); } }",
 		"border": {
-			"color": "var(--wp--custom--colour--border--accent-1)",
+			"color": "var(--wp--custom--color--border--accent-1)",
 			"top": {
 				"width": "5px",
 				"style": "solid"
@@ -46,7 +46,7 @@
 			},
 			"site-footer": {
 				"border": {
-					"color": "var(--wp--custom--colour--border--accent-1)",
+					"color": "var(--wp--custom--color--border--accent-1)",
 					"bottom": {
 						"width": "var(--wp--preset--spacing--10)",
 						"style": "solid"
@@ -55,7 +55,7 @@
 			},
 			"site-header": {
 				"border": {
-					"color": "var(--wp--custom--colour--border--accent-1)",
+					"color": "var(--wp--custom--color--border--accent-1)",
 					"top": {
 						"width": "var(--wp--preset--spacing--10)",
 						"style": "solid"

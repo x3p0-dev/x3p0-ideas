@@ -91,11 +91,11 @@ abbr[title] {
 	width:   initial;
 
 	// Add colors for links within captions.
-	color: var(--wp--custom--elements--link--secondary--colour--foreground);
+	color: var(--wp--custom--elements--link--secondary--color--foreground);
 
 	&:hover,
 	&:focus {
-		color: var(--wp--custom--elements--link--secondary--hover--colour--foreground);
+		color: var(--wp--custom--elements--link--secondary--hover--color--foreground);
 	}
 }
 
@@ -110,11 +110,11 @@ blockquote cite {
 
 	// Add colors for links within block quote citations.
 	a {
-		color: var(--wp--custom--elements--link--secondary--colour--foreground);
+		color: var(--wp--custom--elements--link--secondary--color--foreground);
 
 		&:hover,
 		&:focus {
-			color: var(--wp--custom--elements--link--secondary--hover--colour--foreground);
+			color: var(--wp--custom--elements--link--secondary--hover--color--foreground);
 		}
 	}
 }
@@ -136,8 +136,8 @@ blockquote cite {
 	line-height: inherit;
 
 	// Color.
-	color:      var(--wp--custom--colour--foreground--primary, inherit);
-	background: var(--wp--custom--colour--background--level-1, transparent);
+	color:      var(--wp--custom--color--foreground--primary, inherit);
+	background: var(--wp--custom--color--background--level-1, transparent);
 
 	// Border and shadow.
 	border:     none;
@@ -150,7 +150,7 @@ blockquote cite {
 }
 
 a:has(code:only-child) {
-	color: var(--wp--custom--colour--foreground--primary, inherit);
+	color: var(--wp--custom--color--foreground--primary, inherit);
 	text-decoration-color: currentColor;
 }
 
@@ -161,9 +161,9 @@ a:has(code:only-child) {
 ///
 del,
 s {
-	color: var(--wp--custom--colour--foreground--secondary, inherit);
+	color: var(--wp--custom--color--foreground--secondary, inherit);
 	text-decoration:
-		var(--wp--custom--colour--foreground--primary, currentColor)
+		var(--wp--custom--color--foreground--primary, currentColor)
 		line-through
 		solid
 		min(0.078125em, 3px);
@@ -186,7 +186,7 @@ s {
 img:where(:not(.avatar)) {
 	border: var(--wp--custom--elements--img--border--width, 0)
 		var(--wp--custom--elements--img--border--style, solid)
-		var(--wp--custom--elements--img--border--colour, transparent);
+		var(--wp--custom--elements--img--border--color, transparent);
 
 	box-shadow: var(--wp--custom--elements--img--shadow, none);
 }
@@ -225,7 +225,7 @@ kbd {
 	background: transparent;
 
 	// Border and shadow.
-	border:        1px solid var(--wp--custom--colour--border--bounds);
+	border:        1px solid var(--wp--custom--color--border--bounds);
 	border-radius: 0.25rem;
 	box-shadow:    var(--wp--preset--shadow--sm, none);
 }
@@ -234,7 +234,7 @@ kbd {
 /// Adds a list item marker color.
 ///
 li::marker {
-	color: var(--wp--custom--colour--foreground--tertiary, currentColor);
+	color: var(--wp--custom--color--foreground--tertiary, currentColor);
 }
 
 ///
@@ -247,8 +247,8 @@ mark {
 
 	// Style `<mark>` elements but avoid WP's "highlight" rich text element.
 	&:where(:not(.has-inline-color):not([style])) {
-		color:      var(--wp--custom--colour--foreground--on-accent, currentColor);
-		background: var(--wp--custom--colour--background--accent, transparent);
+		color:      var(--wp--custom--color--foreground--on-accent, currentColor);
+		background: var(--wp--custom--color--background--accent, transparent);
 	}
 }
 
@@ -275,8 +275,8 @@ samp {
 	line-height: inherit;
 
 	// Color.
-	color:      var(--wp--custom--colour--foreground--accent, inherit);
-	background: var(--wp--custom--colour--background--level-1, transparent);
+	color:      var(--wp--custom--color--foreground--accent, inherit);
+	background: var(--wp--custom--color--background--level-1, transparent);
 
 	// Border and shadow.
 	border:     none;
@@ -313,7 +313,7 @@ u {
 	text-decoration:
 		underline
 		wavy
-		var(--wp--custom--colour--foreground--accent)
+		var(--wp--custom--color--foreground--accent)
 		min(0.078125em, 2px);
 	text-underline-offset: 0.078125em;
 }

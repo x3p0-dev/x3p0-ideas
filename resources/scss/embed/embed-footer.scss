@@ -26,7 +26,7 @@
 	margin:  var(--wp--style--block-gap) 0 0;
 	padding: var(--wp--preset--spacing--40) var(--wp--style--block-gap);
 
-	background: var(--wp--custom--colour--background--level-1);
+	background: var(--wp--custom--color--background--level-1);
 }
 
 ///
@@ -93,11 +93,11 @@
 	@include inline-icon.prefix(icon.get-url('share'));
 
 	& {
-		color: var(--wp--custom--elements--link--secondary--colour--foreground);
+		color: var(--wp--custom--elements--link--secondary--color--foreground);
 	}
 
 	&:hover,
 	&:focus {
-		color: var(--wp--custom--elements--link--secondary--hover--colour--foreground);
+		color: var(--wp--custom--elements--link--secondary--hover--color--foreground);
 	}
 }
