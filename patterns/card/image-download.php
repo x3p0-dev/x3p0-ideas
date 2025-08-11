@@ -31,7 +31,7 @@ $image = Placeholder::image('placeholder-01-wide.webp');
 			"blockGap":"0"
 		}
 	},
-	"className":"has-global-border is-style-section-1",
+	"className":"has-bounds-border is-style-section-1",
 	"layout":{
 		"type":"flex",
 		"orientation":"vertical",
@@ -40,7 +40,7 @@ $image = Placeholder::image('placeholder-01-wide.webp');
 	},
 	"fontSize":"sm"
 } -->
-<div class="wp-block-group has-global-border is-style-section-1 has-sm-font-size" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
+<div class="wp-block-group has-bounds-border is-style-section-1 has-sm-font-size" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 
 	<!-- wp:image {
 		"lightbox":{"enabled":false},

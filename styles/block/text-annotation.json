@@ -11,10 +11,10 @@
 	"styles": {
 		"css": "width: fit-content",
 		"border": {
-			"color": "var(--wp--custom--border--primary--colour)",
-			"style": "var(--wp--custom--border--primary--style)",
-			"width": "var(--wp--custom--border--primary--width)",
-			"radius": "var(--wp--custom--border--primary--radius)"
+			"color": "var(--wp--custom--colour--border--bounds)",
+			"style": "var(--wp--custom--border--global--style)",
+			"width": "var(--wp--custom--border--global--width)",
+			"radius": "var(--wp--custom--border--global--radius)"
 		},
 		"color": {
 			"background": "var(--wp--custom--colour--background--level-1)",

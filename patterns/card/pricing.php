@@ -32,7 +32,7 @@ use X3P0\Ideas\Tools\Placeholder;
 			"minHeight":"0px"
 		}
 	},
-	"className":"has-global-border is-style-section-1",
+	"className":"has-bounds-border is-style-section-1",
 	"layout":{
 		"type":"flex",
 		"orientation":"vertical",
@@ -41,7 +41,7 @@ use X3P0\Ideas\Tools\Placeholder;
 	},
 	"fontSize":"xs"
 } -->
-<div class="wp-block-group has-global-border is-style-section-1 has-xs-font-size" style="min-height:0px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
+<div class="wp-block-group has-bounds-border is-style-section-1 has-xs-font-size" style="min-height:0px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 
 	<!-- wp:group {
 		"tagName":"header",

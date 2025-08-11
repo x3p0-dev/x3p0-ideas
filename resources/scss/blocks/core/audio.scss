@@ -20,8 +20,8 @@
 ///
 .wp-block-audio audio::-webkit-media-controls-enclosure {
 	background-color: var(--wp--custom--colour--background--level-1);
-	border-radius: var(--wp--custom--border--primary--radius);
-	border: var(--wp--custom--border--primary--width) var(--wp--custom--border--primary--style) var(--wp--custom--border--primary--colour);
+	border-radius: var(--wp--custom--border--global--radius);
+	border: var(--wp--custom--border--global--width) var(--wp--custom--border--global--style) var(--wp--custom--colour--border--bounds);
 	box-shadow: var(--wp--custom--shadow--primary--default);
 }
 

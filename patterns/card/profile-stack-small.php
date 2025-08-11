@@ -30,7 +30,7 @@ defined('ABSPATH') || exit;
 			"textAlign":"center"
 		}
 	},
-	"className":"has-global-border is-style-section-1",
+	"className":"has-bounds-border is-style-section-1",
 	"layout":{
 		"type":"flex",
 		"orientation":"vertical",
@@ -38,7 +38,7 @@ defined('ABSPATH') || exit;
 	},
 	"fontSize":"sm"
 } -->
-<div class="wp-block-group has-text-align-center has-global-border is-style-section-1 has-sm-font-size" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)">
+<div class="wp-block-group has-text-align-center has-bounds-border is-style-section-1 has-sm-font-size" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)">
 
 	<!-- wp:avatar {
 		"userId":1,

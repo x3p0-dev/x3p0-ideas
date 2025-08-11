@@ -57,7 +57,7 @@ defined('ABSPATH') || exit;
 				}
 			}
 		},
-		"className":"is-style-section-1 has-global-border has-icons"
+		"className":"is-style-section-1 has-bounds-border has-icons"
 	} /-->
 
 </div>

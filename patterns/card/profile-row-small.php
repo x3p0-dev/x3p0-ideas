@@ -27,14 +27,14 @@ defined('ABSPATH') || exit;
 			"blockGap":"var:preset|spacing|40"
 		}
 	},
-	"className":"has-global-border is-style-section-1",
+	"className":"has-bounds-border is-style-section-1",
 	"layout":{
 		"type":"flex",
 		"flexWrap":"nowrap"
 	},
 	"fontSize":"sm"
 } -->
-<div class="wp-block-group has-global-border is-style-section-1 has-sm-font-size" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+<div class="wp-block-group has-bounds-border is-style-section-1 has-sm-font-size" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 
 	<!-- wp:avatar {
 		"userId":1,

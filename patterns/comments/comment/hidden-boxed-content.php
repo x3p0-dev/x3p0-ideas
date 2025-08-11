@@ -123,7 +123,7 @@ defined('ABSPATH') || exit;
 				}
 			}
 		},
-		"className":"is-style-section-1 has-global-border"
+		"className":"is-style-section-1 has-bounds-border"
 	} /-->
 
 	<!-- wp:group {

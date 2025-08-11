@@ -6,14 +6,14 @@
 		"custom": {
 			"variation": "boxed",
 			"border": {
-				"primary": {
+				"global": {
 					"radius": "0"
 				}
 			}
 		}
 	},
 	"styles": {
-		"css": "@layer variation { .is-style-site-container { border-color: var(--wp--custom--border--primary--colour); } }",
+		"css": "@layer variation { .is-style-site-container { border-color: var(--wp--custom--colour--border--bounds); } }",
 		"variations": {
 			"site-container": {
 				"css": "contain: paint; & > * { margin-top: 0; }",

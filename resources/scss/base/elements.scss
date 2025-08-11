@@ -225,7 +225,7 @@ kbd {
 	background: transparent;
 
 	// Border and shadow.
-	border:        1px solid var(--wp--custom--border--primary--colour);
+	border:        1px solid var(--wp--custom--colour--border--bounds);
 	border-radius: 0.25rem;
 	box-shadow:    var(--wp--preset--shadow--sm, none);
 }

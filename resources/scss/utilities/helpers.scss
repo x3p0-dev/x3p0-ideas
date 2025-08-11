@@ -10,14 +10,22 @@
 /// default in the design. Currently, WordPress doesn't support border presets,
 /// so there's no way to add these on generic sections.
 ///
-:root :where(.has-global-border) {
+:root :where(
+	.has-global-border,
+	.has-bounds-border,
+	.has-accent-border,
+	.has-emphasis-border
+) {
 	overflow: hidden;
-	border: var(--wp--custom--border--primary--width, 0)
-		var(--wp--custom--border--primary--style, solid)
-		var(--wp--custom--border--primary--colour, transparent);
-	border-radius: var(--wp--custom--border--primary--radius, 0);
+	border: var(--wp--custom--border--global--width, 0)
+		var(--wp--custom--border--global--style, solid)
+		var(--wp--custom--colour--border--bounds, transparent);
+	border-radius: var(--wp--custom--border--global--radius, 0);
 	box-shadow: var(--wp--custom--shadow--primary--default, none);
 }
+
+:root :where(.has-accent-border)   { border-color: var(--wp--custom--colour--border--accent-1); }
+:root :where(.has-emphasis-border) { border-color: var(--wp--custom--colour--border--emphasis); }
 
 ///
 /// Removes the border radius and left/right borders on full-width blocks.

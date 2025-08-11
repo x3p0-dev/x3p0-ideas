@@ -30,11 +30,11 @@ $url = home_url();
 			}
 		}
 	},
-	"className":"has-global-border is-style-section-1",
+	"className":"has-bounds-border is-style-section-1",
 	"layout":{"type":"default"},
 	"fontSize":"xs"
 } -->
-<div class="wp-block-group has-global-border is-style-section-1 has-xs-font-size" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)">
+<div class="wp-block-group has-bounds-border is-style-section-1 has-xs-font-size" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)">
 
 	<!-- wp:heading {"level":3,"fontSize":"md"} -->
 	<h3 class="wp-block-heading has-md-font-size" id="browse-the-resources"><a href="<?= esc_url($url) ?>"><?= esc_html__('Placeholder Text', 'x3p0-ideas') ?></a></h3>

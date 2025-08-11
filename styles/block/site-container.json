@@ -9,7 +9,7 @@
 	"styles": {
 		"css": "& > * { margin-top: 0; }",
 		"border": {
-			"color": "var(--wp--custom--colour--border--accent)"
+			"color": "var(--wp--custom--colour--border--accent-1)"
 		}
 	}
 }

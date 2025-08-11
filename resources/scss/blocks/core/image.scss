@@ -49,7 +49,7 @@
 /// use the set default.
 ///
 .wp-block-image a:has(img) {
-	border-radius: var(--wp--custom--border--primary--radius);
+	border-radius: var(--wp--custom--border--global--radius);
 }
 
 ///
@@ -152,6 +152,6 @@ figure.wp-block-image[class*=-gradient-background] {
 .wp-lightbox-overlay .wp-block-image img {
 	padding: 0 !important;
 	border: none !important;
-	border-radius: var(--wp--custom--border--primary--radius) !important;
+	border-radius: var(--wp--custom--border--global--radius) !important;
 	box-shadow: var(--wp--custom--shadow--primary--default) !important;
 }

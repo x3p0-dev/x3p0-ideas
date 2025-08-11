@@ -80,10 +80,10 @@ defined('ABSPATH') || exit;
 							"blockGap":"var:preset|spacing|50"
 						}
 					},
-					"className":"has-global-border is-style-cover-dark",
+					"className":"has-bounds-border is-style-cover-dark",
 					"layout":{"type":"constrained"}
 				} -->
-				<div class="wp-block-cover has-global-border is-style-cover-dark" style="padding-top:var(--wp--preset--spacing--90);padding-right:var(--wp--preset--spacing--90);padding-bottom:var(--wp--preset--spacing--90);padding-left:var(--wp--preset--spacing--90)">
+				<div class="wp-block-cover has-bounds-border is-style-cover-dark" style="padding-top:var(--wp--preset--spacing--90);padding-right:var(--wp--preset--spacing--90);padding-bottom:var(--wp--preset--spacing--90);padding-left:var(--wp--preset--spacing--90)">
 
 					<span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim-80 has-background-dim"></span>
 					<div class="wp-block-cover__inner-container">

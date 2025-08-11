@@ -23,11 +23,6 @@
 	],
 	"settings": {
 		"custom": {
-			"border": {
-				"primary": {
-					"colour": "light-dark(var(--wp--preset--color--neutral-200), var(--wp--preset--color--neutral-700))"
-				}
-			},
 			"colour": {
 				"background": {
 					"level-0": "light-dark(var(--wp--preset--color--neutral-50), var(--wp--preset--color--neutral-900))",
@@ -42,6 +37,11 @@
 					"tertiary": "light-dark(var(--wp--preset--color--neutral-400), var(--wp--preset--color--neutral-600))",
 					"accent": "light-dark(var(--wp--preset--color--primary-700), var(--wp--preset--color--primary-300))",
 					"on-accent": "light-dark(var(--wp--preset--color--white), var(--wp--preset--color--primary-950))"
+				},
+				"border": {
+					"accent-1": "light-dark(var(--wp--preset--color--primary-700), var(--wp--preset--color--primary-300))",
+					"bounds": "light-dark(var(--wp--preset--color--neutral-200), var(--wp--preset--color--neutral-800))",
+					"emphasis": "light-dark(var(--wp--preset--color--neutral-700), var(--wp--preset--color--neutral-400))"
 				}
 			},
 			"elements": {
@@ -49,9 +49,9 @@
 					"primary": {
 						"border": {
 							"colour": "transparent",
-							"radius": "var(--wp--custom--border--primary--radius)",
-							"style": "var(--wp--custom--border--primary--style)",
-							"width": "var(--wp--custom--border--primary--width)"
+							"radius": "var(--wp--custom--border--global--radius)",
+							"style": "var(--wp--custom--border--global--style)",
+							"width": "var(--wp--custom--border--global--width)"
 						},
 						"colour": {
 							"background": "light-dark(var(--wp--preset--color--primary-600), var(--wp--preset--color--primary-700))",
@@ -93,9 +93,9 @@
 						},
 						"border": {
 							"colour": "currentColor",
-							"radius": "var(--wp--custom--border--primary--radius)",
-							"style": "var(--wp--custom--border--primary--style)",
-							"width": "var(--wp--custom--border--primary--width)"
+							"radius": "var(--wp--custom--border--global--radius)",
+							"style": "var(--wp--custom--border--global--style)",
+							"width": "var(--wp--custom--border--global--width)"
 						},
 						"outline": {
 							"colour": "transparent",

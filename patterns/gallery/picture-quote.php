@@ -20,7 +20,7 @@ use X3P0\Ideas\Tools\Placeholder;
 ?>
 <!-- wp:group {
 	"align":"wide",
-	"className":"is-style-section-1 has-global-border",
+	"className":"is-style-section-1 has-bounds-border",
 	"style":{
 		"spacing":{
 			"blockGap":"var:preset|spacing|40",
@@ -34,7 +34,7 @@ use X3P0\Ideas\Tools\Placeholder;
 	},
 	"layout":{"type":"grid","minimumColumnWidth":"22rem"}
 } -->
-<div class="wp-block-group alignwide is-style-section-1 has-global-border" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)">
+<div class="wp-block-group alignwide is-style-section-1 has-bounds-border" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)">
 
 	<!-- wp:group {
 		"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},

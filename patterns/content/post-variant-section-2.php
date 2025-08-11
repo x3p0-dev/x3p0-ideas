@@ -56,7 +56,7 @@ defined('ABSPATH') || exit;
 		<header class="wp-block-group" style="padding-right:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)">
 
 			<!-- wp:group {
-				"className":"has-global-border is-style-section-2",
+				"className":"has-bounds-border is-style-section-2",
 				"style":{
 					"spacing":{
 						"padding":{
@@ -73,7 +73,7 @@ defined('ABSPATH') || exit;
 					"verticalAlignment":"bottom"
 				}
 			} -->
-			<div class="wp-block-group has-global-border is-style-section-2" style="padding-top:var(--wp--preset--spacing--90);padding-right:var(--wp--preset--spacing--90);padding-bottom:var(--wp--preset--spacing--90);padding-left:var(--wp--preset--spacing--90)">
+			<div class="wp-block-group has-bounds-border is-style-section-2" style="padding-top:var(--wp--preset--spacing--90);padding-right:var(--wp--preset--spacing--90);padding-bottom:var(--wp--preset--spacing--90);padding-left:var(--wp--preset--spacing--90)">
 
 				<!-- wp:spacer {"height":"var:preset|spacing|120"} -->
 				<div style="height:var(--wp--preset--spacing--120)" aria-hidden="true" class="wp-block-spacer"></div>

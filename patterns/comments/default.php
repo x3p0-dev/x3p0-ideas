@@ -42,10 +42,10 @@ defined('ABSPATH') || exit;
 				}
 			}
 		},
-		"className":"is-style-section-1 has-global-border",
+		"className":"is-style-section-1 has-bounds-border",
 		"layout":{"type":"constrained"}
 	} -->
-	<div class="wp-block-group is-style-section-1 has-global-border" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)">
+	<div class="wp-block-group is-style-section-1 has-bounds-border" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)">
 
 		<!-- wp:comments-title {
 			"showPostTitle":false,
@@ -86,7 +86,7 @@ defined('ABSPATH') || exit;
 				}
 			}
 		},
-		"className":"is-style-section-1 has-global-border has-icons"
+		"className":"is-style-section-1 has-bounds-border has-icons"
 	} /-->
 
 </div>

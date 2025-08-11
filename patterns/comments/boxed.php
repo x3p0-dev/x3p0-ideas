@@ -31,10 +31,10 @@ defined('ABSPATH') || exit;
 				}
 			}
 		},
-		"className":"has-global-border is-style-section-1",
+		"className":"has-bounds-border is-style-section-1",
 		"layout":{"type":"constrained"}
 	} -->
-	<div class="wp-block-group has-global-border is-style-section-1" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)">
+	<div class="wp-block-group has-bounds-border is-style-section-1" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)">
 
 		<!-- wp:comments-title {
 			"showPostTitle":false,

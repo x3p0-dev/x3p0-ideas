@@ -48,6 +48,7 @@ class StyleVariations implements Bootable
 	 */
 	private const SECTION_DESCENDANT_PROPERTIES = [
 		'border',
+		'colour--border--bounds',
 		'outline',
 		'shadow'
 	];

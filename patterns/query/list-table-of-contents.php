@@ -54,7 +54,7 @@ defined('ABSPATH') || exit;
 
 		<!-- wp:columns {
 			"isStackedOnMobile":false,
-			"className":"has-global-border is-style-section-1",
+			"className":"has-bounds-border is-style-section-1",
 			"style":{
 				"spacing":{
 					"padding":{
@@ -70,7 +70,7 @@ defined('ABSPATH') || exit;
 				}
 			}
 		} -->
-		<div class="wp-block-columns is-not-stacked-on-mobile has-global-border is-style-section-1" style="padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--10)">
+		<div class="wp-block-columns is-not-stacked-on-mobile has-bounds-border is-style-section-1" style="padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--10)">
 
 			<!-- wp:column {
 				"verticalAlignment":"stretch",

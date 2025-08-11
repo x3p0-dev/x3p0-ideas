@@ -89,10 +89,10 @@
 	font-weight: 400;
 	line-height: var(--wp--custom--line-height--sm);
 
-	border-color:  var(--wp--custom--border--primary--colour, none);
-	border-style:  var(--wp--custom--border--primary--style, solid);
-	border-width:  var(--wp--custom--border--primary--width, 1px);
-	border-radius: var(--wp--custom--border--primary--radius, none);
+	border-color:  var(--wp--custom--colour--border--bounds, none);
+	border-style:  var(--wp--custom--border--global--style, solid);
+	border-width:  var(--wp--custom--border--global--width, 1px);
+	border-radius: var(--wp--custom--border--global--radius, none);
 	box-shadow:    var(--wp--custom--shadow--primary--default, none);
 
 	&:is(textarea) {
