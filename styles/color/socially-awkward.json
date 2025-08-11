@@ -202,17 +202,26 @@
 			},
 			"site-content": {
 				"color": {
-					"background": "light-dark(color-mix(in oklab, var(--wp--preset--color--neutral-50), transparent), color-mix(in oklab, var(--wp--preset--color--neutral-900), transparent))"
+					"background": "light-dark(var(--wp--preset--color--neutral-50), var(--wp--preset--color--neutral-950))",
+					"gradient": {
+						"ref": "styles.color.gradient"
+					}
 				}
 			},
 			"site-footer": {
 				"color": {
-					"background": "light-dark(color-mix(in oklab, var(--wp--preset--color--neutral-100), transparent), color-mix(in oklab, var(--wp--preset--color--neutral-800), transparent))"
+					"background": "light-dark(color-mix(in oklab, var(--wp--preset--color--neutral-100), var(--wp--preset--color--neutral-50)), color-mix(in oklab, var(--wp--preset--color--neutral-950) 90%, var(--wp--preset--color--black)))",
+					"gradient": {
+						"ref": "styles.color.gradient"
+					}
 				}
 			},
 			"site-header": {
 				"color": {
-					"background": "light-dark(color-mix(in oklab, color-mix(in oklab, var(--wp--preset--color--neutral-100), var(--wp--preset--color--neutral-50)), transparent), color-mix(in oklab, var(--wp--preset--color--neutral-800), transparent))"
+					"background": "light-dark(color-mix(in oklab, var(--wp--preset--color--neutral-100), var(--wp--preset--color--neutral-50)), color-mix(in oklab, var(--wp--preset--color--neutral-950) 90%, var(--wp--preset--color--black)))",
+					"gradient": {
+						"ref": "styles.color.gradient"
+					}
 				}
 			}
 		}
