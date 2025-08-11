@@ -12,14 +12,13 @@
 		"core/comment-template",
 		"core/comments",
 		"core/details",
+		"core/file",
 		"core/group",
 		"core/media-text",
 		"core/post-comments-form",
-		"core/preformatted",
 		"core/pullquote",
 		"core/query",
 		"core/quote",
-		"core/verse",
 		"x3p0/breadcrumbs"
 	],
 	"settings": {

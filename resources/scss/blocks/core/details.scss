@@ -102,19 +102,6 @@
 // -----------------------------------------------------------------------------
 
 ///
-/// Removes padding when section styles are applied.
-///
-.wp-block-details[class*=is-style-section-] {
-	padding-top: 0;
-	padding-right: 0;
-	padding-left: 0;
-
-	&:where(:not([open])) {
-		padding-bottom: 0;
-	}
-}
-
-///
 /// The plain style removes custom styling from the block.
 ///
 .wp-block-details.is-style-details-plain {
