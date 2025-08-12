@@ -60,6 +60,49 @@
 // -----------------------------------------------------------------------------
 
 ///
+/// Tonal style.
+///
+/// Handles interactive states since these are not currently supported via JSON,
+/// following a LVHFA model.
+///
+/// @link https://github.com/WordPress/gutenberg/issues/55359
+///
+:root :where(.is-style-button-tonal .wp-block-button__link) {
+
+	&:is(:hover, :focus, :active) {
+		background:   var(--wp--custom--color--button--tonal--background-interact);
+		color:        var(--wp--custom--color--button--tonal--foreground);
+		border-color: var(--wp--custom--color--button--tonal--border-interact);
+		box-shadow:   var(--wp--custom--shadow--button--tonal--interact);
+	}
+
+	&:is(:focus, :active) {
+		outline-color: var(--wp--custom--color--button--tonal--outline-focus);
+	}
+}
+
+///
+/// Outlined style.
+///
+/// Handles interactive states since these are not currently supported via JSON,
+/// following a LVHFA model.
+///
+/// @link https://github.com/WordPress/gutenberg/issues/55359
+///
+:root :where(.is-style-button-outlined .wp-block-button__link) {
+
+	&:is(:hover, :focus, :active) {
+		color:        var(--wp--custom--color--button--outlined--foreground);
+		border-color: var(--wp--custom--color--button--outlined--border-interact);
+		box-shadow:   var(--wp--custom--shadow--button--outlined--interact);
+	}
+
+	&:is(:focus, :active) {
+		outline-color: var(--wp--custom--color--button--outlined--outline-focus);
+	}
+}
+
+///
 /// Secondary style.
 ///
 /// Note that we currently map the unregistered Core `outline` style to the

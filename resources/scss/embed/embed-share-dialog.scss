@@ -93,7 +93,7 @@
 	border-style:  var(--wp--custom--border--global--style, solid);
 	border-width:  var(--wp--custom--border--global--width, 1px);
 	border-radius: var(--wp--custom--border--global--radius, none);
-	box-shadow:    var(--wp--custom--shadow--primary--default, none);
+	box-shadow:    var(--wp--custom--shadow--global--default, none);
 
 	&:is(textarea) {
 		height: calc(3 * 1.625em + var(--wp--preset--spacing--30));
@@ -104,7 +104,7 @@
 		outline-offset: var(--wp--custom--outline--primary--offset);
 		outline-style:  var(--wp--custom--outline--primary--style);
 		outline-width:  var(--wp--custom--outline--primary--width);
-		box-shadow:     var(--wp--custom--shadow--primary--hover, none);
+		box-shadow:     var(--wp--custom--shadow--global--interact, none);
 	}
 }
 
@@ -132,7 +132,7 @@
 
 	&:hover,
 	&:focus {
-		color: var(--wp--custom--color--link--secondary--foreground-hover);
+		color: var(--wp--custom--color--link--secondary--foreground-interact);
 	}
 
 	// Hide any dashicons since we're handling icons.

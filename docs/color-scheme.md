@@ -291,11 +291,12 @@ This is also the layer where we can utilize CSS functions like `light-dark()` to
 
 ### Semantic Color Names
 
-**Colors at the semantic layer are broken down into four groups:**
+**Colors at the semantic layer are broken down into several groups:**
 
 - `background`: Used for surfaces and other backgrounds and never for text.
 - `border`: Used for borders, dividers, and separators.
 - `foreground`: Used for text, icons, and other elements that appear on the background.
+- `shadow`: Used to define the box-shadow color for various elements.
 - `{component}`: Used to define the various colors needed for specific components.
   - `button`
   - `link`
@@ -329,21 +330,43 @@ Unless specified by the `on-` prefix, all colors should have readable text again
 **Component colors are as follows:**
 
 - `button`
-  - `fill`
+  - `filled`
     - `background`
-    - `background-hover`
+    - `background-interact`
     - `border`
-    - `border-hover`
+    - `border-interact`
     - `foreground`
     - `outline`
     - `outline-focus`
-  - `link`
-    - `primary`
-      - `foreground`
-      - `foreground-hover`
-    - `secondary`
-      - `foreground`
-      - `foreground-hover`
+    - `shadow`
+    - `shadow-interact`
+  - `outlined`
+    - `background`
+    - `background-interact`
+    - `border`
+    - `border-interact`
+    - `foreground`
+    - `outline`
+    - `outline-focus`
+    - `shadow`
+    - `shadow-interact`
+  - `tonal`
+    - `background`
+    - `background-interact`
+    - `border`
+    - `border-interact`
+    - `foreground`
+    - `outline`
+    - `outline-focus`
+    - `shadow`
+    - `shadow-interact`
+- `link`
+  - `primary`
+    - `foreground`
+    - `foreground-interact`
+  - `secondary`
+    - `foreground`
+    - `foreground-interact`
 
 ### Defining Semantic Colors in `theme.json`
 

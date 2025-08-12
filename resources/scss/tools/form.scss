@@ -85,7 +85,7 @@
 		var(--wp--custom--color--border--bounds, none);
 
 	border-radius: var(--wp--custom--border--global--radius, none);
-	box-shadow:    var(--wp--custom--shadow--primary--default, none);
+	box-shadow:    var(--wp--custom--shadow--global--default, none);
 
 	&:focus {
 		outline: var(--wp--custom--outline--primary--width)
@@ -93,7 +93,7 @@
 			var(--wp--custom--color--border--accent-1, currentColor);
 
 		outline-offset: var(--wp--custom--outline--primary--offset);
-		box-shadow:     var(--wp--custom--shadow--primary--hover, none);
+		box-shadow:     var(--wp--custom--shadow--global--interact, none);
 	}
 }
 

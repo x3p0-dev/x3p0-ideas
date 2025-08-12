@@ -19,7 +19,7 @@
 				"border": {
 					"radius": "clamp(0rem, calc(0.23583 * (100cqi - 56rem)), var(--wp--custom--border--global--radius))"
 				},
-				"shadow": "var(--wp--custom--shadow--primary--default)",
+				"shadow": "var(--wp--custom--shadow--global--default)",
 				"spacing": {
 					"margin": {
 						"top": "clamp(0rem, calc(0.23583 * (100cqi - 56rem)), 5.66rem) !important",

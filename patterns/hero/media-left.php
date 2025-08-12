@@ -106,8 +106,8 @@ use X3P0\Ideas\Tools\Placeholder;
 				</div>
 				<!-- /wp:button -->
 
-				<!-- wp:button {"className":"is-style-button-secondary"} -->
-				<div class="wp-block-button is-style-button-secondary">
+				<!-- wp:button {"className":"is-style-button-outlined"} -->
+				<div class="wp-block-button is-style-button-outlined">
 					<a class="wp-block-button__link wp-element-button"><?= esc_html__('Learn More &rarr;', 'x3p0-ideas') ?></a>
 				</div>
 				<!-- /wp:button -->

@@ -5,7 +5,7 @@
 	"slug": "button-link",
 	"blockTypes": [ "core/button" ],
 	"styles": {
-		"css": "&:is(:focus, :hover) { color: var(--wp--custom--color--link--primary--foreground-hover); }",
+		"css": "&:is(:focus, :hover) { color: var(--wp--custom--color--link--primary--foreground-interact); }",
 		"border": {
 			"width": "0",
 			"radius": "0"

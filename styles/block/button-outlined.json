@@ -1,0 +1,42 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/wp/6.8/schemas/json/theme.json",
+	"version": 3,
+	"title": "Outlined",
+	"slug": "button-outlined",
+	"blockTypes": [ "core/button" ],
+	"styles": {
+		"border": {
+			"color": "var(--wp--custom--color--button--outlined--border)",
+			"radius": "var(--wp--custom--border--button--radius)",
+			"style": "var(--wp--custom--border--button--style)",
+			"width": "var(--wp--custom--border--button--width)"
+		},
+		"color": {
+			"background": "var(--wp--custom--color--button--outlined--background)",
+			"text": "var(--wp--custom--color--button--outlined--foreground)"
+		},
+		"outline": {
+			"color": "var(--wp--custom--color--button--outlined--outline)",
+			"offset": "var(--wp--custom--outline--button--offset)",
+			"style": "var(--wp--custom--outline--button--style)",
+			"width": "var(--wp--custom--outline--button--width)"
+		},
+		"shadow": "var(--wp--custom--shadow--button--outlined--default)",
+		"spacing": {
+			"padding": {
+				"top": {
+					"ref": "styles.elements.button.spacing.padding.top"
+				},
+				"bottom": {
+					"ref": "styles.elements.button.spacing.padding.bottom"
+				},
+				"left": {
+					"ref": "styles.elements.button.spacing.padding.left"
+				},
+				"right": {
+					"ref": "styles.elements.button.spacing.padding.right"
+				}
+			}
+		}
+	}
+}

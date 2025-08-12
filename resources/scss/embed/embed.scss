@@ -22,7 +22,7 @@
 	&:hover,
 	&:focus {
 		text-decoration: underline;
-		color: var(--wp--custom--color--link--secondary--foreground-hover);
+		color: var(--wp--custom--color--link--secondary--foreground-interact);
 
 		> svg { fill: currentColor; }
 	}

@@ -59,7 +59,7 @@
 	transition: box-shadow 0.5s ease-in-out;
 
 	&:hover {
-		box-shadow: var(--wp--custom--shadow--primary--hover);
+		box-shadow: var(--wp--custom--shadow--global--interact);
 	}
 }
 
@@ -153,5 +153,5 @@ figure.wp-block-image[class*=-gradient-background] {
 	padding: 0 !important;
 	border: none !important;
 	border-radius: var(--wp--custom--border--global--radius) !important;
-	box-shadow: var(--wp--custom--shadow--primary--default) !important;
+	box-shadow: var(--wp--custom--shadow--global--default) !important;
 }

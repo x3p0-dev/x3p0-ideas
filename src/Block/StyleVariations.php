@@ -91,8 +91,8 @@ class StyleVariations implements Bootable
 		// user-facing label. The variation actually uses the default
 		// Button block styles.
 		$this->styles->register('core/button', [
-			'name'       => 'button-primary',
-			'label'      => __('Primary', 'x3p0-ideas'),
+			'name'       => 'button-filled',
+			'label'      => __('Filled', 'x3p0-ideas'),
 			'is_default' => true
 		]);
 

@@ -44,91 +44,57 @@
 					"emphasis": "var(--wp--preset--color--primary-200)"
 				},
 				"button": {
-					"fill": {
+					"filled": {
 						"background": "var(--wp--preset--color--primary-600)",
-						"background-hover": "color-mix(in oklab, var(--wp--preset--color--primary-600) 95%, var(--wp--preset--color--white))",
+						"background-interact": "color-mix(in oklab, var(--wp--preset--color--primary-600) 95%, var(--wp--preset--color--white))",
 						"border": "transparent",
-						"border-hover": "var(--wp--preset--color--primary-900)",
+						"border-interact": "var(--wp--preset--color--primary-700)",
 						"foreground": "var(--wp--preset--color--primary-50)",
 						"outline": "transparent",
-						"outline-focus": "color-mix(in oklab, var(--wp--preset--color--primary-600) 95%, var(--wp--preset--color--white))"
+						"outline-focus": "color-mix(in oklab, var(--wp--preset--color--primary-600) 95%, var(--wp--preset--color--white))",
+						"shadow": "light-dark(color-mix(in oklab, var(--wp--preset--color--primary-950) 40%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 60%, transparent))",
+						"shadow-interact": "light-dark(color-mix(in oklab, var(--wp--preset--color--primary-950) 60%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 100%, transparent))"
+					},
+					"tonal": {
+						"background": "var(--wp--preset--color--primary-300)",
+						"background-interact": "var(--wp--preset--color--primary-200)",
+						"border": "transparent",
+						"border-interact": "var(--wp--preset--color--primary-300)",
+						"foreground": "var(--wp--preset--color--primary-900)",
+						"outline": "transparent",
+						"outline-focus": "var(--wp--preset--color--primary-200)",
+						"shadow": "color-mix(in oklab, var(--wp--preset--color--primary-500) 40%, transparent)",
+						"shadow-interact": "color-mix(in oklab, var(--wp--preset--color--primary-600) 40%, transparent)"
 					}
 				},
 				"link": {
 					"primary": {
 						"foreground": "var(--wp--preset--color--primary-200)",
-						"foreground-hover": "currentColor"
+						"foreground-interact": "currentColor"
 					},
 					"secondary": {
 						"foreground": "currentColor",
-						"foreground-hover": "var(--wp--preset--color--primary-200)"
+						"foreground-interact": "var(--wp--preset--color--primary-200)"
 					}
 				}
 			},
-			"elements": {
+			"shadow": {
+				"global": {
+					"default": "0 10px 15px -3px var(--wp--custom--color--shadow--default), 0 4px 6px -4px var(--wp--custom--color--shadow--default)",
+					"interact": "0 10px 15px -3px var(--wp--custom--color--shadow--interact), 0 4px 6px -4px var(--wp--custom--color--shadow--interact)"
+				},
 				"button": {
-					"primary": {
-						"border": {
-							"color": "var(--wp--custom--color--button--fill--border)"
-						},
-						"color": {
-							"background": "var(--wp--custom--color--button--fill--background)",
-							"foreground": "var(--wp--custom--color--button--fill--foreground)"
-						},
-						"outline": {
-							"color": "var(--wp--custom--color--button--fill--outline)"
-						},
-						"shadow": "0 10px 15px -3px light-dark(color-mix(in oklab, var(--wp--preset--color--primary-950) 40%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 60%, transparent)), 0 4px 6px -4px light-dark(color-mix(in oklab, var(--wp--preset--color--primary-600) 40%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 60%, transparent))",
-						"focus": {
-							"border": {
-								"color": "var(--wp--custom--color--button--fill--border-hover)"
-							},
-							"color": {
-								"background": "var(--wp--custom--color--button--fill--background-hover)",
-								"foreground": "var(--wp--custom--color--button--fill--foreground)"
-							},
-							"outline": {
-								"color": "var(--wp--custom--color--button--fill--outline-focus)"
-							}
-						},
-						"hover": {
-							"border": {
-								"color": "var(--wp--custom--color--button--fill--border-hover)"
-							},
-							"color": {
-								"background": "var(--wp--custom--color--button--fill--background-hover)",
-								"foreground": "var(--wp--custom--color--button--fill--foreground)"
-							},
-							"shadow": "0 10px 15px -3px light-dark(color-mix(in oklab, var(--wp--preset--color--primary-950) 60%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 100%, transparent)), 0 4px 6px -4px light-dark(color-mix(in oklab, var(--wp--preset--color--primary-600) 60%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 100%, transparent))"
-						}
+					"filled": {
+						"default": "0 4px 6px -1px var(--wp--custom--color--button--filled--shadow), 0 2px 4px -2px var(--wp--custom--color--button--filled--shadow)",
+						"interact": "0 4px 6px -1px var(--wp--custom--color--button--filled--shadow-interact), 0 4px 6px -4px var(--wp--custom--color--button--filled--shadow-interact)"
 					},
-					"secondary": {
-						"color": {
-							"background": "transparent",
-							"foreground": "currentColor"
-						},
-						"border": {
-							"color": "currentColor"
-						},
-						"outline": {
-							"color": "transparent"
-						},
-						"shadow": "0 10px 15px -3px light-dark(color-mix(in oklab, var(--wp--preset--color--black) 10%, transparent), color-mix(in oklab, var(--wp--preset--color--black) 30%, transparent)), 0 4px 6px -4px light-dark(color-mix(in oklab, var(--wp--preset--color--black) 10%, transparent), color-mix(in oklab, var(--wp--preset--color--black) 30%, transparent))",
-						"focus": {
-							"outline": {
-								"color": "currentColor"
-							}
-						},
-						"hover": {
-							"color": {
-								"background": "transparent",
-								"foreground": "currentColor"
-							},
-							"border": {
-								"color": "light-dark(color-mix(in oklab, currentColor 90%, var(--wp--preset--color--black)), color-mix(in oklab, currentColor 50%, var(--wp--preset--color--white)))"
-							},
-							"shadow": "0 10px 15px -3px light-dark(color-mix(in oklab, var(--wp--preset--color--black) 25%, transparent), color-mix(in oklab, var(--wp--preset--color--black) 45%, transparent)), 0 4px 6px -4px light-dark(color-mix(in oklab, var(--wp--preset--color--black) 25%, transparent), color-mix(in oklab, var(--wp--preset--color--black) 45%, transparent))"
-						}
+					"outlined": {
+						"default": "0 4px 6px -1px var(--wp--custom--color--button--outlined--shadow), 0 2px 4px -2px var(--wp--custom--color--button--outlined--shadow)",
+						"interact": "0 4px 6px -1px var(--wp--custom--color--button--outlined--shadow-interact), 0 4px 6px -4px var(--wp--custom--color--button--outlined--shadow-interact)"
+					},
+					"tonal": {
+						"default": "0 4px 6px -1px var(--wp--custom--color--button--filled--shadow), 0 2px 4px -2px var(--wp--custom--color--button--tonal--shadow)",
+						"interact": "0 4px 6px -1px var(--wp--custom--color--button--filled--shadow-interact), 0 2px 4px -2px var(--wp--custom--color--button--filled--shadow-interact)"
 					}
 				}
 			}

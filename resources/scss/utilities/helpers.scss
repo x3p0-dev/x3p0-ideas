@@ -21,7 +21,7 @@
 		var(--wp--custom--border--global--style, solid)
 		var(--wp--custom--color--border--bounds, transparent);
 	border-radius: var(--wp--custom--border--global--radius, 0);
-	box-shadow: var(--wp--custom--shadow--primary--default, none);
+	box-shadow: var(--wp--custom--shadow--global--default, none);
 }
 
 :root :where(.has-accent-border)   { border-color: var(--wp--custom--color--border--accent-1); }

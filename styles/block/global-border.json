@@ -14,6 +14,6 @@
 			"width": "var(--wp--custom--border--global--width)",
 			"radius": "var(--wp--custom--border--global--radius)"
 		},
-		"shadow": "var(--wp--custom--shadow--primary--default)"
+		"shadow": "var(--wp--custom--shadow--global--default)"
 	}
 }

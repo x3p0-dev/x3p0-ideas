@@ -160,7 +160,7 @@ use X3P0\Ideas\Tools\Placeholder;
 
 			<!-- wp:button {
 				"width":100,
-				"className":"is-style-button-secondary",
+				"className":"is-style-button-tonal",
 				"style":{
 					"spacing":{
 						"padding":{
@@ -170,7 +170,7 @@ use X3P0\Ideas\Tools\Placeholder;
 					}
 				}
 			} -->
-			<div class="wp-block-button has-custom-width wp-block-button__width-100 is-style-button-secondary">
+			<div class="wp-block-button has-custom-width wp-block-button__width-100 is-style-button-tonal">
 				<a class="wp-block-button__link wp-element-button" style="padding-top:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30)"><?= esc_html__('Placeholder Text →', 'x3p0-ideas') ?></a>
 			</div>
 			<!-- /wp:button -->
