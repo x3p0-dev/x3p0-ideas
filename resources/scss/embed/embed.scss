@@ -9,7 +9,7 @@
 /// Embed wrapper.
 ///
 .wp-embed {
-	color:      var(--wp--custom--color--foreground--primary);
+	color:      var(--wp--custom--color--foreground--default);
 	background: var(--wp--custom--color--background--level-0);
 }
 
@@ -17,12 +17,12 @@
 /// Links in the embed.
 ///
 .wp-embed a {
-	color: var(--wp--custom--elements--link--secondary--color--foreground);
+	color: var(--wp--custom--color--link--secondary--foreground);
 
 	&:hover,
 	&:focus {
 		text-decoration: underline;
-		color: var(--wp--custom--elements--link--secondary--hover--color--foreground);
+		color: var(--wp--custom--color--link--secondary--foreground-hover);
 
 		> svg { fill: currentColor; }
 	}

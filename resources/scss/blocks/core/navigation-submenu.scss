@@ -30,7 +30,7 @@ nav.wp-block-navigation.wp-block-navigation .wp-block-navigation__responsive-con
 	);
 	color: var(
 		--wp--custom--submenu-container--color--foreground,
-		var(--wp--custom--color--foreground--primary)
+		var(--wp--custom--color--foreground--default)
 	);
 }
 
@@ -84,7 +84,7 @@ nav.wp-block-navigation.wp-block-navigation .wp-block-navigation__responsive-con
 	);
 	color: var(
 		--wp--custom--submenu-container--hover--color--foreground,
-		var(--wp--custom--color--foreground--primary)
+		var(--wp--custom--color--foreground--default)
 	);
 }
 

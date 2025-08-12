@@ -10,7 +10,7 @@
 ///
 @mixin label() {
 	background: var(--wp--custom--elements--label--color--background, transparent);
-	color:      var(--wp--custom--elements--label--color--foreground, var(--wp--custom--color--foreground--secondary, inherit));
+	color:      var(--wp--custom--elements--label--color--foreground, var(--wp--custom--color--foreground--subtle, inherit));
 
 	font-family: var(--wp--custom--elements--label--typography--font-family, inherit);
 	font-size:   var(--wp--custom--elements--label--typography--font-size, inherit);
@@ -60,7 +60,7 @@
 /// Default placeholder styles.
 ///
 @mixin placeholder() {
-	color: var(--wp--custom--color--foreground--secondary, inherit);
+	color: var(--wp--custom--color--foreground--subtle, inherit);
 }
 
 ///
@@ -70,7 +70,7 @@
 	appearance:  none;
 	padding:     var(--wp--preset--spacing--10) var(--wp--preset--spacing--30);
 
-	color:       var(--wp--custom--color--foreground--primary, inherit);
+	color:       var(--wp--custom--color--foreground--default, inherit);
 	background:  var(--wp--custom--color--background--level-1, transparent);
 	caret-color: var(--wp--custom--color--foreground--accent, inherit);
 

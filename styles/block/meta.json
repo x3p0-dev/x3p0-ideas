@@ -6,7 +6,7 @@
 	"blockTypes": [ "core/group" ],
 	"styles": {
 		"color": {
-			"text": "var(--wp--custom--color--foreground--secondary)"
+			"text": "var(--wp--custom--color--foreground--subtle)"
 		},
 		"typography": {
 			"fontSize": "var(--wp--preset--font-size--sm)",
@@ -15,14 +15,14 @@
 		"elements": {
 			"link": {
 				"color": {
-					"text": "var(--wp--custom--elements--link--secondary--color--foreground)"
+					"text": "var(--wp--custom--color--link--secondary--foreground)"
 				},
 				"typography": {
 					"textDecoration": "none"
 				},
 				":focus": {
 					"color": {
-						"text": "var(--wp--custom--elements--link--secondary--hover--color--foreground)"
+						"text": "var(--wp--custom--color--link--secondary--foreground-hover)"
 					},
 					"typography": {
 						"textDecoration": "underline"
@@ -30,7 +30,7 @@
 				},
 				":hover": {
 					"color": {
-						"text": "var(--wp--custom--elements--link--secondary--hover--color--foreground)"
+						"text": "var(--wp--custom--color--link--secondary--foreground-hover)"
 					},
 					"typography": {
 						"textDecoration": "underline"

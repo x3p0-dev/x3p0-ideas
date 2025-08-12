@@ -91,11 +91,11 @@ abbr[title] {
 	width:   initial;
 
 	// Add colors for links within captions.
-	color: var(--wp--custom--elements--link--secondary--color--foreground);
+	color: var(--wp--custom--color--link--secondary--foreground);
 
 	&:hover,
 	&:focus {
-		color: var(--wp--custom--elements--link--secondary--hover--color--foreground);
+		color: var(--wp--custom--color--link--secondary--foreground-hover);
 	}
 }
 
@@ -110,11 +110,11 @@ blockquote cite {
 
 	// Add colors for links within block quote citations.
 	a {
-		color: var(--wp--custom--elements--link--secondary--color--foreground);
+		color: var(--wp--custom--color--link--secondary--foreground);
 
 		&:hover,
 		&:focus {
-			color: var(--wp--custom--elements--link--secondary--hover--color--foreground);
+			color: var(--wp--custom--color--link--secondary--foreground-hover);
 		}
 	}
 }
@@ -136,7 +136,7 @@ blockquote cite {
 	line-height: inherit;
 
 	// Color.
-	color:      var(--wp--custom--color--foreground--primary, inherit);
+	color:      var(--wp--custom--color--foreground--default, inherit);
 	background: var(--wp--custom--color--background--level-1, transparent);
 
 	// Border and shadow.
@@ -150,7 +150,7 @@ blockquote cite {
 }
 
 a:has(code:only-child) {
-	color: var(--wp--custom--color--foreground--primary, inherit);
+	color: var(--wp--custom--color--foreground--default, inherit);
 	text-decoration-color: currentColor;
 }
 
@@ -161,9 +161,9 @@ a:has(code:only-child) {
 ///
 del,
 s {
-	color: var(--wp--custom--color--foreground--secondary, inherit);
+	color: var(--wp--custom--color--foreground--subtle, inherit);
 	text-decoration:
-		var(--wp--custom--color--foreground--primary, currentColor)
+		var(--wp--custom--color--foreground--default, currentColor)
 		line-through
 		solid
 		min(0.078125em, 3px);
@@ -234,7 +234,7 @@ kbd {
 /// Adds a list item marker color.
 ///
 li::marker {
-	color: var(--wp--custom--color--foreground--tertiary, currentColor);
+	color: var(--wp--custom--color--foreground--muted, currentColor);
 }
 
 ///

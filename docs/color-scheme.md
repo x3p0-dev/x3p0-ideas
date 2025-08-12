@@ -291,12 +291,16 @@ This is also the layer where we can utilize CSS functions like `light-dark()` to
 
 ### Semantic Color Names
 
-Colors at the semantic layer are broken down into two groups:
+**Colors at the semantic layer are broken down into four groups:**
 
 - `background`: Used for surfaces and other backgrounds and never for text.
+- `border`: Used for borders, dividers, and separators.
 - `foreground`: Used for text, icons, and other elements that appear on the background.
+- `{component}`: Used to define the various colors needed for specific components.
+  - `button`
+  - `link`
 
-Background colors are as follows:
+**Background colors are as follows:**
 
 - `level-0`: Typically the base surface.
 - `level-1`: Should visually appear as a distinct layer above `level-0`.
@@ -304,22 +308,42 @@ Background colors are as follows:
 - `accent`: Used for highlighting a particular surface.
 - `backdrop`: Used behind overlays, such as lightboxes, to obscure what's below.
 
-Foreground colors are as follows:
+**Border colors are as follows:**
 
-- `primary`: Used as the main text color.
-- `secondary`: Used as a for less important text.
-- `tertiary`: Used for an even lighter emphasis.
+- `accent-1`: Used for borders that should be highlighted.
+- `accent-2`: Variant color used for borders that should be highlighted.
+- `bounds`: Used for general-purpose borders that are usually given to surfaces.
+- `emphasis`: Used for borders that need a higher degree of emphasis.
+
+**Foreground colors are as follows:**
+
+- `default`: Used as the main text color.
+- `subtle`: Used as a for less important text.
+- `muted`: Used for an even lighter emphasis.
 - `accent`: Used for text that needs to stand out.
 - `on-accent`: Used for text that sits atop the background `accent` color.
 - `on-backdrop`: Used for text that sits atop the background `backdrop` color.
 
-Border colors are as follows:
-
-- `accent-1`: Used for borders that should be highlighted.
-- `bounds`: Used for general-purpose borders that are usually given to surfaces.
-- `emphasis`: Used for borders that need a higher degree of emphasis.
-
 Unless specified by the `on-` prefix, all colors should have readable text against any of the `level-*` backgrounds.
+
+**Component colors are as follows:**
+
+- `button`
+  - `fill`
+    - `background`
+    - `background-hover`
+    - `border`
+    - `border-hover`
+    - `foreground`
+    - `outline`
+    - `outline-focus`
+  - `link`
+    - `primary`
+      - `foreground`
+      - `foreground-hover`
+    - `secondary`
+      - `foreground`
+      - `foreground-hover`
 
 ### Defining Semantic Colors in `theme.json`
 
@@ -337,21 +361,50 @@ Here is what semantic colors should look like at the semantic layer in `theme.js
 	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/wp/trunk/schemas/json/theme.json",
 	"version": 3,
 	"settings": {
-		"color": {
-			"background": {
-				"level-0": "light-dark(var(--wp--preset--color--white), var(--wp--preset--color--neutral-950))",
-				"level-1": "light-dark(var(--wp--preset--color--neutral-50), var(--wp--preset--color--neutral-900))",
-				"level-2": "light-dark(var(--wp--preset--color--neutral-100), var(--wp--preset--color--neutral-800))",
-				"accent": "light-dark(var(--wp--preset--color--primary-600), var(--wp--preset--color--primary-400))",
-				"backdrop": "var(--wp--preset--color--neutral-950)"
-			},
-			"foreground": {
-				"primary": "light-dark(var(--wp--preset--color--neutral-900), var(--wp--preset--color--neutral-200))",
-				"secondary": "light-dark(var(--wp--preset--color--neutral-600), var(--wp--preset--color--neutral-400))",
-				"tertiary": "light-dark(var(--wp--preset--color--neutral-400), var(--wp--preset--color--neutral-600))",
-				"accent": "light-dark(var(--wp--preset--color--primary-700), var(--wp--preset--color--primary-300))",
-				"on-accent": "light-dark(var(--wp--preset--color--white), var(--wp--preset--color--primary-950))",
-				"on-backdrop": "var(--wp--preset--color--neutral-50)"
+		"custom": {
+			"color": {
+				"background": {
+					"level-0": "light-dark(var(--wp--preset--color--white), var(--wp--preset--color--neutral-950))",
+					"level-1": "light-dark(var(--wp--preset--color--neutral-50), var(--wp--preset--color--neutral-900))",
+					"level-2": "light-dark(var(--wp--preset--color--neutral-100), var(--wp--preset--color--neutral-800))",
+					"accent": "light-dark(var(--wp--preset--color--primary-600), var(--wp--preset--color--primary-700))",
+					"backdrop": "var(--wp--preset--color--neutral-950)"
+				},
+				"foreground": {
+					"default": "light-dark(var(--wp--preset--color--neutral-900), var(--wp--preset--color--neutral-200))",
+					"subtle": "light-dark(var(--wp--preset--color--neutral-600), var(--wp--preset--color--neutral-400))",
+					"muted": "light-dark(var(--wp--preset--color--neutral-400), var(--wp--preset--color--neutral-600))",
+					"accent": "light-dark(var(--wp--preset--color--primary-700), var(--wp--preset--color--primary-300))",
+					"on-accent": "var(--wp--preset--color--white)",
+					"on-backdrop": "var(--wp--preset--color--neutral-50)"
+				},
+				"border": {
+					"accent-1": "light-dark(var(--wp--preset--color--primary-700), var(--wp--preset--color--primary-300))",
+					"accent-2": "light-dark(var(--wp--preset--color--secondary-700), var(--wp--preset--color--secondary-300))",
+					"bounds": "light-dark(var(--wp--preset--color--neutral-200), var(--wp--preset--color--neutral-800))",
+					"emphasis": "light-dark(var(--wp--preset--color--neutral-700), var(--wp--preset--color--neutral-400))"
+				},
+				"button": {
+					"fill": {
+						"background": "light-dark(var(--wp--preset--color--primary-600), var(--wp--preset--color--primary-700))",
+						"background-hover": "light-dark(var(--wp--preset--color--primary-700), var(--wp--preset--color--primary-600))",
+						"border": "transparent",
+						"border-hover": "light-dark(var(--wp--preset--color--primary-800), var(--wp--preset--color--primary-900))",
+						"foreground": "var(--wp--preset--color--white)",
+						"outline": "transparent",
+						"outline-focus": "light-dark(var(--wp--preset--color--primary-700), var(--wp--preset--color--primary-600))"
+					}
+				},
+				"link": {
+					"primary": {
+						"foreground": "light-dark(var(--wp--preset--color--primary-700), var(--wp--preset--color--primary-300))",
+						"foreground-hover": "currentColor"
+					},
+					"secondary": {
+						"foreground": "currentColor",
+						"foreground-hover": "light-dark(var(--wp--preset--color--primary-700), var(--wp--preset--color--primary-300))"
+					}
+				}
 			}
 		}
 	}

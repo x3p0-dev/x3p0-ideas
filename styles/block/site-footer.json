@@ -11,7 +11,7 @@
 		"color": {
 			"background": "var(--wp--custom--color--background--level-1)",
 			"gradient": "none",
-			"text": "var(--wp--custom--color--foreground--primary)"
+			"text": "var(--wp--custom--color--foreground--default)"
 		}
 	}
 }

@@ -93,11 +93,11 @@
 	@include inline-icon.prefix(icon.get-url('share'));
 
 	& {
-		color: var(--wp--custom--elements--link--secondary--color--foreground);
+		color: var(--wp--custom--color--link--secondary--foreground);
 	}
 
 	&:hover,
 	&:focus {
-		color: var(--wp--custom--elements--link--secondary--hover--color--foreground);
+		color: var(--wp--custom--color--link--secondary--foreground-hover);
 	}
 }

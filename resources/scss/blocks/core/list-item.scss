@@ -42,7 +42,7 @@ li.is-style-list-item-negative {
 	@include inline-icon.prefix(icon.get-url('cancel-circle'));
 
 	&::before {
-		background-color: var(--wp--custom--color--foreground--tertiary);
+		background-color: var(--wp--custom--color--foreground--muted);
 	}
 }
 
