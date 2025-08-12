@@ -91,7 +91,8 @@
 			},
 			"core/navigation": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--primary)"
+					"fontFamily": "var(--wp--preset--font-family--primary)",
+					"fontWeight": "425"
 				}
 			},
 			"core/post-comments-form": {
