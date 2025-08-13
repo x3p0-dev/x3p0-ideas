@@ -1969,7 +1969,7 @@
 			},
 			"core/social-link": {
 				"border": {
-					"radius": "var(--wp--custom--border--global--radius)"
+					"radius": "var(--wp--custom--border--button--radius)"
 				},
 				"shadow": "var(--wp--custom--shadow--button--secondary--default)"
 			},
