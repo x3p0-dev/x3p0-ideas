@@ -60,6 +60,28 @@
 // -----------------------------------------------------------------------------
 
 ///
+/// Elevated style.
+///
+/// Handles interactive states since these are not currently supported via JSON,
+/// following a LVHFA model.
+///
+/// @link https://github.com/WordPress/gutenberg/issues/55359
+///
+:root :where(.is-style-button-elevated .wp-block-button__link) {
+
+	&:is(:hover, :focus, :active) {
+		background:   var(--wp--custom--color--button--elevated--background-interact);
+		color:        var(--wp--custom--color--button--elevated--foreground);
+		border-color: var(--wp--custom--color--button--elevated--border-interact);
+		box-shadow:   var(--wp--custom--shadow--button--elevated--interact);
+	}
+
+	&:is(:focus, :active) {
+		outline-color: var(--wp--custom--color--button--elevated--outline-focus);
+	}
+}
+
+///
 /// Tonal style.
 ///
 /// Handles interactive states since these are not currently supported via JSON,

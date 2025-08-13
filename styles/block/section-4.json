@@ -48,6 +48,17 @@
 					"interact": "light-dark(color-mix(in oklab, var(--wp--preset--color--primary-950) 25%, transparent), color-mix(in oklab, var(--wp--preset--color--primary-950) 45%, transparent))"
 				},
 				"button": {
+					"elevated": {
+						"background": "light-dark(var(--wp--preset--color--primary-100), var(--wp--preset--color--primary-900))",
+						"background-interact": "light-dark(var(--wp--preset--color--primary-200), var(--wp--preset--color--primary-800))",
+						"border": "light-dark(var(--wp--preset--color--primary-500), var(--wp--preset--color--primary-700))",
+						"border-interact": "light-dark(var(--wp--preset--color--primary-600), var(--wp--preset--color--primary-600))",
+						"foreground": "light-dark(var(--wp--preset--color--primary-700), var(--wp--preset--color--primary-200))",
+						"outline": "transparent",
+						"outline-focus": "light-dark(var(--wp--preset--color--primary-500), var(--wp--preset--color--primary-400))",
+						"shadow": "light-dark(color-mix(in oklab, var(--wp--preset--color--primary-950) 40%, transparent), var(--wp--preset--color--primary-950))",
+						"shadow-interact": "light-dark(color-mix(in oklab, var(--wp--preset--color--primary-950) 40%, transparent), var(--wp--preset--color--primary-950))"
+					},
 					"filled": {
 						"background": "light-dark(var(--wp--preset--color--primary-600), var(--wp--preset--color--primary-700))",
 						"background-interact": "light-dark(var(--wp--preset--color--primary-700), var(--wp--preset--color--primary-600))",
@@ -88,6 +99,10 @@
 					"interact": "0 10px 15px -3px var(--wp--custom--color--shadow--interact), 0 4px 6px -4px var(--wp--custom--color--shadow--interact)"
 				},
 				"button": {
+					"elevated": {
+						"default": "0 1px 3px 0 var(--wp--custom--color--button--elevated--shadow), 0 1px 2px -1px var(--wp--custom--color--button--elevated--shadow)",
+						"interact": "0 1px 3px 0 var(--wp--custom--color--button--elevated--shadow-interact), 0 1px 2px -1px var(--wp--custom--color--button--elevated--shadow-interact)"
+					},
 					"filled": {
 						"default": "none",
 						"interact": "none"

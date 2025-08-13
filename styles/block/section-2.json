@@ -47,6 +47,10 @@
 					"interact": "0 10px 15px -3px var(--wp--custom--color--shadow--interact), 0 4px 6px -4px var(--wp--custom--color--shadow--interact)"
 				},
 				"button": {
+					"elevated": {
+						"default": "0 1px 3px 0 var(--wp--custom--color--button--elevated--shadow), 0 1px 2px -1px var(--wp--custom--color--button--elevated--shadow)",
+						"interact": "0 1px 3px 0 var(--wp--custom--color--button--elevated--shadow-interact), 0 1px 2px -1px var(--wp--custom--color--button--elevated--shadow-interact)"
+					},
 					"filled": {
 						"default": "none",
 						"interact": "none"

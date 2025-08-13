@@ -58,7 +58,8 @@
 		"elements": {
 			"button": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--secondary)"
+					"fontFamily": "var(--wp--preset--font-family--secondary)",
+					"fontWeight": "425"
 				}
 			},
 			"caption": {

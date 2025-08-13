@@ -44,6 +44,17 @@
 					"emphasis": "var(--wp--preset--color--secondary-200)"
 				},
 				"button": {
+					"elevated": {
+						"background": "var(--wp--preset--color--secondary-800)",
+						"background-interact": "var(--wp--preset--color--secondary-700)",
+						"border": "var(--wp--preset--color--secondary-600)",
+						"border-interact": "var(--wp--preset--color--secondary-500)",
+						"foreground": "var(--wp--preset--color--secondary-200)",
+						"outline": "transparent",
+						"outline-focus": "var(--wp--preset--color--secondary-500)",
+						"shadow": "var(--wp--preset--color--secondary-900)",
+						"shadow-interact": "var(--wp--preset--color--secondary-900)"
+					},
 					"filled": {
 						"background": "var(--wp--preset--color--secondary-600)",
 						"background-interact": "color-mix(in oklab, var(--wp--preset--color--secondary-600) 95%, var(--wp--preset--color--white))",
@@ -84,6 +95,10 @@
 					"interact": "0 10px 15px -3px var(--wp--custom--color--shadow--interact), 0 4px 6px -4px var(--wp--custom--color--shadow--interact)"
 				},
 				"button": {
+					"elevated": {
+						"default": "0 1px 3px 0 var(--wp--custom--color--button--elevated--shadow), 0 1px 2px -1px var(--wp--custom--color--button--elevated--shadow)",
+						"interact": "0 1px 3px 0 var(--wp--custom--color--button--elevated--shadow-interact), 0 1px 2px -1px var(--wp--custom--color--button--elevated--shadow-interact)"
+					},
 					"filled": {
 						"default": "none",
 						"interact": "none"
