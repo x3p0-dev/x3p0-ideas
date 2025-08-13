@@ -4,7 +4,15 @@
 	"title": "Notes",
 	"settings": {
 		"custom": {
-			"variation": "notes"
+			"variation": "notes",
+			"border": {
+				"global": {
+					"radius": "0.75rem"
+				},
+				"button": {
+					"radius": "9999em"
+				}
+			}
 		}
 	},
 	"styles": {
