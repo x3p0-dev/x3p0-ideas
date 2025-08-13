@@ -92,7 +92,7 @@ defined('ABSPATH') || exit;
 	} -->
 	<div class="wp-block-group alignfull">
 
-		<!-- wp:pattern {"slug":"x3p0-ideas/social-menu-buttons-primary"} /-->
+		<!-- wp:pattern {"slug":"x3p0-ideas/social-menu-buttons-filled"} /-->
 
 		<!-- wp:site-title {
 			"textAlign":"center",

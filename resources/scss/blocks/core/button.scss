@@ -124,33 +124,6 @@
 	}
 }
 
-///
-/// Secondary style.
-///
-/// Note that we currently map the unregistered Core `outline` style to the
-/// theme's `button-secondary` style.
-///
-:root :where(.is-style-button-secondary .wp-block-button__link),
-:root :where(.wp-block-button.is-style-outline .wp-block-button__link) {
-
-	&:is(:hover, :focus) {
-		background:    var(--wp--custom--elements--button--secondary--hover--color--background);
-		color:         var(--wp--custom--elements--button--secondary--hover--color--foreground);
-		border-color:  var(--wp--custom--elements--button--secondary--hover--border--color);
-		border-radius: var(--wp--custom--elements--button--secondary--hover--border--radius);
-		border-style:  var(--wp--custom--elements--button--secondary--hover--border--style);
-		border-width:  var(--wp--custom--elements--button--secondary--hover--border--width);
-		box-shadow:    var(--wp--custom--elements--button--secondary--hover--shadow);
-	}
-
-	&:is(:active, :focus) {
-		outline-color:  var(--wp--custom--elements--button--secondary--focus--outline--color);
-		outline-offset: var(--wp--custom--elements--button--secondary--focus--outline--offset);
-		outline-style:  var(--wp--custom--elements--button--secondary--focus--outline--style);
-		outline-width:  var(--wp--custom--elements--button--secondary--focus--outline--width);
-	}
-}
-
 // -----------------------------------------------------------------------------
 // Block variations.
 // -----------------------------------------------------------------------------

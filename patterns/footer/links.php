@@ -51,9 +51,9 @@ defined('ABSPATH') || exit;
 
 		<!-- wp:social-links {
 			"size":"has-large-icon-size",
-			"className":"is-style-buttons-primary"
+			"className":"is-style-buttons-filled"
 		} -->
-		<ul class="wp-block-social-links has-large-icon-size is-style-buttons-primary">
+		<ul class="wp-block-social-links has-large-icon-size is-style-buttons-filled">
 			<!-- wp:social-link {"url":"https://wordpress.org","service":"wordpress"} /-->
 			<!-- wp:social-link {"url":"https://github.com","service":"github"} /-->
 			<!-- wp:social-link {"url":"https://facebook.com","service":"facebook"} /-->

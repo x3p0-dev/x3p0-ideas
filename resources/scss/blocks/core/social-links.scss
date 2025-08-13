@@ -89,62 +89,71 @@
 // -----------------------------------------------------------------------------
 
 ///
-/// Buttons Primary styles that are not feasible in JSON.
+/// Buttons Filled styles that are not feasible in JSON.
 ///
-.wp-block-social-links.is-style-buttons-primary {
+/// Handles interactive states following a LVHFA model.
+///
+.wp-block-social-links.is-style-buttons-filled {
 
-	.wp-block-social-link:has(.wp-block-social-link-anchor:where(:focus, :hover)) {
-		background:    var(--wp--custom--elements--button--primary--hover--color--background);
-		color:         var(--wp--custom--elements--button--primary--hover--color--foreground);
-		border-color:  var(--wp--custom--elements--button--primary--hover--border--color);
-		border-radius: var(--wp--custom--elements--button--primary--hover--border--radius);
-		border-style:  var(--wp--custom--elements--button--primary--hover--border--style);
-		border-width:  var(--wp--custom--elements--button--primary--hover--border--width);
-		box-shadow:    var(--wp--custom--elements--button--primary--hover--shadow);
+	.wp-block-social-link:has(.wp-block-social-link-anchor:where(:hover, :focus, :active)) {
+		background:   var(--wp--custom--color--button--filled--background-interact);
+		color:        var(--wp--custom--color--button--filled--foreground);
+		border-color: var(--wp--custom--color--button--filled--border-interact);
+		box-shadow:   var(--wp--custom--shadow--button--filled--interact);
 	}
 
-	.wp-block-social-link:has(.wp-block-social-link-anchor:where(:active, :focus)) {
-		outline-color:  var(--wp--custom--elements--button--primary--focus--outline--color);
-		outline-offset: var(--wp--custom--elements--button--primary--focus--outline--offset);
-		outline-style:  var(--wp--custom--elements--button--primary--focus--outline--style);
-		outline-width:  var(--wp--custom--elements--button--primary--focus--outline--width);
-	}
-
-	.wp-block-social-link-anchor {
-		background: inherit;
-		color:      currentColor;
-		border:     none;
-		box-shadow: none;
-		outline:    none;
+	.wp-block-social-link:has(.wp-block-social-link-anchor:where(:focus, :active)) {
+		outline-color: var(--wp--custom--color--button--filled--outline-focus);
 	}
 }
 
 ///
-/// Buttons Secondary styles that are not feasible in JSON.
+/// Buttons Tonal styles that are not feasible in JSON.
 ///
-.wp-block-social-links.is-style-buttons-secondary {
+/// Handles interactive states following a LVHFA model.
+///
+.wp-block-social-links.is-style-buttons-tonal {
 
-	.wp-block-social-link:has(.wp-block-social-link-anchor:where(:focus, :hover)) {
-		background:    var(--wp--custom--elements--button--secondary--hover--color--background);
-		color:         var(--wp--custom--elements--button--secondary--hover--color--foreground);
-		border-color:  var(--wp--custom--elements--button--secondary--hover--border--color);
-		border-radius: var(--wp--custom--elements--button--secondary--hover--border--radius);
-		border-style:  var(--wp--custom--elements--button--secondary--hover--border--style);
-		border-width:  var(--wp--custom--elements--button--secondary--hover--border--width);
-		box-shadow:    var(--wp--custom--elements--button--secondary--hover--shadow);
+	.wp-block-social-link:has(.wp-block-social-link-anchor:where(:hover, :focus, :active)) {
+		background:   var(--wp--custom--color--button--tonal--background-interact);
+		color:        var(--wp--custom--color--button--tonal--foreground);
+		border-color: var(--wp--custom--color--button--tonal--border-interact);
+		box-shadow:   var(--wp--custom--shadow--button--tonal--interact);
 	}
 
-	.wp-block-social-link:has(.wp-block-social-link-anchor:where(:active, :focus)) {
-		outline-color:  var(--wp--custom--elements--button--secondary--focus--outline--color);
-		outline-offset: var(--wp--custom--elements--button--secondary--focus--outline--offset);
-		outline-style:  var(--wp--custom--elements--button--secondary--focus--outline--style);
-		outline-width:  var(--wp--custom--elements--button--secondary--focus--outline--width);
+	.wp-block-social-link:has(.wp-block-social-link-anchor:where(:focus, :active)) {
+		outline-color: var(--wp--custom--color--button--tonal--outline-focus);
 	}
 }
 
-.wp-block-social-links:where(.is-style-buttons-primary, .is-style-buttons-secondary) {
+///
+/// Buttons Outlined styles that are not feasible in JSON.
+///
+/// Handles interactive states following a LVHFA model.
+///
+.wp-block-social-links.is-style-buttons-outlined {
+
+	.wp-block-social-link:has(.wp-block-social-link-anchor:where(:hover, :focus, :active)) {
+		background: var(--wp--custom--color--button--outlined--background-interact);
+		color: var(--wp--custom--color--button--outlined--foreground);
+		border-color: var(--wp--custom--color--button--outlined--border-interact);
+		box-shadow: var(--wp--custom--shadow--button--outlined--interact);
+	}
+
+	.wp-block-social-link:has(.wp-block-social-link-anchor:where(:focus, :active)) {
+		outline-color: var(--wp--custom--color--button--outlined--outline-focus);
+	}
+}
+
+///
+/// Shared styles for links in the `.is-style-buttons-{variation} block styles.
+///
+.wp-block-social-links.is-style-buttons-filled,
+.wp-block-social-links.is-style-buttons-outlined,
+.wp-block-social-links.is-style-buttons-tonal {
+
 	.wp-block-social-link-anchor {
-		background: inherit;
+		background: inherit ;
 		color:      currentColor;
 		border:     none;
 		box-shadow: none;
@@ -159,13 +168,4 @@
 .wp-block-social-links.is-style-monotone .wp-social-link {
 	background: transparent;
 	color: currentColor;
-}
-
-///
-/// WordPress adds the `.wp-block-social-link` class to both the `<li>` and
-/// `<button>` in the editor (it's a button, not a link in the editor). This
-/// causes some styles to get applied twice that we don't need, such as borders.
-///
-.wp-block-social-links.is-style-buttons-secondary .wp-block-social-link-anchor {
-	border: none;
 }

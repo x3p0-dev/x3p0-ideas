@@ -69,7 +69,7 @@ defined('ABSPATH') || exit;
 
 				<!-- wp:post-terms {
 					"term":"category",
-					"className":"is-style-buttons-primary"
+					"className":"is-style-buttons-filled"
 				} /-->
 
 				<!-- wp:group {

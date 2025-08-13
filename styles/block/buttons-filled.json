@@ -1,8 +1,8 @@
 {
 	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/wp/6.8/schemas/json/theme.json",
 	"version": 3,
-	"title": "Primary",
-	"slug": "buttons-primary",
+	"title": "Filled",
+	"slug": "buttons-filled",
 	"blockTypes": [
 		"core/post-terms",
 		"core/social-links",
@@ -16,7 +16,11 @@
 		"typography": {
 			"fontFamily": { "ref": "styles.elements.button.typography.fontFamily" },
 			"fontSize": { "ref": "styles.elements.button.typography.fontSize" },
-			"fontWeight": { "ref": "styles.elements.button.typography.fontWeight" }
+			"fontStyle": { "ref": "styles.elements.button.typography.fontStyle" },
+			"fontWeight": { "ref": "styles.elements.button.typography.fontWeight" },
+			"lineHeight": { "ref": "styles.elements.button.typography.lineHeight" },
+			"textDecoration": { "ref": "styles.elements.button.typography.textDecoration" },
+			"textTransform": { "ref": "styles.elements.button.typography.textTransform" }
 		},
 		"elements": {
 			"link": {
@@ -47,54 +51,85 @@
 				},
 				"typography": {
 					"fontSize": "inherit !important",
+					"fontStyle": "inherit",
 					"fontWeight": "inherit !important",
-					"lineHeight": { "ref": "styles.elements.button.typography.lineHeight" },
-					"textDecoration": "none"
+					"lineHeight": "inherit",
+					"textDecoration": "inherit",
+					"textTransform": "inherit"
 				},
 				":active": {
+					"border": {
+						"color": {
+							"ref": "styles.elements.button.:active.border.color"
+						}
+					},
+					"color": {
+						"background": {
+							"ref": "styles.elements.button.:active.border.color"
+						}
+					},
 					"outline": {
-						"color": { "ref": "styles.elements.button.:active.outline.color" },
-						"offset": { "ref": "styles.elements.button.:active.outline.offset" },
-						"style": { "ref": "styles.elements.button.:active.outline.style" },
-						"width": { "ref": "styles.elements.button.:active.outline.width" }
+						"color": {
+							"ref": "styles.elements.button.:active.outline.color"
+						}
+					},
+					"shadow": {
+						"ref": "styles.elements.button.:active.shadow"
+					},
+					"typography": {
+						"textDecoration": {
+							"ref": "styles.elements.button.:active.typography.textDecoration"
+						}
 					}
 				},
 				":focus": {
 					"border": {
-						"color": "var(--wp--custom--elements--button--primary--hover--border--color)",
-						"radius": "var(--wp--custom--elements--button--primary--hover--border--radius)",
-						"style": "var(--wp--custom--elements--button--primary--hover--border--style)",
-						"width": "var(--wp--custom--elements--button--primary--hover--border--width)"
+						"color": {
+							"ref": "styles.elements.button.:focus.border.color"
+						}
 					},
 					"color": {
-						"background": "var(--wp--custom--elements--button--primary--hover--color--background)",
-						"text": "var(--wp--custom--elements--button--primary--hover--color--foreground)"
+						"background": {
+							"ref": "styles.elements.button.:focus.border.color"
+						}
 					},
 					"outline": {
-						"color": { "ref": "styles.elements.button.:focus.outline.color" },
-						"offset": { "ref": "styles.elements.button.:focus.outline.offset" },
-						"style": { "ref": "styles.elements.button.:focus.outline.style" },
-						"width": { "ref": "styles.elements.button.:focus.outline.width" }
+						"color": {
+							"ref": "styles.elements.button.:focus.outline.color"
+						}
 					},
-					"shadow": "var(--wp--custom--elements--button--primary--hover--shadow)",
+					"shadow": {
+						"ref": "styles.elements.button.:focus.shadow"
+					},
 					"typography": {
-						"textDecoration": "underline !important"
+						"textDecoration": {
+							"ref": "styles.elements.button.:focus.typography.textDecoration"
+						}
 					}
 				},
 				":hover": {
 					"border": {
-						"color": "var(--wp--custom--elements--button--primary--hover--border--color)",
-						"radius": "var(--wp--custom--elements--button--primary--hover--border--radius)",
-						"style": "var(--wp--custom--elements--button--primary--hover--border--style)",
-						"width": "var(--wp--custom--elements--button--primary--hover--border--width)"
+						"color": {
+							"ref": "styles.elements.button.:hover.border.color"
+						}
 					},
 					"color": {
-						"background": "var(--wp--custom--elements--button--primary--hover--color--background)",
-						"text": "var(--wp--custom--elements--button--primary--hover--color--foreground)"
+						"background": {
+							"ref": "styles.elements.button.:hover.border.color"
+						}
 					},
-					"shadow": "var(--wp--custom--elements--button--primary--hover--shadow)",
+					"outline": {
+						"color": {
+							"ref": "styles.elements.button.:hover.outline.color"
+						}
+					},
+					"shadow": {
+						"ref": "styles.elements.button.:hover.shadow"
+					},
 					"typography": {
-						"textDecoration": "underline !important"
+						"textDecoration": {
+							"ref": "styles.elements.button.:hover.typography.textDecoration"
+						}
 					}
 				}
 			}
@@ -111,10 +146,13 @@
 					"background": { "ref": "styles.elements.button.color.background" },
 					"text": { "ref": "styles.elements.button.color.text" }
 				},
-				"shadow": { "ref": "styles.elements.button.shadow" },
-				"typography": {
-					"lineHeight": { "ref": "styles.elements.button.typography.lineHeight" }
-				}
+				"outline": {
+					"color": { "ref": "styles.elements.button.outline.color" },
+					"offset": { "ref": "styles.elements.button.outline.offset" },
+					"style": { "ref": "styles.elements.button.outline.style" },
+					"width": { "ref": "styles.elements.button.outline.width" }
+				},
+				"shadow": { "ref": "styles.elements.button.shadow" }
 			}
 		}
 	}
