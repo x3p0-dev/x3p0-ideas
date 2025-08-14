@@ -43,7 +43,7 @@ class Templates implements Bootable
 			'date'       => _x('Date Archive',     'Template name', 'x3p0-ideas'),
 			'home'       => _x('Blog',             'Template name', 'x3p0-ideas'),
 			'page'       => _x('Page',             'Template name', 'x3p0-ideas'),
-			'single'     => _x('Single Entry',     'Template name', 'x3p0-ideas'),
+			'single'     => _x('Single',           'Template name', 'x3p0-ideas'),
 			'singular'   => _x('Singular',         'Template name', 'x3p0-ideas'),
 			'tag'        => _x('Tag Archive',      'Template name', 'x3p0-ideas'),
 			'taxonomy'   => _x('Term Archive',     'Template name', 'x3p0-ideas'),
@@ -78,8 +78,18 @@ class Templates implements Bootable
 			'description' => __('Displays when a visitor views the dedicated page that exists for an image attachment.', 'x3p0-ideas'),
 		];
 
+		$types['pdf'] ??= [
+			'title'       => _x('Media: PDF', 'Template name', 'x3p0-ideas'),
+			'description' => __('Displays when a visitor views the dedicated page that exists for a PDF attachment.', 'x3p0-ideas'),
+		];
+
+		$types['single-portfolio_project'] ??= [
+			'title'       => _x('Portfolio Project', 'Template name', 'x3p0-ideas'),
+			'description' => __('Displays single projects on your website unless a custom template has been applied to that project or a more specific template exists.', 'x3p0-ideas'),
+		];
+
 		$types['single-post'] ??= [
-			'title'       => _x('Single Post', 'Template name', 'x3p0-ideas'),
+			'title'       => _x('Post', 'Template name', 'x3p0-ideas'),
 			'description' => __('Displays single posts on your website unless a custom template has been applied to that post or a more specific template exists.', 'x3p0-ideas'),
 		];
 
