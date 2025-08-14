@@ -62,25 +62,32 @@
 	transition-property: color, background-color, border-color, outline-color;
 
 	// `theme.json`-supported styles.
-	color:         var(--wp--custom--elements--button--primary--color--foreground) !important;
-	background:    var(--wp--custom--elements--button--primary--color--background);
-	border-color:  var(--wp--custom--elements--button--primary--border--color);
-	border-style:  var(--wp--custom--elements--button--primary--border--style);
-	border-width:  var(--wp--custom--elements--button--primary--border--width);
-	border-radius: var(--wp--custom--elements--button--primary--border--radius);
-	box-shadow:    var(--wp--custom--elements--button--primary--shadow);
+	color:         var(--wp--custom--color--button--filled--foreground) !important;
+	background:    var(--wp--custom--color--button--filled--background);
+	border-color:  var(--wp--custom--color--button--filled--border);
+
+	border-style:  var(--wp--custom--border--button--style);
+	border-width:  var(--wp--custom--border--button--width);
+	border-radius: var(--wp--custom--border--button--radius);
+
+	outline-offset: var(--wp--custom--border--button--radius);
+
+	box-shadow:    var(--wp--custom--shadow--button--default);
 
 	padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--30) !important;
 
+	&:focus,
 	&:hover,
-	&:focus {
-		color:         var(--wp--custom--elements--button--primary--hover--color--foreground) !important;
-		background:    var(--wp--custom--elements--button--primary--hover--color--background);
-		border-color:  var(--wp--custom--elements--button--primary--hover--border--color);
-		border-style:  var(--wp--custom--elements--button--primary--hover--border--style);
-		border-width:  var(--wp--custom--elements--button--primary--hover--border--width);
-		border-radius: var(--wp--custom--elements--button--primary--hover--border--radius);
-		box-shadow:    var(--wp--custom--elements--button--primary--hover--shadow);
+	&:active {
+		color:         var(--wp--custom--color--button--filled--foreground) !important;
+		background:    var(--wp--custom--color--button--filled--background-interact);
+		border-color:  var(--wp--custom--color--button--filled--border-interact);
+
+		border-style:  var(--wp--custom--border--button--style);
+		border-width:  var(--wp--custom--border--button--width);
+		border-radius: var(--wp--custom--border--button--radius);
+
+		box-shadow:    var(--wp--custom--shadow--button--interact);
 	}
 
 	svg {
