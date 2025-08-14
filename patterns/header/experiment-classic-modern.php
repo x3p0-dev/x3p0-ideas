@@ -15,6 +15,10 @@ declare(strict_types=1);
 # Prevent direct access.
 defined('ABSPATH') || exit;
 
+use X3P0\Ideas\Tools\Placeholder;
+
+$image = Placeholder::image('mountain-road.webp');
+
 ?>
 <!-- wp:group {
 	"align":"full",
@@ -81,15 +85,14 @@ defined('ABSPATH') || exit;
 	<div class="wp-block-group alignfull">
 
 		<!-- wp:cover {
-			"url":"http://localhost/wp/wp-content/uploads/2024/03/image-1.png",
-			"id":6660,
+			"url":"<?= esc_url($image) ?>",
 			"dimRatio":0,
 			"minHeight":385
 		} -->
 		<div class="wp-block-cover" style="min-height:385px">
 
 			<span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span>
-			<img class="wp-block-cover__image-background wp-image-6660" alt="" src="http://localhost/wp/wp-content/uploads/2024/03/image-1.png" data-object-fit="cover"/>
+			<img class="wp-block-cover__image-background" alt="" src="<?= esc_url($image) ?>" data-object-fit="cover"/>
 
 			<div class="wp-block-cover__inner-container">
 				<!-- wp:paragraph {"align":"center"} -->
