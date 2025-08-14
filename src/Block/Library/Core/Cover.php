@@ -31,10 +31,9 @@ class Cover implements Bootable
 	public function settings(array $settings): array
 	{
 		if ('core/cover' === $settings['name']) {
-			$settings['supports']['color']               ??= [];
-			$settings['supports']['color']['background']   = true;
-			$settings['supports']['color']['button']       = true;
-			$settings['supports']['color']['link']         = true;
+			$settings['supports']['color']         ??= [];
+			$settings['supports']['color']['button'] = true;
+			$settings['supports']['color']['link']   = true;
 		}
 
 		return $settings;
