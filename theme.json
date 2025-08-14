@@ -741,10 +741,10 @@
 						"shadow-interact": "light-dark(color-mix(in oklab, var(--wp--preset--color--black) 20%, transparent), color-mix(in oklab, var(--wp--preset--color--black) 45%, transparent))"
 					},
 					"tonal": {
-						"background": "light-dark(var(--wp--preset--color--primary-300), var(--wp--preset--color--neutral-700))",
-						"background-interact": "light-dark(var(--wp--preset--color--primary-400), var(--wp--preset--color--neutral-600))",
-						"border": "light-dark(color-mix(in oklab, var(--wp--preset--color--primary-200), var(--wp--preset--color--primary-300)), var(--wp--preset--color--neutral-800))",
-						"border-interact": "light-dark(var(--wp--preset--color--primary-400), var(--wp--preset--color--neutral-900))",
+						"background": "light-dark(var(--wp--preset--color--primary-200), var(--wp--preset--color--neutral-700))",
+						"background-interact": "light-dark(var(--wp--preset--color--primary-300), var(--wp--preset--color--neutral-600))",
+						"border": "light-dark(color-mix(in oklab, var(--wp--preset--color--primary-100), var(--wp--preset--color--primary-300)), var(--wp--preset--color--neutral-800))",
+						"border-interact": "light-dark(var(--wp--preset--color--primary-300), var(--wp--preset--color--neutral-900))",
 						"foreground": "light-dark(var(--wp--preset--color--primary-950), var(--wp--preset--color--white))",
 						"outline": "transparent",
 						"outline-focus": "light-dark(var(--wp--preset--color--primary-400), var(--wp--preset--color--neutral-600))",
