@@ -30,9 +30,10 @@ defined('ABSPATH') || exit;
 			}
 		}
 	},
-	"layout":{"type":"constrained"}
+	"layout":{"type":"constrained"},
+	"className":"is-style-cover-dark"
 } -->
-<article class="wp-block-cover" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70);min-height:100vh">
+<article class="wp-block-cover is-style-cover-dark" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70);min-height:100vh">
 
 	<span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim has-background-gradient has-45-deg-dark-transparent-gradient-background"></span>
 	<div class="wp-block-cover__inner-container">
