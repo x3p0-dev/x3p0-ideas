@@ -485,6 +485,116 @@
 					"gradient": "linear-gradient(to right, var(--wp--preset--color--primary-900), var(--wp--preset--color--primary-800), var(--wp--preset--color--primary-700), var(--wp--preset--color--primary-600), var(--wp--preset--color--primary-500), var(--wp--preset--color--primary-400), var(--wp--preset--color--primary-300), var(--wp--preset--color--primary-200), var(--wp--preset--color--primary-100))",
 					"name": "Spectrum",
 					"slug": "spectrum"
+				},
+				{
+					"name": "Primary Glow",
+					"slug": "primary-glow",
+					"gradient": "linear-gradient(135deg, var(--wp--preset--color--primary-100) 0%, var(--wp--preset--color--primary-400) 25%, var(--wp--preset--color--primary-600) 50%, var(--wp--preset--color--primary-400) 75%, var(--wp--preset--color--primary-100) 100%)"
+				},
+				{
+					"name": "Primary Spread",
+					"slug": "primary-spread",
+					"gradient": "linear-gradient(180deg, var(--wp--preset--color--primary-100), var(--wp--preset--color--primary-900))"
+				},
+				{
+					"name": "Primary Triple",
+					"slug": "primary-triple",
+					"gradient": "linear-gradient(135deg, var(--wp--preset--color--primary-200) 0%, var(--wp--preset--color--primary-500) 50%, var(--wp--preset--color--primary-800) 100%)"
+				},
+				{
+					"name": "Primary Radial",
+					"slug": "primary-radial",
+					"gradient": "radial-gradient(circle at center, var(--wp--preset--color--primary-300), var(--wp--preset--color--primary-700))"
+				},
+				{
+					"name": "Primary to Secondary",
+					"slug": "primary-secondary",
+					"gradient": "linear-gradient(120deg, var(--wp--preset--color--primary-400), var(--wp--preset--color--secondary-400))"
+				},
+				{
+					"name": "Primary to Neutral",
+					"slug": "primary-neutral",
+					"gradient": "linear-gradient(90deg, var(--wp--preset--color--primary-400), var(--wp--preset--color--neutral-600))"
+				},
+				{
+					"name": "Secondary Glow",
+					"slug": "secondary-glow",
+					"gradient": "linear-gradient(135deg, var(--wp--preset--color--secondary-100) 0%, var(--wp--preset--color--secondary-400) 25%, var(--wp--preset--color--secondary-600) 50%, var(--wp--preset--color--secondary-400) 75%, var(--wp--preset--color--secondary-100) 100%)"
+				},
+				{
+					"name": "Secondary Spread",
+					"slug": "secondary-spread",
+					"gradient": "linear-gradient(180deg, var(--wp--preset--color--secondary-100), var(--wp--preset--color--secondary-900))"
+				},
+				{
+					"name": "Secondary Triple",
+					"slug": "secondary-triple",
+					"gradient": "linear-gradient(135deg, var(--wp--preset--color--secondary-200) 0%, var(--wp--preset--color--secondary-500) 50%, var(--wp--preset--color--secondary-800) 100%)"
+				},
+				{
+					"name": "Secondary Radial",
+					"slug": "secondary-radial",
+					"gradient": "radial-gradient(circle at center, var(--wp--preset--color--secondary-300), var(--wp--preset--color--secondary-700))"
+				},
+				{
+					"name": "Secondary to Primary",
+					"slug": "secondary-primary",
+					"gradient": "linear-gradient(60deg, var(--wp--preset--color--secondary-500), var(--wp--preset--color--primary-500))"
+				},
+				{
+					"name": "Secondary to Neutral",
+					"slug": "secondary-neutral",
+					"gradient": "linear-gradient(270deg, var(--wp--preset--color--secondary-400), var(--wp--preset--color--neutral-600))"
+				},
+				{
+					"name": "Neutral Radial",
+					"slug": "neutral-radial",
+					"gradient": "radial-gradient(ellipse at top, var(--wp--preset--color--neutral-100), var(--wp--preset--color--neutral-600))"
+				},
+				{
+					"name": "Harmony",
+					"slug": "harmony",
+					"gradient": "linear-gradient(135deg, var(--wp--preset--color--primary-300) 0%, var(--wp--preset--color--secondary-400) 50%, var(--wp--preset--color--neutral-500) 100%)"
+				},
+				{
+					"name": "Radial Mix",
+					"slug": "radial-mix",
+					"gradient": "radial-gradient(circle at 30% 70%, var(--wp--preset--color--primary-300) 0%, var(--wp--preset--color--secondary-400) 60%, var(--wp--preset--color--neutral-700) 100%)"
+				},
+				{
+					"name": "Ocean Wave",
+					"slug": "ocean-wave",
+					"gradient": "linear-gradient(180deg, var(--wp--preset--color--primary-100) 0%, var(--wp--preset--color--primary-400) 30%, var(--wp--preset--color--primary-700) 70%, var(--wp--preset--color--neutral-800) 100%)"
+				},
+				{
+					"name": "Sunset Sky",
+					"slug": "sunset-sky",
+					"gradient": "linear-gradient(180deg, var(--wp--preset--color--secondary-200) 0%, var(--wp--preset--color--secondary-500) 40%, var(--wp--preset--color--primary-600) 80%, var(--wp--preset--color--neutral-900) 100%)"
+				},
+				{
+					"name": "Morning Mist",
+					"slug": "morning-mist",
+					"gradient": "linear-gradient(45deg, var(--wp--preset--color--neutral-100), var(--wp--preset--color--primary-200), var(--wp--preset--color--secondary-300))"
+				},
+				{
+					"name": "Deep Forest",
+					"slug": "deep-forest",
+					"gradient": "linear-gradient(135deg, var(--wp--preset--color--secondary-300), var(--wp--preset--color--primary-600), var(--wp--preset--color--neutral-800))"
+				},
+				{
+					"name": "Spotlight",
+					"slug": "spotlight",
+					"gradient": "radial-gradient(ellipse at bottom, var(--wp--preset--color--primary-200), var(--wp--preset--color--secondary-400), var(--wp--preset--color--neutral-700))"
+				},
+				{
+					"name": "Cool Breeze",
+					"slug": "cool-breeze",
+					"gradient": "linear-gradient(45deg, var(--wp--preset--color--primary-100), var(--wp--preset--color--secondary-200), var(--wp--preset--color--neutral-400))"
+				},
+				{
+					"name": "Warm Embrace",
+					"slug": "warm-embrace",
+					"gradient": "linear-gradient(225deg, var(--wp--preset--color--secondary-200), var(--wp--preset--color--primary-400), var(--wp--preset--color--neutral-300))"
 				}
 			],
 			"palette": [
