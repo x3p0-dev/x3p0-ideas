@@ -116,6 +116,12 @@
 						"interact": "none"
 					}
 				}
+			},
+			"x3p0/progress": {
+				"color": {
+					"background": "var(--wp--preset--color--secondary-300)",
+					"foreground": "var(--wp--preset--color--secondary-600)"
+				}
 			}
 		}
 	},

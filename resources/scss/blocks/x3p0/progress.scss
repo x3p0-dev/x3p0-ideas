@@ -1,0 +1,36 @@
+////
+/// Progress block CSS.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+// -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+// No fixes...
+
+// -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+///
+/// Customization of the progress block.
+///
+.wp-block-x3p0-progress {
+	&__container {
+		border:
+			var(--wp--custom--border--global--width)
+			var(--wp--custom--border--global--style)
+			var(--wp--custom--color--border--bounds);
+		border-radius: var(--wp--custom--border--global--radius);
+		box-shadow: var(--wp--custom--shadow--global--default);
+	}
+}
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+// No variations...

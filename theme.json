@@ -983,6 +983,14 @@
 				"sm": "1px 1px 0 color-mix(in oklab, var(--wp--preset--color--black) 50%, transparent)",
 				"md": "2px 2px 2px color-mix(in oklab, var(--wp--preset--color--black) 30%, transparent)",
 				"lg": "3px 3px 6px color-mix(in oklab, var(--wp--preset--color--black) 30%, transparent)"
+			},
+			"x3p0/progress": {
+				"color": {
+					"background": "var(--wp--preset--color--primary-300)",
+					"foreground": "var(--wp--preset--color--primary-600)"
+				},
+				"gap": "var(--wp--preset--spacing--20)",
+				"height": "var(--wp--preset--spacing--40)"
 			}
 		},
 		"dimensions": {
