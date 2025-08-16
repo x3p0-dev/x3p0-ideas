@@ -1779,6 +1779,19 @@
 					"lineHeight": "var(--wp--custom--line-height--sm)"
 				},
 				"elements": {
+					"button": {
+						"spacing": {
+							"padding": {
+								"top": "var(--wp--preset--spacing--10) !important",
+								"bottom": "var(--wp--preset--spacing--10) !important",
+								"left": "var(--wp--preset--spacing--40) !important",
+								"right": "var(--wp--preset--spacing--40) !important"
+							}
+						},
+						"typography": {
+							"fontSize": "inherit"
+						}
+					},
 					"link": {
 						"typography": {
 							"textDecoration": "none"
