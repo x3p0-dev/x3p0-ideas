@@ -10,28 +10,33 @@ No concept is so outlandish that I won't try to wiggle it in one way or another.
 
 ## 🔎 Demo
 
-The theme demo is hosted on WordPress Playground, which is a system that runs WordPress directly in your browser. You can fully test the theme as if you were running it on your own site. So go ahead and give it a try!
-
-[Playground Demo →](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/x3p0-dev/x3p0-ideas/master/.playground/blueprint.json)
+_Coming in the future..._
 
 ## 📄 Installation Instructions
 
 ### User Version
 
-**_Ideal for people who just want something to download and install._**
-
-If you just want to give the theme a test run, it's easiest to use the Playground link above. But feel free to [grab the ZIP file](https://raw.githubusercontent.com/x3p0-dev/assets/master/x3p0-ideas/x3p0-ideas.zip) and follow the WordPress documentation on [installing a theme from a ZIP file](https://wordpress.org/documentation/article/work-with-themes/).
+_Coming in the future..._
 
 ### Developer Version
 
 **_Ideal for people who live life on the bleeding edge._**
 
-You'll need Git, Node.js, npm, and Composer installed on your machine. To install:
+You'll need Git, Node.js, npm, and Composer installed on your machine. To install, be sure to Git clone the repo. Then run the following commands:
 
-- Git clone the repository.
-- Run `npm install` from the command line.
-- Run `composer install` from the command line.
-- Have fun!
+```shell
+npm install
+composer install
+```
+
+If you want to build a ZIP of the theme from composer to test, run the following commands:
+
+```shell
+composer build
+composer zip
+```
+
+Otherwise, see the `scripts` in `composer.json` and `package.json` for other commands you can run.
 
 ## 📜 License
 
@@ -46,7 +51,7 @@ The following third-party resources were used in creating the theme:
 ## 📛 Obligatory Badges: _Gotta collect 'em all!_
 
 <p>
-<img alt="WordPress badge" height="24px" src="https://img.shields.io/badge/WordPress%206.6+-white?style=flat-square&logo=wordpress&logoColor=0073AA&labelColor=white&color=0073AA">
-<img alt="Gutenberg badge" height="24px" src="https://img.shields.io/badge/Gutenberg%2018.6+-white?style=flat-square&logo=gutenberg&logoColor=000000&color=000000&labelColor=white">
+<img alt="WordPress badge" height="24px" src="https://img.shields.io/badge/WordPress%206.8+-white?style=flat-square&logo=wordpress&logoColor=0073AA&labelColor=white&color=0073AA">
+<img alt="Gutenberg badge" height="24px" src="https://img.shields.io/badge/Gutenberg%2023.0+-white?style=flat-square&logo=gutenberg&logoColor=000000&color=000000&labelColor=white">
 <img alt="PHP badge" height="24px" src="https://img.shields.io/badge/PHP%208.0+-white?style=flat-square&logo=php&logoColor=777bb4&labelColor=white&color=777bb4">
 </p>
