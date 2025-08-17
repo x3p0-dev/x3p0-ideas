@@ -72,8 +72,8 @@
 	//
 	&:focus,
 	&:hover {
-		color: var(--wp--custom--elements--button--primary--hover--color--foreground);
-		box-shadow: var(--wp--custom--elements--button--primary--hover--shadow);
+		color: var(--wp--custom--color--button--filled--foreground);
+		box-shadow: var(--wp--custom--shadow--button--filled--interact);
 	}
 }
 
