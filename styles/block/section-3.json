@@ -45,10 +45,10 @@
 				},
 				"button": {
 					"elevated": {
-						"background": "var(--wp--preset--color--primary-800)",
-						"background-interact": "var(--wp--preset--color--primary-700)",
-						"border": "var(--wp--preset--color--primary-600)",
-						"border-interact": "var(--wp--preset--color--primary-500)",
+						"background": "var(--wp--preset--color--primary-900)",
+						"background-interact": "var(--wp--preset--color--primary-800)",
+						"border": "var(--wp--preset--color--primary-700)",
+						"border-interact": "var(--wp--preset--color--primary-600)",
 						"foreground": "var(--wp--preset--color--primary-200)",
 						"outline": "transparent",
 						"outline-focus": "var(--wp--preset--color--primary-500)",
