@@ -89,7 +89,7 @@ class Rules
 	{
 		$condition = $rule['callback'] ?? null;
 
-		return ! is_callable($condition, false) || boolval(call_user_func($condition));
+		return ! is_callable($condition) || boolval(call_user_func($condition));
 	}
 
 	/**
@@ -107,7 +107,7 @@ class Rules
 	{
 		$condition = $rule['callback'] ?? null;
 
-		return ! is_callable($condition, false) || ! boolval(call_user_func($condition));
+		return ! is_callable($condition) || ! boolval(call_user_func($condition));
 	}
 
 	/**
