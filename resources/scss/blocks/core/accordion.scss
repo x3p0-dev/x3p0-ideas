@@ -1,0 +1,74 @@
+////
+/// Accordion block CSS.
+///
+/// This file also includes CSS for the Accordion descendant blocks.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+// -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+// No fixes...
+
+// -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+.wp-block-accordion-content {
+	transition: all 0.5s ease-in-out;
+	overflow: hidden; // <summary> background can bleed over rounded corners.
+
+	// Ensures that `cqi` values are based on their container, not the viewport.
+	container-type: inline-size;
+
+	// Remove padding from accordion panel when the block is open. Otherwise,
+	// the panel content is shown.
+	&:not(.is-open) .wp-block-accordion-panel {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	.accordion-content__toggle {
+		transition: all 0.5s ease-in-out;
+		box-sizing: border-box;
+		padding: var(--wp--preset--spacing--40) var(--wp--style--block-gap);
+
+		background: transparent;
+		color:      currentColor;
+	}
+
+	&.is-open .accordion-content__toggle,
+	.accordion-content__toggle:hover,
+	.accordion-content__toggle:focus {
+		background: var(--wp--custom--color--background--level-2);
+		color:      currentColor;
+	}
+}
+
+
+///
+/// Nicer toggle icon.
+///
+/// Note that we must use `!important` to overrule the inline styles from WP.
+///
+.accordion-content__toggle-icon,
+.accordion-content__toggle-icon > span {
+	width: auto !important;
+	height: auto !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	color: currentColor !important;
+	font-size: inherit !important;
+	font-style: normal !important;
+	font-weight: inherit !important;
+	line-height: inherit !important;
+}
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+// No variations...
