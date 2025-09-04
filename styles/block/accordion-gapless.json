@@ -1,0 +1,43 @@
+
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/wp/6.8/schemas/json/theme.json",
+	"version": 3,
+	"title": "Gapless",
+	"slug": "accordion-gapless",
+	"blockTypes": [
+		"core/accordion"
+	],
+	"styles": {
+		"css": "& .wp-block-accordion-content { margin-top: 0; }",
+		"border": {
+			"radius": {
+				"ref": "styles.blocks.core/accordion-content.border.radius"
+			},
+			"top": {
+				"color": {
+					"ref": "styles.blocks.core/accordion-content.border.color"
+				},
+				"style": {
+					"ref": "styles.blocks.core/accordion-content.border.style"
+				},
+				"width": {
+					"ref": "styles.blocks.core/accordion-content.border.width"
+				}
+			}
+		},
+		"shadow": "var(--wp--custom--shadow--global--default)",
+		"spacing": {
+			"blockGap": "0"
+		},
+		"blocks": {
+			"core/accordion-content": {
+				"border": {
+					"top": {
+						"width": "0"
+					}
+				},
+				"shadow": "none"
+			}
+		}
+	}
+}
