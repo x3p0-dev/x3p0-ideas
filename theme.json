@@ -1555,7 +1555,7 @@
 					}
 				},
 				"typography": {
-					"fontFamily": "inherit",
+					"fontFamily": "var(--wp--preset--font-family--primary)",
 					"fontSize": "inherit",
 					"fontStyle": "inherit",
 					"fontWeight": "500",
