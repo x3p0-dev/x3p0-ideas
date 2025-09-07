@@ -19,6 +19,9 @@
 /// Customization of the progress block.
 ///
 .wp-block-x3p0-progress {
+	--x3p0-progress--background-color: var(--wp--custom--color--background--level-1);
+	--x3p0-progress--foreground-color: var(--wp--custom--color--background--accent);
+
 	&__container {
 		border:
 			var(--wp--custom--border--global--width)
