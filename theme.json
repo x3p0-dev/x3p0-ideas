@@ -2257,6 +2257,9 @@
 				"css": "& svg {\n\tfill: currentColor;\n}"
 			},
 			"x3p0/breadcrumbs": {
+				"spacing": {
+					"blockGap": "var(--wp--preset--spacing--20)"
+				},
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--xs)",
 					"lineHeight": "var(--wp--custom--line-height--xs)"
