@@ -2290,6 +2290,10 @@
 				},
 				"spacing": {
 					"blockGap": "var(--wp--preset--spacing--20)"
+				},
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--sm)",
+					"lineHeight": "var(--wp--custom--line-height--sm)"
 				}
 			}
 		}
