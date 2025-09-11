@@ -1,5 +1,5 @@
 {
-	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/wp/6.8/schemas/json/theme.json",
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/wp/trunk/schemas/json/theme.json",
 	"version": 3,
 	"settings": {
 		"background": {
@@ -1525,6 +1525,62 @@
 					"typography": {
 						"textDecoration": "underline"
 					}
+				}
+			},
+			"select": {
+				"border": {
+					"color": "var(--wp--custom--color--border--bounds)",
+					"style": "var(--wp--custom--border--global--style)",
+					"width": "var(--wp--custom--border--global--width)",
+					"radius": "var(--wp--custom--border--global--radius)"
+				},
+				"color": {
+					"background": "var(--wp--custom--color--background--level-1)",
+					"text": "var(--wp--custom--color--foreground--default)"
+				},
+				"shadow": "var(--wp--custom--shadow--global--default, none)",
+				"spacing": {
+					"padding": {
+						"top": "var(--wp--preset--spacing--10)",
+						"bottom": "var(--wp--preset--spacing--10)",
+						"left": "var(--wp--preset--spacing--30)",
+						"right": "var(--wp--preset--spacing--70)"
+					}
+				},
+				"typography": {
+					"fontFamily": "inherit",
+					"fontSize": "inherit",
+					"fontStyle": "inherit",
+					"fontWeight": "inherit",
+					"lineHeight": "inherit"
+				}
+			},
+			"textInput": {
+				"border": {
+					"color": "var(--wp--custom--color--border--bounds)",
+					"style": "var(--wp--custom--border--global--style)",
+					"width": "var(--wp--custom--border--global--width)",
+					"radius": "var(--wp--custom--border--global--radius)"
+				},
+				"color": {
+					"background": "var(--wp--custom--color--background--level-1)",
+					"text": "var(--wp--custom--color--foreground--default)"
+				},
+				"shadow": "var(--wp--custom--shadow--global--default, none)",
+				"spacing": {
+					"padding": {
+						"top": "var(--wp--preset--spacing--10)",
+						"bottom": "var(--wp--preset--spacing--10)",
+						"left": "var(--wp--preset--spacing--30)",
+						"right": "var(--wp--preset--spacing--30)"
+					}
+				},
+				"typography": {
+					"fontFamily": "inherit",
+					"fontSize": "inherit",
+					"fontStyle": "inherit",
+					"fontWeight": "inherit",
+					"lineHeight": "inherit"
 				}
 			}
 		},
