@@ -241,7 +241,44 @@
 			"color": false,
 			"radius": false,
 			"style": false,
-			"width": false
+			"width": false,
+			"radiusSizes": [
+				{
+					"name": "XS",
+					"slug": "xs",
+					"size": "0.125rem"
+				},
+				{
+					"name": "Small",
+					"slug": "sm",
+					"size": "0.25rem"
+				},
+				{
+					"name": "Medium",
+					"slug": "md",
+					"size": "0.375rem"
+				},
+				{
+					"name": "Large",
+					"slug": "lg",
+					"size": "0.5rem"
+				},
+				{
+					"name": "XL",
+					"slug": "xl",
+					"size": "0.75rem"
+				},
+				{
+					"name": "2XL",
+					"slug": "2-xl",
+					"size": "1rem"
+				},
+				{
+					"name": "3XL",
+					"slug": "3-xl",
+					"size": "1.5rem"
+				}
+			]
 		},
 		"color": {
 			"background": true,
@@ -782,7 +819,7 @@
 				"global": {
 					"style": "solid",
 					"width": "1px",
-					"radius": "6px"
+					"radius": "var(--wp--preset--border-radius--md)"
 				},
 				"button": {
 					"radius": "var(--wp--custom--border--global--radius)",

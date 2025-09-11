@@ -26,7 +26,7 @@
 	gap: var( --wp--preset--spacing--40 );
 
 	&__avatar img {
-		border-radius: 9999px;
+		border-radius: calc(infinity * 1px);
 	}
 
 	&__avatar,
