@@ -31,7 +31,10 @@
 		padding-bottom: 0;
 	}
 
+	// The `<button>` element for toggling the accordion's open/close state.
 	.accordion-content__toggle {
+		gap: var(--wp--preset--spacing--20);
+
 		transition: all 0.5s ease-in-out;
 		box-sizing: border-box;
 		padding: var(--wp--preset--spacing--40) var(--wp--style--block-gap);
