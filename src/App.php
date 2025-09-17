@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Theme class.
+ * App class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2025, Justin Tadlock
@@ -21,7 +21,7 @@ use WP_Block_Type_Registry;
 use X3P0\Ideas\Contracts\{Bootable, Container};
 
 /**
- * The Theme class is a simple container used to store and reference the various
+ * The App class is a simple container used to store and reference the various
  * theme components. It doesn't support automatic dependency injection (manual
  * only) because it would be overkill for this project.
  */

@@ -14,7 +14,7 @@ declare(strict_types=1);
 namespace X3P0\Ideas;
 
 /**
- * Stores the single instance of the theme in the static `$app` variable. Devs
+ * Stores the single instance of the app in the static `$app` variable. Devs
  * can access any concrete implementation by passing in a reference to its
  * abstract identifier via `app()->get($abstract)`.
  */
