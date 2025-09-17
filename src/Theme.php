@@ -24,6 +24,6 @@ class Theme
 	 */
 	public static function boot(): void
 	{
-		app()->boot();
+		theme()->boot();
 	}
 }
