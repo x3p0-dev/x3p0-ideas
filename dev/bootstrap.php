@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas\Dev;
 
-use X3P0\Ideas\Theme;
+use X3P0\Ideas\App;
 
 # Prevent direct execution.
 if (! defined('ABSPATH')) {
@@ -21,12 +21,12 @@ if (! defined('ABSPATH')) {
 }
 
 # Add dev mode components to the container.
-add_action('x3p0/ideas/init', function (Theme $theme) {
+add_action('x3p0/ideas/init', function (App $app) {
 	if (! wp_is_development_mode('theme')) {
 		return;
 	}
 
-	$theme->instance('dev.setup', new Setup());
-	$theme->instance('dev.editor', new Editor());
-	$theme->instance('dev.style.variations', new StyleVariations(new Config()));
+	$app->instance('dev.setup', new Setup());
+	$app->instance('dev.editor', new Editor());
+	$app->instance('dev.style.variations', new StyleVariations(new Config()));
 });

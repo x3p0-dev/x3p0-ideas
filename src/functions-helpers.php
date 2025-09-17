@@ -20,12 +20,12 @@ namespace X3P0\Ideas;
  *
  * @since 1.0.0
  */
-function theme(): Theme
+function theme(): App
 {
 	static $theme;
 
-	if (! $theme instanceof Theme) {
-		do_action('x3p0/ideas/init', $theme = new Theme());
+	if (! $theme instanceof App) {
+		do_action('x3p0/ideas/init', $theme = new App());
 	}
 
 	return $theme;

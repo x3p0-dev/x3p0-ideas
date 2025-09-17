@@ -18,7 +18,7 @@ namespace X3P0\Ideas;
 defined('ABSPATH') || exit;
 
 # Load the autoloader.
-if (! class_exists(Theme::class) && is_file(__DIR__ . '/vendor/autoload.php')) {
+if (! class_exists(App::class) && is_file(__DIR__ . '/vendor/autoload.php')) {
 	require_once __DIR__ . '/vendor/autoload.php';
 }
 

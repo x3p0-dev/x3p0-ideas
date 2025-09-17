@@ -25,7 +25,7 @@ use X3P0\Ideas\Contracts\{Bootable, Container};
  * theme components. It doesn't support automatic dependency injection (manual
  * only) because it would be overkill for this project.
  */
-class Theme implements Bootable, Container
+class App implements Bootable, Container
 {
 	/**
 	 * Stored definitions of single instances.
