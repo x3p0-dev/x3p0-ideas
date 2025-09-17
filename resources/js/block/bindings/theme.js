@@ -17,7 +17,6 @@ registerBlockBindingsSource({
 		const theme = select(coreDataStore).getCurrentTheme();
 
 		const placeholders = {
-			helloDolly:      __('🎺 🎶...', 'x3p0-ideas'),
 			link:            `<a href="${theme.theme_uri.rendered}" class="theme-name theme-name--link">${theme.name.rendered}</a>`,
 			name:            theme.name.rendered,
 			paginationLabel: sprintf(__('Page %1$s / %2$s:', 'x3p0-ideas'), 3, 7),

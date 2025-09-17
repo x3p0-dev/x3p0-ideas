@@ -42,7 +42,6 @@ class Theme implements BlockBindingSource
 	public function callback(array $args, WP_Block $block, string $name): ?string
 	{
 		return match ($args['key'] ?? null) {
-			'helloDolly'      => $this->renderHelloDolly(),
 			'link'            => $this->renderLink(),
 			'name'            => $this->renderName(),
 			'paginationLabel' => $this->renderPaginationLabel($args, $block),
@@ -86,22 +85,6 @@ class Theme implements BlockBindingSource
 			'<span class="theme-name">%s</span>',
 			esc_html($this->renderName())
 		);
-	}
-
-	/**
-	 * Returns a random lyric from the Hello Dolly plugin if available.
-	 */
-	private function renderHelloDolly(): ?string
-	{
-		if (function_exists('hello_dolly_get_lyric')) {
-			return esc_html(sprintf(
-				// Translators: %s is a lyric from the Hello Dolly plugin.
-				__('🎺 🎶 %s', 'x3p0-ideas'),
-				hello_dolly_get_lyric()
-			));
-		}
-
-		return null;
 	}
 
 	/**
