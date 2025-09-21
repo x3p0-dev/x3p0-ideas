@@ -16,6 +16,7 @@ defined('ABSPATH') || exit;
 <div class="wp-block-group alignfull">
 
 	<!-- wp:audio {
+		"lock":{"move":false,"remove":true},
 		"metadata":{
 			"bindings":{
 				"src":{

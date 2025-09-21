@@ -17,6 +17,7 @@ defined('ABSPATH') || exit;
 
 	<!-- wp:video {
 		"align":"wide",
+		"lock":{"move":false,"remove":true},
 		"metadata":{
 			"bindings":{
 				"src":{

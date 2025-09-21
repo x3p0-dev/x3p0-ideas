@@ -16,6 +16,7 @@ defined('ABSPATH') || exit;
 <div class="wp-block-group alignfull">
 
 	<!-- wp:file {
+		"lock":{"move":false,"remove":true},
 		"metadata":{
 			"bindings":{
 				"fileName":{

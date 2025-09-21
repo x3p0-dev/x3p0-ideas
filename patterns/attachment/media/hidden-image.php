@@ -19,6 +19,7 @@ defined('ABSPATH') || exit;
 		"align":"wide",
 		"sizeSlug":"x3p0-wide",
 		"linkDestination":"none",
+		"lock":{"move":false,"remove":true},
 		"metadata":{
 			"bindings":{
 				"url":{
