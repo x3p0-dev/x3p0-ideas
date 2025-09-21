@@ -30,6 +30,9 @@ defined('ABSPATH') || exit;
 				},
 				"alt":{
 					"source":"x3p0/media"
+				},
+				"caption":{
+					"source":"x3p0/media"
 				}
 			},
 			"x3p0Rules":{"rules":[{"type": "ifAttribute", "attribute": "url"}]}
@@ -37,6 +40,7 @@ defined('ABSPATH') || exit;
 	} -->
 	<figure class="wp-block-image alignwide size-x3p0-wide">
 		<img src="" alt="" />
+		<figcaption class="wp-element-caption"></figcaption>
 	</figure>
 	<!-- /wp:image -->
 
