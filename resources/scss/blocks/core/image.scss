@@ -27,6 +27,15 @@
 	display: none;
 }
 
+///
+/// When a bound image caption doesn't have any text (no data), it still outputs
+/// a `<figcaption>` element. This just hides any margin, padding, etc. when the
+/// element is empty.
+///
+.wp-block-image .wp-element-caption:empty {
+	display: none !important;
+}
+
 // -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
