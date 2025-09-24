@@ -393,6 +393,11 @@ class StyleVariations implements Bootable
 				'emoji' => __('Emoji', 'x3p0-ideas'),
 				'flat'  => __('Flat', 'x3p0-ideas'),
 				'icon'  => __('Icon', 'x3p0-ideas')
+			],
+			'x3p0/authors' => [
+				'list-horizontal' => __('Horizontal', 'x3p0-ideas'),
+				'list-pull'       => __('Pull',       'x3p0-ideas'),
+				'list-spread'     => __('Spread',     'x3p0-ideas')
 			]
 		];
 		// phpcs:enable
