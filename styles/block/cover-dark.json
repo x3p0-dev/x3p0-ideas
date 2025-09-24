@@ -119,7 +119,6 @@
 		}
 	},
 	"styles": {
-		"css": "background: var(--wp--preset--gradient--eternal);",
 		"color": {
 			"text": "var(--wp--custom--color--foreground--default)"
 		}
