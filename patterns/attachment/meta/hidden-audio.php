@@ -60,7 +60,7 @@ $fields = [
 							}
 						}
 					},
-					"x3p0Rules":{"rules":[{"type": "ifAttribute", "attribute": "content"}]}
+					"x3p0/rules":{"rules":[{"type": "ifAttribute", "attribute": "content"}]}
 				},
 				"placeholder":"<?= esc_attr__('Connected to a custom field', 'x3p0-ideas') ?>",
 				"fontSize":"sm",

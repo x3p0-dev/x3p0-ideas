@@ -36,7 +36,7 @@ defined('ABSPATH') || exit;
 					"source":"x3p0/media"
 				}
 			},
-			"x3p0Rules":{"rules":[{"type": "ifAttribute", "attribute": "url"}]}
+			"x3p0/rules":{"rules":[{"type": "ifAttribute", "attribute": "url"}]}
 		}
 	} -->
 	<figure class="wp-block-image alignwide size-x3p0-wide">

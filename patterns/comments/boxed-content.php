@@ -30,7 +30,7 @@ defined('ABSPATH') || exit;
 	<!-- wp:group {
 		"metadata":{
 			"name":"<?= esc_attr__('Comments Container', 'x3p0-ideas') ?>",
-			"x3p0Rules":{"rules":[{"type": "if", "callback":"get_comments_number"}]}
+			"x3p0/rules":{"rules":[{"type": "if", "callback":"get_comments_number"}]}
 		}
 	} -->
 	<div class="wp-block-group">

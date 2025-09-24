@@ -38,7 +38,7 @@ defined('ABSPATH') || exit;
 					}
 				}
 			},
-			"x3p0Rules":{"rules":[{"type":"ifAttribute","attribute":"href"}]}
+			"x3p0/rules":{"rules":[{"type":"ifAttribute","attribute":"href"}]}
 		},
 		"displayPreview":true,
 		"align":"wide",

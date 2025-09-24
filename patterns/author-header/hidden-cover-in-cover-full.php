@@ -113,7 +113,7 @@ defined('ABSPATH') || exit;
 
 					<!-- wp:post-author-biography {
 						"metadata":{
-							"x3p0Rules":{"rules":[{"type": "unless", "callback":"is_paged"}]}
+							"x3p0/rules":{"rules":[{"type": "unless", "callback":"is_paged"}]}
 						},
 						"textAlign": "center"
 					} /-->

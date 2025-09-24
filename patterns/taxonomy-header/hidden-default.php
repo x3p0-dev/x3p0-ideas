@@ -45,7 +45,7 @@ defined('ABSPATH') || exit;
 		} /-->
 
 		<!-- wp:term-description {"metadata":{
-			"x3p0Rules":{"rules":[{"type": "unless", "callback":"is_paged"}]}
+			"x3p0/rules":{"rules":[{"type": "unless", "callback":"is_paged"}]}
 		}} /-->
 
 	</div>

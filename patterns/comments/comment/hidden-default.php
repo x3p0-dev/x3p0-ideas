@@ -50,7 +50,7 @@ defined('ABSPATH') || exit;
 							}
 						}
 					},
-					"x3p0Rules":{"rules":[{"type": "ifAttribute", "attribute": "content"}]}
+					"x3p0/rules":{"rules":[{"type": "ifAttribute", "attribute": "content"}]}
 				},
 				"style":{
 					"layout":{

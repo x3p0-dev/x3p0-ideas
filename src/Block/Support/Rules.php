@@ -31,7 +31,7 @@ class Rules
 	 *
 	 * @todo Type hint with PHP 8.3+ requirement.
 	 */
-	private const METADATA_KEY = 'x3p0Rules';
+	private const METADATA_KEY = 'x3p0/rules';
 
 	/**
 	 * List of allowed rule types and their callback methods.

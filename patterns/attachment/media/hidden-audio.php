@@ -27,7 +27,7 @@ defined('ABSPATH') || exit;
 					}
 				}
 			},
-			"x3p0Rules":{"rules":[{"type":"ifAttribute","attribute":"src"}]}
+			"x3p0/rules":{"rules":[{"type":"ifAttribute","attribute":"src"}]}
 		}
 	} -->
 	<figure class="wp-block-audio">
