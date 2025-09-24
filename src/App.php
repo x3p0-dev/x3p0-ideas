@@ -80,8 +80,9 @@ class App implements Bootable, Container
 	 */
 	private function registerDefaultBindings(): void
 	{
-		$this->instance('block.support.color.scheme', new Block\Support\ColorScheme());
-		$this->instance('block.support.rules',        new Block\Support\Rules());
+		$this->instance('block.support.color.scheme',    new Block\Support\ColorScheme());
+		$this->instance('block.support.rules',           new Block\Support\Rules());
+		$this->instance('block.support.html.attributes', new Block\Support\HtmlAttributes());
 
 		$this->instance('block.bindings', new Block\Bindings\Component(
 			WP_Block_Bindings_Registry::get_instance(),
@@ -116,10 +117,10 @@ class App implements Bootable, Container
 		$this->instance('template.templates', new Template\Templates());
 		// phpcs:enable
 
-		$this->instance(
-			'block.render',
-			new Block\Render($this->get('block.support.rules'))
-		);
+		$this->instance('block.render', new Block\Render(
+			$this->get('block.support.rules'),
+			$this->get('block.support.html.attributes')
+		));
 
 		$this->instance(
 			'block.library.core.button',

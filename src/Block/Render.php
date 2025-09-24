@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace X3P0\Ideas\Block;
 
 use WP_Block;
+use X3P0\Ideas\Block\Support\HtmlAttributes;
 use X3P0\Ideas\Block\Support\Rules;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
@@ -28,8 +29,10 @@ class Render implements Bootable
 	/**
 	 * Sets up the object state.
 	 */
-	public function __construct(protected Rules $rules)
-	{}
+	public function __construct(
+		protected Rules $rules,
+		protected HtmlAttributes $html_attributes
+	) {}
 
 	/**
 	 * Filters block content, determining if it should be shown according to
@@ -42,5 +45,16 @@ class Render implements Bootable
 		WP_Block $instance
 	): string {
 		return $this->rules->isPublic($block, $instance) ? $content : '';
+	}
+
+	/**
+	 * Filters block HTML, adding custom attributes defined as block metadata.
+	 */
+	#[Filter('render_block', 'last')]
+	public function renderHtmlAttributes(
+		string $content,
+		array $block
+	): string {
+		return $this->html_attributes->setAttributes($content, $block);
 	}
 }
