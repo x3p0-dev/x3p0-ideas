@@ -1,0 +1,31 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/wp/6.8/schemas/json/theme.json",
+	"version": 3,
+	"title": "Dark Mode",
+	"slug": "section-dark",
+	"blockTypes": [
+		"core/calendar",
+		"core/code",
+		"core/column",
+		"core/columns",
+		"core/comment-content",
+		"core/comment-template",
+		"core/comments",
+		"core/details",
+		"core/file",
+		"core/group",
+		"core/media-text",
+		"core/post-comments-form",
+		"core/pullquote",
+		"core/query",
+		"core/quote",
+		"x3p0/breadcrumbs"
+	],
+	"styles": {
+		"css": "color-scheme: only dark",
+		"color": {
+			"background": "var(--wp--custom--color--background--level-0)",
+			"text": "var(--wp--custom--color--foreground--default)"
+		}
+	}
+}
