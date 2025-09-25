@@ -16,7 +16,13 @@ defined('ABSPATH') || exit;
 
 ?>
 <!-- wp:group {
-	"metadata":{"name":"<?= esc_attr__('Author Header Container', 'x3p0-ideas') ?>"},
+	"metadata":{
+		"name":"<?= esc_attr__('Author Header Container', 'x3p0-ideas') ?>",
+		"x3p0/attr": {
+			"data-wp-interactive":"x3p0/ideas",
+			"data-wp-router-region":"query-header"
+		}
+	},
 	"className": "is-style-query-header",
 	"style":{"spacing":{"blockGap":"0"}},
 	"layout":{"type":"default"}

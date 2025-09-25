@@ -37,9 +37,6 @@ class QueryPagination implements Bootable
 			$settings['supports']['spacing']            ??= [];
 			$settings['supports']['spacing']['margin']  ??= [ 'top', 'bottom' ];
 			$settings['supports']['spacing']['padding'] ??= true;
-
-			// Disable client-side navigation.
-			$settings['supports']['interactivity']['clientNavigation'] = false;
 		}
 
 		return $settings;

@@ -38,22 +38,4 @@ class Query implements Bootable
 
 		return $settings;
 	}
-
-	/**
-	 * Disables the enhanced pagination feature for the Query Loop block.
-	 * There is currently no `theme.json`-supported method of disabling it,
-	 * so the only method is to filter the block data itself before render.
-	 *
-	 * @link https://github.com/WordPress/gutenberg/issues/57623
-	 * @link https://developer.wordpress.org/reference/hooks/render_block_data/
-	 */
-	#[Filter('render_block_data')]
-	public function renderData(array $parsed_block): array
-	{
-		if ('core/query' === $parsed_block['blockName']) {
-			$parsed_block['attrs']['enhancedPagination'] = false;
-		}
-
-		return $parsed_block;
-	}
 }
