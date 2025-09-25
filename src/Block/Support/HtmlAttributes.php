@@ -22,6 +22,8 @@ use WP_HTML_Tag_Processor;
  */
 class HtmlAttributes
 {
+	use Metadata;
+
 	/**
 	 * Metadata key to check in block attributes.
 	 *
@@ -35,17 +37,16 @@ class HtmlAttributes
 	 */
 	public function processAttributes(string $content, array $block): string
 	{
-		if (
-			empty($block['attrs']['metadata'][self::METADATA_KEY])
-			|| ! is_array($block['attrs']['metadata'][self::METADATA_KEY])
-		) {
+		$attrs = $this->getMetaValue($block, self::METADATA_KEY);
+
+		if (! is_array($attrs)) {
 			return $content;
 		}
 
 		$processor = new WP_HTML_Tag_Processor($content);
 		$processor->next_tag();
 
-		foreach ($block['attrs']['metadata'][self::METADATA_KEY] as $attr => $value) {
+		foreach ($attrs as $attr => $value) {
 
 			// Treat classes as a special case, only adding rather
 			// than overwriting. Realistically, classes shouldn't

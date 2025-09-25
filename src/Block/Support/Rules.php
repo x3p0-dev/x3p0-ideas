@@ -26,6 +26,8 @@ use WP_Block;
  */
 class Rules
 {
+	use Metadata;
+
 	/**
 	 * Metadata key to check in block attributes.
 	 *
@@ -51,17 +53,15 @@ class Rules
 	 */
 	public function isPublic(array $block, WP_Block $instance): bool
 	{
-		if (
-			empty($block['attrs']['metadata'][self::METADATA_KEY]['rules'])
-			|| ! is_array($block['attrs']['metadata'][self::METADATA_KEY]['rules'])
-		) {
+		$metadata = $this->getMetaValue($block, self::METADATA_KEY);
+
+		if (! $metadata) {
 			return true;
 		}
 
-		$operator = $block['attrs']['metadata'][self::METADATA_KEY]['operator'] ?? 'AND';
-		$rules    = $block['attrs']['metadata'][self::METADATA_KEY]['rules'];
-
-		$results = [];
+		$operator = $metadata['operator'] ?? 'AND';
+		$rules    = $metadata['rules'] ?? [];
+		$results  = [];
 
 		foreach ($rules as $rule) {
 			if (isset($rule['type']) && isset(self::RULE_TYPES[$rule['type']])) {
