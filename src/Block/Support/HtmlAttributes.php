@@ -30,9 +30,10 @@ class HtmlAttributes
 	private const METADATA_KEY = 'x3p0/attr';
 
 	/**
-	 * Sets custom HTML attributes on the block wrapper element.
+	 * Processes custom HTML attributes defined via the block metadata and
+	 * adds them to the block markup.
 	 */
-	public function setAttributes(
+	public function processAttributes(
 		string $content,
 		array $block
 	): string {
@@ -47,6 +48,16 @@ class HtmlAttributes
 		$processor->next_tag();
 
 		foreach ($block['attrs']['metadata'][self::METADATA_KEY] as $attr => $value) {
+
+			// Treat classes as a special case, only adding rather
+			// than overwriting. Realistically, classes shouldn't
+			// be added using this system because the `className`
+			// block attribute exists and should be used.
+			if ('class' === $attr) {
+				$processor->add_class($value);
+				continue;
+			}
+
 			$processor->set_attribute($attr, $value);
 		}
 

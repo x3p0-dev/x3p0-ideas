@@ -55,6 +55,6 @@ class Render implements Bootable
 		string $content,
 		array $block
 	): string {
-		return $this->html_attributes->setAttributes($content, $block);
+		return $this->html_attributes->processAttributes($content, $block);
 	}
 }
