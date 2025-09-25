@@ -33,10 +33,8 @@ class HtmlAttributes
 	 * Processes custom HTML attributes defined via the block metadata and
 	 * adds them to the block markup.
 	 */
-	public function processAttributes(
-		string $content,
-		array $block
-	): string {
+	public function processAttributes(string $content, array $block): string
+	{
 		if (
 			empty($block['attrs']['metadata'][self::METADATA_KEY])
 			|| ! is_array($block['attrs']['metadata'][self::METADATA_KEY])
