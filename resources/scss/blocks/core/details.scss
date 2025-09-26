@@ -46,6 +46,9 @@
 		font-style:  var(--wp--custom--elements--summary--typography--font-style,  inherit);
 		font-weight: var(--wp--custom--elements--summary--typography--font-weight, 500);
 		line-height: var(--wp--custom--elements--summary--typography--line-height, inherit);
+
+		// Removes marker in some versions of Safari.
+		list-style: none;
 	}
 
 	&[open] summary,
@@ -58,6 +61,11 @@
 	// Disable the default browser marker and add a custom one.
 	summary::marker {
 		content: none;
+	}
+
+	// Sometimes needed to remove marker.
+	summary::-webkit-details-marker {
+		display: none;
 	}
 
 	summary::after {
