@@ -81,8 +81,8 @@ const placeholders = {
 	'alt':     __('Alternate Text', 'x3p0-ideas'),
 	'caption': __('Media Caption...', 'x3p0-ideas'),
 	'id':      '00',
-	'src':     '#',
-	'url':     '#',
+	'src':     '',
+	'url':     '',
 	'title':   __('Media Title', 'x3p0-ideas')
 };
 

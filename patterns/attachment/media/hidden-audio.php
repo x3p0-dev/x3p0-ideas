@@ -31,7 +31,7 @@ defined('ABSPATH') || exit;
 		}
 	} -->
 	<figure class="wp-block-audio">
-		<audio controls src="#"></audio>
+		<audio controls src=""></audio>
 	</figure>
 	<!-- /wp:audio -->
 
