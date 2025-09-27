@@ -161,7 +161,7 @@ class StyleVariations implements Bootable
 		$root_declarations['color'] = is_string($c_text) ? $c_text : $text;
 
 		$this->css_rules[] = new WP_Style_Engine_CSS_Rule(
-			"body:not(:has(.wp-site-blocks))",
+			".editor-styles-wrapper:not(:has(.wp-site-blocks))",
 			$root_declarations
 		);
 
