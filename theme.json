@@ -2350,6 +2350,7 @@
 				"css": "& svg {\n\tfill: currentColor;\n}"
 			},
 			"x3p0/breadcrumbs": {
+				"css": "&.is-layout-flex { gap: var(--wp--preset--spacing--20); }",
 				"spacing": {
 					"blockGap": "var(--wp--preset--spacing--20)"
 				},
@@ -2377,6 +2378,7 @@
 				}
 			},
 			"x3p0/progress": {
+				"css": "&.is-layout-flex { gap: var(--wp--preset--spacing--20); }",
 				"color": {
 					"background": "transparent",
 					"text": "var(--wp--custom--color--foreground--default)"
