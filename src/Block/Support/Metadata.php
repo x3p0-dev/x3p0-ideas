@@ -22,7 +22,7 @@ trait Metadata
 	/**
 	 * Returns a block's meta value by key.
 	 */
-	protected function getMetaValue(array $block, string $key): ?array
+	protected function getMetaValue(array $block, string $key): mixed
 	{
 		return $this->hasMetaValue($block, $key)
 			? $block['attrs']['metadata'][$key]

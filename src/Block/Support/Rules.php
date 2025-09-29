@@ -55,7 +55,7 @@ class Rules
 	{
 		$metadata = $this->getMetaValue($block, self::METADATA_KEY);
 
-		if (! $metadata) {
+		if (! is_array($metadata)) {
 			return true;
 		}
 
