@@ -277,6 +277,16 @@
 					"name": "3XL",
 					"slug": "3-xl",
 					"size": "1.5rem"
+				},
+				{
+					"name": "4XL",
+					"slug": "4-xl",
+					"size": "2rem"
+				},
+				{
+					"name": "Full",
+					"slug": "full",
+					"size": "9999em"
 				}
 			]
 		},
@@ -1664,7 +1674,7 @@
 			"core/avatar": {
 				"css": "& img {\n\tbox-shadow: var(--wp--custom--shadow--global--default);\n}",
 				"border": {
-					"radius": "9999em"
+					"radius": "var(--wp--preset--border-radius--full)"
 				}
 			},
 			"core/button": {

@@ -140,7 +140,7 @@
 		padding: var(--wp--preset--spacing--10) var(--wp--preset--spacing--40);
 	}
 
-	border-radius: 9999em;
+	border-radius: var(--wp--preset--border-radius--full);
 
 	// The default icon is for light mode, but we use the dark mode icon
 	// when the dark color scheme is in use.

@@ -53,7 +53,7 @@
 	.avatar,
 	&__comment-avatar {
 		box-shadow: var(--wp--custom--shadow--secondary--default);
-		border-radius: calc(infinity * 1px);
+		border-radius: var(--wp--preset--border-radius--full);
 		float: none;
 		width: 48px;
 		height: 48px;
