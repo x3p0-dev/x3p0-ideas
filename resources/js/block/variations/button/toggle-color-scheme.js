@@ -15,7 +15,6 @@ registerBlockVariation('core/button', {
 	title: __('Toggle: Light/Dark', 'x3p0-ideas'),
 	description: __('Toggle button for switching between light and dark mode.', 'x3p0-ideas'),
 	icon: darkMode,
-	isDefault: true,
 	keywords: ['button', 'toggle', 'light', 'dark'],
 	attributes: {
 		className: 'toggle-color-scheme',

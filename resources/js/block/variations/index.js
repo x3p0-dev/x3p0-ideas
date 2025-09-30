@@ -6,6 +6,9 @@
  * @license   GPL-3.0-or-later
  */
 
+// Buttons variations.
+import './buttons/toggle-color-scheme';
+
 // Button variations.
 import './button/link-loginout';
 import './button/toggle-color-scheme';
