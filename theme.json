@@ -1632,7 +1632,7 @@
 			}
 		},
 		"blocks": {
-			"core/accordion-content": {
+			"core/accordion-item": {
 				"border": {
 					"color": "var(--wp--custom--color--border--bounds)",
 					"style": "var(--wp--custom--border--global--style)",
@@ -1645,7 +1645,7 @@
 				},
 				"shadow": "var(--wp--custom--shadow--global--default)"
 			},
-			"core/accordion-header": {
+			"core/accordion-heading": {
 				"spacing": {
 					"margin": {
 						"top": "0 !important",

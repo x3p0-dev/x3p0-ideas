@@ -8,19 +8,19 @@
 		"core/accordion"
 	],
 	"styles": {
-		"css": "& { contain: paint; } & .wp-block-accordion-content { margin-top: 0; }",
+		"css": "& { contain: paint; } & .wp-block-accordion-item { margin-top: 0; }",
 		"border": {
 			"radius": {
-				"ref": "styles.blocks.core/accordion-content.border.radius"
+				"ref": "styles.blocks.core/accordion-item.border.radius"
 			},
 			"color": {
-				"ref": "styles.blocks.core/accordion-content.border.color"
+				"ref": "styles.blocks.core/accordion-item.border.color"
 			},
 			"style": {
-				"ref": "styles.blocks.core/accordion-content.border.style"
+				"ref": "styles.blocks.core/accordion-item.border.style"
 			},
 			"width": {
-				"ref": "styles.blocks.core/accordion-content.border.width"
+				"ref": "styles.blocks.core/accordion-item.border.width"
 			}
 		},
 		"shadow": "var(--wp--custom--shadow--global--default)",
@@ -28,7 +28,7 @@
 			"blockGap": "0"
 		},
 		"blocks": {
-			"core/accordion-content": {
+			"core/accordion-item": {
 				"css": "&::last-child { border-bottom: none; }",
 				"border": {
 					"radius": "0",

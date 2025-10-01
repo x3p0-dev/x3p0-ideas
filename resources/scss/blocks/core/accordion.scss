@@ -11,13 +11,18 @@
 // Block fixes.
 // -----------------------------------------------------------------------------
 
-// No fixes...
+///
+/// Ensures that `<pre>` elements don't cause overflow in the accordion panel.
+///
+.wp-block-accordion-panel {
+	overflow-x: hidden;
+}
 
 // -----------------------------------------------------------------------------
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-.wp-block-accordion-content {
+.wp-block-accordion-item {
 	transition: all 0.5s ease-in-out;
 	overflow: hidden; // <summary> background can bleed over rounded corners.
 
@@ -30,9 +35,12 @@
 		padding-top: 0;
 		padding-bottom: 0;
 	}
+}
+
+.wp-block-accordion-heading {
 
 	// The `<button>` element for toggling the accordion's open/close state.
-	.accordion-content__toggle {
+	&__toggle {
 		gap: var(--wp--preset--spacing--20);
 
 		transition: all 0.5s ease-in-out;
@@ -40,34 +48,32 @@
 		padding: var(--wp--preset--spacing--40) var(--wp--style--block-gap);
 
 		background: transparent;
-		color:      currentColor;
+		color: currentColor;
 	}
 
-	&.is-open .accordion-content__toggle,
-	.accordion-content__toggle:hover,
-	.accordion-content__toggle:focus {
+	&__toggle[aria-expanded="true"],
+	&__toggle:hover,
+	&__toggle:focus {
 		background: var(--wp--custom--color--background--level-2);
-		color:      currentColor;
+		color: currentColor;
 	}
-}
 
-
-///
-/// Nicer toggle icon.
-///
-/// Note that we must use `!important` to overrule the inline styles from WP.
-///
-.accordion-content__toggle-icon,
-.accordion-content__toggle-icon > span {
-	width: auto !important;
-	height: auto !important;
-	margin: 0 !important;
-	padding: 0 !important;
-	color: currentColor !important;
-	font-size: inherit !important;
-	font-style: normal !important;
-	font-weight: inherit !important;
-	line-height: inherit !important;
+	///
+	/// Nicer toggle icon.
+	///
+	/// Note that we must use `!important` to overrule the inline styles from WP.
+	///
+	&__toggle-icon {
+		width: auto !important;
+		height: auto !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		color: currentColor !important;
+		font-size: inherit !important;
+		font-style: normal !important;
+		font-weight: inherit !important;
+		line-height: inherit !important;
+	}
 }
 
 // -----------------------------------------------------------------------------
