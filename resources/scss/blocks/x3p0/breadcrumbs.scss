@@ -1,0 +1,29 @@
+////
+/// Breadcrumbs block CSS.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+// -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+// No fixes...
+
+// -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+///
+/// Customization of the progress block.
+///
+.wp-block-x3p0-breadcrumbs {
+	--x3p0-breadcrumbs--color--separator: color-mix(in oklab, currentColor 75%, transparent);
+}
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+// No variations...
