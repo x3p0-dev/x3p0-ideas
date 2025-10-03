@@ -29,6 +29,7 @@
 		"webpack-remove-empty-scripts": "^1.1.1"
 	},
 	"dependencies": {
+		"@wordpress/compose": "^7.32.0",
 		"@wordpress/icons": "^10.25.0",
 		"@wordpress/interactivity": "^6.28.0"
 	}

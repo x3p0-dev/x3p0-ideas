@@ -153,6 +153,7 @@ class App implements Bootable, Container
 			'navigation-submenu' => Block\Library\Core\NavigationSubmenu::class,
 			'post-excerpt'       => Block\Library\Core\PostExcerpt::class,
 			'post-template'      => Block\Library\Core\PostTemplate::class,
+			'post-time-to-read'  => Block\Library\Core\PostTimeToRead::class,
 			'query'              => Block\Library\Core\Query::class,
 			'query-pagination'   => Block\Library\Core\QueryPagination::class,
 			'tag-cloud'          => Block\Library\Core\TagCloud::class,

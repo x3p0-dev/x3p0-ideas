@@ -29,4 +29,8 @@
 ///
 .wp-block-post-time-to-read.is-style-icon {
 	@include inline-icon.prefix(icon.get-url('schedule'));
+
+	&.display-mode-words::before {
+		@include inline-icon.modify(icon.get-url('article'));
+	}
 }
