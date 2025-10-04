@@ -10,6 +10,7 @@
 // Import all the cool editor features from the theme.
 import './block/bindings';
 import './block/edit';
+import './block/list-block';
 import './block/variations';
 import './editor';
 import './format-library';
