@@ -1,9 +1,20 @@
 ////
-/// Color variation utility classes.
+/// Helper classes and special handling.
 ///
 /// @author Justin Tadlock <justintadlock@gmail.com>
 /// @link   https://github.com/x3p0-dev/x3p0-ideas
 ////
+
+///
+/// Light and dark mode classes for individual sections.
+///
+.is-light-mode {
+	color-scheme: only light;
+}
+
+.is-dark-mode {
+	color-scheme: only dark;
+}
 
 ///
 /// A custom class for handling blocks that should have the global border by
