@@ -97,4 +97,35 @@
 // Block style variations.
 // -----------------------------------------------------------------------------
 
-// No variations...
+.wp-block-accordion.is-style-accordion-minimal {
+
+	.wp-block-accordion-heading {
+		&__toggle {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		&__toggle[aria-expanded="true"],
+		&__toggle:hover,
+		&__toggle:focus {
+			background: transparent;
+			color: currentColor;
+
+			.wp-block-accordion-heading__toggle-icon {
+				background: var(--wp--custom--color--background--level-2);
+			}
+		}
+
+		&__toggle-icon {
+			background: var(--wp--custom--color--background--level-1);
+			color: var(--wp--custom--color--foreground--default) !important;
+			display: inline-block;
+			padding: 0.5rem !important;
+			line-height: 1 !important;
+			height: 1em !important;
+			width: 1em !important;
+			text-align: center;
+			border-radius: calc(infinity * 1px);
+		}
+	}
+}
