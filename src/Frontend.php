@@ -104,11 +104,7 @@ class Frontend implements Bootable
 	private function getQueryBlockPage(): int
 	{
 		// Get the URL query for the requested URI.
-		$request = isset($_SERVER['REQUEST_URI'])
-			? esc_url_raw(wp_unslash($_SERVER['REQUEST_URI']))
-			: '';
-
-		$query = wp_parse_url($request, PHP_URL_QUERY);
+		$query = wp_parse_url(esc_url_raw(add_query_arg([])), PHP_URL_QUERY);
 
 		// Bail early if this is not a paginated page.
 		if (
@@ -120,7 +116,7 @@ class Frontend implements Bootable
 		}
 
 		// Checks for `?query-page={x}` and `query-{x}-page={y}`.
-		preg_match('#query-([0-9]\d*-)?page=([0-9]\d*)#i', $query, $matches);
+		preg_match('#query-(\d+-)?page=(\d+)#', $query, $matches);
 
 		return isset($matches[2]) ? absint($matches[2]) : 0;
 	}
