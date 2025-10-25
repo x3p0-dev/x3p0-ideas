@@ -139,6 +139,7 @@ class App implements Bootable, Container
 
 		// phpcs:disable Generic.Functions.FunctionCallArgumentSpacing.TooMuchSpaceAfterComma
 		$blocks = [
+			'accordion'          => Block\Library\Core\Accordion::class,
 			'avatar'             => Block\Library\Core\Avatar::class,
 			'archives'           => Block\Library\Core\Archives::class,
 			'calendar'           => Block\Library\Core\Calendar::class,
