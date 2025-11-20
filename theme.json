@@ -1655,7 +1655,7 @@
 				}
 			},
 			"core/accordion-heading": {
-				"css": "&__toggle { padding: var(--wp--preset--spacing--40) var(--wp--style--block-gap); }",
+				"css": "&__toggle { padding: var(--wp--preset--spacing--40) var(--wp--style--block-gap) !important; }",
 				"spacing": {
 					"margin": {
 						"top": "0 !important",

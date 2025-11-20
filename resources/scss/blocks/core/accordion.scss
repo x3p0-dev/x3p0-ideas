@@ -122,9 +122,17 @@
 // Block style variations.
 // -----------------------------------------------------------------------------
 
+///
+/// Overrules the default toggle button horizontal padding.
+///
+/// The `!important` is to fix a Core bug. When fixed, it should be removed here
+/// and in `theme.json`.
+/// @link https://github.com/x3p0-dev/x3p0-ideas/issues/35
+/// @link https://github.com/WordPress/gutenberg/issues/73454
+///
 .is-style-accordion-minimal .wp-block-accordion-heading__toggle {
-	padding-left: 0;
-	padding-right: 0;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
 }
 
 
