@@ -11,10 +11,9 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Tools\Hooks;
+namespace X3P0\Ideas\Support\Hooks;
 
 use Attribute;
-use X3P0\Ideas\Contracts\Hook;
 
 /**
  * The filter attribute is for registering class constants, methods, or

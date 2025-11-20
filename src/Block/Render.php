@@ -17,7 +17,7 @@ use WP_Block;
 use X3P0\Ideas\Block\Support\HtmlAttributes;
 use X3P0\Ideas\Block\Support\Rules;
 use X3P0\Ideas\Framework\Contracts\Bootable;
-use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
+use X3P0\Ideas\Support\Hooks\{Filter, Hookable};
 
 /**
  * Handles filters on block render.

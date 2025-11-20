@@ -14,7 +14,7 @@ declare(strict_types=1);
 namespace X3P0\Ideas\Dev;
 
 use X3P0\Ideas\Framework\Contracts\Bootable;
-use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
+use X3P0\Ideas\Support\Hooks\{Filter, Hookable};
 
 /**
  * Defines block editor settings while in development mode.

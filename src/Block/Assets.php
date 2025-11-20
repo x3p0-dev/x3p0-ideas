@@ -20,7 +20,7 @@ use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 use SplFileInfo;
 use X3P0\Ideas\Framework\Contracts\Bootable;
-use X3P0\Ideas\Tools\Hooks\{Action, Hookable};
+use X3P0\Ideas\Support\Hooks\{Action, Hookable};
 
 /**
  * Registers and/or enqueues block assets.

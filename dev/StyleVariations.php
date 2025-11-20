@@ -15,7 +15,8 @@ namespace X3P0\Ideas\Dev;
 
 use WP_Theme_JSON_Data;
 use X3P0\Ideas\Framework\Contracts\Bootable;
-use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
+use X3P0\Ideas\Support\Hooks\{Filter};
+use X3P0\Ideas\Support\Hooks\Hookable;
 
 /**
  * Style variations in WordPress can only be tested by going to the site editor

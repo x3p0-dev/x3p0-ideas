@@ -15,7 +15,7 @@ namespace X3P0\Ideas;
 
 use WP;
 use X3P0\Ideas\Framework\Contracts\Bootable;
-use X3P0\Ideas\Tools\Hooks\{Action, Filter, Hookable};
+use X3P0\Ideas\Support\Hooks\{Action, Filter, Hookable};
 
 /**
  * The Frontend class handles actions and filters that are needed for running on

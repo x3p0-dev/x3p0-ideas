@@ -13,11 +13,11 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas;
 
-use WP_Block_Patterns_Registry;
 use WP_Block_Pattern_Categories_Registry;
+use WP_Block_Patterns_Registry;
 use WP_Block_Type_Registry;
 use X3P0\Ideas\Framework\Contracts\Bootable;
-use X3P0\Ideas\Tools\Hooks\{Action, Hookable};
+use X3P0\Ideas\Support\Hooks\{Action, Hookable};
 
 /**
  * The Block Patterns class is responsible for registering block pattern

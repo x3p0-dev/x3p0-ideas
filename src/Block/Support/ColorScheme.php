@@ -14,7 +14,7 @@ declare(strict_types=1);
 namespace X3P0\Ideas\Block\Support;
 
 use X3P0\Ideas\Framework\Contracts\Bootable;
-use X3P0\Ideas\Tools\Hooks\{Action, Hookable};
+use X3P0\Ideas\Support\Hooks\{Action, Hookable};
 
 /**
  * The Color Scheme class is for handling the CSS `color-scheme` defined in

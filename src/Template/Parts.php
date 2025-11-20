@@ -14,7 +14,7 @@ declare(strict_types=1);
 namespace X3P0\Ideas\Template;
 
 use X3P0\Ideas\Framework\Contracts\Bootable;
-use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
+use X3P0\Ideas\Support\Hooks\{Filter, Hookable};
 
 /**
  * The Template Parts class is responsible for housing any custom code related

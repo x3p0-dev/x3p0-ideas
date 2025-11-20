@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Contracts;
+namespace X3P0\Ideas\Support\Hooks;
 
 /**
  * Defines the contract that hook classes should utilize. Hook classes should

@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Tools\Hooks;
+namespace X3P0\Ideas\Support\Hooks;
 
 use Attribute;
 

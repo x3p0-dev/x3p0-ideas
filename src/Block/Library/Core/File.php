@@ -14,12 +14,10 @@ declare(strict_types=1);
 namespace X3P0\Ideas\Block\Library\Core;
 
 use WP_Block;
-use WP_Block_Bindings_Source;
-use WP_Block_Type;
 use WP_Block_Type_Registry;
 use WP_HTML_Tag_Processor;
 use X3P0\Ideas\Framework\Contracts\Bootable;
-use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
+use X3P0\Ideas\Support\Hooks\{Filter, Hookable};
 
 /**
  * Filters settings and rendered output for the `core/file` block.

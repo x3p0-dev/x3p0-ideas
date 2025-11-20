@@ -16,7 +16,7 @@ namespace X3P0\Ideas\Block\Bindings;
 use WP_Block_Bindings_Registry;
 use X3P0\Ideas\Contracts\BlockBindingSource;
 use X3P0\Ideas\Framework\Contracts\Bootable;
-use X3P0\Ideas\Tools\Hooks\{Action, Filter, Hookable};
+use X3P0\Ideas\Support\Hooks\{Action, Filter, Hookable};
 
 /**
  * The Bindings component registers custom binding sources with the WordPress
