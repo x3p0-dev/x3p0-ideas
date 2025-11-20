@@ -47,7 +47,6 @@ final class ThemeServiceProvider extends ServiceProvider implements Bootable
 		$this->container->singleton(Embeds::class);
 		$this->container->singleton(Frontend::class);
 		$this->container->singleton(Media::class);
-		$this->container->singleton(PatternRegistrar::class);
 	}
 
 	/**
@@ -59,6 +58,5 @@ final class ThemeServiceProvider extends ServiceProvider implements Bootable
 		$this->container->get(Embeds::class)->boot();
 		$this->container->get(Frontend::class)->boot();
 		$this->container->get(Media::class)->boot();
-		$this->container->get(PatternRegistrar::class)->boot();
 	}
 }
