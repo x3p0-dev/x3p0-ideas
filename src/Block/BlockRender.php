@@ -20,6 +20,11 @@ use X3P0\Ideas\Framework\Contracts\Bootable;
 
 /**
  * Handles filters on block render.
+ *
+ * @todo All of the `render()` callbacks in `../Library/Core` need to be a part
+ *       of a registry and all run from a centralized manager class.
+ * @todo The filters in this file should be registered as separate filter classes
+ *       since they have separate concerns.
  */
 final class BlockRender implements Bootable
 {
