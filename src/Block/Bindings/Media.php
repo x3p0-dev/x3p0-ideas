@@ -15,7 +15,6 @@ namespace X3P0\Ideas\Block\Bindings;
 
 use WP_Block;
 use WP_Block_Bindings_Registry;
-use X3P0\Ideas\Tools\MediaMeta;
 
 /**
  * Handles registering the `x3p0/media` block bindings source and rendering its
@@ -27,13 +26,6 @@ class Media implements BlockBindingSource
 	 * Stores the post ID.
 	 */
 	private int $post_id = 0;
-
-	/**
-	 * Stores instances of the `MediaMeta` class by post ID.
-	 *
-	 * @var MediaMeta[]
-	 */
-	private array $meta = [];
 
 	/**
 	 * Registers the block binding source.
@@ -63,7 +55,7 @@ class Media implements BlockBindingSource
 			'id'         => $this->post_id,
 			'src', 'url' => $this->renderUrl($args),
 			'title'      => esc_html(wp_strip_all_tags(get_the_title($this->post_id))),
-			default      => $this->renderMeta($args)
+			default      => null
 		};
 	}
 
@@ -114,29 +106,5 @@ class Media implements BlockBindingSource
 		$caption = wp_get_attachment_caption($this->post_id);
 
 		return $caption ? esc_html($caption) : null;
-	}
-
-	/**
-	 * Returns an attachment's media metadata based on key.
-	 */
-	private function renderMeta(array $args): ?string
-	{
-		$this->meta[ $this->post_id ] ??= new MediaMeta(get_post($this->post_id));
-
-		$data = $this->meta[ $this->post_id ]->render($args['key']);
-
-		// If there's a label, let's wrap it and the metadata in some
-		// markup. Basically, this is our way of doing conditionals at
-		// the moment.
-		if ($data && isset($args['label'])) {
-			$data = sprintf(
-				'<span class="media-data__label" style="font-weight:500">%s</span>
-				<span class="media-data__content has-xs-font-size has-mono-font-family">%s</span>',
-				esc_html($args['label']),
-				$data
-			);
-		}
-
-		return $data ?: null;
 	}
 }
