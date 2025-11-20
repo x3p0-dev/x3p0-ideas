@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace X3P0\Ideas\Block;
 
 use WP_Block_Bindings_Registry;
+use X3P0\Ideas\Block\Style\StyleEngine;
+use X3P0\Ideas\Block\Style\StyleRegistrar;
 use X3P0\Ideas\Framework\Contracts\Bootable;
 use X3P0\Ideas\Framework\Core\ServiceProvider;
 
@@ -15,10 +17,13 @@ final class BlockServiceProvider extends ServiceProvider implements Bootable
 	 */
 	public function register(): void
 	{
-		$this->container->singleton(Assets::class);
-		$this->container->singleton(Render::class);
-		$this->container->singleton(StyleVariations::class);
+		$this->container->singleton(BlockStylesheets::class);
+		$this->container->singleton(BlockRender::class);
 		$this->container->singleton(Support\ColorScheme::class);
+
+		// Styles.
+		$this->container->singleton(StyleEngine::class);
+		$this->container->singleton(StyleRegistrar::class);
 
 		// Not bootable.
 		$this->container->singleton(Support\Rules::class);
@@ -74,10 +79,13 @@ final class BlockServiceProvider extends ServiceProvider implements Bootable
 	public function boot(): void
 	{
 		$this->container->get(Bindings\Component::class)->boot();
-		$this->container->get(Assets::class)->boot();
+		$this->container->get(BlockStylesheets::class)->boot();
 		$this->container->get(Support\ColorScheme::class)->boot();
-		$this->container->get(StyleVariations::class)->boot();
-		$this->container->get(Render::class)->boot();
+		$this->container->get(BlockRender::class)->boot();
+
+		// Styles.
+		$this->container->get(StyleEngine::class)->boot();
+		$this->container->get(StyleRegistrar::class)->boot();
 
 		$this->container->get(Library\Core\Accordion::class)->boot();
 		$this->container->get(Library\Core\Avatar::class)->boot();

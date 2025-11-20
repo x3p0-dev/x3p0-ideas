@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Block Assets class.
+ * Block stylesheets service.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2025, Justin Tadlock
@@ -20,30 +20,32 @@ use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 use SplFileInfo;
 use X3P0\Ideas\Framework\Contracts\Bootable;
-use X3P0\Ideas\Support\Hooks\{Action, Hookable};
 
 /**
- * Registers and/or enqueues block assets.
+ * Handles registering/enqueueing block stylesheets.
  */
-class Assets implements Bootable
+final class BlockStylesheets implements Bootable
 {
-	use Hookable;
-
 	/**
-	 * Handle prefix used for scripts/styles.
+	 * Handle prefix used for styles.
 	 */
 	protected const HANDLE_PREFIX = 'x3p0-ideas-block';
+
+	/**
+	 * @inheritDoc
+	 */
+	public function boot(): void
+	{
+		add_action('init', $this->enqueue(...), 999999);
+	}
 
 	/**
 	 * Enqueues block-specific styles so that they only load when the block
 	 * is in use. Block styles stored under `/assets/css/blocks` are
 	 * automatically enqueued. Each file should be named
 	 * `{$block_namespace}/{$block_slug}.css`.
-	 *
-	 * @link https://developer.wordpress.org/reference/functions/wp_enqueue_block_style/
 	 */
-	#[Action('init', 'last')]
-	public function enqueueStyles(): void
+	private function enqueue(): void
 	{
 		foreach ($this->getCssFiles() as $file) {
 			$this->enqueueStyleFromFile($file);
@@ -90,7 +92,7 @@ class Assets implements Bootable
 
 		// Register the block style.
 		wp_enqueue_block_style("{$namespace}/{$slug}", [
-			'handle' => static::HANDLE_PREFIX . "-{$namespace}-{$slug}",
+			'handle' => self::HANDLE_PREFIX . "-{$namespace}-{$slug}",
 			'src'    => get_parent_theme_file_uri("{$path}.css"),
 			'path'   => get_parent_theme_file_path("{$path}.css"),
 			'deps'   => $asset['dependencies'],

@@ -17,29 +17,34 @@ use WP_Block;
 use X3P0\Ideas\Block\Support\HtmlAttributes;
 use X3P0\Ideas\Block\Support\Rules;
 use X3P0\Ideas\Framework\Contracts\Bootable;
-use X3P0\Ideas\Support\Hooks\{Filter, Hookable};
 
 /**
  * Handles filters on block render.
  */
-class Render implements Bootable
+final class BlockRender implements Bootable
 {
-	use Hookable;
-
 	/**
 	 * Sets up the object state.
 	 */
 	public function __construct(
-		protected Rules $rules,
-		protected HtmlAttributes $html_attributes
+		private readonly Rules $rules,
+		private readonly HtmlAttributes $htmlAttributes
 	) {}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function boot(): void
+	{
+		add_filter('render_block', $this->renderByRule(...), 999999, 3);
+		add_filter('render_block', $this->renderHtmlAttributes(...), 999999, 2);
+	}
 
 	/**
 	 * Filters block content, determining if it should be shown according to
 	 * any rules passed in via attributes.
 	 */
-	#[Filter('render_block', 'last')]
-	public function renderByRule(
+	private function renderByRule(
 		string $content,
 		array $block,
 		WP_Block $instance
@@ -50,11 +55,8 @@ class Render implements Bootable
 	/**
 	 * Filters block HTML, adding custom attributes defined as block metadata.
 	 */
-	#[Filter('render_block', 'last')]
-	public function renderHtmlAttributes(
-		string $content,
-		array $block
-	): string {
-		return $this->html_attributes->processAttributes($content, $block);
+	private function renderHtmlAttributes(string $content, array $block): string
+	{
+		return $this->htmlAttributes->processAttributes($content, $block);
 	}
 }
