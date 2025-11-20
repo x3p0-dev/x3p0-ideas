@@ -11,6 +11,7 @@ use WP_Block_Styles_Registry;
 use WP_Block_Type_Registry;
 use X3P0\Ideas\Framework\Contracts\Bootable;
 use X3P0\Ideas\Framework\Core\ServiceProvider;
+use X3P0\Ideas\Pattern\PatternRegistrar;
 
 final class ThemeServiceProvider extends ServiceProvider implements Bootable
 {
@@ -46,7 +47,7 @@ final class ThemeServiceProvider extends ServiceProvider implements Bootable
 		$this->container->singleton(Embeds::class);
 		$this->container->singleton(Frontend::class);
 		$this->container->singleton(Media::class);
-		$this->container->singleton(Patterns::class);
+		$this->container->singleton(PatternRegistrar::class);
 	}
 
 	/**
@@ -58,6 +59,6 @@ final class ThemeServiceProvider extends ServiceProvider implements Bootable
 		$this->container->get(Embeds::class)->boot();
 		$this->container->get(Frontend::class)->boot();
 		$this->container->get(Media::class)->boot();
-		$this->container->get(Patterns::class)->boot();
+		$this->container->get(PatternRegistrar::class)->boot();
 	}
 }

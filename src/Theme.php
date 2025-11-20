@@ -6,6 +6,7 @@ namespace X3P0\Ideas;
 
 use X3P0\Ideas\Block\BlockServiceProvider;
 use X3P0\Ideas\Framework\Core\Application;
+use X3P0\Ideas\Pattern\PatternServiceProvider;
 use X3P0\Ideas\Template\TemplateServiceProvider;
 use X3P0\Ideas\Views\ViewServiceProvider;
 
@@ -25,6 +26,7 @@ final class Theme extends Application
 	 */
 	protected const PROVIDERS = [
 		BlockServiceProvider::class,
+		PatternServiceProvider::class,
 		TemplateServiceProvider::class,
 		ThemeServiceProvider::class,
 		ViewServiceProvider::class

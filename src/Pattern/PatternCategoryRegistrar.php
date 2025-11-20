@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Patterns class.
+ * Pattern category registrar.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2025, Justin Tadlock
@@ -11,51 +11,25 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas;
+namespace X3P0\Ideas\Pattern;
 
 use WP_Block_Pattern_Categories_Registry;
-use WP_Block_Patterns_Registry;
-use WP_Block_Type_Registry;
 use X3P0\Ideas\Framework\Contracts\Bootable;
 use X3P0\Ideas\Support\Hooks\{Action, Hookable};
 
 /**
- * The Block Patterns class is responsible for registering block pattern
- * categories and block patterns. However, it's recommended to register patterns
- * by placing individual files in the `/patterns` folder.
+ * Registers block pattern categories.
  */
-class Patterns implements Bootable
+final class PatternCategoryRegistrar implements Bootable
 {
 	use Hookable;
-
-	/**
-	 * Patterns that should be conditionally removed if the block is not
-	 * registered for the installation.
-	 *
-	 * @todo Type hint with PHP 8.3+ requirement.
-	 */
-	protected const CONDITIONAL_PATTERNS = [
-		'core/table-of-contents' => [ 'x3p0-ideas/card-table-of-contents' ],
-		'x3p0/breadcrumbs'       => [ 'x3p0-ideas/breadcrumbs' ]
-	];
 
 	/**
 	 * Sets up the object state.
 	 */
 	public function __construct(
-		protected WP_Block_Patterns_Registry $patterns,
-		protected WP_Block_Pattern_Categories_Registry $categories,
-		protected WP_Block_Type_Registry $blocks
+		protected readonly WP_Block_Pattern_Categories_Registry $categories
 	) {}
-
-	/**
-	 * Removes theme support for core patterns.
-	 */
-	#[Action('after_setup_theme')]
-	public function themeSupport(): void
-	{
-		remove_theme_support('core-block-patterns');
-	}
 
 	/**
 	 * Register block pattern categories. Note that this theme registers
@@ -86,24 +60,5 @@ class Patterns implements Bootable
 			'label'       => __('Layout', 'x3p0-ideas'),
 			'description' => __('Basic building blocks for arranging custom layouts.', 'x3p0-ideas')
 		]);
-	}
-
-	/**
-	 * Unregister block patterns, specifically those that use block types
-	 * that are not in use on the site.
-	 *
-	 * @link https://developer.wordpress.org/reference/functions/unregister_block_pattern/
-	 */
-	#[Action('init', 'last')]
-	public function unregisterPatterns(): void
-	{
-		foreach (self::CONDITIONAL_PATTERNS as $block => $patterns) {
-			if (! $this->blocks->is_registered($block)) {
-				array_walk(
-					$patterns,
-					fn($pattern) => $this->patterns->unregister($pattern)
-				);
-			}
-		}
 	}
 }
