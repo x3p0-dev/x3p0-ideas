@@ -19,7 +19,9 @@
 		"core/pullquote",
 		"core/query",
 		"core/quote",
-		"x3p0/breadcrumbs"
+		"x3p0/breadcrumbs",
+		"x3p0/media-data",
+		"x3p0/media-data-field"
 	],
 	"settings": {
 		"custom": {
