@@ -11,13 +11,13 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Views;
+namespace X3P0\Ideas\View;
 
 /**
  * The view engine is designed to make using the `View` class easy and stands as
  * a wrapper for quickly getting or rendering a view.
  */
-class Engine
+class ViewEngine
 {
 	/**
 	 * Returns a new view.

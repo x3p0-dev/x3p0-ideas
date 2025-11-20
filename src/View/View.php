@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Views;
+namespace X3P0\Ideas\View;
 
 use Stringable;
 

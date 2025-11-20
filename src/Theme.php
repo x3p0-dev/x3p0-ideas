@@ -8,7 +8,7 @@ use X3P0\Ideas\Block\BlockServiceProvider;
 use X3P0\Ideas\Framework\Core\Application;
 use X3P0\Ideas\Pattern\PatternServiceProvider;
 use X3P0\Ideas\Template\TemplateServiceProvider;
-use X3P0\Ideas\Views\ViewServiceProvider;
+use X3P0\Ideas\View\ViewServiceProvider;
 
 /**
  * The Theme class is an implementation of the Application contract. It's used

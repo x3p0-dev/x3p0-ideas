@@ -17,7 +17,7 @@ use WP_Block;
 use WP_HTML_Tag_Processor;
 use X3P0\Ideas\Framework\Contracts\Bootable;
 use X3P0\Ideas\Support\Hooks\{Filter, Hookable};
-use X3P0\Ideas\Views\Engine;
+use X3P0\Ideas\View\ViewEngine;
 
 /**
  * Filters settings and rendered output for the `core/post-content` block.
@@ -29,7 +29,7 @@ class PostContent implements Bootable
 	/**
 	 * Sets up the object state.
 	 */
-	public function __construct(protected Engine $views)
+	public function __construct(protected ViewEngine $viewEngine)
 	{}
 
 	/**
@@ -121,7 +121,7 @@ class PostContent implements Bootable
 		);
 
 		// Renders the media + block content + meta.
-		return $this->views->renderIf($media, $data) . $content;
+		return $this->viewEngine->renderIf($media, $data) . $content;
 	}
 
 	/**
