@@ -13,6 +13,13 @@
 			"composer update",
 			"composer dump-autoload"
 		],
+		"prelude": "X3P0\\Ideas\\Scripts\\Prelude::compose",
+		"post-install-cmd": [
+			"@prelude"
+		],
+		"post-update-cmd": [
+			"@prelude"
+		],
 		"lint:php": "./vendor/bin/phpcs -d error_reporting=E_ALL^E_DEPRECATED -s --colors .",
 		"theme": "composer config extra.x3p0.theme",
 		"type": "composer config extra.x3p0.typography",
@@ -29,18 +36,29 @@
 		"x3p0": {
 			"color": "",
 			"theme": "",
-			"typography": ""
+			"typography": "",
+			"prelude": {
+				"vendor-path": "x3p0-dev",
+				"output-path": "packages",
+				"search-namespace": "X3P0",
+				"replace-namespace": "X3P0\\Ideas"
+			}
 		}
 	},
 	"autoload": {
 		"psr-4": {
-			"X3P0\\Ideas\\": "src/"
+			"X3P0\\Ideas\\": "src/",
+			"X3P0\\Ideas\\Scripts\\": "scripts/"
 		},
 		"files" : [
 			"src/functions-helpers.php"
 		],
+		"classmap": [
+			"packages/"
+		],
 		"exclude-from-classmap": [
-			"/vendor/composer/"
+			"scripts/",
+			"vendor/"
 		]
 	},
 	"autoload-dev": {
@@ -52,7 +70,8 @@
 		]
 	},
 	"require": {
-                "php": ">=8.0"
+                "php": ">=8.1",
+		"x3p0-dev/x3p0-framework": "dev-master"
 	},
 	"require-dev": {
 		"wp-coding-standards/wpcs": "^3.0",

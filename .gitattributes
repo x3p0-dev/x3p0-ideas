@@ -25,15 +25,26 @@
 ## Ignore folders and files when exporting as a ZIP.
 ## -----------------------------------------------------------------------------
 
-.github/ export-ignore
-.idea/ export-ignore
-.ideas/ export-ignore
-.notes/ export-ignore
-.playground/ export-ignore
+# Ignore development folders.
+bin/ export-ignore
 dev/ export-ignore
 docs/ export-ignore
 node_modules/ export-ignore
+scripts/ export-ignore
 tests/ export-ignore
+
+# Ignore development files.
+composer.json export-ignore
+composer.lock export-ignore
+package-lock.json export-ignore
+package.json export-ignore
+phpstan.neon export-ignore
+webpack.config.js export-ignore
+*.map export-ignore
+*.zip export-ignore
+
+# Ignore everything that begins with a dot.
+.* export-ignore
 
 # Don't export folders that are merely copied into `/public`.
 /resources/fonts export-ignore
@@ -56,16 +67,3 @@ tests/ export-ignore
 
 # /resources/js
 # /resources/scss
-
-.editorconfig export-ignore
-.gitattributes export-ignore
-.gitignore export-ignore
-.phpcs.xml export-ignore
-.phpcs.xml.dist export-ignore
-composer.json export-ignore
-composer.lock export-ignore
-package-lock.json export-ignore
-package.json export-ignore
-webpack.config.js export-ignore
-*.map export-ignore
-.DS_Store export-ignore

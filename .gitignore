@@ -11,6 +11,8 @@
 /.idea
 /.ideas
 /node_modules
+/packages
 /vendor
 *.map
+*.zip
 .DS_Store
