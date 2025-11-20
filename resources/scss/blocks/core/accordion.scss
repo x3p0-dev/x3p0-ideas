@@ -30,11 +30,17 @@
 // Block customizations.
 // -----------------------------------------------------------------------------
 
-
+///
+/// Adds accordion heading title colors when toggled/focused/hovered.
+///
+/// The `!important` is to fix a Core bug:
+/// @link https://github.com/WordPress/gutenberg/issues/73454
+/// @link https://github.com/x3p0-dev/x3p0-ideas/issues/35
+///
 .wp-block-accordion-item.is-open .wp-block-accordion-heading__toggle,
 .wp-block-accordion-heading__toggle:hover,
 .wp-block-accordion-heading__toggle:focus {
-	background: var(--wp--custom--color--background--level-2);
+	background: var(--wp--custom--color--background--level-2) !important;
 	color: currentColor;
 }
 
@@ -121,10 +127,18 @@
 	padding-right: 0;
 }
 
+
+///
+/// Toggle button colors.
+///
+/// The `!important` is to fix a Core bug:
+/// @link https://github.com/WordPress/gutenberg/issues/73454
+/// @link https://github.com/x3p0-dev/x3p0-ideas/issues/35
+///
 .is-style-accordion-minimal .wp-block-accordion-item.is-open .wp-block-accordion-heading__toggle,
 .is-style-accordion-minimal .wp-block-accordion-heading__toggle:hover,
 .is-style-accordion-minimal .wp-block-accordion-heading__toggle:focus {
-	background: transparent;
+	background: transparent !important;
 	color: currentColor;
 }
 
