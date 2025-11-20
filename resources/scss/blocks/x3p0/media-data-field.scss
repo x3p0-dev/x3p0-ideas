@@ -1,0 +1,37 @@
+////
+/// Media Data Field block CSS.
+///
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://github.com/x3p0-dev/x3p0-ideas
+////
+
+// -----------------------------------------------------------------------------
+// Block fixes.
+// -----------------------------------------------------------------------------
+
+// No fixes...
+
+// -----------------------------------------------------------------------------
+// Block customizations.
+// -----------------------------------------------------------------------------
+
+///
+/// Customization of the media meta block.
+///
+.wp-block-x3p0-media-data-field {
+
+	&__label {
+		font-weight: 500;
+	}
+
+	&__value {
+		font-size: var(--wp--preset--font-size--xs);
+		font-family: var(--wp--preset--font-family--mono);
+	}
+}
+
+// -----------------------------------------------------------------------------
+// Block style variations.
+// -----------------------------------------------------------------------------
+
+// No variations...
