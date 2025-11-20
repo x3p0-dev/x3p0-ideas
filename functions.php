@@ -22,5 +22,8 @@ if (! class_exists(Theme::class) && is_file(__DIR__ . '/vendor/autoload.php')) {
 	require_once __DIR__ . '/vendor/autoload.php';
 }
 
-# Bootstrap the theme.
-add_action('after_setup_theme', [Theme::class, 'boot'], PHP_INT_MIN);
+# Initialize the theme.
+add_action('after_setup_theme', theme(...), 999);
+
+# Boot registered services.
+add_action('after_setup_theme', fn() => theme()->boot(), 999999);

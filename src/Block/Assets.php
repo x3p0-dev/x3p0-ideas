@@ -19,7 +19,7 @@ use Iterator;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 use SplFileInfo;
-use X3P0\Ideas\Contracts\Bootable;
+use X3P0\Ideas\Framework\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Action, Hookable};
 
 /**

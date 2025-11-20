@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas\Dev;
 
-use X3P0\Ideas\App;
+use X3P0\Ideas\Framework\Core\Application;
 
 # Prevent direct execution.
 if (! defined('ABSPATH')) {
@@ -21,12 +21,24 @@ if (! defined('ABSPATH')) {
 }
 
 # Add dev mode components to the container.
-add_action('x3p0/ideas/init', function (App $app) {
+add_action('x3p0/ideas/register', function (Application $app) {
 	if (! wp_is_development_mode('theme')) {
 		return;
 	}
 
-	$app->instance('dev.setup', new Setup());
-	$app->instance('dev.editor', new Editor());
-	$app->instance('dev.style.variations', new StyleVariations(new Config()));
+	$app->container()->singleton(Config::class);
+	$app->container()->singleton(Editor::class);
+	$app->container()->singleton(Setup::class);
+	$app->container()->singleton(StyleVariations::class);
+});
+
+# Bootstrap dev mode components.
+add_action('x3p0/ideas/booted', function (Application $app) {
+	if (! wp_is_development_mode('theme')) {
+		return;
+	}
+
+	$app->container()->get(Editor::class)->boot();
+	$app->container()->get(Setup::class)->boot();
+	$app->container()->get(StyleVariations::class)->boot();
 });

@@ -14,7 +14,7 @@ declare(strict_types=1);
 namespace X3P0\Ideas\Dev;
 
 use WP_Theme_JSON_Data;
-use X3P0\Ideas\Contracts\Bootable;
+use X3P0\Ideas\Framework\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
 
 /**

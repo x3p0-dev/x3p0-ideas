@@ -1,29 +1,32 @@
 <?php
 
-/**
- * Theme lifecycle helper.
- *
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright Copyright (c) 2025, Justin Tadlock
- * @license   https://www.gnu.org/licenses/gpl-3.0.html GPL-3.0-or-later
- * @link      https://github.com/x3p0-dev/x3p0-portfolio
- */
-
 declare(strict_types=1);
 
 namespace X3P0\Ideas;
 
+use X3P0\Ideas\Block\BlockServiceProvider;
+use X3P0\Ideas\Framework\Core\Application;
+use X3P0\Ideas\Template\TemplateServiceProvider;
+use X3P0\Ideas\Views\ViewServiceProvider;
+
 /**
- * A static class that handles the various duties during the theme's lifecycle.
+ * The Theme class is an implementation of the Application contract. It's used
+ * to register the default service providers, bootstrapping the theme.
  */
-class Theme
+final class Theme extends Application
 {
 	/**
-	 * Bootstraps the theme and should be used as a callback on the
-	 * `after_setup_theme` action hook.
+	 * Defines the theme's namespace, which is used as a hook prefix.
 	 */
-	public static function boot(): void
-	{
-		theme()->boot();
-	}
+	protected const NAMESPACE = 'x3p0/ideas';
+
+	/**
+	 * Defines the theme's default service providers.
+	 */
+	protected const PROVIDERS = [
+		BlockServiceProvider::class,
+		TemplateServiceProvider::class,
+		ThemeServiceProvider::class,
+		ViewServiceProvider::class
+	];
 }

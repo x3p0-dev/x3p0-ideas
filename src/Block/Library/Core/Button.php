@@ -15,7 +15,7 @@ namespace X3P0\Ideas\Block\Library\Core;
 
 use WP_HTML_Tag_Processor;
 use X3P0\Ideas\Block\Support\ColorScheme;
-use X3P0\Ideas\Contracts\Bootable;
+use X3P0\Ideas\Framework\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
 
 /**

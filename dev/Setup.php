@@ -16,7 +16,7 @@ namespace X3P0\Ideas\Dev;
 use Symfony\Component\VarDumper\VarDumper;
 use Symfony\Component\VarDumper\Cloner\VarCloner;
 use Symfony\Component\VarDumper\Dumper\HtmlDumper;
-use X3P0\Ideas\Contracts\Bootable;
+use X3P0\Ideas\Framework\Contracts\Bootable;
 
 /**
  * Sets up development mode features.

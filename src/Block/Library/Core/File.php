@@ -18,7 +18,7 @@ use WP_Block_Bindings_Source;
 use WP_Block_Type;
 use WP_Block_Type_Registry;
 use WP_HTML_Tag_Processor;
-use X3P0\Ideas\Contracts\Bootable;
+use X3P0\Ideas\Framework\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Filter, Hookable};
 
 /**

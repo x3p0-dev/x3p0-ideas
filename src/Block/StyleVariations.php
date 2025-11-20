@@ -16,7 +16,7 @@ namespace X3P0\Ideas\Block;
 use WP_Block_Styles_Registry;
 use WP_Style_Engine_CSS_Rule;
 use WP_Theme_JSON_Resolver;
-use X3P0\Ideas\Contracts\Bootable;
+use X3P0\Ideas\Framework\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Action, Filter, Hookable};
 
 /**
