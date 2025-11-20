@@ -14,7 +14,7 @@
 
 	// Special blocks and elements where we want to return to the normal
 	// block spacing. These are excluded.
-	$exclude: "hr, .wp-block-spacer";
+	$exclude: "hr, .wp-block-accordion, .wp-block-spacer";
 
 	// Tightens the spacing below all headings.
 	:is(h1, h2, h3, h4, h5, h6) {

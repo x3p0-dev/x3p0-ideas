@@ -1613,6 +1613,12 @@
 					"background": "var(--wp--custom--color--background--level-1)",
 					"text": "var(--wp--custom--color--foreground--default)"
 				},
+				"outline": {
+					"color": "transparent",
+					"offset": "var(--wp--custom--outline--primary--offset)",
+					"style": "var(--wp--custom--outline--primary--style)",
+					"width": "var(--wp--custom--outline--primary--width)"
+				},
 				"shadow": "var(--wp--custom--shadow--global--default, none)",
 				"spacing": {
 					"padding": {
@@ -1643,9 +1649,13 @@
 					"background": "var(--wp--custom--color--background--level-1)",
 					"text": "var(--wp--custom--color--foreground--default)"
 				},
-				"shadow": "var(--wp--custom--shadow--global--default)"
+				"shadow": "var(--wp--custom--shadow--global--default)",
+				"spacing": {
+					"blockGap": "0"
+				}
 			},
 			"core/accordion-heading": {
+				"css": "&__toggle { padding: var(--wp--preset--spacing--40) var(--wp--style--block-gap); }",
 				"spacing": {
 					"margin": {
 						"top": "0 !important",
@@ -1664,10 +1674,10 @@
 			"core/accordion-panel": {
 				"spacing": {
 					"padding": {
-						"top": "var(--wp--preset--spacing--70)",
-						"bottom": "var(--wp--preset--spacing--70)",
-						"left": "var(--wp--preset--spacing--70)",
-						"right": "var(--wp--preset--spacing--70)"
+						"top": "var(--wp--style--block-gap)",
+						"bottom": "var(--wp--style--block-gap)",
+						"left": "var(--wp--style--block-gap)",
+						"right": "var(--wp--style--block-gap)"
 					}
 				}
 			},
@@ -2385,6 +2395,22 @@
 							}
 						}
 					}
+				}
+			},
+			"x3p0/media-data": {
+				"css": "&.is-layout-flex { gap: var(--wp--preset--spacing--20); }",
+				"spacing": {
+					"blockGap": "var(--wp--preset--spacing--20)"
+				}
+			},
+			"x3p0/media-data-field": {
+				"css": "&.is-layout-flex { gap: var(--wp--preset--spacing--20); }",
+				"spacing": {
+					"blockGap": "var(--wp--preset--spacing--20)"
+				},
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--sm)",
+					"lineHeight": "var(--wp--custom--line-height--sm)"
 				}
 			},
 			"x3p0/progress": {

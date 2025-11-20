@@ -68,32 +68,10 @@
 ///
 @mixin input() {
 	appearance:  none;
-	padding:     var(--wp--preset--spacing--10) var(--wp--preset--spacing--30);
-
-	color:       var(--wp--custom--color--foreground--default, inherit);
-	background:  var(--wp--custom--color--background--level-1, transparent);
 	caret-color: var(--wp--custom--color--foreground--accent, inherit);
 
-	font-family: inherit;
-	font-size:   inherit;
-	font-style:  inherit;
-	font-weight: inherit;
-	line-height: inherit;
-
-	border: var(--wp--custom--border--global--width, 1px)
-		var(--wp--custom--border--global--style, solid)
-		var(--wp--custom--color--border--bounds, none);
-
-	border-radius: var(--wp--custom--border--global--radius, none);
-	box-shadow:    var(--wp--custom--shadow--global--default, none);
-
 	&:focus {
-		outline: var(--wp--custom--outline--primary--width)
-			var(--wp--custom--outline--primary--style)
-			var(--wp--custom--color--border--accent-1, currentColor);
-
-		outline-offset: var(--wp--custom--outline--primary--offset);
-		box-shadow:     var(--wp--custom--shadow--global--interact, none);
+		outline-color: var(--wp--custom--color--border--accent-1, currentColor);
 	}
 }
 
