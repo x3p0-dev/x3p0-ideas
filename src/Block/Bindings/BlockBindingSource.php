@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Contracts;
+namespace X3P0\Ideas\Block\Bindings;
 
 use WP_Block_Bindings_Registry;
 

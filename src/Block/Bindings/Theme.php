@@ -16,7 +16,6 @@ namespace X3P0\Ideas\Block\Bindings;
 use WP_Block;
 use WP_Block_Bindings_Registry;
 use WP_Query;
-use X3P0\Ideas\Contracts\BlockBindingSource;
 
 /**
  * Handles registering the `x3p0/theme` block bindings source and rendering its

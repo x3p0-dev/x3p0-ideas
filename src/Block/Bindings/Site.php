@@ -15,7 +15,6 @@ namespace X3P0\Ideas\Block\Bindings;
 
 use WP_Block;
 use WP_Block_Bindings_Registry;
-use X3P0\Ideas\Contracts\BlockBindingSource;
 
 /**
  * Handles registering the `x3p0/site` block bindings source and rendering its
