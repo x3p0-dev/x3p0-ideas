@@ -16,6 +16,14 @@
 ///
 .wp-block-accordion-panel {
 	overflow-x: hidden;
+
+	// Fixes Core/Gutenberg bug. Need to double up on selector.
+	//
+	// @link https://github.com/x3p0-dev/x3p0-ideas/issues/36
+	// @link https://github.com/WordPress/gutenberg/issues/73455
+	&#{&} {
+		min-width: revert;
+	}
 }
 
 // -----------------------------------------------------------------------------
