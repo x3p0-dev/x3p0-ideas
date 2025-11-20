@@ -13,9 +13,12 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas\Block;
 
+use CallbackFilterIterator;
 use FilesystemIterator;
+use Iterator;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
+use SplFileInfo;
 use X3P0\Ideas\Contracts\Bootable;
 use X3P0\Ideas\Tools\Hooks\{Action, Hookable};
 
@@ -25,6 +28,11 @@ use X3P0\Ideas\Tools\Hooks\{Action, Hookable};
 class Assets implements Bootable
 {
 	use Hookable;
+
+	/**
+	 * Handle prefix used for scripts/styles.
+	 */
+	protected const HANDLE_PREFIX = 'x3p0-ideas-block';
 
 	/**
 	 * Enqueues block-specific styles so that they only load when the block
@@ -37,52 +45,54 @@ class Assets implements Bootable
 	#[Action('init', 'last')]
 	public function enqueueStyles(): void
 	{
-		$directory = new RecursiveDirectoryIterator(
-			get_parent_theme_file_path('public/css/blocks'),
-			FilesystemIterator::SKIP_DOTS
-		);
-
-		$files = new RecursiveIteratorIterator(
-			$directory,
-			RecursiveIteratorIterator::CHILD_FIRST
-		);
-
-		foreach ($files as $file) {
-			if (
-				! $file->isDir()
-				&& 'css' === $file->getExtension()
-				&& ! is_null($file->getPathInfo())
-			) {
-				$this->enqueueStyle(
-					$file->getPathInfo()->getBasename(),
-					$file->getBasename('.css')
-				);
-			}
+		foreach ($this->getCssFiles() as $file) {
+			$this->enqueueStyleFromFile($file);
 		}
+	}
+
+	/**
+	 * Returns an iterable list of block CSS files.
+	 *
+	 * @return Iterator<SplFileInfo>
+	 */
+	private function getCssFiles(): Iterator
+	{
+		$iterator = new RecursiveIteratorIterator(
+			new RecursiveDirectoryIterator(
+				get_parent_theme_file_path('public/css/blocks'),
+				FilesystemIterator::SKIP_DOTS
+			)
+		);
+
+		return new CallbackFilterIterator(
+			$iterator,
+			fn($file) => $file->isFile() && $file->getExtension() === 'css'
+		);
 	}
 
 	/**
 	 * Enqueues an individual block stylesheet based on a given block
 	 * namespace and slug.
 	 */
-	private function enqueueStyle(string $namespace, string $slug): void
+	private function enqueueStyleFromFile(SplFileInfo $file): void
 	{
-		// Build a relative path and URL string.
-		$relative = "public/css/blocks/{$namespace}/{$slug}";
+		$namespace = $file->getPathInfo()->getBasename();
+		$slug      = $file->getBasename('.css');
+		$path      = "public/css/blocks/{$namespace}/{$slug}";
 
 		// Bail if the asset file doesn't exist.
-		if (! file_exists(get_parent_theme_file_path("{$relative}.asset.php"))) {
+		if (! file_exists(get_parent_theme_file_path("{$path}.asset.php"))) {
 			return;
 		}
 
 		// Get the asset file.
-		$asset = include get_parent_theme_file_path("{$relative}.asset.php");
+		$asset = include get_parent_theme_file_path("{$path}.asset.php");
 
 		// Register the block style.
 		wp_enqueue_block_style("{$namespace}/{$slug}", [
-			'handle' => "x3p0-ideas-block-{$namespace}-{$slug}",
-			'src'    => get_parent_theme_file_uri("{$relative}.css"),
-			'path'   => get_parent_theme_file_path("{$relative}.css"),
+			'handle' => static::HANDLE_PREFIX . "-{$namespace}-{$slug}",
+			'src'    => get_parent_theme_file_uri("{$path}.css"),
+			'path'   => get_parent_theme_file_path("{$path}.css"),
 			'deps'   => $asset['dependencies'],
 			'ver'    => $asset['version']
 		]);
