@@ -11,13 +11,6 @@ declare(strict_types=1);
 # Prevent direct access.
 defined('ABSPATH') || exit;
 
-$fields = [
-	'length_formatted' => __('Run Time:', 'x3p0-ideas'),
-	'dimensions'       => __('Dimensions:', 'x3p0-ideas'),
-	'mime_type'        => __('Mime Type:', 'x3p0-ideas'),
-	'file_size'        => __('Size:', 'x3p0-ideas')
-];
-
 ?>
 <!-- wp:group {
 	"metadata":{"name":"<?= esc_attr__('Media Data', 'x3p0-ideas') ?>"},
@@ -31,44 +24,23 @@ $fields = [
 	<h2 class="wp-block-heading screen-reader-text"><?= esc_html__('Video Data', 'x3p0-ideas') ?></h2>
 	<!-- /wp:heading -->
 
-	<!-- wp:group {
-		"templateLock":"insert",
-		"style":{"spacing":{"blockGap":"var:preset|spacing|10"}},
-		"layout":{"type":"default"}
+	<!-- wp:x3p0/media-data {
+		"metadata":{
+			"bindings":{
+				"mediaId":{
+					"source":"x3p0/media",
+					"args":{"key":"id"}
+				}
+			}
+		}
 	} -->
-	<div class="wp-block-group">
-
-		<?php foreach ($fields as $key => $label) : ?>
-
-			<!-- wp:paragraph {
-				"metadata":{
-					"name":"<?= sprintf(
-						// Translators: %s is the metadata label.
-						esc_attr__('%s Media Meta', 'x3p0-ideas'),
-						esc_attr($label)
-					) ?>",
-					"bindings":{
-						"content":{
-							"source":"x3p0/media",
-							"args":{
-								"key":"<?= esc_attr($key) ?>",
-								"label":"<?= esc_attr($label) ?>"
-							}
-						}
-					},
-					"x3p0/rules":{"rules":[{"type": "ifAttribute", "attribute": "content"}]}
-				},
-				"placeholder":"<?= esc_attr__('Connected to a custom field', 'x3p0-ideas') ?>",
-				"fontSize":"sm",
-				"className":"media-data"
-			} -->
-			<p class="has-sm-font-size media-data"></p>
-			<!-- /wp:paragraph -->
-
-		<?php endforeach ?>
-
+	<div class="wp-block-x3p0-media-data">
+		<!-- wp:x3p0/media-data-field {"field":"length_formatted"} /-->
+		<!-- wp:x3p0/media-data-field {"field":"dimensions"} /-->
+		<!-- wp:x3p0/media-data-field {"field":"mime_type"} /-->
+		<!-- wp:x3p0/media-data-field {"field":"file_size"} /-->
 	</div>
-	<!-- /wp:group -->
+	<!-- /wp:x3p0/media-data -->
 
 </div>
 <!-- /wp:group -->

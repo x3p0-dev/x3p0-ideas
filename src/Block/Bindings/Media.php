@@ -51,7 +51,7 @@ class Media implements BlockBindingSource
 	/**
 	 * Returns media data based on the bound attribute.
 	 */
-	public function callback(array $args, WP_Block $block, string $name): ?string
+	public function callback(array $args, WP_Block $block, string $name): string|int|null
 	{
 		$this->post_id = $block->context['postId'] ?? get_the_ID();
 
