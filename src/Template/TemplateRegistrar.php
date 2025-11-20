@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Templates class.
+ * Template registrar.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2025, Justin Tadlock
@@ -14,50 +14,19 @@ declare(strict_types=1);
 namespace X3P0\Ideas\Template;
 
 use X3P0\Ideas\Framework\Contracts\Bootable;
-use X3P0\Ideas\Support\Hooks\{Filter, Hookable};
 
 /**
- * The Templates class is responsible for housing any custom code related to
- * block templates.
+ * Registers templates with WordPress.
  */
-class Templates implements Bootable
+final class TemplateRegistrar implements Bootable
 {
-	use Hookable;
-
 	/**
-	 * Customizes the titles of the default template types.
-	 *
-	 * @link https://developer.wordpress.org/reference/hooks/default_template_types/
+	 * @inheritDoc
 	 */
-	#[Filter('default_template_types')]
-	public function filterTitles(array $types): array
+	public function boot(): void
 	{
-		// Defines custom template titles for the core templates.
-		// phpcs:disable Generic.Functions.FunctionCallArgumentSpacing.TooMuchSpaceAfterComma
-		$titles = [
-			'404'        => _x('Error 404',        'Template name', 'x3p0-ideas'),
-			'archive'    => _x('Archive',          'Template name', 'x3p0-ideas'),
-			'attachment' => _x('Media',            'Template name', 'x3p0-ideas'),
-			'author'     => _x('Author Archive',   'Template name', 'x3p0-ideas'),
-			'category'   => _x('Category Archive', 'Template name', 'x3p0-ideas'),
-			'date'       => _x('Date Archive',     'Template name', 'x3p0-ideas'),
-			'home'       => _x('Blog',             'Template name', 'x3p0-ideas'),
-			'page'       => _x('Page',             'Template name', 'x3p0-ideas'),
-			'single'     => _x('Single',           'Template name', 'x3p0-ideas'),
-			'singular'   => _x('Singular',         'Template name', 'x3p0-ideas'),
-			'tag'        => _x('Tag Archive',      'Template name', 'x3p0-ideas'),
-			'taxonomy'   => _x('Term Archive',     'Template name', 'x3p0-ideas'),
-		];
-		// phpcs:enable
-
-		// Loop through the custom titles and replace the default titles.
-		foreach ($titles as $template => $title) {
-			if (isset($types[ $template ])) {
-				$types[ $template ]['title'] = $title;
-			}
-		}
-
-		return $types;
+		add_filter('default_template_types', $this->register(...));
+		add_filter('default_template_types', $this->setTitles(...));
 	}
 
 	/**
@@ -65,8 +34,7 @@ class Templates implements Bootable
 	 *
 	 * @link https://developer.wordpress.org/reference/hooks/default_template_types/
 	 */
-	#[Filter('default_template_types')]
-	public function registerTypes(array $types): array
+	private function register(array $types): array
 	{
 		$types['audio'] ??= [
 			'title'       => _x('Media: Audio', 'Template name', 'x3p0-ideas'),
@@ -97,6 +65,40 @@ class Templates implements Bootable
 			'title'       => _x('Media: Video', 'Template name', 'x3p0-ideas'),
 			'description' => __('Displays when a visitor views the dedicated page that exists for a video attachment.', 'x3p0-ideas'),
 		];
+
+		return $types;
+	}
+
+	/**
+	 * Customizes the titles of the default template types.
+	 *
+	 * @link https://developer.wordpress.org/reference/hooks/default_template_types/
+	 */
+	private function setTitles(array $types): array
+	{
+		// phpcs:disable Generic.Functions.FunctionCallArgumentSpacing.TooMuchSpaceAfterComma
+		$titles = [
+			'404'        => _x('Error 404',        'Template name', 'x3p0-ideas'),
+			'archive'    => _x('Archive',          'Template name', 'x3p0-ideas'),
+			'attachment' => _x('Media',            'Template name', 'x3p0-ideas'),
+			'author'     => _x('Author Archive',   'Template name', 'x3p0-ideas'),
+			'category'   => _x('Category Archive', 'Template name', 'x3p0-ideas'),
+			'date'       => _x('Date Archive',     'Template name', 'x3p0-ideas'),
+			'home'       => _x('Blog',             'Template name', 'x3p0-ideas'),
+			'page'       => _x('Page',             'Template name', 'x3p0-ideas'),
+			'single'     => _x('Single',           'Template name', 'x3p0-ideas'),
+			'singular'   => _x('Singular',         'Template name', 'x3p0-ideas'),
+			'tag'        => _x('Tag Archive',      'Template name', 'x3p0-ideas'),
+			'taxonomy'   => _x('Term Archive',     'Template name', 'x3p0-ideas'),
+		];
+		// phpcs:enable
+
+		// Loop through the custom titles and replace the default titles.
+		foreach ($titles as $template => $title) {
+			if (isset($types[$template])) {
+				$types[$template]['title'] = $title;
+			}
+		}
 
 		return $types;
 	}

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Parts class.
+ * Template part area registrar.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2025, Justin Tadlock
@@ -14,15 +14,19 @@ declare(strict_types=1);
 namespace X3P0\Ideas\Template;
 
 use X3P0\Ideas\Framework\Contracts\Bootable;
-use X3P0\Ideas\Support\Hooks\{Filter, Hookable};
 
 /**
- * The Template Parts class is responsible for housing any custom code related
- * to template parts.
+ * Registers template part areas.
  */
-class Parts implements Bootable
+final class TemplatePartAreaRegistrar implements Bootable
 {
-	use Hookable;
+	/**
+	 * @inheritDoc
+	 */
+	public function boot(): void
+	{
+		add_filter('default_wp_template_part_areas', $this->register(...));
+	}
 
 	/**
 	 * Filter the core template part areas to add custom areas needed for
@@ -35,8 +39,7 @@ class Parts implements Bootable
 	 * @link https://github.com/WordPress/gutenberg/issues/36814
 	 * @link https://developer.wordpress.org/reference/hooks/default_wp_template_part_areas/
 	 */
-	#[Filter('default_wp_template_part_areas')]
-	public function registerAreas(array $areas): array
+	private function register(array $areas): array
 	{
 		return [
 			...$areas,

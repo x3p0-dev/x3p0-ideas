@@ -14,8 +14,8 @@ final class TemplateServiceProvider extends ServiceProvider implements Bootable
 	 */
 	public function register(): void
 	{
-		$this->container->singleton(Parts::class);
-		$this->container->singleton(Templates::class);
+		$this->container->singleton(TemplatePartAreaRegistrar::class);
+		$this->container->singleton(TemplateRegistrar::class);
 	}
 
 	/**
@@ -23,7 +23,7 @@ final class TemplateServiceProvider extends ServiceProvider implements Bootable
 	 */
 	public function boot(): void
 	{
-		$this->container->get(Parts::class)->boot();
-		$this->container->get(Templates::class)->boot();
+		$this->container->get(TemplatePartAreaRegistrar::class)->boot();
+		$this->container->get(TemplateRegistrar::class)->boot();
 	}
 }
