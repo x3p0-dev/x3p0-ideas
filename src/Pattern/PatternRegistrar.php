@@ -16,23 +16,20 @@ namespace X3P0\Ideas\Pattern;
 use WP_Block_Patterns_Registry;
 use WP_Block_Type_Registry;
 use X3P0\Ideas\Framework\Contracts\Bootable;
-use X3P0\Ideas\Support\Hooks\{Action, Hookable};
 
 /**
  * Handles registering and unregistering block patterns. It's recommended to
  * register patterns by placing individual files in the `/patterns` folder.
  */
-class PatternRegistrar implements Bootable
+final class PatternRegistrar implements Bootable
 {
-	use Hookable;
-
 	/**
 	 * Patterns that should be conditionally removed if the block is not
 	 * registered for the installation.
 	 *
 	 * @todo Type hint with PHP 8.3+ requirement.
 	 */
-	protected const CONDITIONAL_PATTERNS = [
+	private const CONDITIONAL_PATTERNS = [
 		'core/table-of-contents' => [ 'x3p0-ideas/card-table-of-contents' ],
 		'x3p0/breadcrumbs'       => [ 'x3p0-ideas/breadcrumbs' ]
 	];
@@ -46,10 +43,18 @@ class PatternRegistrar implements Bootable
 	) {}
 
 	/**
+	 * @inheritDoc
+	 */
+	public function boot(): void
+	{
+		add_action('after_setup_theme', $this->themeSupport(...));
+		add_action('init', $this->unregister(...), 999999);
+	}
+
+	/**
 	 * Removes theme support for core patterns.
 	 */
-	#[Action('after_setup_theme')]
-	public function themeSupport(): void
+	private function themeSupport(): void
 	{
 		remove_theme_support('core-block-patterns');
 	}
@@ -57,18 +62,16 @@ class PatternRegistrar implements Bootable
 	/**
 	 * Unregister block patterns, specifically those that use block types
 	 * that are not in use on the site.
-	 *
-	 * @link https://developer.wordpress.org/reference/functions/unregister_block_pattern/
 	 */
-	#[Action('init', 'last')]
-	public function unregisterPatterns(): void
+	private function unregister(): void
 	{
 		foreach (self::CONDITIONAL_PATTERNS as $block => $patterns) {
-			if (! $this->blocks->is_registered($block)) {
-				array_walk(
-					$patterns,
-					fn($pattern) => $this->patterns->unregister($pattern)
-				);
+			if ($this->blocks->is_registered($block)) {
+				continue;
+			}
+
+			foreach ($patterns as $pattern) {
+				$this->patterns->unregister($pattern);
 			}
 		}
 	}

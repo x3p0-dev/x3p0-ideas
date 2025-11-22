@@ -49,11 +49,8 @@ final class BlockRender implements Bootable
 	 * Filters block content, determining if it should be shown according to
 	 * any rules passed in via attributes.
 	 */
-	private function renderByRule(
-		string $content,
-		array $block,
-		WP_Block $instance
-	): string {
+	private function renderByRule(string $content, array $block, WP_Block $instance): string
+	{
 		return $this->rules->isPublic($block, $instance) ? $content : '';
 	}
 

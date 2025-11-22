@@ -15,31 +15,33 @@ namespace X3P0\Ideas\Pattern;
 
 use WP_Block_Pattern_Categories_Registry;
 use X3P0\Ideas\Framework\Contracts\Bootable;
-use X3P0\Ideas\Support\Hooks\{Action, Hookable};
 
 /**
  * Registers block pattern categories.
  */
 final class PatternCategoryRegistrar implements Bootable
 {
-	use Hookable;
-
 	/**
 	 * Sets up the object state.
 	 */
 	public function __construct(
-		protected readonly WP_Block_Pattern_Categories_Registry $categories
+		private readonly WP_Block_Pattern_Categories_Registry $categories
 	) {}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function boot(): void
+	{
+		add_action('init', $this->register(...), -999999);
+	}
 
 	/**
 	 * Register block pattern categories. Note that this theme registers
 	 * patterns by adding them as individual pattern files in the `/patterns`
 	 * folder.
-	 *
-	 * @link https://developer.wordpress.org/reference/functions/register_block_pattern_category/
 	 */
-	#[Action('init', 'first')]
-	public function registerCategories(): void
+	private function register(): void
 	{
 		$this->categories->register('x3p0-card', [
 			'label'       => __('Cards', 'x3p0-ideas'),

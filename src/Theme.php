@@ -5,7 +5,11 @@ declare(strict_types=1);
 namespace X3P0\Ideas;
 
 use X3P0\Ideas\Block\BlockServiceProvider;
+use X3P0\Ideas\Editor\EditorServiceProvider;
+use X3P0\Ideas\Embed\EmbedServiceProvider;
 use X3P0\Ideas\Framework\Core\Application;
+use X3P0\Ideas\Frontend\FrontendServiceProvider;
+use X3P0\Ideas\Media\MediaServiceProvider;
 use X3P0\Ideas\Pattern\PatternServiceProvider;
 use X3P0\Ideas\Template\TemplateServiceProvider;
 use X3P0\Ideas\View\ViewServiceProvider;
@@ -26,6 +30,10 @@ final class Theme extends Application
 	 */
 	protected const PROVIDERS = [
 		BlockServiceProvider::class,
+		EditorServiceProvider::class,
+		EmbedServiceProvider::class,
+		FrontendServiceProvider::class,
+		MediaServiceProvider::class,
 		PatternServiceProvider::class,
 		TemplateServiceProvider::class,
 		ThemeServiceProvider::class,

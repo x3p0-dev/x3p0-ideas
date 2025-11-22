@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Editor class.
+ * Editor assets class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2025, Justin Tadlock
@@ -11,27 +11,28 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas;
+namespace X3P0\Ideas\Editor;
 
 use X3P0\Ideas\Framework\Contracts\Bootable;
-use X3P0\Ideas\Support\Hooks\{Action, Filter, Hookable};
 
 /**
- * The Editor class handles actions and filters that are needed for running
- * when the block editor is in use. This is primarily needed for enqueueing
- * scripts and styles.
+ * Loads editor assets.
  */
-class Editor implements Bootable
+final class EditorAssets implements Bootable
 {
-	use Hookable;
+	/**
+	 * @inheritDoc
+	 */
+	public function boot(): void
+	{
+		add_action('after_setup_theme', $this->addEditorStyles(...));
+		add_action('enqueue_block_editor_assets', $this->enqueue(...));
+	}
 
 	/**
 	 * Add editor stylesheets.
-	 *
-	 * @link https://developer.wordpress.org/reference/functions/add_editor_style/
 	 */
-	#[Action('after_setup_theme')]
-	public function addEditorStyles(): void
+	private function addEditorStyles(): void
 	{
 		add_editor_style([
 			get_parent_theme_file_uri('public/css/screen.css')
@@ -41,8 +42,7 @@ class Editor implements Bootable
 	/**
 	 * Loads editor assets.
 	 */
-	#[Action('enqueue_block_editor_assets')]
-	public function enqueueAssets(): void
+	private function enqueue(): void
 	{
 		$script_asset = include get_parent_theme_file_path('public/js/editor.asset.php');
 		$style_asset  = include get_parent_theme_file_path('public/css/editor.asset.php');
@@ -65,17 +65,5 @@ class Editor implements Bootable
 		// Set translations for editor scripts.
 		// @link https://developer.wordpress.org/reference/functions/wp_set_script_translations/
 		wp_set_script_translations('x3p0-ideas-editor', 'x3p0-ideas');
-	}
-
-	/**
-	 * Customizes the block editor settings.
-	 */
-	#[Filter('block_editor_settings_all', 'last')]
-	public function registerSettings(array $settings): array
-	{
-		$settings['imageDefaultSize']   = 'x3p0-wide';
-		$settings['fontLibraryEnabled'] = false;
-
-		return $settings;
 	}
 }
