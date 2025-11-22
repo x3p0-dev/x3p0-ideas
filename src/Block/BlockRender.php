@@ -14,8 +14,8 @@ declare(strict_types=1);
 namespace X3P0\Ideas\Block;
 
 use WP_Block;
+use X3P0\Ideas\Block\Rule\RuleEngine;
 use X3P0\Ideas\Block\Support\HtmlAttributes;
-use X3P0\Ideas\Block\Support\Rules;
 use X3P0\Ideas\Framework\Contracts\Bootable;
 
 /**
@@ -32,7 +32,7 @@ final class BlockRender implements Bootable
 	 * Sets up the object state.
 	 */
 	public function __construct(
-		private readonly Rules $rules,
+		private readonly RuleEngine     $ruleEngine,
 		private readonly HtmlAttributes $htmlAttributes
 	) {}
 
@@ -51,7 +51,7 @@ final class BlockRender implements Bootable
 	 */
 	private function renderByRule(string $content, array $block, WP_Block $instance): string
 	{
-		return $this->rules->isPublic($block, $instance) ? $content : '';
+		return $this->ruleEngine->isPublic($block, $instance) ? $content : '';
 	}
 
 	/**

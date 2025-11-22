@@ -5,6 +5,11 @@ declare(strict_types=1);
 namespace X3P0\Ideas\Block;
 
 use WP_Block_Bindings_Registry;
+use X3P0\Ideas\Block\Rule\RuleEngine;
+use X3P0\Ideas\Block\Rule\RuleFactory;
+use X3P0\Ideas\Block\Rule\RuleRegistrar;
+use X3P0\Ideas\Block\Rule\RuleRegistry;
+use X3P0\Ideas\Block\Rule\RuleRepository;
 use X3P0\Ideas\Block\Style\StyleEngine;
 use X3P0\Ideas\Block\Style\StyleRegistrar;
 use X3P0\Ideas\Framework\Contracts\Bootable;
@@ -26,7 +31,10 @@ final class BlockServiceProvider extends ServiceProvider implements Bootable
 		$this->container->singleton(StyleRegistrar::class);
 
 		// Not bootable.
-		$this->container->singleton(Support\Rules::class);
+		$this->container->singleton(RuleEngine::class);
+		$this->container->singleton(RuleFactory::class);
+		$this->container->singleton(RuleRegistry::class);
+		$this->container->singleton(RuleRepository::class);
 		$this->container->singleton(Support\HtmlAttributes::class);
 
 		// Individual blocks: should these be in a registry or something?
@@ -86,6 +94,8 @@ final class BlockServiceProvider extends ServiceProvider implements Bootable
 		// Styles.
 		$this->container->get(StyleEngine::class)->boot();
 		$this->container->get(StyleRegistrar::class)->boot();
+
+		RuleRegistrar::register($this->container->get(RuleRegistry::class));
 
 		$this->container->get(Library\Core\Accordion::class)->boot();
 		$this->container->get(Library\Core\Avatar::class)->boot();
