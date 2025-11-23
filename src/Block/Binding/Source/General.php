@@ -11,26 +11,30 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Block\Bindings;
+namespace X3P0\Ideas\Block\Binding\Source;
 
 use WP_Block;
-use WP_Block_Bindings_Registry;
+use X3P0\Ideas\Block\Binding\BindingSource;
 
 /**
  * Handles registering the `x3p0/general` block bindings source and rendering its
  * output based on the given arguments.
  */
-class General implements BlockBindingSource
+class General implements BindingSource
 {
-	/**
-	 * Registers the block binding source.
-	 */
-	public function register(WP_Block_Bindings_Registry $bindings): void
+	public function getName(): string
 	{
-		$bindings->register('x3p0/general', [
-			'label'              => __('General', 'x3p0-ideas'),
-			'get_value_callback' => [ $this, 'callback' ]
-		]);
+		return 'x3p0/general';
+	}
+
+	public function getLabel(): string
+	{
+		return __('General', 'x3p0-ideas');
+	}
+
+	public function getContext(): array
+	{
+		return [];
 	}
 
 	/**

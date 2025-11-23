@@ -11,32 +11,35 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Block\Bindings;
+namespace X3P0\Ideas\Block\Binding\Source;
 
 use WP_Block;
-use WP_Block_Bindings_Registry;
+use X3P0\Ideas\Block\Binding\BindingSource;
 
 /**
  * Handles registering the `x3p0/comment` block bindings source and rendering its
  * output based on the given arguments.
  */
-class Comment implements BlockBindingSource
+class Comment implements BindingSource
 {
 	/**
 	 * Stores the comment ID.
 	 */
 	private int $comment_id = 0;
 
-	/**
-	 * Registers the block binding source.
-	 */
-	public function register(WP_Block_Bindings_Registry $bindings): void
+	public function getName(): string
 	{
-		$bindings->register('x3p0/comment', [
-			'label'              => __('Comment Data', 'x3p0-ideas'),
-			'get_value_callback' => [ $this, 'callback' ],
-			'uses_context'       => [ 'commentId' ]
-		]);
+		return 'x3p0/comment';
+	}
+
+	public function getLabel(): string
+	{
+		return __('Comment Data', 'x3p0-ideas');
+	}
+
+	public function getContext(): array
+	{
+		return ['commentId'];
 	}
 
 	/**

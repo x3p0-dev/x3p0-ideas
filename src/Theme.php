@@ -29,6 +29,7 @@ final class Theme extends Application
 	 */
 	protected const PROVIDERS = [
 		Block\BlockServiceProvider::class,
+		Block\Binding\BindingServiceProvider::class,
 		Block\Middleware\MiddlewareServiceProvider::class,
 		Block\Render\RenderServiceProvider::class,
 		Block\Rule\RuleServiceProvider::class,

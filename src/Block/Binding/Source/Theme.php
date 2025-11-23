@@ -11,28 +11,31 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Block\Bindings;
+namespace X3P0\Ideas\Block\Binding\Source;
 
 use WP_Block;
-use WP_Block_Bindings_Registry;
 use WP_Query;
+use X3P0\Ideas\Block\Binding\BindingSource;
 
 /**
  * Handles registering the `x3p0/theme` block bindings source and rendering its
  * output based on the given arguments.
  */
-class Theme implements BlockBindingSource
+class Theme implements BindingSource
 {
-	/**
-	 * Registers the block binding source.
-	 */
-	public function register(WP_Block_Bindings_Registry $bindings): void
+	public function getName(): string
 	{
-		$bindings->register('x3p0/theme', [
-			'label'              => __('Theme Data', 'x3p0-ideas'),
-			'get_value_callback' => [ $this, 'callback' ],
-			'uses_context'       => [ 'queryId', 'query' ]
-		]);
+		return 'x3p0/theme';
+	}
+
+	public function getLabel(): string
+	{
+		return __('Theme Data', 'x3p0-ideas');
+	}
+
+	public function getContext(): array
+	{
+		return ['query', 'queryId'];
 	}
 
 	/**

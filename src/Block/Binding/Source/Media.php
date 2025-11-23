@@ -11,32 +11,35 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Block\Bindings;
+namespace X3P0\Ideas\Block\Binding\Source;
 
 use WP_Block;
-use WP_Block_Bindings_Registry;
+use X3P0\Ideas\Block\Binding\BindingSource;
 
 /**
  * Handles registering the `x3p0/media` block bindings source and rendering its
  * output based on the given arguments.
  */
-class Media implements BlockBindingSource
+class Media implements BindingSource
 {
 	/**
 	 * Stores the post ID.
 	 */
 	private int $post_id = 0;
 
-	/**
-	 * Registers the block binding source.
-	 */
-	public function register(WP_Block_Bindings_Registry $bindings): void
+	public function getName(): string
 	{
-		$bindings->register('x3p0/media', [
-			'label'              => __('Media Data', 'x3p0-ideas'),
-			'uses_context'       => [ 'postType', 'postId'],
-			'get_value_callback' => [ $this, 'callback' ]
-		]);
+		return 'x3p0/media';
+	}
+
+	public function getLabel(): string
+	{
+		return __('Media Data', 'x3p0-ideas');
+	}
+
+	public function getContext(): array
+	{
+		return ['postType', 'postId'];
 	}
 
 	/**

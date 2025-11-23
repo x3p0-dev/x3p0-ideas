@@ -11,32 +11,35 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Block\Bindings;
+namespace X3P0\Ideas\Block\Binding\Source;
 
 use WP_Block;
-use WP_Block_Bindings_Registry;
+use X3P0\Ideas\Block\Binding\BindingSource;
 
 /**
  * Handles registering the `x3p0/post` block bindings source and rendering its
  * output based on the given arguments.
  */
-class Post implements BlockBindingSource
+class Post implements BindingSource
 {
 	/**
 	 * Stores the post ID.
 	 */
 	private int $post_id = 0;
 
-	/**
-	 * Registers the block binding source.
-	 */
-	public function register(WP_Block_Bindings_Registry $bindings): void
+	public function getName(): string
 	{
-		$bindings->register('x3p0/post', [
-			'label'              => __('Post Data', 'x3p0-ideas'),
-			'get_value_callback' => [ $this, 'callback' ],
-			'uses_context'       => [ 'postId' ]
-		]);
+		return 'x3p0/post';
+	}
+
+	public function getLabel(): string
+	{
+		return __('Post Data', 'x3p0-ideas');
+	}
+
+	public function getContext(): array
+	{
+		return ['postId'];
 	}
 
 	/**

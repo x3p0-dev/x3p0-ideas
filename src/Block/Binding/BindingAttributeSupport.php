@@ -11,19 +11,18 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Block\Bindings;
+namespace X3P0\Ideas\Block\Binding;
 
 use WP_Block_Bindings_Registry;
 use X3P0\Ideas\Framework\Contracts\Bootable;
-use X3P0\Ideas\Support\Hooks\{Action, Filter, Hookable};
 
 /**
  * The Bindings component registers custom binding sources with the WordPress
  * Block Bindings API.
  */
-class Component implements Bootable
+final class BindingAttributeSupport implements Bootable
 {
-	use Hookable;
+	private const HOOK_PREFIX = 'block_bindings_supported_attributes';
 
 	/**
 	 * Defines blocks and their supported bindable attributes.
@@ -41,36 +40,21 @@ class Component implements Bootable
 		]
 	];
 
-	/**
-	 * Sets up the initial object state.
-	 */
-	public function __construct(
-		protected WP_Block_Bindings_Registry $bindings,
-		protected array $sources
-	) {}
-
-	/**
-	 * Register custom block bindings sources.
-	 */
-	#[Action('init')]
-	public function register(): void
-	{
-		foreach ($this->sources as $source) {
-			if (is_subclass_of($source, BlockBindingSource::class)) {
-				(new $source())->register($this->bindings);
-			}
+	public function boot(): void {
+		foreach (array_keys(self::SUPPORTED_ATTRIBUTES) as $blockName) {
+			add_filter(
+				self::HOOK_PREFIX . "_{$blockName}",
+				$this->addSupportedAttributes(...)
+			);
 		}
 	}
 
 	/**
 	 * Adds supported attributes for the Audio and Video blocks.
 	 */
-	#[Filter('block_bindings_supported_attributes_core/audio')]
-	#[Filter('block_bindings_supported_attributes_core/file')]
-	#[Filter('block_bindings_supported_attributes_core/video')]
 	public function addSupportedAttributes(array $attrs): array
 	{
-		$block = str_replace('block_bindings_supported_attributes_', '', current_filter());
+		$block = str_replace(self::HOOK_PREFIX . '_', '', current_filter());
 
 		return isset(self::SUPPORTED_ATTRIBUTES[$block])
 			? array_merge($attrs, self::SUPPORTED_ATTRIBUTES[$block])

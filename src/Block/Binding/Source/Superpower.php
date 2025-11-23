@@ -11,32 +11,37 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Block\Bindings;
+namespace X3P0\Ideas\Block\Binding\Source;
 
-use WP_Block_Bindings_Registry;
+use WP_Block;
+use X3P0\Ideas\Block\Binding\BindingSource;
 use X3P0\Ideas\Tools\Superpower as Super;
 
 /**
  * Handles registering the `x3p0/super` block bindings source and rendering its
  * output based on the given arguments.
  */
-class Superpower implements BlockBindingSource
+class Superpower implements BindingSource
 {
-	/**
-	 * Registers the block binding source.
-	 */
-	public function register(WP_Block_Bindings_Registry $bindings): void
+	public function getName(): string
 	{
-		$bindings->register('x3p0/superpower', [
-			'label'              => __('Superpower', 'x3p0-ideas'),
-			'get_value_callback' => [ $this, 'callback' ]
-		]);
+		return 'x3p0/superpower';
+	}
+
+	public function getLabel(): string
+	{
+		return __('Superpower', 'x3p0-ideas');
+	}
+
+	public function getContext(): array
+	{
+		return [];
 	}
 
 	/**
 	 * Returns the Superpower message.
 	 */
-	public function callback(array $args): ?string
+	public function callback(array $args, WP_Block $block, string $name): ?string
 	{
 		return esc_html((new Super())->render($args['type'] ?? ''));
 	}
