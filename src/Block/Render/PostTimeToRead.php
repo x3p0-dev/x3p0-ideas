@@ -11,25 +11,23 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Block\Library\Core;
+namespace X3P0\Ideas\Block\Render;
 
+use WP_Block;
 use WP_HTML_Tag_Processor;
-use X3P0\Ideas\Framework\Contracts\Bootable;
-use X3P0\Ideas\Support\Hooks\{Filter, Hookable};
 
 /**
  * Filters settings and rendered output for the `core/post-time-to-read` block.
  */
-class PostTimeToRead implements Bootable
+class PostTimeToRead extends RendersBlock
 {
-	use Hookable;
+	protected const BLOCK_TYPE = 'core/post-time-to-read';
 
 	/**
 	 * Adds a display mode class to the block so that it can be styled based
 	 * on what it is showing.
 	 */
-	#[Filter('render_block_core/post-time-to-read')]
-	public function render(string $content, array $block): string
+	protected function render(string $content, array $block, WP_Block $instance): string
 	{
 		$mode = $block['attrs']['displayMode'] ?? 'time';
 

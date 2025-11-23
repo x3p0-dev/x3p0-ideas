@@ -11,17 +11,22 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Block\Library\Core;
+namespace X3P0\Ideas\Block\Render;
 
 use X3P0\Ideas\Framework\Contracts\Bootable;
-use X3P0\Ideas\Support\Hooks\{Filter, Hookable};
 
 /**
  * Filters settings and rendered output for the `core/navigation` block.
  */
 class Navigation implements Bootable
 {
-	use Hookable;
+	/**
+	 * @inheritDoc
+	 */
+	public function boot(): void
+	{
+		add_filter('block_core_navigation_listable_blocks', $this->listableBlocks(...));
+	}
 
 	/**
 	 * Adds missing wrapping `<li>` to the Loginout block when used in a
@@ -29,8 +34,7 @@ class Navigation implements Bootable
 	 *
 	 * @link https://github.com/WordPress/gutenberg/pull/55551
 	 */
-	#[Filter('block_core_navigation_listable_blocks')]
-	public function listableBlocks(array $blocks): array
+	private function listableBlocks(array $blocks): array
 	{
 		return array_merge($blocks, [
 			'core/buttons',

@@ -11,17 +11,22 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Block\Library\Core;
+namespace X3P0\Ideas\Block\Render;
 
 use X3P0\Ideas\Framework\Contracts\Bootable;
-use X3P0\Ideas\Support\Hooks\{Filter, Hookable};
 
 /**
  * Filters settings and rendered output for the `core/archives` block.
  */
 class Archives implements Bootable
 {
-	use Hookable;
+	/**
+	 * @inheritDoc
+	 */
+	public function boot(): void
+	{
+		add_filter('widget_archives_args', $this->widgetArchivesArgs(...), 999999);
+	}
 
 	/**
 	 * Filter on the `widget_archives_args` hook, which is also used in the
@@ -30,8 +35,7 @@ class Archives implements Bootable
 	 * list items. This provides a bit more design flexibility with custom
 	 * block styles.
 	 */
-	#[Filter('widget_archives_args', 'last')]
-	public function setWidgetArchivesArgs(array $args): array
+	public function widgetArchivesArgs(array $args): array
 	{
 		$before = $args['before'] ?? '';
 		$after  = $args['after'] ?? '';

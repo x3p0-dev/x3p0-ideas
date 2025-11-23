@@ -11,18 +11,17 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Block\Library\Core;
+namespace X3P0\Ideas\Block\Render;
 
+use WP_Block;
 use WP_HTML_Tag_Processor;
-use X3P0\Ideas\Framework\Contracts\Bootable;
-use X3P0\Ideas\Support\Hooks\{Filter, Hookable};
 
 /**
  * Filters settings and rendered output for the `core/cover` block.
  */
-class Cover implements Bootable
+class Cover extends RendersBlock
 {
-	use Hookable;
+	protected const BLOCK_TYPE = 'core/cover';
 
 	/**
 	 * Adds poster support for the Cover block by using the attachment's
@@ -30,8 +29,7 @@ class Cover implements Bootable
 	 *
 	 * @link https://github.com/WordPress/gutenberg/issues/18962
 	 */
-	#[Filter('render_block_core/cover')]
-	public function render(string $content, array $block): string
+	protected function render(string $content, array $block, WP_Block $instance): string
 	{
 		if (
 			! isset($block['attrs']['backgroundType'])

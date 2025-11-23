@@ -11,18 +11,17 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Block\Library\Core;
+namespace X3P0\Ideas\Block\Render;
 
+use WP_Block;
 use WP_HTML_Tag_Processor;
-use X3P0\Ideas\Framework\Contracts\Bootable;
-use X3P0\Ideas\Support\Hooks\{Filter, Hookable};
 
 /**
  * Filters settings and rendered output for the `core/loginout` block.
  */
-class Loginout implements Bootable
+class Loginout extends RendersBlock
 {
-	use Hookable;
+	protected const BLOCK_TYPE = 'core/loginout';
 
 	/**
 	 * Adds the `.wp-element-button` class to the login form's submit button.
@@ -30,8 +29,7 @@ class Loginout implements Bootable
 	 *
 	 * @link https://github.com/WordPress/gutenberg/issues/50466
 	 */
-	#[Filter('render_block_core/loginout')]
-	public function render(string $content, array $block): string
+	protected function render(string $content, array $block, WP_Block $instance): string
 	{
 		if (
 			empty($block['attrs']['displayLoginAsForm'])

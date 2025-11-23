@@ -11,18 +11,17 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Block\Library\Core;
+namespace X3P0\Ideas\Block\Render;
 
+use WP_Block;
 use WP_HTML_Tag_Processor;
-use X3P0\Ideas\Framework\Contracts\Bootable;
-use X3P0\Ideas\Support\Hooks\{Filter, Hookable};
 
 /**
  * Filters settings and rendered output for the `core/template-part` block.
  */
-class TemplatePart implements Bootable
+class TemplatePart extends RendersBlock
 {
-	use Hookable;
+	protected const BLOCK_TYPE = 'core/template-part';
 
 	/**
 	 * This filter first disables the Comments template part when there are
@@ -30,8 +29,7 @@ class TemplatePart implements Bootable
 	 * class to the wrapping template part markup with the slug name (e.g.,
 	 * `.wp-block-template-part-{slug}`).
 	 */
-	#[Filter('render_block_core/template-part')]
-	public function render(string $content, array $block): string
+	protected function render(string $content, array $block, WP_Block $instance): string
 	{
 		if (
 			isset($block['attrs']['slug'])

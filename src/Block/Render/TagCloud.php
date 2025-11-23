@@ -11,26 +11,24 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Block\Library\Core;
+namespace X3P0\Ideas\Block\Render;
 
+use WP_Block;
 use WP_HTML_Tag_Processor;
-use X3P0\Ideas\Framework\Contracts\Bootable;
-use X3P0\Ideas\Support\Hooks\{Filter, Hookable};
 
 /**
  * Filters settings and rendered output for the `core/tag-cloud` block.
  */
-class TagCloud implements Bootable
+class TagCloud extends RendersBlock
 {
-	use Hookable;
+	protected const BLOCK_TYPE = 'core/tag-cloud';
 
 	/**
 	 * WordPress doesn't add the taxonomy name to the tag cloud wrapper. In
 	 * order for taxonomy-based block styles to work, the theme is adding
 	 * a `.taxonomy-{taxonomy}` class to the wrapper.
 	 */
-	#[Filter('render_block_core/tag-cloud')]
-	public function render(string $content, array $block): string
+	protected function render(string $content, array $block, WP_Block $instance): string
 	{
 		$processor = new WP_HTML_Tag_Processor($content);
 

@@ -11,20 +11,18 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Block\Library\Core;
+namespace X3P0\Ideas\Block\Render;
 
 use WP_Block;
 use WP_HTML_Tag_Processor;
-use X3P0\Ideas\Framework\Contracts\Bootable;
-use X3P0\Ideas\Support\Hooks\{Filter, Hookable};
 use X3P0\Ideas\View\ViewEngine;
 
 /**
  * Filters settings and rendered output for the `core/post-content` block.
  */
-class PostContent implements Bootable
+class PostContent extends RendersBlock
 {
-	use Hookable;
+	protected const BLOCK_TYPE = 'core/post-content';
 
 	/**
 	 * Sets up the object state.
@@ -36,12 +34,7 @@ class PostContent implements Bootable
 	 * Filters the post content block for handling password form fixes and
 	 * attachment views.
 	 */
-	#[Filter('render_block_core/post-content')]
-	public function render(
-		string $content,
-		array $block,
-		WP_Block $instance
-	): string
+	protected function render(string $content, array $block, WP_Block $instance): string
 	{
 		if (empty($instance->context['postId'])) {
 			return $content;

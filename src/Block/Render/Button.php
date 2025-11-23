@@ -11,19 +11,18 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Block\Library\Core;
+namespace X3P0\Ideas\Block\Render;
 
+use WP_Block;
 use WP_HTML_Tag_Processor;
 use X3P0\Ideas\Block\Support\ColorScheme;
-use X3P0\Ideas\Framework\Contracts\Bootable;
-use X3P0\Ideas\Support\Hooks\{Filter, Hookable};
 
 /**
  * Filters settings and rendered output for the `core/button` block.
  */
-class Button implements Bootable
+class Button extends RendersBlock
 {
-	use Hookable;
+	protected const BLOCK_TYPE = 'core/button';
 
 	/**
 	 * Sets up the object state.
@@ -35,8 +34,7 @@ class Button implements Bootable
 	 * Filters the Button block on render and runs any class methods based
 	 * on various attributes that may be set.
 	 */
-	#[Filter('render_block_core/button')]
-	public function render(string $content, array $block): string
+	protected function render(string $content, array $block, WP_Block $instance): string
 	{
 		if (
 			isset($block['attrs']['className'])

@@ -11,34 +11,26 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Block\Library\Core;
+namespace X3P0\Ideas\Block\Render;
 
 use WP_Block;
 use WP_Block_Type_Registry;
 use WP_HTML_Tag_Processor;
-use X3P0\Ideas\Framework\Contracts\Bootable;
-use X3P0\Ideas\Support\Hooks\{Filter, Hookable};
 
 /**
  * Filters settings and rendered output for the `core/file` block.
  */
-class File implements Bootable
+class File extends RendersBlock
 {
-	use Hookable;
+	protected const BLOCK_TYPE = 'core/file';
 
 	public function __construct(protected WP_Block_Type_Registry $block_types)
-	{
-	}
+	{}
 
 	/**
 	 * Filters the File block content.
 	 */
-	#[Filter('render_block_core/file')]
-	public function render(
-		string   $content,
-		array    $block,
-		WP_Block $instance
-	): string
+	public function render(string $content, array $block, WP_Block $instance): string
 	{
 		return ! empty($block['attrs']['metadata']['bindings'])
 			? $this->renderBindings($content, $block, $instance)

@@ -11,30 +11,22 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Block;
+namespace X3P0\Ideas\Block\Middleware;
 
 use WP_Block;
 use X3P0\Ideas\Block\Rule\RuleEngine;
-use X3P0\Ideas\Block\Support\HtmlAttributes;
 use X3P0\Ideas\Framework\Contracts\Bootable;
 
 /**
  * Handles filters on block render.
- *
- * @todo All of the `render()` callbacks in `../Library/Core` need to be a part
- *       of a registry and all run from a centralized manager class.
- * @todo The filters in this file should be registered as separate filter classes
- *       since they have separate concerns.
  */
-final class BlockRender implements Bootable
+final class Visibility implements Bootable
 {
 	/**
 	 * Sets up the object state.
 	 */
-	public function __construct(
-		private readonly RuleEngine     $ruleEngine,
-		private readonly HtmlAttributes $htmlAttributes
-	) {}
+	public function __construct(private readonly RuleEngine $ruleEngine)
+	{}
 
 	/**
 	 * @inheritDoc
@@ -42,7 +34,6 @@ final class BlockRender implements Bootable
 	public function boot(): void
 	{
 		add_filter('render_block', $this->renderByRule(...), 999999, 3);
-		add_filter('render_block', $this->renderHtmlAttributes(...), 999999, 2);
 	}
 
 	/**
@@ -52,13 +43,5 @@ final class BlockRender implements Bootable
 	private function renderByRule(string $content, array $block, WP_Block $instance): string
 	{
 		return $this->ruleEngine->isPublic($block, $instance) ? $content : '';
-	}
-
-	/**
-	 * Filters block HTML, adding custom attributes defined as block metadata.
-	 */
-	private function renderHtmlAttributes(string $content, array $block): string
-	{
-		return $this->htmlAttributes->processAttributes($content, $block);
 	}
 }

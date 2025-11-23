@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas;
 
-use X3P0\Ideas\Block\BlockServiceProvider;
 use X3P0\Ideas\Editor\EditorServiceProvider;
 use X3P0\Ideas\Embed\EmbedServiceProvider;
 use X3P0\Ideas\Framework\Core\Application;
@@ -29,7 +28,12 @@ final class Theme extends Application
 	 * Defines the theme's default service providers.
 	 */
 	protected const PROVIDERS = [
-		BlockServiceProvider::class,
+		Block\BlockServiceProvider::class,
+		Block\Middleware\MiddlewareServiceProvider::class,
+		Block\Render\RenderServiceProvider::class,
+		Block\Rule\RuleServiceProvider::class,
+		Block\Settings\SettingsServiceProvider::class,
+		Block\Style\StyleServiceProvider::class,
 		EditorServiceProvider::class,
 		EmbedServiceProvider::class,
 		FrontendServiceProvider::class,
