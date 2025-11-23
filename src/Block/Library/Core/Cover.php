@@ -25,21 +25,6 @@ class Cover implements Bootable
 	use Hookable;
 
 	/**
-	 * Adds more color support to the Cover block.
-	 */
-	#[Filter('block_type_metadata_settings', 'last')]
-	public function settings(array $settings): array
-	{
-		if ('core/cover' === $settings['name']) {
-			$settings['supports']['color']         ??= [];
-			$settings['supports']['color']['button'] = true;
-			$settings['supports']['color']['link']   = true;
-		}
-
-		return $settings;
-	}
-
-	/**
 	 * Adds poster support for the Cover block by using the attachment's
 	 * featured image if it exists.
 	 *

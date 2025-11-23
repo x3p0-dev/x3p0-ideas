@@ -25,24 +25,6 @@ class TagCloud implements Bootable
 	use Hookable;
 
 	/**
-	 * Adds color and typography support to the Tag Cloud block.
-	 */
-	#[Filter('block_type_metadata_settings', 'last')]
-	public function settings(array $settings): array
-	{
-		if ('core/tag-cloud' === $settings['name']) {
-			$settings['supports']['color'] ??= [];
-			$settings['supports']['color']['gradients'] ??= true;
-			$settings['supports']['color']['link'] ??= true;
-
-			$settings['supports']['typography'] ??= [];
-			$settings['supports']['typography']['fontSize'] = true;
-		}
-
-		return $settings;
-	}
-
-	/**
 	 * WordPress doesn't add the taxonomy name to the tag cloud wrapper. In
 	 * order for taxonomy-based block styles to work, the theme is adding
 	 * a `.taxonomy-{taxonomy}` class to the wrapper.

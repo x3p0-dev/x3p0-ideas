@@ -32,21 +32,6 @@ class Button implements Bootable
 	{}
 
 	/**
-	 * Adds Interactivity API support to the Button block. This is needed
-	 * for the light/dark toggle and other use cases where we might use the
-	 * `<button>` element instead of an `<a>` element.
-	 */
-	#[Filter('block_type_metadata_settings', 'last')]
-	public function settings(array $settings): array
-	{
-		if ('core/button' === $settings['name']) {
-			$settings['supports']['interactivity'] = true;
-		}
-
-		return $settings;
-	}
-
-	/**
 	 * Filters the Button block on render and runs any class methods based
 	 * on various attributes that may be set.
 	 */

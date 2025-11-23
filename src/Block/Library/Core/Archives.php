@@ -24,21 +24,6 @@ class Archives implements Bootable
 	use Hookable;
 
 	/**
-	 * Adds color support to the Archives block.
-	 */
-	#[Filter('block_type_metadata_settings', 'last')]
-	public function settings(array $settings): array
-	{
-		if ('core/archives' === $settings['name']) {
-			$settings['supports']['color']              ??= [];
-			$settings['supports']['color']['gradients'] ??= true;
-			$settings['supports']['color']['link']      ??= true;
-		}
-
-		return $settings;
-	}
-
-	/**
 	 * Filter on the `widget_archives_args` hook, which is also used in the
 	 * Archives block to pass the arguments to the `wp_get_archives()`
 	 * function. We're using it here to give a wrapper `<div>` to individual

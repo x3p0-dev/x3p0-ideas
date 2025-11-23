@@ -24,31 +24,6 @@ class Calendar implements Bootable
 {
 	use Hookable;
 
-
-	/**
-	 * Filters the Calendar block args to set custom selectors via the
-	 * Selectors API. This ensures that styles are applied to the correct
-	 * elements within the block and nested table. Also re-adds the classes
-	 * to the outer block wrapper.
-	 *
-	 * @link https://developer.wordpress.org/block-editor/reference-guides/block-api/block-selectors/
-	 */
-	#[Filter('block_type_metadata_settings', 'last')]
-	public function settings(array $settings): array
-	{
-		if ('core/calendar' !== $settings['name']) {
-			return $settings;
-		}
-
-		if (isset($settings['supports']['color']['__experimentalSkipSerialization'])) {
-			unset($settings['supports']['color']['__experimentalSkipSerialization']);
-		}
-
-		return [ 'selectors' => [
-				'root' => '.wp-block-calendar'
-			] ] + $settings;
-	}
-
 	/**
 	 * Adds a caption class and replaces nav arrows.
 	 */
