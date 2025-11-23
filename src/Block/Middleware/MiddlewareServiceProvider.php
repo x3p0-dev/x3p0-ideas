@@ -12,15 +12,6 @@ final class MiddlewareServiceProvider extends ServiceProvider implements Bootabl
 	/**
 	 * @inheritDoc
 	 */
-	public function register(): void
-	{
-		$this->container->singleton(InjectAttributes::class);
-		$this->container->singleton(Visibility::class);
-	}
-
-	/**
-	 * @inheritDoc
-	 */
 	public function boot(): void
 	{
 		$this->container->get(InjectAttributes::class)->boot();

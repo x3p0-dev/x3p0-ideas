@@ -12,15 +12,6 @@ final class EditorServiceProvider extends ServiceProvider implements Bootable
 	/**
 	 * @inheritDoc
 	 */
-	public function register(): void
-	{
-		$this->container->singleton(EditorAssets::class);
-		$this->container->singleton(EditorSettings::class);
-	}
-
-	/**
-	 * @inheritDoc
-	 */
 	public function boot(): void
 	{
 		$this->container->get(EditorAssets::class)->boot();

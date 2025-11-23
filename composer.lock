@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5369c1b959f7b373a7531c7f63f16049",
+    "content-hash": "a7707a93b806abf3ddcd673c8b599263",
     "packages": [
         {
             "name": "x3p0-dev/x3p0-framework",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/x3p0-dev/x3p0-framework.git",
-                "reference": "06b7c961c6251568ddee0c33e41b79db8562699e"
+                "reference": "f691e8704a4cd98d81440bf31ee3c495b30eefbe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/x3p0-dev/x3p0-framework/zipball/06b7c961c6251568ddee0c33e41b79db8562699e",
-                "reference": "06b7c961c6251568ddee0c33e41b79db8562699e",
+                "url": "https://api.github.com/repos/x3p0-dev/x3p0-framework/zipball/f691e8704a4cd98d81440bf31ee3c495b30eefbe",
+                "reference": "f691e8704a4cd98d81440bf31ee3c495b30eefbe",
                 "shasum": ""
             },
             "require": {
@@ -49,7 +49,7 @@
                 "issues": "https://github.com/x3p0-dev/x3p0-framework/issues",
                 "source": "https://github.com/x3p0-dev/x3p0-framework/tree/master"
             },
-            "time": "2025-11-19T07:45:17+00:00"
+            "time": "2025-11-23T06:40:34+00:00"
         }
     ],
     "packages-dev": [

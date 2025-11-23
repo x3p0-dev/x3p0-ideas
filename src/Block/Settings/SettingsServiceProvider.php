@@ -15,7 +15,6 @@ final class SettingsServiceProvider extends ServiceProvider implements Bootable
 	public function register(): void
 	{
 		$this->container->singleton(SettingsModifierFactory::class);
-		$this->container->singleton(SettingsModifierManager::class);
 		$this->container->singleton(SettingsModifierRegistry::class);
 	}
 
@@ -26,6 +25,8 @@ final class SettingsServiceProvider extends ServiceProvider implements Bootable
 	{
 		$this->container->get(SettingsModifierManager::class)->boot();
 
-		SettingsModifierRegistrar::register($this->container->get(SettingsModifierRegistry::class));
+		SettingsModifierRegistrar::register(
+			$this->container->get(SettingsModifierRegistry::class)
+		);
 	}
 }

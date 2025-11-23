@@ -12,15 +12,6 @@ final class TemplateServiceProvider extends ServiceProvider implements Bootable
 	/**
 	 * @inheritDoc
 	 */
-	public function register(): void
-	{
-		$this->container->singleton(TemplatePartAreaRegistrar::class);
-		$this->container->singleton(TemplateRegistrar::class);
-	}
-
-	/**
-	 * @inheritDoc
-	 */
 	public function boot(): void
 	{
 		$this->container->get(TemplatePartAreaRegistrar::class)->boot();

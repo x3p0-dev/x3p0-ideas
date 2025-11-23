@@ -12,15 +12,6 @@ final class PatternServiceProvider extends ServiceProvider implements Bootable
 	/**
 	 * @inheritDoc
 	 */
-	public function register(): void
-	{
-		$this->container->singleton(PatternCategoryRegistrar::class);
-		$this->container->singleton(PatternRegistrar::class);
-	}
-
-	/**
-	 * @inheritDoc
-	 */
 	public function boot(): void
 	{
 		$this->container->get(PatternCategoryRegistrar::class)->boot();

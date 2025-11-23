@@ -12,15 +12,6 @@ final class StyleServiceProvider extends ServiceProvider implements Bootable
 	/**
 	 * @inheritDoc
 	 */
-	public function register(): void
-	{
-		$this->container->singleton(StyleEngine::class);
-		$this->container->singleton(StyleRegistrar::class);
-	}
-
-	/**
-	 * @inheritDoc
-	 */
 	public function boot(): void
 	{
 		$this->container->get(StyleEngine::class)->boot();

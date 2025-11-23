@@ -12,15 +12,6 @@ final class FrontendServiceProvider extends ServiceProvider implements Bootable
 	/**
 	 * @inheritDoc
 	 */
-	public function register(): void
-	{
-		$this->container->singleton(FrontendAssets::class);
-		$this->container->singleton(FrontendTweaks::class);
-	}
-
-	/**
-	 * @inheritDoc
-	 */
 	public function boot(): void
 	{
 		$this->container->get(FrontendAssets::class)->boot();

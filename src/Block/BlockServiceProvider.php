@@ -15,7 +15,6 @@ final class BlockServiceProvider extends ServiceProvider implements Bootable
 	 */
 	public function register(): void
 	{
-		$this->container->singleton(BlockStylesheets::class);
 		$this->container->singleton(Support\ColorScheme::class);
 		$this->container->singleton(Support\HtmlAttributes::class);
 

@@ -38,8 +38,6 @@ final class ThemeServiceProvider extends ServiceProvider implements Bootable
 				fn() => $service::get_instance()
 			);
 		}
-
-		$this->container->singleton(ThemeSetup::class);
 	}
 
 	/**

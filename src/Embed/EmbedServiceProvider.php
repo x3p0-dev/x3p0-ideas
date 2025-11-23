@@ -12,15 +12,6 @@ final class EmbedServiceProvider extends ServiceProvider implements Bootable
 	/**
 	 * @inheritDoc
 	 */
-	public function register(): void
-	{
-		$this->container->singleton(EmbedAssets::class);
-		$this->container->singleton(EmbedTemplate::class);
-	}
-
-	/**
-	 * @inheritDoc
-	 */
 	public function boot(): void
 	{
 		$this->container->get(EmbedAssets::class)->boot();
