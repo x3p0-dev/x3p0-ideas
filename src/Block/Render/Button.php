@@ -15,7 +15,8 @@ namespace X3P0\Ideas\Block\Render;
 
 use WP_Block;
 use WP_HTML_Tag_Processor;
-use X3P0\Ideas\Block\Support\ColorScheme;
+use X3P0\Ideas\ColorScheme\ColorSchemeConfig;
+use X3P0\Ideas\ColorScheme\ColorSchemeService;
 
 /**
  * Filters settings and rendered output for the `core/button` block.
@@ -24,10 +25,12 @@ final class Button extends RendersBlock
 {
 	protected const BLOCK_TYPE = 'core/button';
 
+	private const COLOR_SCHEME_CLASS = 'toggle-color-scheme';
+
 	/**
 	 * Sets up the object state.
 	 */
-	public function __construct(private readonly ColorScheme $color_scheme)
+	public function __construct(private readonly ColorSchemeService $colorScheme)
 	{}
 
 	/**
@@ -38,7 +41,7 @@ final class Button extends RendersBlock
 	{
 		if (
 			isset($block['attrs']['className'])
-			&& str_contains($block['attrs']['className'], 'toggle-color-scheme')
+			&& str_contains($block['attrs']['className'], self::COLOR_SCHEME_CLASS)
 		) {
 			return $this->renderColorSchemeToggle($content);
 		}
@@ -54,38 +57,37 @@ final class Button extends RendersBlock
 	 */
 	private function renderColorSchemeToggle(string $content): string
 	{
-		// Color scheme toggle.
 		$processor = new WP_HTML_Tag_Processor($content);
 
 		if (
-			! $processor->next_tag([ 'class_name' => 'toggle-color-scheme'])
+			! $processor->next_tag(['class_name' => self::COLOR_SCHEME_CLASS])
 			|| ! $processor->next_tag('button')
 		) {
 			return $processor->get_updated_html();
 		}
 
 		// If the color scheme can't be toggled, don't render the button.
-		if (! $this->color_scheme->isSwitchable()) {
+		if (! $this->colorScheme->resolver()->isSwitchable()) {
 			return '';
 		}
 
-		// Add interactivity directives to the `<button>`.
+		// Add interactivity directives
 		$attr = [
-			'data-wp-interactive'           => ColorScheme::STORE,
-			'data-wp-on--click'             => 'actions.toggle',
-			'data-wp-init'                  => 'callbacks.init',
-			'data-wp-watch'                 => 'callbacks.updateScheme',
-			'data-wp-bind--aria-pressed'    => 'state.isDark',
-			'data-wp-class--is-dark-scheme' => 'state.isDark'
+			'data-wp-interactive'           => ColorSchemeConfig::INTERACTIVE_STORE,
+			'data-wp-on--click'             => ColorSchemeConfig::INTERACTIVE_ACTION_TOGGLE,
+			'data-wp-init'                  => ColorSchemeConfig::INTERACTIVE_CALLBACK_INIT,
+			'data-wp-watch'                 => ColorSchemeConfig::INTERACTIVE_CALLBACK_UPDATE,
+			'data-wp-bind--aria-pressed'    => ColorSchemeConfig::INTERACTIVE_STATE_IS_DARK,
+			'data-wp-class--is-dark-scheme' => ColorSchemeConfig::INTERACTIVE_STATE_IS_DARK
 		];
 
 		foreach ($attr as $name => $value) {
 			$processor->set_attribute($name, $value);
 		}
 
-		// Set the initial interactivity state and enqueue assets.
-		$this->color_scheme->interactivityState();
-		$this->color_scheme->enqueueAssets();
+		// Set initial state and enqueue interactive assets
+		$this->colorScheme->setInteractivityState();
+		$this->colorScheme->enqueueAssets();
 
 		return $processor->get_updated_html();
 	}

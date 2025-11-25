@@ -13,11 +13,11 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas;
 
-use X3P0\Ideas\Framework\Container\ServiceContainer;
+use X3P0\Ideas\Framework\Container\{Container, ServiceContainer};
 use X3P0\Ideas\Framework\Core\Application;
 
 /**
- * Stores the single instance of the theme in the static `$theme` variable.
+ * Returns the theme application instance.
  */
 function theme(): Application
 {
@@ -28,4 +28,15 @@ function theme(): Application
 	}
 
 	return $theme;
+}
+
+
+/**
+ * Helper function for quickly accessing the service container. Devs can access
+ * any concrete implementation by passing in a reference to its abstract
+ * identifier via `container()->get($abstract)`.
+ */
+function container(): Container
+{
+	return theme()->container();
 }

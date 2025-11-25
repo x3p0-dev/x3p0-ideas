@@ -23,6 +23,5 @@ final class BlockServiceProvider extends ServiceProvider implements Bootable
 	public function boot(): void
 	{
 		$this->container->get(BlockStylesheets::class)->boot();
-		$this->container->get(Support\ColorScheme::class)->boot();
 	}
 }

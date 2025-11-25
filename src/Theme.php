@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas;
 
+use X3P0\Ideas\ColorScheme\ColorSchemeServiceProvider;
 use X3P0\Ideas\Editor\EditorServiceProvider;
 use X3P0\Ideas\Embed\EmbedServiceProvider;
 use X3P0\Ideas\Framework\Core\Application;
@@ -35,6 +36,7 @@ final class Theme extends Application
 		Block\Rule\RuleServiceProvider::class,
 		Block\Settings\SettingsServiceProvider::class,
 		Block\Style\StyleServiceProvider::class,
+		ColorSchemeServiceProvider::class,
 		EditorServiceProvider::class,
 		EmbedServiceProvider::class,
 		FrontendServiceProvider::class,
