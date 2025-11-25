@@ -26,8 +26,8 @@ final class BindingServiceProvider extends ServiceProvider implements Bootable
 	public function register(): void
 	{
 		$this->container->singleton(
-			BindingSourceManager::class,
-			fn() => new BindingSourceManager(
+			BindingSourceRegistrar::class,
+			fn() => new BindingSourceRegistrar(
 				$this->container->get(WP_Block_Bindings_Registry::class),
 				self::BINDING_SOURCES
 			)
@@ -40,6 +40,6 @@ final class BindingServiceProvider extends ServiceProvider implements Bootable
 	public function boot(): void
 	{
 		$this->container->get(BindingAttributeSupport::class)->boot();
-		$this->container->get(BindingSourceManager::class)->boot();
+		$this->container->get(BindingSourceRegistrar::class)->boot();
 	}
 }

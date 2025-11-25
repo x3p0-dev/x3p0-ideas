@@ -22,6 +22,7 @@ abstract class RendersBlock implements Bootable
 	{
 		if (static::BLOCK_TYPE === '') {
 			throw new LogicException(sprintf(
+				// Translators: %s is a PHP classname.
 				__('%s must define the BLOCK_TYPE constant', 'x3p0-ideas'),
 				static::class
 			));

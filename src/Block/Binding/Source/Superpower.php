@@ -21,21 +21,13 @@ use X3P0\Ideas\Tools\Superpower as Super;
  * Handles registering the `x3p0/super` block bindings source and rendering its
  * output based on the given arguments.
  */
-final class Superpower implements BindingSource
+final class Superpower extends BindingSource
 {
-	public function getName(): string
-	{
-		return 'x3p0/superpower';
-	}
+	protected const NAME = 'x3p0/superpower';
 
 	public function getLabel(): string
 	{
 		return __('Superpower', 'x3p0-ideas');
-	}
-
-	public function getContext(): array
-	{
-		return [];
 	}
 
 	/**

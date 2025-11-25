@@ -20,24 +20,21 @@ use X3P0\Ideas\Block\Binding\BindingSource;
  * Handles registering the `x3p0/post` block bindings source and rendering its
  * output based on the given arguments.
  */
-final class Post implements BindingSource
+final class Post extends BindingSource
 {
+	protected const NAME = 'x3p0/post';
+
 	/**
 	 * Stores the post ID.
 	 */
 	private int $post_id = 0;
-
-	public function getName(): string
-	{
-		return 'x3p0/post';
-	}
 
 	public function getLabel(): string
 	{
 		return __('Post Data', 'x3p0-ideas');
 	}
 
-	public function getContext(): array
+	public function usesContext(): array
 	{
 		return ['postId'];
 	}

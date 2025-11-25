@@ -20,21 +20,13 @@ use X3P0\Ideas\Block\Binding\BindingSource;
  * Handles registering the `x3p0/site` block bindings source and rendering its
  * output based on the given arguments.
  */
-final class Site implements BindingSource
+final class Site extends BindingSource
 {
-	public function getName(): string
-	{
-		return 'x3p0/site';
-	}
+	protected const NAME = 'x3p0/site';
 
 	public function getLabel(): string
 	{
 		return __('Site Data', 'x3p0-ideas');
-	}
-
-	public function getContext(): array
-	{
-		return [];
 	}
 
 	/**

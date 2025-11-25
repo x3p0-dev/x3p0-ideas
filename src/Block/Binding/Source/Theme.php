@@ -21,19 +21,16 @@ use X3P0\Ideas\Block\Binding\BindingSource;
  * Handles registering the `x3p0/theme` block bindings source and rendering its
  * output based on the given arguments.
  */
-final class Theme implements BindingSource
+final class Theme extends BindingSource
 {
-	public function getName(): string
-	{
-		return 'x3p0/theme';
-	}
+	protected const NAME = 'x3p0/theme';
 
 	public function getLabel(): string
 	{
 		return __('Theme Data', 'x3p0-ideas');
 	}
 
-	public function getContext(): array
+	public function usesContext(): array
 	{
 		return ['query', 'queryId'];
 	}

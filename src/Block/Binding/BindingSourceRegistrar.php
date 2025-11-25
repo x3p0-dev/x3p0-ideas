@@ -21,7 +21,7 @@ use X3P0\Ideas\Framework\Contracts\Bootable;
  * The Bindings component registers custom binding sources with the WordPress
  * Block Bindings API.
  */
-final class BindingSourceManager implements Bootable
+final class BindingSourceRegistrar implements Bootable
 {
 	/**
 	 * Sets up the initial object state.
@@ -56,7 +56,7 @@ final class BindingSourceManager implements Bootable
 			$this->bindingsRegistry->register($source->getName(), [
 				'label'              => $source->getLabel(),
 				'get_value_callback' => $source->callback(...),
-				'uses_context'       => $source->getContext()
+				'uses_context'       => $source->usesContext()
 			]);
 		}
 	}

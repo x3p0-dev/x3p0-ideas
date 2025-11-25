@@ -20,21 +20,13 @@ use X3P0\Ideas\Block\Binding\BindingSource;
  * Handles registering the `x3p0/general` block bindings source and rendering its
  * output based on the given arguments.
  */
-final class General implements BindingSource
+final class General extends BindingSource
 {
-	public function getName(): string
-	{
-		return 'x3p0/general';
-	}
+	protected const NAME = 'x3p0/general';
 
 	public function getLabel(): string
 	{
 		return __('General', 'x3p0-ideas');
-	}
-
-	public function getContext(): array
-	{
-		return [];
 	}
 
 	/**
