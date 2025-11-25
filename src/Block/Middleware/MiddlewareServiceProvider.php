@@ -14,7 +14,7 @@ final class MiddlewareServiceProvider extends ServiceProvider implements Bootabl
 	 */
 	public function boot(): void
 	{
-		$this->container->get(InjectAttributes::class)->boot();
+		$this->container->get(HtmlAttributes::class)->boot();
 		$this->container->get(Visibility::class)->boot();
 	}
 }
