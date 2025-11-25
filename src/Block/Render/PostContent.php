@@ -20,14 +20,14 @@ use X3P0\Ideas\View\ViewEngine;
 /**
  * Filters settings and rendered output for the `core/post-content` block.
  */
-class PostContent extends RendersBlock
+final class PostContent extends RendersBlock
 {
 	protected const BLOCK_TYPE = 'core/post-content';
 
 	/**
 	 * Sets up the object state.
 	 */
-	public function __construct(protected ViewEngine $viewEngine)
+	public function __construct(private readonly ViewEngine $viewEngine)
 	{}
 
 	/**

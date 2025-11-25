@@ -20,7 +20,7 @@ use WP_HTML_Tag_Processor;
 /**
  * Filters settings and rendered output for the `core/file` block.
  */
-class File extends RendersBlock
+final class File extends RendersBlock
 {
 	protected const BLOCK_TYPE = 'core/file';
 

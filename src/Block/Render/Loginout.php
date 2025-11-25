@@ -19,7 +19,7 @@ use WP_HTML_Tag_Processor;
 /**
  * Filters settings and rendered output for the `core/loginout` block.
  */
-class Loginout extends RendersBlock
+final class Loginout extends RendersBlock
 {
 	protected const BLOCK_TYPE = 'core/loginout';
 

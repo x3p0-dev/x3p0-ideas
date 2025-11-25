@@ -13,7 +13,6 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas\Block\Binding;
 
-use WP_Block_Bindings_Registry;
 use X3P0\Ideas\Framework\Contracts\Bootable;
 
 /**

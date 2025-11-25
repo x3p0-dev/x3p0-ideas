@@ -19,7 +19,7 @@ use WP_HTML_Tag_Processor;
 /**
  * Filters settings and rendered output for the `core/cover` block.
  */
-class Cover extends RendersBlock
+final class Cover extends RendersBlock
 {
 	protected const BLOCK_TYPE = 'core/cover';
 

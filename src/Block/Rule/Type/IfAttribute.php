@@ -19,7 +19,7 @@ use X3P0\Ideas\Block\Rule\Rule;
 /**
  * Show the block if the attribute has a value.
  */
-class IfAttribute extends Rule
+final class IfAttribute extends Rule
 {
 	/**
 	 * @inheritDoc

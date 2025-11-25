@@ -6,7 +6,7 @@ namespace X3P0\Ideas\Block\Settings\Modifier;
 
 use X3P0\Ideas\Block\Settings\SettingsModifier;
 
-class PostTemplate extends SettingsModifier
+final class PostTemplate extends SettingsModifier
 {
 	/**
 	 * @inheritDoc

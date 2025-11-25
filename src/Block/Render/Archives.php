@@ -18,7 +18,7 @@ use X3P0\Ideas\Framework\Contracts\Bootable;
 /**
  * Filters settings and rendered output for the `core/archives` block.
  */
-class Archives implements Bootable
+final class Archives implements Bootable
 {
 	/**
 	 * @inheritDoc

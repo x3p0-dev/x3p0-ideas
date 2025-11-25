@@ -19,7 +19,7 @@ use WP_HTML_Tag_Processor;
 /**
  * Filters settings and rendered output for the `core/calendar` block.
  */
-class Calendar extends RendersBlock
+final class Calendar extends RendersBlock
 {
 	protected const BLOCK_TYPE = 'core/calendar';
 

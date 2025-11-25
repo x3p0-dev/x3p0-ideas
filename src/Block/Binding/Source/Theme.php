@@ -21,7 +21,7 @@ use X3P0\Ideas\Block\Binding\BindingSource;
  * Handles registering the `x3p0/theme` block bindings source and rendering its
  * output based on the given arguments.
  */
-class Theme implements BindingSource
+final class Theme implements BindingSource
 {
 	public function getName(): string
 	{

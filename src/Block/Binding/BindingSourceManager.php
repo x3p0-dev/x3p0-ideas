@@ -21,14 +21,14 @@ use X3P0\Ideas\Framework\Contracts\Bootable;
  * The Bindings component registers custom binding sources with the WordPress
  * Block Bindings API.
  */
-class BindingSourceManager implements Bootable
+final class BindingSourceManager implements Bootable
 {
 	/**
 	 * Sets up the initial object state.
 	 */
 	public function __construct(
-		protected readonly WP_Block_Bindings_Registry $bindingsRegistry,
-		protected readonly array $sources
+		private readonly WP_Block_Bindings_Registry $bindingsRegistry,
+		private readonly array $sources
 	) {}
 
 	public function boot(): void {

@@ -20,7 +20,7 @@ use X3P0\Ideas\Block\Binding\BindingSource;
  * Handles registering the `x3p0/post` block bindings source and rendering its
  * output based on the given arguments.
  */
-class Post implements BindingSource
+final class Post implements BindingSource
 {
 	/**
 	 * Stores the post ID.

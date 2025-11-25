@@ -6,7 +6,7 @@ namespace X3P0\Ideas\Block\Settings\Modifier;
 
 use X3P0\Ideas\Block\Settings\SettingsModifier;
 
-class Query extends SettingsModifier
+final class Query extends SettingsModifier
 {
 	/**
 	 * @inheritDoc

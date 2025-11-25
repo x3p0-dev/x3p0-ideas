@@ -27,7 +27,7 @@ add_action('x3p0/ideas/register', function (Application $app) {
 	}
 
 	$app->container()->singleton(Config::class);
-	$app->container()->singleton(Editor::class);
+	$app->container()->singleton(EditorSettings::class);
 	$app->container()->singleton(Setup::class);
 	$app->container()->singleton(StyleVariations::class);
 });
@@ -38,7 +38,7 @@ add_action('x3p0/ideas/booted', function (Application $app) {
 		return;
 	}
 
-	$app->container()->get(Editor::class)->boot();
+	$app->container()->get(EditorSettings::class)->boot();
 	$app->container()->get(Setup::class)->boot();
 	$app->container()->get(StyleVariations::class)->boot();
 });

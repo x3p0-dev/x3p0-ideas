@@ -21,7 +21,7 @@ use X3P0\Ideas\Tools\Superpower as Super;
  * Handles registering the `x3p0/super` block bindings source and rendering its
  * output based on the given arguments.
  */
-class Superpower implements BindingSource
+final class Superpower implements BindingSource
 {
 	public function getName(): string
 	{

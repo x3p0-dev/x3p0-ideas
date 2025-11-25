@@ -15,8 +15,6 @@ namespace X3P0\Ideas\Dev;
 
 use WP_Theme_JSON_Data;
 use X3P0\Ideas\Framework\Contracts\Bootable;
-use X3P0\Ideas\Support\Hooks\{Filter};
-use X3P0\Ideas\Support\Hooks\Hookable;
 
 /**
  * Style variations in WordPress can only be tested by going to the site editor
@@ -34,10 +32,8 @@ use X3P0\Ideas\Support\Hooks\Hookable;
  * To test, simply pass the variation slug(s) into the constructor and boot. If
  * the slug isn't set, no test will be run.
  */
-class StyleVariations implements Bootable
+final class StyleVariations implements Bootable
 {
-	use Hookable;
-
 	/**
 	 * Mappings for short variation names.
 	 *
@@ -51,57 +47,64 @@ class StyleVariations implements Bootable
 	/**
 	 * Set up the object's initial state.
 	 */
-	public function __construct(protected Config $config)
+	public function __construct(private readonly Config $config)
 	{}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function boot(): void
+	{
+		add_filter('wp_theme_json_data_user', $this->setThemeStyle(...), -999999);
+		add_filter('wp_theme_json_data_user', $this->setColorStyle(...), -999999);
+		add_filter('wp_theme_json_data_user', $this->setTypographyStyle(...), -999999);
+	}
 
 	/**
 	 * Filters the data at the user level in case something is saved in the
 	 * database already. We want the front end to use the variation passed
 	 * into the constructor.
 	 *
-	 * @param WP_Theme_JSON_Data  The Gutenberg plugin breaks this.
-	 * @link  https://developer.wordpress.org/reference/hooks/wp_theme_json_data_user/
+	 * The Gutenberg plugin breaks the `$themeJson` parameter, which should
+	 * be `WP_Theme_Json_Data`.
 	 */
-	#[Filter('wp_theme_json_data_user', 'first')]
-	public function setThemeStyle(object $theme_json): object
+	private function setThemeStyle(object $themeJson): object
 	{
 		$data = $this->getVariationData('theme');
 
 		return ! is_null($data)
 			? new WP_Theme_JSON_Data($data, 'user')
-			: $theme_json;
+			: $themeJson;
 	}
 
 	/**
 	 * Filters color variation.
 	 *
-	 * @param WP_Theme_JSON_Data  The Gutenberg plugin breaks this.
-	 * @link  https://developer.wordpress.org/reference/hooks/wp_theme_json_data_user/
+	 * The Gutenberg plugin breaks the `$themeJson` parameter, which should
+	 * be `WP_Theme_Json_Data`.
 	 */
-	#[Filter('wp_theme_json_data_user', 'first')]
-	public function setColorStyle(object $theme_json): object
+	private function setColorStyle(object $themeJson): object
 	{
 		$data = $this->getVariationData('color');
 
 		return ! is_null($data)
-			? $theme_json->update_with($data)
-			: $theme_json;
+			? $themeJson->update_with($data)
+			: $themeJson;
 	}
 
 	/**
 	 * Filters typography variation.
 	 *
-	 * @param WP_Theme_JSON_Data  The Gutenberg plugin breaks this.
-	 * @link  https://developer.wordpress.org/reference/hooks/wp_theme_json_data_user/
+	 *  The Gutenberg plugin breaks the `$themeJson` parameter, which should
+	 *  be `WP_Theme_Json_Data`.
 	 */
-	#[Filter('wp_theme_json_data_user', 'first')]
-	public function setTypographyStyle(object $theme_json): object
+	private function setTypographyStyle(object $themeJson): object
 	{
 		$data = $this->getVariationData('typography');
 
 		return ! is_null($data)
-			? $theme_json->update_with($data)
-			: $theme_json;
+			? $themeJson->update_with($data)
+			: $themeJson;
 	}
 
 	/**

@@ -19,7 +19,7 @@ use X3P0\Ideas\Block\Rule\Rule;
 /**
  * Show the block if the condition is met.
  */
-class When extends Rule
+final class When extends Rule
 {
 	/**
 	 * Checks if the rule matches.

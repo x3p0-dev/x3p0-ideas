@@ -6,7 +6,7 @@ namespace X3P0\Ideas\Block\Settings;
 
 use X3P0\Ideas\Framework\Contracts\Bootable;
 
-class SettingsModifierManager implements Bootable
+final class SettingsModifierManager implements Bootable
 {
 	public function __construct(
 		private readonly SettingsModifierRegistry $registry,

@@ -18,7 +18,7 @@ use X3P0\Ideas\Framework\Contracts\Bootable;
 /**
  * Filters settings and rendered output for the `core/navigation` block.
  */
-class Navigation implements Bootable
+final class Navigation implements Bootable
 {
 	/**
 	 * @inheritDoc

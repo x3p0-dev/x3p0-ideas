@@ -27,16 +27,6 @@ final class RuleRegistry implements ClassRegistry
 	protected array $rules = [];
 
 	/**
-	 * Allows registering a default set of rule classes.
-	 */
-	public function __construct(array $rules = [])
-	{
-		foreach ($rules as $key => $className) {
-			$this->register($key, $className);
-		}
-	}
-
-	/**
 	 * Registers a rule class.
 	 *
 	 * @param class-string<Rule> $className

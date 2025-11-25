@@ -19,7 +19,7 @@ use X3P0\Ideas\Block\Rule\Rule;
 /**
  * Show the block unless the condition is met.
  */
-class Unless extends Rule
+final class Unless extends Rule
 {
 	/**
 	 * @inheritDoc

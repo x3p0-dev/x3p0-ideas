@@ -20,7 +20,7 @@ use X3P0\Ideas\Block\Binding\BindingSource;
  * Handles registering the `x3p0/comment` block bindings source and rendering its
  * output based on the given arguments.
  */
-class Comment implements BindingSource
+final class Comment implements BindingSource
 {
 	/**
 	 * Stores the comment ID.

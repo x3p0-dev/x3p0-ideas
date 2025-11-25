@@ -19,7 +19,7 @@ use WP_HTML_Tag_Processor;
 /**
  * Filters settings and rendered output for the `core/template-part` block.
  */
-class TemplatePart extends RendersBlock
+final class TemplatePart extends RendersBlock
 {
 	protected const BLOCK_TYPE = 'core/template-part';
 

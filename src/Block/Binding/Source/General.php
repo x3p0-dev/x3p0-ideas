@@ -20,7 +20,7 @@ use X3P0\Ideas\Block\Binding\BindingSource;
  * Handles registering the `x3p0/general` block bindings source and rendering its
  * output based on the given arguments.
  */
-class General implements BindingSource
+final class General implements BindingSource
 {
 	public function getName(): string
 	{

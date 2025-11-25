@@ -19,7 +19,7 @@ use WP_HTML_Tag_Processor;
 /**
  * Filters settings and rendered output for the `core/post-time-to-read` block.
  */
-class PostTimeToRead extends RendersBlock
+final class PostTimeToRead extends RendersBlock
 {
 	protected const BLOCK_TYPE = 'core/post-time-to-read';
 

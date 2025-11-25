@@ -16,7 +16,7 @@ namespace X3P0\Ideas\Block\Render;
 use WP_Block;
 use WP_HTML_Tag_Processor;
 
-class Accordion extends RendersBlock
+final class Accordion extends RendersBlock
 {
 	protected const BLOCK_TYPE = 'core/accordion';
 

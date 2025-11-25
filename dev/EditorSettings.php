@@ -14,22 +14,24 @@ declare(strict_types=1);
 namespace X3P0\Ideas\Dev;
 
 use X3P0\Ideas\Framework\Contracts\Bootable;
-use X3P0\Ideas\Support\Hooks\{Filter, Hookable};
 
 /**
  * Defines block editor settings while in development mode.
  */
-class Editor implements Bootable
+class EditorSettings implements Bootable
 {
-	use Hookable;
+	/**
+	 * @inheritDoc
+	 */
+	public function boot(): void
+	{
+		add_filter('block_editor_settings_all', $this->modify(...), 999999);
+	}
 
 	/**
 	 * Enables features that are disabled for production installs.
-	 *
-	 * @since 1.0.0
 	 */
-	#[Filter('block_editor_settings_all', 'last')]
-	public function registerSettings(array $settings): array
+	public function modify(array $settings): array
 	{
 		$settings['fontLibraryEnabled'] = true;
 

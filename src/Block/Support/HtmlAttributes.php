@@ -20,7 +20,7 @@ use WP_HTML_Tag_Processor;
  * attached to the block markup on the front end. This is necessary for custom
  * attributes that would invalidate the block markup in the editor.
  */
-class HtmlAttributes
+final class HtmlAttributes
 {
 	use Metadata;
 

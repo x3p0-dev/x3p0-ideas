@@ -19,7 +19,7 @@ use X3P0\Ideas\Block\Rule\Rule;
 /**
  * Show the block if the user matches.
  */
-class IsUser extends Rule
+final class IsUser extends Rule
 {
 	/**
 	 * @inheritDoc

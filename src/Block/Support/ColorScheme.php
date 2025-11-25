@@ -14,7 +14,6 @@ declare(strict_types=1);
 namespace X3P0\Ideas\Block\Support;
 
 use X3P0\Ideas\Framework\Contracts\Bootable;
-use X3P0\Ideas\Support\Hooks\{Action, Hookable};
 
 /**
  * The Color Scheme class is for handling the CSS `color-scheme` defined in
@@ -23,10 +22,8 @@ use X3P0\Ideas\Support\Hooks\{Action, Hookable};
  * implementing buttons/toggles/switches for letting site visitors switch the
  * color scheme, but it is agnostic of the block(s) it is used with.
  */
-class ColorScheme implements Bootable
+final class ColorScheme implements Bootable
 {
-	use Hookable;
-
 	/**
 	 * Unique name for the store.
 	 *
@@ -115,10 +112,19 @@ class ColorScheme implements Bootable
 	private string $scheme;
 
 	/**
+	 * @inheritDoc
+	 */
+	public function boot(): void
+	{
+		add_action('init', $this->registerMeta(...));
+		add_action('wp_enqueue_scripts', $this->registerAssets(...));
+		add_action('enqueue_block_assets', $this->enqueueBlockAssets(...));
+	}
+
+	/**
 	 * Registers user meta for storing the color scheme.
 	 */
-	#[Action('init')]
-	public function registerMeta(): void
+	private function registerMeta(): void
 	{
 		$sanitize = fn($value) => in_array($value, self::USER_SCHEMES, true) ? $value : '';
 
@@ -136,8 +142,7 @@ class ColorScheme implements Bootable
 	/**
 	 * Registers assets to enable interactivity, such as button toggles.
 	 */
-	#[Action('wp_enqueue_scripts')]
-	public function registerAssets(): void
+	private function registerAssets(): void
 	{
 		$script = include get_parent_theme_file_path('public/js/views/color-scheme.asset.php');
 
@@ -169,8 +174,7 @@ class ColorScheme implements Bootable
 	 * Adds inline CSS in the front end and editor for printing the color
 	 * scheme on the root element.
 	 */
-	#[Action('enqueue_block_assets')]
-	public function enqueueBlockAssets(): void
+	private function enqueueBlockAssets(): void
 	{
 		$css = sprintf(
 			':root {color-scheme: %s;}',

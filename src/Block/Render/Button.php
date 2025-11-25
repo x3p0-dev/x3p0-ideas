@@ -20,14 +20,14 @@ use X3P0\Ideas\Block\Support\ColorScheme;
 /**
  * Filters settings and rendered output for the `core/button` block.
  */
-class Button extends RendersBlock
+final class Button extends RendersBlock
 {
 	protected const BLOCK_TYPE = 'core/button';
 
 	/**
 	 * Sets up the object state.
 	 */
-	public function __construct(protected ColorScheme $color_scheme)
+	public function __construct(private readonly ColorScheme $color_scheme)
 	{}
 
 	/**

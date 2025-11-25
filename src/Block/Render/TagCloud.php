@@ -19,7 +19,7 @@ use WP_HTML_Tag_Processor;
 /**
  * Filters settings and rendered output for the `core/tag-cloud` block.
  */
-class TagCloud extends RendersBlock
+final class TagCloud extends RendersBlock
 {
 	protected const BLOCK_TYPE = 'core/tag-cloud';
 
