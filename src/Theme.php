@@ -29,13 +29,13 @@ final class Theme extends Application
 	 * Defines the theme's default service providers.
 	 */
 	protected const PROVIDERS = [
-		Block\BlockServiceProvider::class,
 		Block\Binding\BindingServiceProvider::class,
 		Block\Middleware\MiddlewareServiceProvider::class,
 		Block\Render\RenderServiceProvider::class,
 		Block\Rule\RuleServiceProvider::class,
 		Block\Settings\SettingsServiceProvider::class,
 		Block\Style\StyleServiceProvider::class,
+		Block\Stylesheet\StylesheetServiceProvider::class,
 		ColorSchemeServiceProvider::class,
 		EditorServiceProvider::class,
 		EmbedServiceProvider::class,
