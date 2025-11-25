@@ -15,6 +15,8 @@ declare(strict_types=1);
 # Prevent direct access.
 defined('ABSPATH') || exit;
 
+use X3P0\Ideas\Block\Rule\RuleRegistrar;
+
 ?>
 <!-- wp:query {
 	"metadata":{"name":"<?= esc_attr__('Posts Query', 'x3p0-ideas') ?>"},
@@ -74,7 +76,12 @@ defined('ABSPATH') || exit;
 						}
 					}
 				},
-				"x3p0/rules":{"rules":[{"type": "ifAttribute", "attribute": "content"}]}
+				"x3p0/rules":{
+					"rules":[{
+						"type": "<?= esc_attr(RuleRegistrar::IF_ATTRIBUTE) ?>",
+						"attribute": "content"
+					}]
+				}
 			},
 			"placeholder":"<?= esc_attr__('Page 3 / 7:', 'x3p0-ideas') ?>",
 			"className":"pagination-label"
