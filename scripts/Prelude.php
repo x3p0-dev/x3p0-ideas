@@ -6,7 +6,7 @@
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2025, Justin Tadlock
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPL-3.0-or-later
- * @link      https://github.com/x3p0-dev/x3p0-breadcrumbs
+ * @link      https://github.com/x3p0-dev/x3p0-ideas
  */
 
 declare(strict_types=1);
@@ -21,32 +21,25 @@ use Composer\{Composer, Factory};
 use Composer\Script\Event;
 
 /**
- * Used in Composer to add X3PO packages to the `/packages` folder and prefix
- * them with the project namespace. For example, `X3PO\Framework` becomes
- * `X3P0\Namespace\Framework`. This is a form of "vendor prefixing" to avoid
- * conflicts where the packages are used in multiple themes/plugins.
+ * Prelude copies packages from vendor and applies namespace prefixing to avoid
+ * conflicts when packages are used across multiple projects.
  */
 final class Prelude
 {
 	/**
-	 * Namespace to search for and replace.
+	 * Global namespace prefix to apply to packages.
 	 */
-	private string $searchNamespace;
-
-	/**
-	 * Namespace to replace with.
-	 */
-	private string $replaceNamespace;
-
-	/**
-	 * Vendor folder name to look for.
-	 */
-	private string $vendorPath;
+	private string $prefix;
 
 	/**
 	 * Output folder name to store the prefixed packages.
 	 */
 	private string $outputPath;
+
+	/**
+	 * Package configurations keyed by path pattern.
+	 */
+	private array $packages;
 
 	/**
 	 * Source vendor directory.
@@ -84,8 +77,6 @@ final class Prelude
 	{
 		$extra = $composer->getPackage()->getExtra();
 
-		// Get custom configuration from `extra.package-prefixer`
-		// property in `composer.json`.
 		if (! isset($extra['x3p0']) || ! isset($extra['x3p0']['prelude'])) {
 			throw new RuntimeException(
 				"Missing 'extra.x3p0.prelude' configuration in composer.json"
@@ -94,9 +85,9 @@ final class Prelude
 
 		$config = $extra['x3p0']['prelude'];
 
-		if (! isset($config['vendor-path'])) {
+		if (! isset($config['prefix'])) {
 			throw new RuntimeException(
-				"Missing 'extra.x3p0.prelude.vendor-path' in composer.json"
+				"Missing 'extra.x3p0.prelude.prefix' in composer.json"
 			);
 		}
 
@@ -106,22 +97,15 @@ final class Prelude
 			);
 		}
 
-		if (! isset($config['search-namespace'])) {
+		if (! isset($config['packages']) || ! is_array($config['packages'])) {
 			throw new RuntimeException(
-				"Missing 'extra.x3p0.prelude.search-namespace' in composer.json"
+				"Missing or invalid 'extra.x3p0.prelude.packages' in composer.json"
 			);
 		}
 
-		if (! isset($config['replace-namespace'])) {
-			throw new RuntimeException(
-				"Missing 'extra.x3p0.prelude.replace-namespace' in composer.json"
-			);
-		}
-
-		$this->vendorPath      = $config['vendor-path'];
-		$this->outputPath      = $config['output-path'];
-		$this->searchNamespace = rtrim($config['search-namespace'], '\\');
-		$this->replaceNamespace = rtrim($config['replace-namespace'], '\\');
+		$this->prefix = rtrim($config['prefix'], '\\');
+		$this->outputPath = $config['output-path'];
+		$this->packages = $config['packages'];
 	}
 
 	/**
@@ -129,16 +113,15 @@ final class Prelude
 	 */
 	public function run(): void
 	{
-		$this->log("Search namespace: {$this->searchNamespace}");
-		$this->log("Replace namespace: {$this->replaceNamespace}");
-		$this->log("Looking for packages in vendor/{$this->vendorPath}/...");
+		$this->log("Global prefix: {$this->prefix}");
+		$this->log("Output path: {$this->outputPath}");
+		$this->log("Processing packages...");
 
 		$this->cleanOutputDirectory();
-		$this->copyPackages();
-		$this->prefixNamespaces();
+		$this->processPackages();
 
 		$this->log("Dependencies prefixed successfully!");
-		$this->log("Packages were copied and prefixed to {$this->outputPath}/");
+		$this->log("Packages copied to {$this->outputPath}/");
 	}
 
 	/**
@@ -154,34 +137,126 @@ final class Prelude
 	}
 
 	/**
-	 * Copy packages from vendor to output directory.
+	 * Process all configured packages.
 	 */
-	private function copyPackages(): void
+	private function processPackages(): void
 	{
-		$sourceDir = $this->vendorDir . '/' . $this->vendorPath;
+		$vendorPackages = $this->getVendorPackages();
+		$processedPaths = [];
 
-		if (! is_dir($sourceDir)) {
-			throw new RuntimeException("No packages found in vendor/{$this->vendorPath}/");
+		foreach ($this->packages as $pattern => $options) {
+			$matchedPaths = $this->matchPattern($pattern, $vendorPackages);
+
+			foreach ($matchedPaths as $path) {
+				// Skip if already processed
+				if (in_array($path, $processedPaths, true)) {
+					continue;
+				}
+
+				$this->processPackage($path, $options);
+				$processedPaths[] = $path;
+			}
 		}
-
-		$this->copyDirectory($sourceDir, "{$this->outputDir}/{$this->vendorPath}");
 	}
 
 	/**
-	 * Prefix namespaces in all PHP files.
+	 * Get all package paths from vendor directory.
 	 */
-	private function prefixNamespaces(): void
+	private function getVendorPackages(): array
+	{
+		$packages = [];
+		$vendors = glob($this->vendorDir . '/*', GLOB_ONLYDIR);
+
+		foreach ($vendors as $vendor) {
+			$vendorName = basename($vendor);
+
+			// Skip composer and bin directories
+			if (in_array($vendorName, ['composer', 'bin'])) {
+				continue;
+			}
+
+			$vendorPackages = glob($vendor . '/*', GLOB_ONLYDIR);
+
+			foreach ($vendorPackages as $package) {
+				$packages[] = $vendorName . '/' . basename($package);
+			}
+		}
+
+		return $packages;
+	}
+
+	/**
+	 * Match a pattern against package paths.
+	 */
+	private function matchPattern(string $pattern, array $packages): array
+	{
+		// Wildcard matches all remaining packages
+		if ($pattern === '*') {
+			return $packages;
+		}
+
+		return array_filter($packages, fn($package) => $this->matchesPattern($pattern, $package));
+	}
+
+	/**
+	 * Check if a path matches a pattern.
+	 */
+	private function matchesPattern(string $pattern, string $path): bool
+	{
+		// Exact match
+		if ($pattern === $path) {
+			return true;
+		}
+
+		// Wildcard pattern
+		$regex = '/^' . str_replace(
+				['/', '*'],
+				['\/', '.*'],
+				$pattern
+			) . '$/';
+
+		return (bool) preg_match($regex, $path);
+	}
+
+	/**
+	 * Process a single package.
+	 */
+	private function processPackage(string $path, array $options): void
+	{
+		$this->log("  Processing: {$path}");
+
+		$sourcePath = $this->vendorDir . '/' . $path;
+		$targetPath = $this->outputDir . '/' . $path;
+
+		if (! is_dir($sourcePath)) {
+			$this->log("    Warning: Package not found, skipping");
+			return;
+		}
+
+		// Copy package files
+		$this->copyDirectory($sourcePath, $targetPath);
+
+		// Apply namespace transformations
+		$replace = $options['replace'] ?? null;
+
+		$this->prefixPackageNamespaces($targetPath, $replace);
+	}
+
+	/**
+	 * Prefix namespaces in all PHP files within a package.
+	 */
+	private function prefixPackageNamespaces(string $packagePath, ?string $replace): void
 	{
 		$files = new RecursiveIteratorIterator(
 			new RecursiveDirectoryIterator(
-				$this->outputDir,
+				$packagePath,
 				FilesystemIterator::SKIP_DOTS
 			)
 		);
 
 		foreach ($files as $file) {
 			if ($file->isFile() && $file->getExtension() === 'php') {
-				$this->prefixFile($file->getPathname());
+				$this->prefixFile($file->getPathname(), $replace);
 			}
 		}
 	}
@@ -189,16 +264,16 @@ final class Prelude
 	/**
 	 * Prefix namespaces in a single file.
 	 */
-	private function prefixFile(string $filePath): void
+	private function prefixFile(string $filePath, ?string $replace): void
 	{
 		$contents = file_get_contents($filePath);
 
-		// Replace search namespace with replace namespace.
-		$pattern     = '/\b' . preg_quote($this->searchNamespace, '/') . '\\\\/';
-		$replacement = $this->replaceNamespace . '\\';
-		$contents    = preg_replace($pattern, $replacement, $contents);
-
-		file_put_contents($filePath, $contents);
+		// Only perform search/replace if configured
+		if ($replace) {
+			$pattern = '/\b' . preg_quote(rtrim($replace, '\\'), '/') . '\\\\/';
+			$contents = preg_replace($pattern, $this->prefix . '\\', $contents);
+			file_put_contents($filePath, $contents);
+		}
 	}
 
 	/**

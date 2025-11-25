@@ -38,10 +38,13 @@
 			"theme": "",
 			"typography": "",
 			"prelude": {
-				"vendor-path": "x3p0-dev",
+				"prefix": "X3P0\\Ideas",
 				"output-path": "packages",
-				"search-namespace": "X3P0",
-				"replace-namespace": "X3P0\\Ideas"
+				"packages": {
+					"x3p0-dev/*": {
+						"replace": "X3P0\\"
+					}
+				}
 			}
 		}
 	},
