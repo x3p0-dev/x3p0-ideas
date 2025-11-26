@@ -17,7 +17,7 @@ use SplFileInfo;
  */
 final class StylesheetDiscovery implements Iterator
 {
-	private Iterator $iterator;
+	private readonly Iterator $iterator;
 	private ?Stylesheet $current = null;
 
 	public function __construct(protected readonly string $path)

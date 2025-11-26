@@ -22,7 +22,7 @@ final class RenderServiceProvider extends ServiceProvider implements Bootable
 		PostExcerpt::class,
 		PostTimeToRead::class,
 		TagCloud::class,
-		TemplatePart::class,
+		TemplatePart::class
 	];
 
 	/**

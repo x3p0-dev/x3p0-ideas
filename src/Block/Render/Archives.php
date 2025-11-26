@@ -35,7 +35,7 @@ final class Archives implements Bootable
 	 * list items. This provides a bit more design flexibility with custom
 	 * block styles.
 	 */
-	public function widgetArchivesArgs(array $args): array
+	private function widgetArchivesArgs(array $args): array
 	{
 		$before = $args['before'] ?? '';
 		$after  = $args['after'] ?? '';

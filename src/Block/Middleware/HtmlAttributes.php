@@ -37,7 +37,7 @@ final class HtmlAttributes implements Bootable
 	{
 		$attrs = $this->getMetaValue($block, self::METADATA_KEY);
 
-		if (!is_array($attrs)) {
+		if (! is_array($attrs)) {
 			return $content;
 		}
 

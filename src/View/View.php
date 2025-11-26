@@ -22,7 +22,7 @@ use Stringable;
  * block theme, this generally means using them alongside a filter when
  * rendering a block.
  */
-class View implements Stringable
+final class View implements Stringable
 {
 	/**
 	 * The template filename.
