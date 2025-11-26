@@ -14,14 +14,13 @@ declare(strict_types=1);
 namespace X3P0\Ideas\Block\Binding\Source;
 
 use WP_Block;
-use X3P0\Ideas\Block\Binding\BindingSource;
 use X3P0\Ideas\Tools\Superpower as Super;
 
 /**
  * Handles registering the `x3p0/super` block bindings source and rendering its
  * output based on the given arguments.
  */
-final class Superpower extends BindingSource
+final class SuperpowerSource extends Source
 {
 	protected const NAME = 'x3p0/superpower';
 

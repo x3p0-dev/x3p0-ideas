@@ -51,7 +51,7 @@ final class BindingAttributeSupport implements Bootable
 	/**
 	 * Adds supported attributes for the Audio and Video blocks.
 	 */
-	public function addSupportedAttributes(array $attrs): array
+	private function addSupportedAttributes(array $attrs): array
 	{
 		$block = str_replace(self::HOOK_PREFIX . '_', '', current_filter());
 

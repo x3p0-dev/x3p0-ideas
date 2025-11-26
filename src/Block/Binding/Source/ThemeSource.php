@@ -15,13 +15,12 @@ namespace X3P0\Ideas\Block\Binding\Source;
 
 use WP_Block;
 use WP_Query;
-use X3P0\Ideas\Block\Binding\BindingSource;
 
 /**
  * Handles registering the `x3p0/theme` block bindings source and rendering its
  * output based on the given arguments.
  */
-final class Theme extends BindingSource
+final class ThemeSource extends Source
 {
 	protected const NAME = 'x3p0/theme';
 

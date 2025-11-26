@@ -14,13 +14,12 @@ declare(strict_types=1);
 namespace X3P0\Ideas\Block\Binding\Source;
 
 use WP_Block;
-use X3P0\Ideas\Block\Binding\BindingSource;
 
 /**
  * Handles registering the `x3p0/site` block bindings source and rendering its
  * output based on the given arguments.
  */
-final class Site extends BindingSource
+final class SiteSource extends Source
 {
 	protected const NAME = 'x3p0/site';
 

@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace X3P0\Ideas\Block\Binding;
+namespace X3P0\Ideas\Block\Binding\Source;
 
 use LogicException;
 use WP_Block;
@@ -20,7 +20,7 @@ use WP_Block;
  * The Block Bindings Source contract defines how block binding sources should
  * be implemented within the theme.
  */
-abstract class BindingSource
+abstract class Source
 {
 	protected const NAME = '';
 

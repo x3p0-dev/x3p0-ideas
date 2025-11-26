@@ -14,13 +14,12 @@ declare(strict_types=1);
 namespace X3P0\Ideas\Block\Binding\Source;
 
 use WP_Block;
-use X3P0\Ideas\Block\Binding\BindingSource;
 
 /**
  * Handles registering the `x3p0/comment` block bindings source and rendering its
  * output based on the given arguments.
  */
-final class Comment extends BindingSource
+final class CommentSource extends Source
 {
 	protected const NAME = 'x3p0/comment';
 
