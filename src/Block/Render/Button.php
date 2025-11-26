@@ -15,8 +15,7 @@ namespace X3P0\Ideas\Block\Render;
 
 use WP_Block;
 use WP_HTML_Tag_Processor;
-use X3P0\Ideas\ColorScheme\ColorSchemeConfig;
-use X3P0\Ideas\ColorScheme\ColorSchemeService;
+use X3P0\Ideas\ColorScheme\{ColorSchemeConfig, ColorSchemeService};
 
 /**
  * Filters settings and rendered output for the `core/button` block.
@@ -85,9 +84,8 @@ final class Button extends RendersBlock
 			$processor->set_attribute($name, $value);
 		}
 
-		// Set initial state and enqueue interactive assets
-		$this->colorScheme->setInteractivityState();
-		$this->colorScheme->enqueueAssets();
+		// Enable color scheme interactivity (state, scripts, etc.).
+		$this->colorScheme->enableInteractivity();
 
 		return $processor->get_updated_html();
 	}

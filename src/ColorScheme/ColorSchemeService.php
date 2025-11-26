@@ -30,15 +30,13 @@ final class ColorSchemeService implements Bootable
 	}
 
 	/**
-	 * Enqueues interactive assets for color scheme toggle.
+	 * Helper function for enabling interactivity by setting the interactive
+	 * state and enqueueing assets.
 	 */
-	public function enqueueAssets(): void
+	public function enableInteractivity(): void
 	{
-		if (is_user_logged_in()) {
-			wp_enqueue_script('wp-api-fetch');
-		}
-
-		wp_enqueue_script_module(ColorSchemeConfig::NAME);
+		$this->setInteractivityState();
+		$this->enqueueAssets();
 	}
 
 	/**
@@ -55,6 +53,18 @@ final class ColorSchemeService implements Bootable
 			'cookiePath'        => COOKIEPATH,
 			'cookieDomain'      => COOKIE_DOMAIN
 		]);
+	}
+
+	/**
+	 * Enqueues interactive assets for color scheme toggle.
+	 */
+	public function enqueueAssets(): void
+	{
+		if (is_user_logged_in()) {
+			wp_enqueue_script('wp-api-fetch');
+		}
+
+		wp_enqueue_script_module(ColorSchemeConfig::NAME);
 	}
 
 	private function registerAssets(): void
