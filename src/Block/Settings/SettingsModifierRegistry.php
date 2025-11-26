@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace X3P0\Ideas\Block\Settings;
 
 use TypeError;
+use X3P0\Ideas\Block\Settings\Modifier\Modifier;
 use X3P0\Ideas\Framework\Contracts\ClassRegistry;
 
 /**
@@ -20,15 +21,15 @@ final class SettingsModifierRegistry implements ClassRegistry
 	/**
 	 * Registers a settings modifier class.
 	 *
-	 * @param class-string<SettingsModifier> $className
+	 * @param class-string<Modifier> $className
 	 */
 	public function register(string $key, string $className): void
 	{
-		if (! is_subclass_of($className, SettingsModifier::class)) {
+		if (! is_subclass_of($className, Modifier::class)) {
 			throw new TypeError(esc_html(sprintf(
 			// Translators: %s is a PHP class name.
 				__('Only %s classes can be registered', 'x3p0-ideas'),
-				SettingsModifier::class
+				Modifier::class
 			)));
 		}
 
@@ -54,7 +55,7 @@ final class SettingsModifierRegistry implements ClassRegistry
 	/**
 	 * Returns a settings modifier class string or `null`.
 	 *
-	 * @return null|class-string<SettingsModifier>
+	 * @return null|class-string<Modifier>
 	 */
 	public function get(string $key): ?string
 	{

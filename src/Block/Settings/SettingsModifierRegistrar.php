@@ -16,22 +16,22 @@ namespace X3P0\Ideas\Block\Settings;
 final class SettingsModifierRegistrar
 {
 	private const MODIFIERS = [
-		'core/archives'           => Modifier\Archives::class,
-		'core/avatar'             => Modifier\Avatar::class,
-		'core/button'             => Modifier\Button::class,
-		'core/calendar'           => Modifier\Calendar::class,
-		'core/categories'         => Modifier\Categories::class,
-		'core/comment-content'    => Modifier\CommentContent::class,
-		'core/comments'           => Modifier\Comments::class,
-		'core/cover'              => Modifier\Cover::class,
-		'core/file'               => Modifier\File::class,
-		'core/group'              => Modifier\Group::class,
-		'core/heading'            => Modifier\Heading::class,
-		'core/navigation-submenu' => Modifier\NavigationSubmenu::class,
-		'core/post-template'      => Modifier\PostTemplate::class,
-		'core/query'              => Modifier\Query::class,
-		'core/query-pagination'   => Modifier\QueryPagination::class,
-		'core/tag-cloud'          => Modifier\TagCloud::class
+		'core/archives'           => Modifier\ArchivesModifier::class,
+		'core/avatar'             => Modifier\AvatarModifier::class,
+		'core/button'             => Modifier\ButtonModifier::class,
+		'core/calendar'           => Modifier\CalendarModifier::class,
+		'core/categories'         => Modifier\CategoriesModifier::class,
+		'core/comment-content'    => Modifier\CommentContentModifier::class,
+		'core/comments'           => Modifier\CommentsModifier::class,
+		'core/cover'              => Modifier\CoverModifier::class,
+		'core/file'               => Modifier\FileModifier::class,
+		'core/group'              => Modifier\GroupModifier::class,
+		'core/heading'            => Modifier\HeadingModifier::class,
+		'core/navigation-submenu' => Modifier\NavigationSubmenuModifier::class,
+		'core/post-template'      => Modifier\PostTemplateModifier::class,
+		'core/query'              => Modifier\QueryModifier::class,
+		'core/query-pagination'   => Modifier\QueryPaginationModifier::class,
+		'core/tag-cloud'          => Modifier\TagCloudModifier::class
 	];
 
 	/**

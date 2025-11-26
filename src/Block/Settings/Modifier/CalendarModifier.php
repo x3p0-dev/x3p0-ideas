@@ -2,9 +2,7 @@
 
 namespace X3P0\Ideas\Block\Settings\Modifier;
 
-use X3P0\Ideas\Block\Settings\SettingsModifier;
-
-final class Calendar extends SettingsModifier
+final class CalendarModifier extends Modifier
 {
 	/**
 	 * {@inheritDoc}
