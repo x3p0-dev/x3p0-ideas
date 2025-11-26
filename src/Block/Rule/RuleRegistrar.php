@@ -31,11 +31,11 @@ final class RuleRegistrar
 	private static function getRules(): array
 	{
 		return [
-			self::IF           => Type\When::class,
-			self::IF_ATTRIBUTE => Type\IfAttribute::class,
-			self::IS_USER      => Type\IsUser::class,
-			self::UNLESS       => Type\Unless::class,
-			self::WHEN         => Type\When::class
+			self::IF           => Rules\When::class,
+			self::IF_ATTRIBUTE => Rules\IfAttribute::class,
+			self::IS_USER      => Rules\IsUser::class,
+			self::UNLESS       => Rules\Unless::class,
+			self::WHEN         => Rules\When::class
 		];
 	}
 

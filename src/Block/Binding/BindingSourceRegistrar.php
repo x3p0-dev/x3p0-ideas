@@ -15,7 +15,6 @@ namespace X3P0\Ideas\Block\Binding;
 
 use TypeError;
 use WP_Block_Bindings_Registry;
-use X3P0\Ideas\Block\Binding\Source\Source;
 use X3P0\Ideas\Framework\Contracts\Bootable;
 
 /**
@@ -46,11 +45,11 @@ final class BindingSourceRegistrar implements Bootable
 				$source = new $source;
 			}
 
-			if (! $source instanceof Source) {
+			if (! $source instanceof BindingSource) {
 				throw new TypeError(esc_html(sprintf(
 					// Translators: %s is a PHP class name.
 					__('Only %s classes can be registered', 'x3p0-ideas'),
-					Source::class
+					BindingSource::class
 				)));
 			}
 

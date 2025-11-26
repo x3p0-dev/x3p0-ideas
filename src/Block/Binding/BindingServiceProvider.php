@@ -11,13 +11,13 @@ use X3P0\Ideas\Framework\Core\ServiceProvider;
 final class BindingServiceProvider extends ServiceProvider implements Bootable
 {
 	private const BINDING_SOURCES = [
-		Source\CommentSource::class,
-		Source\GeneralSource::class,
-		Source\MediaSource::class,
-		Source\PostSource::class,
-		Source\SiteSource::class,
-		Source\SuperpowerSource::class,
-		Source\ThemeSource::class
+		Sources\Comment::class,
+		Sources\General::class,
+		Sources\Media::class,
+		Sources\Post::class,
+		Sources\Site::class,
+		Sources\Superpower::class,
+		Sources\Theme::class
 	];
 
 	/**

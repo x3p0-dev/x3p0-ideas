@@ -11,14 +11,14 @@ final class ColorSchemeServiceProvider extends ServiceProvider implements Bootab
 {
 	public function register(): void
 	{
-		$this->container->singleton(Storage\MetaStorage::class);
-		$this->container->singleton(Storage\CookieStorage::class);
+		$this->container->singleton(Storage\UserMeta::class);
+		$this->container->singleton(Storage\Cookie::class);
 
 		$this->container->singleton(
 			ColorSchemeResolver::class,
 			fn($container) => new ColorSchemeResolver([
-				$container->get(Storage\MetaStorage::class),
-				$container->get(Storage\CookieStorage::class)
+				$container->get(Storage\UserMeta::class),
+				$container->get(Storage\Cookie::class)
 			])
 		);
 	}

@@ -18,10 +18,10 @@ use WP_Block;
 /**
  * Interface for rule type classes.
  */
-abstract class Rule
+interface Rule
 {
 	/**
 	 * Checks if the rule matches.
 	 */
-	abstract public function matches(array $rule, array $block, WP_Block $instance): bool;
+	public function matches(array $rule, array $block, WP_Block $instance): bool;
 }

@@ -4,15 +4,13 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas\ColorScheme;
 
-use X3P0\Ideas\ColorScheme\Storage\Storage;
-
 /**
  * Resolves the current color scheme from multiple sources.
  */
 final class ColorSchemeResolver
 {
 	/**
-	 * @param Storage[] $storages Priority-ordered storage implementations
+	 * @param ColorSchemeStorage[] $storages Priority-ordered storage implementations
 	 */
 	public function __construct(private readonly array $storages = [])
 	{}

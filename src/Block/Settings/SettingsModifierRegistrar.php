@@ -16,22 +16,22 @@ namespace X3P0\Ideas\Block\Settings;
 final class SettingsModifierRegistrar
 {
 	private const MODIFIERS = [
-		'core/archives'           => Modifier\ArchivesModifier::class,
-		'core/avatar'             => Modifier\AvatarModifier::class,
-		'core/button'             => Modifier\ButtonModifier::class,
-		'core/calendar'           => Modifier\CalendarModifier::class,
-		'core/categories'         => Modifier\CategoriesModifier::class,
-		'core/comment-content'    => Modifier\CommentContentModifier::class,
-		'core/comments'           => Modifier\CommentsModifier::class,
-		'core/cover'              => Modifier\CoverModifier::class,
-		'core/file'               => Modifier\FileModifier::class,
-		'core/group'              => Modifier\GroupModifier::class,
-		'core/heading'            => Modifier\HeadingModifier::class,
-		'core/navigation-submenu' => Modifier\NavigationSubmenuModifier::class,
-		'core/post-template'      => Modifier\PostTemplateModifier::class,
-		'core/query'              => Modifier\QueryModifier::class,
-		'core/query-pagination'   => Modifier\QueryPaginationModifier::class,
-		'core/tag-cloud'          => Modifier\TagCloudModifier::class
+		'core/archives'           => Modifiers\Archives::class,
+		'core/avatar'             => Modifiers\Avatar::class,
+		'core/button'             => Modifiers\Button::class,
+		'core/calendar'           => Modifiers\Calendar::class,
+		'core/categories'         => Modifiers\Categories::class,
+		'core/comment-content'    => Modifiers\CommentContent::class,
+		'core/comments'           => Modifiers\Comments::class,
+		'core/cover'              => Modifiers\Cover::class,
+		'core/file'               => Modifiers\File::class,
+		'core/group'              => Modifiers\Group::class,
+		'core/heading'            => Modifiers\Heading::class,
+		'core/navigation-submenu' => Modifiers\NavigationSubmenu::class,
+		'core/post-template'      => Modifiers\PostTemplate::class,
+		'core/query'              => Modifiers\Query::class,
+		'core/query-pagination'   => Modifiers\QueryPagination::class,
+		'core/tag-cloud'          => Modifiers\TagCloud::class
 	];
 
 	/**

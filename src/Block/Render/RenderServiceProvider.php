@@ -10,19 +10,19 @@ use X3P0\Ideas\Framework\Core\ServiceProvider;
 final class RenderServiceProvider extends ServiceProvider implements Bootable
 {
 	private const RENDERERS = [
-		Accordion::class,
 		Archives::class,
-		Button::class,
-		Calendar::class,
-		Cover::class,
-		File::class,
-		Loginout::class,
 		Navigation::class,
-		PostContent::class,
 		PostExcerpt::class,
-		PostTimeToRead::class,
-		TagCloud::class,
-		TemplatePart::class
+		Filters\Accordion::class,
+		Filters\Button::class,
+		Filters\Calendar::class,
+		Filters\Cover::class,
+		Filters\File::class,
+		Filters\Loginout::class,
+		Filters\PostContent::class,
+		Filters\PostTimeToRead::class,
+		Filters\TagCloud::class,
+		Filters\TemplatePart::class
 	];
 
 	/**
