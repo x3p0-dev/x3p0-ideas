@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * Color scheme configuration.
+ *
+ * @author    Justin Tadlock <justintadlock@gmail.com>
+ * @copyright Copyright (c) 2023-2025, Justin Tadlock
+ * @license   https://www.gnu.org/licenses/gpl-3.0.html GPL-3.0-or-later
+ * @link      https://github.com/x3p0-dev/x3p0-ideas
+ */
+
 declare(strict_types=1);
 
 namespace X3P0\Ideas\ColorScheme;
@@ -119,26 +128,41 @@ final class ColorSchemeConfig
 		'only dark'
 	];
 
+	/**
+	 * Determines whether the given scheme is a valid global scheme.
+	 */
 	public static function isValidGlobalScheme(string $scheme): bool
 	{
 		return in_array($scheme, self::GLOBAL_SCHEMES, true);
 	}
 
+	/**
+	 * Determines whether the given scheme is a valid user scheme.
+	 */
 	public static function isValidUserScheme(string $scheme): bool
 	{
 		return in_array($scheme, self::USER_SCHEMES, true);
 	}
 
+	/**
+	 * Determines whether the given scheme can be switched/toggled.
+	 */
 	public static function isSwitchable(string $scheme): bool
 	{
 		return in_array($scheme, self::SWITCHABLE_SCHEMES, true);
 	}
 
+	/**
+	 * Determines whether the given scheme is a dark scheme.
+	 */
 	public static function isDark(string $scheme): bool
 	{
 		return in_array($scheme, self::DARK_SCHEMES, true);
 	}
 
+	/**
+	 * Determines whether the given scheme is a light scheme.
+	 */
 	public static function isLight(string $scheme): bool
 	{
 		return in_array($scheme, self::LIGHT_SCHEMES, true);

@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * Color scheme resolver.
+ *
+ * @author    Justin Tadlock <justintadlock@gmail.com>
+ * @copyright Copyright (c) 2023-2025, Justin Tadlock
+ * @license   https://www.gnu.org/licenses/gpl-3.0.html GPL-3.0-or-later
+ * @link      https://github.com/x3p0-dev/x3p0-ideas
+ */
+
 declare(strict_types=1);
 
 namespace X3P0\Ideas\ColorScheme;
@@ -10,6 +19,8 @@ namespace X3P0\Ideas\ColorScheme;
 final class ColorSchemeResolver
 {
 	/**
+	 * Sets up the initial object state.
+	 *
 	 * @param ColorSchemeStorage[] $storages Priority-ordered storage implementations
 	 */
 	public function __construct(private readonly array $storages = [])
@@ -33,6 +44,10 @@ final class ColorSchemeResolver
 
 	/**
 	 * Gets the global color scheme from theme.json.
+	 *
+	 * Note that the method checks for both `colorScheme` and `color-scheme`
+	 * because WordPress has not processed property names at this point,
+	 * converting them to their hyphenated versions. So either is valid.
 	 */
 	public function getGlobalScheme(): string
 	{
@@ -48,7 +63,8 @@ final class ColorSchemeResolver
 	}
 
 	/**
-	 * Determines if the current scheme is dark.
+	 * Determines if the current scheme is dark. If unable to determine
+	 * whether it is light or dark, the function returns null.
 	 */
 	public function isDark(): ?bool
 	{
@@ -62,7 +78,6 @@ final class ColorSchemeResolver
 			return false;
 		}
 
-		// Can't determine for switchable schemes
 		return null;
 	}
 
