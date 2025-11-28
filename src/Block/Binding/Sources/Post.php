@@ -29,18 +29,24 @@ final class Post extends BindingSource
 	 */
 	private int $post_id = 0;
 
+	/**
+	 * @inheritDoc
+	 */
 	public function getLabel(): string
 	{
 		return __('Post Data', 'x3p0-ideas');
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	public function usesContext(): array
 	{
 		return ['postId'];
 	}
 
 	/**
-	 * Returns media data based on the bound attribute.
+	 * @inheritDoc
 	 */
 	public function callback(array $args, WP_Block $block, string $name): ?string
 	{

@@ -19,41 +19,6 @@ namespace X3P0\Ideas\ColorScheme;
 final class ColorSchemeConfig
 {
 	/**
-	 * Unique name for the store.
-	 *
-	 * @todo Type hint with PHP 8.3+ requirement.
-	 */
-	public const INTERACTIVE_STORE = 'x3p0-ideas/color-scheme';
-
-	/**
-	 * Toggle action for the interactive script module.
-	 *
-	 * @todo Type hint with PHP 8.3+ requirement.
-	 */
-	public const INTERACTIVE_ACTION_TOGGLE = 'actions.toggle';
-
-	/**
-	 * Init callback for the interactive script module.
-	 *
-	 * @todo Type hint with PHP 8.3+ requirement.
-	 */
-	public const INTERACTIVE_CALLBACK_INIT = 'callbacks.init';
-
-	/**
-	 * Update callback for the interactive script module.
-	 *
-	 * @todo Type hint with PHP 8.3+ requirement.
-	 */
-	public const INTERACTIVE_CALLBACK_UPDATE = 'callbacks.updateScheme';
-
-	/**
-	 * Dark state for the interactive script module.
-	 *
-	 * @todo Type hint with PHP 8.3+ requirement.
-	 */
-	public const INTERACTIVE_STATE_IS_DARK = 'state.isDark';
-
-	/**
 	 * Unique name/ID used to reference in scripts, cookies, etc.
 	 *
 	 * @todo Type hint with PHP 8.3+ requirement.

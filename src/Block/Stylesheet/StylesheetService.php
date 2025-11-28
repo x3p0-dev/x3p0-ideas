@@ -19,6 +19,9 @@ final class StylesheetService implements Bootable
 	public function __construct(private readonly StylesheetDiscovery $discovery)
 	{}
 
+	/**
+	 * @inheritDoc
+	 */
 	public function boot(): void
 	{
 		add_action('init', $this->enqueue(...), 999999);

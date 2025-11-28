@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * Post Excerpt block render service.
+ *
+ * @author    Justin Tadlock <justintadlock@gmail.com>
+ * @copyright Copyright (c) 2023-2025, Justin Tadlock
+ * @license   https://www.gnu.org/licenses/gpl-3.0.html GPL-3.0-or-later
+ * @link      https://github.com/x3p0-dev/x3p0-ideas
+ */
+
 declare(strict_types=1);
 
 namespace X3P0\Ideas\Block\Render;
@@ -10,7 +19,7 @@ use X3P0\Ideas\Framework\Contracts\Bootable;
 /**
  * Filters rendered output for the `core/post-excerpt` block.
  */
-final class PostExcerpt implements Bootable
+final class RenderPostExcerpt implements Bootable
 {
 	private const ALLOWED_HTML = [
 		'a'       => ['href' => true, 'title' => true, 'class' => true],
@@ -26,6 +35,9 @@ final class PostExcerpt implements Bootable
 		'strong'  => ['class' => true]
 	];
 
+	/**
+	 * @inheritDoc
+	 */
 	public function boot(): void
 	{
 		add_filter('pre_render_block', $this->beforeRender(...), 10, 3);
@@ -49,7 +61,7 @@ final class PostExcerpt implements Bootable
 			&& isset($parent_block->context['postId'])
 			&& has_excerpt($parent_block->context['postId'])
 		) {
-			add_filter('wp_trim_words', $this->preserveHtml(...), 10, 4);
+			add_filter('wp_trim_words', [$this, 'preserveHtml'], 10, 4);
 		}
 
 		return $pre_render;
@@ -62,7 +74,7 @@ final class PostExcerpt implements Bootable
 	 */
 	private function afterRender(string $content): string
 	{
-		remove_filter('wp_trim_words', $this->preserveHtml(...), 10);
+		remove_filter('wp_trim_words', [$this, 'preserveHtml'], 10);
 		return $content;
 	}
 
@@ -71,7 +83,7 @@ final class PostExcerpt implements Bootable
 	 *
 	 * @link https://github.com/WordPress/gutenberg/issues/49449
 	 */
-	private function preserveHtml(
+	public function preserveHtml(
 		string $text,
 		int $num_words,
 		string $more,

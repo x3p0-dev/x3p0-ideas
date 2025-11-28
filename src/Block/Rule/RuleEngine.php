@@ -22,7 +22,7 @@ use X3P0\Ideas\Block\Support\Metadata;
  * whether the block should be public (should be shown) or not. This could
  * potentially be expanded to include other instructions for how to handle
  * blocks, but the primary goal is conditional inclusion. This class doesn't
- * actually alter blocks in any way. It simply checks a block's attributes to
+ * actually alter blocks in any way. It simply gets a block's attributes to
  * perform checks.
  */
 final class RuleEngine
@@ -30,7 +30,7 @@ final class RuleEngine
 	use Metadata;
 
 	/**
-	 * Metadata key to check in block attributes.
+	 * Metadata key to check for block rules.
 	 *
 	 * @todo Type hint with PHP 8.3+ requirement.
 	 */

@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * Block render service provider.
+ *
+ * @author    Justin Tadlock <justintadlock@gmail.com>
+ * @copyright Copyright (c) 2023-2025, Justin Tadlock
+ * @license   https://www.gnu.org/licenses/gpl-3.0.html GPL-3.0-or-later
+ * @link      https://github.com/x3p0-dev/x3p0-ideas
+ */
+
 declare(strict_types=1);
 
 namespace X3P0\Ideas\Block\Render;
@@ -9,10 +18,13 @@ use X3P0\Ideas\Framework\Core\ServiceProvider;
 
 final class RenderServiceProvider extends ServiceProvider implements Bootable
 {
+	/**
+	 * Classes that hook into specific block's rendering process.
+	 */
 	private const RENDERERS = [
-		Archives::class,
-		Navigation::class,
-		PostExcerpt::class,
+		RenderArchives::class,
+		RenderNavigation::class,
+		RenderPostExcerpt::class,
 		Filters\Accordion::class,
 		Filters\Button::class,
 		Filters\Calendar::class,

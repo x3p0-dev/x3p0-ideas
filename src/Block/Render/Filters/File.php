@@ -1,7 +1,7 @@
 <?php
 
 /**
- * File Block class.
+ * File block render filter.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2025, Justin Tadlock
@@ -19,19 +19,22 @@ use WP_HTML_Tag_Processor;
 use X3P0\Ideas\Block\Render\RenderFilter;
 
 /**
- * Filters settings and rendered output for the `core/file` block.
+ * Filters rendered output for the `core/file` block.
  */
 final class File extends RenderFilter
 {
 	protected const BLOCK_TYPE = 'core/file';
 
-	public function __construct(protected WP_Block_Type_Registry $block_types)
+	/**
+	 * Sets up the initial object state.
+	 */
+	public function __construct(protected readonly WP_Block_Type_Registry $block_types)
 	{}
 
 	/**
 	 * Filters the File block content.
 	 */
-	public function render(string $content, array $block, WP_Block $instance): string
+	protected function render(string $content, array $block, WP_Block $instance): string
 	{
 		return ! empty($block['attrs']['metadata']['bindings'])
 			? $this->renderBindings($content, $block, $instance)
@@ -42,11 +45,7 @@ final class File extends RenderFilter
 	 * Filters the File block content to swap text and attribute values with
 	 * bound data registered via the Block Bindings API.
 	 */
-	public function renderBindings(
-		string   $content,
-		array    $block,
-		WP_Block $instance
-	): string
+	private function renderBindings(string $content, array $block, WP_Block $instance): string
 	{
 		$block_type = $this->block_types->get_registered($instance->name);
 		$bindings = $block['attrs']['metadata']['bindings'];

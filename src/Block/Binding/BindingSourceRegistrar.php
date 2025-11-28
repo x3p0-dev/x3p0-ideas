@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Bindings Component class.
+ * Block bindings source registrar.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2025, Justin Tadlock
@@ -18,8 +18,7 @@ use WP_Block_Bindings_Registry;
 use X3P0\Ideas\Framework\Contracts\Bootable;
 
 /**
- * The Bindings component registers custom binding sources with the WordPress
- * Block Bindings API.
+ * Registers custom binding sources via the WordPress Block Bindings API.
  */
 final class BindingSourceRegistrar implements Bootable
 {

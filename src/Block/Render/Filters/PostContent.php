@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Post Content Block class.
+ * Post Content block render filter.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2025, Justin Tadlock
@@ -19,7 +19,7 @@ use X3P0\Ideas\Block\Render\RenderFilter;
 use X3P0\Ideas\View\ViewEngine;
 
 /**
- * Filters settings and rendered output for the `core/post-content` block.
+ * Filters rendered output for the `core/post-content` block.
  */
 final class PostContent extends RenderFilter
 {
@@ -48,7 +48,7 @@ final class PostContent extends RenderFilter
 
 		// Render the attachment view if is attachment page.
 		if (is_attachment($instance->context['postId'])) {
-			return $this->renderAttachmentView($content, $block, $instance);
+			return $this->renderAttachmentView($content, $instance);
 		}
 
 		return $content;
@@ -84,11 +84,7 @@ final class PostContent extends RenderFilter
 	 * Filters the post content block when viewing single attachment views
 	 * and returns block-based media content.
 	 */
-	private function renderAttachmentView(
-		string $content,
-		array $block,
-		WP_Block $instance
-	): string
+	private function renderAttachmentView(string $content, WP_Block $instance): string
 	{
 		// Assign needed data.
 		$post_id = absint($instance->context['postId']);

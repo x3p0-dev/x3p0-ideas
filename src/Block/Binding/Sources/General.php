@@ -24,13 +24,16 @@ final class General extends BindingSource
 {
 	protected const NAME = 'x3p0/general';
 
+	/**
+	 * @inheritDoc
+	 */
 	public function getLabel(): string
 	{
 		return __('General', 'x3p0-ideas');
 	}
 
 	/**
-	 * Returns site data based on the bound attribute.
+	 * @inheritDoc
 	 */
 	public function callback(array $args, WP_Block $block, string $name): ?string
 	{

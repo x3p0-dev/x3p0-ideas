@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Archives Block class.
+ * Archives block render service.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2025, Justin Tadlock
@@ -16,9 +16,9 @@ namespace X3P0\Ideas\Block\Render;
 use X3P0\Ideas\Framework\Contracts\Bootable;
 
 /**
- * Filters settings and rendered output for the `core/archives` block.
+ * Filters rendered output for the `core/archives` block.
  */
-final class Archives implements Bootable
+final class RenderArchives implements Bootable
 {
 	/**
 	 * @inheritDoc

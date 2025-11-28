@@ -29,25 +29,31 @@ final class Comment extends BindingSource
 	 */
 	private int $comment_id = 0;
 
+	/**
+	 * @inheritDoc
+	 */
 	public function getLabel(): string
 	{
 		return __('Comment Data', 'x3p0-ideas');
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	public function usesContext(): array
 	{
 		return ['commentId'];
 	}
 
 	/**
-	 * Returns media data based on the bound attribute.
+	 * @inheritDoc
 	 */
 	public function callback(array $args, WP_Block $block, string $name): ?string
 	{
 		$this->comment_id = absint($block->context['commentId'] ?? get_comment_ID());
 
 		return match ($args['key'] ?? null) {
-			'parentLink' => $this->renderParentLink($args, $block),
+			'parentLink' => $this->renderParentLink(),
 			default      => null
 		};
 	}
@@ -55,7 +61,7 @@ final class Comment extends BindingSource
 	/**
 	 * Renders a comment's parent link.
 	 */
-	private function renderParentLink(array $args, WP_Block $block): ?string
+	private function renderParentLink(): ?string
 	{
 		if (
 			0 >= $this->comment_id

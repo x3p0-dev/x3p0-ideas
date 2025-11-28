@@ -19,6 +19,41 @@ namespace X3P0\Ideas\ColorScheme;
 final class ColorSchemeInteractivity
 {
 	/**
+	 * Unique name for the store.
+	 *
+	 * @todo Type hint with PHP 8.3+ requirement.
+	 */
+	public const STORE = 'x3p0-ideas/color-scheme';
+
+	/**
+	 * Toggle action for the interactive script module.
+	 *
+	 * @todo Type hint with PHP 8.3+ requirement.
+	 */
+	public const ACTION_TOGGLE = 'actions.toggle';
+
+	/**
+	 * Init callback for the interactive script module.
+	 *
+	 * @todo Type hint with PHP 8.3+ requirement.
+	 */
+	public const CALLBACK_INIT = 'callbacks.init';
+
+	/**
+	 * Update callback for the interactive script module.
+	 *
+	 * @todo Type hint with PHP 8.3+ requirement.
+	 */
+	public const CALLBACK_UPDATE = 'callbacks.updateScheme';
+
+	/**
+	 * Dark state for the interactive script module.
+	 *
+	 * @todo Type hint with PHP 8.3+ requirement.
+	 */
+	public const STATE_IS_DARK = 'state.isDark';
+
+	/**
 	 * Sets up the initial object state.
 	 */
 	public function __construct(
@@ -41,7 +76,7 @@ final class ColorSchemeInteractivity
 	 */
 	private function setState(): void
 	{
-		wp_interactivity_state(ColorSchemeConfig::INTERACTIVE_STORE, [
+		wp_interactivity_state(self::STORE, [
 			'colorScheme'       => $this->resolver->getCurrentScheme(),
 			'isDark'            => $this->resolver->isDark(),
 			'userId'            => get_current_user_id(),

@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * Settings modifier registry.
+ *
+ * @author    Justin Tadlock <justintadlock@gmail.com>
+ * @copyright Copyright (c) 2023-2025, Justin Tadlock
+ * @license   https://www.gnu.org/licenses/gpl-3.0.html GPL-3.0-or-later
+ * @link      https://github.com/x3p0-dev/x3p0-ideas
+ */
+
 declare(strict_types=1);
 
 namespace X3P0\Ideas\Block\Settings;
@@ -13,7 +22,7 @@ use X3P0\Ideas\Framework\Contracts\ClassRegistry;
 final class SettingsModifierRegistry implements ClassRegistry
 {
 	/**
-	 * Stores the array of settings modifier classes.
+	 * Stores the array of settings modifier classnames.
 	 */
 	protected array $modifiers = [];
 
@@ -26,7 +35,7 @@ final class SettingsModifierRegistry implements ClassRegistry
 	{
 		if (! is_subclass_of($className, SettingsModifier::class)) {
 			throw new TypeError(esc_html(sprintf(
-			// Translators: %s is a PHP class name.
+				// Translators: %s is a PHP class name.
 				__('Only %s classes can be registered', 'x3p0-ideas'),
 				SettingsModifier::class
 			)));

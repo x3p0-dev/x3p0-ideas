@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Login/out Block class.
+ * Login/out block render filter.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2025, Justin Tadlock
@@ -18,7 +18,7 @@ use WP_HTML_Tag_Processor;
 use X3P0\Ideas\Block\Render\RenderFilter;
 
 /**
- * Filters settings and rendered output for the `core/loginout` block.
+ * Filters rendered output for the `core/loginout` block.
  */
 final class Loginout extends RenderFilter
 {

@@ -29,18 +29,24 @@ final class Media extends BindingSource
 	 */
 	private int $post_id = 0;
 
+	/**
+	 * @inheritDoc
+	 */
 	public function getLabel(): string
 	{
 		return __('Media Data', 'x3p0-ideas');
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	public function usesContext(): array
 	{
 		return ['postType', 'postId'];
 	}
 
 	/**
-	 * Returns media data based on the bound attribute.
+	 * @inheritDoc
 	 */
 	public function callback(array $args, WP_Block $block, string $name): string|int|null
 	{
@@ -50,11 +56,11 @@ final class Media extends BindingSource
 		$args['key'] ??= $name;
 
 		return match ($args['key']) {
-			'alt'        => $this->renderAlt($args),
-			'caption'    => $this->renderCaption($args),
+			'alt'        => $this->renderAlt(),
+			'caption'    => $this->renderCaption(),
 			'id'         => $this->post_id,
 			'src', 'url' => $this->renderUrl($args),
-			'title'      => esc_html(wp_strip_all_tags(get_the_title($this->post_id))),
+			'title'      => $this->renderTitle(),
 			default      => null
 		};
 	}

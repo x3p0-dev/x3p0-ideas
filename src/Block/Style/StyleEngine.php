@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Block style variation CSS.
+ * Block style variation engine.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2025, Justin Tadlock
@@ -136,8 +136,7 @@ final class StyleEngine implements Bootable
 	/**
 	 * Enqueues the CSS from our custom block style CSS rules.
 	 *
-	 * @since 1.0.0
-	 * @link  https://github.com/WordPress/gutenberg/issues/40318
+	 * @link https://github.com/WordPress/gutenberg/issues/40318
 	 */
 	private function enqueue(): void
 	{
@@ -165,8 +164,6 @@ final class StyleEngine implements Bootable
 	/**
 	 * Determine if the current property for the variation should be defined
 	 * for its descendants.
-	 *
-	 * @since 1.0.0
 	 */
 	private static function isDescendantProperty(array $variation, string $property): bool
 	{
@@ -186,8 +183,7 @@ final class StyleEngine implements Bootable
 	/**
 	 * Flattens a JSON object tree, creating CSS custom properties.
 	 *
-	 * @since 1.0.0
-	 * @link  https://github.com/WordPress/gutenberg/issues/40318
+	 * @link https://github.com/WordPress/gutenberg/issues/40318
 	 */
 	private static function flattenTree(array $tree, string $prefix = ''): array
 	{

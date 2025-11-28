@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Button Block class.
+ * Button block render filter.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2025, Justin Tadlock
@@ -16,10 +16,10 @@ namespace X3P0\Ideas\Block\Render\Filters;
 use WP_Block;
 use WP_HTML_Tag_Processor;
 use X3P0\Ideas\Block\Render\RenderFilter;
-use X3P0\Ideas\ColorScheme\{ColorSchemeConfig, ColorSchemeService};
+use X3P0\Ideas\ColorScheme\{ColorSchemeInteractivity, ColorSchemeService};
 
 /**
- * Filters settings and rendered output for the `core/button` block.
+ * Filters rendered output for the `core/button` block.
  */
 final class Button extends RenderFilter
 {
@@ -73,12 +73,12 @@ final class Button extends RenderFilter
 
 		// Add interactivity directives
 		$attr = [
-			'data-wp-interactive'           => ColorSchemeConfig::INTERACTIVE_STORE,
-			'data-wp-on--click'             => ColorSchemeConfig::INTERACTIVE_ACTION_TOGGLE,
-			'data-wp-init'                  => ColorSchemeConfig::INTERACTIVE_CALLBACK_INIT,
-			'data-wp-watch'                 => ColorSchemeConfig::INTERACTIVE_CALLBACK_UPDATE,
-			'data-wp-bind--aria-pressed'    => ColorSchemeConfig::INTERACTIVE_STATE_IS_DARK,
-			'data-wp-class--is-dark-scheme' => ColorSchemeConfig::INTERACTIVE_STATE_IS_DARK
+			'data-wp-interactive'           => ColorSchemeInteractivity::STORE,
+			'data-wp-on--click'             => ColorSchemeInteractivity::ACTION_TOGGLE,
+			'data-wp-init'                  => ColorSchemeInteractivity::CALLBACK_INIT,
+			'data-wp-watch'                 => ColorSchemeInteractivity::CALLBACK_UPDATE,
+			'data-wp-bind--aria-pressed'    => ColorSchemeInteractivity::STATE_IS_DARK,
+			'data-wp-class--is-dark-scheme' => ColorSchemeInteractivity::STATE_IS_DARK
 		];
 
 		foreach ($attr as $name => $value) {

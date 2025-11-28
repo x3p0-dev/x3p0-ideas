@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Accordion Block class.
+ * Accordion block render filter.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2025, Justin Tadlock
@@ -17,14 +17,17 @@ use WP_Block;
 use WP_HTML_Tag_Processor;
 use X3P0\Ideas\Block\Render\RenderFilter;
 
+/**
+ * Filters rendered output for the `core/accordion` block.
+ */
 final class Accordion extends RenderFilter
 {
 	protected const BLOCK_TYPE = 'core/accordion';
 
 	/**
-	 * Adds a caption class and replaces nav arrows.
+	 * @inheritDoc
 	 */
-	public function render(string $content, array $block, WP_Block $instance): string
+	protected function render(string $content, array $block, WP_Block $instance): string
 	{
 		if (
 			isset($block['attrs']['className'])

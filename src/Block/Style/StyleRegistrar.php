@@ -17,7 +17,7 @@ use WP_Block_Styles_Registry;
 use X3P0\Ideas\Framework\Contracts\Bootable;
 
 /**
- * Handles actions and filters related to block style variations.
+ * Registers/unregisters block style variations.
  */
 final class StyleRegistrar implements Bootable
 {

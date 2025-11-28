@@ -25,11 +25,17 @@ final class Theme extends BindingSource
 {
 	protected const NAME = 'x3p0/theme';
 
+	/**
+	 * @inheritDoc
+	 */
 	public function getLabel(): string
 	{
 		return __('Theme Data', 'x3p0-ideas');
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	public function usesContext(): array
 	{
 		return ['query', 'queryId'];

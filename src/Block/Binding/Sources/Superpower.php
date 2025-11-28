@@ -25,13 +25,16 @@ final class Superpower extends BindingSource
 {
 	protected const NAME = 'x3p0/superpower';
 
+	/**
+	 * @inheritDoc
+	 */
 	public function getLabel(): string
 	{
 		return __('Superpower', 'x3p0-ideas');
 	}
 
 	/**
-	 * Returns the Superpower message.
+	 * @inheritDoc
 	 */
 	public function callback(array $args, WP_Block $block, string $name): ?string
 	{

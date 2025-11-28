@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Bindings Component class.
+ * Bindings binding attributes support.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2025, Justin Tadlock
@@ -16,8 +16,7 @@ namespace X3P0\Ideas\Block\Binding;
 use X3P0\Ideas\Framework\Contracts\Bootable;
 
 /**
- * The Bindings component registers custom binding sources with the WordPress
- * Block Bindings API.
+ * Adds supported attributes to blocks for connecting to block binding sources.
  */
 final class BindingAttributeSupport implements Bootable
 {
@@ -39,6 +38,9 @@ final class BindingAttributeSupport implements Bootable
 		]
 	];
 
+	/**
+	 * @inheritDoc
+	 */
 	public function boot(): void {
 		foreach (array_keys(self::SUPPORTED_ATTRIBUTES) as $blockName) {
 			add_filter(
@@ -49,7 +51,7 @@ final class BindingAttributeSupport implements Bootable
 	}
 
 	/**
-	 * Adds supported attributes for the Audio and Video blocks.
+	 * Adds supported attributes for blocks.
 	 */
 	private function addSupportedAttributes(array $attrs): array
 	{
