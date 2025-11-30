@@ -11,6 +11,8 @@ declare(strict_types=1);
 # Prevent direct access.
 defined('ABSPATH') || exit;
 
+use X3P0\Ideas\Block\Rule\RuleRegistrar;
+
 ?>
 <!-- wp:group {"align":"full","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull">
@@ -36,7 +38,12 @@ defined('ABSPATH') || exit;
 					"source":"x3p0/media"
 				}
 			},
-			"x3p0/rules":{"rules":[{"type": "ifAttribute", "attribute": "url"}]}
+			"x3p0/rules":{
+				"rules":[{
+					"type": "<?= esc_attr(RuleRegistrar::IF_ATTRIBUTE) ?>",
+					"attribute": "url"
+				}]
+			}
 		}
 	} -->
 	<figure class="wp-block-image alignwide size-x3p0-wide">
