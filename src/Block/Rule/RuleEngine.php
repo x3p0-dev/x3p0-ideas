@@ -54,27 +54,39 @@ final class RuleEngine
 			return true;
 		}
 
-		$operator = $metadata['operator'] ?? 'AND';
-		$rules    = $metadata['rules'] ?? [];
-		$results  = [];
+		$rules = $metadata['rules'] ?? [];
+
+		if (empty($rules)) {
+			return true;
+		}
+
+		$operator = strtoupper($metadata['operator'] ?? 'AND');
 
 		foreach ($rules as $rule) {
-			if (
-				isset($rule['type'])
-				&& $ruleType = $this->ruleRepository->find($rule['type'])
-			) {
-				$results[] = $ruleType->matches($rule, $block, $instance);
+			if (! isset($rule['type'])) {
+				continue;
+			}
+
+			if (! $ruleType = $this->ruleRepository->find($rule['type'])) {
+				continue;
+			}
+
+			$matches = $ruleType->matches($rule, $block, $instance);
+
+			// One false result fails AND logic.
+			if ($operator === 'AND' && ! $matches) {
+				return false;
+			}
+
+			// One true result satisfies OR logic.
+			if ($operator === 'OR' && $matches) {
+				return true;
 			}
 		}
 
-		if ([] !== $results) {
-			return match (strtoupper($operator)) {
-				'AND'   => ! in_array(false, $results, true),
-				'OR'    => in_array(true, $results, true),
-				default => true
-			};
-		}
-
-		return true;
+		// If we get here:
+		// - For AND: all rules passed (or no valid rules existed).
+		// - For OR: no rules passed (or no valid rules existed).
+		return $operator === 'AND';
 	}
 }

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * IfAttribute Rule Type class.
+ * If Attribute rule class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2025, Justin Tadlock
@@ -17,7 +17,7 @@ use WP_Block;
 use X3P0\Ideas\Block\Rule\Rule;
 
 /**
- * Show the block if the attribute has a value.
+ * Show the block if the block attribute has a value.
  */
 final class IfAttribute implements Rule
 {

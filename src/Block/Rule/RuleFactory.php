@@ -30,7 +30,7 @@ final class RuleFactory
 	public function make(string $key): ?Rule
 	{
 		if ($rule = $this->ruleRegistry->get($key)) {
-			return new $rule();
+			return new $rule;
 		}
 
 		return null;

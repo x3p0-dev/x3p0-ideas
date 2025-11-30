@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Unless Rule Type class.
+ * Unless rule class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2025, Justin Tadlock
@@ -17,7 +17,7 @@ use WP_Block;
 use X3P0\Ideas\Block\Rule\Rule;
 
 /**
- * Show the block unless the condition is met.
+ * Show the block unless the condition defined by the callback is met.
  */
 final class Unless implements Rule
 {

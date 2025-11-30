@@ -31,7 +31,6 @@ final class RuleRegistrar
 	private static function getRules(): array
 	{
 		return [
-			self::IF           => Rules\When::class,
 			self::IF_ATTRIBUTE => Rules\IfAttribute::class,
 			self::IS_USER      => Rules\IsUser::class,
 			self::UNLESS       => Rules\Unless::class,

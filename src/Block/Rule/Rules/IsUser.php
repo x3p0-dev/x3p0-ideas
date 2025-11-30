@@ -1,7 +1,7 @@
 <?php
 
 /**
- * User Rule Type class.
+ * User rule class.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2025, Justin Tadlock
@@ -17,7 +17,10 @@ use WP_Block;
 use X3P0\Ideas\Block\Rule\Rule;
 
 /**
- * Show the block if the user matches.
+ * Show the block if the user matches. If no user is given, it checks if the
+ * current visitor is logged in. Setting the user to `true` or `false` will
+ * check against the logged-in status. Otherwise, it will check against a user
+ * ID or user nicename.
  */
 final class IsUser implements Rule
 {
