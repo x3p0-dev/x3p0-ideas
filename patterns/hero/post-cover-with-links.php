@@ -46,7 +46,7 @@ defined('ABSPATH') || exit;
 			"minHeight":100,
 			"minHeightUnit":"vh",
 			"tagName":"article",
-			"metadata":{"name":"<?php esc_attr__('Post', 'x3p0-ideas') ?>"},
+			"metadata":{"name":"<?php esc_attr_e('Post', 'x3p0-ideas') ?>"},
 			"style":{
 				"spacing":{
 					"padding":{
@@ -170,7 +170,7 @@ defined('ABSPATH') || exit;
 									"dimRatio":60,
 									"isUserOverlayColor":true,
 									"minHeight":50,
-									"metadata":{"name":"<?php esc_attr__('Post', 'x3p0-ideas') ?>"},
+									"metadata":{"name":"<?php esc_attr_e('Post', 'x3p0-ideas') ?>"},
 									"className":"is-style-global-border",
 									"style":{
 										"spacing":{
