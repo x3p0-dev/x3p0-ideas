@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Bindings binding attributes support.
+ * Block binding attributes support.
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2023-2025, Justin Tadlock

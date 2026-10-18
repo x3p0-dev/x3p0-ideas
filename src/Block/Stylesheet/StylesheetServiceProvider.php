@@ -26,8 +26,8 @@ class StylesheetServiceProvider extends ServiceProvider implements Bootable
 	public function register(): void
 	{
 		$this->container->singleton(
-			StylesheetDiscovery::class,
-			fn() => new StylesheetDiscovery(self::STYLESHEETS_PATH)
+			StylesheetIterator::class,
+			fn() => new StylesheetIterator(self::STYLESHEETS_PATH)
 		);
 	}
 

@@ -13,8 +13,23 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas\Block\Settings;
 
+/**
+ * Registers classes with the settings modifier registry.
+ *
+ * This class provides a centralized registry of default block settings
+ * modifiers. It maps WordPress core block types to their corresponding modifier
+ * classes and handles the registration process with the modifier registry.
+ */
 final class SettingsModifierRegistrar
 {
+	/**
+	 * Map of block types to their modifier class names.
+	 *
+	 * Keys are WordPress block type identifiers (e.g., 'core/archives').
+	 * Values are fully qualified class names of modifier implementations.
+	 *
+	 * @var array<string, class-string>
+	 */
 	private const MODIFIERS = [
 		'core/archives'           => Modifiers\Archives::class,
 		'core/avatar'             => Modifiers\Avatar::class,

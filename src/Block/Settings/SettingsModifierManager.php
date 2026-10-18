@@ -15,6 +15,14 @@ namespace X3P0\Ideas\Block\Settings;
 
 use X3P0\Ideas\Framework\Contracts\Bootable;
 
+/**
+ * Manages the modification of block type settings during WordPress registration.
+ *
+ * This manager acts as a coordinator between the settings modifier registry and
+ * factory. It hooks into WordPress's block registration process and applies
+ * custom modifications to block settings when a modifier is registered for that
+ * block type.
+ */
 final class SettingsModifierManager implements Bootable
 {
 	/**

@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * Stylesheet service.
+ *
+ * @author    Justin Tadlock <justintadlock@gmail.com>
+ * @copyright Copyright (c) 2023-2025, Justin Tadlock
+ * @license   https://www.gnu.org/licenses/gpl-3.0.html GPL-3.0-or-later
+ * @link      https://github.com/x3p0-dev/x3p0-ideas
+ */
+
 declare(strict_types=1);
 
 namespace X3P0\Ideas\Block\Stylesheet;
@@ -7,16 +16,23 @@ namespace X3P0\Ideas\Block\Stylesheet;
 use X3P0\Ideas\Framework\Contracts\Bootable;
 
 /**
- * Handles registering/enqueueing block stylesheets.
+ * Handles registering and enqueueing block stylesheets.
+ *
+ * This service automatically discovers and enqueues block-specific stylesheets
+ * using WordPress's block style API. Stylesheets are only loaded when their
+ * associated blocks are actually used on a page, improving performance.
  */
 final class StylesheetService implements Bootable
 {
 	/**
-	 * Handle prefix used for styles.
+	 * Handle prefix used for registering block styles.
 	 */
 	private const HANDLE_PREFIX = 'x3p0-ideas-block';
 
-	public function __construct(private readonly StylesheetDiscovery $discovery)
+	/**
+	 * Sets up the stylesheet service.
+	 */
+	public function __construct(private readonly StylesheetIterator $discovery)
 	{}
 
 	/**
@@ -28,8 +44,11 @@ final class StylesheetService implements Bootable
 	}
 
 	/**
-	 * Enqueues block-specific styles so that they only load when the block
-	 * is in use.
+	 * Enqueues block-specific styles for conditional loading.
+	 *
+	 * Iterates through discovered stylesheets and enqueues those that have
+	 * accompanying asset files. This ensures styles are only loaded when
+	 * their associated blocks are present on a page.
 	 */
 	private function enqueue(): void
 	{
@@ -41,7 +60,12 @@ final class StylesheetService implements Bootable
 	}
 
 	/**
-	 * Enqueues an individual block stylesheet.
+	 * Enqueues an individual block stylesheet with WordPress.
+	 *
+	 * Registers the stylesheet using WordPress's block style API, which
+	 * handles conditional loading. The style handle is generated from the
+	 * block's namespace and slug, and dependencies/version are read from
+	 * the stylesheet's asset file.
 	 */
 	private function enqueueStylesheet(Stylesheet $stylesheet): void
 	{

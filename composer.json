@@ -51,6 +51,7 @@
 	"autoload": {
 		"psr-4": {
 			"X3P0\\Ideas\\": "src/",
+			"X3P0\\Ideas\\Framework\\": "packages/x3p0-dev/x3p0-framework/src/",
 			"X3P0\\Ideas\\Scripts\\": "scripts/"
 		},
 		"files" : [

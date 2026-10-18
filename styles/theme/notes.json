@@ -12,18 +12,21 @@
 				"button": {
 					"radius": "9999em"
 				}
+			},
+			"layout": {
+				"containerSize": "56rem"
 			}
 		}
 	},
 	"styles": {
-		"css": "@layer variation { body { background: var(--wp--preset--gradient--emerge); } }",
+		"css": "@layer variation { body { background: var(--wp--preset--gradient--emerge); } } .is-root-container.wp-block-post-content { max-width: 56rem; margin-left: auto; margin-right: auto; }",
 		"color": {
 			"gradient": "var(--wp--preset--gradient--emerge)",
 			"text": "var(--wp--preset--color--white)"
 		},
 		"variations": {
 			"site-container": {
-				"css": "contain: paint; max-width: 56rem; width: 100%; & > * { margin-top: 0; }",
+				"css": "contain: paint; max-width: var(--wp--custom--layout--container-size); width: 100%; & > * { margin-top: 0; }",
 				"border": {
 					"radius": "clamp(0rem, calc(0.23583 * (100cqi - 56rem)), var(--wp--custom--border--global--radius))"
 				},

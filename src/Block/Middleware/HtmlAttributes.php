@@ -33,6 +33,9 @@ final class HtmlAttributes implements Bootable
 	 */
 	private const METADATA_KEY = 'x3p0/attr';
 
+	/**
+	 * @inheritDoc
+	 */
 	public function boot(): void
 	{
 		add_filter('render_block', $this->processAttributes(...), 999999, 2);

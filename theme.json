@@ -239,7 +239,7 @@
 		},
 		"border": {
 			"color": false,
-			"radius": false,
+			"radius": true,
 			"style": false,
 			"width": false,
 			"radiusSizes": [
@@ -1090,7 +1090,10 @@
 				}
 			],
 			"defaultAspectRatios": false,
-			"minHeight": true
+			"minHeight": true,
+			"minWidth": true,
+			"width": true,
+			"height": true
 		},
 		"layout": {
 			"allowCustomContentAndWideSize": true,

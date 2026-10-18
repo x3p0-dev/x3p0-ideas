@@ -13,6 +13,9 @@ declare(strict_types=1);
 
 namespace X3P0\Ideas\Block\Settings;
 
+/**
+ * Creates settings modifier objects.
+ */
 final class SettingsModifierFactory
 {
 	/**
@@ -22,7 +25,7 @@ final class SettingsModifierFactory
 	{}
 
 	/**
-	 * Creates new settings modifier objects.
+	 * Creates a new settings modifier object.
 	 */
 	public function make(string $blockName): ?SettingsModifier
 	{

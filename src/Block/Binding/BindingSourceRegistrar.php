@@ -30,6 +30,9 @@ final class BindingSourceRegistrar implements Bootable
 		private readonly array $sources
 	) {}
 
+	/**
+	 * @inheritDoc
+	 */
 	public function boot(): void {
 		add_action('init', $this->register(...));
 	}
